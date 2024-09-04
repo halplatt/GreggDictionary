@@ -113,7 +113,7 @@ To customize this program:
 
 	<body>
 		<div class="container">
-				<h3 id="searchTitle">Book Search</h3>
+				<h3 id="searchTitle">Book Search of </h3>
 
 				<div class="search">
 					<div class="middle">
@@ -130,7 +130,7 @@ To customize this program:
 		</div>				
 	<script>
 	//arrWord contains the file names of the page images.  The page names are in alphabetical order.  // 1  Change the array so it list names of the all the .png images you are searching. The page names must be in alphabetical order.
-	arrWord = new Array("a","abomination","acanthus","ace","actuate","admirably","aerate","agency","alarmingly","allow","amateur","amplifier","angrier","antenna","apostate","apprenticed","archfiend","arrow","asphyxiate","asteroid","attenuation","autograph","b","bailee","bar","bathed","bee","benefit","bigamist","black","blizzard","bodkin","boorish","bourgeois","brawler","brigand","broom","building","business","c","caldron","candlestick","captivate","carrot","categorize","cellulose","chamberlain","cheapness","chipper","churn","clamshell","climatic","coarsest","colander","comfort","companionway","compromisingly","conduit","conjectured","constellation","contracted","convolution","corona","cotter","coxswain","creditable","crossbowman","cuirass","cusp","d","darkness","decade","dedicatory","defrauded","demean","depilatory","desensitise","determininism","Diaspora","diner","discipline","disillusion","disqualification","disunite","domestically","draft","drive","dungaree","e","eccentricity","eggnog","elimination","emended","encourage","enjoyed","enumerated","equitation","estrangement","evocation","excuse","expeditious","external","f","fallen","fate","feline","fidget","fireman","flashboard","flirt","flute","footman","foreword","foundling","frequently","frugality","furtively","g","gap","generation","gild","glockenspiel","goodly","grape","gridiron","grumble","guzzle","h","halves","harmonica","hazelnut","hebraic","hereditably","hillside","homeward","hospitalization","humiliate","hyperthyroid","i","ignoble","immoderate","impetuous","imprudence","incident","incredulity","indigestible","inelegant","inflammability","inhuman","insanely","instantly","intensify","interpose","introversion","involution","irrigable","j","jerked","jubilance","k","kindle","l","lament","latchstring","leaned","Leninism","lie","liner","livelier","lonesomeness","lucent","m","magnifier","malnutri1ion","mantle","martyred","mattress","medicine","mentality","methane","militated","misadventiure","mispronounce","moderated","monastery","moppet","motto","multiplicative","mutilate","n","national","needled","newfangled","noisier","nose","numeration","o","obsequy","octopus","olive","optative","ornately","outmoded","overpoweringly","p","palatal","pansy","parenthesis","passable","patronized","peddle","pent","pergola","person","pew","phrenologist","pillory","pity","play","plumbous","polite","populace","postpaid","prate","predictable","preparation","prevalently","problem","progressive","proponent","protraction","psychopathic","punishable","putty","q","quartz","r","ragout","rarity","readily","recede","reconstruction","reduce","refrigerative","reined","remand","repaid ","reprovingly","resolvent","retaliationist","revelry","rheumatism","rink","roguish","roughness","rugosity","s","sahib","sanctitude","satisfied","scanted","scintillated","screeched","scuttleful","securely","self conceit","semicivilized","separationist","sesterce","shamelessly","Sheraton","shopper","shrug","significance","singleness","skidded","slapstick","slipper","smallest","snake","snowberry","sodden","son","soupbone","spatula","spiced","spoil","sprinkler","squirt","starfish","stem","stingfish","stonily","strappings","stronghold","sty","submarine","subvention","sullen","supererogation","suppressive","sustain","swell","symbolize","t","tailored","tanvat","tauten","telepathic","tension","textile","thermionic","thread","thundershower","timeless","titillative","tongs","tortuosity","toxicosis","tranquilly","transplant","trencherman","triple","truck","tularemia","twaddled","u","unanswerable","uncolt","undercharged","undiscovered ","unexpectedly","unfunded","uniformity","unlaced","unorganized","unreality","unseconded","unsystematic","unwholesomely","urbanization","v","valve","velodrome","vernacular","view","visitation","volumetric","w","Walloon","wastebasket","wearability","wettings","whipsaw","wight","wisely","wood","worshiper","x","yodeled");
+	arrWord = new Array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
 	var dictionaryFolder = 'djsDictionary';                                                          // 2 Set the dictionaryFolder to the name of the folder containing the page images
 	function refreshImage() {
 		var word = document.getElementById('txt1').value;
@@ -151,7 +151,8 @@ To customize this program:
 		return arrName[i]
 	}
 
-	//
+	// Initialize the page with a random word and set the title
+	document.getElementById('searchTitle').innerText = 'Book Search of ' + dictionaryFolder;
 	//First time initialize page with a random word
 	var rndNbr = Math.floor(Math.random() * arrWord.length);
 	var word = arrWord[rndNbr];
