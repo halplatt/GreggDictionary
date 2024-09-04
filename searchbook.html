@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- 
+This program displays the page of a dictionary on which the search word will be found.
+To customize this program:
+1. Change the `arrWord` array to the page names of the .png images you are searching. The page names must be in alphabetical order.
+2. Change the src= in the `path` statement to the folder containing the .png images.
+-->
+<html>
+	<head>
+		<title>Book Search</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8">
+		<style>
+			.vertical-center::before {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			#record {
+				text-align: center;
+			}
+
+			body {
+                font-family: Arial, sans-serif;
+            }
+			button {
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 12px;
+				padding: 8px 16px;
+				transition-duration: 0.4s;
+			}
+
+			button:hover {
+				background-color: #45a049;
+			}
+			#btn1 {
+				font-size: 1em;
+				height: 2.2em;
+				width: 2.2em;
+				margin: 0 0 0 0;
+				border: none;
+				padding: 8px;
+			}
+
+			#btn1 img {
+				width: 1.4em;
+				height: 1.4em;
+			}
+
+			.djs {background-color: #507ec9;}
+			.container ul li, .container ol li {
+				font-size: 1.0em;
+				line-height: 1.8em;
+				color: #555;
+			}
+			.container ul li ul li, .container ol li ol li{
+				font-size: 0.8em;
+				line-height: 1.8em;
+				color: #666;
+			}
+
+			.container {
+				padding: 0% 5% 0% 5%;
+				max-width: 50em;
+				margin: 0 auto;
+			}
+			
+			#txt1 {
+				font-size: 1.5em;
+				height: 1.2em;
+				border-top-left-radius : 0.3em;
+				border-bottom-left-radius : 0.3em;
+				border: 1px solid #999;
+				background-color: #EEE;
+				padding: 0.1em 0.5em;
+				margin: 0 0 0 0;
+				border-right-style: none;
+			}
+
+			#txt1 :focus {
+				border-color: #507ec9;
+			}
+
+			
+			.search {
+				min-height: 5em;
+				margin: 0 auto;
+				display: table;
+			}
+			.inner {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+			}
+			.middle {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			#searchTitle {
+            	text-align: center;
+       		}
+        </style>
+	</head>
+
+	<body>
+		<div class="container">
+				<h3 id="searchTitle">Book Search</h3>
+
+				<div class="search">
+					<div class="middle">
+						<div class="inner">
+                            <input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){refreshImage()}" autofocus class="djs"/></div>
+                            <div class="inner">
+                                <button id="btn1" class="djs" onclick="refreshImage()"><img src="search.png" accesskey="s" title="Alt+Shift+s"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="record"></div>
+		</div>				
+	<script>
+	//arrWord contains the file names of the page images.  The page names are in alphabetical order.  // 1  Change the array so it list names of the all the .png images you are searching. The page names must be in alphabetical order.
+	arrWord = new Array("a","abomination","acanthus","ace","actuate","admirably","aerate","agency","alarmingly","allow","amateur","amplifier","angrier","antenna","apostate","apprenticed","archfiend","arrow","asphyxiate","asteroid","attenuation","autograph","b","bailee","bar","bathed","bee","benefit","bigamist","black","blizzard","bodkin","boorish","bourgeois","brawler","brigand","broom","building","business","c","caldron","candlestick","captivate","carrot","categorize","cellulose","chamberlain","cheapness","chipper","churn","clamshell","climatic","coarsest","colander","comfort","companionway","compromisingly","conduit","conjectured","constellation","contracted","convolution","corona","cotter","coxswain","creditable","crossbowman","cuirass","cusp","d","darkness","decade","dedicatory","defrauded","demean","depilatory","desensitise","determininism","Diaspora","diner","discipline","disillusion","disqualification","disunite","domestically","draft","drive","dungaree","e","eccentricity","eggnog","elimination","emended","encourage","enjoyed","enumerated","equitation","estrangement","evocation","excuse","expeditious","external","f","fallen","fate","feline","fidget","fireman","flashboard","flirt","flute","footman","foreword","foundling","frequently","frugality","furtively","g","gap","generation","gild","glockenspiel","goodly","grape","gridiron","grumble","guzzle","h","halves","harmonica","hazelnut","hebraic","hereditably","hillside","homeward","hospitalization","humiliate","hyperthyroid","i","ignoble","immoderate","impetuous","imprudence","incident","incredulity","indigestible","inelegant","inflammability","inhuman","insanely","instantly","intensify","interpose","introversion","involution","irrigable","j","jerked","jubilance","k","kindle","l","lament","latchstring","leaned","Leninism","lie","liner","livelier","lonesomeness","lucent","m","magnifier","malnutri1ion","mantle","martyred","mattress","medicine","mentality","methane","militated","misadventiure","mispronounce","moderated","monastery","moppet","motto","multiplicative","mutilate","n","national","needled","newfangled","noisier","nose","numeration","o","obsequy","octopus","olive","optative","ornately","outmoded","overpoweringly","p","palatal","pansy","parenthesis","passable","patronized","peddle","pent","pergola","person","pew","phrenologist","pillory","pity","play","plumbous","polite","populace","postpaid","prate","predictable","preparation","prevalently","problem","progressive","proponent","protraction","psychopathic","punishable","putty","q","quartz","r","ragout","rarity","readily","recede","reconstruction","reduce","refrigerative","reined","remand","repaid ","reprovingly","resolvent","retaliationist","revelry","rheumatism","rink","roguish","roughness","rugosity","s","sahib","sanctitude","satisfied","scanted","scintillated","screeched","scuttleful","securely","self conceit","semicivilized","separationist","sesterce","shamelessly","Sheraton","shopper","shrug","significance","singleness","skidded","slapstick","slipper","smallest","snake","snowberry","sodden","son","soupbone","spatula","spiced","spoil","sprinkler","squirt","starfish","stem","stingfish","stonily","strappings","stronghold","sty","submarine","subvention","sullen","supererogation","suppressive","sustain","swell","symbolize","t","tailored","tanvat","tauten","telepathic","tension","textile","thermionic","thread","thundershower","timeless","titillative","tongs","tortuosity","toxicosis","tranquilly","transplant","trencherman","triple","truck","tularemia","twaddled","u","unanswerable","uncolt","undercharged","undiscovered ","unexpectedly","unfunded","uniformity","unlaced","unorganized","unreality","unseconded","unsystematic","unwholesomely","urbanization","v","valve","velodrome","vernacular","view","visitation","volumetric","w","Walloon","wastebasket","wearability","wettings","whipsaw","wight","wisely","wood","worshiper","x","yodeled");
+	var dictionaryFolder = 'djsDictionary';                                                          // 2 Set the dictionaryFolder to the name of the folder containing the page images
+	function refreshImage() {
+		var word = document.getElementById('txt1').value;
+		var wordId = findIdx(word, arrWord);
+		var path = '<img src="' + dictionaryFolder + '/' + wordId + '.png">';
+		document.getElementById('record').innerHTML = path;
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	}
+
+	function findIdx(input,arrName) {
+		var i
+		for (i = 0; i < arrName.length; i++) 
+			{
+				if (arrName[i].toLowerCase() > input.toLowerCase()) {break}
+			}
+		if (i>0){i--}
+		return arrName[i]
+	}
+
+	//
+	//First time initialize page with a random word
+	var rndNbr = Math.floor(Math.random() * arrWord.length);
+	var word = arrWord[rndNbr];
+	document.getElementById("txt1").setAttribute("value", word);
+	var args = window.location.href.split('=');
+	if (args.length > 1) {
+		word = args[1];
+		document.getElementById("txt1").setAttribute("value", word);
+		refreshImage();
+	}
+	document.getElementById('txt1').select()
+	document.getElementById('btn1').click();
+	// Event to place focus and select text after focus or click
+	window.addEventListener('focus', function() {
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	});
+		document.addEventListener('click', function() {
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	});
+
+	</script>
+		
+	</body>
+</html>
