@@ -124,7 +124,7 @@ To customize this program:
 	<body>
 		<div class="container">
 				<h3 id="searchTitle">Search pages in </h3>
-                <div id="version">Version 2024/9/5@2pm</div> <!-- Version display element -->
+                <div id="version">Version 2024/9/5@2:30pm</div> <!-- Version display element -->
 				<div class="search">
 					<div class="middle">
 						<div class="inner">
@@ -151,8 +151,8 @@ To customize this program:
                 const path = url.pathname;
                 const dictionaryFolder = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 				//initialize the title of the page
-                document.title = `${dictionaryFolder}`;
-                document.querySelector('title').textContent = `${dictionaryFolder}`;
+                document.title = `Search pages in ${dictionaryFolder}`;
+                document.querySelector('title').textContent = `Search pages in ${dictionaryFolder}`;
 				document.getElementById('searchTitle').innerText = 'Search Pages in ' + dictionaryFolder;
             } catch (error) {
                 //document.title = `Search in ${imagePath1}`;
