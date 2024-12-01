@@ -5,6 +5,7 @@ This is the main HTML file for the Gregg Shorthand Dictionary Search application
 It includes a search interface with various buttons that trigger different search functions. 
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
+2024-12-01 revised djs button replace icon with text
 -->
 <html>
 	<head>
@@ -30,7 +31,7 @@ The styles for this page are defined in an external CSS file also linked in the 
 						<div class="inner">
                             <input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){refreshImage()}" autofocus class="djs"/></div>
                             <div class="inner">
-                                <button id="btn1" class="djs" onclick="refreshImage()"><img src="search.png" accesskey="d" title="(DJS) Alt+Shift+d"></button>
+                                <button id="btn1" class="djs" onclick="refreshImage()" accesskey="d" title="(DJS) Alt+Shift+d">djs</button>
 							</div>
                             <div class="inner">
                                 <button id="btn2" onclick="refreshName()" class="djs">djsName</button>
