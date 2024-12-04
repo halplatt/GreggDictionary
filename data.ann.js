@@ -74,7 +74,7 @@ function refreshAnnWord() {
 		document.getElementById("suggest").style.display="inline";
 	} else {
 		path = "<p>Sorry, the word '";
-		path = path.concat(word, "' is not collected in <i>Gregg Shorthand Dictionary.</i></p>");
+		path = path.concat(word, "' is not found in the <i>Gregg Shorthand Dictionary.</i></p>");
 		var starting = -order - 3;
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
@@ -100,6 +100,6 @@ function refreshAnnWord() {
 
 function loadAboutAnn() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand plates written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
+	aboutText = aboutText.concat("<p><i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
 	document.getElementById('about').innerHTML = aboutText;
 }
