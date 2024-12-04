@@ -159,7 +159,16 @@ function refreshSimName() {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
-
+function refreshPreWord() {
+	hideSuggestion()
+	loadAboutPre()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,preWord);
+	var path = '<img src="preDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
 
 function loadAboutDJS() {
 	var aboutText = "";
@@ -173,6 +182,12 @@ function loadAboutCen() {
 }
 function loadAboutSim() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Greg Publishing Company in 1945, written by Charles Rader. </p>");
+	aboutText = aboutText.concat("<p><b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutPre() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar. A <a href=\"https://greggshorthand.github.io/gsd1916.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
+
 	document.getElementById('about').innerHTML = aboutText;
 }

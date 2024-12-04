@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- 
+This program displays the page of a dictionary on which the search word will be found.
+To customize this program:
+1. Change the `dict` array to the page names of the .png images you are searching. The page names must be in alphabetical order.
+2. Change the src= in the `path` statement to the folder containing the .png images.
+-->
+<html>
+	<head>
+		<title>Book Search</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8">
+		<style>
+			.vertical-center::before {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			#record {
+				text-align: center;
+			}
+
+			body {
+                font-family: Arial, sans-serif;
+            }
+			button {
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 12px;
+				padding: 8px 16px;
+				transition-duration: 0.4s;
+			}
+
+			button:hover {
+				background-color: #45a049;
+			}
+			#btn1 {
+				font-size: 1em;
+				height: 2.2em;
+				width: 2.2em;
+				margin: 0 0 0 0;
+				border: none;
+				padding: 8px;
+			}
+
+			#btn1 img {
+				width: 1.4em;
+				height: 1.4em;
+			}
+
+			.djs {background-color: #507ec9;}
+			.container ul li, .container ol li {
+				font-size: 1.0em;
+				line-height: 1.8em;
+				color: #555;
+			}
+			.container ul li ul li, .container ol li ol li{
+				font-size: 0.8em;
+				line-height: 1.8em;
+				color: #666;
+			}
+
+			.container {
+				padding: 0% 5% 0% 5%;
+				max-width: 50em;
+				margin: 0 auto;
+			}
+			
+			#txt1 {
+				font-size: 1.5em;
+				height: 1.2em;
+				border-top-left-radius : 0.3em;
+				border-bottom-left-radius : 0.3em;
+				border: 1px solid #999;
+				background-color: #EEE;
+				padding: 0.1em 0.5em;
+				margin: 0 0 0 0;
+				border-right-style: none;
+			}
+
+			#txt1 :focus {
+				border-color: #507ec9;
+			}
+
+			
+			.search {
+				min-height: 5em;
+				margin: 0 auto;
+				display: table;
+			}
+			.inner {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+			}
+			.middle {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			#searchTitle {
+            	text-align: center;
+       		}
+                 /* Style for the version display */
+            #version {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 0.9em;
+                color: #555;
+            }
+        </style>
+        <!-- Add the script tag to load the dict array -->
+        <script src="./!words.array.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+				<h3 id="searchTitle">Search pages in </h3>
+                <div id="version">Version 2024/9/5@2:30pm</div> <!-- Version display element -->
+				<div class="search">
+					<div class="middle">
+						<div class="inner">
+							<button id="btnPrev" class="djs" onclick="movePrev()">Prev</button>
+						</div>
+						<div class="inner">
+							<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){refreshImage()}" autofocus class="djs"/>
+						</div>
+						<div class="inner">
+							<button id="btn1" class="djs" onclick="refreshImage()"><img src="search.png" accesskey="s" title="Alt+Shift+s"></button>
+						</div>
+						<div class="inner">
+							<button id="btnNext" class="djs" onclick="moveNext()">Next</button>
+						</div>
+					</div>
+				</div>
+		
+				<div id="record"></div>
+		</div>				
+	<script>
+	//dict contains the file names of the page images.  The page names are in alphabetical order.  // 1  Change the dict so it list names of the all the .png images you are searching. The page names must be in alphabetical order.
+	try {
+                const url = new URL(window.location.href);
+                const path = url.pathname;
+                const dictionaryFolder = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+				//initialize the title of the page
+                document.title = `Search pages in ${dictionaryFolder}`;
+                document.querySelector('title').textContent = `Search pages in ${dictionaryFolder}`;
+				document.getElementById('searchTitle').innerText = 'Search Pages in ' + dictionaryFolder;
+            } catch (error) {
+                //document.title = `Search in ${imagePath1}`;
+            }
+	function refreshImage() {
+		var word = document.getElementById('txt1').value;
+		var wordId = findIdx(word, dict);
+		var path = '<img src="' + "." + '/' + wordId + '.png">';
+		document.getElementById('record').innerHTML = path;
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	}
+
+	function findIdx(input,arrName) {
+		var i
+		for (i = 0; i < arrName.length; i++) 
+			{
+				if (arrName[i].toLowerCase() > input.toLowerCase()) {break}
+			}
+		if (i>0){i--}
+		return arrName[i]
+	}
+
+    function moveNext() {
+        var currentWord = document.getElementById('txt1').value;
+        var wordId = findIdx(currentWord, dict);
+        var currentIndex = dict.indexOf(wordId);
+        if (currentIndex < dict.length - 1) {
+            var nextWord = dict[currentIndex + 1];
+            document.getElementById('txt1').value = nextWord;
+            refreshImage();
+        }
+    }
+
+    function movePrev() {
+        var currentWord = document.getElementById('txt1').value;
+        var wordId = findIdx(currentWord, dict);
+        var currentIndex = dict.indexOf(wordId);
+        if (currentIndex > 0) {
+            var prevWord = dict[currentIndex - 1];
+            document.getElementById('txt1').value = prevWord;
+            refreshImage();
+        }
+    }
+
+	
+	//First time initialize page with a random word
+	var rndNbr = Math.floor(Math.random() * dict.length);
+	var word = dict[rndNbr];
+	document.getElementById("txt1").setAttribute("value", word);
+	var args = window.location.href.split('=');
+	if (args.length > 1) {
+		word = args[1];
+		document.getElementById("txt1").setAttribute("value", word);
+		refreshImage();
+	}
+	document.getElementById('txt1').select()
+	document.getElementById('btn1').click();
+	// Event to place focus and select text after focus or click
+	window.addEventListener('focus', function() {
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	});
+		document.addEventListener('click', function() {
+		document.getElementById('txt1').focus();
+		document.getElementById('txt1').select();
+	});
+
+	</script>
+		
+	</body>
+</html>
