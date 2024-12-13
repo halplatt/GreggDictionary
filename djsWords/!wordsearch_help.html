@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Helper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #444;
+            margin-top: 20px;
+        }
+        .example {
+            background-color: #e6f3ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .tip {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>!wordsearch Help</h1>
+        
+               
+        <h2>How to Use</h2>
+<p>Simply enter the search string for the word you want to look up, press enter and it will list the shorthand outlines for that word and any words that contain the search string.</p>
+
+        <p>The program not only finds exact matches but also finds words and their corresponding outlines that contain the word you typed.</p>
+        <p>The search pattern may return many results. By default, only the first 25 matches are displayed. You can increase the number of matches shown by increasing the number next to the search input box.</p>
+        
+        <h2>Special Search Tips</h2>
+                
+<p>While you can simply enter words as you would in any dictionary search, this program offers additional flexibility through regular expressions. Regular expressions are a way to describe word patterns using special characters. For this program, you can think of them as a helpful tool to find words that match certain patterns. While they might sound complex, you don't need to worry about the technical details. Here's what you need to know:</p>
+
+        <div class="example">
+            <strong>Find only the word you are searching for.:</strong>
+            <p>Type <code>^</code> before your word and type <code>$</code> after your word. For example, <code>^to$</code> will find only the word "to", and none of the other words containing it.</p>
+        </div>
+        
+        <div class="example">
+            <strong>Find words that start with something:</strong>
+            <p>Type <code>^</code> before your word. For example, <code>^pre</code> will find words like "prefix", "prelude", and "prevent".</p>
+        </div>
+        
+        <div class="example">
+            <strong>Find words that end with something:</strong>
+            <p>Type <code>$</code> after your word. For example, <code>ing$</code> will find words like "anything", "awning", and "bedspring".</p>
+        </div>
+        
+        
+        <h2>More about Regular Expressions</h2>
+        <p>Regular expressions are a powerful tool used to represent patterns in text. They allow us to search for words in a flexible and efficient way. For example, if you enter a word or part of a word, the program will find all words that match that pattern. For shorthand writers, this feature is particularly valuable because it helps you:</p>
+        <ul>
+            <li><strong>Explore Word Families:</strong> See how different words with the same root are handled.</li>
+            <li><strong>Find word Prefixes and Suffixes:</strong> Understand how various prefixes and suffixes are used in shorthand.</li>
+            <li><strong>Discover Exceptions:</strong> Find exceptions to common shorthand rules.</li>
+        </ul>
+        
+        <p>Since you have learned shorthand, in which you represent word patterns using symbols, the concept of regular expressions should be easy to grasp. Regular expressions use the regular alphabet and can represent categories of characters by embedding special symbols:</p>
+        <ul>
+            <li><strong>any character</strong> Use <code>.</code> to match any single character.</li>
+            <li class="example">Example: <code>b.d</code> will match words containing "<b>bad</b>", "<b>bid</b>", "<b>bud</b>".</li>
+            <li><strong>customzed</strong> enclose in Brackets <code>[ ]</code> to match any character listed in the brackets.</li>
+            <li class="example">Example: <code>p[aeiouy]t</code> will match words containing "pat" "<b>pat</b>tern", "<b>pet</b>", "car<b>pet</b>", "<b>pit</b>", "des<b>pit</b>e"</li>
+            <li><strong>customzed</strong> enclose in Brackets preceeded by ^  <code>[^ ]</code> to match any character not listed.</li>
+            <li class="example">Example: <code>p[^aeiouy]t</code> will match words like "di<b>pht</b>heria", "sla<b>pst</b>ick"</li>
+        </ul>
+        
+        <h2>Repetition</h2>
+        <ul>
+            <li><strong>Repetition zero or more:</strong> Use <code>*</code> to match zero or more occurrences of the preceding character.</li>
+            <li class="example">Example using *: <code>^pea.*$</code> will match "pea" followed by 0 or more characters: "pea", "pea<b>k</b>", "pea<b>ce</b>", "pea<b>nut</b>", "pea<b>sant</b>, "pea<b>ceable</b>", "pea<b>cemaker</b>" ...</li>
+            <li><strong>Repetition one or more:</strong> Use <code>+</code> to match zero or more occurrences of the preceding character.</li>
+            <li class="example">Example using +: <code>^pea.+$</code>  will match "pea" followed by 1 or more characters: "pea", "pea<b>k</b>", "pea<b>ce</b>", "pea<b>nut</b>", "pea<b>sant</b>, "pea<b>ceable</b>", "pea<b>cemaker"</b> ...</li>
+            <li><strong>Repetition zero or 1:</strong> Use <code>?</code> to match zero or more occurrences of the preceding character.</li>
+            <li class="example">Example using ? : <code>pea.?</code> will match "pea", "prefix", "preempt".</li>
+            <li><strong>Repetition zero or 1:</strong> Use <code>+</code> to match zero or more occurrences of the preceding character.</li>
+            <li class="example">Example using ? : <code>pea.?</code> will match "pea", "prefix", "preempt".</li>
+            <li><strong>Custom repetition</strong> enclose the repetion count in braces<code>{ }</code> to match zero or more occurrences of the preceding character.</li>
+            <li class="example">Example using custom: 
+                <ul><li><code>^pea.{2}$</code> will match pea followed by exactly 2 characters: "pea<b>ce</b>"</li>
+                    <li><code>^pea.{3,4}$</code> will match "pea" followed by 3 to 4 charactors: "pea<b>nut</b>","pea<b>sant</b>"</li> 
+                    <li><code>^pea.{0,3}$</code> will match "pea" followed by 0 to 3 characters: "pea", "pea<b>k</b>", "pea<b>ce</b>", "pea<b>nut</b>"</li>
+                    <li><code>^pea.{6,}$</code> will match "pea" followed by 6 or more characters: "pea<b>ceable</b>", "pea<b>cemaker</b>"</li> 
+            </li></ul>                
+        </ul>
+
+        <h2>Grouping</h2>
+        <ul>
+            <li><strong>grouping characters </strong>group charaters</strong> inside <code>( )</code> to apply repetition.</li>
+            <li class="example">Example applying repetition to a group: <code>(er){2,}</code> will match words where "er" occurs at least 2 times in succession. ie. "discov<b>erer</b>" and sup<b>erer</b>ogation.</li>
+            <li>The <strong>| (pipe)</strong> character separates two or more patterns, acting as an OR operator. This means the all the results for patterns separated by the | (pipe) will be returned.</li>
+            <li class="example">Example  of using |: <code>^single$|^double$</code> will match "single", "double".</li>
+        </ul>
+        
+        <p class="tip">Don't worry if these special tricks seem confusing at first. You can always just type in regular words, and the program will still help you find what you're looking for!</p>
+        
+        <p>If you like using regular expressions but need help, describe the search to AI assistant such as ChatGPt and let it create a regular expression for your search. Happy word hunting!</p>
+        
+     </div>
+</body>
+</html>

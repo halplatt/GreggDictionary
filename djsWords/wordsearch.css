@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#regexInput {
+    width: 80%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#resultList {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+#resultList li {
+    margin: 5px 0;
+    cursor: pointer;
+    color: #007bff;
+}
+
+#resultList li:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+ <!-- 20231216 use djsWords/_words.array.js-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Search</title>
+    <link rel="stylesheet" href="wordsearch.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Search</h1>
+        <input type="text" id="regexInput" placeholder="Enter Regular Expression">
+        <button id="searchButton">Search</button>
+        <ul id="resultList"></ul>
+    </div>
+    <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
+    <script type="text/javascript" src="djsWords/_words.array.js"></script>
+    <script src="wordsearch.js"></script>
+</body>
+</html>
