@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+    Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
+    Version 12/11/2024 at 11:14PM first version
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #version {
+            position: absolute;
+            top: 10px;
+            right: 75px;
+            font-size: 0.8em;
+            color: #888;
+        }
+        #regexInput {
+            width: 60%;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        #searchButton {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+        .result-item {
+            margin-bottom: 10px;
+        }
+        .spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .bounce1, .bounce2, .bounce3 {
+            width: 18px;
+            height: 18px;
+            background-color: #333;
+            border-radius: 100%;
+            display: inline-block;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .bounce1 {
+            animation-delay: -0.32s;
+        }
+        .bounce2 {
+            animation-delay: -0.16s;
+        }
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .max-w-none {
+            max-width: none;
+        }
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        .border {
+            border: 1px solid black;
+        }
+        .max-w-screen {
+            max-width: 100vw;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
+        .expand-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regex Search</h1>
+    
+    <p id="version">Version 12/13/2024 at 12:23PM</p>
+
+    <input type="text" id="regexInput" placeholder="Enter regular expression"> 
+    <button id="searchButton" onclick="searchWords()">Search</button>
+    <label for="maxRsults">Maximum Words:</label>
+    <input type="number" id="maxResults" value="25" min="1" style="width: 50px;">
+    <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+    <div id="results"></div>
+    <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
+    <script>
+        const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+        const IMG_WIDTH = 1281;
+        
+        try {
+                const url = new URL(window.location.href);
+                const path = url.pathname;
+                const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+
+                document.title = `Regex Search of ${folderName}`;
+                document.querySelector('h1').textContent = `Regex Search of ${folderName}`;
+                document.querySelector('title').textContent = `Regex Search of ${folderName}`;
+                globalGsd = folderName.substring(0,3);
+            } catch (error) {
+                //document.title = `Regex Search of ${imagePath1}`;
+            }
+        document.getElementById('regexInput').focus();
+        document.getElementById('regexInput').select();
+
+        document.getElementById('regexInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchWords();
+            }
+        });
+
+        async function fetchData() {
+            const response = await fetch('!reference.json');
+            const data = await response.json();
+            return data;
+        }
+
+        async function searchWords() {
+            const regexInput = document.getElementById('regexInput');
+            const regex = new RegExp(regexInput.value, 'i');
+            const resultsContainer = document.getElementById('results');
+            const maxResults = parseInt(document.getElementById('maxResults').value, 10) || 25;
+            resultsContainer.innerHTML = '';
+
+            const data = await fetchData();
+            let resultCount = 0;
+            let totalMatches = 0;
+
+            for (const page of data) {
+                for (const word of page.words) {
+                    if (regex.test(word.t)) {
+                        totalMatches++;
+                        if (resultCount >= maxResults) {
+                            continue;
+                        }
+                        resultCount++;
+
+                        const resultItem = document.createElement('div');
+                        resultItem.className = 'result-item';
+                        resultItem.innerHTML = `Page: ${page.page}, Word: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
+
+                        const outerContainer = document.createElement('div');
+                        outerContainer.className = 'max-w-screen overflow-x-auto';
+
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'relative overflow-hidden border';
+                        imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                        imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+
+                        const img = document.createElement('img');
+                        img.className = 'absolute max-w-none';
+                        img.src = `${page.page}.png`;
+                        img.alt = `Gregg shorthand for word: ${word.t}`;
+                        img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
+                        img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
+                        img.style.width = '1281px'; // Assuming the image width is fixed
+
+                        img.onload = function() {
+                            const scale = IMG_WIDTH / img.naturalWidth;
+                            img.style.top = `-${word.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                            img.style.left = `-${word.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                            img.style.width = `${IMG_WIDTH}px`;
+                        };
+
+                        img.onclick = function() {
+
+                        const clipboardInput = document.getElementById("clipboardInput");
+                        clipboardInput.value = word.t;
+                        clipboardInput.select();
+                        document.execCommand("copy");
+                        clipboardInput.value = "";
+                        if (window.location.hostname == "halplatt.github.io") {
+                            var url = `/GreggDictionary/GreggDictionary.html?x=${word.t}&gsd=sim`;
+                        } else {
+                            var url = `/GreggDictionary.html?x=${word.t}&gsd=sim`;
+                        }
+                        window.open(url, 'GreggDictionary');
+                        };
+
+                        const expandButton = document.createElement('button');
+                        expandButton.className = 'expand-button';
+                        expandButton.innerHTML = 'Expand';
+                        expandButton.onclick = function() {
+                            if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
+                                imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
+                                imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                                img.style.top = `-${word.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                                img.style.left = `-${word.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
+                                expandButton.innerHTML = 'Shrink';
+                            } else {
+                                imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                                imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                                img.style.top = `-${word.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                                img.style.left = `-${word.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
+                                expandButton.innerHTML = 'Expand';
+                            }
+                        };
+
+                        imageContainer.appendChild(img);
+                        outerContainer.appendChild(imageContainer);
+                        outerContainer.appendChild(expandButton);
+                        resultItem.appendChild(outerContainer);
+                        resultsContainer.appendChild(resultItem);
+                    }
+                }
+            }
+
+            const endMessage = document.createElement('div');
+            endMessage.className = 'result-item';
+            if (resultCount === 0) {
+                endMessage.textContent = 'No matches found';
+            } else if (resultCount < maxResults) {
+                endMessage.textContent = `End of ${resultCount} matches`;
+            } else {
+                endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches`;
+            }
+            resultsContainer.appendChild(endMessage);
+
+            regexInput.focus();
+            regexInput.select();
+        }
+    </script>
+</body>
+</html>
