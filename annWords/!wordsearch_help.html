@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Helper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #444;
+            margin-top: 20px;
+        }
+        .example {
+            background-color: #e6f3ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .tip {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>!wordsearch Help</h1>
+        
+               
+        <h2>How to Use</h2>
+<p>Simply enter the word you want to look up, press enter and it will list the shorthand outlines for that word and any related words.</p>
+
+        <p>The program not only finds exact matches but also finds words and their corresponding outlines that contain the word you typed.</p>
+        
+        <h2>Special Search Tips</h2>
+                
+<p>While you can simply enter words as you would in any dictionary search, this program offers additional flexibility through regular expressions. Regular expressions are a way to describe word patterns using special characters. For this program, you can think of them as a helpful tool to find words that match certain patterns. While they might sound complex, you don't need to worry about the technical details. Here's what you need to know:</p>
+
+        <div class="example">
+            <strong>Find words that start with something:</strong>
+            <p>Type <code>^</code> before your word. For example, <code>^pre</code> will find words like "prefix", "prelude", and "prevent".</p>
+        </div>
+        
+        <div class="example">
+            <strong>Find words that end with something:</strong>
+            <p>Type <code>$</code> after your word. For example, <code>ing$</code> will find words like "running", "jumping", and "singing".</p>
+        </div>
+        
+        <h2>Using Characters Inside Brackets:</h2>
+        <ul>
+            <li>To find words that match any one of several characters, use brackets <code>[]</code>.</li>
+            <li class="example">Example: <code>capit[ao]l</code> will match both "capital" and "capitol".</li>
+        </ul>
+        
+        <h2>General Tips:</h2>
+        <ul>
+            <li><strong>Wildcards:</strong> Use <code>.</code> to match any single character.</li>
+            <li class="example">Example: <code>p.t</code> will match "pat", "pet", "pit".</li>
+            <li><strong>Repetition:</strong> Use <code>*</code> to match zero or more occurrences of the preceding element.</li>
+            <li class="example">Example: <code>pre*</code> will match "pre", "prefix", "preempt".</li>
+        </ul>
+
+        <h2>Using Characters Inside Brackets:</h2>
+        <ul>
+            <li>To find words that match any one of several characters, use brackets <code>[]</code>.</li>
+            <li class="example">Example: <code>capit[ao]l</code> will match both "capital" and "capitol".</li>
+        </ul>
+
+        
+        <h2>Examples:</h2>
+        <ul>
+            <li><strong>Prefix Search:</strong> <code>^un</code> will match "undo", "unite", "universe".</li>
+            <li><strong>Suffix Search:</strong> <code>ly$</code> will match "quickly", "slowly", "happily".</li>
+            <li><strong>Contains Part:</strong> <code>cat</code> will match "catalog", "scatter", "concatenate".</li>
+        </ul>
+        
+        <p class="tip">Don't worry if these special tricks seem confusing at first. You can always just type in regular words, and the program will still help you find what you're looking for!</p>
+        
+        <p>If you like using regular expressions but need help, you can always describe the search to AI assistant such as ChatGPt let it create a regular expression for your search. Happy word hunting!</p>
+        
+     </div>
+</body>
+</html>
