@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Modification of Pavel Krevanek's translator.html -->
+<!--
+    //Version: 2024/03/13at20:18 Run inside any dictionary of words with ./_words.array.js and ./!PNGCustom/_words.array2.js folder name as title
+    //Version: 2024/02/14at13:35 replace period followed by newline with newline
+    //Version: 2024/01/10at10:45 If isUseDict2 checked, Search dict2 array for match first, then search dict array for match.
+    //Version: 2024/01/07at18:55 Preserve original case of the input word so we can display it if it is not found in the dictionary
+    //Version: 2024/01/04at14:02 handle left and right parentheses
+    //Version: 2024/01/01at22:29 treat ' as a word character. 
+    //Version: 2023/12/30at0940 retrun focus to input box after processing
+    //Version: 2023/12/29at0016 Handle case insensitivity in word array. dict_lc is a copy of dict array in lower case
+    //Version: 2023/12/25at2023 Handle special characters in input with png.files
+    //         display '.' as "!period.png",'\n' as "!paragraph.png",
+    //          '?' as "!question.png",',' as "!comma.png",'-' as text "="
+    //Version: 2023/12/23at2105 Log performance time to console, use imagepath for word images, add "'s" to allowed suffixes
+    //Version: 2023/12/23at2053 Eliminate the copy of the dict array
+    //Version: 2023/12/23at2017 Handle last word in input array. Add form tag.
+    //Version: 2023/12/23at1954 New logic processing off input split by non-word characters
+    //       -- Original logic renamed textTpDJSGregg2.html --
+    // 20231223at0108 add alt-g and tooltip to Generate Gregg DJS button.
+    // 20231222at1647 Fix vertical align of phrase images.   
+    // 20231220at2100 negative vertical align values cause the image to move up 
+    // 20231220at2050 add version number
+    // 20231216 convert to use Array /djsWords/_words.array.js
+-->
+<html>
+<head>
+    <script>
+        // Set the version number
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('version').textContent = 'Version: 2024/03/13at20:18';
+            //set the folder name as the title
+            const url = new URL(window.location.href);
+            const path = url.pathname;
+            const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+            document.title = `Regex Search of ${folderName}`;
+            document.querySelector('h1').textContent = `Convert Text to Gregg shorthand using outlines from ${folderName}`;
+            document.querySelector('title').textContent = `Text to Gregg ${folderName}`;
+        });
+        // create a script tag to load the dict array
+        const imagePath = './'; //path to word.png images
+        let script = document.createElement('script');
+        script.src = imagePath + '!words.array.js';
+        document.head.appendChild(script);
+        // create a script tag to load the dict2 array
+        const imagePath2 = './!PNGCustom/'; //path to enhanced word.png images
+        let script2 = document.createElement('script');
+        script2.src = imagePath2 + '!words.array2.js';
+        document.head.appendChild(script2);
+    </script>
+    <p id="version"></p>
+    <title>DJS Gregg Shorthand Translator</title>
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+    <style>
+:root {
+    --main-padding: 1em;
+    --main-font-size: 12pt;
+    --title-font: 'Allura', verdana;
+    --title-font-size: 40pt;
+    --suffix-font-size: 20pt;
+}
+
+body {    
+     padding: 1em;
+}
+
+.generated {
+            column-gap: 2em;
+            column-rule: 2px solid #000;
+            font-family: var(--title-font);
+            font-size: var(--title-font-size);
+}
+
+.suffix {
+	font-size: var(--suffix-font-size);
+}
+
+#columnsToggle:checked ~ .generated {
+    column-count: 2;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--main-padding);
+    font-size: var(--main-font-size);
+}
+
+input[type="submit"] {
+    padding: var(--main-padding);
+    margin-top: var(--main-padding);
+    margin-bottom: 0.5em;
+}
+
+img:not(:first-child) {
+  margin-left: 0.25em; /* Adjust the margin value as needed */
+}
+
+#version {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: lightgray;
+    }
+    img {
+        filter: invert(100%);
+    }
+    textarea, input[type="submit"] {
+        background-color: #333; /* Dark background */
+        color: white; /* Light text */
+        border: 1px solid #555;
+    }
+
+    .generated {
+         column-rule: 2px solid lightgray;
+    }
+}
+    </style>
+    <script>
+window.onload = function() {
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        processInput()
+    });
+}
+const allowedSuffixes = [
+    "es", "s", "d", "ed", "ing", "ly", "er", "est", "ful", "less", "ness",
+    "ment", "able", "ible", "ize", "ise", "tion", "sion", "ship", "hood",
+    "ness", "ity", "al", "en", "ify", "ous", "ive", "ant", "ent", "age","'s"
+];
+
+//add vertical align to the image based on the content of a corresponding text file 
+function getVerticalAlign(pngFile) {
+    const txtFile = pngFile.replace('.png', '.txt');
+
+    return fetch(txtFile)
+        .then(response => {
+            if (!response.ok) {
+                return '0px';
+            }
+            return response.text();
+        })
+        .then(px => (-1 * parseFloat(px.trim())) + 'px')  // Prepend a '-' to the number
+        .catch(() => '0px');
+}
+function writeImage(entry) {
+    let img = document.createElement('img'); //beg-CreateImageTag
+    img.src = imagePath + entry + '.png';
+    img.title = entry;
+    img.alt = entry;
+    // Add vertical align to the image based on the content of a corresponding text file
+    getVerticalAlign(img.src).then(verticalAlign => {
+        img.style.verticalAlign = verticalAlign;
+    });
+    resultContainer.appendChild(img); //end-CreateImageTag
+}
+function writeImage2(entry) {
+    let img = document.createElement('img'); //beg-CreateImageTag
+    img.src = imagePath2 + entry + '.png';
+    img.title = entry;
+    img.alt = entry;
+    // Add vertical align to the image based on the content of a corresponding text file
+    getVerticalAlign(img.src).then(verticalAlign => {
+        img.style.verticalAlign = verticalAlign;
+    });
+    resultContainer.appendChild(img); //end-CreateImageTag
+}
+function writeSuffix(suffix) {
+    let span = document.createElement('span');
+    span.textContent = `-${suffix}`;
+    span.setAttribute('aria-hidden', 'true');
+    span.setAttribute('contenteditable', 'false');
+    span.classList.add('suffix');
+    resultContainer.appendChild(span);
+}
+function writeText(text) {
+    resultContainer.appendChild(document.createTextNode(text)); 
+}
+function processInput() {
+    const startTime = performance.now();
+    // dict array is defined in djsWords/!words.array.js
+    resultContainer.innerHTML = ''; // Clear previous results
+    let dict_lc = dict.map(word => word.toLowerCase());  //create a copy of dict array in lower case
+    let dict2_lc = dict2.map(word => word.toLowerCase());  //create a copy of dict2 array in lower case
+    let isUseDict2Checked = document.getElementById('checkboxUseDict2').checked;
+    //Beg Logic to process input split by non-word characters
+    let inputText = document.getElementById('inputText').value;
+    let inputWords = inputText.split(/([^a-zA-Z']+)/);
+    let i = 0; 
+    while (i < inputWords.length) {
+        if (inputWords[i] === '') { //Ignore an empty string
+            i++;
+            continue;
+        }
+        if (/([^a-zA-Z']+)/.test(inputWords[i])) { //Here we have non word characters
+            let nonWord = inputWords[i];
+            nonWord = nonWord.replace(/\n+/g, "\n").replace(/\.\n/g,"\n"); //Replace double newlines with single newline, replace period followed by new with newline
+		    //nonWord = nonWord.toLowerCase().replace(/[\u2018\u2019\u0027]/g, "'"); //replace left, right, and straight apostrophes with straight apostrophe
+            for (let char of nonWord) {
+                if (char === '.') {
+                    writeImage("!period");
+                } else if (char === '\n') {
+                    writeImage("!paragraph")
+                } else if (char === '?') {
+                    writeImage("!question")
+                } else if (char === ',') {
+                    writeImage("!comma")
+                } else if (char === '(') {
+                    writeImage("!lparen")
+                } else if (char === ')') {
+                    writeImage("!rparen")
+                } else if (char === '-') {
+                    writeText("=")                   
+                } else {
+                    writeText(char);
+                }
+            }
+        } else { //Here we have a word
+            let orig_pattern = inputWords[i]; //Preserve original case of the input word so we can display it if it is not found in the dictionary
+            let pattern = inputWords[i].toLowerCase();
+            let is_match = false; let lastSuccess = pattern; let last_i = i;
+            //Beg check dict2 array for match
+            if (isUseDict2Checked) {
+                let j = i+1;
+                while (j <= inputWords.length && (pattern !== "") && dict2_lc.some(word => word.startsWith(pattern))) { //check for phrases 
+                    if (dict2_lc.includes(pattern)) {
+                        lastSuccess = pattern;
+                        last_i = j-1;
+                        is_match = true;
+                    }
+                    if (j < inputWords.length) {
+                        pattern += inputWords[j].toLowerCase();
+                    }
+                    j++;
+                }               
+
+                if (is_match) { //word or phrase matched
+                    pattern = lastSuccess;
+                    i=last_i;
+                    let idxWord = dict2_lc.findIndex(word => word === pattern); //wordcs is word from array in its original case
+                    writeImage2(dict2[idxWord]);
+                }
+            } //end check dict2 array for match
+               
+            if (!is_match) { //Try dict array for match
+                //Beg check dict array for match
+                pattern = inputWords[i].toLowerCase();
+                is_match = false; lastSuccess = pattern; last_i = i;
+                j = i+1;
+                while (j <= inputWords.length && (pattern !== "") && dict_lc.some(word => word.startsWith(pattern))) { //check for phrases 
+                    if (dict_lc.includes(pattern)) {
+                        lastSuccess = pattern;
+                        last_i = j-1;
+                        is_match = true;
+                    }
+                    if (j < inputWords.length) {
+                        pattern += inputWords[j].toLowerCase();
+                    }
+                    j++;
+                }
+                pattern = lastSuccess;
+                i=last_i;
+                
+                if (is_match) { //word or phrase matched
+                    let idxWord = dict_lc.findIndex(word => word === pattern); //wordcs is word from array in its original case
+                    writeImage(dict[idxWord]);                        
+                } else {     //beg check for suffixes 
+                    let base = pattern; let suffix = "";
+                    for (let i = 0; i < allowedSuffixes.length; i++) {
+                        let currentSuffix = allowedSuffixes[i];
+                        if (pattern.endsWith(currentSuffix)) {
+                            base = pattern.slice(0, -currentSuffix.length);
+                            suffix = currentSuffix;
+                        }
+                    }
+
+                    if (dict_lc.includes(base)) { //base word matched
+                        let idxWord = dict_lc.findIndex(word => word === base); //wordcs is word from array in its original case
+                        writeImage(dict[idxWord]);
+                        writeSuffix(suffix);
+                     //end check for suffix
+                
+                    } else { // pattern not found in dictionary
+                    writeText(orig_pattern);
+                    } 
+                } //end check for suffixes                          
+            } //end check dict array for match    
+        } //end handle word
+        i++;
+    } //end while loop       
+    const endTime = performance.now();
+    document.getElementById('inputText').focus();
+    console.log(`Execution time: ${endTime - startTime} milliseconds`);
+} //end processInput
+</script>
+</head>
+<body>
+    <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
+    <form id="translatorForm">
+        <input type="checkbox" id="checkboxUseDict2" name="checkboxUseDict2" checked>
+        <label for="checkboxUseDict2">Use customized DJS</label>
+        <textarea id="inputText" rows="4" cols="50"></textarea><br>
+        <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg DJS"><strong>G</strong>enerate Gregg DJS</button>
+    <form>
+    <input type="checkbox" id="columnsToggle"><label for="columnsToggle">Two columns</label>
+    <div id="resultContainer" class="generated"></div>
+</body>
+</html>
