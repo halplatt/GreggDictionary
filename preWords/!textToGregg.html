@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
-<!--
+<!--//Version: 2025/01/08 at 6:25PM add container style to display title above outline
+    //Version: 2025/01/08 at 3:30PM hide checkboxUseDict2 if not djsWords.
+    //Version: 2024/04/24at5:50pm Default to 2 column display
     //Version: 2024/03/13at20:18 Run inside any dictionary of words with ./_words.array.js and ./!PNGCustom/_words.array2.js folder name as title
     //Version: 2024/02/14at13:35 replace period followed by newline with newline
     //Version: 2024/01/10at10:45 If isUseDict2 checked, Search dict2 array for match first, then search dict array for match.
@@ -28,7 +30,7 @@
     <script>
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2024/03/13at20:18';
+            document.getElementById('version').textContent = 'Version: 2025/01/08 at 6:25PM';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -36,6 +38,12 @@
             document.title = `Regex Search of ${folderName}`;
             document.querySelector('h1').textContent = `Convert Text to Gregg shorthand using outlines from ${folderName}`;
             document.querySelector('title').textContent = `Text to Gregg ${folderName}`;
+
+            // Hide checkboxUseDict2 and its label if folderName is not djsWords
+            if (folderName !== 'djsWords') {
+            document.getElementById('checkboxUseDict2').style.display = 'none';
+            document.querySelector('label[for="checkboxUseDict2"]').style.display = 'none';
+            }
         });
         // create a script tag to load the dict array
         const imagePath = './'; //path to word.png images
@@ -122,6 +130,19 @@ img:not(:first-child) {
          column-rule: 2px solid lightgray;
     }
 }
+
+/* Add conntainer Style to display title above outline */
+.image-container {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+.image-title {
+    font-family: sans-serif; /* Sans-serif font */
+    font-size: 0.3em; /* Adjust font size as needed */
+    margin-bottom: 5px; /* Adjust spacing as needed */
+}
     </style>
     <script>
 window.onload = function() {
@@ -150,6 +171,14 @@ function getVerticalAlign(pngFile) {
         .catch(() => '0px');
 }
 function writeImage(entry) {
+    // Create a container for the image and its title
+    let container = document.createElement('div');
+    container.classList.add('image-container');
+
+    let title = document.createElement('div');
+    title.classList.add('image-title');
+    title.textContent = entry;
+
     let img = document.createElement('img'); //beg-CreateImageTag
     img.src = imagePath + entry + '.png';
     img.title = entry;
@@ -158,18 +187,41 @@ function writeImage(entry) {
     getVerticalAlign(img.src).then(verticalAlign => {
         img.style.verticalAlign = verticalAlign;
     });
-    resultContainer.appendChild(img); //end-CreateImageTag
+
+    // Check if the checkbox is checked before appending the title
+    if (document.getElementById('checkboxShowTitle').checked) {
+        container.appendChild(title);
+    }
+    
+    container.appendChild(img);
+ 
+    resultContainer.appendChild(container); //end-CreateImageTag
 }
 function writeImage2(entry) {
+    // Create a container for the image and its title
+    let container = document.createElement('div');
+    container.classList.add('image-container');
+
+    let title = document.createElement('div');
+    title.classList.add('image-title');
+    title.textContent = entry;
+
     let img = document.createElement('img'); //beg-CreateImageTag
     img.src = imagePath2 + entry + '.png';
     img.title = entry;
     img.alt = entry;
+
+    // Check if the checkbox is checked before appending the title
+    if (document.getElementById('checkboxShowTitle').checked) {
+        container.appendChild(title);
+    }
     // Add vertical align to the image based on the content of a corresponding text file
     getVerticalAlign(img.src).then(verticalAlign => {
         img.style.verticalAlign = verticalAlign;
     });
-    resultContainer.appendChild(img); //end-CreateImageTag
+    container.appendChild(img);
+
+    resultContainer.appendChild(container); //end-CreateImageTag
 }
 function writeSuffix(suffix) {
     let span = document.createElement('span');
@@ -304,11 +356,13 @@ function processInput() {
     <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
     <form id="translatorForm">
         <input type="checkbox" id="checkboxUseDict2" name="checkboxUseDict2" checked>
-        <label for="checkboxUseDict2">Use customized DJS</label>
+        <label for="checkboxUseDict2">Use customized DJS</label>       
+        <input type="checkbox" id="checkboxShowTitle">
+        <label for="checkboxShowTitle">Show words above outline</label>
         <textarea id="inputText" rows="4" cols="50"></textarea><br>
         <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg DJS"><strong>G</strong>enerate Gregg DJS</button>
     <form>
-    <input type="checkbox" id="columnsToggle"><label for="columnsToggle">Two columns</label>
+    <input type="checkbox" id="columnsToggle" checked><label for="columnsToggle">Two columns</label>
     <div id="resultContainer" class="generated"></div>
 </body>
 </html>

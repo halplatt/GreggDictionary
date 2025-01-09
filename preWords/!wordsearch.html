@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    Version 1/8/2025 at 3:06PM do not display error message if no pronunciation is available, and handle error in getting folder name
     Version 12/8/2024 at 06:47PM link to proper dictionary based on folder name.
     Version 12/8/2024 at 02:19PM add phonetic pronunciation from dictionaryapi.dev
     Version 12/6/2024 at 10:29 add help link to !wordsearch_help.html
@@ -20,7 +21,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 12/8/2024 at 06:47PM';
+            document.getElementById('version').textContent = 'Version 1/8/2025 at 3:06PM';
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -31,7 +32,7 @@
                 document.querySelector('title').textContent = `Regex Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
-                //document.title = `Regex Search of ${imagePath1}`;
+                document.title = `Regex Search of ${imagePath1}`;
             }
             document.getElementById('regexInput').focus(); 
        
@@ -286,12 +287,12 @@
             fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
                 .then(response => response.json())
                 .then(data => {
-                    const pronunciation = data[0].phonetic || "Pronunciation not available";
+                    const pronunciation = data[0].phonetic || ""; //"" if pronounciation not available
                     document.getElementById(elementId).textContent = pronunciation;
             })
                 .catch(error => {
-                    console.error('Error fetching pronunciation for', word, ':', error);
-                    document.getElementById(elementId).textContent = "Error loading pronunciation.";
+                    //console.error('Error fetching pronunciation for', word, ':', error);
+                    document.getElementById(elementId).textContent = ""; //"" if error retrieving pronunciation 
                 });
         }
     </script>
@@ -325,7 +326,7 @@ h1 {
 
 
 #regexInput {
-    width: 80%;
+    width: 60%;
     padding: 5px;
     margin-right: 10px;
 }
