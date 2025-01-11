@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
-<!--//Version: 2025/01/08 at 6:25PM add container style to display title above outline
+<!--//Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
+    //Version: 2025/01/08 at 6:25PM add container style to display title above outline
     //Version: 2025/01/08 at 3:30PM hide checkboxUseDict2 if not djsWords.
     //Version: 2024/04/24at5:50pm Default to 2 column display
     //Version: 2024/03/13at20:18 Run inside any dictionary of words with ./_words.array.js and ./!PNGCustom/_words.array2.js folder name as title
@@ -28,17 +29,18 @@
 <html>
 <head>
     <script>
+        var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2025/01/08 at 6:25PM';
+            document.getElementById('version').textContent = 'Version: 2025/01/11 at 11:50am';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
             const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+            globalGsd = folderName.substring(0,3);
             document.title = `Regex Search of ${folderName}`;
             document.querySelector('h1').textContent = `Convert Text to Gregg shorthand using outlines from ${folderName}`;
             document.querySelector('title').textContent = `Text to Gregg ${folderName}`;
-
             // Hide checkboxUseDict2 and its label if folderName is not djsWords
             if (folderName !== 'djsWords') {
             document.getElementById('checkboxUseDict2').style.display = 'none';
@@ -55,6 +57,60 @@
         let script2 = document.createElement('script');
         script2.src = imagePath2 + '!words.array2.js';
         document.head.appendChild(script2);
+        //Functions to link to GreggDictionary.html
+           // Function to copy text to clipboard
+           function copyToClipboard(text) {
+                const clipboardInput = document.getElementById("clipboardInput");
+                clipboardInput.value = text;
+                clipboardInput.select();
+                document.execCommand("copy");
+                clipboardInput.value = "";
+                if (window.location.hostname !== "halplatt.github.io") {
+                    openInNewTab(text);
+                } else {
+                    openInNewTabGithub(text);
+                }
+                
+            }
+
+            //Function to open in new tab
+            function openInNewTab(text) {
+                url = '/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                var newTab = window.open('', 'DJshorthand');
+                try {
+                    // This part is executed in the context of the newly opened window/tab.
+                    if (newTab.location.href === "about:blank") {
+                        // If the tab is new and hasn't loaded any page yet, load our URL
+                        newTab.location.href = url;
+                    } else {
+                        // If the tab already has content, refresh with the new URL
+                        newTab.location.replace(url);
+                    }
+                    // Bring the tab to front
+                    newTab.focus();          
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+            //Function to open in new tab
+              function openInNewTabGithub(text) {
+                url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                var newTab = window.open('', 'GSDictionary');
+                try {
+                    // This part is executed in the context of the newly opened window/tab.
+                    if (newTab.location.href === "about:blank") {
+                        // If the tab is new and hasn't loaded any page yet, load our URL
+                        newTab.location.href = url;
+                    } else {
+                        // If the tab already has content, refresh with the new URL
+                        newTab.location.replace(url);
+                    }
+                    // Bring the tab to front
+                    newTab.focus();          
+                } catch (error) {
+                    console.error(error);
+                }
+            }
     </script>
     <p id="version"></p>
     <title>DJS Gregg Shorthand Translator</title>
@@ -194,7 +250,8 @@ function writeImage(entry) {
     }
     
     container.appendChild(img);
- 
+    container.addEventListener("click", () => copyToClipboard(entry)); //add event listener to copy to clipboard and link to GreggDictionary.html
+    
     resultContainer.appendChild(container); //end-CreateImageTag
 }
 function writeImage2(entry) {
@@ -220,7 +277,8 @@ function writeImage2(entry) {
         img.style.verticalAlign = verticalAlign;
     });
     container.appendChild(img);
-
+    container.addEventListener("click", () => copyToClipboard(entry)); //add event listener to copy to clipboard and link to GreggDictionary.html
+    
     resultContainer.appendChild(container); //end-CreateImageTag
 }
 function writeSuffix(suffix) {
@@ -364,5 +422,6 @@ function processInput() {
     <form>
     <input type="checkbox" id="columnsToggle" checked><label for="columnsToggle">Two columns</label>
     <div id="resultContainer" class="generated"></div>
+    <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
 </body>
 </html>
