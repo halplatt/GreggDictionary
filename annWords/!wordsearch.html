@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    Version 1/13/2025 at 11:48pm add special character buttons above search button
     Version 1/8/2025 at 3:06PM do not display error message if no pronunciation is available, and handle error in getting folder name
     Version 12/8/2024 at 06:47PM link to proper dictionary based on folder name.
     Version 12/8/2024 at 02:19PM add phonetic pronunciation from dictionaryapi.dev
@@ -21,7 +22,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 1/8/2025 at 3:06PM';
+            document.getElementById('version').textContent = 'Version 1/13/2025 at 11:48pm';
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -282,6 +283,26 @@
             const searchButton = document.getElementById("searchButton");
             searchButton.addEventListener("click", performSearch);
         });
+        // Function to add caret to the regex input
+        function addCaret() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = '^' + regexInput.value;
+        }
+        function addDollar() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = regexInput.value + '$';
+        }
+        // Function to add text at the cursor position or end of the text if no cursor position
+        function addTextAtCursor(text) {
+            var regexInput = document.getElementById('regexInput');
+            var startPos = regexInput.selectionStart;
+            var endPos = regexInput.selectionEnd;
+            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
+            regexInput.focus();
+            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;
+            
+        }
+
         // Function to fetch pronunciation for a given word
         function fetchPronunciation(word, elementId) {
             fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
@@ -354,18 +375,72 @@ h1 {
 #resultList li:hover {
     text-decoration: underline;
 }
-
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.button-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.input-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+}
+.button-row button {
+    margin-right: 5px;
+}
+#caretButton {
+    margin-right: 10px;
+}
+#addBegSetNot {
+    margin-right: 5px;
+}
+#addEndSet {
+    margin-right: 20px;
+}
+#addPipe {
+    margin-right: 20px;
+}
+#addAnyChar {
+    margin-right: 20px;
+}
+#add0or1 {
+    margin-right: 10px;
+}
 </style>
 </head>
 <body>
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
-        <input type="text" id="regexInput" placeholder="Enter Regular Expression">
-        <button id="searchButton">Search</button>
-        <label for="maxWords">Maximum Words:</label>
-        <input type="number" id="maxWords" name="maxWords" value="25">
-        <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+        <div class="input-container">
+            <div class="button-row">
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
+                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
+                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
+
+            </div>
+            <div class="input-row">
+                <input type="text" id="regexInput" placeholder="Enter Regular Expression">
+                <button id="searchButton">Search</button>
+                <label for="maxWords">Maximum Words:</label>
+                <input type="number" id="maxWords" name="maxWords" value="100">
+                <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+            </div>
+        </div>
         <ul id="resultList"></ul>
     </div>
     <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
