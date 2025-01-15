@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCInsert html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,28 +45,54 @@
         
                
         <h2>How to Use</h2>
-<p>Simply enter the search string for the word you want to look up, press enter and it will list the shorthand outlines for that word and any words that contain the search string.</p>
+<p>While you can simply enter a word as you would in any dictionary search, the tool will list the shorthand outlines for that word along with any words that contain the search string.</p>
+<p>By inserting special characters into your search string, you create a Regular expressions that matches words that you want to display. 
+    While they might sound complex, you don't need to worry about the technical details. Here's what you need to know:</p>
 
-        <p>The program not only finds exact matches but also finds words and their corresponding outlines that contain the word you typed.</p>
-        <p>The search pattern may return many results. By default, only the first 25 matches are displayed. You can increase the number of matches shown by increasing the number next to the search input box.</p>
+        <h2>Convert your search string into a search pattern</h2>
+        <p>To help you create regular expressions, buttons are available that insert regular expression characters into your search word. Instead of typing the characters, you can click the buttons to add them to your search pattern.</p>
+        <p>Here are the available buttons and their functions:</p>
+        <ul>
+            <li><strong>^</strong> - Adds a caret at the beginning of the input to indicate the start of the word.</li>
+            <li><strong>[</strong> - Begins a list of characters valid for this position.</li>
+            <li><strong>[^</strong> - Begins a list of characters not valid in this position.</li>
+            <li><strong>]</strong> - Ends a set of characters.</li>
+            <li><strong>|</strong> - Separates multiple patterns. allows you to use multiple patterns in one search.</li>
+            <li><strong>.</strong> - Represents any character.</li>
+            <li><strong>*</strong> - Indicates the previous character repeats 0 or more times.</li>
+            <li><strong>+</strong> - Indicates the previous character repeats 1 or more times.</li>
+            <li><strong>?</strong> - Indicates the previous character appears 0 or 1 times.</li>
+            <li><strong>$</strong> - Adds a dollar sign at the end of the input to indicate the text is at the end.</li>
+        </ul>
+        <p>Clicking these buttons will insert the corresponding character at the cursor position or at the end of the text if no cursor position is selected.</p>
+
+        <p>The program not only finds exact matches but also finds words and their corresponding outlines that contain the word you Inserted.</p>
         
-        <h2>Special Search Tips</h2>
+        <h2>Limit or increase the number of results returned</h2>
+        <p>The search pattern may return many results. By default, only the first 100 matches are displayed.</p>
+        <p>You can increase the number of matches shown by increasing the number next to the search input box.</p>
+        
+        <h2>Search Examples</h2>
                 
-<p>While you can simply enter words as you would in any dictionary search, this program offers additional flexibility through regular expressions. Regular expressions are a way to describe word patterns using special characters. For this program, you can think of them as a helpful tool to find words that match certain patterns. While they might sound complex, you don't need to worry about the technical details. Here's what you need to know:</p>
+
 
         <div class="example">
             <strong>Find only the word you are searching for.:</strong>
-            <p>Type <code>^</code> before your word and type <code>$</code> after your word. For example, <code>^to$</code> will find only the word "to", and none of the other words containing it.</p>
+            <p>Insert <code>^</code> before your word and insert <code>$</code> after your word. For example, <code>^to$</code> will find only the word "to", and none of the other words containing it.</p>
         </div>
         
         <div class="example">
             <strong>Find words that start with something:</strong>
-            <p>Type <code>^</code> before your word. For example, <code>^pre</code> will find words like "prefix", "prelude", and "prevent".</p>
+            <p>Insert <code>^</code> before your word. For example, <code>^pre</code> will find words that begin with <code>pre</code> like "prefix", "prelude", and "prevent".</p>
         </div>
         
         <div class="example">
             <strong>Find words that end with something:</strong>
-            <p>Type <code>$</code> after your word. For example, <code>ing$</code> will find words like "anything", "awning", and "bedspring".</p>
+            <p>Insert <code>$</code> after your word. For example, <code>ing$</code> will find words that end with <code>ing</code> like "anything", "awning", and "bedspring".</p>
+        </div>
+        <div class="example">
+            <strong>Use multiple patterns in one search:</strong>
+            <p>Separate the patterns with <code>|</code>. <code>dog$|^rat$</code> will find the words "dog", "watchdog", "cat", and "rat".</p>
         </div>
         
         
@@ -83,7 +109,7 @@
             <li><strong>any character</strong> Use <code>.</code> to match any single character.</li>
             <li class="example">Example: <code>b.d</code> will match words containing "<b>bad</b>", "<b>bid</b>", "<b>bud</b>".</li>
             <li><strong>customzed</strong> enclose in Brackets <code>[ ]</code> to match any character listed in the brackets.</li>
-            <li class="example">Example: <code>p[aeiouy]t</code> will match words containing "pat" "<b>pat</b>tern", "<b>pet</b>", "car<b>pet</b>", "<b>pit</b>", "des<b>pit</b>e"</li>
+            <li class="example">Example: <code>p[aeiouy]t</code> will match words containing the pattern. For example "<b>pat</b>tern", "<b>pet</b>", "car<b>pet</b>", "<b>pit</b>", "des<b>pit</b>e"</li>
             <li><strong>customzed</strong> enclose in Brackets preceeded by ^  <code>[^ ]</code> to match any character not listed.</li>
             <li class="example">Example: <code>p[^aeiouy]t</code> will match words like "di<b>pht</b>heria", "sla<b>pst</b>ick"</li>
         </ul>
@@ -115,7 +141,7 @@
             <li class="example">Example  of using |: <code>^single$|^double$</code> will match "single", "double".</li>
         </ul>
         
-        <p class="tip">Don't worry if these special tricks seem confusing at first. You can always just type in regular words, and the program will still help you find what you're looking for!</p>
+        <p class="tip">Don't worry if these special tricks seem confusing at first. You can always just Insert in regular words, and the program will still help you find what you're looking for!</p>
         
         <p>If you like using regular expressions but need help, describe the search to AI assistant such as ChatGPt and let it create a regular expression for your search. Happy word hunting!</p>
         
