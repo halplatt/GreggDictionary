@@ -1,4 +1,4 @@
-
+//updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function findIdx(input,arrName) {
     var i
     for (i = 0; i < arrName.length; i++) 
@@ -18,9 +18,23 @@ function findNum(input,arrName) {
 if (i==0){i++}
     return i
 }
+// Generic function to handle page forward or back adjustment
+function pageCntAdj(cntAdj, arrayName) {
+	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
+        let word = document.getElementById('txt1').value;
+        let num = findNum(word, arrayName);
+        num = --num + cntAdj; // Adjust for page forward or back and commpensate for 0 based array
+        if (num < 0) { num = 0; }
+        if (num >= arrayName.length) { num = arrayName.length - 1; }
+        document.getElementById('txt1').value = arrayName[num];
+    }
+}
 
 
-function refreshImage() {
+
+function refreshImage(cntAdj) {
+	lastButton = 'refreshImage';
+	pageCntAdj(cntAdj, djsWord);
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand";
@@ -31,7 +45,9 @@ function refreshImage() {
 	document.getElementById('record').innerHTML = path;
 }
 
-function refreshName() {
+function refreshName(cntAdj) {
+	lastButton = 'refreshName';
+	pageCntAdj(cntAdj, pageCntAdj(cntAdj, djsName));
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Proper Names)";
@@ -43,6 +59,8 @@ function refreshName() {
 }
 
 function refreshPhrase() {
+	lastButton = 'refreshPhrase';
+	pageCntAdj(cntAdj, djsPhrase);
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Phrases)";
@@ -53,7 +71,9 @@ function refreshPhrase() {
 	document.getElementById('record').innerHTML = path;
 }
 
-function refreshCenWord() {
+function refreshCenWord(cntAdj) {
+	lastButton = 'refreshCenWord';
+	pageCntAdj(cntAdj, cenWord);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand";
@@ -65,8 +85,11 @@ function refreshCenWord() {
 }
 
 
+
  
-function refreshCenBrief() {
+function refreshCenBrief(cntAdj) {
+	lastButton = 'refreshCenBrief';
+	pageCntAdj(cntAdj, cenBrief);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Brief Forms)";
@@ -77,7 +100,9 @@ function refreshCenBrief() {
 	document.getElementById('record').innerHTML = path;
 }
 
-function refreshCenPhrase() {
+function refreshCenPhrase(cntAdj) {
+	lastButton = 'refreshCenPhrase';
+	pageCntAdj(cntAdj, cenPhrase);
 	hideSuggestion() 
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Phrases)";
@@ -88,7 +113,9 @@ function refreshCenPhrase() {
 	document.getElementById('record').innerHTML = path;
 }
  
-function refreshCenWomen() {
+function refreshCenWomen(cntAdj) {
+	lastButton = 'refreshCenWomen';
+	pageCntAdj(cntAdj, cenWomen);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Women Names)";
@@ -98,7 +125,9 @@ function refreshCenWomen() {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshCenMen() {
+function refreshCenMen(cntAdj) {
+	lastButton = 'refreshCenMen';
+	pageCntAdj(cntAdj, cenMen);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Men Names)";
@@ -108,7 +137,9 @@ function refreshCenMen() {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshCenSur() {
+function refreshCenSur(cntAdj) {
+	lastButton = 'refreshCenSur';
+	pageCntAdj(cntAdj, cenSur);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Sur Names)";
@@ -118,7 +149,9 @@ function refreshCenSur() {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshCenUSName() {
+function refreshCenUSName(cntAdj) {
+	lastButton = 'refreshCenUSName';
+	pageCntAdj(cntAdj, cenUSName);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (US City Names)";
@@ -129,7 +162,9 @@ function refreshCenUSName() {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshCenGeoName() {
+function refreshCenGeoName(cntAdj) {
+	lastButton = 'refreshCenGeoName';
+	pageCntAdj(cntAdj, cenGeoName);
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Geographical Names)";
@@ -139,7 +174,9 @@ function refreshCenGeoName() {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshSimWord() {
+function refreshSimWord(cntAdj) {
+	lastButton = 'refreshSimWord';
+	pageCntAdj(cntAdj, simWord);
 	hideSuggestion()
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand";
@@ -149,7 +186,9 @@ function refreshSimWord() {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshSimName() {
+function refreshSimName(cntAdj) {
+	lastButton = 'refreshSimName';
+	pageCntAdj(cntAdj, simName);
 	hideSuggestion()
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Names)";
@@ -159,7 +198,9 @@ function refreshSimName() {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
-function refreshPreWord() {
+function refreshPreWord(cntAdj) {
+	lastButton = 'refreshPreWord';
+	pageCntAdj(cntAdj, preWord);
 	hideSuggestion()
 	loadAboutPre()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";

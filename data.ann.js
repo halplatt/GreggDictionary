@@ -1,3 +1,4 @@
+//updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 function findOrder(input) {
 	var left = 0;
 	var right = 18666;
@@ -42,10 +43,21 @@ function findOrderReverse(input) {
 	if (compRight > 0) return -left - 3;
 }
 
-function refreshAnnWord() {
+function refreshAnnWord(cntAdj) {
+	lastButton = 'refreshAnnWord';
 	hideSuggestion()
 	loadAboutAnn()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";
+	// Adjust for page forward or back
+	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
+		let word = document.getElementById('txt1').value;
+		let num = findNum(word, dict);
+		num--
+		num += cntAdj;
+		if (num < 0) { num = 0; }
+		if (num >= dict.length) { num = dict.length - 1; }
+		document.getElementById('txt1').value = dict[num];
+	}
 	var word = document.getElementById('txt1').value.toLowerCase();
 	var order = findOrder(word);
 	var order_reverse = findOrderReverse(word);

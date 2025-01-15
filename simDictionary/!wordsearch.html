@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--
-    Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
+Version 01/15/2025 at 12:48am add button row for regex input    
+Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     Version 12/11/2024 at 11:14PM first version
 -->
 <html lang="en">
@@ -97,20 +98,76 @@
             border-radius: 5px;
             cursor: pointer;
         }
+            /* these styles are for button and input row */
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button-row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .input-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    .button-row button {
+        margin-right: 5px;
+    }
+    #caretButton {
+        margin-right: 10px;
+    }
+    #addBegSetNot {
+        margin-right: 5px;
+    }
+    #addEndSet {
+        margin-right: 20px;
+    }
+    #addPipe {
+        margin-right: 20px;
+    }
+    #addAnyChar {
+        margin-right: 20px;
+    }
+    #add0or1 {
+        margin-right: 10px;
+    }
     </style>
 </head>
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 12/13/2024 at 12:23PM</p>
+    <p id="version">Version 01/15/2025 at 12:48am</p>
 
-    <input type="text" id="regexInput" placeholder="Enter regular expression"> 
-    <button id="searchButton" onclick="searchWords()">Search</button>
-    <label for="maxRsults">Maximum Words:</label>
-    <input type="number" id="maxResults" value="25" min="1" style="width: 50px;">
-    <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+    <div class="input-container">
+        <div class="button-row">
+            <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
+            <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+            <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
+            <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+            <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+            <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+            <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+            <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+            <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+            <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
+        </div>
+        <div class="input-row">
+            <input type="text" id="regexInput" placeholder="Enter Regular Expression">
+            <button id="searchButton" onclick="searchWords()">Search</button>
+            <label for="maxResults">Maximum Words:</label>
+            <input type="number" id="maxResults" value="25" min="1" style="width: 50px;">
+            <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+        </div>
+    </div>
     <div id="results"></div>
     <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
+
     <script>
         const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
         const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
@@ -246,6 +303,25 @@
 
             regexInput.focus();
             regexInput.select();
+        }
+
+        // Function to add caret to the regex input
+        function addCaret() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = '^' + regexInput.value;
+        }
+        function addDollar() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = regexInput.value + '$';
+        }
+        // Function to add text at the cursor position or end of the text if no cursor position
+        function addTextAtCursor(text) {
+            var regexInput = document.getElementById('regexInput');
+            var startPos = regexInput.selectionStart;
+            var endPos = regexInput.selectionEnd;
+            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
+            regexInput.focus();
+            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
         }
     </script>
 </body>
