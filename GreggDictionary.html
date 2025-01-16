@@ -68,39 +68,36 @@ The styles for this page are defined in an external CSS file also linked in the 
 				}
 				return params;
 			}
-			let lastButton = 'refreshImage'; // Default to 'refreshImage'
+			let lastButton; // Define global variable to hold last button clicked
 			function handleGsdParam() {
 				const params = getQueryParams();
-				if (params.gsd) {
-					switch (params.gsd) {
-						case 'ann':
-							refreshAnnWord();
-							break;
-						case 'pre':
-							refreshPreWord();
-							break;
-						case 'sim':
-							refreshSimWord();
-							break;
-						case 'djs':
-							refreshImage();
-							break;
-						case 'cen':
-							refreshCenWord();
-							break;
-						default:
-							refreshImage();
-							break;
+				if (lastButton === undefined) {
+					if (params.gsd) {
+						switch (params.gsd) {
+							case 'ann':
+								lastButton = 'refreshAnnWord';
+								break;
+							case 'pre':
+								lastButton = 'refreshPreWord';
+								break;
+							case 'sim':
+								lastButton = 'refreshSimWord';
+								break;
+							case 'djs':
+								lastButton = 'refreshDjsWord';
+								break;
+							default:
+								lastButton = 'refreshDjsWord';
+								break;
+						}
 					}
+				}
+				if (typeof window[lastButton] === 'function') {
+					window[lastButton]();
 				} else {
-            if (typeof window[lastButton] === 'function') {
-                window[lastButton]();
-            } else {
-                refreshImage();
-            }
-        }
+					refreshDjsWord();
+				}
 			}
-
 			function hideSuggestion() {
 				document.getElementById("suggest").style.display = "none";
 				document.getElementById('txt1').select();
@@ -150,13 +147,13 @@ The styles for this page are defined in an external CSS file also linked in the 
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
-                                <button id="btn1" class="djs" onclick="refreshImage()" accesskey="d" title="(DJS) Alt+Shift+d">djs</button>
+                                <button id="btn1" class="djs" onclick="refreshDjsWord()" accesskey="d" title="(DJS) Alt+Shift+d">djs</button>
 							</div>
                             <div class="inner">
-                                <button id="btn2" onclick="refreshName()" class="djs">djsName</button>
+                                <button id="btn2" onclick="refreshDjsName()" class="djs">djsName</button>
 							</div>
 			                 <div class="inner">
-                                <button id="btn14" onclick="refreshPhrase()"  accesskey="p" title="Alt+Shift+p" class="djs">djs<b>P</b>hrase</button>
+                                <button id="btn14" onclick="refreshDjsPhrase()"  accesskey="p" title="Alt+Shift+p" class="djs">djs<b>P</b>hrase</button>
 							</div>
 							<div class="inner">
                                 <button id="btn3" onclick="refreshSimWord()" accesskey="s" class="sim" title="Alt+Shift+s"><b>S</b>implified</button>

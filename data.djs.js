@@ -1,3 +1,4 @@
+//updated 1/15/2025 at 2:27 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function findIdx(input,arrName) {
     var i
@@ -32,8 +33,8 @@ function pageCntAdj(cntAdj, arrayName) {
 
 
 
-function refreshImage(cntAdj) {
-	lastButton = 'refreshImage';
+function refreshDjsWord(cntAdj) {
+	lastButton = 'refreshDjsWord';
 	pageCntAdj(cntAdj, djsWord);
 	hideSuggestion()
 	loadAboutDJS()
@@ -45,8 +46,8 @@ function refreshImage(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 
-function refreshName(cntAdj) {
-	lastButton = 'refreshName';
+function refreshDjsName(cntAdj) {
+	lastButton = 'refreshDjsName';
 	pageCntAdj(cntAdj, pageCntAdj(cntAdj, djsName));
 	hideSuggestion()
 	loadAboutDJS()
@@ -58,8 +59,8 @@ function refreshName(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 
-function refreshPhrase() {
-	lastButton = 'refreshPhrase';
+function refreshDjsPhrase() {
+	lastButton = 'refreshDjsPhrase';
 	pageCntAdj(cntAdj, djsPhrase);
 	hideSuggestion()
 	loadAboutDJS()
