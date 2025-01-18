@@ -3,7 +3,8 @@
 <head><meta charset="us-ascii">
 	<title>Notes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">* {
+<style type="text/css">
+* {
   box-sizing: border-box;
 }
 
@@ -26,6 +27,13 @@ body {
   font-size: 40px;
 }
 
+h3 {color:white}
+/* Custom link colors */
+.navbar a.cen {color: #017699;}
+.navbar a.djs {color: #507ec9;}
+.navbar a.sim {color: #8babf1;}
+.navbar a.ann {color: #009fc4;}
+.navbar a.pre {color: #009fc4;}
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
@@ -50,7 +58,13 @@ body {
   background-color: #ddd;
   color: black;
 }
-
+/* offset these items */
+.related a { 
+    margin-left: 40px; /* Adjust the value as needed */
+}
+.related h3{ 
+    margin-left: 30px; /* Adjust the value as needed */
+}
 /* Column container */
 .row {  
   display: -ms-flexbox; /* IE10 */
@@ -128,16 +142,23 @@ body {
   <img src="djsWords/!PNGCustom/Krivanek.png" title="Krivanek" alt="Krivanek" style="vertical-align: -52px;">
 </div>
 <div class="navbar">
-    <h2 class="desc">Gregg Shorthand Dictionary related</h2>
-  <a href="GreggDictionary.html" onclick="window.open(this.href, 'djshorthand'); return false;">Look up Words in Gregg DJS, Centennial, Anniverary(1929), or Pre-Anniversary(1916) Dictionaries</a>
-  <a href="djsWords/!wordsearch.html" onclick="window.open(this.href, 'wordsearch'); return false;">Search  <b>DJS</b> Outlines with RegEx</a> 
-  <a href="djsWords/!textToGregg.html" onclick="window.open(this.href, 'textToDJSGregg'); return false;">convert Text to <b>DJS</b> Gregg shorthand</a>
-  <a href="simDictionary/!wordsearch.html" onclick="window.open(this.href, 'wordsearch'); return false;">Search <b>Simplified</b>  Gregg Outlines in Dictionary Pages with RegEx</a> 
-  <a href="annWords/!wordsearch.html" onclick="window.open(this.href, 'wordsearch'); return false;">Search for <b>Anniversary</b> Outlines with RegEx</a> 
-  <a href="annWords/!textToGregg.html" onclick="window.open(this.href, 'textToDJSGregg'); return false;">convert Text to <b>Anniversary</b> Gregg shorthand</a>
-  <a href="preWords/!wordsearch.html" onclick="window.open(this.href, 'wordsearch'); return false;">Search for <b>pre-Anniversary</b> Gregg Outlines with RegEx</a> 
-  <a href="preWords/!textToGregg.html" onclick="window.open(this.href, 'textToDJSGregg'); return false;">convert Text to <b>pre-Anniversary</b> Gregg shorthand</a>
-  
+<h2 class="desc">Gregg Shorthand Dictionary related</h2>
+
+  <a href="GreggDictionary.html" class="" onclick="window.open(this.href, 'GreggDictionary'); return false;">Look up Words in Gregg DJS, Centennial, Anniverary(1929), or Pre-Anniversary(1916) Dictionaries</a>
+  <div class="related">
+    <h3>DJS</h3>
+    <a href="djsWords/!wordsearch.html" class="djs" onclick="window.open(this.href, 'djsWords'); return false;">Search  <b>DJS</b> Outlines with RegEx</a> 
+    <a href="djsWords/!textToGregg.html" class="djs" onclick="window.open(this.href, 't2djsWords'); return false;">convert Text to <b>DJS</b> Gregg shorthand</a>
+    <h3>Simplified</h3>
+    <a href="simDictionary/!wordsearch.html" class="sim" onclick="window.open(this.href, 'simWords'); return false;">Search <b>Simplified</b>  Gregg Outlines in Dictionary Pages with RegEx</a> 
+    <h3>Anniversary</h3>
+    <a href="annWords/!wordsearch.html" class="ann" onclick="window.open(this.href, 'annWords'); return false;">Search for <b>Anniversary</b> Outlines with RegEx</a> 
+    <a href="annWords/!textToGregg.html" class="ann" onclick="window.open(this.href, 't2annWords'); return false;">convert Text to <b>Anniversary</b> Gregg shorthand</a>
+    <h3>pre-Anniversary</h3>
+    <a href="preWords/!wordsearch.html" class="pre" onclick="window.open(this.href, 'preWords'); return false;">Search for <b>pre-Anniversary</b> Gregg Outlines with RegEx</a> 
+    <a href="preWords/!textToGregg.html" class="pre" onclick="window.open(this.href, 't2preWords'); return false;">convert Text to <b>pre-Anniversary</b> Gregg shorthand</a>
+  </div>  
+</div>
 <div class="navbar">
     <h2 class="desc">Other Gregg Shorthand References:</h2>
 <a href="https://greggdict.rliu.dev/" onclick="window.open(this.href, 'rliu'); return false;" style="display: flex; align-items: center; text-decoration: none;">
