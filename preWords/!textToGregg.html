@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
-<!--//Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
+<!--
+    //Version: 2025/01/17 at 12:00am check to make sure page opens in proper tab
+    //Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
     //Version: 2025/01/08 at 6:25PM add container style to display title above outline
     //Version: 2025/01/08 at 3:30PM hide checkboxUseDict2 if not djsWords.
     //Version: 2024/04/24at5:50pm Default to 2 column display
@@ -32,7 +34,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2025/01/11 at 11:50am';
+            document.getElementById('version').textContent = 'Version: 2025/01/17 at 12:00am';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -76,40 +78,14 @@
             //Function to open in new tab
             function openInNewTab(text) {
                 url = '/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'DJshorthand');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();
             }
             //Function to open in new tab
               function openInNewTabGithub(text) {
                 url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'GSDictionary');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();        
             }
     </script>
     <p id="version"></p>
