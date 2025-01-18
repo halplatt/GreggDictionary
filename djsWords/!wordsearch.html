@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    Version 1/17/2025 12AM link to target window GreggDictionary
     Version 1/13/2025 at 11:48pm add special character buttons above search button
     Version 1/8/2025 at 3:06PM do not display error message if no pronunciation is available, and handle error in getting folder name
     Version 12/8/2024 at 06:47PM link to proper dictionary based on folder name.
@@ -22,7 +23,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 1/13/2025 at 11:48pm';
+            document.getElementById('version').textContent = 'Version 1/17/2025 at 12AM';
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -96,41 +97,15 @@
 
             //Function to open in new tab
             function openInNewTab(text) {
-                url = '/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'DJshorthand');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();
             }
-            //Function to open in new tab
+            //Function to open in new tab when on github
               function openInNewTabGithub(text) {
                 url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'GSDictionary');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();
             }
             // Function to perform the search
             function performSearch() {
