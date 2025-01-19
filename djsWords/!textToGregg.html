@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
     //Version: 2025/01/19 at 3:22pm Add some space above the resultContainer
     //Version: 2025/01/17 at 12:01am check to make sure page opens in proper tab
     //Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
@@ -35,7 +36,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 025/01/19 at 3:22pm';
+            document.getElementById('version').textContent = 'Version: 2025/01/19 at 5pm';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -271,7 +272,11 @@ function writeSuffix(suffix) {
     resultContainer.appendChild(span);
 }
 function writeText(text) {
-    resultContainer.appendChild(document.createTextNode(text)); 
+    let textNode = document.createTextNode(text);
+    let span = document.createElement('span');
+    span.appendChild(textNode);
+    span.addEventListener("click", () => copyToClipboard(text)); // add event listener to copy to clipboard and link to GreggDictionary.html
+    resultContainer.appendChild(span);
 }
 function processInput() {
     const startTime = performance.now();
