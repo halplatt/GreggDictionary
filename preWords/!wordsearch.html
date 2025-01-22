@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    Version 1/21/2025 10:46PM correct focus and select text after click
+    Version 1/17/2025 12AM link to target window GreggDictionary
     Version 1/13/2025 at 11:48pm add special character buttons above search button
     Version 1/8/2025 at 3:06PM do not display error message if no pronunciation is available, and handle error in getting folder name
     Version 12/8/2024 at 06:47PM link to proper dictionary based on folder name.
@@ -22,7 +24,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 1/13/2025 at 11:48pm';
+            document.getElementById('version').textContent = 'Version 1/21/2025 10:46PM';
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -40,8 +42,15 @@
             // Event to place focus and select text after focus or click
             document.addEventListener('click', function(event) {
                 const targetId = event.target.id;
+                const excludeIds = [
+                    'maxWords','caretButton', 'addBegSet', 'addBegSetNot', 
+                    'addEndSet', 'addPipe', 'addAnyChar', 'add0orMore', 
+                    'add1orMore', 'add0or1', 'dollarButton'
+                ];
                 if (targetId !== 'maxWords') {
-                    document.getElementById('regexInput').focus();
+                    document.getElementById('regexInput').focus();    
+                }
+                if (!excludeIds.includes(targetId)) {
                     document.getElementById('regexInput').select();
                 }
             });
@@ -96,41 +105,15 @@
 
             //Function to open in new tab
             function openInNewTab(text) {
-                url = '/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'DJshorthand');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();
             }
-            //Function to open in new tab
+            //Function to open in new tab when on github
               function openInNewTabGithub(text) {
                 url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open('', 'GSDictionary');
-                try {
-                    // This part is executed in the context of the newly opened window/tab.
-                    if (newTab.location.href === "about:blank") {
-                        // If the tab is new and hasn't loaded any page yet, load our URL
-                        newTab.location.href = url;
-                    } else {
-                        // If the tab already has content, refresh with the new URL
-                        newTab.location.replace(url);
-                    }
-                    // Bring the tab to front
-                    newTab.focus();          
-                } catch (error) {
-                    console.error(error);
-                }
+                var newTab = window.open(url, 'GreggDictionary');
+                newTab.focus();
             }
             // Function to perform the search
             function performSearch() {
@@ -298,8 +281,11 @@
             var startPos = regexInput.selectionStart;
             var endPos = regexInput.selectionEnd;
             regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
-            regexInput.focus();
+            //regexInput.focus();
+            //regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;
+            // Set the cursor position to the end of the inserted text
             regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;
+
             
         }
 

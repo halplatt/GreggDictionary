@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundex Comparison</title>
+</head>
+<body>
+    <h1>Soundex Comparison</h1>
+    <input type="text" id="testword" placeholder="Enter a word">
+    <button onclick="compareSoundex()">Compare</button>
+    <p id="debug"></p>
+    <p id="results"></p>
+
+    <script>
+        const imagePath1 = "djsWords/";
+        let script1 = document.createElement('script');
+        script1.src = imagePath1 + '!words.array.js';
+        document.head.appendChild(script1);
+
+        // Set focus on the testword input field when the page loads
+        window.onload = function() {
+            document.getElementById("testword").focus();
+        };
+
+        // Add event listener to trigger compareSoundex on Enter key press
+        document.getElementById("testword").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                compareSoundex();
+            }
+        });
+
+        function soundex(word) {
+            word = word.toUpperCase();
+            word = word.replace("PH", "F");
+            word = word.replace("CH", "J");
+            word = word.replace("SH", "J");
+            word = word.replace("GE", "J");
+            word = word.replace("X", "S");
+            word = word.replace("C", "K");
+            word = word.replace("BLE", "B");
+            word = word.replace("ORT", "T");
+            word = word.replace("COM", "K");
+            word = word.replace("CON", "K");
+            word = word.replace("CAN", "K");
+            word = word.replace("FOR", "F");
+            word = word.replace("FUL", "F");
+
+
+
+            let soundex_code = "";
+            const soundex_mapping = {
+                "TD": "1", "N": "2", "M": "3",
+                "R": "4", "L": "5", "J": "6", "KG": "7", 
+                "LFV": "8", "PB": "9", "SZ": "0"
+            };
+
+            for (let char of word) {
+                for (let key in soundex_mapping) {
+                    if (key.includes(char)) {
+                        let code = soundex_mapping[key];
+                        if (!soundex_code || code !== soundex_code[soundex_code.length - 1]) {
+                            soundex_code += code;
+                        }
+                        break;
+                    }
+                }
+                if (!soundex_code) {
+                    soundex_code += char;
+                }
+            }
+
+            return soundex_code.padEnd(4, " ");
+        }
+
+        function compareSoundex() {
+            const testword = document.getElementById("testword").value;
+            const testwordSoundex = soundex(testword);
+            const debug = document.getElementById("debug");
+            const results = document.getElementById("results");
+            let matchingWords = [];
+
+            dict.forEach(word => {
+                if (soundex(word) === testwordSoundex) {
+                    matchingWords.push(word);
+                }
+            });
+
+            let txtDebug = "For '" + testword + "', the Soundex code is '" + testwordSoundex + "' and matching words are:";
+            debug.textContent = txtDebug;
+            results.textContent = matchingWords.join(" ");
+        }
+    </script>
+</body>
+</html>

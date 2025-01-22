@@ -2428,3 +2428,5 @@ ratt,raft
 rattia,raffia
 ped,pea
 biographtcally,biographically
+reset,reset
+reservoir,reservoir
