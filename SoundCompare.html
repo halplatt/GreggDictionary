@@ -1,11 +1,27 @@
 <!DOCTYPE html>
+<!-- 
+    SoundCompare.html
+    Description: This web page allows users to enter a word, convert it to a Soundex code using a customized mapping, 
+    and compare it against a list of words to find matches. The matching words are displayed along with debug information.
+        Version: 2025-01-21 at 11:58PM Added version number and updated preprocessing rules.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soundex Comparison</title>
+    <style>
+        #version {
+        position: absolute;
+        top: 10px;
+        right: 75px;
+        font-size: 0.8em;
+        color: #888;
+        }
+    </style>
 </head>
 <body>
+    <p id="version">Version: 2025-01-21 at 11:58PM</p>
     <h1>Soundex Comparison</h1>
     <input type="text" id="testword" placeholder="Enter a word">
     <button onclick="compareSoundex()">Compare</button>
@@ -38,6 +54,8 @@
             word = word.replace("SH", "J");
             word = word.replace("GE", "J");
             word = word.replace("X", "S");
+            word = word.replace("CI", "SI");
+            word = word.replace("CE", "S");
             word = word.replace("C", "K");
             word = word.replace("BLE", "B");
             word = word.replace("ORT", "T");
@@ -46,6 +64,13 @@
             word = word.replace("CAN", "K");
             word = word.replace("FOR", "F");
             word = word.replace("FUL", "F");
+            word = word.replace("MENT", "M")
+            word = word.replace("MIN", "M")
+            word = word.replace("MUM", "M")
+            word = word.replace("GRAM", "G")
+            word = word.replace("LOGY", "L")
+            word = word.replace("ANTIC", "NT")
+            word = word.replace("IETY", "I")
 
 
 
