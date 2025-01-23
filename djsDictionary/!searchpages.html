@@ -4,6 +4,7 @@ This program displays the page of a dictionary on which the search word will be 
 To customize this program:
 1. Change the `dict` array to the page names of the .png images you are searching. The page names must be in alphabetical order.
 2. Change the src= in the `path` statement to the folder containing the .png images.
+version 2025/01/23 at 12:14PM adjust size of record display area.
 -->
 <html>
 	<head>
@@ -124,7 +125,7 @@ To customize this program:
 	<body>
 		<div class="container">
 				<h3 id="searchTitle">Search pages in </h3>
-                <div id="version">Version 2024/9/5@2:30pm</div> <!-- Version display element -->
+                <div id="version">Version 2025/01/23 at 12:14PM</div> <!-- Version display element -->
 				<div class="search">
 					<div class="middle">
 						<div class="inner">
@@ -160,7 +161,8 @@ To customize this program:
 	function refreshImage() {
 		var word = document.getElementById('txt1').value;
 		var wordId = findIdx(word, dict);
-		var path = '<img src="' + "." + '/' + wordId + '.png">';
+		//var path = '<img src="' + "." + '/' + wordId + '.png">';
+		var path = '<img src="' + "." + '/' + wordId + '.png" style="max-width: 100%; height: auto;">';
 		document.getElementById('record').innerHTML = path;
 		document.getElementById('txt1').focus();
 		document.getElementById('txt1').select();

@@ -3,7 +3,7 @@
     SoundCompare.html
     Description: This web page allows users to enter a word, convert it to a Soundex code using a customized mapping, 
     and compare it against a list of words to find matches. The matching words are displayed along with debug information.
-        Version: 2025-01-21 at 11:58PM Added version number and updated preprocessing rules.
+        Version: 2025-01-22 at 12:51AM Added version number and updated preprocessing rules.
 -->
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <p id="version">Version: 2025-01-21 at 11:58PM</p>
+    <p id="version">Version: 2025-01-22 at 12:51AM</p>
     <h1>Soundex Comparison</h1>
     <input type="text" id="testword" placeholder="Enter a word">
     <button onclick="compareSoundex()">Compare</button>
@@ -52,9 +52,12 @@
             word = word.replace("PH", "F");
             word = word.replace("CH", "J");
             word = word.replace("SH", "J");
-            word = word.replace("GE", "J");
+            word = word.replace("GE", "J")
+            word = word.replace("GI", "J")
+            word = word.replace("GY", "J")
             word = word.replace("X", "S");
             word = word.replace("CI", "SI");
+            word = word.replace("CY", "S");
             word = word.replace("CE", "S");
             word = word.replace("C", "K");
             word = word.replace("BLE", "B");
@@ -71,13 +74,26 @@
             word = word.replace("LOGY", "L")
             word = word.replace("ANTIC", "NT")
             word = word.replace("IETY", "I")
-
+            word = word.replace("LITY", "L")
+            word = word.replace("LTY", "L")
+            word = word.replace("RITY", "R")
+            word = word.replace("WR", "R")
+            word = word.replace("NT", "D")
+            word = word.replace("MT", "D")
+            word = word.replace("ND", "D")
+            word = word.replace("MD", "D")
+            word = word.replace("GE", "J")
+            word = word.replace("GI", "J")
+            word = word.replace("GY", "J")
+            word = word.replace("PART", "PT")
+            word = word.replace("LD", "L")
+            word = word.replace("RD", "R")
 
 
             let soundex_code = "";
             const soundex_mapping = {
-                "TD": "1", "N": "2", "M": "3",
-                "R": "4", "L": "5", "J": "6", "KG": "7", 
+                "TD": "1", "EAY": "2", "NM": "3",
+                "I": "4", "ORL": "5", "J": "6", "UKG": "7", 
                 "LFV": "8", "PB": "9", "SZ": "0"
             };
 
