@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+Version 01/24/2025 at 3:52pm if globalGsd is ann, open searchpages.html in new tab 
 Version 01/23/2025 at 11:45am modified work in xxxDictionary using globalGsd 
 Version 01/17/2025 at 12:00am open GreggDictionary in GreggDictionary tab     
 Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
@@ -143,7 +144,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 01/23/2025 at 11:45am</p>
+    <p id="version">Version 01/24/2025 at 3:52</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -224,6 +225,12 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                         const resultItem = document.createElement('div');
                         resultItem.className = 'result-item';
                         resultItem.innerHTML = `Page: ${page.page}, Word: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
+                        if (globalGsd === 'ann') {
+                            resultItem.addEventListener('click', function() {
+                            const url = `!searchpages.html?w=${page.page}`;
+                            window.open(url, `searchpages${globalGsd}`);
+                            });
+                        }
 
                         const outerContainer = document.createElement('div');
                         outerContainer.className = 'max-w-screen overflow-x-auto';
@@ -250,17 +257,18 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
                         img.onclick = function() {
 
-                        const clipboardInput = document.getElementById("clipboardInput");
-                        clipboardInput.value = word.t;
-                        clipboardInput.select();
-                        document.execCommand("copy");
-                        clipboardInput.value = "";
-                        if (window.location.hostname == "halplatt.github.io") {
-                            var url = `/GreggDictionary/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                        } else {
-                            var url = `/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                        }
-                        window.open(url, 'GreggDictionary');
+                            event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                            const clipboardInput = document.getElementById("clipboardInput");
+                            clipboardInput.value = word.t;
+                            clipboardInput.select();
+                            document.execCommand("copy");
+                            clipboardInput.value = "";
+                            if (window.location.hostname == "halplatt.github.io") {
+                                var url = `/GreggDictionary/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
+                            } else {
+                                var url = `/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
+                            }
+                            window.open(url, 'GreggDictionary');
                         };
 
                         const expandButton = document.createElement('button');
