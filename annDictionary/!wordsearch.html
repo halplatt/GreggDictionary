@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Version 01/24/2025 at 3:52pm if globalGsd is ann, open searchpages.html in new tab 
+Version 01/24/2025 at 9:26pm if globalGsd is ann, open searchpages.html in new tab; stop propagation of click event
 Version 01/23/2025 at 11:45am modified work in xxxDictionary using globalGsd 
 Version 01/17/2025 at 12:00am open GreggDictionary in GreggDictionary tab     
 Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
@@ -144,7 +144,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 01/24/2025 at 3:52</p>
+    <p id="version">Version 01/24/2025 at 9:26pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -275,6 +275,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                         expandButton.className = 'expand-button';
                         expandButton.innerHTML = 'Expand';
                         expandButton.onclick = function() {
+                            event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
                             if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
                                 imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
                                 imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
