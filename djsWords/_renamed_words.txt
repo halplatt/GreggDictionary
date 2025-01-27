@@ -2434,3 +2434,6 @@ biological,biological
 purity,purify
 purty,purity
 root,roof
+santtarbrum,sanitarium
+lelsure,leisure
+credibiltty,credibility
