@@ -2437,3 +2437,6 @@ root,roof
 santtarbrum,sanitarium
 lelsure,leisure
 credibiltty,credibility
+stabrlize,stabilize
+stabrlized,stabilized
+stabrlizer,stabilizer

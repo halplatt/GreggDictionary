@@ -1,1 +1,3 @@
-bright,bright
+stabrlize,stabilize
+stabrlized,stabilized
+stabrlizer,stabilizer
