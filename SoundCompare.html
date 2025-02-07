@@ -88,7 +88,9 @@
             word = word.replace("PART", "PT")
             word = word.replace("LD", "L")
             word = word.replace("RD", "R")
-
+            if (word.endsWith("E")) {
+                word = word.slice(0, -1);
+            }
 
             let soundex_code = "";
             const soundex_mapping = {
