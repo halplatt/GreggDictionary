@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+Version 02/07/2025 at 4:54pm Convert png names to lowercase
 version 02/06/2025 at 9:18pm First version
 -->
 <html lang="en">
@@ -145,7 +146,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 02/06/2025 at 9:19pm</p>
+    <p id="version">Version 02/07/2025 at 4:54pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -266,7 +267,7 @@ version 02/06/2025 at 9:18pm First version
 
                         const img = document.createElement('img');
                         img.className = 'absolute max-w-none';
-                        img.src = `simDictionary/${page.page}.png`;
+                        img.src = `simDictionary/${page.page.toLowerCase()}.png`;
                         img.alt = `Gregg shorthand for word: ${word.t}`;
                         img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
                         img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
