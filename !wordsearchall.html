@@ -328,8 +328,8 @@ version 02/06/2025 at 9:18pm First version
                         const imagePathann = 'annWords/'; //path to word.png images
                         const img_ann = document.createElement("img");
                         img_ann.src = `${imagePathann}${word.t}.png`;
-                        img_ann.style.width = '3%';  // Set the width to 1/4 of the original size
-                        img_ann.style.height = '3%'; // Set the height to 1/4 of the original size
+                        img_ann.style.width = 'auto';  // Set the width to 1/4 of the original size
+                        img_ann.style.height = '50px'; // Set the height to 1/4 of the original size
 
                         img_ann.onerror = function() {
                             this.style.display = "none";  // Hide the image if it fails to load
