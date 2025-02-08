@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Version 02/07/2025 at 5pm Convert png names to lowercase
+Version 02/07/2025 at 510pm Convert png names to lowercase, window.open
 version 02/06/2025 at 9:18pm First version
 -->
 <html lang="en">
@@ -146,7 +146,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 02/07/2025 at 5pm</p>
+    <p id="version">Version 02/07/2025 at 547pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -291,13 +291,10 @@ version 02/06/2025 at 9:18pm First version
                             clipboardInput.value = word.t;
                             clipboardInput.select();
                             document.execCommand("copy");
-                            clipboardInput.value = "";
-                            if (window.location.hostname == "halplatt.github.io") {
-                                var url = `/GreggDictionary/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                            } else {
-                                var url = `/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                            }
-                            window.open(url, 'GreggDictionary');
+                            clipboardInput.value = "";                            
+                            var url = `GreggDictionary.html?x=${word.t}&gsd=sim`;
+                            var newTab=window.open(url, 'GreggDictionary');
+                            newTab.focus();
                         };
 
                         const expandButton = document.createElement('button');
