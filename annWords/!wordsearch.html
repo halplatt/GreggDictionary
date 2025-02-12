@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    Version 2/12/2025 5:13PM Add Copyright notice   
     Version 1/21/2025 10:46PM correct focus and select text after click
     Version 1/17/2025 12AM link to target window GreggDictionary
     Version 1/13/2025 at 11:48pm add special character buttons above search button
@@ -24,7 +25,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 1/21/2025 10:46PM';
+            document.getElementById('version').textContent = 'Version 2/12/2025 5:13PM';
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -183,7 +184,7 @@
                             endOfResults.textContent = `<end of ${countDisplay} Custom Outline matches>`;
                             endOfResults.style.color = "black";
                             resultList.appendChild(endOfResults);
-                        }
+                         }
                     }
                     // Loop through the dict array
                     for (let word of dict) {
@@ -242,6 +243,15 @@
                         maxResults.textContent = `Max display limited to ${countDisplay} of ${countMatches} matches`;
                         maxResults.style.color = "black";
                         resultList.appendChild(maxResults);
+                        const aboutText = document.createElement("div");
+                        if (globalGsd=="djs") {
+                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
+                        } else if (globalGsd=="ann") {
+                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
+                        } else if (globalGSd=='pre') {
+                            aboutText.innerHTML = ("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>");
+                        }
+                        resultList.appendChild(aboutText);
                     } else if (resultList.innerHTML === "") {
                         const endOfResults = document.createElement("div");
                         endOfResults.textContent = "<No matches found>";
@@ -252,6 +262,15 @@
                         endOfResults.textContent = `<end of ${countDisplay} matches>`;
                         endOfResults.style.color = "black";
                         resultList.appendChild(endOfResults);
+                        const aboutText = document.createElement("div");
+	                    if (globalGsd=="djs") {
+                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
+                        } else if (globalGsd=="ann") {
+                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
+                        } else if (globalGSd=='pre') {
+                            aboutText.innerHTML = ("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>");
+                        }
+                        resultList.appendChild(aboutText);
                     }
                     document.getElementById('regexInput').focus();
                     document.getElementById('regexInput').select();

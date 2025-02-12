@@ -1,3 +1,1 @@
-stabrlize,stabilize
-stabrlized,stabilized
-stabrlizer,stabilizer
+telecommunication,telecommunication

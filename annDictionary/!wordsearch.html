@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <!--
+Version 02/12/2025 at 5:47pm Add copyright notice
+Version 02/07/2025 at 5pm Convert png names to lowercase
 Version 01/24/2025 at 9:26pm if globalGsd is ann, open searchpages.html in new tab; stop propagation of click event
 Version 01/23/2025 at 11:45am modified work in xxxDictionary using globalGsd 
 Version 01/17/2025 at 12:00am open GreggDictionary in GreggDictionary tab     
@@ -144,7 +146,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 01/24/2025 at 9:26pm</p>
+    <p id="version">Version 02/12/2025 at 5pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -174,7 +176,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
         const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
         const IMG_WIDTH = 1281;
-        
+        var globalGsd
         try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -242,7 +244,11 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
                         const img = document.createElement('img');
                         img.className = 'absolute max-w-none';
-                        img.src = `${page.page}.png`;
+                        if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages and ann pages are numeric)
+                            img.src = `${page.page.toLowerCase()}.png`;
+                        } else {
+                            img.src = `${page.page}.png`;
+                        }
                         img.alt = `Gregg shorthand for word: ${word.t}`;
                         img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
                         img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
@@ -302,14 +308,22 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
             const endMessage = document.createElement('div');
             endMessage.className = 'result-item';
+            const aboutText = document.createElement("div");
+            if (globalGsd=="sim") {
+                aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
+            } else if (globalGsd=="ann") {
+                aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
+            } 
             if (resultCount === 0) {
                 endMessage.textContent = 'No matches found';
+                aboutText.innerHTML = ""
             } else if (resultCount < maxResults) {
                 endMessage.textContent = `End of ${resultCount} matches`;
             } else {
                 endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches`;
             }
             resultsContainer.appendChild(endMessage);
+            resultsContainer.appendChild(aboutText);
 
             regexInput.focus();
             regexInput.select();
