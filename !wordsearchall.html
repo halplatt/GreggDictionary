@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+Version 02/12/2025 at 6:34pm Copyright notice
 Version 02/07/2025 at 510pm Convert png names to lowercase, window.open
 version 02/06/2025 at 9:18pm First version
 -->
@@ -141,12 +142,16 @@ version 02/06/2025 at 9:18pm First version
         border-top: 1px solid #ccc; /* Add this line to create a line between list items */
         padding-top: 10px; /* Add some padding to separate the border from the content */
     }
+    #divAboutText p {
+        margin: 0;
+        line-height: 1.2;
+    }
     </style>
 </head>
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 02/07/2025 at 547pm</p>
+    <p id="version">Version 02/12/2025 at 6:34pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -365,18 +370,26 @@ version 02/06/2025 at 9:18pm First version
                     }
                 }
             }
-
+            var aboutText = "";
+            aboutText = aboutText.concat("<p><b>DJS images extracted from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");	
+            aboutText = aboutText.concat("<p><b>Simplified images extracted from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
+            aboutText = aboutText.concat("<p><i><b>Anniversary images extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond.</p>");
+            aboutText = aboutText.concat("<p><i><b>Pre-anniversary images extracted from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar.</p>");
             const endMessage = document.createElement('div');
+            const divAboutText = document.createElement('div');
+            divAboutText.id = 'divAboutText';
             endMessage.className = 'result-item';
             if (resultCount === 0) {
                 endMessage.textContent = 'No matches found';
+                aboutText = ""
             } else if (resultCount < maxResults) {
                 endMessage.textContent = `End of ${resultCount} matches`;
             } else {
                 endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches`;
             }
+            divAboutText.innerHTML = aboutText;
             resultsContainer.appendChild(endMessage);
-
+            resultsContainer.appendChild(divAboutText);
             regexInput.focus();
             regexInput.select();
         }
@@ -438,6 +451,12 @@ version 02/06/2025 at 9:18pm First version
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();
             }
+
+
+
+
+ 
+
     </script>
 </body>
 </html>

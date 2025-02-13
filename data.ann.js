@@ -112,6 +112,6 @@ function refreshAnnWord(cntAdj) {
 
 function loadAboutAnn() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand plates written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
+	aboutText = aboutText.concat("<p><i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
 	document.getElementById('about').innerHTML = aboutText;
 }
