@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //Version: 2025/02/16 7:15PM Add Copyright notice 
     //Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
     //Version: 2025/01/19 at 3:22pm Add some space above the resultContainer
     //Version: 2025/01/17 at 12:01am check to make sure page opens in proper tab
@@ -36,7 +37,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2025/01/19 at 5pm';
+            document.getElementById('version').textContent = 'Version: 2025/02/16 7:15PM';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -389,7 +390,15 @@ function processInput() {
             } //end check dict array for match    
         } //end handle word
         i++;
-    } //end while loop       
+    } //end while loop
+    const copyright = document.getElementById('copyright');
+    if (globalGsd=="djs") {
+        copyright.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
+    } else if (globalGsd=="ann") {
+        copyright.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
+    } else if (globalGsd=='pre') {
+        copyright.innerHTML = ("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>");
+    }
     const endTime = performance.now();
     document.getElementById('inputText').focus();
     console.log(`Execution time: ${endTime - startTime} milliseconds`);
@@ -408,6 +417,7 @@ function processInput() {
     <form>
     <input type="checkbox" id="columnsToggle" checked><label for="columnsToggle">Two columns</label>
     <div id="resultContainer" class="generated"></div>
+    <div id="copyright"></div>
     <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
 </body>
 </html>
