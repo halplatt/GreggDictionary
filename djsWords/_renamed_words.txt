@@ -2440,3 +2440,5 @@ credibiltty,credibility
 stabrlize,stabilize
 stabrlized,stabilized
 stabrlizer,stabilizer
+solidarlty,solidarity
+swap,swag
