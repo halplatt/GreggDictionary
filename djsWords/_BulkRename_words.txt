@@ -1,1 +1,4 @@
-swap,swag
+characters,character
+correspondence,correspondence
+railroads,railroad
+satisfactory,satisfactory
