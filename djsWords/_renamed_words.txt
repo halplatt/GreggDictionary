@@ -2443,3 +2443,4 @@ stabrlizer,stabilizer
 solidarlty,solidarity
 swap,swag
 swarthog,swarm
+swung,swiftly
