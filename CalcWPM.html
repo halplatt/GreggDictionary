@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand Speed Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        textarea, input {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+        .version-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="version-tag">vers 3/21/2025@12:16PM</div>
+    <h1>Shorthand Speed Calculator</h1>
+    <div>
+        <label for="textInput">Enter Text:</label>
+        <textarea id="textInput" rows="4" cols="50"></textarea>
+    </div>
+    <button id="countButton">Count Syllables</button>
+    <p id="syllableCount">Syllables: 0</p>
+    <p id="wordCount">Words: 0</p>
+    <div>
+        <label for="timeInput">Enter Time (MM:SS):</label>
+        <input type="text" id="timeInput" placeholder="MM:SS" size="5">
+    </div>
+    <button id="calculateWpmButton">Calculate WPM</button>
+    <p id="wpmCount">Words per Minute: 0</p>
+    <script>
+        function countSyllables(word) {
+            word = word.toLowerCase();
+            if (word.length <= 3) return 1;
+            word = word.replace(/e$/, '');
+            const syllableCount = word.match(/[aeiouy]{1,2}/g);
+            return syllableCount ? syllableCount.length : 0;
+        }
+
+        function calculateSyllables(text) {
+            const words = text.split(/\s+/);
+            let totalSyllables = 0;
+            words.forEach(word => {
+                totalSyllables += countSyllables(word);
+            });
+            return totalSyllables;
+        }
+
+        function calculateWordsPerMinute(syllables, timeInSeconds) {
+            const words = syllables / 1.4;
+            return (words / timeInSeconds) * 60;
+        }
+
+        document.getElementById('countButton').addEventListener('click', function() {
+            const text = document.getElementById('textInput').value;
+            const syllables = calculateSyllables(text);
+            document.getElementById('syllableCount').innerText = `Syllables: ${syllables}`;
+
+            const words = syllables / 1.4;
+            document.getElementById('wordCount').innerText = `Words: ${words.toFixed(2)}`;
+        });
+
+        document.getElementById('calculateWpmButton').addEventListener('click', function() {
+            const syllables = parseFloat(document.getElementById('syllableCount').innerText.split(': ')[1]);
+            const timeInput = document.getElementById('timeInput').value.split(':');
+            const minutes = parseInt(timeInput[0]) || 0;
+            const seconds = parseInt(timeInput[1]) || 0;
+            const totalTimeInSeconds = minutes * 60 + seconds;
+
+            if (totalTimeInSeconds > 0) {
+                const wordsPerMinute = calculateWordsPerMinute(syllables, totalTimeInSeconds);
+                document.getElementById('wpmCount').innerText = `Words per Minute: ${wordsPerMinute.toFixed(2)}`;
+            } else {
+                document.getElementById('wpmCount').innerText = 'Please enter a valid time.';
+            }
+        });
+    </script>
+</body>
+</html>

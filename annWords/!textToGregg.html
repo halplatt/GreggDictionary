@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
     //Version: 2025/02/16 7:15PM Add Copyright notice 
     //Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
     //Version: 2025/01/19 at 3:22pm Add some space above the resultContainer
@@ -37,7 +38,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2025/02/16 7:15PM';
+            document.getElementById('version').textContent = 'Version: 2025/03/17 4:19PM';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -408,9 +409,9 @@ function processInput() {
 <body>
     <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
     <form id="translatorForm">
-        <input type="checkbox" id="checkboxUseDict2" name="checkboxUseDict2" checked>
+        <input type="checkbox" id="checkboxUseDict2" checked>
         <label for="checkboxUseDict2">Use customized DJS</label>       
-        <input type="checkbox" id="checkboxShowTitle">
+        <input type="checkbox" id="checkboxShowTitle" checked>
         <label for="checkboxShowTitle">Show words above outline</label>
         <textarea id="inputText" rows="4" cols="50"></textarea><br>
         <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg DJS"><strong>G</strong>enerate Gregg DJS</button>
