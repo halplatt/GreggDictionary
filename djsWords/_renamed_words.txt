@@ -2457,3 +2457,31 @@ ruliings,rulings
 semiseriious,semiserious
 siimac,sumac
 Hong,Hong Kong
+armistice ,armistice
+baffle ,baffle
+basically ,basically
+brazilite ,brazilite
+conviviality ,conviviality
+inflict ,inflict
+iniquitously ,iniquitously
+intuitive ,intuitive
+jocularity ,jocularity
+opalesce ,opalesce
+retroactivity ,retroactivity
+rithed ,rithed
+rosiness ,rosiness
+Sault Ste. Marie ,Sault Ste. Marie
+seismic ,seismic
+sirocco ,sirocco
+survival ,survival
+tarflower ,tarflower
+tortuosity ,tortuosity
+xerosis ,xerosis
+lumpier  ,lumpier
+originally  ,originally
+passivist  ,passivist
+recriminate  ,recriminate
+sinuosity  ,sinuosity
+trickiest  ,trickiest
+wordier  ,wordier
+territory  ,territory
