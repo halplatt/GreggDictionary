@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .version {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+         /* these styles are dictionary window */
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .max-w-none {
+            max-width: none;
+        }
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        .border {
+            border: 1px solid black;
+        }
+        .max-w-screen {
+            max-width: 100vw;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
+        .expand-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+                /* these styles are for button and input row */
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button-row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .input-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    .button-row button {
+        margin-right: 5px;
+    }
+    #caretButton {
+        margin-right: 10px;
+    }
+    #addBegSetNot {
+        margin-right: 5px;
+    }
+    #addEndSet {
+        margin-right: 20px;
+    }
+    #addPipe {
+        margin-right: 20px;
+    }
+    #addAnyChar {
+        margin-right: 20px;
+    }
+    #add0or1 {
+        margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="version">Version 03/31/2025@9:53PM</div>
+    <h1>Anniversary GST Search</h1>
+    <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
+    <div class="button-row">
+        <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
+        <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+        <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
+        <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+        <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+        <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+        <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+        <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+        <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+        <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
+    </div>
+    <input type="text" id="regexInput" placeholder="Enter regular expression">
+    <button id="searchGST">Search GST</button>
+    <button id="searchText">Search Text</button>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>GST</th>
+                <th>Outline</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be displayed here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Load the JSON file
+        let dataGST = [];
+        fetch('!searchGSText.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                dataGST = jsonData;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+
+     
+        let dataRef = [];
+        fetch('!reference.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                dataRef = jsonData;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+        // determine if the page is in the ann or sim directory
+        var globalGsd
+        try {
+                const url = new URL(window.location.href);
+                const path = url.pathname;
+                const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+
+                document.title = `GST Search of ${folderName}`;
+                document.querySelector('h1').textContent = `GST Search of ${folderName}`;
+                document.querySelector('title').textContent = `GST Search of ${folderName}`;
+                globalGsd = folderName.substring(0,3);
+            } catch (error) {
+                //document.title = `GST Search of ${imagePath1}`;
+            }
+  
+        // Function to display results in the table
+        function displayResults(results) {
+            const tableBody = document.querySelector('#resultsTable tbody');
+            tableBody.innerHTML = ''; // Clear previous results
+            results.forEach(entry => {
+                const row = document.createElement('tr');
+                const textCell = document.createElement('td');
+                const gstCell = document.createElement('td');
+                const pageCell = document.createElement('td'); // New column for page.page
+
+                textCell.textContent = entry.text || ''; // Handle missing text
+                gstCell.textContent = entry.gst || ''; // Handle missing gst
+
+                // Call searchRefJson and get the page value
+                // Call imageContainer and append the resulting div to pageCell
+                const imageDiv = imageContainer(entry.text || '');
+                pageCell.appendChild(imageDiv);
+
+                row.appendChild(textCell);
+                row.appendChild(gstCell);
+                row.appendChild(pageCell); // Append the new column
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Event listener for the "Search GST" button
+        document.getElementById('searchGST').addEventListener('click', () => {
+            const regexInput = document.getElementById('regexInput').value;
+            try {
+                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
+                const results = dataGST.filter(entry => regex.test(entry.gst));
+                displayResults(results);
+            } catch (error) {
+                alert('Invalid regular expression');
+            }
+        });
+
+        // Event listener for the "Search Text" button
+        document.getElementById('searchText').addEventListener('click', () => {
+            const regexInput = document.getElementById('regexInput').value;
+            try {
+                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
+                const results = dataGST.filter(entry => regex.test(entry.text));
+                displayResults(results);
+            } catch (error) {
+                alert('Invalid regular expression');
+            }
+        });
+        // Function to search for a specific text in the JSON data
+        function searchRefJson(searchTerm) {
+            const lowerCaseSearchTerm = searchTerm.toLowerCase();
+            for (const page of dataRef) {
+                for (const word of page.words) {
+                    if (word.t.toLowerCase() === lowerCaseSearchTerm) {
+                        return {
+                            page: page.page,
+                            word: word.t,
+                            x: word.x,
+                            y: word.y
+                        };
+                    }
+                }
+            }
+            return null; // Return null if no match is found
+        }
+        function imageContainer(searchTerm) {
+            const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+            const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+            const IMG_WIDTH = 1281;
+            const objRef = searchRefJson(searchTerm);
+
+            const resultItem = document.createElement('div');
+                        resultItem.className = 'result-item';
+             // If searchRefJson returns null, return an empty resultItem
+            if (!objRef) {
+                resultItem.innerHTML = 'No match found';
+               
+                resultItem.addEventListener('click', function() {
+                    const url = `/GreggDictionary.html?x=${searchTerm}&gsd=${globalGsd}`;
+                    window.open(url, 'GreggDictionary');
+                });
+                return resultItem;
+            }
+            resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
+            if (globalGsd === 'ann') {
+                resultItem.addEventListener('click', function() {
+                const url = `!searchpages.html?w=${objRef.page}`;
+                window.open(url, `searchpages${globalGsd}`);
+                });
+            }
+
+            const outerContainer = document.createElement('div');
+            outerContainer.className = 'max-w-screen overflow-x-auto';
+
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'relative overflow-hidden border';
+            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+
+            const img = document.createElement('img');
+            img.className = 'absolute max-w-none';
+            if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages and ann pages are numeric)
+                img.src = `${objRef.page.toLowerCase()}.png`;
+            } else {
+                img.src = `${objRef.page}.png`;
+            }
+            img.alt = `Gregg shorthand for word: ${objRef.word}`;
+            img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
+            img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
+            img.style.width = '1281px'; // Assuming the image width is fixed
+
+            img.onload = function() {
+                const scale = IMG_WIDTH / img.naturalWidth;
+                img.style.top = `-${objRef.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                img.style.left = `-${objRef.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                img.style.width = `${IMG_WIDTH}px`;
+            };
+
+            img.onclick = function() {
+
+                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                /*const clipboardInput = document.getElementById("clipboardInput");
+                clipboardInput.value = word.t;
+                clipboardInput.select();
+                document.execCommand("copy");
+                clipboardInput.value = ""; */
+                if (window.location.hostname == "halplatt.github.io") {
+                    var url = `/GreggDictionary/GreggDictionary.html?x=${objRef.word}&gsd=${globalGsd}`;
+                } else {
+                    var url = `/GreggDictionary.html?x=${objRef.word}&gsd=${globalGsd}`;
+                }
+                window.open(url, 'GreggDictionary');
+            };
+
+            const expandButton = document.createElement('button');
+            expandButton.className = 'expand-button';
+            expandButton.innerHTML = 'Expand';
+            expandButton.onclick = function() {
+                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
+                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
+                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
+                    expandButton.innerHTML = 'Shrink';
+                } else {
+                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
+                    expandButton.innerHTML = 'Expand';
+                }
+            };
+
+            imageContainer.appendChild(img);
+            outerContainer.appendChild(imageContainer);
+            outerContainer.appendChild(expandButton);
+            resultItem.appendChild(outerContainer);
+            return resultItem;
+
+        }
+         // Function to add caret to the regex input
+         function addCaret() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = '^' + regexInput.value;
+        }
+        function addDollar() {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.value = regexInput.value + '$';
+        }
+        // Function to add text at the cursor position or end of the text if no cursor position
+        function addTextAtCursor(text) {
+            var regexInput = document.getElementById('regexInput');
+            var startPos = regexInput.selectionStart;
+            var endPos = regexInput.selectionEnd;
+            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
+            regexInput.focus();
+            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
+        }
+        </script>
+</body>
+</html>

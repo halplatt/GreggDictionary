@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAGATS Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>YAGATS v1.5.3 Specification</h1>
+    <p><strong>Date:</strong> 19 July 2024</p>
+    <p><strong>License:</strong> Creative Commons NonCommercial 4.0 International License</p>
+    <p><strong>Author:</strong> DailyGregg Consortium</p>
+    <p><em>May all sentient beings experience health and tranquility!</em></p>
+
+    <hr>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>
+            YAGATS is a system that allows us to type romanized Gregg Shorthand outlines on an ASCII computer keyboard.
+            This document lists the symbols used in YAGATS, briefly discusses the goals of the system design, and speculates
+            about how a computer application might parse text written in YAGATS.
+        </p>
+        <p>
+            This is a reference document, not a tutorial. Learning to translate outlines into YAGATS from this document
+            would be difficult. A friendly tutorial with examples and exercises might be created at some point in the future.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Contents</h2>
+        <ul>
+            <li>1. The inventory of YAGATS symbols</li>
+            <li>2. Unresolved matters</li>
+            <li>3. Discussion of the design of YAGATS</li>
+            <li>4. Parsing YAGATS text with a computer application</li>
+            <li>5. Changelog</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>1. The Inventory of YAGATS Symbols</h2>
+        <p>
+            YAGATS (Yet Another Gregg-ASCII Transliteration System) uses "symbols" consisting of ASCII characters to represent
+            the strokes and punctuation marks of Gregg Shorthand. The symbols are case-sensitive. There are approximately 73 symbols.
+        </p>
+        <p>
+            Some YAGATS symbols consist of two characters. These symbols are called "digraphs." Other symbols consist of a single
+            character. For lack of a better word, such a symbol is called a "unigraph."
+        </p>
+
+        <h3>Unigraphs</h3>
+        <pre>
+a  the "a" stroke, the large vowel circle
+e  the "e" stroke, the tiny vowel circle
+i  the "long i" stroke, the indented circle
+o  the "o" hook
+u  the "oo" hook
+s  the "comma s" stroke
+f  the "f" stroke
+v  the "v" stroke
+z  the "left s" stroke
+p  the "p" stroke
+b  the "b" stroke
+m  the "m" stroke
+n  the "n" stroke
+k  the "k" stroke
+g  the "gay" stroke
+r  the "r" stroke
+l  the "l" stroke
+t  the "t" stroke
+d  the "d" stroke
+(  the "over ith" stroke
+)  the "under ith" stroke
+...
+        </pre>
+
+        <h3>Digraphs</h3>
+        <pre>
+au  the a circle + oo hook diphthong as in "now"
+ea  the circle with a dot inside as in "panacea"
+eu  the e circle + oo hook as in "youth"
+io  the circle within a circle as in "lion"
+oe  the o hook + e circle as in "joy"
+ya  the ya- loop as in "yarn"
+ye  the ye- loop as in "yell"
+NT  the nd/nt blend as in "rend" and "rent"
+...
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>2. Unresolved Matters</h2>
+        <p>
+            (1) YAGATS currently does not have a mechanism for notating the "reversing principle" used in some pre-WW2 editions of Gregg.
+            The backslash (\) appended after the reversed vowel is under consideration, e.g., "a\".
+        </p>
+        <p>
+            (2) Currently there is no mechanism for representing "diacritical marks" such as the long vowel indicator often written
+            under the o-hook when it stands for the exclamation "oh!"
+        </p>
+        <p>
+            (3) When a US outline has a different UK counterpart, e.g., "schedule," can the UK outline somehow be included in the same
+            line of the lexicon file, or must a separate lexicon file for a so-called "UK dialect" be created?
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. Discussion of the Design of YAGATS</h2>
+        <p>
+            The design of YAGATS is a compromise between legibility and ease of learning for human users versus simplicity of parsing
+            for computers. A system consisting entirely of one-character symbols would make it slightly easier to write parsing
+            applications but would require human users to memorize bizarre and arbitrary symbols.
+        </p>
+        <p>
+            Many of the symbol allocations were obvious choices: "b" for the b stroke, "au" for the a+oo diphthong, and so forth.
+            After the obvious choices were made, it was necessary to assign symbols to the remaining graphemes of Gregg Shorthand.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>4. Parsing YAGATS Text with a Computer Application</h2>
+        <p>
+            Assume you have opened a text file containing many shorthand sentences written in YAGATS notation. To parse this material
+            (in order to translate it to longhand, or to draw the outlines, or to calculate symbol frequencies, for example), the
+            following steps would be taken:
+        </p>
+        <ol>
+            <li>Divide the incoming text into individual sentences.</li>
+            <li>Divide the current sentence into "words."</li>
+            <li>Process each word.</li>
+            <li>Identify individual strokes.</li>
+        </ol>
+    </div>
+</body>
+</html>
