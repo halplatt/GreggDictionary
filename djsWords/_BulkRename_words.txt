@@ -1,38 +1,4 @@
-armistice ,armistice
-baffle ,baffle
-basically ,basically
-brazilite ,brazilite
-conviviality ,conviviality
-escarpment  ,escarpment
-faroo  ,faroo
-gravitational  ,gravitational
-incapacitate  ,incapacitate
-incompressibility  ,incompressibility
-inflamed  ,inflamed
-inflict ,inflict
-infliction  ,infliction
-iniquitously ,iniquitously
-inspirational  ,inspirational
-instructor  ,instructor
-intuitive ,intuitive
-investigation  ,investigation
-jocularity ,jocularity
-lumpier  ,lumpier
-opalesce ,opalesce
-originally  ,originally
-passivist  ,passivist
-recriminate  ,recriminate
-retroactivity ,retroactivity
-rithed ,rithed
-rosiness ,rosiness
-Sault Ste. Marie ,Sault Ste. Marie
-seismic ,seismic
-sinuosity  ,sinuosity
-sirocco ,sirocco
-survival ,survival
-tarflower ,tarflower
-territory  ,territory
-tortuosity ,tortuosity
-trickiest  ,trickiest
-wordier  ,wordier
-xerosis ,xerosis
+about,about
+advantage,advantage
+advertise,advertise
+after,after

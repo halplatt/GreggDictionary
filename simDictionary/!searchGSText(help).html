@@ -77,44 +77,103 @@
 
         <h3>Unigraphs</h3>
         <pre>
-a  the "a" stroke, the large vowel circle
-e  the "e" stroke, the tiny vowel circle
-i  the "long i" stroke, the indented circle
-o  the "o" hook
-u  the "oo" hook
-s  the "comma s" stroke
-f  the "f" stroke
-v  the "v" stroke
-z  the "left s" stroke
-p  the "p" stroke
-b  the "b" stroke
-m  the "m" stroke
-n  the "n" stroke
-k  the "k" stroke
-g  the "gay" stroke
-r  the "r" stroke
-l  the "l" stroke
-t  the "t" stroke
-d  the "d" stroke
-(  the "over ith" stroke
-)  the "under ith" stroke
-...
+            a the "a" stroke, the large vowel circle
+            e the "e" stroke, the tiny vowel circle
+            i the "long i" stroke, the indented circle
+            o the "o" hook
+            u the "oo" hook
+
+            s the "comma s" stroke
+            z the "left s" stroke
+
+            f the "f" stroke
+            v the "v" stroke
+            
+            p the "p" stroke
+            b the "b" stroke
+            m the "m" stroke
+            n the "n" stroke
+            k the "k" stroke
+            g the "gay" stroke
+            r the "r" stroke
+            l the "l" stroke
+            t the "t" stroke
+            d the "d" stroke
+            
+            c the "chay" stroke
+            j the "j" stroke
+            h the "h" dot
+            q the dot representing the suffix "-ing"
+            @ the dot representing the word "a" or "an"
+            A the dot that replaces the first 'a' as in Ahed "ahead" and Auak "awake"
+            w indicates that the next vowel has the "w dash" under it; kwek = "quick"
+            x the "x" stroke (a modified comma s)
+            X the other "x" stroke (a modified left s)
+            5 the "ses" blend (left s + comma s)
+            3 the other "ses" blend (comma s + left s)
+            y represents the -ally/-ily suffix loop
+            : colon indicates a disjoined stroke, for example, bro(:d = "brotherhood"
+            % percent sign indicates an unusual joining or special turning as in
+            a%d = "I had" or o% = "all" (in Simplified)
+            ' ASCII apostrophe indicates an apostrophe in the shorthand
+            , ASCII comma indicates a comma in the shorthand
+            ! ASCII exclamation point indicates an exclamation point in the shorthand
+            # appears at the beginning of a word which is written in longhand, is a
+            numeral, or is any other kind of non-YAGATS string
+            ~ tilde indicates the "jog" as seen between m and n in "I am not"
+                (writing the tilde is mandatory when m/n or t/d are involved, even though
+                the jog is required by theory and thus is predictable) 
+            - ASCII hyphen represents shorthand hyphen
+            = ASCII equal sign indicates capitalization mark
+
+            Warning: the following symbols have to be escaped in regex (ie preceded with a backslash\)
+            ( the "over ith" stroke
+            ) the "under ith" stroke
+            $ the "ish" stroke
+            ^ caret indicates a high floating prefix e.g. o^du = "overdue"
+            * asterisk indicates an intersecting stroke; p*m = "p.m."
+            . ASCII period (full stop) represents shorthand period
+            ? ASCII question mark represents shorthand question mark
+            > ASCII "greater than" sign indicates the shorthand end-of-paragraph symbol
+            
+            { ASCII left curly bracket represents shorthand left parenthesis
+            } ASCII right curly bracket represents shorthand right parenthesis
+            
         </pre>
 
         <h3>Digraphs</h3>
         <pre>
-au  the a circle + oo hook diphthong as in "now"
-ea  the circle with a dot inside as in "panacea"
-eu  the e circle + oo hook as in "youth"
-io  the circle within a circle as in "lion"
-oe  the o hook + e circle as in "joy"
-ya  the ya- loop as in "yarn"
-ye  the ye- loop as in "yell"
-NT  the nd/nt blend as in "rend" and "rent"
-...
+au the a circle + oo hook diphthong as in "now"
+ea the circle with a dot inside as in "panacea"
+eu the e circle + oo hook as in "youth"
+io the circle within a circle as in "lion"
+oe the o hook + e circle as in "joy"
+ya the ya- loop as in "yarn"
+ye the ye- loop as in "yell"
+NT the nd/nt blend as in "rend" and "rent"
+TN the tn blend as in "certain"
+MD the md blend as in "named"
+DM the dm blend as in "random"
+MN the men blend as in "many"
+TD the ted blend as in "rated"
+NG the ng stroke as in "sing"
+NK the ngk stroke as in "sink"
+LD the ld blend as in "cold"
+RD the rd blend as in "cord"
+DV the def/tive blend as in "definite" and "restive" (Simplified)
+JD the jent/jend/pent/pend blend with j sound as in "gentle" (Simplified)
+PT the jent/jend/pent/pend blend with p sound as in "repent" (Simplified)
+xz xes (beginning with modified comma s)
+Xs xes (beginning with modified left s)
         </pre>
     </div>
-
+<div>
+    <h2>Example</h2>
+<pre>
+duu ned t TDa? a'm$ur tu rn akroz t b akseTNt DMoro.
+Do you need it today? I'm sure to run across it by accident tomorrow.
+</pre>
+</div>
     <div class="section">
         <h2>2. Unresolved Matters</h2>
         <p>
