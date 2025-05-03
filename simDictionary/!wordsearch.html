@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <!--
+This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
+THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+Version 05/03/2025 at 12:26pm Style text if click event added to resultItem
 Version 02/12/2025 at 5:47pm Add copyright notice
 Version 02/07/2025 at 5pm Convert png names to lowercase
 Version 01/24/2025 at 9:26pm if globalGsd is ann, open searchpages.html in new tab; stop propagation of click event
@@ -146,7 +149,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 02/12/2025 at 5pm</p>
+    <p id="version">05/03/2025 at 2:06pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -228,10 +231,19 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                         resultItem.className = 'result-item';
                         resultItem.innerHTML = `Page: ${page.page}, Word: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
                         if (globalGsd === 'ann') {
-                            resultItem.addEventListener('click', function() {
-                            const url = `!searchpages.html?w=${page.page}`;
-                            window.open(url, `searchpages${globalGsd}`);
+                            const pageSpan = document.createElement('span');
+                            pageSpan.style.cursor = 'pointer';
+                            pageSpan.style.color = 'blue';
+                            pageSpan.style.textDecoration = 'underline';
+                            pageSpan.textContent = `Page: ${page.page}`;
+                            pageSpan.addEventListener('click', function() {
+                                const url = `!searchpages.html?w=${page.page}`;
+                                window.open(url, `searchpages${globalGsd}`);
                             });
+
+                            resultItem.innerHTML = ''; // Clear existing content
+                            resultItem.appendChild(pageSpan);
+                            resultItem.appendChild(document.createTextNode(`, Word: ${word.t}`));
                         }
 
                         const outerContainer = document.createElement('div');
