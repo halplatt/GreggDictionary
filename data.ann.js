@@ -1,4 +1,4 @@
-//updated 5/3/2025 10:51pm to add a new function to find the page number of a word in the dictionary and display it in the record area
+//updated 5/4/2025 12:20am to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 function findOrder(input) {
 	var left = 0;
@@ -44,7 +44,7 @@ function findOrderReverse(input) {
 	if (compRight > 0) return -left - 3;
 }
 async function fetchData() {
-	const response = await fetch('/annDictionary/!reference.json');
+	const response = await fetch('annDictionary/!reference.json');
 	const annMap = await response.json();
 	return annMap;
 }
