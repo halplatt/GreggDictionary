@@ -1,3 +1,4 @@
+//updated 5/3/2025 10:51pm to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 function findOrder(input) {
 	var left = 0;
@@ -42,8 +43,25 @@ function findOrderReverse(input) {
 	if (compLeft > 0 && compRight < 0) return -left - 2;
 	if (compRight > 0) return -left - 3;
 }
+async function fetchData() {
+	const response = await fetch('/annDictionary/!reference.json');
+	const annMap = await response.json();
+	return annMap;
+}
 
-function refreshAnnWord(cntAdj) {
+async function findPageObj(testWord) {
+	const data = await fetchData();
+	for (const page of data) {
+		for (const word of page.words) {
+			if (testWord.toLowerCase() === word.t.toLowerCase()) {
+				return page;
+			}
+		}
+	}
+	return null; // Return null if no match is found
+}
+
+async function refreshAnnWord(cntAdj) {
 	lastButton = 'refreshAnnWord';
 	hideSuggestion()
 	loadAboutAnn()
@@ -63,7 +81,13 @@ function refreshAnnWord(cntAdj) {
 	var order_reverse = findOrderReverse(word);
 	var path = '<img src="annWords/';
 	if (order >= 0) { //If word is found order is positive
-		path = path.concat(word.toString(), '.png">');
+		var pageObj = await findPageObj(word.toString()); // Use await here
+        if (pageObj !== null) {
+			path = '<img src="annDictionary/';
+			path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 0 auto;">');
+        } else {
+            path = "<p>Sorry, the page number for the word could not be found.</p>";
+        }
 		//11/22/2020 Logic below adds suggestions 
 		var starting = order - 1;
 		if (starting < 0) starting = 0;
@@ -105,9 +129,10 @@ function refreshAnnWord(cntAdj) {
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
 		}
-		document.getElementById("suggest").style.display="inline";
+		document.getElementById("suggest").style.display="inline";		
 	}
 	document.getElementById('record').innerHTML = path;
+	
 }
 
 function loadAboutAnn() {
