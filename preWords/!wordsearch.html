@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    v2025.0505.0120am only ccreate the regexPattern once and use filter to get the matches
     Version 2/12/2025 5:13PM Add Copyright notice   
     Version 1/21/2025 10:46PM correct focus and select text after click
     Version 1/17/2025 12AM link to target window GreggDictionary
@@ -25,7 +26,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'Version 2/12/2025 7:17PM';
+            document.getElementById('version').textContent = 'v2025.0505.0120am'; // Version display element 
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -121,15 +122,18 @@
                 const maxWords = document.getElementById("maxWords").value;
                 const regexInput = document.getElementById("regexInput");
                 const resultList = document.getElementById("resultList");
-                const pattern = regexInput.value;
+                const regexPattern = new RegExp(regexInput.value, 'i');
                 let countMatches = 0;
                 let countDisplay = 0;
                 // Clear previous results
                 resultList.innerHTML = "";
                 try {
-                    // Escape the user input and create the regular expression
-                    dict2.forEach(word => {
-                        const regexPattern = new RegExp(pattern, 'i');
+                    // Filter all matches and store the total count
+                    const alldict2Matches = dict2.filter(word => regexPattern.test(word));
+                    const cntDict2Matches = alldict2Matches.length;
+                    const dict2Matches=alldict2Matches.slice(0, maxWords);
+                    dict2Matches.forEach(word => {
+                
                         if (regexPattern.test(word)) {
                             countMatches++
                             const listItem = document.createElement("li");
@@ -181,18 +185,23 @@
                             // ...
                         } else {
                             const endOfResults = document.createElement("div");
-                            endOfResults.textContent = `<end of ${countDisplay} Custom Outline matches>`;
+                            endOfResults.textContent = `<end of ${countDisplay} of ${cntDict2Matches} Custom Outline matches>`;
                             endOfResults.style.color = "black";
                             resultList.appendChild(endOfResults);
                          }
                     }
-                    // Loop through the dict array
-                    for (let word of dict) {
-                        const regexPattern = new RegExp(pattern, 'i');
+                   
+                    // Filter all matches and store the total count
+                    const allMatches = dict.filter(word => regexPattern.test(word));
+                    const cntTotalMatches = allMatches.length;
+
+                    // Limit the matches to maxWords
+                    const matches = allMatches.slice(0, maxWords);
+                    matches.forEach(word => {
                         //Handle enhanced word images
-                        if (regexPattern.test(word)) {
+                
                             countMatches++;
-                            if (countDisplay > maxWords) continue;
+                            //Handle Match 
                             const listItem = document.createElement("li");
                             listItem.textContent = word;
                             if (dict2.includes(word)) {
@@ -235,14 +244,26 @@
                             resultList.appendChild(listItem);
                             countDisplay++
                             
-                        }
-                    };
+                    });
                     // After looping through dict
-                    if (countMatches > maxWords) {
+                    // Display results summary
+                    if (countMatches === 0) {
+                        const noResults = document.createElement("div");
+                        noResults.textContent = "<No matches found>";
+                        noResults.style.color = "black";
+                        resultList.appendChild(noResults);
+                    } else if (cntTotalMatches > maxWords) {
                         const maxResults = document.createElement("div");
-                        maxResults.textContent = `Max display limited to ${countDisplay} of ${countMatches} matches`;
+                        maxResults.textContent = `Max display limited to ${matches.length} of ${cntTotalMatches} matches`; //
                         maxResults.style.color = "black";
                         resultList.appendChild(maxResults);
+                    } else {
+                        const endOfResults = document.createElement("div");
+                        endOfResults.textContent = `<end of ${matches.length} matches>`;
+                        endOfResults.style.color = "black";
+                        resultList.appendChild(endOfResults);
+                    }
+                    if (countMatches > 0) {
                         const aboutText = document.createElement("div");
                         if (globalGsd=="djs") {
                             aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
@@ -252,31 +273,13 @@
                             aboutText.innerHTML = ("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>");
                         }
                         resultList.appendChild(aboutText);
-                    } else if (resultList.innerHTML === "") {
-                        const endOfResults = document.createElement("div");
-                        endOfResults.textContent = "<No matches found>";
-                        endOfResults.style.color = "black";
-                        resultList.appendChild(endOfResults);
-                    } else {
-                        const endOfResults = document.createElement("div");
-                        endOfResults.textContent = `<end of ${countDisplay} matches>`;
-                        endOfResults.style.color = "black";
-                        resultList.appendChild(endOfResults);
-                        const aboutText = document.createElement("div");
-	                    if (globalGsd=="djs") {
-                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
-                        } else if (globalGsd=="ann") {
-                            aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
-                        } else if (globalGsd=='pre') {
-                            aboutText.innerHTML = ("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>");
-                        }
-                        resultList.appendChild(aboutText);
                     }
-                    document.getElementById('regexInput').focus();
-                    document.getElementById('regexInput').select();
+                     // Refocus the input
+                    regexInput.focus();
+                    regexInput.select();
                 } catch (error) {
                     // Handle the error by displaying an alert
-                    alert(`Regular Expression ${pattern} Error: ${error.message}`);
+                    alert(`Regular Expression ${regexInput.value} Error: ${error.message}`);    
                 }
 
             }
