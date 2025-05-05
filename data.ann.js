@@ -1,3 +1,4 @@
+//v22025.0505.0200pm dataset.ann.js now contains ann_dict and ann_dict_reverse arrays. Modified code to reflet this change.
 //updated 5/4/2025 12:52pm to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 function getannJSVersion() {
@@ -11,13 +12,13 @@ function findOrder(input) {
 	input = input.toLowerCase();
 	while (right - left > 1) {
 		center = Math.ceil((left + right) / 2);
-		comp = input.localeCompare(dict[center].toLowerCase());
+		comp = input.localeCompare(ann_dict[center].toLowerCase());
 		if (comp == 0) return center;
 		if (comp < 0) right = center;
 		if (comp > 0) left = center;
 	}
-	compLeft = input.localeCompare(dict[left].toLowerCase());
-	compRight = input.localeCompare(dict[right].toLowerCase());
+	compLeft = input.localeCompare(ann_dict[left].toLowerCase());
+	compRight = input.localeCompare(ann_dict[right].toLowerCase());
 	if (compLeft == 0) return left;
 	if (compRight == 0) return right;
 	if (compLeft < 0) return -left - 1;
@@ -33,13 +34,13 @@ function findOrderReverse(input) {
 	var input_reverse = input.toLowerCase().split("").reverse().join("");
 	while (right - left > 1) {
 		center = Math.ceil((left + right) / 2);
-		comp = input_reverse.localeCompare(dict_reverse[center].toLowerCase());
+		comp = input_reverse.localeCompare(ann_dict_reverse[center].toLowerCase());
 		if (comp == 0) return center;
 		if (comp < 0) right = center;
 		if (comp > 0) left = center;
 	}
-	compLeft = input_reverse.localeCompare(dict_reverse[left].toLowerCase());
-	compRight = input_reverse.localeCompare(dict_reverse[right].toLowerCase());
+	compLeft = input_reverse.localeCompare(ann_dict_reverse[left].toLowerCase());
+	compRight = input_reverse.localeCompare(ann_dict_reverse[right].toLowerCase());
 	if (compLeft == 0) return left;
 	if (compRight == 0) return right;
 	if (compLeft < 0) return -left - 1;
@@ -76,8 +77,8 @@ async function refreshAnnWord(cntAdj) {
 		num--
 		num += cntAdj;
 		if (num < 0) { num = 0; }
-		if (num >= dict.length) { num = dict.length - 1; }
-		document.getElementById('txt1').value = dict[num];
+		if (num >= ann_dict.length) { num = ann_dict.length - 1; }
+		document.getElementById('txt1').value = ann_dict[num];
 	}
 	var word = document.getElementById('txt1').value.toLowerCase();
 	var order = findOrder(word);
@@ -97,7 +98,7 @@ async function refreshAnnWord(cntAdj) {
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
 		for (i = 0; i < 4; i++) {
-			var thisWord = dict[starting + i];
+			var thisWord = ann_dict[starting + i];
 			document.getElementById('bt'.concat(i.toString())).value = thisWord;
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat(i.toString())).innerHTML  = imgpath;
@@ -106,7 +107,7 @@ async function refreshAnnWord(cntAdj) {
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
 		for (i = 0; i < 4; i++) {
-			var thisWord = dict_reverse[starting + i].split("").reverse().join("");
+			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
 			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
@@ -118,7 +119,7 @@ async function refreshAnnWord(cntAdj) {
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
 		for (i = 0; i < 4; i++) {
-			var thisWord = dict[starting + i];
+			var thisWord = ann_dict[starting + i];
 			document.getElementById('bt'.concat(i.toString())).value = thisWord;
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat(i.toString())).innerHTML  = imgpath;
@@ -127,7 +128,7 @@ async function refreshAnnWord(cntAdj) {
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
 		for (i = 0; i < 4; i++) {
-			var thisWord = dict_reverse[starting + i].split("").reverse().join("");
+			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
 			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
