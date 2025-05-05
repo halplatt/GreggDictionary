@@ -1,5 +1,8 @@
-//updated 5/4/2025 12:20am to add a new function to find the page number of a word in the dictionary and display it in the record area
+//updated 5/4/2025 12:52pm to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
+function getannJSVersion() {
+    return 'ann.js v2025.0504.348pm';
+}
 function findOrder(input) {
 	var left = 0;
 	var right = 18666;
@@ -83,8 +86,9 @@ async function refreshAnnWord(cntAdj) {
 	if (order >= 0) { //If word is found order is positive
 		var pageObj = await findPageObj(word.toString()); // Use await here
         if (pageObj !== null) {
-			path = '<img src="annDictionary/';
-			path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 0 auto;">');
+			path = '<img src="annWords/' + word + '.png">'
+			path += '<img src="annDictionary/';
+			path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 10px auto;">');
         } else {
             path = "<p>Sorry, the page number for the word could not be found.</p>";
         }
@@ -109,9 +113,8 @@ async function refreshAnnWord(cntAdj) {
 		}
 		document.getElementById("suggest").style.display="inline";
 	} else {
-		path = "<p>Sorry, the word '";
-		path = path.concat(word, "' is not collected in <i>Gregg Shorthand Dictionary.</i></p>");
-		var starting = -order - 3;
+		path = "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
+		var starting = -order-4;
 		if (starting < 0) starting = 0;
 		if (starting > 18663) starting = 18663;
 		for (i = 0; i < 4; i++) {

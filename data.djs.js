@@ -1,5 +1,9 @@
-//updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
+// v2025.0504.1252pm to add version number to JS
+// updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
+function getdjsJSVersion() {
+    return 'djs.js v2025.0504.1252pm';
+}
 function findIdx(input,arrName) {
     var i
     for (i = 0; i < arrName.length; i++) 
@@ -31,8 +35,6 @@ function pageCntAdj(cntAdj, arrayName) {
     }
 }
 
-
-
 function refreshDjsWord(cntAdj) {
 	lastButton = 'refreshDjsWord';
 	pageCntAdj(cntAdj, djsWord);
@@ -41,7 +43,9 @@ function refreshDjsWord(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand";
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,djsWord);
-	var path = '<img src="djsDictionary/';
+	//alt="Image not found" onerror="this.outerHTML='<span>Image not available</span>';">
+	var path = '<img src="djsWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="djsDictionary/';
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
@@ -54,7 +58,8 @@ function refreshDjsName(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Proper Names)";
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,djsName);
-	var path = '<img src="djsDictionary/';
+	var path = '<img src="djsWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="djsDictionary/';
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
@@ -67,7 +72,8 @@ function refreshDjsPhrase(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Phrases)";
 	var word = document.getElementById('txt1').value;
 	var wordNum = findNum(word,djsPhrase);
-	var path = '<img src="djsDictionary/';
+	var path = '<img src="djsWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="djsDictionary/';
 	path = path.concat('djsPhrase ','(',wordNum,')', '.png">');
 	document.getElementById('record').innerHTML = path;
 }
@@ -207,7 +213,8 @@ function refreshPreWord(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,preWord);
-	var path = '<img src="preDictionary/';
+	var path = '<img src="preWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="preDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
