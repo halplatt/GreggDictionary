@@ -1,14 +1,16 @@
+// v2025.0506.0104pm fix error in search.
 // v2025.0505.1000pm persist last button clicked in local storage.
 //v22025.0505.0200pm dataset.ann.js now contains ann_dict and ann_dict_reverse arrays. Modified code to reflet this change.
 //updated 5/4/2025 12:52pm to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
+
 function getannJSVersion() {
-    return 'ann.js v2025.0505.1000pm';
+    return 'ann.js v2025.0506.0212pm';
 }
 function findOrder(input) {
 	var left = 0;
-	var right = 18666;
-	var center = 9333;
+	var right = ann_dict.length - 1; // Dynamically set the right boundary
+    var center;
 	var comp;
 	input = input.toLowerCase();
 	while (right - left > 1) {
@@ -29,8 +31,8 @@ function findOrder(input) {
 
 function findOrderReverse(input) {
 	var left = 0;
-	var right = 18666;
-	var center = 9333;
+	var right = ann_dict_reverse.length - 1; // Dynamically set the right boundary
+    var center;
 	var comp;
 	var input_reverse = input.toLowerCase().split("").reverse().join("");
 	while (right - left > 1) {
@@ -94,10 +96,10 @@ async function refreshAnnWord(cntAdj) {
         } else {
             path = "<p>Sorry, the page number for the word could not be found.</p>";
         }
-		//11/22/2020 Logic below adds suggestions 
+		//11/22/2020 Logic below adds suggestions
 		var starting = order - 1;
 		if (starting < 0) starting = 0;
-		if (starting > 18663) starting = 18663;
+		if (starting > ann_dict.length-4) starting = ann_dict.length-5; 
 		for (i = 0; i < 4; i++) {
 			var thisWord = ann_dict[starting + i];
 			document.getElementById('bt'.concat(i.toString())).value = thisWord;
@@ -106,7 +108,7 @@ async function refreshAnnWord(cntAdj) {
 		}
 		starting = order_reverse - 1;
 		if (starting < 0) starting = 0;
-		if (starting > 18663) starting = 18663;
+		if (starting > ann_dict_reverse.length-4) starting = ann_dict_reverse.length-5;
 		for (i = 0; i < 4; i++) {
 			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
 			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
@@ -118,7 +120,7 @@ async function refreshAnnWord(cntAdj) {
 		path = "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
 		var starting = -order-4;
 		if (starting < 0) starting = 0;
-		if (starting > 18663) starting = 18663;
+		if (starting > ann_dict.length-4) starting = ann_dict.length-4;
 		for (i = 0; i < 4; i++) {
 			var thisWord = ann_dict[starting + i];
 			document.getElementById('bt'.concat(i.toString())).value = thisWord;
@@ -127,7 +129,7 @@ async function refreshAnnWord(cntAdj) {
 		}
 		starting = -order_reverse - 3;
 		if (starting < 0) starting = 0;
-		if (starting > 18663) starting = 18663;
+		if (starting > ann_dict_reverse.length-4) starting = ann_dict_reverse.length-4;
 		for (i = 0; i < 4; i++) {
 			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
 			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
