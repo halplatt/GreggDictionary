@@ -5,7 +5,7 @@
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 
 function getannJSVersion() {
-    return 'ann.js v2025.0506.0212pm';
+    return 'ann.js v2025.0506.0647pm';
 }
 function findOrder(input) {
 	var left = 0;
@@ -76,11 +76,11 @@ async function refreshAnnWord(cntAdj) {
 	// Adjust for page forward or back
 	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
 		let word = document.getElementById('txt1').value;
-		let num = findNum(word, dict);
+		let num = findNum(word, ann_dict);
 		num--
 		num += cntAdj;
 		if (num < 0) { num = 0; }
-		if (num >= ann_dict.length) { num = ann_dict.length - 1; }
+		if (num >= ann_dict.length - 1) { num = ann_dict.length - 1; }
 		document.getElementById('txt1').value = ann_dict[num];
 	}
 	var word = document.getElementById('txt1').value.toLowerCase();

@@ -1,3 +1,4 @@
+//v2025.0506.0240pm pageCntAdj to not exceed the length of the array
 // v2025.0505.1000pm persist last button clicked in local storage.
 // v2025.0505.0300pm to verify word is in the djsWords arry before displaying Outline.
 // v2025.0504.1252pm to add version number to JS
@@ -32,7 +33,7 @@ function pageCntAdj(cntAdj, arrayName) {
         let num = findNum(word, arrayName);
         num = --num + cntAdj; // Adjust for page forward or back and commpensate for 0 based array
         if (num < 0) { num = 0; }
-        if (num >= arrayName.length) { num = arrayName.length - 1; }
+        if (num >= arrayName.length - 1) { num = arrayName.length - 1; }
         document.getElementById('txt1').value = arrayName[num];
     }
 }
