@@ -1,9 +1,10 @@
+// v2025.0505.1000pm persist last button clicked in local storage.
 // v2025.0505.0300pm to verify word is in the djsWords arry before displaying Outline.
 // v2025.0504.1252pm to add version number to JS
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0505.0355pm';
+    return 'djs.js v2025.0505.1000pm';
 }
 function findIdx(input,arrName) {
     var i
@@ -46,7 +47,7 @@ function buildWordImg(word) {
 }
 
 function refreshDjsWord(cntAdj) {
-	lastButton = 'refreshDjsWord';
+	setLastButton('refreshDjsWord')
 	pageCntAdj(cntAdj, djsWord);
 	hideSuggestion()
 	loadAboutDJS()
@@ -60,7 +61,7 @@ function refreshDjsWord(cntAdj) {
 }
 
 function refreshDjsName(cntAdj) {
-	lastButton = 'refreshDjsName';
+	setLastButton('refreshDjsName')
 	pageCntAdj(cntAdj, pageCntAdj(cntAdj, djsName));
 	hideSuggestion()
 	loadAboutDJS()
@@ -74,7 +75,7 @@ function refreshDjsName(cntAdj) {
 }
 
 function refreshDjsPhrase(cntAdj) {
-	lastButton = 'refreshDjsPhrase';
+	setLastButton('refreshDjsPhrase');
 	pageCntAdj(cntAdj, djsPhrase);
 	hideSuggestion()
 	loadAboutDJS()
@@ -88,7 +89,7 @@ function refreshDjsPhrase(cntAdj) {
 }
 
 function refreshCenWord(cntAdj) {
-	lastButton = 'refreshCenWord';
+	setLastButton('refreshCenWord');
 	pageCntAdj(cntAdj, cenWord);
 	hideSuggestion()
 	loadAboutCen()
@@ -104,7 +105,7 @@ function refreshCenWord(cntAdj) {
 
  
 function refreshCenBrief(cntAdj) {
-	lastButton = 'refreshCenBrief';
+	setLastButton('refreshCenBrief');
 	pageCntAdj(cntAdj, cenBrief);
 	hideSuggestion()
 	loadAboutCen()
@@ -117,7 +118,7 @@ function refreshCenBrief(cntAdj) {
 }
 
 function refreshCenPhrase(cntAdj) {
-	lastButton = 'refreshCenPhrase';
+	setLastButton('refreshCenPhrase');
 	pageCntAdj(cntAdj, cenPhrase);
 	hideSuggestion() 
 	loadAboutCen()
@@ -130,7 +131,7 @@ function refreshCenPhrase(cntAdj) {
 }
  
 function refreshCenWomen(cntAdj) {
-	lastButton = 'refreshCenWomen';
+	setLastButton('refreshCenWomen');
 	pageCntAdj(cntAdj, cenWomen);
 	hideSuggestion()
 	loadAboutCen()
@@ -142,7 +143,7 @@ function refreshCenWomen(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenMen(cntAdj) {
-	lastButton = 'refreshCenMen';
+	setLastButton('refreshCenMen');
 	pageCntAdj(cntAdj, cenMen);
 	hideSuggestion()
 	loadAboutCen()
@@ -154,7 +155,7 @@ function refreshCenMen(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenSur(cntAdj) {
-	lastButton = 'refreshCenSur';
+	setLastButton('refreshCenSur');
 	pageCntAdj(cntAdj, cenSur);
 	hideSuggestion()
 	loadAboutCen()
@@ -166,7 +167,7 @@ function refreshCenSur(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenUSName(cntAdj) {
-	lastButton = 'refreshCenUSName';
+	setLastButton('refreshCenUSName');
 	pageCntAdj(cntAdj, cenUSName);
 	hideSuggestion()
 	loadAboutCen()
@@ -179,7 +180,7 @@ function refreshCenUSName(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenGeoName(cntAdj) {
-	lastButton = 'refreshCenGeoName';
+	setLastButton('refreshCenGeoName');
 	pageCntAdj(cntAdj, cenGeoName);
 	hideSuggestion()
 	loadAboutCen()
@@ -191,7 +192,7 @@ function refreshCenGeoName(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshSimWord(cntAdj) {
-	lastButton = 'refreshSimWord';
+	setLastButton('refreshSimWord');
 	pageCntAdj(cntAdj, simWord);
 	hideSuggestion()
 	loadAboutSim()
@@ -203,7 +204,7 @@ function refreshSimWord(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshSimName(cntAdj) {
-	lastButton = 'refreshSimName';
+	setLastButton('refreshSimName');
 	pageCntAdj(cntAdj, simName);
 	hideSuggestion()
 	loadAboutSim()
@@ -215,7 +216,7 @@ function refreshSimName(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 function refreshPreWord(cntAdj) {
-	lastButton = 'refreshPreWord';
+	setLastButton('refreshPreWord');
 	pageCntAdj(cntAdj, preWord);
 	hideSuggestion()
 	loadAboutPre()

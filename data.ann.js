@@ -1,8 +1,9 @@
+// v2025.0505.1000pm persist last button clicked in local storage.
 //v22025.0505.0200pm dataset.ann.js now contains ann_dict and ann_dict_reverse arrays. Modified code to reflet this change.
 //updated 5/4/2025 12:52pm to add a new function to find the page number of a word in the dictionary and display it in the record area
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 function getannJSVersion() {
-    return 'ann.js v2025.0504.348pm';
+    return 'ann.js v2025.0505.1000pm';
 }
 function findOrder(input) {
 	var left = 0;
@@ -66,7 +67,7 @@ async function findPageObj(testWord) {
 }
 
 async function refreshAnnWord(cntAdj) {
-	lastButton = 'refreshAnnWord';
+	setLastButton('refreshAnnWord');
 	hideSuggestion()
 	loadAboutAnn()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";
