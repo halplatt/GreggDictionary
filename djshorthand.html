@@ -6,7 +6,10 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
-v2025.0505.0715pm adjust to handle renaming in dataset.ann.js                
+v22025.0505.0238pm added array "djsWords/!words.array.js" for verification of words in the djsWords array.
+v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_reverse arrays. Modified code reflects this change.
+2025-01-24 at 11PM Anniversary link to Anniversary-in-page 
+2025-01-23 at 1PM center title 
 2025-01-17 at 12AM added links for text to gregg and always open in GreggDictionary tab
 2025-01-15 at 2:27 added and updated lastbutton so enter press will default to last button pushed
 2025-01-15 at 12:15am add < and > buttons to allow for previous and next page
@@ -25,10 +28,10 @@ v2025.0505.0715pm adjust to handle renaming in dataset.ann.js
 		<!-- JavaScrips -->
 		<script type="text/javascript" src="dataset.djs.js"></script>
         <script type="text/javascript" src="dataset.ann.js"></script>
-		<script type="text/javascript" src="djsWords/!words.array.js"></script>
         <!-- Data arrays of words -->
 		<script type="text/javascript" src="data.djs.js"></script>
 		<script type="text/javascript" src="data.ann.js"></script>
+		<script type="text/javascript" src="djsWords/!words.array.js"></script>
 		<style>
 			.version-tag {
 				position: absolute;
@@ -131,6 +134,11 @@ v2025.0505.0715pm adjust to handle renaming in dataset.ann.js
 				
 				document.getElementById('txt1').select();
 				handleGsdParam();
+
+				//concatenate the version number from the dataset files
+				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
+				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
+
 				
 			}
 	
@@ -150,9 +158,8 @@ v2025.0505.0715pm adjust to handle renaming in dataset.ann.js
 
 	<body>
 		<div class="container">
-				<div class="version-tag">v2025.0505.0715pm</div>
-				<h3 id="gsdTitle">Gregg Shorthand Dictionary Search</h3>
-
+				<div id="version" class="version-tag">v22025.0505.0722pm</div>
+				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
 				<div class="search">
 					<div class="middle">
 							<div class="input-container">
@@ -209,13 +216,19 @@ v2025.0505.0715pm adjust to handle renaming in dataset.ann.js
 							<br/>
 							<span>Link to Regex search for:</span>
 							<div class="inner">
+								<a href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
+							</div>
+							<div class="inner">
 								<a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified</a>
+								<a href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
 							</div>
 							<div class="inner">
 								<a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+							</div>
+							<div class="inner">
+								<a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
 							</div>
 							<div class="inner">
 								<a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
