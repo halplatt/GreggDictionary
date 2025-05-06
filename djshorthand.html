@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0505.1000pm persist last button clicked in local storage.
 v22025.0505.0238pm added array "djsWords/!words.array.js" for verification of words in the djsWords array.
 v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_reverse arrays. Modified code reflects this change.
 2025-01-24 at 11PM Anniversary link to Anniversary-in-page 
@@ -75,28 +76,42 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				}
 				return params;
 			}
+			
+			
 			let lastButton; // Define global variable to hold last button clicked
+
+			function initializeLastButton() {
+				const savedButton = localStorage.getItem('lastButton');
+				if (savedButton) {
+					lastButton = savedButton; // Retrieve from localStorage
+				} else {
+					lastButton = 'refreshDjsWord'; // Default value
+				}
+			}
+			function setLastButton(buttonName) {
+				lastButton = buttonName;
+				localStorage.setItem('lastButton', buttonName); // Save to localStorage
+			}
 			function handleGsdParam() {
-				const params = getQueryParams();
-				if (lastButton === undefined) {
-					if (params.gsd) {
-						switch (params.gsd) {
-							case 'ann':
-								lastButton = 'refreshAnnWord';
-								break;
-							case 'pre':
-								lastButton = 'refreshPreWord';
-								break;
-							case 'sim':
-								lastButton = 'refreshSimWord';
-								break;
-							case 'djs':
-								lastButton = 'refreshDjsWord';
-								break;
-							default:
-								lastButton = 'refreshDjsWord';
-								break;
-						}
+			initializeLastButton(); // Ensure lastButton is initialized
+			const params = getQueryParams();
+			if (params.gsd) {
+				switch (params.gsd) {
+					case 'ann':
+						setLastButton('refreshAnnWord');
+						break;
+					case 'pre':
+						setLastButton('refreshPreWord');
+						break;
+					case 'sim':
+						setLastButton('refreshSimWord');
+						break;
+					case 'djs':
+						setLastButton('refreshDjsWord');
+						break;
+					default:
+						setLastButton('refreshDjsWord');
+						break;
 					}
 				}
 				if (typeof window[lastButton] === 'function') {
@@ -111,6 +126,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			}
 
 			function initializePage() {
+				initializeLastButton(); // Initialize lastButton from localStorage
 				// Event to place focus and select text after focus or click
 				window.addEventListener('focus', function() {
 					document.getElementById('txt1').focus();
@@ -158,7 +174,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 
 	<body>
 		<div class="container">
-				<div id="version" class="version-tag">v22025.0505.0722pm</div>
+				<div id="version" class="version-tag">v2025.0505.1000pm</div>
 				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
 				<div class="search">
 					<div class="middle">
