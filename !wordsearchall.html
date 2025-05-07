@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+v=2025.0507.0109pm add link buttons to other tools
 Version 02/12/2025 at 6:34pm Copyright notice
 Version 02/07/2025 at 510pm Convert png names to lowercase, window.open
 version 02/06/2025 at 9:18pm First version
@@ -109,6 +110,10 @@ version 02/06/2025 at 9:18pm First version
         justify-content: flex-start;
         width: 100%;
     }
+    .inner {
+    margin-right: 10px; /* Add spacing between links */
+    display: inline-block; /* Ensure links are displayed inline */
+    }
     .input-row {
         display: flex;
         align-items: center;
@@ -151,9 +156,49 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">Version 02/12/2025 at 6:34pm</p>
+    <p id="version">v=2025.0507.0154pm</p>
 
     <div class="input-container">
+        <div class="button-row">
+            <span>Link to main dictionary:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./GreggDictionary.html', 'GreggDictionary')">Gregg Dictionary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to Regex search for:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to text to Gregg for:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+            </div>
+        </div>
+        <br>     
         <div class="button-row">
             <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
             <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
@@ -425,38 +470,41 @@ version 02/06/2025 at 9:18pm First version
                     .then(px => (-1 * parseFloat(px.trim())) + 'px')  // Prepend a '-' to the number
                     .catch(() => '0px');
         }
-                // Function to copy text to clipboard
-                function copyToClipboard(text,globalGsd) {
-                    const clipboardInput = document.getElementById("clipboardInput");
-                    clipboardInput.value = text;
-                    clipboardInput.select();
-                    document.execCommand("copy");
-                    clipboardInput.value = "";
-                    if (window.location.hostname !== "halplatt.github.io") {
-                        openInNewTab(text,globalGsd);
-                    } else {
-                        openInNewTabGithub(text,globalGsd);
-                    }
-                }
-
-            //Function to open in new tab
-            function openInNewTab(text,globalGsd) {
-                url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open(url, 'GreggDictionary');
-                newTab.focus();
+        // Function to copy text to clipboard
+        function copyToClipboard(text,globalGsd) {
+            const clipboardInput = document.getElementById("clipboardInput");
+            clipboardInput.value = text;
+            clipboardInput.select();
+            document.execCommand("copy");
+            clipboardInput.value = "";
+            if (window.location.hostname !== "halplatt.github.io") {
+                openInNewTab(text,globalGsd);
+            } else {
+                openInNewTabGithub(text,globalGsd);
             }
-            //Function to open in new tab when on github
-              function openInNewTabGithub(text,globalGsd) {
-                url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open(url, 'GreggDictionary');
-                newTab.focus();
+        }
+        //Function to open in new tab
+        function openInNewTab(text,globalGsd) {
+            url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+            var newTab = window.open(url, 'GreggDictionary');
+            newTab.focus();
+        }
+        //Function to open in new tab when on github
+            function openInNewTabGithub(text,globalGsd) {
+            url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+            var newTab = window.open(url, 'GreggDictionary');
+            newTab.focus();
+        }
+        // Function to open or focus a tab with the given URL and target
+        function openOrFocusTab(url, target) {
+            var newTab = window.open('', target);
+            if (newTab.location.href === "about:blank") {
+                newTab.location.href = url;
+            } else {
+                //do nothing, the tab is already open
             }
-
-
-
-
- 
-
+            newTab.focus();
+        }
     </script>
 </body>
 </html>

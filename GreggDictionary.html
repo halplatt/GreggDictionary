@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0507.11:11am add cashbusting query stings to the data files.
 v2025.0505.1000pm persist last button clicked in local storage.
 v22025.0505.0238pm added array "djsWords/!words.array.js" for verification of words in the djsWords array.
 v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_reverse arrays. Modified code reflects this change.
@@ -26,13 +27,13 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="shorthand.css">
-		<!-- JavaScrips -->
-		<script type="text/javascript" src="dataset.djs.js"></script>
-        <script type="text/javascript" src="dataset.ann.js"></script>
-        <!-- Data arrays of words -->
-		<script type="text/javascript" src="data.djs.js"></script>
-		<script type="text/javascript" src="data.ann.js"></script>
-		<script type="text/javascript" src="djsWords/!words.array.js"></script>
+		<!-- JavaScrips with cachebusting querystring-->
+		<script type="text/javascript" src="data.djs.js?v=2025.0505.1000pm"></script>
+		<script type="text/javascript" src="data.ann.js?v=2025.0506.0647pm"></script>
+		<!-- Data arrays of words -->
+		<script type="text/javascript" src="dataset.djs.js?v=2025.0507.11:11am"></script>
+        <script type="text/javascript" src="dataset.ann.js?v=2025.0507.11:11am"></script>
+		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<style>
 			.version-tag {
 				position: absolute;
@@ -160,7 +161,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 	
 			window.onload = initializePage;
 			
-			function openOrFocusTab(url, target) {
+		function openOrFocusTab(url, target) {
             var newTab = window.open('', target);
             if (newTab.location.href === "about:blank") {
                 newTab.location.href = url;
@@ -174,7 +175,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 
 	<body>
 		<div class="container">
-				<div id="version" class="version-tag">v2025.0505.1000pm</div>
+				<div id="version" class="version-tag">v=2025.0507.11:32am</div>
 				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
 				<div class="search">
 					<div class="middle">

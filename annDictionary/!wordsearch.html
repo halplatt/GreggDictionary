@@ -2,6 +2,7 @@
 <!--
 This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
 THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+v=2025.0507.0211pm add link buttons to other tools
 Version 05/03/2025 at 12:26pm Style text if click event added to resultItem
 Version 02/12/2025 at 5:47pm Add copyright notice
 Version 02/07/2025 at 5pm Convert png names to lowercase
@@ -111,6 +112,10 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         flex-direction: column;
         align-items: flex-start;
     }
+    .inner {
+    margin-right: 10px; /* Add spacing between links */
+    display: inline-block; /* Ensure links are displayed inline */
+    }   
     .button-row {
         display: flex;
         justify-content: flex-start;
@@ -149,9 +154,50 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">05/03/2025 at 2:06pm</p>
+    <p id="version">v=2025.0507.0212pm</p>
 
     <div class="input-container">
+        <div class="button-row">
+            <span>Link to main dictionary:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary.html', 'GreggDictionary')">Gregg Dictionary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to Regex search for:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to text to Gregg for:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+            </div>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+            </div>
+        </div>
+        <br>
+
         <div class="button-row">
             <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
             <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
@@ -230,21 +276,6 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                         const resultItem = document.createElement('div');
                         resultItem.className = 'result-item';
                         resultItem.innerHTML = `Page: ${page.page}, Word: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
-                        if (globalGsd === 'ann') {
-                            const pageSpan = document.createElement('span');
-                            pageSpan.style.cursor = 'pointer';
-                            pageSpan.style.color = 'blue';
-                            pageSpan.style.textDecoration = 'underline';
-                            pageSpan.textContent = `Page: ${page.page}`;
-                            pageSpan.addEventListener('click', function() {
-                                const url = `!searchpages.html?w=${page.page}`;
-                                window.open(url, `searchpages${globalGsd}`);
-                            });
-
-                            resultItem.innerHTML = ''; // Clear existing content
-                            resultItem.appendChild(pageSpan);
-                            resultItem.appendChild(document.createTextNode(`, Word: ${word.t}`));
-                        }
 
                         const outerContainer = document.createElement('div');
                         outerContainer.className = 'max-w-screen overflow-x-auto';
@@ -281,11 +312,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                             clipboardInput.select();
                             document.execCommand("copy");
                             clipboardInput.value = "";
-                            if (window.location.hostname == "halplatt.github.io") {
-                                var url = `/GreggDictionary/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                            } else {
-                                var url = `/GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
-                            }
+                            var url = `../GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
                             window.open(url, 'GreggDictionary');
                         };
 
@@ -359,6 +386,16 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
             regexInput.focus();
             regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
         }
+        // Function to open or focus a tab with the given URL and target
+        function openOrFocusTab(url, target) {
+            var newTab = window.open('', target);
+            if (newTab.location.href === "about:blank") {
+                newTab.location.href = url;
+            } else {
+                //do nothing, the tab is already open
+            }
+            newTab.focus();
+        }        
     </script>
 </body>
 </html>

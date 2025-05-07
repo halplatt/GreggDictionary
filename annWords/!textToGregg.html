@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //v=2025.0507.0109pm add link buttons to other tools
     //Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
     //Version: 2025/02/16 7:15PM Add Copyright notice 
     //Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
@@ -38,7 +39,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'Version: 2025/03/17 4:19PM';
+            document.getElementById('version').textContent = 'v=2025.0507.0109pm';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -182,6 +183,15 @@ img:not(:first-child) {
 /* Add some space above the resultContainer */
 #resultContainer {
     margin-top: 20px; /* Adjust the value as needed */
+}
+.button-row { /*For the links*/
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.inner { /*For the links*/
+    margin-right: 10px; /* Add spacing between links */
+    display: inline-block; /* Ensure links are displayed inline */
 }
     </style>
     <script>
@@ -404,10 +414,60 @@ function processInput() {
     document.getElementById('inputText').focus();
     console.log(`Execution time: ${endTime - startTime} milliseconds`);
 } //end processInput
+// Function to open or focus a tab to other tools
+    function openOrFocusTab(url, target) {
+        var newTab = window.open('', target);
+        if (newTab.location.href === "about:blank") {
+            newTab.location.href = url;
+        } else {
+            //do nothing, the tab is already open
+        }
+        newTab.focus();
+    }
 </script>
 </head>
 <body>
     <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
+    <div class="button-row">
+        <span>Link to main dictionary:</span>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary.html', 'GreggDictionary')">Gregg Dictionary</a>
+        </div>
+    </div>
+    <div class="button-row">
+        <span>Link to Regex search for:</span>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+        </div>
+    </div>
+    <div class="button-row">
+        <span>Link to text to Gregg for:</span>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+        </div>
+        <div class="inner">
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+        </div>
+    </div>
+    <br>     
     <form id="translatorForm">
         <input type="checkbox" id="checkboxUseDict2" checked>
         <label for="checkboxUseDict2">Use customized DJS</label>       
