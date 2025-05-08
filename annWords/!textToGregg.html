@@ -39,7 +39,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'v=2025.0507.0109pm';
+            document.getElementById('version').textContent = 'v=2025.0507.0600pm';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -186,6 +186,7 @@ img:not(:first-child) {
 }
 .button-row { /*For the links*/
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
     justify-content: flex-start;
     width: 100%;
 }

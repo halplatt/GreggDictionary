@@ -107,6 +107,7 @@ version 02/06/2025 at 9:18pm First version
     }
     .button-row {
         display: flex;
+        flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
         width: 100%;
     }
@@ -156,7 +157,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v=2025.0507.0154pm</p>
+    <p id="version">v=2025.0507.0600pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -180,7 +181,7 @@ version 02/06/2025 at 9:18pm First version
                 <a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+                <a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
             </div>
             <div class="inner">
                 <a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>

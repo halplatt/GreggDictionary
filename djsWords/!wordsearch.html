@@ -27,7 +27,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'v=2025.0507.0109pm'; // Version display element 
+            document.getElementById('version').textContent = 'v=2025.0507.0600pm'; // Version display element 
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -401,6 +401,7 @@ h1 {
 }
 .button-row {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
     justify-content: flex-start;
     width: 100%;
 }
@@ -443,7 +444,7 @@ h1 {
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
-        <div class="input-container">
+
             <div class="button-row">
                 <span>Link to main dictionary:</span>
                 <div class="inner">
@@ -465,7 +466,7 @@ h1 {
                     <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
                 </div>
                 <div class="inner">
-                    <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+                    <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
                 </div>
                 <div class="inner">
                     <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
@@ -483,7 +484,8 @@ h1 {
                     <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
                 </div>
             </div>
-            <br>     
+            <br>
+            <div class="input-container"></div>     
             <div class="button-row">
                 <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>

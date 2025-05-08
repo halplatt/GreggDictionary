@@ -118,6 +118,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     }   
     .button-row {
         display: flex;
+        flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
         width: 100%;
     }
@@ -154,7 +155,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v=2025.0507.0212pm</p>
+    <p id="version">v=2025.0507.0600pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -178,7 +179,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                 <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
             </div>
             <div class="inner">
                 <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
@@ -197,7 +198,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
             </div>
         </div>
         <br>
-
+    <div class="input-container">
         <div class="button-row">
             <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
             <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
