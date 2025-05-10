@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //v=2025.0510.0433pm Put coorect version in button
     //v=2025.0507.0109pm add link buttons to other tools
     //Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
     //Version: 2025/02/16 7:15PM Add Copyright notice 
@@ -39,7 +40,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'v=2025.0507.0600pm';
+            document.getElementById('version').textContent = 'v=2025.0510.0433pm';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -475,7 +476,7 @@ function processInput() {
         <input type="checkbox" id="checkboxShowTitle" checked>
         <label for="checkboxShowTitle">Show words above outline</label>
         <textarea id="inputText" rows="4" cols="50"></textarea><br>
-        <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg DJS"><strong>G</strong>enerate Gregg DJS</button>
+        <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg"><strong>G</strong>enerate Gregg</button>
     <form>
     <input type="checkbox" id="columnsToggle" checked><label for="columnsToggle">Two columns</label>
     <div id="resultContainer" class="generated"></div>
