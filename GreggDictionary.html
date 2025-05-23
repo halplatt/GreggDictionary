@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0521.0730pm add s90Words
 v2025.0507.11:11am add cashbusting query stings to the data files.
 v2025.0505.1000pm persist last button clicked in local storage.
 v22025.0505.0238pm added array "djsWords/!words.array.js" for verification of words in the djsWords array.
@@ -26,9 +27,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="shorthand.css">
+		<link rel="stylesheet" type="text/css" href="shorthand.css?v=2025.0522.1241pm">
 		<!-- JavaScrips with cachebusting querystring-->
-		<script type="text/javascript" src="data.djs.js?v=2025.0505.1000pm"></script>
+		<script type="text/javascript" src="data.djs.js?v=2025.0521.0730pm"></script>
 		<script type="text/javascript" src="data.ann.js?v=2025.0506.0647pm"></script>
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0507.11:11am"></script>
@@ -64,6 +65,14 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				border: 1px solid #ccc;
 				border-radius: 4px;
 				width: 200px;
+			}
+			#about {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				max-width: 90%;
+				padding-left: 0;
+				padding-right: 0;
 			}
 		</style>
 		<script type="text/javascript">
@@ -109,6 +118,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 						break;
 					case 'djs':
 						setLastButton('refreshDjsWord');
+						break;
+					case 's90':
+						setLastButton('refreshS90Word');
 						break;
 					default:
 						setLastButton('refreshDjsWord');
@@ -198,6 +210,27 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 							</div>
 							<div class="inner">
                                 <button id="btn4" class="sim" onclick="refreshSimName()">SimName</button>
+							</div>
+							<div class="inner">
+                                <button id="btn15" class="s90" onclick="refreshS90Word()" accesskey="9" title="Alt+9">S<b>9</b>0</button>
+							</div>
+							<div class="inner">
+                                <button id="btn16" class="s90" onclick="refreshS90Phrase()">S90Phrase</button>
+							</div>
+							<div class="inner">
+                                <button id="btn17" class="s90" onclick="refreshS90Men()">S90Men</button>
+							</div>
+							<div class="inner">
+                                <button id="btn18" class="s90" onclick="refreshS90Women()">S90Women</button>
+							</div>
+							<div class="inner">
+                                <button id="btn19" class="s90" onclick="refreshS90Sur()">S90Sur</button>
+							</div>
+							<div class="inner">
+                                <button id="btn20" class="s90" onclick="refreshS90USName()">S90USCity</button>
+							</div>
+							<div class="inner">
+                                <button id="btn21" class="s90" onclick="refreshS90GeoName()">S90Geo</button>
 							</div>
 							<div class="inner">
                                 <button id="btn5" class="cen" onclick="refreshCenWord()" accesskey="c" title="Alt+c"><b>C</b>entennial</button>
@@ -298,7 +331,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				</figure>
 				</div>
 		<!-- End Suggestions -->
-				<div id="about" style="clear:both;padding-left:5%;padding-right:5%"></div>
+				<div id="about"></div>
 
 		
 	</body>

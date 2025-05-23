@@ -1,3 +1,4 @@
+//v2025.0521.0745pm add S90Word button
 //v2025.0506.0240pm pageCntAdj to not exceed the length of the array
 // v2025.0505.1000pm persist last button clicked in local storage.
 // v2025.0505.0300pm to verify word is in the djsWords arry before displaying Outline.
@@ -5,7 +6,7 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0505.1000pm';
+    return 'djs.js v2025.0521.0745pm';
 }
 function findIdx(input,arrName) {
     var i
@@ -89,6 +90,94 @@ function refreshDjsPhrase(cntAdj) {
 	document.getElementById('record').innerHTML = path;
 }
 
+
+
+function refreshS90Word(cntAdj) {
+	setLastButton('refreshS90Word');
+	pageCntAdj(cntAdj, s90Word);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Word);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Phrase(cntAdj) {
+	setLastButton('refreshS90Phrase');
+	pageCntAdj(cntAdj, s90Phrase);
+	hideSuggestion() 
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Phrase);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+ 
+function refreshS90Women(cntAdj) {
+	setLastButton('refreshS90Women');
+	pageCntAdj(cntAdj, s90Women);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Women Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Women);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Men(cntAdj) {
+	setLastButton('refreshS90Men');
+	pageCntAdj(cntAdj, s90Men);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Men Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Men);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Sur(cntAdj) {
+	setLastButton('refreshS90Sur');
+	pageCntAdj(cntAdj, s90Sur);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Sur Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Sur);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90USName(cntAdj) {
+	setLastButton('refreshS90USName');
+	pageCntAdj(cntAdj, s90USName);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (US City Names)";
+
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90USName);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90GeoName(cntAdj) {
+	setLastButton('refreshS90GeoName');
+	pageCntAdj(cntAdj, s90GeoName);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Geographical Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90GeoName);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
 function refreshCenWord(cntAdj) {
 	setLastButton('refreshCenWord');
 	pageCntAdj(cntAdj, cenWord);
@@ -101,10 +190,6 @@ function refreshCenWord(cntAdj) {
 	path = path.concat(wordId, '.png">');
 	document.getElementById('record').innerHTML = path;
 }
-
-
-
- 
 function refreshCenBrief(cntAdj) {
 	setLastButton('refreshCenBrief');
 	pageCntAdj(cntAdj, cenBrief);
@@ -232,22 +317,27 @@ function refreshPreWord(cntAdj) {
 
 function loadAboutDJS() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><b>Page from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader.");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutS90() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Series 90,</i> a book published by The McGraw-Hill Publishing Company in 1978, written by Charles Rader.");
 	document.getElementById('about').innerHTML = aboutText;
 }
 function loadAboutCen() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><b>Page from</b> <i>Gregg Shorthand Dictionary Centennial Edition Abridged,</i> a book published by The McGraw-Hill Publishing Company in 1989, written by Charles E. Zoubek, Gregg Condon. </p>");
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Centennial Edition Abridged,</i> a book published by The McGraw-Hill Publishing Company in 1989, written by Charles E. Zoubek, Gregg Condon.");
 	document.getElementById('about').innerHTML = aboutText;
 }
 function loadAboutSim() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. ");
 	document.getElementById('about').innerHTML = aboutText;
 }
 function loadAboutPre() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar. A <a href=\"https://greggshorthand.github.io/gsd1916.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
+	aboutText = aboutText.concat("<i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar. A <a href=\"https://greggshorthand.github.io/gsd1916.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
 
 	document.getElementById('about').innerHTML = aboutText;
 }
