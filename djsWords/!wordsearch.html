@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    v=2025.0524.0258pm use relative path GreggDictionary.html
     v=2025.0507.0109pm add link buttons to other tools
     v2025.0505.0120am only ccreate the regexPattern once and use filter to get the matches
     Version 2/12/2025 5:13PM Add Copyright notice   
@@ -27,7 +28,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'v=2025.0507.0600pm'; // Version display element 
+            document.getElementById('version').textContent = 'v=2025.0524.0258pm'; // Version display element 
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -98,23 +99,12 @@
                 clipboardInput.select();
                 document.execCommand("copy");
                 clipboardInput.value = "";
-                if (window.location.hostname !== "halplatt.github.io") {
-                    openInNewTab(text);
-                } else {
-                    openInNewTabGithub(text);
-                }
-                
+                openInNewTab(text);
             }
 
             //Function to open in new tab
             function openInNewTab(text) {
                 url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open(url, 'GreggDictionary');
-                newTab.focus();
-            }
-            //Function to open in new tab when on github
-              function openInNewTabGithub(text) {
-                url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();
             }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+    //v=2025.0524.0258pm use relative path GreggDictionary.html
     //v=2025.0510.0433pm Put coorect version in button
     //v=2025.0507.0109pm add link buttons to other tools
     //Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
@@ -40,7 +41,7 @@
         var globalGsd; //global variable to store the gsd value;
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'v=2025.0510.0433pm';
+            document.getElementById('version').textContent = 'v=2025.0524.0258pm';
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -73,12 +74,7 @@
                 clipboardInput.select();
                 document.execCommand("copy");
                 clipboardInput.value = "";
-                if (window.location.hostname !== "halplatt.github.io") {
-                    openInNewTab(text);
-                } else {
-                    openInNewTabGithub(text);
-                }
-                
+                openInNewTab(text);
             }
 
             //Function to open in new tab
@@ -86,12 +82,6 @@
                 url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();
-            }
-            //Function to open in new tab
-              function openInNewTabGithub(text) {
-                url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-                var newTab = window.open(url, 'GreggDictionary');
-                newTab.focus();        
             }
     </script>
     <p id="version"></p>
