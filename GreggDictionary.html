@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0523.0734pm move styles from shorthand.css into <style> tag
 v2025.0521.0730pm add s90Words
 v2025.0507.11:11am add cashbusting query stings to the data files.
 v2025.0505.1000pm persist last button clicked in local storage.
@@ -26,16 +27,49 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<title>Gregg Shorthand Dictionary Search</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="shorthand.css?v=2025.0522.1241pm">
 		<!-- JavaScrips with cachebusting querystring-->
 		<script type="text/javascript" src="data.djs.js?v=2025.0521.0730pm"></script>
-		<script type="text/javascript" src="data.ann.js?v=2025.0506.0647pm"></script>
+		<script type="text/javascript" src="data.ann.js?v=2025.0523.1009pm"></script>
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0507.11:11am"></script>
         <script type="text/javascript" src="dataset.ann.js?v=2025.0507.11:11am"></script>
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<style>
+			body {
+				font-family: 'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
+				margin: 0 0;
+				background-color: #DDD;
+				color: #333;
+			}
+			h1 {
+				font-family: 'Roboto Condensed', sans-serif;
+				font-size: 2.5em;
+				font-weight: normal;
+				text-align: center;
+				color: #333;
+			}
+
+			h2 {
+				font-family: 'Roboto Condensed', sans-serif;
+				font-size: 1.5em;
+				font-weight: normal;
+				text-align: left;
+				color: #333;
+			}
+			a {
+				text-decoration: none;
+				transition: color 0.3s;
+				color: #507ec9;
+			}
+			a:hover {
+				color: #2D5493;
+			}
+			p {
+				font-size: 1.0em;
+				line-height: 1.5em;
+				color: #555;
+				text-align: justify;
+			}
 			.version-tag {
 				position: absolute;
 				top: 10px;
@@ -46,11 +80,26 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				font-size: 12px;
 				color: #333;
 			}
+			.container ul li, .container ol li {
+				font-size: 1.0em;
+				line-height: 1.8em;
+				color: #555;
+			}
+			.container ul li ul li, .container ol li ol li{
+				font-size: 0.8em;
+				line-height: 1.8em;
+				color: #666;
+			}
+			.container {
+				padding: 0% 5% 0% 5%;
+				max-width: 50em;
+				margin: 0 auto;
+			}
 			.input-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
 			}
 			.input-container button {
 				color: black;
@@ -66,13 +115,134 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				border-radius: 4px;
 				width: 200px;
 			}
-			#about {
-				margin-left: auto;
-				margin-right: auto;
+			.search {
+				min-height: 5em;
+				margin: 0 auto;
+				display: table;
+			}
+
+			.inner {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+			}
+
+			.middle {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			/* Center the buttons */		
+			button {
+				border: none;
+				color: white;
 				text-align: center;
-				max-width: 90%;
-				padding-left: 0;
-				padding-right: 0;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 12px;
+				padding: 8px 16px;
+				transition-duration: 0.4s;
+			}
+			button:hover {
+				background-color: #45a049;
+			}
+			button.djs {background-color: #507ec9;}
+			button.ann {background-color: #009fc4;}
+			button.pre {background-color: #0089c4;}
+			button.cen {background-color: #017699;}
+			button.sim {background-color: #1000f5b0;}
+			button.s90 {background-color: #6b5fc7;}
+			button.all {background-color: #00c42e;}
+			/* the following class hides buttons and links */
+			/*
+			.sim,
+			.djs,
+			.cen,
+			.all,
+			.s90 {
+				display: none !important;
+			}
+			*/
+			#txt1 {
+				font-size: 1.5em;
+				height: 1.2em;
+				border-top-left-radius : 0.3em;
+				border-bottom-left-radius : 0.3em;
+				border: 1px solid #999;
+				background-color: #EEE;
+				padding: 0.1em 0.5em;
+				margin: 0 0 0 0;
+				border-right-style: none;
+			}
+
+			#txt1 :focus {
+				border-color: #507ec9;
+			}
+
+			#btn1 {
+				font-size: 1em;
+				height: 2.2em;
+				width: 2.2em;
+				margin: 0 0 0 0;
+				border: none;
+				padding: 8px;
+			}
+
+			#btn1 img {
+				width: 1.4em;
+				height: 1.4em;
+			}
+
+			#record {
+				text-align: center;
+			}
+
+			#suggest input {
+				font-size: 1.0em;
+				background-color: #EEE;
+				border: 1px solid #507ec9;
+				border-radius: 0.3em;
+				color: #507ec9;
+				transition-duration: 0.3s;
+				margin: 0.2em;
+			}
+			#suggest {
+				display: block;
+				width: 100%;
+				margin: 1em auto 0 auto;
+				text-align: center;
+				clear: both;
+			}
+			#suggest h2 {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			}
+
+
+			#suggest figure {
+				display: inline-block;
+				float: none !important;
+				margin: 0 0.5em;
+				vertical-align: top;
+				text-align: center;
+			}
+
+			#suggest input:hover {
+				background-color: #507ec9;
+				color: #EEE;
+			}
+			#about {
+							clear: both;
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+							text-align: center;
+							max-width: 90%;
+							padding-left: 0;
+							padding-right: 0;
 			}
 		</style>
 		<script type="text/javascript">
@@ -187,13 +357,13 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 
 	<body>
 		<div class="container">
-				<div id="version" class="version-tag">v=2025.0507.0600pm</div>
+				<div id="version" class="version-tag">v=2025.0523.0734pm</div>
 				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
 				<div class="search">
 					<div class="middle">
 							<div class="input-container">
 								<button onclick="window[lastButton](-1);" style="color: black; background-color: #f0f0f0;">&lt;</button>
-								<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){handleGsdParam()}" autofocus class="djs"/>
+								<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){handleGsdParam()}" autofocus />
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
@@ -261,38 +431,38 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
                                 <button id="btn13" class="ann" onclick="refreshAnnWord()" accesskey="a" title="Alt+a"><b>A</b>nniversary</button>
                             </div>
 							<div class="inner">
-                                <button id="btn14" class="ann" onclick="refreshPreWord()" accesskey="p" title="Alt+p"><b>P</b>re-anniversary</button>
+                                <button id="btn14" class="pre" onclick="refreshPreWord()" accesskey="p" title="Alt+p"><b>P</b>re-anniversary</button>
                             </div>
 							<br/>
 							<span>Link to Regex search for:</span>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
+								<a class="all" href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
+								<a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+								<a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+								<a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
+								<a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+								<a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
 							</div>
 							<br/>
 							<span>Link to text to Gregg for:</span>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+								<a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!textToGregg.html', 't2djsWords')">djs</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+								<a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
 							</div>
 							<div class="inner">
-								<a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+								<a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
 							</div>
 						</div>
 					</div>
@@ -303,29 +473,29 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<!-- Suggestions (only used by Anniversary) Hide otherwise -->
 				<div id="suggest" style="display:none">
 					<h2>Suggestions</h2>
-				<figure style="float:left">
+				<figure>
 					<figcaption><input id="bt0" type="button" value="bt0" onclick="document.getElementById('txt1').value = document.getElementById('bt0').value;refreshAnnWord()" /></figcaption>
 					<span id="sh0"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt1" type="button" value="bt1" onclick="document.getElementById('txt1').value = document.getElementById('bt1').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt1" type="button" value="bt1" onclick="document.getElementById('txt1').value = document.getElementById('bt1').value;refreshAnnWord()" /></figcaption>
 					<span id="sh1"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt2" type="button" value="bt2" onclick="document.getElementById('txt1').value = document.getElementById('bt2').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt2" type="button" value="bt2" onclick="document.getElementById('txt1').value = document.getElementById('bt2').value;refreshAnnWord()" /></figcaption>
 					<span id="sh2"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt3" type="button" value="bt3" onclick="document.getElementById('txt1').value = document.getElementById('bt3').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt3" type="button" value="bt3" onclick="document.getElementById('txt1').value = document.getElementById('bt3').value;refreshAnnWord()" /></figcaption>
 					<span id="sh3"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt4" type="button" value="bt4" onclick="document.getElementById('txt1').value = document.getElementById('bt4').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt4" type="button" value="bt4" onclick="document.getElementById('txt1').value = document.getElementById('bt4').value;refreshAnnWord()" /></figcaption>
 					<span id="sh4"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt5" type="button" value="bt5" onclick="document.getElementById('txt1').value = document.getElementById('bt5').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt5" type="button" value="bt5" onclick="document.getElementById('txt1').value = document.getElementById('bt5').value;refreshAnnWord()" /></figcaption>
 					<span id="sh5"></span>
 				</figure>
-					<figure style="float:left"><figcaption><input id="bt6" type="button" value="bt6" onclick="document.getElementById('txt1').value = document.getElementById('bt6').value;refreshAnnWord()" /></figcaption>
+					<figure><figcaption><input id="bt6" type="button" value="bt6" onclick="document.getElementById('txt1').value = document.getElementById('bt6').value;refreshAnnWord()" /></figcaption>
 					<span id="sh6"></span>
 				</figure>
-				<figure style="float:left">
+				<figure>
 					<figcaption><input id="bt7" type="button" value="bt7" onclick="document.getElementById('txt1').value = document.getElementById('bt7').value;refreshAnnWord()" /></figcaption>
 					<span id="sh7"></span>
 				</figure>

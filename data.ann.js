@@ -1,3 +1,4 @@
+// ann.js v2025.0523.0746pm  adjust styling on suggestions.
 // v2025.0506.0104pm fix error in search.
 // v2025.0505.1000pm persist last button clicked in local storage.
 //v22025.0505.0200pm dataset.ann.js now contains ann_dict and ann_dict_reverse arrays. Modified code to reflet this change.
@@ -5,7 +6,7 @@
 //updated 1/15/2025 2:27 to set lastButton = 'refreshAnnWord';
 
 function getannJSVersion() {
-    return 'ann.js v2025.0506.0647pm';
+    return 'ann.js v2025.0523.0746pm';
 }
 function findOrder(input) {
 	var left = 0;
@@ -115,7 +116,7 @@ async function refreshAnnWord(cntAdj) {
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
 		}
-		document.getElementById("suggest").style.display="inline";
+		document.getElementById("suggest").style.display="inline-block";
 	} else {
 		path = "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
 		var starting = -order-4;
@@ -136,7 +137,7 @@ async function refreshAnnWord(cntAdj) {
 			imgpath = '<img src="annWords/'+thisWord+'.png">';
 			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
 		}
-		document.getElementById("suggest").style.display="inline";		
+		document.getElementById("suggest").style.display="block";		
 	}
 	document.getElementById('record').innerHTML = path;
 	
@@ -144,6 +145,6 @@ async function refreshAnnWord(cntAdj) {
 
 function loadAboutAnn() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.</p>");
+	aboutText = aboutText.concat("<i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond. A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
 	document.getElementById('about').innerHTML = aboutText;
 }
