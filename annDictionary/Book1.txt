@@ -1,0 +1,97 @@
+﻿phrasebook_Page_01,able to say
+phrasebook_Page_02,after dinner speech
+phrasebook_Page_03,all over the world
+phrasebook_Page_04,and I will expect
+phrasebook_Page_05,a pound
+phrasebook_Page_06,as per our
+phrasebook_Page_07,as well as possible
+phrasebook_Page_08,at such a moment
+phrasebook_Page_09,back and forth
+phrasebook_Page_10,best way
+phrasebook_Page_11,by express
+phrasebook_Page_12,call his attention
+phrasebook_Page_13,can you think
+phrasebook_Page_14,construe the
+phrasebook_Page_15,day and night
+phrasebook_Page_16,does not
+phrasebook_Page_17,each of these
+phrasebook_Page_18,fact that
+phrasebook_Page_19,for a considerable length of time
+phrasebook_Page_20,for next year
+phrasebook_Page_21,for there is not
+phrasebook_Page_22,from them
+phrasebook_Page_23,General Agent
+phrasebook_Page_24,had been
+phrasebook_Page_25,have done
+phrasebook_Page_26,he could not be
+phrasebook_Page_27,he will have
+phrasebook_Page_28,I always
+phrasebook_Page_29,I believe there was
+phrasebook_Page_30,I do not judge
+phrasebook_Page_31,if it were possible
+phrasebook_Page_32,if you do not write me
+phrasebook_Page_33,I have come
+phrasebook_Page_34,Illinois Central
+phrasebook_Page_35,in a few weeks
+phrasebook_Page_36,in general
+phrasebook_Page_37,in our judgment
+phrasebook_Page_38,in reply would say
+phrasebook_Page_39,in the matter
+phrasebook_Page_40,into that
+phrasebook_Page_41,I say
+phrasebook_Page_42,I should be sorry
+phrasebook_Page_43,it is possible
+phrasebook_Page_44,it will reach you
+phrasebook_Page_45,Jesus Christ
+phrasebook_Page_46,kind favor
+phrasebook_Page_47,ladies and gentlemen
+phrasebook_Page_48,life insurance
+phrasebook_Page_49,magazine department
+phrasebook_Page_50,members of the board
+phrasebook_Page_51,National Express Company
+phrasebook_Page_52,northern division
+phrasebook_Page_53,of all
+phrasebook_Page_54,of today
+phrasebook_Page_55,on her side
+phrasebook_Page_56,on these occasions
+phrasebook_Page_57,ought to be
+phrasebook_Page_58,paid up policy
+phrasebook_Page_59,please remember that
+phrasebook_Page_60,prompt attention
+phrasebook_Page_61,question at issue
+phrasebook_Page_62,railroad business
+phrasebook_Page_63,Safe Deposit
+phrasebook_Page_64,shall be glad to receive
+phrasebook_Page_65,so far as I can
+phrasebook_Page_66,so there must be
+phrasebook_Page_67,take into consideration
+phrasebook_Page_68,that may be done
+phrasebook_Page_69,there are some things
+phrasebook_Page_70,they have known
+phrasebook_Page_71,this account
+phrasebook_Page_72,this time
+phrasebook_Page_73,to call his attention
+phrasebook_Page_74,to it
+phrasebook_Page_75,to sell
+phrasebook_Page_76,to work
+phrasebook_Page_77,under any
+phrasebook_Page_78,Very cordially yours
+phrasebook_Page_79,war department
+phrasebook_Page_80,we are sorry to say
+phrasebook_Page_81,we did
+phrasebook_Page_82,we have today
+phrasebook_Page_83,"we remain, Yours respectfully"
+phrasebook_Page_84,we told him
+phrasebook_Page_85,we would advise
+phrasebook_Page_86,what right
+phrasebook_Page_87,where it was
+phrasebook_Page_88,which we
+phrasebook_Page_89,who is now
+phrasebook_Page_90,will receive prompt attention
+phrasebook_Page_91,with the least possible delay
+phrasebook_Page_92,years old
+phrasebook_Page_93,you cannot be
+phrasebook_Page_94,you have known
+phrasebook_Page_95,you must go
+phrasebook_Page_96,Yours very sincerely
+phrasebook_Page_97,you wish

@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0526.0414pm add annPhrase
 v2025.0523.0734pm move styles from shorthand.css into <style> tag
 v2025.0521.0730pm add s90Words
 v2025.0507.11:11am add cashbusting query stings to the data files.
@@ -357,7 +358,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 
 	<body>
 		<div class="container">
-				<div id="version" class="version-tag">v=2025.0523.0734pm</div>
+				<div id="version" class="version-tag">v2025.0526.0414pm</div>
 				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
 				<div class="search">
 					<div class="middle">
@@ -430,6 +431,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 							<div class="inner">
                                 <button id="btn13" class="ann" onclick="refreshAnnWord()" accesskey="a" title="Alt+a"><b>A</b>nniversary</button>
                             </div>
+							<div class="inner">
+                                <button id="btn22" class="ann" onclick="refreshAnnPhrase()">AnnPhrase</button>
+							</div>
 							<div class="inner">
                                 <button id="btn14" class="pre" onclick="refreshPreWord()" accesskey="p" title="Alt+p"><b>P</b>re-anniversary</button>
                             </div>

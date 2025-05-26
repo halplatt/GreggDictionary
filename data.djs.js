@@ -1,3 +1,4 @@
+//v2025.0526.0350pm add annPhrase button
 //v2025.0521.0745pm add S90Word button
 //v2025.0506.0240pm pageCntAdj to not exceed the length of the array
 // v2025.0505.1000pm persist last button clicked in local storage.
@@ -6,7 +7,7 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0521.0745pm';
+    return 'djs.js v2025.0526.0445pm';
 }
 function findIdx(input,arrName) {
     var i
@@ -301,11 +302,23 @@ function refreshSimName(cntAdj) {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
+function refreshAnnPhrase(cntAdj) {
+	setLastButton('refreshAnnPhrase');
+	pageCntAdj(cntAdj, annPhrase);
+	hideSuggestion() 
+	loadAboutAnnPhrase()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,annPhrase);
+	var path = '<img src="annDictionary/';
+	path = path.concat(wordId, '.png">');
+	document.getElementById('record').innerHTML = path;
+}
 function refreshPreWord(cntAdj) {
 	setLastButton('refreshPreWord');
 	pageCntAdj(cntAdj, preWord);
 	hideSuggestion()
-	loadAboutPre()
+	loadAboutAnn()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,preWord);
@@ -335,9 +348,16 @@ function loadAboutSim() {
 	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. ");
 	document.getElementById('about').innerHTML = aboutText;
 }
+function loadAboutAnnPhrase() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Phrase Book (1930),</i> a book published by The Gregg Publishing Company in 1930, forms written by Harriet M. Johnson. A <a href=\"./annDictionary/AnnPhrasebook.pdf\" target=\"_blank\">pdf version here</a>.");
+
+	document.getElementById('about').innerHTML = aboutText;
+}
 function loadAboutPre() {
 	var aboutText = "";
 	aboutText = aboutText.concat("<i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar. A <a href=\"https://greggshorthand.github.io/gsd1916.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
 
 	document.getElementById('about').innerHTML = aboutText;
 }
+
