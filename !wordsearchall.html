@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+v2025.0528.0915pm fix insert character at cursor position
 v=2025.0507.0109pm add link buttons to other tools
 Version 02/12/2025 at 6:34pm Copyright notice
 Version 02/07/2025 at 510pm Convert png names to lowercase, window.open
@@ -157,7 +158,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v=2025.0507.0600pm</p>
+    <p id="version">v2025.0528.0915pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -451,12 +452,18 @@ version 02/06/2025 at 9:18pm First version
         }
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
-            var regexInput = document.getElementById('regexInput');
-            var startPos = regexInput.selectionStart;
-            var endPos = regexInput.selectionEnd;
-            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
+                var regexInput = document.getElementById('regexInput');
             regexInput.focus();
-            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
+            var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
+            var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
+            // Insert the text after the selected text, not replacing it
+            regexInput.value = 
+                regexInput.value.substring(0, endPos) + 
+                text + 
+                regexInput.value.substring(endPos);
+            // Set the cursor position to the end of the inserted text
+            var cursorPos = endPos + text.length;
+            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;           
         }
         //add vertical align to the image based on the content of a corresponding text file 
         function getVerticalAlign(pngFile) {
@@ -478,21 +485,11 @@ version 02/06/2025 at 9:18pm First version
             clipboardInput.select();
             document.execCommand("copy");
             clipboardInput.value = "";
-            if (window.location.hostname !== "halplatt.github.io") {
-                openInNewTab(text,globalGsd);
-            } else {
-                openInNewTabGithub(text,globalGsd);
-            }
+            openInNewTab(text);
         }
         //Function to open in new tab
         function openInNewTab(text,globalGsd) {
-            url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-            var newTab = window.open(url, 'GreggDictionary');
-            newTab.focus();
-        }
-        //Function to open in new tab when on github
-            function openInNewTabGithub(text,globalGsd) {
-            url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+            url = './GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
             var newTab = window.open(url, 'GreggDictionary');
             newTab.focus();
         }

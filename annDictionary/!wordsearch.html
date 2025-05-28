@@ -2,6 +2,7 @@
 <!--
 This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
 THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+v2025.0527.0646pm fix insert not to replace existing text
 v=2025.0507.0211pm add link buttons to other tools
 Version 05/03/2025 at 12:26pm Style text if click event added to resultItem
 Version 02/12/2025 at 5:47pm Add copyright notice
@@ -155,7 +156,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v=2025.0507.0600pm</p>
+    <p id="version">v2025.0527.0646pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -381,11 +382,17 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
             var regexInput = document.getElementById('regexInput');
-            var startPos = regexInput.selectionStart;
-            var endPos = regexInput.selectionEnd;
-            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
             regexInput.focus();
-            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
+            var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
+            var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
+            // Insert the text after the selected text, not replacing it
+            regexInput.value = 
+                regexInput.value.substring(0, endPos) + 
+                text + 
+                regexInput.value.substring(endPos);
+            // Set the cursor position to the end of the inserted text
+            var cursorPos = endPos + text.length;
+            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;     
         }
         // Function to open or focus a tab with the given URL and target
         function openOrFocusTab(url, target) {

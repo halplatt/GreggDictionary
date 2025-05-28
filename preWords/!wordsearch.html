@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    v2025.0527.0331pm work on insert characters at cursor position  
+    version 5/7/2025 at 6:00PM add links to other tools
     v=2025.0507.0109pm add link buttons to other tools
     v2025.0505.0120am only ccreate the regexPattern once and use filter to get the matches
     Version 2/12/2025 5:13PM Add Copyright notice   
@@ -27,7 +29,7 @@
         //Wrap code inside an event listener to ensure the DOM is fully loaded before running the code
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'v=2025.0507.0600pm'; // Version display element 
+            document.getElementById('version').textContent = 'v2025.0527.0333pm'; // Version display element 
             try {
                 const url = new URL(window.location.href);
                 const path = url.pathname;
@@ -301,15 +303,17 @@
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
             var regexInput = document.getElementById('regexInput');
-            var startPos = regexInput.selectionStart;
-            var endPos = regexInput.selectionEnd;
-            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
-            //regexInput.focus();
-            //regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;
+            regexInput.focus();
+            var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
+            var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
+            // Insert the text after the selected text, not replacing it
+            regexInput.value = 
+                regexInput.value.substring(0, endPos) + 
+                text + 
+                regexInput.value.substring(endPos);
             // Set the cursor position to the end of the inserted text
-            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;
-
-            
+            var cursorPos = endPos + text.length;
+            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;
         }
 
         // Function to fetch pronunciation for a given word
