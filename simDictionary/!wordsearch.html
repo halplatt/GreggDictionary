@@ -289,11 +289,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
                         const img = document.createElement('img');
                         img.className = 'absolute max-w-none';
-                        if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages, the ann pages are numeric)
-                            img.src = `${page.page.toLowerCase()}.png`;
-                        } else {
-                            img.src = `${page.page}.png`;
-                        }
+                        img.src = `${page.page}.png`;
                         img.alt = `Gregg shorthand for word: ${word.t}`;
                         img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
                         img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally

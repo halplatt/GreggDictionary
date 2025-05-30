@@ -1,3 +1,4 @@
+//v2025.0530.0248pm add sim thumbnail above page
 //v2025.0526.0350pm add annPhrase button
 //v2025.0521.0745pm add S90Word button
 //v2025.0506.0240pm pageCntAdj to not exceed the length of the array
@@ -7,8 +8,46 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0526.0445pm';
+    return 'djs.js v2025.0530.0630pm';
 }
+// Declare global variable
+let simReferencejson = [];
+
+// Function to load JSON and assign to global variable
+function loadsimReferencejson() {
+    fetch('./simDictionary/!reference.json')
+        .then(response => response.json())
+        .then(data => {
+            simReferencejson = data; // Now available globally
+            // You can call other functions here if needed
+        })
+        .catch(error => {
+            console.error('Error loading reference data:', error);
+        });
+}
+
+// Run after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    loadsimReferencejson();
+});
+function findPageByWord(searchValue) {
+	const regex = new RegExp('^'+searchValue+'$', 'i');
+    for (const page of simReferencejson) {
+        for (const word of page.words) {
+            if (regex.test(word.t)) {
+                // Return the page object and the matching word object
+                return {
+                    page: page.page,
+                    word: word.t,
+                    x: word.x,
+                    y: word.y
+                };
+            }
+        }
+    }
+    return null; // Not found
+}
+
 function findIdx(input,arrName) {
     var i
     for (i = 0; i < arrName.length; i++) 
@@ -285,10 +324,33 @@ function refreshSimWord(cntAdj) {
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand";
 	var word = document.getElementById('txt1').value;
+    // create a thumbnail image for the word
+	document.getElementById('record').innerHTML = ""
+	const result = findPageByWord(word);
+	if (result) {
+		const imageContainer = document.createElement('div');
+		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+        const IMG_WIDTH = 1281;
+		imageContainer.className = 'relative overflow-hidden border';
+		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+		const img = document.createElement('img');
+		img.className = 'absolute max-w-none';
+		img.src = `./simDictionary/${result.page}.png`;
+		img.alt = `Gregg shorthand for word: ${result.t}`;
+		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
+		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
+		img.style.width = '1281px'; // Assuming the image width is fixed
+		imageContainer.appendChild(img);
+		document.getElementById('record').appendChild(imageContainer);
+	}
+
+
 	var wordId = findIdx(word,simWord);
 	var path = '<img src="simDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
-	document.getElementById('record').innerHTML = path;
+	document.getElementById('record').innerHTML += path;
 }
 function refreshSimName(cntAdj) {
 	setLastButton('refreshSimName');

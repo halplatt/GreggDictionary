@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0530.0248pm add sim thumbnail above page
 v2025.0526.0414pm add annPhrase
 v2025.0523.0734pm move styles from shorthand.css into <style> tag
 v2025.0521.0730pm add s90Words
@@ -29,10 +30,10 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<!-- JavaScrips with cachebusting querystring-->
-		<script type="text/javascript" src="data.djs.js?v=2025.0526.0500pm"></script>
+		<script type="text/javascript" src="data.djs.js?v=2025.0530.0317pm"></script>
 		<script type="text/javascript" src="data.ann.js?v=2025.0523.1009pm"></script>
 		<!-- Data arrays of words -->
-		<script type="text/javascript" src="dataset.djs.js?v=2025.0526.0500pm"></script>
+		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
         <script type="text/javascript" src="dataset.ann.js?v=2025.0507.11:11am"></script>
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<style>
@@ -197,7 +198,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			}
 
 			#record {
-				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 			}
 
 			#suggest input {
@@ -244,6 +247,21 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 							max-width: 90%;
 							padding-left: 0;
 							padding-right: 0;
+			}
+			.relative {
+            	position: relative;
+			}
+			.absolute {
+				position: absolute;
+			}
+			.max-w-none {
+				max-width: none;
+			}
+			.overflow-hidden {
+				overflow: hidden;
+			}
+			.border {
+				border: 1px solid black;
 			}
 		</style>
 		<script type="text/javascript">
