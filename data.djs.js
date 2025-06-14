@@ -1,4 +1,4 @@
-//v2025.0530.0248pm add sim thumbnail above page
+//v2025.0611.0339pm add style="width:60%" to page images
 //v2025.0526.0350pm add annPhrase button
 //v2025.0521.0745pm add S90Word button
 //v2025.0506.0240pm pageCntAdj to not exceed the length of the array
@@ -8,7 +8,7 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0530.0630pm';
+    return 'djs.js v2025.0611.0339pm';
 }
 // Declare global variable
 let simReferencejson = [];
@@ -98,7 +98,7 @@ function refreshDjsWord(cntAdj) {
 	var wordId = findIdx(word,djsWord);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 
@@ -112,7 +112,7 @@ function refreshDjsName(cntAdj) {
 	var wordId = findIdx(word,djsName);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 
@@ -126,7 +126,7 @@ function refreshDjsPhrase(cntAdj) {
 	var wordNum = findNum(word,djsPhrase);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
-	path = path.concat('djsPhrase ','(',wordNum,')', '.png">');
+	path = path.concat('djsPhrase ','(',wordNum,')', '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 
@@ -141,7 +141,7 @@ function refreshS90Word(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90Word);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshS90Phrase(cntAdj) {
@@ -153,7 +153,7 @@ function refreshS90Phrase(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90Phrase);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
  
@@ -166,7 +166,7 @@ function refreshS90Women(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90Women);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshS90Men(cntAdj) {
@@ -178,7 +178,7 @@ function refreshS90Men(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90Men);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshS90Sur(cntAdj) {
@@ -190,7 +190,7 @@ function refreshS90Sur(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90Sur);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshS90USName(cntAdj) {
@@ -203,7 +203,7 @@ function refreshS90USName(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90USName);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshS90GeoName(cntAdj) {
@@ -215,7 +215,7 @@ function refreshS90GeoName(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,s90GeoName);
 	var path = '<img src="s90Dictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenWord(cntAdj) {
@@ -227,7 +227,7 @@ function refreshCenWord(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenWord);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenBrief(cntAdj) {
@@ -239,7 +239,7 @@ function refreshCenBrief(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenBrief);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 
@@ -252,7 +252,7 @@ function refreshCenPhrase(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenPhrase);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
  
@@ -265,7 +265,7 @@ function refreshCenWomen(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenWomen);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenMen(cntAdj) {
@@ -277,7 +277,7 @@ function refreshCenMen(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenMen);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenSur(cntAdj) {
@@ -289,7 +289,7 @@ function refreshCenSur(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenSur);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenUSName(cntAdj) {
@@ -302,7 +302,7 @@ function refreshCenUSName(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenUSName);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshCenGeoName(cntAdj) {
@@ -314,7 +314,7 @@ function refreshCenGeoName(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,cenGeoName);
 	var path = '<img src="cenDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshSimWord(cntAdj) {
@@ -373,7 +373,7 @@ function refreshAnnPhrase(cntAdj) {
 	var word = document.getElementById('txt1').value;
 	var wordId = findIdx(word,annPhrase);
 	var path = '<img src="annDictionary/';
-	path = path.concat(wordId, '.png">');
+	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
 function refreshPreWord(cntAdj) {
