@@ -2,6 +2,7 @@
 <!--
 This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
 THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+V2025.0614.0824pm add words pre-fix suffix and add exact button
 v2025.0527.0646pm fix insert not to replace existing text
 v=2025.0507.0211pm add link buttons to other tools
 Version 05/03/2025 at 12:26pm Style text if click event added to resultItem
@@ -156,7 +157,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v2025.0527.0646pm</p>
+    <p id="version">V2025.0614.0832pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -201,17 +202,22 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         <br>
     <div class="input-container">
         <div class="button-row">
-            <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
-            <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
-            <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
-            <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-            <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
-            <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
-            <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
-            <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-            <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-            <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
-        </div>
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
+                    <small>^prefix</small>
+                </button>
+                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
+                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
+                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
+                </button>
+
+            </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter Regular Expression">
             <button id="searchButton" onclick="searchWords()">Search</button>
@@ -246,6 +252,19 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         document.getElementById('regexInput').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 searchWords();
+            }
+            try {
+                // Attach caret/dollar update on input
+                var regexInput = document.getElementById('regexInput');
+                regexInput.addEventListener('input', function() {
+                    updateCaretButton();
+                    updateDollarButton();
+                });
+                // Initial update
+                updateCaretButton();
+                updateDollarButton();
+            } catch (error) {
+                document.title = `Regex Search of ${imagePath1}`;
             }
         });
 
@@ -289,11 +308,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
                         const img = document.createElement('img');
                         img.className = 'absolute max-w-none';
-                        if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages, the ann pages are numeric)
-                            img.src = `${page.page.toLowerCase()}.png`;
-                        } else {
-                            img.src = `${page.page}.png`;
-                        }
+                        img.src = `${page.page}.png`;
                         img.alt = `Gregg shorthand for word: ${word.t}`;
                         img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
                         img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
@@ -369,15 +384,71 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
             regexInput.focus();
             regexInput.select();
         }
+        function updateCaretButton() {
+            var regexInput = document.getElementById('regexInput');
+            var caretButton = document.getElementById('caretButton');
+            if (regexInput.value.startsWith('^')) {
+                caretButton.querySelector('small').textContent = "clear ^prefix";
+                caretButton.title = "Remove ^ from the start";
+            } else {
+                caretButton.querySelector('small').textContent = "^prefix";
+                caretButton.title = "Insert ^ to indicate the start of the word";
+            }
+        }
 
-        // Function to add caret to the regex input
+        function updateDollarButton() {
+            var regexInput = document.getElementById('regexInput');
+            var dollarButton = document.getElementById('dollarButton');
+            if (regexInput.value.endsWith('$')) {
+                dollarButton.querySelector('small').textContent = "clear suffix$";
+                dollarButton.title = "Remove $ from the end";
+            } else {
+                dollarButton.querySelector('small').textContent = "suffix$";
+                dollarButton.title = "Insert $ to indicate the end of the word";
+            }
+        }
         function addCaret() {
             var regexInput = document.getElementById('regexInput');
-            regexInput.value = '^' + regexInput.value;
+            var value = regexInput.value;
+            if (value.startsWith('^')) {
+                regexInput.value = value.substring(1);
+            } else {
+                regexInput.value = '^' + value;
+            }
+            regexInput.focus();
+            updateCaretButton();
+            updateDollarButton(); 
         }
         function addDollar() {
             var regexInput = document.getElementById('regexInput');
-            regexInput.value = regexInput.value + '$';
+            var value = regexInput.value;
+            if (value.endsWith('$')) {
+                regexInput.value = value.slice(0, -1);
+            } else {
+                regexInput.value = value + '$';
+            }
+            regexInput.focus();
+            updateCaretButton();
+            updateDollarButton(); 
+        }
+
+        function addExact() {
+            var regexInput = document.getElementById('regexInput');
+            var value = regexInput.value;
+            // Add ^ at the start if not present
+            if (!value.startsWith('^')) {
+                value = '^' + value;
+            }
+            // Add $ at the end if not present
+            if (!value.endsWith('$')) {
+                value = value + '$';
+            }
+            regexInput.value = value;
+            regexInput.focus();
+            regexInput.selectionStart = 0;
+            regexInput.selectionEnd = value.length;
+            updateCaretButton();
+            updateDollarButton();             
         }
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
