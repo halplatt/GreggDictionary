@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
-    //v=2025.0510.0433pm Put coorect version in button
-    //v=2025.0507.0109pm add link buttons to other tools
-    //Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
-    //Version: 2025/02/16 7:15PM Add Copyright notice 
-    //Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
-    //Version: 2025/01/19 at 3:22pm Add some space above the resultContainer
-    //Version: 2025/01/17 at 12:01am check to make sure page opens in proper tab
-    //Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
-    //Version: 2025/01/08 at 6:25PM add container style to display title above outline
-    //Version: 2025/01/08 at 3:30PM hide checkboxUseDict2 if not djsWords.
-    //Version: 2024/04/24at5:50pm Default to 2 column display
-    //Version: 2024/03/13at20:18 Run inside any dictionary of words with ./_words.array.js and ./!PNGCustom/_words.array2.js folder name as title
-    //Version: 2024/02/14at13:35 replace period followed by newline with newline
-    //Version: 2024/01/10at10:45 If isUseDict2 checked, Search dict2 array for match first, then search dict array for match.
-    //Version: 2024/01/07at18:55 Preserve original case of the input word so we can display it if it is not found in the dictionary
-    //Version: 2024/01/04at14:02 handle left and right parentheses
-    //Version: 2024/01/01at22:29 treat ' as a word character. 
-    //Version: 2023/12/30at0940 retrun focus to input box after processing
-    //Version: 2023/12/29at0016 Handle case insensitivity in word array. dict_lc is a copy of dict array in lower case
-    //Version: 2023/12/25at2023 Handle special characters in input with png.files
-    //         display '.' as "!period.png",'\n' as "!paragraph.png",
-    //          '?' as "!question.png",',' as "!comma.png",'-' as text "="
-    //Version: 2023/12/23at2105 Log performance time to console, use imagepath for word images, add "'s" to allowed suffixes
-    //Version: 2023/12/23at2053 Eliminate the copy of the dict array
-    //Version: 2023/12/23at2017 Handle last word in input array. Add form tag.
-    //Version: 2023/12/23at1954 New logic processing off input split by non-word characters
-    //       -- Original logic renamed textTpDJSGregg2.html --
-    // 20231223at0108 add alt-g and tooltip to Generate Gregg DJS button.
-    // 20231222at1647 Fix vertical align of phrase images.   
-    // 20231220at2100 negative vertical align values cause the image to move up 
-    // 20231220at2050 add version number
-    // 20231216 convert to use Array /djsWords/_words.array.js
+//V=2025.0616.0258pm add public_domain_only    
+//v=2025.0510.0433pm Put coorect version in button
+//v=2025.0507.0109pm add link buttons to other tools
+//Version: 2025/03/17 4:19PM DefaultcheckboxShowTitle to checked
+//Version: 2025/02/16 7:15PM Add Copyright notice 
+//Version: 2025/01/19 at 5pm Add click event to text to link and copy to clipboard
+//Version: 2025/01/19 at 3:22pm Add some space above the resultContainer
+//Version: 2025/01/17 at 12:01am check to make sure page opens in proper tab
+//Version: 2025/01/11 at 11:50am add click event listener to copy to clipboard and link to GreggDictionary.html
+//Version: 2025/01/08 at 6:25PM add container style to display title above outline
+//Version: 2025/01/08 at 3:30PM hide checkboxUseDict2 if not djsWords.
+//Version: 2024/04/24at5:50pm Default to 2 column display
+//Version: 2024/03/13at20:18 Run inside any dictionary of words with ./_words.array.js and ./!PNGCustom/_words.array2.js folder name as title
+//Version: 2024/02/14at13:35 replace period followed by newline with newline
+//Version: 2024/01/10at10:45 If isUseDict2 checked, Search dict2 array for match first, then search dict array for match.
+//Version: 2024/01/07at18:55 Preserve original case of the input word so we can display it if it is not found in the dictionary
+//Version: 2024/01/04at14:02 handle left and right parentheses
+//Version: 2024/01/01at22:29 treat ' as a word character. 
+//Version: 2023/12/30at0940 retrun focus to input box after processing
+//Version: 2023/12/29at0016 Handle case insensitivity in word array. dict_lc is a copy of dict array in lower case
+//Version: 2023/12/25at2023 Handle special characters in input with png.files
+//         display '.' as "!period.png",'\n' as "!paragraph.png",
+//          '?' as "!question.png",',' as "!comma.png",'-' as text "="
+//Version: 2023/12/23at2105 Log performance time to console, use imagepath for word images, add "'s" to allowed suffixes
+//Version: 2023/12/23at2053 Eliminate the copy of the dict array
+//Version: 2023/12/23at2017 Handle last word in input array. Add form tag.
+//Version: 2023/12/23at1954 New logic processing off input split by non-word characters
+//       -- Original logic renamed textTpDJSGregg2.html --
+// 20231223at0108 add alt-g and tooltip to Generate Gregg DJS button.
+// 20231222at1647 Fix vertical align of phrase images.   
+// 20231220at2100 negative vertical align values cause the image to move up 
+// 20231220at2050 add version number
+// 20231216 convert to use Array /djsWords/_words.array.js
 -->
 <html>
 <head>
     <script>
-        var globalGsd; //global variable to store the gsd value;
+        var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'   
+        var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'v=2025.0510.0433pm';
+            document.getElementById('version').textContent = 'V=2025.0616.0258pm';
+            if (public_domain_only === 'pd') {
+				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}	
             //set the folder name as the title
             const url = new URL(window.location.href);
             const path = url.pathname;
@@ -55,6 +60,18 @@
             document.querySelector('label[for="checkboxUseDict2"]').style.display = 'none';
             }
         });
+        if (public_domain_only === 'pd') {
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .sim,
+            .djs,
+            .cen,
+            .all,
+            .s90 {
+                display: none !important;
+            }`;
+            document.head.appendChild(style);
+        }
         // create a script tag to load the dict array
         const imagePath = './'; //path to word.png images
         let script = document.createElement('script');
@@ -83,13 +100,13 @@
 
             //Function to open in new tab
             function openInNewTab(text) {
-                url = '../GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                url = '../GreggDictionary'+public_domain_only+'.html?x=' + text + '&gsd=' + globalGsd;
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();
             }
             //Function to open in new tab
               function openInNewTabGithub(text) {
-                url = '/GreggDictionary/GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
+                url = '/GreggDictionary/GreggDictionary'+public_domain_only+'.html?x=' + text + '&gsd=' + globalGsd;
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();        
             }
@@ -433,41 +450,41 @@ function processInput() {
     <div class="button-row">
         <span>Link to main dictionary:</span>
         <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary.html', 'GreggDictionary')">Gregg Dictionary</a>
+            <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
         </div>
     </div>
     <div class="button-row">
         <span>Link to Regex search for:</span>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
+        <div class="inner all">
+            <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
         </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+        <div class="inner djs">
+            <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
         </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+        <div class="inner sim">
+            <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
         </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+        <div class="inner ann">
+            <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
         </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWords')">Anniversary-in-page</a>
+        <div class="inner ann">
+            <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
         </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+        <div class="inner pre">
+            <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
         </div>
     </div>
     <div class="button-row">
-        <span>Link to text to Gregg for:</span>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords')">djs</a>
-        </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
-        </div>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
-        </div>
+            <span>Link to text to Gregg for:</span>
+            <div class="inner djs">
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
+            </div>
+            <div class="inner ann">
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
+            </div>
+            <div class="inner pre">
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
+            </div>
     </div>
     <br>     
     <form id="translatorForm">

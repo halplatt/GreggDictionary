@@ -1,3 +1,4 @@
+//v2025.0615.0553pm public-domain-only=pd hide link to andrew owen's
 //v2025.0611.0339pm add style="width:60%" to page images
 //v2025.0526.0350pm add annPhrase button
 //v2025.0521.0745pm add S90Word button
@@ -8,8 +9,10 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0611.0339pm';
+    return 'djs.js v2025.0615.0553pm';
 }
+// Declare global variables for clarity
+var public_domain_only = typeof public_domain_only !== 'undefined' ? public_domain_only : '';
 // Declare global variable
 let simReferencejson = [];
 
@@ -412,14 +415,18 @@ function loadAboutSim() {
 }
 function loadAboutAnnPhrase() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Phrase Book (1930),</i> a book published by The Gregg Publishing Company in 1930, forms written by Harriet M. Johnson. A <a href=\"./annDictionary/AnnPhrasebook.pdf\" target=\"_blank\">pdf version here</a>.");
-
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Phrase Book (1930),</i> a book published by The Gregg Publishing Company in 1930, forms written by Harriet M. Johnson.");
+	if (public_domain_only == '') {
+		aboutText = aboutText.concat(" A <a href=\"./annDictionary/AnnPhrasebook.pdf\" target=\"_blank\">pdf version here</a>.");
+	}
 	document.getElementById('about').innerHTML = aboutText;
 }
 function loadAboutPre() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar. A <a href=\"https://greggshorthand.github.io/gsd1916.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
-
+	aboutText = aboutText.concat("<i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar.");
+	if (public_domain_only == '') {
+		aboutText = aboutText.concat(" A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
+	}
 	document.getElementById('about').innerHTML = aboutText;
 }
 

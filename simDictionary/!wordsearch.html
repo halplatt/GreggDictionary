@@ -2,6 +2,7 @@
 <!--
 This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
 THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+V2025.0616.0310pm add public_domain_only
 V2025.0614.0824pm add words pre-fix suffix and add exact button
 v2025.0527.0646pm fix insert not to replace existing text
 v=2025.0507.0211pm add link buttons to other tools
@@ -19,6 +20,28 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Search</title>
+    <script>
+        var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+               document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0616.0219pm'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}		
+        });
+        if (public_domain_only === 'pd') {
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .sim,
+            .djs,
+            .cen,
+            .all,
+            .s90 {
+                display: none !important;
+            }`;
+            document.head.appendChild(style);
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -157,49 +180,50 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0614.0832pm</p>
+    <p id="version">V2025.0615.1159pm</p>
 
     <div class="input-container">
         <div class="button-row">
             <span>Link to main dictionary:</span>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary.html', 'GreggDictionary')">Gregg Dictionary</a>
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
             </div>
         </div>
         <div class="button-row">
             <span>Link to Regex search for:</span>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
+            <div class="inner all">
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+            <div class="inner djs">
+                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+            <div class="inner sim">
+                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+            <div class="inner ann">
+                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
+            <div class="inner ann">
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+            <div class="inner pre">
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
             </div>
         </div>
         <div class="button-row">
             <span>Link to text to Gregg for:</span>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
             </div>
         </div>
-        <br>
+    </div>
+    <br>
     <div class="input-container">
         <div class="button-row">
                 <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
@@ -329,7 +353,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                             clipboardInput.select();
                             document.execCommand("copy");
                             clipboardInput.value = "";
-                            var url = `../GreggDictionary.html?x=${word.t}&gsd=${globalGsd}`;
+                            var url = `../GreggDictionary${public_domain_only}.html?x=${word.t}&gsd=${globalGsd}`;
                             window.open(url, 'GreggDictionary');
                         };
 
