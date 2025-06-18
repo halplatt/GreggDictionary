@@ -1,1 +1,1 @@
-scrapper,scrappier
+privilege,privilege

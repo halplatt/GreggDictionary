@@ -43,7 +43,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "V2025.0615.1047pm";
+    			document.getElementById('version').innerHTML = "V2025.0618.0609pm";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -311,7 +311,11 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				if (savedButton) {
 					lastButton = savedButton; // Retrieve from localStorage
 				} else {
-					lastButton = 'refreshDjsWord'; // Default value
+					if (public_domain_only === 'pd') {
+						setLastButton('refreshAnnWord');
+					} else {
+						setLastButton('refreshDjsWord');
+					}	
 				}
 			}
 			function setLastButton(buttonName) {
@@ -339,7 +343,11 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 						setLastButton('refreshS90Word');
 						break;
 					default:
-						setLastButton('refreshDjsWord');
+						if (public_domain_only === 'pd') {
+							setLastButton('refreshAnnWord');
+						} else {
+							setLastButton('refreshDjsWord');
+						}	
 						break;
 					}
 				}
