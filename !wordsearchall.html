@@ -158,7 +158,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">v2025.0528.0915pm</p>
+    <p id="version">V2025.0619.0500pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -169,50 +169,57 @@ version 02/06/2025 at 9:18pm First version
         </div>
         <div class="button-row">
             <span>Link to Regex search for:</span>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
+            <div class="inner all">
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
+            <div class="inner djs">
+                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+            <div class="inner sim">
+                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords')">Anniversary</a>
+            <div class="inner ann">
+                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch.html', 'annWordsinpage')">Anniversary-in-page</a>
+            <div class="inner ann">
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
             </div>
-            <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords')">pre-Anniversary</a>
+            <div class="inner pre">
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
             </div>
         </div>
         <div class="button-row">
             <span>Link to text to Gregg for:</span>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!textToGregg.html', 't2djsWords')">djs</a>
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!textToGregg.html', 't2annWords')">Anniversary</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords');">Anniversary</a>
             </div>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!textToGregg.html', 't2preWords')">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords');">pre-Anniversary</a>
             </div>
         </div>
-        <br>     
+    </div>
+    <br>
+    <div class="input-container">
         <div class="button-row">
-            <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
-            <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
-            <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
-            <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-            <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
-            <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
-            <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
-            <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-            <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-            <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
-        </div>
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
+                    <small>^prefix</small>
+                </button>
+                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
+                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
+                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
+                </button>
+
+            </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter Regular Expression">
             <button id="searchButton" onclick="searchWords()">Search</button>
@@ -244,6 +251,19 @@ version 02/06/2025 at 9:18pm First version
         document.getElementById('regexInput').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 searchWords();
+            }
+            try {
+                // Attach caret/dollar update on input
+                var regexInput = document.getElementById('regexInput');
+                regexInput.addEventListener('input', function() {
+                    updateCaretButton();
+                    updateDollarButton();
+                });
+                // Initial update
+                updateCaretButton();
+                updateDollarButton();
+            } catch (error) {
+                document.title = `Regex Search of ${imagePath1}`;
             }
         });
 
@@ -440,15 +460,71 @@ version 02/06/2025 at 9:18pm First version
             regexInput.focus();
             regexInput.select();
         }
+        function updateCaretButton() {
+            var regexInput = document.getElementById('regexInput');
+            var caretButton = document.getElementById('caretButton');
+            if (regexInput.value.startsWith('^')) {
+                caretButton.querySelector('small').textContent = "clear ^prefix";
+                caretButton.title = "Remove ^ from the start";
+            } else {
+                caretButton.querySelector('small').textContent = "^prefix";
+                caretButton.title = "Insert ^ to indicate the start of the word";
+            }
+        }
 
-        // Function to add caret to the regex input
+        function updateDollarButton() {
+            var regexInput = document.getElementById('regexInput');
+            var dollarButton = document.getElementById('dollarButton');
+            if (regexInput.value.endsWith('$')) {
+                dollarButton.querySelector('small').textContent = "clear suffix$";
+                dollarButton.title = "Remove $ from the end";
+            } else {
+                dollarButton.querySelector('small').textContent = "suffix$";
+                dollarButton.title = "Insert $ to indicate the end of the word";
+            }
+        }
         function addCaret() {
             var regexInput = document.getElementById('regexInput');
-            regexInput.value = '^' + regexInput.value;
+            var value = regexInput.value;
+            if (value.startsWith('^')) {
+                regexInput.value = value.substring(1);
+            } else {
+                regexInput.value = '^' + value;
+            }
+            regexInput.focus();
+            updateCaretButton();
+            updateDollarButton(); 
         }
         function addDollar() {
             var regexInput = document.getElementById('regexInput');
-            regexInput.value = regexInput.value + '$';
+            var value = regexInput.value;
+            if (value.endsWith('$')) {
+                regexInput.value = value.slice(0, -1);
+            } else {
+                regexInput.value = value + '$';
+            }
+            regexInput.focus();
+            updateCaretButton();
+            updateDollarButton(); 
+        }
+
+        function addExact() {
+            var regexInput = document.getElementById('regexInput');
+            var value = regexInput.value;
+            // Add ^ at the start if not present
+            if (!value.startsWith('^')) {
+                value = '^' + value;
+            }
+            // Add $ at the end if not present
+            if (!value.endsWith('$')) {
+                value = value + '$';
+            }
+            regexInput.value = value;
+            regexInput.focus();
+            regexInput.selectionStart = 0;
+            regexInput.selectionEnd = value.length;
+            updateCaretButton();
+            updateDollarButton();             
         }
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
@@ -463,7 +539,7 @@ version 02/06/2025 at 9:18pm First version
                 regexInput.value.substring(endPos);
             // Set the cursor position to the end of the inserted text
             var cursorPos = endPos + text.length;
-            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;           
+            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;     
         }
         //add vertical align to the image based on the content of a corresponding text file 
         function getVerticalAlign(pngFile) {
@@ -502,7 +578,7 @@ version 02/06/2025 at 9:18pm First version
                 //do nothing, the tab is already open
             }
             newTab.focus();
-        }
+        }        
     </script>
 </body>
 </html>

@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+V2025.0619.0245pm add show hide dictionaries button
 V2025.0616.0132pm public-domain-only=pd hide non-public domain links
 v2025.0611.0339pm change data.djs.js to add page style to image
 v2025.0530.0248pm add sim thumbnail above page
@@ -32,7 +33,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<script type="text/javascript"> 
-			var public_domain_only = 'pd'; // Declarethis global variable to hide non-public domain links when it is set to 'pd'
+			var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
 		</script>
 		<!-- JavaScrips with cachebusting querystring-->
 		<script type="text/javascript" src="data.djs.js?v=2025.0615.0559pm"></script>
@@ -43,7 +44,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "V2025.0618.0609pm";
+    			document.getElementById('version').innerHTML = "V2025.0619.0245pm";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -173,15 +174,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			button.s90 {background-color: #6b5fc7;}
 			button.all {background-color: #00c42e;}
 			/* the following class hides buttons and links */
-			/* //uncomment to hide all buttons except ann and pre
-			.sim,
-			.djs,
-			.cen,
-			.all,
-			.s90 {
+			.ann, .pre, .sim, .djs, .cen, .s90 {
 				display: none !important;
 			}
-			/* */
 			#txt1 {
 				font-size: 1.5em;
 				height: 1.2em;
@@ -280,9 +275,9 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			}
 		</style>
 		<script type="text/javascript">
-            if (public_domain_only === 'pd') {
-                const style = document.createElement('style');
-                style.innerHTML = `
+			if (public_domain_only === 'pd') {
+				const style = document.createElement('style');
+				style.innerHTML = `
 				.sim,
 				.djs,
 				.cen,
@@ -290,8 +285,8 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				.s90 {
 					display: none !important;
 				}`;
-                document.head.appendChild(style);
-            }
+				document.head.appendChild(style);
+			}
 			function getQueryParams() {
 				const params = {};
 				const queryString = window.location.search.substring(1);
@@ -322,40 +317,50 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 				lastButton = buttonName;
 				localStorage.setItem('lastButton', buttonName); // Save to localStorage
 			}
-			function handleGsdParam() {
-			initializeLastButton(); // Ensure lastButton is initialized
-			const params = getQueryParams();
-			if (params.gsd) {
-				switch (params.gsd) {
-					case 'ann':
-						setLastButton('refreshAnnWord');
-						break;
-					case 'pre':
-						setLastButton('refreshPreWord');
-						break;
-					case 'sim':
-						setLastButton('refreshSimWord');
-						break;
-					case 'djs':
-						setLastButton('refreshDjsWord');
-						break;
-					case 's90':
-						setLastButton('refreshS90Word');
-						break;
-					default:
-						if (public_domain_only === 'pd') {
-							setLastButton('refreshAnnWord');
-						} else {
-							setLastButton('refreshDjsWord');
-						}	
-						break;
-					}
-				}
-				if (typeof window[lastButton] === 'function') {
-					window[lastButton]();
+
+			function getCurrentClass() { 
+				if (lastButton) {
+					initializeLastButton(); // Ensure lastButton is initialized
 				} else {
-					refreshDjsWord();
+					return null;
 				}
+				return lastButton.slice(7, 10).toLowerCase();
+			}
+
+			function handleGsdParam() {
+				initializeLastButton(); // Ensure lastButton is initialized
+				const params = getQueryParams();
+				if (params.gsd) {
+					switch (params.gsd) {
+						case 'ann':
+							setLastButton('refreshAnnWord');
+							break;
+						case 'pre':
+							setLastButton('refreshPreWord');
+							break;
+						case 'sim':
+							setLastButton('refreshSimWord');
+							break;
+						case 'djs':
+							setLastButton('refreshDjsWord');
+							break;
+						case 's90':
+							setLastButton('refreshS90Word');
+							break;
+						default:
+							if (public_domain_only === 'pd') {
+								setLastButton('refreshAnnWord');
+							} else {
+								setLastButton('refreshDjsWord');
+							}	
+							break;
+						}
+					}
+					if (typeof window[lastButton] === 'function') {
+						window[lastButton]();
+					} else {
+						refreshDjsWord();
+					}
 			}
 			function hideSuggestion() {
 				document.getElementById("suggest").style.display = "none";
@@ -400,13 +405,85 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
             }
             newTab.focus();
         }
+
 		</script>
 	</head>
+	<script>
+			//begin show hide dictionaries -------
+			
+document.addEventListener('DOMContentLoaded', function() {
+  const dictClasses = ['ann', 'pre', 'sim', 'djs', 'cen', 's90'];
+  const btn = document.getElementById('toggleDictBtn');
+  let showingAll = false;
 
+ function showPdDictOnly() {
+  	const currentDict = getCurrentClass(); // e.g., "ann"
+    dictClasses.forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach(el => {
+        if (['ann', 'pre'].includes(cls)) {
+          el.style.setProperty('display', 'block', 'important');
+        } else {
+          el.style.setProperty('display', 'none', 'important');
+        }
+      });
+    });
+    btn.style.setProperty('display', 'none', 'important'); //no button when showing public domain dictionaries
+    showingAll = false;
+  }
+
+  function showCurrentDict() {
+  	const currentDict = getCurrentClass(); // e.g., "ann"
+    dictClasses.forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach(el => {
+        if (cls === currentDict) {
+          el.style.setProperty('display', 'block', 'important');
+        } else {
+          el.style.setProperty('display', 'none', 'important');
+        }
+      });
+    });
+    btn.textContent = "show all dictionaries";
+    showingAll = false;
+  }
+
+  function showAllDicts() {
+    dictClasses.forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach(el => {
+        el.style.setProperty('display', 'block', 'important');
+      });
+    });
+    btn.textContent = "show fewer dictionaries";
+    showingAll = true;
+  }
+
+  btn.addEventListener('click', () => {
+    if (showingAll) {
+      showCurrentDict();
+    } else {
+      showAllDicts();
+    }
+  });
+
+	const currentDict = getCurrentClass(); // e.g., "ann"
+	if (public_domain_only === 'pd') {
+		showPdDictOnly();
+	} else
+	if (currentDict) {
+  		showCurrentDict();
+	} else {
+		showAllDicts();			
+	}
+});
+
+	//end show hide dictionaries  -------
+	</script>
 	<body>
 		<div class="container">
 				<div id="version" class="version-tag">not set</div>
 				<h3 id="gsdTitle" style="text-align: center;">Gregg Shorthand Dictionary Search</h3>
+				<button id="toggleDictBtn" style="position: absolute; top: 8px; left: 8px; z-index: 1000; background: #222; color: #fff; border: none; padding: 8px 16px; border-radius: 4px;">
+					display all dictionary's
+				</button>
 				<div class="search">
 					<div class="middle">
 							<div class="input-container">
@@ -556,4 +633,5 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 
 		
 	</body>
+
 </html>
