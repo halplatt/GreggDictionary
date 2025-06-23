@@ -1,3 +1,4 @@
+// v2025.0622.0931pm modify logic to handle forward and back page numbers.
 // ann.js v2025.0523.0746pm  adjust styling on suggestions.
 // v2025.0615.0553pm public-domain-only=pd hide link to andrew owen's
 // v2025.0506.0104pm fix error in search.
@@ -10,7 +11,7 @@
 var public_domain_only = typeof public_domain_only !== 'undefined' ? public_domain_only : '';
 
 function getannJSVersion() {
-	return 'ann.js v2025.0615.0553pm';
+	return 'ann.js v2025.0622.0952pm';
 }
 function findOrder(input) {
 	var left = 0;
@@ -75,27 +76,37 @@ async function findPageObj(testWord) {
 	return null; // Return null if no match is found
 }
 
+async function getPageByNumber(pageNumber) { //returns the page object for a given page number
+	const data = await fetchData();
+	if (pageNumber >= data.length) { // If pageNumber is greater than the last page, return the last page
+		return data[data.length - 1];
+	}
+	if (pageNumber <= 1) { //if pageNumber is less than or equal to 1 Return the first page 
+		return data[0]; 
+	}
+	pageNumber = pageNumber.toString().padStart(3, '0');
+	return data.find(page => page.page === pageNumber) || null;
+}
+
 async function refreshAnnWord(cntAdj) {
 	setLastButton('refreshAnnWord');
 	hideSuggestion();
 	loadAboutAnn();
-	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";
-	// Adjust for page forward or back
-	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
-		let word = document.getElementById('txt1').value;
-		let num = findNum(word, ann_dict);
-		num--
-		num += cntAdj;
-		if (num < 0) { num = 0; }
-		if (num >= ann_dict.length - 1) { num = ann_dict.length - 1; }
-		document.getElementById('txt1').value = ann_dict[num];
-	}
+	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";	// Adjust for page forward or back
 	var word = document.getElementById('txt1').value.toLowerCase();
+	var pageObj = await findPageObj(word.toString()); // Use await here
+	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj) && cntAdj !== 0 && pageObj !== null) { //If there is a count adjustment, adjust the word accordingly
+		var pageNumber=parseInt(pageObj.page) + cntAdj;
+		pageObj=await getPageByNumber(pageNumber)
+		word=pageObj.words[0].t
+		document.getElementById('txt1').value = word; // Update the input field with the new word
+	}
+	
 	var order = findOrder(word);
 	var order_reverse = findOrderReverse(word);
 	var path = '<img src="annWords/';
 	if (order >= 0) { //If word is found order is positive
-		var pageObj = await findPageObj(word.toString()); // Use await here
+		
         if (pageObj !== null) {
 			path = '<img src="annWords/' + word + '.png">'
 			path += '<img src="annDictionary/';
