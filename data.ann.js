@@ -1,3 +1,4 @@
+// v2025.0623.1114pm if word not found use page with word not>than
 // v2025.0622.0931pm modify logic to handle forward and back page numbers.
 // ann.js v2025.0523.0746pm  adjust styling on suggestions.
 // v2025.0615.0553pm public-domain-only=pd hide link to andrew owen's
@@ -11,7 +12,7 @@
 var public_domain_only = typeof public_domain_only !== 'undefined' ? public_domain_only : '';
 
 function getannJSVersion() {
-	return 'ann.js v2025.0622.0952pm';
+	return 'ann.js v2025.0624.1209am';
 }
 function findOrder(input) {
 	var left = 0;
@@ -58,6 +59,28 @@ function findOrderReverse(input) {
 	if (compLeft > 0 && compRight < 0) return -left - 2;
 	if (compRight > 0) return -left - 3;
 }
+
+function findEntry(word, dict) { //returns the last entry in dict that is not greater than word
+	var left = 0;
+	var right = dict.length - 1;
+	var result = -1;
+	word = word.toLowerCase();
+	
+	while (left <= right) {
+		var center = Math.floor((left + right) / 2);
+		var comp = dict[center].toLowerCase().localeCompare(word);
+		
+		if (comp <= 0) { // dict[center] <= word
+			result = center;
+			left = center + 1; // Look for a later occurrence
+		} else { // dict[center] > word
+			right = center - 1;
+		}
+	}
+	
+	return result >= 0 ? dict[result] : (dict.length > 0 ? dict[0] : null);
+}
+
 async function fetchData() {
 	const response = await fetch('annDictionary/!reference.json');
 	const annMap = await response.json();
@@ -93,8 +116,9 @@ async function refreshAnnWord(cntAdj) {
 	hideSuggestion();
 	loadAboutAnn();
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";	// Adjust for page forward or back
-	var word = document.getElementById('txt1').value.toLowerCase();
-	var pageObj = await findPageObj(word.toString()); // Use await here
+	let word = document.getElementById('txt1').value.toLowerCase();
+	let entryWord = findEntry(word,ann_dict); // Set the global variable entryWord to the current word
+	let pageObj = await findPageObj(entryWord.toString()); // Use await here
 	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj) && cntAdj !== 0 && pageObj !== null) { //If there is a count adjustment, adjust the word accordingly
 		var pageNumber=parseInt(pageObj.page) + cntAdj;
 		pageObj=await getPageByNumber(pageNumber)
@@ -102,18 +126,21 @@ async function refreshAnnWord(cntAdj) {
 		document.getElementById('txt1').value = word; // Update the input field with the new word
 	}
 	
-	var order = findOrder(word);
-	var order_reverse = findOrderReverse(word);
-	var path = '<img src="annWords/';
+	let order = findOrder(word);
+	let order_reverse = findOrderReverse(word);
+	let path;
+	if (order >= 0) { //If word is found order is positive, display the word image
+		path = '<img src="annWords/' + word + '.png">'
+	} else {
+		 path = "<p>Outline not available</p>";
+	}
+	//Add the page
+	path += '<img src="annDictionary/';
+	path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 10px auto;">');
+
+
+
 	if (order >= 0) { //If word is found order is positive
-		
-        if (pageObj !== null) {
-			path = '<img src="annWords/' + word + '.png">'
-			path += '<img src="annDictionary/';
-			path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 10px auto;">');
-        } else {
-            path = "<p>Sorry, the page number for the word could not be found.</p>";
-        }
 		//11/22/2020 Logic below adds suggestions
 		var starting = order - 1;
 		if (starting < 0) starting = 0;
@@ -135,7 +162,7 @@ async function refreshAnnWord(cntAdj) {
 		}
 		document.getElementById("suggest").style.display="inline-block";
 	} else {
-		path = "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
+		path += "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
 		var starting = -order-4;
 		if (starting < 0) starting = 0;
 		if (starting > ann_dict.length-4) starting = ann_dict.length-4;
@@ -157,7 +184,6 @@ async function refreshAnnWord(cntAdj) {
 		document.getElementById("suggest").style.display="block";		
 	}
 	document.getElementById('record').innerHTML = path;
-	
 }
 
 function loadAboutAnn() {

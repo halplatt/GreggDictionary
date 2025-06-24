@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0624.0112am for public domain only, savedbuttons limited to pre or ann 
 V2025.0619.0245pm add show hide dictionaries button
 V2025.0616.0132pm public-domain-only=pd hide non-public domain links
 v2025.0611.0339pm change data.djs.js to add page style to image
@@ -44,7 +45,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "V2025.0622.0942pm";
+    			document.getElementById('version').innerHTML = "v2025.0624.0112am";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -304,7 +305,15 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			function initializeLastButton() {
 				const savedButton = localStorage.getItem('lastButton');
 				if (savedButton) {
-					lastButton = savedButton; // Retrieve from localStorage
+					if (public_domain_only === 'pd') {  // If pd, only allow only pre or ann
+						if (savedButton === 'refreshPreWord') {
+							lastButton = 'refreshPreWord'
+						} else {
+							lastButton = 'refreshAnnWord'
+						}
+					} else {
+						lastButton = savedButton; // Retrieve from localStorage
+					}
 				} else {
 					if (public_domain_only === 'pd') {
 						setLastButton('refreshAnnWord');

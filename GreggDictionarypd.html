@@ -37,14 +37,14 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		</script>
 		<!-- JavaScrips with cachebusting querystring-->
 		<script type="text/javascript" src="data.djs.js?v=2025.0615.0559pm"></script>
-		<script type="text/javascript" src="data.ann.js?v=2025.0615.0553pm"></script>
+		<script type="text/javascript" src="data.ann.js?v=2025.0622.0942pm"></script>
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
         <script type="text/javascript" src="dataset.ann.js?v=2025.0507.11:11am"></script>
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "V2025.0619.0245pm";
+    			document.getElementById('version').innerHTML = "v2025.0624.0112am";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -304,7 +304,15 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			function initializeLastButton() {
 				const savedButton = localStorage.getItem('lastButton');
 				if (savedButton) {
-					lastButton = savedButton; // Retrieve from localStorage
+					if (public_domain_only === 'pd') {  // If pd, only allow only pre or ann
+						if (savedButton === 'refreshPreWord') {
+							lastButton = 'refreshPreWord'
+						} else {
+							lastButton = 'refreshAnnWord'
+						}
+					} else {
+						lastButton = savedButton; // Retrieve from localStorage
+					}
 				} else {
 					if (public_domain_only === 'pd') {
 						setLastButton('refreshAnnWord');
