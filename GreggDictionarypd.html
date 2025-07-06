@@ -6,6 +6,8 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0706.0430pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
+v2025.0624.0112am for public domain only, savedbuttons limited to pre or ann 
 V2025.0619.0245pm add show hide dictionaries button
 V2025.0616.0132pm public-domain-only=pd hide non-public domain links
 v2025.0611.0339pm change data.djs.js to add page style to image
@@ -40,11 +42,12 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="data.ann.js?v=2025.0622.0942pm"></script>
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
-        <script type="text/javascript" src="dataset.ann.js?v=2025.0507.11:11am"></script>
+        <script type="text/javascript" src="dataset.ann.js?v=2025.0706.11:11am"></script>
+		<script type="text/javascript" src="dataset.ann.reverse.js?v=2025.0706.11:11am"></script>
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2025.0624.0112am";
+    			document.getElementById('version').innerHTML = "v2025.0706.0430pm";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {

@@ -1,3 +1,4 @@
+// v2025.0705.1209am handle case when word is not in the reverse dictionary
 // v2025.0623.1114pm if word not found use page with word not>than
 // v2025.0622.0931pm modify logic to handle forward and back page numbers.
 // ann.js v2025.0523.0746pm  adjust styling on suggestions.
@@ -12,7 +13,7 @@
 var public_domain_only = typeof public_domain_only !== 'undefined' ? public_domain_only : '';
 
 function getannJSVersion() {
-	return 'ann.js v2025.0624.1209am';
+	return 'ann.js v2025.0705.1209am';
 }
 function findOrder(input) {
 	var left = 0;
@@ -55,9 +56,10 @@ function findOrderReverse(input) {
 	compRight = input_reverse.localeCompare(ann_dict_reverse[right].toLowerCase());
 	if (compLeft == 0) return left;
 	if (compRight == 0) return right;
-	if (compLeft < 0) return -left - 1;
-	if (compLeft > 0 && compRight < 0) return -left - 2;
-	if (compRight > 0) return -left - 3;
+	// If not found, return the greatest value not greater than input_reverse
+	if (compLeft < 0) return left > 0 ? left - 1 : -1; // input_reverse < left element
+	if (compRight < 0) return left; // input_reverse is between left and right
+	return right; // input_reverse > right element, return right as greatest not greater
 }
 
 function findEntry(word, dict) { //returns the last entry in dict that is not greater than word
@@ -135,8 +137,12 @@ async function refreshAnnWord(cntAdj) {
 		 path = "<p>Outline not available</p>";
 	}
 	//Add the page
-	path += '<img src="annDictionary/';
-	path = path.concat(pageObj.page.toString(), '.png" style="max-width: 60%; display: block; margin: 10px auto;">');
+	if (pageObj === null) {
+		path += "<p>Dictionary Page not available</p>";
+	} else {
+		path += '<img src="annDictionary/';
+		path = path.concat(pageObj.page.toString(), '.png" style="width:60%; display: block; margin: 10px auto;">');
+	}
 
 
 
