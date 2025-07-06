@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+//v2025.0705.0258pm add more allowed suffixes 
 //V=2025.0616.0258pm add public_domain_only    
 //v=2025.0510.0433pm Put coorect version in button
 //v=2025.0507.0109pm add link buttons to other tools
@@ -42,7 +43,7 @@
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'V=2025.0616.0258pm';
+            document.getElementById('version').textContent = 'v2025.0705.0345pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -219,10 +220,25 @@ window.onload = function() {
         processInput()
     });
 }
-const allowedSuffixes = [
-    "es", "s", "d", "ed", "ing", "ly", "er", "est", "ful", "less", "ness",
+const allowedSuffixes = [  //try them, first success wins
+    "s", "es", "'s", "y", "ly", "graphy", "ingly" , "d", "ed", "ing",  "er", "est", "ful", "less",
     "ment", "able", "ible", "ize", "ise", "tion", "sion", "ship", "hood",
-    "ness", "ity", "al", "en", "ify", "ous", "ive", "ant", "ent", "age","'s"
+    "ness", "ity", "al", "en", "ify", "ous", "ive", "ant", "ent", "age", 
+    "or", "ar", "ian", "ist", "ism", "ty", "cy", "phy", 
+     "logy", "ology", 
+     // Additional common suffixes
+    "ation", "ward", "wise", "like", "ling", "let", "ette", "kin", "ie", 
+    "ary", "ery", "ory", "ate", "ute", "ite", "ese", "ish", "ic", "ical",
+    "tic", "atic", "etic", "itic", "otic", "ular", 
+    "ry", "th", "dom", "ways", "fold", "most", "some",
+    "craft", "work", "man", "woman", "person", "folk", "bound",
+    "proof", "wide", "long", "deep", "high", "free", "born", "made", "more",
+    "based", "type", "kind", "sort", "style", "form", "shaped", "fully", 
+    // Geographical suffixes
+    "burg", "ville", "town", "city", "field", "ford", "port", "land", "wood", 
+    "vale", "dale", "hill", "mount", "ridge", "brook", "creek", "lake", "beach",
+    "shore", "bay", "point", "view", "heights", "grove", "glen", "falls",
+    "shire", "stead", "ham", "ton", "borough", "ington", "worth", "wick"
 ];
 
 //add vertical align to the image based on the content of a corresponding text file 
@@ -402,8 +418,13 @@ function processInput() {
                     for (let i = 0; i < allowedSuffixes.length; i++) {
                         let currentSuffix = allowedSuffixes[i];
                         if (pattern.endsWith(currentSuffix)) {
-                            base = pattern.slice(0, -currentSuffix.length);
-                            suffix = currentSuffix;
+                            let testbase = pattern.slice(0, -currentSuffix.length);
+                            let testsuffix = currentSuffix;
+                            if (dict_lc.includes(testbase)) {
+                                base = testbase
+                                suffix = testsuffix;
+                                break; //found a suffix, break out of the loop
+                            }
                         }
                     }
 

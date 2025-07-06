@@ -1,1 +1,1 @@
-kinds,kinds
+bedstead,bedstead

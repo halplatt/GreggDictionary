@@ -2489,3 +2489,4 @@ onlline,online
 scrapper,scrappier
 privlege,privilege
 paw,pawl
+batter,hatter
