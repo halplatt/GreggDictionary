@@ -47,7 +47,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2025.0706.0430pm";
+    			document.getElementById('version').innerHTML = "v2025.0715.1258am";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -310,6 +310,8 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 					if (public_domain_only === 'pd') {  // If pd, only allow only pre or ann
 						if (savedButton === 'refreshPreWord') {
 							lastButton = 'refreshPreWord'
+						} else if (savedButton === 'refreshAnnPhrase') {
+						
 						} else {
 							lastButton = 'refreshAnnWord'
 						}
