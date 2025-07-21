@@ -53,7 +53,7 @@
         <p>To help you create regular expressions, buttons are available that insert regular expression characters into your search word. Instead of typing the characters, you can click the buttons to add them to your search pattern.</p>
         <p>Here are the available buttons and their functions:</p>
         <ul>
-            <li><strong>^</strong> - Adds a caret at the beginning of the input to indicate the start of the word.</li>
+            <li><strong>^prefix</strong> - Adds a caret at the beginning of the input to indicate the start of the word.</li>
             <li><strong>[</strong> - Begins a list of characters valid for this position.</li>
             <li><strong>[^</strong> - Begins a list of characters not valid in this position.</li>
             <li><strong>]</strong> - Ends a set of characters.</li>
@@ -62,7 +62,8 @@
             <li><strong>*</strong> - Indicates the previous character repeats 0 or more times.</li>
             <li><strong>+</strong> - Indicates the previous character repeats 1 or more times.</li>
             <li><strong>?</strong> - Indicates the previous character appears 0 or 1 times.</li>
-            <li><strong>$</strong> - Adds a dollar sign at the end of the input to indicate the text is at the end.</li>
+            <li><strong>suffix$</strong> - Adds a dollar sign at the end of the input to indicate the text is at the end.</li>
+            <li><strong>^exact$</strong> - Adds a caret at the beginning and a dollar sign at the end of the input to indicate an exact match.</li>
         </ul>
         <p>Clicking these buttons will insert the corresponding character at the cursor position or at the end of the text if no cursor position is selected.</p>
 
