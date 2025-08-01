@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
+    <script>
+        var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+        document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0616.0219pm'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}
+        });
+        if (public_domain_only === 'pd') {
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .sim,
+            .djs,
+            .cen,
+            .all,
+            .s90 {
+                display: none !important;
+            }`;
+            document.head.appendChild(style);
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -123,7 +145,7 @@
     </style>
 </head>
 <body>
-    <div class="version">Version 2025-07-31@06:53PM</div>
+    <div class="version">Version 2025-07-31@11:02PM</div>
     <h1>Anniversary GST Search</h1>
     <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
     <div class="input-container">
@@ -203,7 +225,6 @@
     </table>
 
     <script>
-        const public_domain_only = ''; // Set this to 'public_domain_only' if you want to use the public domain version of the dictionary
         // Load the JSON file
         let dataGST = [];
         fetch('!searchGSText.json')
@@ -259,10 +280,16 @@
                 row.appendChild(pageCell); // Append the new column
                 tableBody.appendChild(row);
             });
+            const regexInput = document.getElementById('regexInput');
+            regexInput.focus();
+            regexInput.select();
         }
 
         // Event listener for the "Search GST" button
         document.getElementById('searchGST').addEventListener('click', () => {
+            searchGST()
+        });
+        function searchGST() {
             const regexInput = document.getElementById('regexInput').value;
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
@@ -271,10 +298,13 @@
             } catch (error) {
                 alert('Invalid regular expression');
             }
-        });
+        }
 
         // Event listener for the "Search Text" button
         document.getElementById('searchText').addEventListener('click', () => {
+            searchText();
+        });
+        function searchText() {
             const regexInput = document.getElementById('regexInput').value;
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
@@ -283,7 +313,8 @@
             } catch (error) {
                 alert('Invalid regular expression');
             }
-        });
+        }
+
         // Function to search for a specific text in the JSON data
         function searchRefJson(searchTerm) {
             const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -486,7 +517,26 @@
                 //do nothing, the tab is already open
             }
             newTab.focus();
-        }        
+        } 
+        document.getElementById('regexInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                let regexInput = document.getElementById('regexInput');
+                if(regexInput.value && (regexInput.value.includes('-') || regexInput.value.includes('/'))) {
+                    searchGST();
+                } else {
+                    searchText();
+                }
+            }
+        });
+        
+        // Focus on regex input when page loads - placed at end of document
+        window.addEventListener('load', function() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+            }
+        });
     </script>
 </body>
 </html>
