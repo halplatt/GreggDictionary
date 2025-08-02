@@ -146,7 +146,7 @@
 </head>
 <body>
     <div class="version" id="version"></div>
-    <h1>Anniversary Gregg Stroke Text Search</h1>
+    <h1>Anniversary Gregg Stroke Text (GST) Search</h1>
     <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
     <div class="input-container">
         <div class="button-row">
@@ -249,9 +249,9 @@
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `Gregg Stroke Text Search of ${folderName}`;
-                document.querySelector('h1').textContent = `Gregg Stroke Text Search of ${folderName}`;
-                document.querySelector('title').textContent = `Gregg Stroke Text Search of ${folderName}`;
+                document.title = `Gregg Stroke Text (GST) Search of ${folderName}`;
+                document.querySelector('h1').textContent = `Gregg Stroke Text (GST) Search of ${folderName}`;
+                document.querySelector('title').textContent = `Gregg Stroke Text (GST) Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `GST Search of ${imagePath1}`;
