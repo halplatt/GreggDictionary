@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GST Search</title>
+    <title>YAGATS Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,6 +30,16 @@
         }
         th {
             background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: #666;
+            margin-top: 0px;
+            margin-bottom: 15px;
+            font-style: italic;
         }
         .version {
             position: absolute;
@@ -69,16 +79,42 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .license-info {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        .license-info p {
+            margin: 5px 0;
+        }
                 /* these styles are for button and input row */
     .input-container {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 5px; /* Add small gap after navigation links */
     }
     .button-row {
         display: flex;
+        flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
         width: 100%;
+        margin-bottom: 0px; /* Removed gap entirely */
+        line-height: 1.2; /* Reduce line height to compact rows */
+    }
+    .button-row label {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    .button-row input[type="radio"] {
+        margin-right: 5px;
     }
     .input-row {
         display: flex;
@@ -87,53 +123,73 @@
         gap: 10px;
         width: 100%;
     }
-    .button-row button {
-        margin-right: 5px;
-    }
-    #caretButton {
-        margin-right: 10px;
-    }
-    #addBegSetNot {
-        margin-right: 5px;
-    }
-    #addEndSet {
-        margin-right: 20px;
-    }
-    #addPipe {
-        margin-right: 20px;
-    }
-    #addAnyChar {
-        margin-right: 20px;
-    }
-    #add0or1 {
-        margin-right: 10px;
-    }
+    .inner {
+        margin-right: 10px; /* Add spacing between links */
+        display: inline-block; /* Ensure links are displayed inline */
+    }   
     </style>
 </head>
 <body>
-    <div class="version">Version 03/31/2025@9:53PM</div>
-    <h1>Anniversary GST Search</h1>
+    <div class="version">Version 08/02/2025@3:08PM</div>
+    <h1>GreggSimplified YAGATS Search</h1>
+    <p class="subtitle">using YAGATS (Yet Another Gregg-ASCII Transliteration System)</p>
     <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
-    <div class="button-row">
-        <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">^</button>
-        <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
-        <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to being a list of characters not valid in this position">[^</button>
-        <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-        <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
-        <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
-        <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
-        <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-        <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-        <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word">$</button>
+       <div class="input-container">
+        <div class="button-row">
+            <span>Link to main dictionary:</span>
+            <div class="inner">
+                <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to Regex search for:</span>
+            <div class="inner all">
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
+            </div>
+            <div class="inner djs">
+                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+            </div>
+            <div class="inner sim">
+                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+            </div>
+            <div class="inner ann">
+                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
+            </div>
+            <div class="inner ann">
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
+            </div>
+            <div class="inner pre">
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
+            </div>
+        </div>
+        <div class="button-row">
+            <span>Link to text to Gregg for:</span>
+            <div class="inner">
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
+            </div>
+            <div class="inner">
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
+            </div>
+            <div class="inner">
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
+            </div>
+        </div>
     </div>
-    <input type="text" id="regexInput" placeholder="Enter regular expression">
-    <button id="searchGST">Search GST</button>
-    <button id="searchText">Search Text</button>
+
+    <div class="button-row" style="margin-top: 15px;">
+        <label><input type="radio" name="searchType" value="contains" checked> Contains</label>
+        <label><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
+        <label><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+        <label><input type="radio" name="searchType" value="exact"> Exact match</label>
+    </div>
+    <input type="text" id="regexInput" placeholder="Enter search text">
+    <button id="searchGST" accesskey="y">YAGATS Search (Alt+Y)</button>
+    <button id="searchText" accesskey="t">Text Search (Enter)</button>
     <table id="resultsTable">
         <thead>
             <tr>
                 <th>Text</th>
-                <th>GST</th>
+                <th>YAGATS</th>
                 <th>Outline</th>
             </tr>
         </thead>
@@ -142,10 +198,14 @@
         </tbody>
     </table>
 
+    <div class="license-info">
+        <p><strong>YAGATS Notation by:</strong> DailyGregg Consortium | <strong>License:</strong> Creative Commons NonCommercial 4.0 International License</p>
+    </div>
+
     <script>
         // Load the JSON file
         let dataGST = [];
-        fetch('!searchGSText.json')
+        fetch('!searchYAGATSText.json')
             .then(response => response.json())
             .then(jsonData => {
                 dataGST = jsonData;
@@ -167,18 +227,43 @@
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `GST Search of ${folderName}`;
-                document.querySelector('h1').textContent = `GST Search of ${folderName}`;
-                document.querySelector('title').textContent = `GST Search of ${folderName}`;
+                document.title = `YAGATS Search of ${folderName}`;
+                document.querySelector('h1').textContent = `YAGATS Search of ${folderName}`;
+                document.querySelector('title').textContent = `YAGATS Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `GST Search of ${imagePath1}`;
             }
   
         // Function to display results in the table
-        function displayResults(results) {
+        function displayResults(results, searchTerm = '', searchType = '', searchCategory = '') {
             const tableBody = document.querySelector('#resultsTable tbody');
             tableBody.innerHTML = ''; // Clear previous results
+            
+            if (results.length === 0) {
+                // Display no results message
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 3; // Span all three columns
+                cell.style.textAlign = 'center';
+                cell.style.fontStyle = 'italic';
+                cell.style.color = '#666';
+                cell.style.padding = '20px';
+                
+                // Format search type for display
+                const searchTypeDisplay = {
+                    'contains': 'contains',
+                    'beginsWith': 'begins with',
+                    'endsWith': 'ends with',
+                    'exact': 'exact match'
+                };
+                
+                cell.textContent = `No results found for ${searchCategory} ${searchTypeDisplay[searchType] || 'contains'} search: "${searchTerm}"`;
+                row.appendChild(cell);
+                tableBody.appendChild(row);
+                return;
+            }
+            
             results.forEach(entry => {
                 const row = document.createElement('tr');
                 const textCell = document.createElement('td');
@@ -200,28 +285,92 @@
             });
         }
 
+        // Function to get the selected search type
+        function getSearchType() {
+            const radios = document.getElementsByName('searchType');
+            for (const radio of radios) {
+                if (radio.checked) {
+                    return radio.value;
+                }
+            }
+            return 'contains'; // default fallback
+        }
+
+        // Function to perform search based on type
+        function performSearch(searchInput, targetText, searchType) {
+            const input = searchInput.toLowerCase();
+            const target = targetText.toLowerCase();
+            
+            switch (searchType) {
+                case 'beginsWith':
+                    return target.startsWith(input);
+                case 'endsWith':
+                    return target.endsWith(input);
+                case 'exact':
+                    return target === input;
+                case 'contains':
+                default:
+                    return target.includes(input);
+            }
+        }
+
         // Event listener for the "Search GST" button
         document.getElementById('searchGST').addEventListener('click', () => {
-            const regexInput = document.getElementById('regexInput').value;
-            try {
-                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
-                const results = dataGST.filter(entry => regex.test(entry.gst));
-                displayResults(results);
-            } catch (error) {
-                alert('Invalid regular expression');
-            }
+            const searchInput = document.getElementById('regexInput').value;
+            const searchType = getSearchType();
+            const results = dataGST.filter(entry => 
+                entry.gst && performSearch(searchInput, entry.gst, searchType)
+            );
+            displayResults(results, searchInput, searchType, 'YAGATS');
+            // Refocus and select text after search
+            focusAndSelectText();
         });
 
         // Event listener for the "Search Text" button
         document.getElementById('searchText').addEventListener('click', () => {
-            const regexInput = document.getElementById('regexInput').value;
-            try {
-                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
-                const results = dataGST.filter(entry => regex.test(entry.text));
-                displayResults(results);
-            } catch (error) {
-                alert('Invalid regular expression');
+            const searchInput = document.getElementById('regexInput').value;
+            const searchType = getSearchType();
+            const results = dataGST.filter(entry => 
+                entry.text && performSearch(searchInput, entry.text, searchType)
+            );
+            displayResults(results, searchInput, searchType, 'Text');
+            // Refocus and select text after search
+            focusAndSelectText();
+        });
+
+        // Function to focus on input and select all text
+        function focusAndSelectText() {
+            const input = document.getElementById('regexInput');
+            input.focus();
+            input.select();
+        }
+
+        // Set initial focus when page loads
+        window.addEventListener('load', () => {
+            focusAndSelectText();
+        });
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', (event) => {
+            if (event.altKey) {
+                if (event.key.toLowerCase() === 'y') {
+                    event.preventDefault();
+                    document.getElementById('searchGST').click();
+                }
+            } else if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('searchText').click();
             }
+        });
+
+        // Add event listeners to radio buttons to refocus text input
+        document.addEventListener('DOMContentLoaded', () => {
+            const radios = document.getElementsByName('searchType');
+            radios.forEach(radio => {
+                radio.addEventListener('click', () => {
+                    focusAndSelectText();
+                });
+            });
         });
         // Function to search for a specific text in the JSON data
         function searchRefJson(searchTerm) {
@@ -335,24 +484,6 @@
             resultItem.appendChild(outerContainer);
             return resultItem;
 
-        }
-         // Function to add caret to the regex input
-         function addCaret() {
-            var regexInput = document.getElementById('regexInput');
-            regexInput.value = '^' + regexInput.value;
-        }
-        function addDollar() {
-            var regexInput = document.getElementById('regexInput');
-            regexInput.value = regexInput.value + '$';
-        }
-        // Function to add text at the cursor position or end of the text if no cursor position
-        function addTextAtCursor(text) {
-            var regexInput = document.getElementById('regexInput');
-            var startPos = regexInput.selectionStart;
-            var endPos = regexInput.selectionEnd;
-            regexInput.value = regexInput.value.substring(0, startPos) + text + regexInput.value.substring(endPos, regexInput.value.length);
-            regexInput.focus();
-            regexInput.selectionStart = regexInput.selectionEnd = startPos + text.length;            
         }
         </script>
 </body>
