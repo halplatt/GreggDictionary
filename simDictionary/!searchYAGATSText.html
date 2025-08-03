@@ -567,9 +567,9 @@
         }
 
         // Function to perform search based on type
-        function performSearch(searchInput, targetText, searchType) {
-            const input = searchInput.toLowerCase();
-            const target = targetText.toLowerCase();
+        function performSearch(searchInput, targetText, searchType, caseSensitive = false) {
+            const input = caseSensitive ? searchInput : searchInput.toLowerCase();
+            const target = caseSensitive ? targetText : targetText.toLowerCase();
             
             switch (searchType) {
                 case 'beginsWith':
@@ -589,7 +589,7 @@
             const searchInput = document.getElementById('regexInput').value;
             const searchType = getSearchType();
             const results = dataGST.filter(entry => 
-                entry.gst && performSearch(searchInput, entry.gst, searchType)
+                entry.gst && performSearch(searchInput, entry.gst, searchType, true) // Case-sensitive for YAGATS
             );
             displayResults(results, searchInput, searchType, 'YAGATS');
             // Refocus and select text after search
@@ -601,7 +601,7 @@
             const searchInput = document.getElementById('regexInput').value;
             const searchType = getSearchType();
             const results = dataGST.filter(entry => 
-                entry.text && performSearch(searchInput, entry.text, searchType)
+                entry.text && performSearch(searchInput, entry.text, searchType, false) // Case-insensitive for Text
             );
             displayResults(results, searchInput, searchType, 'Text');
             // Refocus and select text after search
