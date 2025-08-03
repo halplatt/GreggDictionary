@@ -18,6 +18,102 @@
             padding: 5px 10px;
             margin-right: 10px;
         }
+        
+        /* Style for reference/help button */
+        .reference-btn {
+            background-color: #6c757d;
+            color: white;
+            border: 1px solid #5a6268;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        .reference-btn:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        
+        /* Tooltip/Popover styles for reference chart */
+        .reference-tooltip {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border: 2px solid #888;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        
+        .reference-tooltip h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .tooltip-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        
+        .tooltip-table th,
+        .tooltip-table td {
+            border: 1px solid #ddd;
+            padding: 4px 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .tooltip-table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        
+        .tooltip-table .char-col {
+            width: 30px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .reference-tooltip {
+                max-width: 90vw;
+                max-height: 70vh;
+                left: 5% !important;
+                right: 5% !important;
+                font-size: 11px;
+            }
+            
+            .tooltip-table {
+                font-size: 10px;
+            }
+            
+            .tooltip-table .char-col {
+                width: 25px;
+                font-size: 12px;
+            }
+            
+            .tooltip-table th,
+            .tooltip-table td {
+                padding: 3px 4px;
+            }
+            
+            /* Mobile-specific button styling */
+            .reference-btn {
+                font-size: 11px;
+                padding: 6px 10px;
+                margin-left: 10px;
+            }
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -127,6 +223,90 @@
         margin-right: 10px; /* Add spacing between links */
         display: inline-block; /* Ensure links are displayed inline */
     }   
+    
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 1;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .reference-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    
+    .reference-table th,
+    .reference-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    .reference-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    
+    .reference-table .char-col {
+        width: 60px;
+        text-align: center;
+        font-family: 'Courier New', monospace;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+        .modal-content {
+            margin: 10px;
+            width: calc(100% - 20px);
+            max-height: 90vh;
+        }
+        
+        .reference-table {
+            font-size: 14px;
+        }
+        
+        .reference-table .char-col {
+            width: 50px;
+            font-size: 14px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -185,6 +365,42 @@
     <input type="text" id="regexInput" placeholder="Enter search text">
     <button id="searchGST" accesskey="y">YAGATS Search (Alt+Y)</button>
     <button id="searchText" accesskey="t">Text Search (Enter)</button>
+    <button id="referenceBtn" class="reference-btn" accesskey="r">? Character Reference (Alt+R)</button>
+    
+    <!-- Tooltip for character reference -->
+    <div id="referenceTooltip" class="reference-tooltip">
+        <h3>YAGATS Special Characters</h3>
+        <table class="tooltip-table">
+            <thead>
+                <tr>
+                    <th class="char-col">Char</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="char-col">(</td><td>the "over th" stroke</td></tr>
+                <tr><td class="char-col">)</td><td>the "under th" stroke</td></tr>
+                <tr><td class="char-col">$</td><td>the "sh" stroke</td></tr>
+                <tr><td class="char-col">^</td><td>caret indicates a high floating prefix e.g. o^du = "overdue"</td></tr>
+                <tr><td class="char-col">*</td><td>asterisk indicates an intersecting stroke; p*m = "p.m."</td></tr>
+                <tr><td class="char-col">:</td><td>colon indicates a disjoined stroke, for example, bro(:d = "brotherhood"</td></tr>
+                <tr><td class="char-col">%</td><td>percent sign indicates a special turning as in o% = "all"</td></tr>
+                <tr><td class="char-col">~</td><td>tilde indicates the "jog" as seen between m and n in "I am not"</td></tr>
+                <tr><td class="char-col">=</td><td>capitalization mark</td></tr>
+                <tr><td class="char-col">5</td><td>(left s + comma s) blend as in a5 = access</td></tr>
+                <tr><td class="char-col">3</td><td>(comma s + left s) blend</td></tr>
+                <tr><td class="char-col">c</td><td>ch stroke</td></tr>
+                <tr><td class="char-col">y</td><td>represents the -ally/-ily suffix loop</td></tr>
+                <tr><td class="char-col">h</td><td>the "h" dot</td></tr>
+                <tr><td class="char-col">q</td><td>the dot representing the suffix "-ing"</td></tr>
+                <tr><td class="char-col">@</td><td>the dot representing the word "a" or "an"</td></tr>
+                <tr><td class="char-col">A</td><td>the dot that replaces the first 'a' as in Ahed = "ahead" and Auak = "awake"</td></tr>
+                <tr><td class="char-col">w</td><td>indicates that the next vowel has the "w dash" under it; kwek = "quick"</td></tr>
+                <tr><td class="char-col">s</td><td>the "comma s" stroke</td></tr>
+                <tr><td class="char-col">z</td><td>the "left s" stroke</td></tr>
+            </tbody>
+        </table>
+    </div>
     <table id="resultsTable">
         <thead>
             <tr>
@@ -197,6 +413,44 @@
             <!-- Results will be displayed here -->
         </tbody>
     </table>
+
+    <!-- YAGATS Reference Modal -->
+    <div id="referenceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>YAGATS Special Characters Reference</h2>
+            <table class="reference-table">
+                <thead>
+                    <tr>
+                        <th class="char-col">Character</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="char-col">(</td><td>the "over th" stroke</td></tr>
+                    <tr><td class="char-col">)</td><td>the "under th" stroke</td></tr>
+                    <tr><td class="char-col">$</td><td>the "sh" stroke</td></tr>
+                    <tr><td class="char-col">^</td><td>caret indicates a high floating prefix e.g. o^du = "overdue"</td></tr>
+                    <tr><td class="char-col">*</td><td>asterisk indicates an intersecting stroke; p*m = "p.m."</td></tr>
+                    <tr><td class="char-col">:</td><td>colon indicates a disjoined stroke, for example, bro(:d = "brotherhood"</td></tr>
+                    <tr><td class="char-col">%</td><td>percent sign indicates a special turning as in o% = "all"</td></tr>
+                    <tr><td class="char-col">~</td><td>tilde indicates the "jog" as seen between m and n in "I am not"</td></tr>
+                    <tr><td class="char-col">=</td><td>capitalization mark</td></tr>
+                    <tr><td class="char-col">5</td><td>(left s + comma s) blend as in a5 = access</td></tr>
+                    <tr><td class="char-col">3</td><td>(comma s + left s) blend</td></tr>
+                    <tr><td class="char-col">c</td><td>ch stroke</td></tr>
+                    <tr><td class="char-col">y</td><td>represents the -ally/-ily suffix loop</td></tr>
+                    <tr><td class="char-col">h</td><td>the "h" dot</td></tr>
+                    <tr><td class="char-col">q</td><td>the dot representing the suffix "-ing"</td></tr>
+                    <tr><td class="char-col">@</td><td>the dot representing the word "a" or "an"</td></tr>
+                    <tr><td class="char-col">A</td><td>the dot that replaces the first 'a' as in Ahed = "ahead" and Auak = "awake"</td></tr>
+                    <tr><td class="char-col">w</td><td>indicates that the next vowel has the "w dash" under it; kwek = "quick"</td></tr>
+                    <tr><td class="char-col">s</td><td>the "comma s" stroke</td></tr>
+                    <tr><td class="char-col">z</td><td>the "left s" stroke</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <div class="license-info">
         <p><strong>YAGATS Notation by:</strong> DailyGregg Consortium | <strong>License:</strong> Creative Commons NonCommercial 4.0 International License</p>
@@ -371,6 +625,162 @@
                     focusAndSelectText();
                 });
             });
+        });
+
+        // Tooltip functionality for reference chart
+        const tooltip = document.getElementById('referenceTooltip');
+        const referenceBtn = document.getElementById('referenceBtn');
+        let tooltipVisible = false;
+
+        // Function to position tooltip
+        function positionTooltip() {
+            const rect = referenceBtn.getBoundingClientRect();
+            tooltip.style.display = 'block';
+            
+            // Force a reflow to get accurate dimensions
+            tooltip.offsetHeight;
+            
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Calculate available space
+            const spaceAbove = rect.top;
+            const spaceBelow = windowHeight - rect.bottom;
+            const spaceLeft = rect.left;
+            const spaceRight = windowWidth - rect.right;
+            
+            // Default position: above the button
+            let left = rect.left;
+            let top = rect.top - tooltipRect.height - 10;
+            
+            // Mobile adjustments
+            if (windowWidth <= 768) {
+                left = (windowWidth - tooltipRect.width) / 2;
+                top = Math.max(20, (windowHeight - tooltipRect.height) / 2);
+                
+                // Adjust max-height for mobile if content is taller than available space
+                const maxMobileHeight = windowHeight - 40; // 20px margin top and bottom
+                if (tooltipRect.height > maxMobileHeight) {
+                    tooltip.style.maxHeight = maxMobileHeight + 'px';
+                }
+            } else {
+                // Desktop: choose position with more space
+                if (spaceAbove < tooltipRect.height + 20 && spaceBelow > spaceAbove) {
+                    // Show below button if more space below
+                    top = rect.bottom + 10;
+                }
+                
+                // Calculate optimal height based on available space
+                const availableHeight = Math.max(spaceAbove - 20, spaceBelow - 20);
+                const contentHeight = tooltipRect.height;
+                
+                // If we have enough space, remove height restriction
+                if (availableHeight >= contentHeight) {
+                    tooltip.style.maxHeight = 'none';
+                } else {
+                    // Otherwise, use the available space
+                    tooltip.style.maxHeight = Math.min(availableHeight, windowHeight * 0.8) + 'px';
+                }
+                
+                // Adjust horizontal position
+                if (left + tooltipRect.width > windowWidth) {
+                    // Adjust left position if going off right edge
+                    left = windowWidth - tooltipRect.width - 20;
+                }
+                if (left < 0) {
+                    // Adjust left position if going off left edge
+                    left = 10;
+                }
+                
+                // Final vertical adjustment after height changes
+                const newTooltipRect = tooltip.getBoundingClientRect();
+                if (top < 10) {
+                    top = 10;
+                } else if (top + newTooltipRect.height > windowHeight - 10) {
+                    top = windowHeight - newTooltipRect.height - 10;
+                }
+            }
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+
+        // Show tooltip on hover (desktop)
+        referenceBtn.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 768) { // Only on desktop
+                tooltipVisible = true;
+                positionTooltip();
+            }
+        });
+
+        // Hide tooltip when mouse leaves button (desktop)
+        referenceBtn.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 768) { // Only on desktop
+                setTimeout(() => {
+                    if (!tooltip.matches(':hover') && !referenceBtn.matches(':hover')) {
+                        tooltipVisible = false;
+                        tooltip.style.display = 'none';
+                    }
+                }, 100);
+            }
+        });
+
+        // Hide tooltip when mouse leaves tooltip (desktop)
+        tooltip.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 768) { // Only on desktop
+                setTimeout(() => {
+                    if (!tooltip.matches(':hover') && !referenceBtn.matches(':hover')) {
+                        tooltipVisible = false;
+                        tooltip.style.display = 'none';
+                    }
+                }, 100);
+            }
+        });
+
+        // Keep tooltip visible when hovering over it (desktop)
+        tooltip.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 768) { // Only on desktop
+                tooltipVisible = true;
+                tooltip.style.display = 'block';
+            }
+        });
+
+        // Click/touch support for mobile and desktop
+        referenceBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            tooltipVisible = !tooltipVisible;
+            
+            if (tooltipVisible) {
+                positionTooltip();
+            } else {
+                tooltip.style.display = 'none';
+            }
+        });
+
+        // Hide tooltip when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!tooltip.contains(event.target) && !referenceBtn.contains(event.target)) {
+                tooltipVisible = false;
+                tooltip.style.display = 'none';
+            }
+        });
+
+        // Alt+R keyboard shortcut and Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.altKey && event.key.toLowerCase() === 'r') {
+                event.preventDefault();
+                tooltipVisible = !tooltipVisible;
+                
+                if (tooltipVisible) {
+                    positionTooltip();
+                } else {
+                    tooltip.style.display = 'none';
+                }
+            } else if (event.key === 'Escape' && tooltipVisible) {
+                tooltipVisible = false;
+                tooltip.style.display = 'none';
+            }
         });
         // Function to search for a specific text in the JSON data
         function searchRefJson(searchTerm) {
