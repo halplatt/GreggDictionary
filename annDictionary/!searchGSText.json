@@ -1,5 +1,4 @@
 [
-    
     {
         "gst": "/s (s1)",
         "text": "-city"
@@ -321,8 +320,8 @@
         "text": "archduchy"
     },
     {
-        "gst": "a-ch-e-e (a2,",
-        "text": "e2)  archery"
+        "gst": "a-ch-e-e (a2, e2)",
+        "text": "archery"
     },
     {
         "gst": "a-d",
@@ -1273,8 +1272,8 @@
         "text": "amble"
     },
     {
-        "gst": "a-m-ch-a (a2,",
-        "text": "a2)  armchair"
+        "gst": "a-m-ch-a (a2, a2)",
+        "text": "armchair"
     },
     {
         "gst": "a-m-e (a2)",
@@ -1629,8 +1628,8 @@
         "text": "Antwerp"
     },
     {
-        "gst": "a-n-th-p/o (o",
-        "text": "on side)  anthropology"
+        "gst": "a-n-th-p/o (o on side)",
+        "text": "anthropology"
     },
     {
         "gst": "a-n-th-p-o-e",
@@ -2841,8 +2840,8 @@
         "text": "balances"
     },
     {
-        "gst": "b-a-l-u-s-t-e",
-        "text": "(e2)  baluster"
+        "gst": "b-a-l-u-s-t-e (e2)",
+        "text": "baluster"
     },
     {
         "gst": "b-a-l-u-s-t-r-a",
@@ -3369,8 +3368,8 @@
         "text": "booklet"
     },
     {
-        "gst": "b-k-l-e-s (angle between",
-        "text": "e and s)  booklets"
+        "gst": "b-k-l-e-s (angle between e and s)",
+        "text": "booklets"
     },
     {
         "gst": "b-k-l-o-r-i",
@@ -3769,8 +3768,8 @@
         "text": "bombastic"
     },
     {
-        "gst": "b-o-m-b-a-d-m",
-        "text": "(a2)  bombardment"
+        "gst": "b-o-m-b-a-d-m (a2)",
+        "text": "bombardment"
     },
     {
         "gst": "b-o-m-i",
@@ -6009,8 +6008,8 @@
         "text": "desired"
     },
     {
-        "gst": "d-s/t (raised",
-        "text": "d-s)  distraught"
+        "gst": "d-s/t (raised d-s)",
+        "text": "distraught"
     },
     {
         "gst": "d-s-a-b",
@@ -6577,12 +6576,12 @@
         "text": "Department of Agriculture (Expert)"
     },
     {
-        "gst": "d-ya (connected at",
-        "text": "top of loop)  disagree"
+        "gst": "d-ya (connected at top of loop)",
+        "text": "disagree"
     },
     {
-        "gst": "d-ya-m (connected at",
-        "text": "top of loop)  disagreement"
+        "gst": "d-ya-m (connected at top of loop)",
+        "text": "disagreement"
     },
     {
         "gst": "e",
@@ -7914,7 +7913,11 @@
     },
     {
         "gst": "e-r-g",
-        "text": "year(s) ago (Expert)"
+        "text": "year ago (Expert)"
+    },
+    {
+        "gst": "e-r-g",
+        "text": "years ago (Expert)"
     },
     {
         "gst": "e-r-k",
@@ -8197,8 +8200,8 @@
         "text": "e1"
     },
     {
-        "gst": "e-s-e-k-w-a-t-e (e1,",
-        "text": "e2)  exequatur"
+        "gst": "e-s-e-k-w-a-t-e (e1, e2)",
+        "text": "exequatur"
     },
     {
         "gst": "e-s-e-l-r-a",
@@ -8477,12 +8480,12 @@
         "text": "s"
     },
     {
-        "gst": "e-s-o-t-r-k (e1, no",
-        "text": "and o)  esoteric"
+        "gst": "e-s-o-t-r-k (e1, no o)",
+        "text": "esoteric"
     },
     {
-        "gst": "e-s-o-t-r-k (e2, angle",
-        "text": "between e and s)  exoteric"
+        "gst": "e-s-o-t-r-k (e2, angle between e and s)",
+        "text": "exoteric"
     },
     {
         "gst": "e-s-p",
@@ -8697,8 +8700,8 @@
         "text": "existent"
     },
     {
-        "gst": "e-ss-r-b-a-sh",
-        "text": "(s2-s1)  exacerbation"
+        "gst": "e-ss-r-b-a-sh (s2-s1)",
+        "text": "exacerbation"
     },
     {
         "gst": "e-ss-s (e1)",
@@ -8945,12 +8948,12 @@
         "text": "with that"
     },
     {
-        "gst": "e-th-u (angle",
-        "text": "between th and u)  with you"
+        "gst": "e-th-u (angle between th and u)",
+        "text": "with you"
     },
     {
-        "gst": "e-th-u-s (angle between",
-        "text": "th and u)  with us"
+        "gst": "e-th-u-s (angle between th and u)",
+        "text": "with us"
     },
     {
         "gst": "e-tm",
@@ -9337,8 +9340,8 @@
         "text": "family"
     },
     {
-        "gst": "f-a-m-ya (a2,",
-        "text": "ya2)  farmers"
+        "gst": "f-a-m-ya (a2, ya2)",
+        "text": "farmers"
     },
     {
         "gst": "f-a-m-ya-s",
@@ -9405,8 +9408,8 @@
         "text": "phase"
     },
     {
-        "gst": "f-a-s (angle between a",
-        "text": "and s)  favors"
+        "gst": "f-a-s (angle between a and s)",
+        "text": "favors"
     },
     {
         "gst": "f-a-s/l-s",
@@ -10133,8 +10136,8 @@
         "text": "flesh"
     },
     {
-        "gst": "f-l-e-x-o-r (o-r below",
-        "text": "x)  flexor"
+        "gst": "f-l-e-x-o-r (o-r below x)",
+        "text": "flexor"
     },
     {
         "gst": "f-l-e-x-r",
@@ -10469,12 +10472,12 @@
         "text": "follows"
     },
     {
-        "gst": "f-o-t (angle between o",
-        "text": "and t)  fault"
+        "gst": "f-o-t (angle between o and t)",
+        "text": "fault"
     },
     {
-        "gst": "f-o-t (no angle between",
-        "text": "o and t)  fought"
+        "gst": "f-o-t (no angle between o and t)",
+        "text": "fought"
     },
     {
         "gst": "f-o-t-e",
@@ -11925,8 +11928,8 @@
         "text": "a2"
     },
     {
-        "gst": "h-a-p-a-s-a-d",
-        "text": "a2)  haphazard"
+        "gst": "h-a-p-a-s-a-d a2)",
+        "text": "haphazard"
     },
     {
         "gst": "h-a-p-e",
@@ -11937,8 +11940,8 @@
         "text": "happiest"
     },
     {
-        "gst": "h-a-p-e-n-e-s",
-        "text": "(p-e2)  happiness"
+        "gst": "h-a-p-e-n-e-s (p-e2)",
+        "text": "happiness"
     },
     {
         "gst": "h-a-p-e-r",
@@ -11965,8 +11968,8 @@
         "text": "hair"
     },
     {
-        "gst": "h-a-r (dot in",
-        "text": "front of a)  aware (1916)"
+        "gst": "h-a-r (dot in front of a)",
+        "text": "aware (1916)"
     },
     {
         "gst": "h-a-r-p-s-k-o-d",
@@ -12029,8 +12032,8 @@
         "text": "(a2"
     },
     {
-        "gst": "h-a-t-s-o-r-n",
-        "text": "o sideways)  hartshorn"
+        "gst": "h-a-t-s-o-r-n o sideways)",
+        "text": "hartshorn"
     },
     {
         "gst": "h-a-u-d",
@@ -12417,8 +12420,8 @@
         "text": "heeded"
     },
     {
-        "gst": "h-e-td-e (e2,",
-        "text": "e1)  heredity"
+        "gst": "h-e-td-e (e2, e1)",
+        "text": "heredity"
     },
     {
         "gst": "h-e-t-f (e2)",
@@ -12469,8 +12472,8 @@
         "text": "humor"
     },
     {
-        "gst": "h-e-u-m-e/s-t",
-        "text": "(e2)  humorist"
+        "gst": "h-e-u-m-e/s-t (e2)",
+        "text": "humorist"
     },
     {
         "gst": "h-e-u-m-e-df",
@@ -12577,8 +12580,8 @@
         "text": "high-handed"
     },
     {
-        "gst": "h-i-l (dot in",
-        "text": "front of i)  awhile"
+        "gst": "h-i-l (dot in front of i)",
+        "text": "awhile"
     },
     {
         "gst": "h-i-l/r",
@@ -12601,8 +12604,8 @@
         "text": "hypercritical"
     },
     {
-        "gst": "h-i-p-e-t-r-o-f-e (e2,",
-        "text": "e1)  hypertrophy"
+        "gst": "h-i-p-e-t-r-o-f-e (e2, e1)",
+        "text": "hypertrophy"
     },
     {
         "gst": "h-i-p-r-b-l-a",
@@ -13293,8 +13296,8 @@
         "text": "geography"
     },
     {
-        "gst": "j/r-s-o-sh (j",
-        "text": "and r intersected)  joint resolution (Expert)"
+        "gst": "j/r-s-o-sh (j and r intersected)",
+        "text": "joint resolution (Expert)"
     },
     {
         "gst": "j-a",
@@ -13497,8 +13500,8 @@
         "text": "geodetic"
     },
     {
-        "gst": "j-e-o-m (no angle between",
-        "text": "o and m)  geometry"
+        "gst": "j-e-o-m (no angle between o and m)",
+        "text": "geometry"
     },
     {
         "gst": "j-e-p-a-d-e (a2)",
@@ -14257,8 +14260,8 @@
         "text": "case"
     },
     {
-        "gst": "k-a-s (angle between a",
-        "text": "and s)  cares"
+        "gst": "k-a-s (angle between a and s)",
+        "text": "cares"
     },
     {
         "gst": "k-a-sh",
@@ -14281,8 +14284,8 @@
         "text": "occasional"
     },
     {
-        "gst": "k-a-sh-u-s-t (angle between",
-        "text": "u and s)  casuist"
+        "gst": "k-a-sh-u-s-t (angle between u and s)",
+        "text": "casuist"
     },
     {
         "gst": "k-a-sh-ye",
@@ -15637,8 +15640,8 @@
         "text": "collodion"
     },
     {
-        "gst": "k-o-l-p-o-t-e",
-        "text": "(e2)  colporteur"
+        "gst": "k-o-l-p-o-t-e (e2)",
+        "text": "colporteur"
     },
     {
         "gst": "k-o-l-r",
@@ -15897,8 +15900,8 @@
         "text": "company"
     },
     {
-        "gst": "k-p (angle between k",
-        "text": "and p)  complain"
+        "gst": "k-p (angle between k and p)",
+        "text": "complain"
     },
     {
         "gst": "k-p (angle between k",
@@ -15917,8 +15920,8 @@
         "text": "keeper"
     },
     {
-        "gst": "k-p/t (angle between k",
-        "text": "and p)  completed"
+        "gst": "k-p/t (angle between k and p)",
+        "text": "completed"
     },
     {
         "gst": "k-p-a-n-u-n",
@@ -15929,8 +15932,8 @@
         "text": "copy"
     },
     {
-        "gst": "k-p-e (angle between k",
-        "text": "and p)  compete"
+        "gst": "k-p-e (angle between k and p)",
+        "text": "compete"
     },
     {
         "gst": "k-p-e-r-i",
@@ -16065,8 +16068,8 @@
         "text": "comparatively"
     },
     {
-        "gst": "k-p-sh (angle",
-        "text": "between k and p)  completion"
+        "gst": "k-p-sh (angle between k and p)",
+        "text": "completion"
     },
     {
         "gst": "k-p-t",
@@ -16177,8 +16180,8 @@
         "text": "(e2"
     },
     {
-        "gst": "k-r-b-r-e-t-e",
-        "text": "e2)  carburetor"
+        "gst": "k-r-b-r-e-t-e e2)",
+        "text": "carburetor"
     },
     {
         "gst": "k-r-b-r-nt",
@@ -18129,8 +18132,8 @@
         "text": "less"
     },
     {
-        "gst": "l-e-s (angle between e",
-        "text": "and s)  letters"
+        "gst": "l-e-s (angle between e and s)",
+        "text": "letters"
     },
     {
         "gst": "l-e-s (s1)",
@@ -19429,8 +19432,8 @@
         "text": "maze"
     },
     {
-        "gst": "m-a-s (a1-s1 to left",
-        "text": "of a)  myself"
+        "gst": "m-a-s (a1-s1 to left of a)",
+        "text": "myself"
     },
     {
         "gst": "m-a-s (s1)",
@@ -19681,8 +19684,8 @@
         "text": "emboss"
     },
     {
-        "gst": "m-b-r-o-e-d-e-e (e2,",
-        "text": "e2-e2)  embroidery"
+        "gst": "m-b-r-o-e-d-e-e (e2, e2-e2)",
+        "text": "embroidery"
     },
     {
         "gst": "m-ch",
@@ -19765,12 +19768,12 @@
         "text": "medicament"
     },
     {
-        "gst": "m-e-d-e-r-e-s",
-        "text": "(e2)  muderess"
+        "gst": "m-e-d-e-r-e-s (e2)",
+        "text": "muderess"
     },
     {
-        "gst": "m-e-d-e-r-u-s",
-        "text": "(e2)  muderous"
+        "gst": "m-e-d-e-r-u-s (e2)",
+        "text": "muderous"
     },
     {
         "gst": "m-e-d-e-s",
@@ -19897,8 +19900,8 @@
         "text": "milliner"
     },
     {
-        "gst": "m-e-l-e-n-e-e",
-        "text": "(e2)  millinery"
+        "gst": "m-e-l-e-n-e-e (e2)",
+        "text": "millinery"
     },
     {
         "gst": "m-e-l-e-sh-a",
@@ -20625,8 +20628,8 @@
         "text": "Manitoba"
     },
     {
-        "gst": "mn-e-t-e (e1,",
-        "text": "e2)  monitor"
+        "gst": "mn-e-t-e (e1, e2)",
+        "text": "monitor"
     },
     {
         "gst": "mn-e-th-e-s",
@@ -20977,8 +20980,8 @@
         "text": "manumission"
     },
     {
-        "gst": "mn-u-s (angle",
-        "text": "between mn and u)  member of the House (Expert)"
+        "gst": "mn-u-s (angle between mn and u)",
+        "text": "member of the House (Expert)"
     },
     {
         "gst": "mn-u-s-k-r",
@@ -21469,8 +21472,8 @@
         "text": "imprecate"
     },
     {
-        "gst": "m-p-r-e-m-a-t-e (e1,",
-        "text": "e2)  imprimatur"
+        "gst": "m-p-r-e-m-a-t-e (e1, e2)",
+        "text": "imprimatur"
     },
     {
         "gst": "m-p-r-e-s",
@@ -21729,8 +21732,8 @@
         "text": "multigraph"
     },
     {
-        "gst": "m-u/m-e-l-n-a",
-        "text": "(a2)  multimillionaire"
+        "gst": "m-u/m-e-l-n-a (a2)",
+        "text": "multimillionaire"
     },
     {
         "gst": "m-u/p-l",
@@ -22833,16 +22836,16 @@
         "text": "inexpedient"
     },
     {
-        "gst": "n-e-s-r-e (smooth join",
-        "text": "between s and r)  northeasterly"
+        "gst": "n-e-s-r-e (smooth join between s and r)",
+        "text": "northeasterly"
     },
     {
-        "gst": "n-e-s-r-e-d (smooth join",
-        "text": "between s and r)  northeasterly direction"
+        "gst": "n-e-s-r-e-d (smooth join between s and r)",
+        "text": "northeasterly direction"
     },
     {
-        "gst": "n-e-s-r-e-s (smooth join",
-        "text": "between s and r)  northeasterly side"
+        "gst": "n-e-s-r-e-s (smooth join between s and r)",
+        "text": "northeasterly side"
     },
     {
         "gst": "n-e-ss",
@@ -23753,8 +23756,8 @@
         "text": "nonagon"
     },
     {
-        "gst": "n-o-n-e-ss (e1 above",
-        "text": "n)  nonexistence"
+        "gst": "n-o-n-e-ss (e1 above n)",
+        "text": "nonexistence"
     },
     {
         "gst": "n-o-n-e-u-n",
@@ -24801,8 +24804,8 @@
         "text": "nugget"
     },
     {
-        "gst": "n-u-k (angle between n",
-        "text": "and u)  northwest corner"
+        "gst": "n-u-k (angle between n and u)",
+        "text": "northwest corner"
     },
     {
         "gst": "n-u-k-l-u-s",
@@ -24813,8 +24816,8 @@
         "text": "n and u"
     },
     {
-        "gst": "n-u-k-t-e (angle between",
-        "text": "e2)  northwest quarter"
+        "gst": "n-u-k-t-e (angle between e2)",
+        "text": "northwest quarter"
     },
     {
         "gst": "n-u-l-a-n-b-s",
@@ -24873,16 +24876,16 @@
         "text": "neurasthenia"
     },
     {
-        "gst": "n-u-r-e (angled join",
-        "text": "between n and u)  northwesterly"
+        "gst": "n-u-r-e (angled join between n and u)",
+        "text": "northwesterly"
     },
     {
-        "gst": "n-u-r-e-d (angled join",
-        "text": "between n and u)  northwesterly direction"
+        "gst": "n-u-r-e-d (angled join between n and u)",
+        "text": "northwesterly direction"
     },
     {
-        "gst": "n-u-r-e-s (angled join",
-        "text": "between n and u)  northwesterly side"
+        "gst": "n-u-r-e-s (angled join between n and u)",
+        "text": "northwesterly side"
     },
     {
         "gst": "n-u-r-k",
@@ -24897,20 +24900,20 @@
         "text": "in the House (Expert)"
     },
     {
-        "gst": "n-u-sh (angle",
-        "text": "between n and u)  unusual"
+        "gst": "n-u-sh (angle between n and u)",
+        "text": "unusual"
     },
     {
-        "gst": "n-u-sh-e (angle between",
-        "text": "n and u)  unusually"
+        "gst": "n-u-sh-e (angle between n and u)",
+        "text": "unusually"
     },
     {
         "gst": "n-u-sh-mn-e (angle between",
         "text": "n and u"
     },
     {
-        "gst": "n-u-sh-mn-e (angle between",
-        "text": "e2)  in the usual manner"
+        "gst": "n-u-sh-mn-e (angle between e2)",
+        "text": "in the usual manner"
     },
     {
         "gst": "n-u-s-n-s",
@@ -24929,8 +24932,8 @@
         "text": "n and u"
     },
     {
-        "gst": "n-u-t-e-t (angle between",
-        "text": "e2)  Northwest Territories"
+        "gst": "n-u-t-e-t (angle between e2)",
+        "text": "Northwest Territories"
     },
     {
         "gst": "n-u-th",
@@ -24941,8 +24944,8 @@
         "text": "in other words"
     },
     {
-        "gst": "n-u-tn (angled join",
-        "text": "between n and u)  northwestern"
+        "gst": "n-u-tn (angled join between n and u)",
+        "text": "northwestern"
     },
     {
         "gst": "n-u-t-r-e-m",
@@ -25153,8 +25156,8 @@
         "text": "all"
     },
     {
-        "gst": "o/ (sideways,",
-        "text": "raised)  alter- (1916)"
+        "gst": "o/ (sideways, raised)",
+        "text": "alter- (1916)"
     },
     {
         "gst": "o/ch-j",
@@ -25353,8 +25356,8 @@
         "text": "obstinacy"
     },
     {
-        "gst": "o-b-s-t-r-e-p",
-        "text": "(s1)  obstreperous"
+        "gst": "o-b-s-t-r-e-p (s1)",
+        "text": "obstreperous"
     },
     {
         "gst": "o-b-tn",
@@ -25653,16 +25656,16 @@
         "text": "occult"
     },
     {
-        "gst": "o-k-p (angle between k",
-        "text": "and p)  occupation"
+        "gst": "o-k-p (angle between k and p)",
+        "text": "occupation"
     },
     {
         "gst": "o-k-p (angle between k",
         "text": "occupy"
     },
     {
-        "gst": "o-k-p/l (angle between",
-        "text": "k and p)  occupational"
+        "gst": "o-k-p/l (angle between k and p)",
+        "text": "occupational"
     },
     {
         "gst": "o-k-r",
@@ -25733,8 +25736,8 @@
         "text": "ohm"
     },
     {
-        "gst": "o-m (angle between o",
-        "text": "and m)  of him"
+        "gst": "o-m (angle between o and m)",
+        "text": "of him"
     },
     {
         "gst": "o-m-a",
@@ -25865,8 +25868,8 @@
         "text": "honesty"
     },
     {
-        "gst": "o-n-e-th/o (o",
-        "text": "on side)  ornithology"
+        "gst": "o-n-e-th/o (o on side)",
+        "text": "ornithology"
     },
     {
         "gst": "o-n-h",
@@ -26417,8 +26420,8 @@
         "text": "of the"
     },
     {
-        "gst": "o-th (angle between o",
-        "text": "and th2)  of their"
+        "gst": "o-th (angle between o and th2)",
+        "text": "of their"
     },
     {
         "gst": "o-th (th2)",
@@ -27273,8 +27276,8 @@
         "text": "post office"
     },
     {
-        "gst": "p-o-d (angle between p",
-        "text": "and o)  Post Office Department (Expert)"
+        "gst": "p-o-d (angle between p and o)",
+        "text": "Post Office Department (Expert)"
     },
     {
         "gst": "p-o-e-m",
@@ -28457,8 +28460,8 @@
         "text": "Regina"
     },
     {
-        "gst": "r-e-j-e-s-t-e",
-        "text": "(e2)  register"
+        "gst": "r-e-j-e-s-t-e (e2)",
+        "text": "register"
     },
     {
         "gst": "r-e-j-e-s-t-e-d (e2)",
@@ -28725,8 +28728,8 @@
         "text": "rest"
     },
     {
-        "gst": "r-e-s (angle between e",
-        "text": "and s)  regards"
+        "gst": "r-e-s (angle between e and s)",
+        "text": "regards"
     },
     {
         "gst": "r-e-s (s1)",
@@ -29221,8 +29224,8 @@
         "text": "reporter"
     },
     {
-        "gst": "r-p-r-s-tn-sh",
-        "text": "(s1)  our personal attention"
+        "gst": "r-p-r-s-tn-sh (s1)",
+        "text": "our personal attention"
     },
     {
         "gst": "r-p-sh",
@@ -29361,8 +29364,8 @@
         "text": "resources"
     },
     {
-        "gst": "r-s-o-t (s2, angle between",
-        "text": "s and o)  resort"
+        "gst": "r-s-o-t (s2, angle between s and o)",
+        "text": "resort"
     },
     {
         "gst": "r-s-p",
@@ -29441,8 +29444,8 @@
         "text": "reduction (Expert)"
     },
     {
-        "gst": "r-u-m-a-t-s-m",
-        "text": "(s2)  rheumatism"
+        "gst": "r-u-m-a-t-s-m (s2)",
+        "text": "rheumatism"
     },
     {
         "gst": "r-u-mn-a",
@@ -29621,8 +29624,8 @@
         "text": "s1"
     },
     {
-        "gst": "s/s-tn-s (s2,",
-        "text": "s2)  circumstance"
+        "gst": "s/s-tn-s (s2, s2)",
+        "text": "circumstance"
     },
     {
         "gst": "s/s-tn-sh-ye (s2, s1)",
@@ -30133,8 +30136,8 @@
         "text": "similar"
     },
     {
-        "gst": "s-e-m-e-s-t-e",
-        "text": "(e2)  semester"
+        "gst": "s-e-m-e-s-t-e (e2)",
+        "text": "semester"
     },
     {
         "gst": "s-e-m-e-t-r-e",
@@ -30865,8 +30868,8 @@
         "text": "ships"
     },
     {
-        "gst": "sh-s-t (angle",
-        "text": "between sh and s)  surest"
+        "gst": "sh-s-t (angle between sh and s)",
+        "text": "surest"
     },
     {
         "gst": "sh-t",
@@ -30925,8 +30928,8 @@
         "text": "sides"
     },
     {
-        "gst": "s-i-k/o (o on",
-        "text": "side)  psychological"
+        "gst": "s-i-k/o (o on side)",
+        "text": "psychological"
     },
     {
         "gst": "s-i-k/o (o on",
@@ -31493,12 +31496,12 @@
         "text": "social"
     },
     {
-        "gst": "s-o-t (angle between o",
-        "text": "and t)  sort"
+        "gst": "s-o-t (angle between o and t)",
+        "text": "sort"
     },
     {
-        "gst": "s-o-t (no angle between",
-        "text": "o and t)  sought"
+        "gst": "s-o-t (no angle between o and t)",
+        "text": "sought"
     },
     {
         "gst": "s-p",
@@ -31929,8 +31932,8 @@
         "text": "stomach"
     },
     {
-        "gst": "s-tm-u-th (angle between",
-        "text": "tm and u)  sometime or other"
+        "gst": "s-tm-u-th (angle between tm and u)",
+        "text": "sometime or other"
     },
     {
         "gst": "s-tn",
@@ -32005,8 +32008,8 @@
         "text": "storage"
     },
     {
-        "gst": "s-t-o-r-u-s (angle between",
-        "text": "r and u)  storehouse"
+        "gst": "s-t-o-r-u-s (angle between r and u)",
+        "text": "storehouse"
     },
     {
         "gst": "s-t-o-s",
@@ -32841,12 +32844,12 @@
         "text": "the floor of the House (Expert)"
     },
     {
-        "gst": "th/s (th1, s2, s",
-        "text": "at end of th)  thanks"
+        "gst": "th/s (th1, s2, s at end of th)",
+        "text": "thanks"
     },
     {
-        "gst": "th/s (th1, s2, s",
-        "text": "below end of th)  things"
+        "gst": "th/s (th1, s2, s below end of th)",
+        "text": "things"
     },
     {
         "gst": "th/s (th1, s2, s",
@@ -32945,8 +32948,8 @@
         "text": "e1"
     },
     {
-        "gst": "th-e-mn-e-t-e",
-        "text": "e2)  thermometer"
+        "gst": "th-e-mn-e-t-e (th2-e2, e1, e2)",
+        "text": "thermometer"
     },
     {
         "gst": "th-e-n",
@@ -32973,8 +32976,8 @@
         "text": "these"
     },
     {
-        "gst": "th-e-t-e (e1,",
-        "text": "e2)  theater"
+        "gst": "th-e-t-e (e1, e2)",
+        "text": "theater"
     },
     {
         "gst": "th-e-tn",
@@ -33009,12 +33012,12 @@
         "text": "thinking"
     },
     {
-        "gst": "th-h-h (at end of",
-        "text": "th)  thanking"
+        "gst": "th-h-h (at end of th)",
+        "text": "thanking"
     },
     {
-        "gst": "th-i-d (small",
-        "text": "i)  they had"
+        "gst": "th-i-d (small i)",
+        "text": "they had"
     },
     {
         "gst": "th-m",
@@ -33273,8 +33276,8 @@
         "text": "to mean"
     },
     {
-        "gst": "tm-e-n-e (e1,",
-        "text": "e2)  demeanor"
+        "gst": "tm-e-n-e (e1, e2)",
+        "text": "demeanor"
     },
     {
         "gst": "tm-e-n-e-u",
@@ -34349,8 +34352,8 @@
         "text": "tooth"
     },
     {
-        "gst": "t-u-th-e-mn-th-s (th2,",
-        "text": "th1)  two or three months"
+        "gst": "t-u-th-e-mn-th-s (th2,th1)",
+        "text": "two or three months"
     },
     {
         "gst": "t-u-th-s",
@@ -34401,8 +34404,8 @@
         "text": "west"
     },
     {
-        "gst": "u/ (sideways,",
-        "text": "raised)  ultra- (1916)"
+        "gst": "u/ (sideways, raised)",
+        "text": "ultra- (1916)"
     },
     {
         "gst": "u/g-r-a-d-e-u-t",
@@ -34873,8 +34876,8 @@
         "text": "youngest"
     },
     {
-        "gst": "u-ng-s-t-n (u",
-        "text": "blended with ng)  Youngstown"
+        "gst": "u-ng-s-t-n (u blended with ng)",
+        "text": "Youngstown"
     },
     {
         "gst": "u-n-h-a-f",
@@ -35077,16 +35080,16 @@
         "text": "us"
     },
     {
-        "gst": "u-s (angle between u",
-        "text": "and s)  yours"
+        "gst": "u-s (angle between u and s)",
+        "text": "yours"
     },
     {
-        "gst": "u-s (angle between u",
+        "gst": "u-s (angle between u and s)",
         "text": "yourself"
     },
     {
-        "gst": "u-s-e-r (s1, angle between",
-        "text": "u and s)  ulcer"
+        "gst": "u-s-e-r (s1, angle between u and s)",
+        "text": "ulcer"
     },
     {
         "gst": "u-sh",
@@ -35121,12 +35124,8 @@
         "text": "House and Senate (Expert)"
     },
     {
-        "gst": "u-s-t-e (angle between",
-        "text": "u and s"
-    },
-    {
-        "gst": "u-s-t-e (angle between",
-        "text": "e2)  ulster"
+        "gst": "u-s-t-e (angle between u and s, e2)",
+        "text": "ulster"
     },
     {
         "gst": "u-t",
@@ -35233,8 +35232,8 @@
         "text": "worse"
     },
     {
-        "gst": "u-u-s (angle between u",
-        "text": "and s)  worlds"
+        "gst": "u-u-s (angle between u and s)",
+        "text": "worlds"
     },
     {
         "gst": "u-u-s-n",
@@ -35265,12 +35264,12 @@
         "text": "you have"
     },
     {
-        "gst": "u-v (angle between u",
-        "text": "and v)  West Virginia (Cen.)"
+        "gst": "u-v (angle between u and v)",
+        "text": "West Virginia (Cen.)"
     },
     {
-        "gst": "u-v-a (angle between u",
-        "text": "and v)  West Virginia"
+        "gst": "u-v-a (angle between u and v)",
+        "text": "West Virginia"
     },
     {
         "gst": "u-v-k",
@@ -35513,8 +35512,8 @@
         "text": "value"
     },
     {
-        "gst": "v-l (angle between v",
-        "text": "and l)  vowel (1916)"
+        "gst": "v-l (angle between v and l)",
+        "text": "vowel (1916)"
     },
     {
         "gst": "v-l-b",
@@ -35645,8 +35644,8 @@
         "text": "aggrieved"
     },
     {
-        "gst": "ya-b (raised,",
-        "text": "joined at top)  agreeable"
+        "gst": "ya-b (raised, joined at top)",
+        "text": "agreeable"
     },
     {
         "gst": "ya-d (ya2)",
