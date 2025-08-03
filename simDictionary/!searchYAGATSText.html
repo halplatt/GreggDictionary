@@ -457,6 +457,22 @@
     </div>
 
     <script>
+        // Variable for public domain only links (appears to be used in some links)
+        var public_domain_only = ''; // Set to empty string or appropriate value
+        
+        // Function to open or focus a tab
+        function openOrFocusTab(url, target) {
+            var newTab = window.open('', target);
+            if (newTab.location.href === "about:blank") {
+                newTab.location.href = url;
+            } else {
+                //do nothing, the tab is already open
+            }
+            newTab.focus();
+        } 
+        
+
+        
         // Load the JSON file
         let dataGST = [];
         fetch('!searchYAGATSText.json')
