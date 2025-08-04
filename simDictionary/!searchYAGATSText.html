@@ -357,8 +357,8 @@
     </div>
 
     <div class="button-row" style="margin-top: 15px;">
-        <label><input type="radio" name="searchType" value="contains" checked> Contains</label>
-        <label><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
+        <label><input type="radio" name="searchType" value="beginsWith" checked> Begins with</label>
+        <label><input type="radio" name="searchType" value="contains"> Contains</label>
         <label><input type="radio" name="searchType" value="endsWith"> Ends with</label>
         <label><input type="radio" name="searchType" value="exact"> Exact match</label>
     </div>
@@ -563,7 +563,7 @@
                     return radio.value;
                 }
             }
-            return 'contains'; // default fallback
+            return 'beginsWith'; // default fallback
         }
 
         // Function to perform search based on type
