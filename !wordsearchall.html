@@ -179,13 +179,13 @@ version 02/06/2025 at 9:18pm First version
                 <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
             </div>
             <div class="inner ann">
-                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
+                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords');">Anniversary</a>
             </div>
             <div class="inner ann">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch.html', 'annWordsinpage');">Anniversary-in-page</a>
             </div>
             <div class="inner pre">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords');">pre-Anniversary</a>
             </div>
         </div>
         <div class="button-row">
@@ -402,9 +402,6 @@ version 02/06/2025 at 9:18pm First version
                         const imagePathann = 'annWords/'; //path to word.png images
                         const img_ann = document.createElement("img");
                         img_ann.src = `${imagePathann}${word.t}.png`;
-                        img_ann.style.width = 'auto';  // Set the width to 1/4 of the original size
-                        img_ann.style.height = '50px'; // Set the height to 1/4 of the original size
-
                         img_ann.onerror = function() {
                             this.style.display = "none";  // Hide the image if it fails to load
                         };
