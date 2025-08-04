@@ -8,7 +8,7 @@
         var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0802.1038am'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0804.1203am'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -543,6 +543,19 @@
                     searchText();
                 }
             }
+            try {
+                // Attach caret/dollar update on input
+                var regexInput = document.getElementById('regexInput');
+                regexInput.addEventListener('input', function() {
+                    updateCaretButton();
+                    updateDollarButton();
+                });
+                // Initial update
+                updateCaretButton();
+                updateDollarButton();
+            } catch (error) {
+                // Handle any errors silently
+            }
         });
         
         // Focus on regex input when page loads - placed at end of document
@@ -551,6 +564,9 @@
             if (regexInput) {
                 regexInput.focus();
                 regexInput.select();
+                // Initial update of buttons
+                updateCaretButton();
+                updateDollarButton();
             }
         });
     </script>
