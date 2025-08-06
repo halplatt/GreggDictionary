@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAGATS Search</title>
+    <script>
+    //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -310,7 +313,7 @@
     </style>
 </head>
 <body>
-    <div class="version">Version 08/03/2025@1:10am</div>
+    <div class="version">Version 08/05/2025@10:21pm</div>
     <h1>GreggSimplified YAGATS Search</h1>
     <p class="subtitle">using YAGATS (Yet Another Gregg-ASCII Transliteration System)</p>
     <a href="!searchYAGATSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
@@ -475,7 +478,7 @@
         
         // Load the JSON file
         let dataGST = [];
-        fetch('!searchYAGATSText.json')
+        fetch('!searchGSText.json')
             .then(response => response.json())
             .then(jsonData => {
                 dataGST = jsonData;
@@ -541,7 +544,7 @@
                 const pageCell = document.createElement('td'); // New column for page.page
 
                 textCell.textContent = entry.text || ''; // Handle missing text
-                gstCell.textContent = entry.gst || ''; // Handle missing gst
+                gstCell.textContent = entry.YAGATS || ''; // Handle missing gst
 
                 // Call searchRefJson and get the page value
                 // Call imageContainer and append the resulting div to pageCell
@@ -589,7 +592,7 @@
             const searchInput = document.getElementById('regexInput').value;
             const searchType = getSearchType();
             const results = dataGST.filter(entry => 
-                entry.gst && performSearch(searchInput, entry.gst, searchType, true) // Case-sensitive for YAGATS
+                entry.YAGATS && performSearch(searchInput, entry.YAGATS, searchType, true) // Case-sensitive for YAGATS
             );
             displayResults(results, searchInput, searchType, 'YAGATS');
             // Refocus and select text after search
