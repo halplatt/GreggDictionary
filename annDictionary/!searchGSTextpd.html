@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
+    //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
         var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0804.1203am'; // Version display element 
+            document.getElementById('version').textContent = '2025/08/06@01:31pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -146,7 +148,7 @@
 </head>
 <body>
     <div class="version" id="version"></div>
-    <h1>Anniversary Gregg Stroke Text (GST) Search</h1>
+    <h1>Anniversary Gregg Shorthand Text Notation (GST) Search</h1>
     <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
     <div class="input-container">
         <div class="button-row">
@@ -216,6 +218,7 @@
             <tr>
                 <th>Text</th>
                 <th>GST</th>
+                <th>Notes</th>
                 <th>Outline</th>
             </tr>
         </thead>
@@ -223,6 +226,7 @@
             <!-- Results will be displayed here -->
         </tbody>
     </table>
+    <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
 
     <script>
         // Load the JSON file
@@ -249,26 +253,28 @@
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `Gregg Stroke Text (GST) Search of ${folderName}`;
-                document.querySelector('h1').textContent = `Gregg Stroke Text (GST) Search of ${folderName}`;
-                document.querySelector('title').textContent = `Gregg Stroke Text (GST) Search of ${folderName}`;
+                document.title = `Gregg Shorthand Text (GST) Search of ${folderName}`;
+                document.querySelector('h1').textContent = `Gregg Shorthand Text (GST) Search of ${folderName}`;
+                document.querySelector('title').textContent = `Gregg Shorthand Text (GST) Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `GST Search of ${imagePath1}`;
             }
   
         // Function to display results in the table
-        function displayResults(results) {
+        function displayResults(results, searchTerm = '', searchType = '') {
             const tableBody = document.querySelector('#resultsTable tbody');
             tableBody.innerHTML = ''; // Clear previous results
             results.forEach(entry => {
                 const row = document.createElement('tr');
                 const textCell = document.createElement('td');
                 const gstCell = document.createElement('td');
+                const notesCell = document.createElement('td');
                 const pageCell = document.createElement('td'); // New column for page.page
 
                 textCell.textContent = entry.text || ''; // Handle missing text
                 gstCell.textContent = entry.gst || ''; // Handle missing gst
+                notesCell.textContent = entry.notes || ''; // Handle missing notes
 
                 // Call searchRefJson and get the page value
                 // Call imageContainer and append the resulting div to pageCell
@@ -277,9 +283,18 @@
 
                 row.appendChild(textCell);
                 row.appendChild(gstCell);
+                row.appendChild(notesCell);
                 row.appendChild(pageCell); // Append the new column
                 tableBody.appendChild(row);
             });
+            
+            // Update search summary
+            const summaryDiv = document.getElementById('searchSummary');
+            const resultCount = results.length;
+            const searchTermDisplay = searchTerm ? `"${searchTerm}"` : '';
+            const typeDisplay = searchType ? ` (${searchType})` : '';
+            summaryDiv.textContent = `${resultCount} result${resultCount !== 1 ? 's' : ''} for search${typeDisplay} ${searchTermDisplay}`;
+            
             const regexInput = document.getElementById('regexInput');
             regexInput.focus();
             regexInput.select();
@@ -294,7 +309,7 @@
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
                 const results = dataGST.filter(entry => regex.test(entry.gst));
-                displayResults(results);
+                displayResults(results, regexInput, 'GST');
             } catch (error) {
                 alert('Invalid regular expression');
             }
@@ -309,7 +324,7 @@
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
                 const results = dataGST.filter(entry => regex.test(entry.text));
-                displayResults(results);
+                displayResults(results, regexInput, 'text');
             } catch (error) {
                 alert('Invalid regular expression');
             }

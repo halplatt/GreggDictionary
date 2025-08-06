@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
         var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = '2025/08/05@10:28pm'; // Version display element 
+            document.getElementById('version').textContent = '2025/08/06@02:07pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -225,6 +226,7 @@
             <!-- Results will be displayed here -->
         </tbody>
     </table>
+    <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
 
     <script>
         // Load the JSON file
@@ -260,7 +262,7 @@
             }
   
         // Function to display results in the table
-        function displayResults(results) {
+        function displayResults(results, searchTerm = '', searchType = '') {
             const tableBody = document.querySelector('#resultsTable tbody');
             tableBody.innerHTML = ''; // Clear previous results
             results.forEach(entry => {
@@ -285,6 +287,14 @@
                 row.appendChild(pageCell); // Append the new column
                 tableBody.appendChild(row);
             });
+            
+            // Update search summary
+            const summaryDiv = document.getElementById('searchSummary');
+            const resultCount = results.length;
+            const searchTermDisplay = searchTerm ? `"${searchTerm}"` : '';
+            const typeDisplay = searchType ? ` (${searchType})` : '';
+            summaryDiv.textContent = `${resultCount} result${resultCount !== 1 ? 's' : ''} for search${typeDisplay} ${searchTermDisplay}`;
+            
             const regexInput = document.getElementById('regexInput');
             regexInput.focus();
             regexInput.select();
@@ -299,7 +309,7 @@
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
                 const results = dataGST.filter(entry => regex.test(entry.gst));
-                displayResults(results);
+                displayResults(results, regexInput, 'GST');
             } catch (error) {
                 alert('Invalid regular expression');
             }
@@ -314,7 +324,7 @@
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
                 const results = dataGST.filter(entry => regex.test(entry.text));
-                displayResults(results);
+                displayResults(results, regexInput, 'text');
             } catch (error) {
                 alert('Invalid regular expression');
             }
@@ -440,6 +450,8 @@
                     img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
                     expandButton.innerHTML = 'Expand';
                 }
+                // Focus and select regex input after expand/shrink action
+                setTimeout(focusRegexInput, 10);
             };
 
             imageContainer.appendChild(img);
@@ -563,6 +575,15 @@
             }
         });
         
+        // Function to focus and select regex input
+        function focusRegexInput() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+            }
+        }
+        
         // Focus on regex input when page loads - placed at end of document
         window.addEventListener('load', function() {
             const regexInput = document.getElementById('regexInput');
@@ -573,6 +594,30 @@
                 updateCaretButton();
                 updateDollarButton();
             }
+        });
+        
+        // Focus regex input when page receives focus
+        window.addEventListener('focus', function() {
+            focusRegexInput();
+        });
+        
+        // Focus regex input when user clicks anywhere on the page (except specific elements)
+        document.addEventListener('click', function(event) {
+            // Don't refocus if clicking on the input itself, buttons, links, or interactive elements
+            const clickedElement = event.target;
+            if (clickedElement.tagName === 'INPUT' || 
+                clickedElement.tagName === 'BUTTON' || 
+                clickedElement.tagName === 'A' || 
+                clickedElement.tagName === 'IMG' ||
+                clickedElement.closest('button') ||
+                clickedElement.closest('a') ||
+                clickedElement.closest('.result-item') ||
+                clickedElement.closest('.expand-button')) {
+                return; // Don't refocus if clicking on interactive elements
+            }
+            
+            // Small delay to ensure other click events complete first
+            setTimeout(focusRegexInput, 50);
         });
     </script>
 </body>
