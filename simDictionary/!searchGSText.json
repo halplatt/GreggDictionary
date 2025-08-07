@@ -1034,7 +1034,7 @@
     {
         "text": "alternative",
         "YAGATS": "otenaDV",
-        "gst": "o-t-e-n-a-tf",
+        "gst": "o-t-e-n-a-df",
         "notes": ""
     },
     {
@@ -1838,7 +1838,7 @@
     {
         "text": "artificial",
         "YAGATS": "arDVe$",
-        "gst": "a-r-tf-e-sh",
+        "gst": "a-r-df-e-sh",
         "notes": ""
     },
     {
@@ -2960,7 +2960,7 @@
     {
         "text": "biopsy",
         "YAGATS": "biopze",
-        "gst": "b-io-p-s-e",
+        "gst": "b-ia-p-s-e",
         "notes": "s2"
     },
     {
@@ -3560,7 +3560,7 @@
     {
         "text": "Bryant",
         "YAGATS": "brioNT",
-        "gst": "b-r-io-nt",
+        "gst": "b-r-ia-nt",
         "notes": ""
     },
     {
@@ -4154,7 +4154,7 @@
     {
         "text": "captivate",
         "YAGATS": "kapDVat",
-        "gst": "k-a-p-tf-a-t",
+        "gst": "k-a-p-df-a-t",
         "notes": ""
     },
     {
@@ -4604,7 +4604,7 @@
     {
         "text": "Cheyenne",
         "YAGATS": "$ion",
-        "gst": "sh-io-n",
+        "gst": "sh-ia-n",
         "notes": ""
     },
     {
@@ -5528,7 +5528,7 @@
     {
         "text": "cyanide",
         "YAGATS": "sionid",
-        "gst": "s-io-n-i-d",
+        "gst": "s-ia-n-i-d",
         "notes": "s1"
     },
     {
@@ -5900,97 +5900,97 @@
     {
         "text": "defame",
         "YAGATS": "DVam",
-        "gst": "tf-a-m",
+        "gst": "df-a-m",
         "notes": ""
     },
     {
         "text": "defend",
         "YAGATS": "DVNT",
-        "gst": "tf-nt",
+        "gst": "df-nt",
         "notes": ""
     },
     {
         "text": "defer",
         "YAGATS": "DVer",
-        "gst": "tf-e-r",
+        "gst": "df-e-r",
         "notes": ""
     },
     {
         "text": "deferential",
         "YAGATS": "DVeren$",
-        "gst": "tf-e-r-e-n-sh",
+        "gst": "df-e-r-e-n-sh",
         "notes": ""
     },
     {
         "text": "deferred",
         "YAGATS": "DVeRD",
-        "gst": "tf-e-rd",
+        "gst": "df-e-rd",
         "notes": ""
     },
     {
         "text": "defiant",
         "YAGATS": "DVioNT",
-        "gst": "tf-io-nt",
+        "gst": "df-ia-nt",
         "notes": ""
     },
     {
         "text": "deficient",
         "YAGATS": "DVe$t",
-        "gst": "tf-e-sh-t",
+        "gst": "df-e-sh-t",
         "notes": ""
     },
     {
         "text": "defiled",
         "YAGATS": "DViLD",
-        "gst": "tf-i-ld",
+        "gst": "df-i-ld",
         "notes": ""
     },
     {
         "text": "definite",
         "YAGATS": "DVnet",
-        "gst": "tf-n-e-t",
+        "gst": "df-n-e-t",
         "notes": ""
     },
     {
         "text": "definition",
         "YAGATS": "DVn$",
-        "gst": "tf-n-sh",
+        "gst": "df-n-sh",
         "notes": ""
     },
     {
         "text": "deflate",
         "YAGATS": "DVlat",
-        "gst": "tf-l-a-t",
+        "gst": "df-l-a-t",
         "notes": ""
     },
     {
         "text": "deflected",
         "YAGATS": "DVlek:t",
-        "gst": "tf-l-e-k/-t",
+        "gst": "df-l-e-k/-t",
         "notes": ""
     },
     {
         "text": "deforestation",
         "YAGATS": "DVorez$",
-        "gst": "tf-o-r-e-s-sh",
+        "gst": "df-o-r-e-s-sh",
         "notes": "s2"
     },
     {
         "text": "deformation",
         "YAGATS": "DVm$",
-        "gst": "tf-m-sh",
+        "gst": "df-m-sh",
         "notes": ""
     },
     {
         "text": "deformity",
         "YAGATS": "DVmete",
-        "gst": "tf-m-e-t-e",
+        "gst": "df-m-e-t-e",
         "notes": ""
     },
     {
         "text": "defray",
         "YAGATS": "DVra",
-        "gst": "tf-r-a",
+        "gst": "df-r-a",
         "notes": ""
     },
     {
@@ -6002,7 +6002,7 @@
     {
         "text": "defunct",
         "YAGATS": "DVNK",
-        "gst": "tf-nk",
+        "gst": "df-nk",
         "notes": ""
     },
     {
@@ -6092,7 +6092,7 @@
     {
         "text": "deliberative",
         "YAGATS": "dlebraDV",
-        "gst": "d-l-e-b-r-a-tf",
+        "gst": "d-l-e-b-r-a-df",
         "notes": ""
     },
     {
@@ -6164,7 +6164,7 @@
     {
         "text": "denial",
         "YAGATS": "TNiol",
-        "gst": "tn-io-l",
+        "gst": "tn-ia-l",
         "notes": ""
     },
     {
@@ -6260,13 +6260,13 @@
     {
         "text": "develop",
         "YAGATS": "DVelp",
-        "gst": "tf-e-l-p",
+        "gst": "df-e-l-p",
         "notes": ""
     },
     {
         "text": "devote",
         "YAGATS": "DVot",
-        "gst": "tf-o-t",
+        "gst": "df-o-t",
         "notes": ""
     },
     {
@@ -6302,7 +6302,7 @@
     {
         "text": "different",
         "YAGATS": "DVreNT",
-        "gst": "tf-r-e-nt",
+        "gst": "df-r-e-nt",
         "notes": ""
     },
     {
@@ -6464,13 +6464,13 @@
     {
         "text": "diverse",
         "YAGATS": "DVerz",
-        "gst": "tf-e-r-s",
+        "gst": "df-e-r-s",
         "notes": "s2"
     },
     {
         "text": "divine",
         "YAGATS": "DVin",
-        "gst": "tf-i-n",
+        "gst": "df-i-n",
         "notes": ""
     },
     {
@@ -6704,7 +6704,7 @@
     {
         "text": "drier",
         "YAGATS": "drior",
-        "gst": "d-r-io-r",
+        "gst": "d-r-ia-r",
         "notes": ""
     },
     {
@@ -8888,7 +8888,7 @@
     {
         "text": "giant",
         "YAGATS": "gioNT",
-        "gst": "g-io-nt",
+        "gst": "g-ia-nt",
         "notes": ""
     },
     {
@@ -11516,7 +11516,7 @@
     {
         "text": "identify",
         "YAGATS": "iTNDV",
-        "gst": "i-tn-tf",
+        "gst": "i-tn-df",
         "notes": ""
     },
     {
@@ -12242,7 +12242,7 @@
     {
         "text": "interpretative",
         "YAGATS": "n:pretaDV",
-        "gst": "n/-p-r-e-t-a-tf",
+        "gst": "n/-p-r-e-t-a-df",
         "notes": ""
     },
     {
@@ -12302,19 +12302,19 @@
     {
         "text": "iodide",
         "YAGATS": "iodid",
-        "gst": "io-d-i-d",
+        "gst": "ia-d-i-d",
         "notes": ""
     },
     {
         "text": "ion",
         "YAGATS": "ion",
-        "gst": "io-n",
+        "gst": "ia-n",
         "notes": ""
     },
     {
         "text": "ionize",
         "YAGATS": "ioniz",
-        "gst": "io-n-i-s",
+        "gst": "ia-n-i-s",
         "notes": "s2"
     },
     {
@@ -12704,7 +12704,7 @@
     {
         "text": "Jeremiah",
         "YAGATS": "jeremio",
-        "gst": "j-e-r-e-m-io",
+        "gst": "j-e-r-e-m-ia",
         "notes": ""
     },
     {
@@ -13010,7 +13010,7 @@
     {
         "text": "kayak",
         "YAGATS": "kiok",
-        "gst": "k-io-k",
+        "gst": "k-ia-k",
         "notes": ""
     },
     {
@@ -13868,13 +13868,13 @@
     {
         "text": "lion",
         "YAGATS": "lion",
-        "gst": "l-io-n",
+        "gst": "l-ia-n",
         "notes": ""
     },
     {
         "text": "lionize",
         "YAGATS": "lioniz",
-        "gst": "l-io-n-i-s",
+        "gst": "l-ia-n-i-s",
         "notes": "s2"
     },
     {
@@ -14090,7 +14090,7 @@
     {
         "text": "locomotive",
         "YAGATS": "lokmoDV",
-        "gst": "l-o-k-m-o-tf",
+        "gst": "l-o-k-m-o-df",
         "notes": ""
     },
     {
@@ -14252,7 +14252,7 @@
     {
         "text": "lucrative",
         "YAGATS": "lukraDV",
-        "gst": "l-u-k-r-a-tf",
+        "gst": "l-u-k-r-a-df",
         "notes": ""
     },
     {
@@ -15224,7 +15224,7 @@
     {
         "text": "motive",
         "YAGATS": "moDV",
-        "gst": "m-o-tf",
+        "gst": "m-o-df",
         "notes": ""
     },
     {
@@ -15620,7 +15620,7 @@
     {
         "text": "negative",
         "YAGATS": "negaDV",
-        "gst": "n-e-g-a-tf",
+        "gst": "n-e-g-a-df",
         "notes": ""
     },
     {
@@ -18266,7 +18266,7 @@
     {
         "text": "putative",
         "YAGATS": "peutaDV",
-        "gst": "p-e-u-t-a-tf",
+        "gst": "p-e-u-t-a-df",
         "notes": ""
     },
     {
@@ -18488,7 +18488,7 @@
     {
         "text": "quiet",
         "YAGATS": "kwiot",
-        "gst": "k-w-io-t",
+        "gst": "k-w-ia-t",
         "notes": ""
     },
     {
@@ -19454,7 +19454,7 @@
     {
         "text": "repetitive",
         "YAGATS": "rpteDV",
-        "gst": "r-p-t-e-tf",
+        "gst": "r-p-t-e-df",
         "notes": ""
     },
     {
@@ -20006,7 +20006,7 @@
     {
         "text": "riotous",
         "YAGATS": "riotus",
-        "gst": "r-io-t-u-s",
+        "gst": "r-ia-t-u-s",
         "notes": "s1"
     },
     {
@@ -20984,25 +20984,25 @@
     {
         "text": "sciatica",
         "YAGATS": "sioteka",
-        "gst": "s-io-t-e-k-a",
+        "gst": "s-ia-t-e-k-a",
         "notes": "s1"
     },
     {
         "text": "scientific",
         "YAGATS": "sionDVk",
-        "gst": "s-io-n-tf-k",
+        "gst": "s-ia-n-df-k",
         "notes": "s1"
     },
     {
         "text": "scientist",
         "YAGATS": "sioNTez",
-        "gst": "s-io-nt-e-s",
+        "gst": "s-ia-nt-e-s",
         "notes": "s1-s2"
     },
     {
         "text": "scion",
         "YAGATS": "sion",
-        "gst": "s-io-n",
+        "gst": "s-ia-n",
         "notes": "s1"
     },
     {
@@ -21458,7 +21458,7 @@
     {
         "text": "sensitive",
         "YAGATS": "senzDV",
-        "gst": "s-e-n-s-tf",
+        "gst": "s-e-n-s-df",
         "notes": "s1-s2"
     },
     {
@@ -21878,7 +21878,7 @@
     {
         "text": "Siamese",
         "YAGATS": "siomez",
-        "gst": "s-io-m-e-s",
+        "gst": "s-ia-m-e-s",
         "notes": "s1-s2"
     },
     {
@@ -22592,7 +22592,7 @@
     {
         "text": "solidify",
         "YAGATS": "soleDV",
-        "gst": "s-o-l-e-tf",
+        "gst": "s-o-l-e-df",
         "notes": "s1"
     },
     {
@@ -23630,7 +23630,7 @@
     {
         "text": "striated",
         "YAGATS": "strioTD",
-        "gst": "s-t-r-io-td",
+        "gst": "s-t-r-ia-td",
         "notes": "s1"
     },
     {
@@ -23816,7 +23816,7 @@
     {
         "text": "subdivide",
         "YAGATS": "sDVid",
-        "gst": "s-tf-i-d",
+        "gst": "s-df-i-d",
         "notes": "s1"
     },
     {
@@ -24020,7 +24020,7 @@
     {
         "text": "sundial",
         "YAGATS": "sNTiol",
-        "gst": "s-nt-io-l",
+        "gst": "s-nt-ia-l",
         "notes": "s1"
     },
     {
@@ -24044,7 +24044,7 @@
     {
         "text": "superlative",
         "YAGATS": "s:laDV",
-        "gst": "s/-l-a-tf",
+        "gst": "s/-l-a-df",
         "notes": "s1"
     },
     {
@@ -25802,7 +25802,7 @@
     {
         "text": "trial",
         "YAGATS": "triol",
-        "gst": "t-r-io-l",
+        "gst": "t-r-ia-l",
         "notes": ""
     },
     {
@@ -26084,7 +26084,7 @@
     {
         "text": "unbiased",
         "YAGATS": "nbiozt",
-        "gst": "n-b-io-s-t",
+        "gst": "n-b-ia-s-t",
         "notes": "s2"
     },
     {
@@ -27134,7 +27134,7 @@
     {
         "text": "viaduct",
         "YAGATS": "vioduk",
-        "gst": "v-io-d-u-k",
+        "gst": "v-ia-d-u-k",
         "notes": ""
     },
     {
@@ -27272,37 +27272,37 @@
     {
         "text": "violate",
         "YAGATS": "violat",
-        "gst": "v-io-l-a-t",
+        "gst": "v-ia-l-a-t",
         "notes": ""
     },
     {
         "text": "violation",
         "YAGATS": "viola$",
-        "gst": "v-io-l-a-sh",
+        "gst": "v-ia-l-a-sh",
         "notes": ""
     },
     {
         "text": "violence",
         "YAGATS": "violenz",
-        "gst": "v-io-l-e-n-s",
+        "gst": "v-ia-l-e-n-s",
         "notes": "s2"
     },
     {
         "text": "violently",
         "YAGATS": "violeNTe",
-        "gst": "v-io-l-e-nt-e",
+        "gst": "v-ia-l-e-nt-e",
         "notes": ""
     },
     {
         "text": "violets",
         "YAGATS": "violez",
-        "gst": "v-io-l-e-s",
+        "gst": "v-ia-l-e-s",
         "notes": "s2"
     },
     {
         "text": "violinist",
         "YAGATS": "violenez",
-        "gst": "v-io-l-e-n-e-s",
+        "gst": "v-ia-l-e-n-e-s",
         "notes": "s2"
     },
     {
@@ -30164,13 +30164,13 @@
     {
         "text": "Zion",
         "YAGATS": "sion",
-        "gst": "s-io-n",
+        "gst": "s-ia-n",
         "notes": "s1"
     },
     {
         "text": "Zionist",
         "YAGATS": "sionez",
-        "gst": "s-io-n-e-s",
+        "gst": "s-ia-n-e-s",
         "notes": "s1-s2"
     },
     {
