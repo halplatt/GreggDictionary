@@ -10,7 +10,7 @@
         var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = '2025/08/06@01:31pm'; // Version display element 
+            document.getElementById('version').textContent = '2025/08/18@011:28pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -144,6 +144,16 @@
     #add0or1 {
         margin-right: 10px;
     }
+    /* footer styles */
+    .results-footer { 
+        margin: 28px 0 12px; 
+        padding: 12px 16px; 
+        border-top: 1px solid #ccc; 
+        font-size: 0.85rem; 
+        background: #f9f9f9;
+        line-height: 1.3;
+    }
+    .results-footer p { margin: 0; }
     </style>
 </head>
 <body>
@@ -227,6 +237,7 @@
         </tbody>
     </table>
     <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
+    <div id="resultsFooter" class="results-footer"></div>
 
     <script>
         // Load the JSON file
@@ -450,6 +461,8 @@
                     img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
                     expandButton.innerHTML = 'Expand';
                 }
+                // Focus and select regex input after expand/shrink action
+                setTimeout(focusRegexInput, 10);
             };
 
             imageContainer.appendChild(img);
@@ -573,6 +586,15 @@
             }
         });
         
+        // Function to focus and select regex input
+        function focusRegexInput() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+            }
+        }
+        
         // Focus on regex input when page loads - placed at end of document
         window.addEventListener('load', function() {
             const regexInput = document.getElementById('regexInput');
@@ -584,6 +606,51 @@
                 updateDollarButton();
             }
         });
+        
+        // Focus regex input when page receives focus
+        window.addEventListener('focus', function() {
+            focusRegexInput();
+        });
+        
+        // Focus regex input when user clicks anywhere on the page (except specific elements)
+        document.addEventListener('click', function(event) {
+            // Don't refocus if clicking on the input itself, buttons, links, or interactive elements
+            const clickedElement = event.target;
+            if (clickedElement.tagName === 'INPUT' || 
+                clickedElement.tagName === 'BUTTON' || 
+                clickedElement.tagName === 'A' || 
+                clickedElement.tagName === 'IMG' ||
+                clickedElement.closest('button') ||
+                clickedElement.closest('a') ||
+                clickedElement.closest('.result-item') ||
+                clickedElement.closest('.expand-button')) {
+                return; // Don't refocus if clicking on interactive elements
+            }
+            
+            // Small delay to ensure other click events complete first
+            setTimeout(focusRegexInput, 50);
+        });
+        // Insert attribution / copyright notice based on globalGsd
+        (function addAttributionFooter(){
+            try {
+                var footer = document.getElementById('resultsFooter');
+                if(!footer) return; // nothing to do
+                if(footer.dataset.populated) return; // already done
+                const aboutText = document.createElement('div');
+                aboutText.className = 'about-text';
+                if (globalGsd === 'sim') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Simplified</i>, a book published by The Gregg Publishing Company in 1945, written by Charles Rader.</p>";
+                } else if (globalGsd === 'ann') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary</i>, a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg.</p>";
+                } else {
+                    aboutText.innerHTML = "<p><b>Images Source:</b> Gregg Shorthand reference materials.</p>";
+                }
+                footer.appendChild(aboutText);
+                footer.dataset.populated = '1';
+            } catch(e) {
+                // silently ignore
+            }
+        })();
     </script>
 </body>
 </html>

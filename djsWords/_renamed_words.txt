@@ -2500,3 +2500,4 @@ susplciousness,suspiciousness
 bold,bold
 weld,weld
 sword,sword
+inequality,inequity

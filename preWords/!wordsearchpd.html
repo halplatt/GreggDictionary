@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    V2025.0819@02:14pm replace in-page search with GST Search
     V2025.0616.0219pm add public_domain_only
     V2025.0614.1122am add words pre-fix suffix and add exact button
     v2025.0527.0331pm work on insert characters at cursor position  
@@ -27,7 +28,7 @@
 		var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0616.0219pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0819@02:14pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}		
@@ -555,13 +556,13 @@ h1 {
                     <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
                 </div>
                 <div class="inner sim">
-                    <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+                    <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
                 </div>
                 <div class="inner ann">
                     <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
                 </div>
                 <div class="inner ann">
-                    <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
+                    <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
                 </div>
                 <div class="inner pre">
                     <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
