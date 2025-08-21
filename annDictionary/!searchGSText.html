@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2025.0820@07:004pm added group correction function prior to GST search
     //V2025.0819@02:14pm replace in-page search with GST Search 
     //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
@@ -221,8 +222,8 @@
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter regular expression">
-            <button id="searchGST">Search GST</button>
             <button id="searchText">Search Text</button>
+            <button id="searchGST">Search G-S-T</button>
         </div>
     <table id="resultsTable">
         <thead>
@@ -265,9 +266,9 @@
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `Gregg Shorthand Text (GST) Search of ${folderName}`;
-                document.querySelector('h1').textContent = `Gregg Shorthand Text (GST) Search of ${folderName}`;
-                document.querySelector('title').textContent = `Gregg Shorthand Text (GST) Search of ${folderName}`;
+                document.title = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
+                document.querySelector('h1').textContent = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
+                document.querySelector('title').textContent = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `GST Search of ${imagePath1}`;
@@ -316,8 +317,79 @@
         document.getElementById('searchGST').addEventListener('click', () => {
             searchGST()
         });
+        // Mapping and preprocessing for regexInput prior to GST search
+        (function initRegexGroupCorrection(){
+            // Map of whole-group replacements
+            const GROUP_MAP = {
+                yo: 'e-o',
+                ou: 'a-u',
+                oe: 'o-e',
+                eu: 'e-u',
+                au: 'o-e',
+                ae: 'ea',
+                ia: 'ea',
+                ie: 'ai',
+                io: 'ai',
+                oo: 'u',
+                c: 'k',
+                z: 's',
+                dot: 'h',
+                ing: 'h',
+                dm: 'tm',
+                dn: 'tn',
+                tf: 'df',
+                dv: 'df',
+                tv: 'df',
+                md: 'mt',
+                nm: 'mn',
+                tt: 'td',
+                dt: 'td',
+                dd: 'td',
+                pnt: 'jnt',
+                pnd: 'jnt',
+                gnt: 'jnt',
+                gnd: 'jnt'
+            };
+            // Expose correction function in closure scope
+            window.__correctRegexInputGroups = function(raw){
+                if(!raw) return raw;
+                let str = raw.trim();
+                // Keep original if any meta characters (other than ^ $) exist
+                // meta: () [] {} * + ? . | \ 
+                // we test AFTER stripping starting ^ or ending $
+                const hasStart = str.startsWith('^');
+                const hasEnd = str.endsWith('$');
+                let core = str;
+                if(hasStart) core = core.slice(1);
+                if(hasEnd && core.length) core = core.slice(0, -1);
+                if(/[()[\]{}*+?.\\|]/.test(core)) {
+                    return raw; // leave unchanged
+                }
+                // Split on - or / preserving separators
+                const parts = core.split(/([-\/])/); // tokens include separators
+                for(let i=0;i<parts.length;i++){
+                    const tok = parts[i];
+                    if(tok === '-' || tok === '/') continue;
+                    const key = tok.toLowerCase();
+                    if(Object.prototype.hasOwnProperty.call(GROUP_MAP, key)){
+                        parts[i] = GROUP_MAP[key];
+                    }
+                }
+                const newCore = parts.join('');
+                const rebuilt = (hasStart ? '^' : '') + newCore + (hasEnd ? '$' : '');
+                return rebuilt;
+            };
+        })();
         function searchGST() {
-            const regexInput = document.getElementById('regexInput').value;
+            const inputEl = document.getElementById('regexInput');
+            // Preprocess & update input value prior to constructing RegExp
+            try {
+                const corrected = window.__correctRegexInputGroups(inputEl.value);
+                if(corrected !== inputEl.value){
+                    inputEl.value = corrected;
+                }
+            } catch(e) { /* fail safe: ignore */ }
+            const regexInput = inputEl.value;
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
                 const results = dataGST.filter(entry => regex.test(entry.gst));

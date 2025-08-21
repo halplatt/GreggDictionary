@@ -1286,8 +1286,8 @@
   },
   {
     "gst": "a-k-w-e-s",
-    "text": "acquiesce; cf. a-k-w-e-u-s",
-    "notes": "<no_image_avail>"
+    "text": "acquiesce",
+    "notes": "<cf. a-k-w-e-u-s>"
   },
   {
     "gst": "a-k-w-e-u-s",
@@ -1950,12 +1950,12 @@
     "notes": "<Simp.>"
   },
   {
-    "gst": "a-nm-sh",
+    "gst": "a-mn-sh",
     "text": "admonish",
     "notes": ""
   },
   {
-    "gst": "a-nm-sh",
+    "gst": "a-mn-sh",
     "text": "admonition",
     "notes": ""
   },
@@ -5576,8 +5576,8 @@
   },
   {
     "gst": "ch-j",
-    "text": "charge; cf. j-j",
-    "notes": "<no_image_avail>"
+    "text": "charge",
+    "notes": "<cf. j-j>"
   },
   {
     "gst": "ch-j-d",
@@ -6201,8 +6201,8 @@
   },
   {
     "gst": "d-e-l-sh",
-    "text": "dilution; cf. d-l-sh",
-    "notes": "<no_image_avail>"
+    "text": "dilution",
+    "notes": "<cf. d-l-sh>"
   },
   {
     "gst": "d-e-l-sh",
@@ -6246,8 +6246,8 @@
   },
   {
     "gst": "d-e-nt",
-    "text": "dint; cf. tn-t",
-    "notes": "<no_image_avail>"
+    "text": "dint",
+    "notes": "<cf. tn-t>"
   },
   {
     "gst": "d-e-p",
@@ -6316,8 +6316,8 @@
   },
   {
     "gst": "d-e-t-e",
-    "text": "deity; cf. td-e",
-    "notes": "<no_image_avail>"
+    "text": "deity",
+    "notes": "<cf. td-e>"
   },
   {
     "gst": "d-e-t-e",
@@ -6901,8 +6901,8 @@
   },
   {
     "gst": "d-l-sh",
-    "text": "dilution (Simp.); cf. d-e-l-sh",
-    "notes": "<no_image_avail>"
+    "text": "dilution",
+    "notes": "<Simp.> <cf. d-e-l-sh>"
   },
   {
     "gst": "d-l-sh",
@@ -7611,8 +7611,8 @@
   },
   {
     "gst": "d-s-e-nt",
-    "text": "dissent; cf. d-s-e-n",
-    "notes": "<no_image_avail>"
+    "text": "dissent",
+    "notes": "<cf. d-s-e-n>"
   },
   {
     "gst": "d-s-e-n-tn",
@@ -7681,8 +7681,8 @@
   },
   {
     "gst": "d-s-e-v",
-    "text": "deserve; cf. d-s-e",
-    "notes": "<no_image_avail>"
+    "text": "deserve",
+    "notes": "<cf. d-s-e>"
   },
   {
     "gst": "d-s-e-v-d",
@@ -8021,8 +8021,8 @@
   },
   {
     "gst": "d-s-p-r-a",
-    "text": "desperate; cf. d-s-p-a-r-a",
-    "notes": "<no_image_avail>"
+    "text": "desperate",
+    "notes": "<cf. d-s-p-a-r-a>"
   },
   {
     "gst": "d-s-p-r-sh",
@@ -8911,8 +8911,8 @@
   },
   {
     "gst": "e-l-e-t",
-    "text": "illiterate; cf. a-l-e-t",
-    "notes": "<no_image_avail>"
+    "text": "illiterate",
+    "notes": "<cf. a-l-e-t>"
   },
   {
     "gst": "e-l-f-nt",
@@ -9186,8 +9186,8 @@
   },
   {
     "gst": "e-mn-o-r-l",
-    "text": "immemorial; cf. e-m-o-r-l",
-    "notes": "<no_image_avail>"
+    "text": "immemorial",
+    "notes": "<cf. e-m-o-r-l>"
   },
   {
     "gst": "e-mn-s",
@@ -9251,8 +9251,8 @@
   },
   {
     "gst": "e-m-o-r-l",
-    "text": "immoral; cf. e-mn-o-r-l",
-    "notes": "<no_image_avail>"
+    "text": "immoral",
+    "notes": "<cf. e-mn-o-r-l>"
   },
   {
     "gst": "e-m-o-sh",
@@ -9646,8 +9646,8 @@
   },
   {
     "gst": "e-p-d-e-m-e-k",
-    "text": "epidermic; cf. e-p-tm-e-k",
-    "notes": "<no_image_avail>"
+    "text": "epidermic",
+    "notes": "<cf. e-p-tm-e-k>"
   },
   {
     "gst": "e-p-e-l-e-p",
@@ -9671,8 +9671,8 @@
   },
   {
     "gst": "e-p-k",
-    "text": "epic; cf. e-p-o-k",
-    "notes": "<no_image_avail>"
+    "text": "epic",
+    "notes": "<cf. e-p-o-k>"
   },
   {
     "gst": "e-p-k-r",
@@ -9691,8 +9691,8 @@
   },
   {
     "gst": "e-p-o-k",
-    "text": "epoch; cf. e-p-k",
-    "notes": "<no_image_avail>"
+    "text": "epoch",
+    "notes": "<cf. e-p-k>"
   },
   {
     "gst": "e-p-o-l-e-t",
@@ -9766,8 +9766,8 @@
   },
   {
     "gst": "e-r-a-s-b",
-    "text": "erasable; cf. i-r-a-s-b",
-    "notes": "<no_image_avail>"
+    "text": "erasable",
+    "notes": "<cf. i-r-a-s-b>"
   },
   {
     "gst": "e-r-a-sh-l",
@@ -10046,8 +10046,8 @@
   },
   {
     "gst": "e-s/k",
-    "text": "extract; v. e-s/k-a-t",
-    "notes": "<no_image_avail>"
+    "text": "extract",
+    "notes": "<v. e-s/k-a-t>"
   },
   {
     "gst": "e-s/k-a-t",
@@ -10245,9 +10245,9 @@
     "notes": "<S90>"
   },
   {
-    "gst": "e-s-e-k-w-a-t-e (e1,",
-    "text": "e1",
-    "notes": "<no_image_avail>"
+    "gst": "e-s-e-k-w-a-t-e",
+    "text": "exequatur",
+    "notes": "<e1,e1,e2><no_image_avail>"
   },
   {
     "gst": "e-s-e-k-w-a-t-e",
@@ -10590,14 +10590,9 @@
     "notes": ""
   },
   {
-    "gst": "e-s-o-t-r-k (e1, no",
-    "text": "angle between e",
-    "notes": "<no_image_avail>"
-  },
-  {
-    "gst": "e-s-o-t-r-k (e1, no",
-    "text": "s",
-    "notes": "<no_image_avail>"
+    "gst": "e-s-o-t-r-k",
+    "text": "esoteric",
+    "notes": "<e1, no angle between e and s> <no_image_avail>"
   },
   {
     "gst": "e-s-o-t-r-k",
@@ -10731,8 +10726,8 @@
   },
   {
     "gst": "e-s-p-n-s",
-    "text": "expense; cf. e-s-p-a-n-s",
-    "notes": "<no_image_avail>"
+    "text": "expense",
+    "notes": "<cf. e-s-p-a-n-s>"
   },
   {
     "gst": "e-s-p-n-s-e",
@@ -11361,13 +11356,8 @@
   },
   {
     "gst": "e-v",
-    "text": "every (1916",
-    "notes": "<no_image_avail>"
-  },
-  {
-    "gst": "e-v",
-    "text": "DJS)",
-    "notes": "<no_image_avail>"
+    "text": "every",
+    "notes": "<1916><djs><no_image_avail>"
   },
   {
     "gst": "e-v",
@@ -11426,8 +11416,8 @@
   },
   {
     "gst": "e-v-k",
-    "text": "evoke; cf. e-v-e-k",
-    "notes": "<no_image_avail>"
+    "text": "evoke",
+    "notes": "<cf. e-v-e-k>"
   },
   {
     "gst": "e-v-k-a-sh",
@@ -11641,8 +11631,8 @@
   },
   {
     "gst": "f-a-m",
-    "text": "fame; cf. f-a-mn",
-    "notes": "<no_image_avail>"
+    "text": "fame",
+    "notes": "<cf. f-a-mn>"
   },
   {
     "gst": "f-a-m",
@@ -12571,8 +12561,8 @@
   },
   {
     "gst": "f-j",
-    "text": "fudge; cf. f-o-r-j",
-    "notes": "<no_image_avail>"
+    "text": "fudge",
+    "notes": "<cf. f-o-r-j>"
   },
   {
     "gst": "f-k",
@@ -13066,8 +13056,8 @@
   },
   {
     "gst": "f-o-r-j",
-    "text": "forage; cf. f-j",
-    "notes": "<no_image_avail>"
+    "text": "forage",
+    "notes": "<cf. f-j>"
   },
   {
     "gst": "f-o-s",
@@ -16170,11 +16160,6 @@
     "notes": "<no_image_avail>"
   },
   {
-    "gst": "h-u-a-r",
-    "text": "v. h-u-s-a-r",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "h-u-a-t",
     "text": "await",
     "notes": "<no_image_avail>"
@@ -16213,11 +16198,6 @@
     "gst": "h-u-h-d",
     "text": "who had",
     "notes": ""
-  },
-  {
-    "gst": "h-u-i-f",
-    "text": "v. h-u-s-i-f",
-    "notes": "<no_image_avail>"
   },
   {
     "gst": "h-u-i-t",
@@ -16302,12 +16282,12 @@
   {
     "gst": "h-u-s-a-r",
     "text": "hussar",
-    "notes": ""
+    "notes": "<v. h-u-a-r>"
   },
   {
     "gst": "h-u-s-i-f",
     "text": "housewife",
-    "notes": ""
+    "notes": "<v. h-u-i-f>"
   },
   {
     "gst": "h-u-s-k-p/r",
@@ -16386,13 +16366,13 @@
   },
   {
     "gst": "i-b-e-s",
-    "text": "ibis; cf. i-b-e-x",
-    "notes": "<no_image_avail>"
+    "text": "ibis",
+    "notes": "<cf. i-b-e-x>"
   },
   {
     "gst": "i-b-e-x",
-    "text": "ibex; cf. i-b-e-s",
-    "notes": "<no_image_avail>"
+    "text": "ibex",
+    "notes": "<cf. i-b-e-s>"
   },
   {
     "gst": "i-d",
@@ -16566,8 +16546,8 @@
   },
   {
     "gst": "i-s-u-s",
-    "text": "ice house; also i-s-h-u-s",
-    "notes": "<no_image_avail>"
+    "text": "ice house",
+    "notes": "<also i-s-h-u-s>"
   },
   {
     "gst": "i-v-r-e",
@@ -16676,8 +16656,8 @@
   },
   {
     "gst": "j-d-e-sh",
-    "text": "judicial; cf. j-d-e-sh-u-s",
-    "notes": "<no_image_avail>"
+    "text": "judicial",
+    "notes": "<cf. j-d-e-sh-u-s>"
   },
   {
     "gst": "j-d-e-sh-r-e",
@@ -16931,8 +16911,8 @@
   },
   {
     "gst": "j-j",
-    "text": "judge; cf. ch-j",
-    "notes": "<no_image_avail>"
+    "text": "judge",
+    "notes": "<cf. ch-j>"
   },
   {
     "gst": "j-j-m",
@@ -18896,8 +18876,8 @@
   },
   {
     "gst": "k-l-i",
-    "text": "client (1902",
-    "notes": "<no_image_avail>"
+    "text": "client",
+    "notes": "<1902><no_image_avail>"
   },
   {
     "gst": "k-l-i",
@@ -18911,13 +18891,13 @@
   },
   {
     "gst": "k-l-i-m/a",
-    "text": "climatic; cf. k-l-i-m-a-k",
-    "notes": "<no_image_avail>"
+    "text": "climatic",
+    "notes": "<cf. k-l-i-m-a-k>"
   },
   {
     "gst": "k-l-i-m-a-k",
-    "text": "climactic; cf. k-l-i-m/a",
-    "notes": "<no_image_avail>"
+    "text": "climactic",
+    "notes": "<cf. k-l-i-m/a>"
   },
   {
     "gst": "k-l-i-m-a-t",
@@ -19061,8 +19041,8 @@
   },
   {
     "gst": "k-m-e-t-e",
-    "text": "committee (Simp.); cf. k-e-t-e",
-    "notes": "<no_image_avail>"
+    "text": "committee",
+    "notes": "<Simp> <cf. k-e-t-e>"
   },
   {
     "gst": "k-mn",
@@ -19221,8 +19201,8 @@
   },
   {
     "gst": "k-n-e-k",
-    "text": "connect (Simp.); cf. k-e-k",
-    "notes": "<no_image_avail>"
+    "text": "connect",
+    "notes": "<Simp.><cf. k-e-k>"
   },
   {
     "gst": "k-n-e-s-nt",
@@ -19476,8 +19456,8 @@
   },
   {
     "gst": "k-o-l-e-sh",
-    "text": "collision; cf. k-o-l-sh",
-    "notes": "<no_image_avail>"
+    "text": "collision",
+    "notes": "<cf. k-o-l-sh>"
   },
   {
     "gst": "k-o-l-f-n",
@@ -19576,8 +19556,8 @@
   },
   {
     "gst": "k-o-l-sh",
-    "text": "collusion; cf. k-o-l-e-sh",
-    "notes": "<no_image_avail>"
+    "text": "collusion",
+    "notes": "<cf. k-o-l-e-sh>"
   },
   {
     "gst": "k-o-n",
@@ -19875,14 +19855,14 @@
     "notes": "angle between k and p"
   },
   {
-    "gst": "k-p (angle between k",
+    "gst": "k-p",
     "text": "complaint",
-    "notes": ""
+    "notes": "<angle between k and p>"
   },
   {
-    "gst": "k-p (angle between k",
+    "gst": "k-p",
     "text": "complete",
-    "notes": ""
+    "notes": "<angle between k>"
   },
   {
     "gst": "k-p/nt",
@@ -20026,8 +20006,8 @@
   },
   {
     "gst": "k-p-o-r-l",
-    "text": "corporeal; cf. k-p-r-l",
-    "notes": "<no_image_avail>"
+    "text": "corporeal",
+    "notes": "<cf. k-p-r-l>"
   },
   {
     "gst": "k-p-o-s",
@@ -20506,8 +20486,8 @@
   },
   {
     "gst": "k-r-nt",
-    "text": "crowned; cf. k-r-e-nt",
-    "notes": "<no_image_avail>"
+    "text": "crowned",
+    "notes": "<cf. k-r-e-nt>"
   },
   {
     "gst": "k-r-o-b",
@@ -20581,8 +20561,8 @@
   },
   {
     "gst": "k-r-p-r-l",
-    "text": "corporal; cf. k-p-o-r-l",
-    "notes": "<no_image_avail>"
+    "text": "corporal",
+    "notes": "<cf. k-p-o-r-l>"
   },
   {
     "gst": "k-r-p-t",
@@ -20601,8 +20581,8 @@
   },
   {
     "gst": "k-r-s",
-    "text": "course; cf. k-u-r-s",
-    "notes": "<no_image_avail>"
+    "text": "course",
+    "notes": "<cf. k-u-r-s>"
   },
   {
     "gst": "k-r-s-b",
@@ -20951,13 +20931,13 @@
   },
   {
     "gst": "k-s-m-a-sh",
-    "text": "consummation; cf. k-s-m-sh",
-    "notes": "<no_image_avail>"
+    "text": "consummation",
+    "notes": "<cf. k-s-m-sh>"
   },
   {
     "gst": "k-s-m-sh",
-    "text": "consumption; cf. k-s-m-a-sh",
-    "notes": "<no_image_avail>"
+    "text": "consumption",
+    "notes": "<cf. k-s-m-a-sh>"
   },
   {
     "gst": "k-s-n",
@@ -21201,8 +21181,8 @@
   },
   {
     "gst": "k-tm",
-    "text": "condemn; cf. k-tn",
-    "notes": "<no_image_avail>"
+    "text": "condemn",
+    "notes": "<cf. k-tn>"
   },
   {
     "gst": "k-tm-a-sh",
@@ -21236,8 +21216,8 @@
   },
   {
     "gst": "k-tn",
-    "text": "contain; cf. k-tm",
-    "notes": "<no_image_avail>"
+    "text": "contain",
+    "notes": "<cf. k-tm>"
   },
   {
     "gst": "k-tn-a-n-s",
@@ -21251,8 +21231,8 @@
   },
   {
     "gst": "k-tn-d",
-    "text": "contend; cf. k-tm-d",
-    "notes": "<no_image_avail>"
+    "text": "contend",
+    "notes": "<cf. k-tm-d>"
   },
   {
     "gst": "k-tn-e-u-sh",
@@ -21286,8 +21266,8 @@
   },
   {
     "gst": "k-tn-s",
-    "text": "contains; cf. k-tm-s",
-    "notes": "<no_image_avail>"
+    "text": "contains",
+    "notes": "<cf. k-tm-s>"
   },
   {
     "gst": "k-tn-sh",
@@ -21301,8 +21281,8 @@
   },
   {
     "gst": "k-tn-td",
-    "text": "contented; cf. k-tn-d",
-    "notes": "<no_image_avail>"
+    "text": "contented",
+    "notes": "<cf. k-tn-d>"
   },
   {
     "gst": "k-tn-td",
@@ -21346,8 +21326,8 @@
   },
   {
     "gst": "k-t-s",
-    "text": "countries; cf. k-t-x",
-    "notes": "<no_image_avail>"
+    "text": "countries",
+    "notes": "<cf. k-t-x>"
   },
   {
     "gst": "k-t-s-i",
@@ -21436,8 +21416,8 @@
   },
   {
     "gst": "k-u-r-s",
-    "text": "curse; cf. k-r-s",
-    "notes": "<no_image_avail>"
+    "text": "curse",
+    "notes": "<cf. k-r-s>"
   },
   {
     "gst": "k-u-s",
@@ -22285,11 +22265,6 @@
     "notes": "e2"
   },
   {
-    "gst": "l-e-d-e-k",
-    "text": "v. l-e-nt-e-k",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "l-e-d-s",
     "text": "leads",
     "notes": "<no_image_avail>"
@@ -22476,8 +22451,8 @@
   },
   {
     "gst": "l-e-n-a-m",
-    "text": "lineament; cf. l-e-n-e-m",
-    "notes": "<no_image_avail>"
+    "text": "lineament",
+    "notes": "<cf. l-e-n-e-m>"
   },
   {
     "gst": "l-e-n-ea",
@@ -22491,8 +22466,8 @@
   },
   {
     "gst": "l-e-n-e-m",
-    "text": "liniment; cf. l-e-n-a-m",
-    "notes": "<no_image_avail>"
+    "text": "liniment",
+    "notes": "<cf. l-e-n-a-m>"
   },
   {
     "gst": "l-e-n-e-n",
@@ -22597,7 +22572,7 @@
   {
     "gst": "l-e-nt-e-k",
     "text": "lenticular",
-    "notes": ""
+    "notes": "<v. l-e-d-e-k>"
   },
   {
     "gst": "l-e-nt-l",
@@ -22636,8 +22611,8 @@
   },
   {
     "gst": "l-e-r-k",
-    "text": "lyric; cf. l-r-k",
-    "notes": "<no_image_avail>"
+    "text": "lyric",
+    "notes": "<cf. l-r-k>"
   },
   {
     "gst": "l-e-r-ss",
@@ -22806,8 +22781,8 @@
   },
   {
     "gst": "l-e-t-l",
-    "text": "literal; cf. l-e-t-r-l",
-    "notes": "<no_image_avail>"
+    "text": "literal",
+    "notes": "<cf. l-e-t-r-l>"
   },
   {
     "gst": "l-e-t-l-e",
@@ -22846,8 +22821,8 @@
   },
   {
     "gst": "l-e-t-r-l",
-    "text": "littoral; cf. l-e-t-l",
-    "notes": "<no_image_avail>"
+    "text": "littoral",
+    "notes": "<cf. l-e-t-l>"
   },
   {
     "gst": "l-e-t-s-e",
@@ -23895,11 +23870,6 @@
     "notes": "<no_image_avail>"
   },
   {
-    "gst": "m-a-f",
-    "text": "v. m-a-s-f",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "m-a-g",
     "text": "magazine",
     "notes": ""
@@ -23974,11 +23944,7 @@
     "text": "macabre",
     "notes": ""
   },
-  {
-    "gst": "m-a-k-f-e-f-t",
-    "text": "v. m-a-k-sh-e-f-t",
-    "notes": "<no_image_avail>"
-  },
+  
   {
     "gst": "m-a-k-n-sh",
     "text": "machination",
@@ -24002,7 +23968,7 @@
   {
     "gst": "m-a-k-sh-e-f-t",
     "text": "makeshift",
-    "notes": ""
+    "notes": "<v. m-a-k-f-e-f-t>"
   },
   {
     "gst": "m-a-l/b",
@@ -24096,8 +24062,8 @@
   },
   {
     "gst": "m-a-n/k",
-    "text": "maniacal; cf. mn/k",
-    "notes": "<no_image_avail>"
+    "text": "maniacal",
+    "notes": "<cf. mn/k>"
   },
   {
     "gst": "m-a-n-a-s",
@@ -24146,8 +24112,8 @@
   },
   {
     "gst": "m-a-r",
-    "text": "mayor; cf. m-a",
-    "notes": "<a2> <no_image_avail>"
+    "text": "mayor",
+    "notes": "<a2> <cf. m-a>"
   },
   {
     "gst": "m-a-r-a-j-a",
@@ -24285,11 +24251,6 @@
     "notes": "a1-s1 to left of a"
   },
   {
-    "gst": "m-a-s",
-    "text": "v. m-a-ss",
-    "notes": "s1 <no_image_avail>"
-  },
-  {
     "gst": "m-a-s-a",
     "text": "mesa",
     "notes": ""
@@ -24332,7 +24293,7 @@
   {
     "gst": "m-a-s-f",
     "text": "masterful",
-    "notes": ""
+    "notes": "<v. m-a-f>"
   },
   {
     "gst": "m-a-sh-n",
@@ -24367,12 +24328,12 @@
   {
     "gst": "m-a-ss",
     "text": "maces",
-    "notes": "<no_image_avail>"
+    "notes": "<no_image_avail><v. m-a-s>"
   },
   {
     "gst": "m-a-ss",
     "text": "mail us",
-    "notes": "<no_image_avail>"
+    "notes": "<no_image_avail> <v. m-a-s>"
   },
   {
     "gst": "m-a-ss",
@@ -24553,11 +24514,6 @@
     "gst": "m-a-u-th",
     "text": "mouth",
     "notes": ""
-  },
-  {
-    "gst": "m-a-v",
-    "text": "v. m-a-s-v",
-    "notes": "<no_image_avail>"
   },
   {
     "gst": "m-a-v-r-k",
@@ -25235,11 +25191,6 @@
     "notes": ""
   },
   {
-    "gst": "m-e-t-r-g",
-    "text": "v. m-e-t-l-k",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "m-e-t-r-k",
     "text": "metric",
     "notes": ""
@@ -25471,13 +25422,13 @@
   },
   {
     "gst": "mn/k",
-    "text": "monocle (1916",
-    "notes": "<no_image_avail>"
+    "text": "monocle",
+    "notes": "<1916><no_image_avail>"
   },
   {
     "gst": "mn/k",
-    "text": "Simp.); cf. m-a-n/k",
-    "notes": "<no_image_avail>"
+    "text": "Simp.)",
+    "notes": "<cf. m-a-n/k>"
   },
   {
     "gst": "mn/k",
@@ -25576,8 +25527,8 @@
   },
   {
     "gst": "mn-b",
-    "text": "mumble; cf. m-u-m-b",
-    "notes": "<no_image_avail>"
+    "text": "mumble",
+    "notes": "<cf. m-u-m-b>"
   },
   {
     "gst": "mn-b-r",
@@ -25666,8 +25617,8 @@
   },
   {
     "gst": "mn-e",
-    "text": "mummy; cf. m-u-m-e",
-    "notes": "<no_image_avail>"
+    "text": "mummy",
+    "notes": "<cf. m-u-m-e>"
   },
   {
     "gst": "mn-e",
@@ -25766,8 +25717,8 @@
   },
   {
     "gst": "mn-e-t",
-    "text": "minute; cf. mn-u-e-t",
-    "notes": "<no_image_avail>"
+    "text": "minute",
+    "notes": "<cf. mn-u-e-t>"
   },
   {
     "gst": "mn-e-t-b-a",
@@ -26071,8 +26022,8 @@
   },
   {
     "gst": "mn-s-t-r-l",
-    "text": "menstrual; cf. mn-s-t-r-e-l",
-    "notes": "<no_image_avail>"
+    "text": "menstrual",
+    "notes": "<cf. mn-s-t-r-e-l>"
   },
   {
     "gst": "mn-t",
@@ -27006,8 +26957,8 @@
   },
   {
     "gst": "m-s-e-l-a-n-e-s",
-    "text": "miscellanist; cf. m-s-e-l-a-n",
-    "notes": "<no_image_avail>"
+    "text": "miscellanist",
+    "notes": "<cf. m-s-e-l-a-n>"
   },
   {
     "gst": "m-s-e-l-t-o",
@@ -27196,8 +27147,8 @@
   },
   {
     "gst": "m-u-l",
-    "text": "mule (1916",
-    "notes": "<no_image_avail>"
+    "text": "mule",
+    "notes": "<1916><no_image_avail>"
   },
   {
     "gst": "m-u-l",
@@ -27681,8 +27632,8 @@
   },
   {
     "gst": "n/p-l-a",
-    "text": "interpellate; v. n/p-o-l-a",
-    "notes": "<no_image_avail>"
+    "text": "interpellate",
+    "notes": "<v. n/p-o-l-a>"
   },
   {
     "gst": "n/p-o-l-a",
@@ -28512,7 +28463,7 @@
   {
     "gst": "n-e-s-o-s-b",
     "text": "inexhaustible",
-    "notes": ""
+    "notes": "<v. n-e-s-s-b>"
   },
   {
     "gst": "n-e-s-p/t",
@@ -28558,11 +28509,6 @@
     "gst": "n-e-ss",
     "text": "notices",
     "notes": "<Expert> <no_image_avail>"
-  },
-  {
-    "gst": "n-e-s-s-b",
-    "text": "v. n-e-s-o-s-b",
-    "notes": "<no_image_avail>"
   },
   {
     "gst": "n-e-ss-e",
@@ -29185,14 +29131,9 @@
     "notes": "<no_image_avail>"
   },
   {
-    "gst": "n-k-b-u-b",
-    "text": "v. n-k-b-u-s-b",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "n-k-b-u-s-b",
     "text": "incombustible",
-    "notes": ""
+    "notes": "<v. n-k-b-u-b>"
   },
   {
     "gst": "n-k-d-e-s",
@@ -30320,11 +30261,6 @@
     "notes": "s2"
   },
   {
-    "gst": "n-s-u-b",
-    "text": "v. n-s-u-f-b",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "n-s-u-f",
     "text": "insufficient",
     "notes": ""
@@ -30332,7 +30268,7 @@
   {
     "gst": "n-s-u-f-b",
     "text": "insufferable",
-    "notes": ""
+    "notes": "<v. n-s-u-b>"
   },
   {
     "gst": "n-s-v/l",
@@ -30721,8 +30657,8 @@
   },
   {
     "gst": "nt-o-r-s",
-    "text": "indoors; cf. nt-o-s",
-    "notes": "<no_image_avail>"
+    "text": "indoors",
+    "notes": "<cf. nt-o-s>"
   },
   {
     "gst": "nt-o-s",
@@ -31005,14 +30941,9 @@
     "notes": ""
   },
   {
-    "gst": "n-u-k-t-e (angle between",
-    "text": "n and u",
-    "notes": "<no_image_avail>"
-  },
-  {
     "gst": "n-u-k-t-e",
     "text": "northwest quarter",
-    "notes": "angle between e2 <no_image_avail>"
+    "notes": "<angle between n and u>, e2 <no_image_avail>"
   },
   {
     "gst": "n-u-l-a-n-b-s",
@@ -31125,9 +31056,9 @@
     "notes": "angle between n and u <no_image_avail>"
   },
   {
-    "gst": "n-u-sh-mn-e (angle between",
-    "text": "n and u",
-    "notes": "<no_image_avail>"
+    "gst": "n-u-sh-mn-e",
+    "text": "hush money",
+    "notes": "(angle between n and u) <no_image_avail>"
   },
   {
     "gst": "n-u-sh-mn-e",
@@ -31147,11 +31078,6 @@
   {
     "gst": "n-u-t",
     "text": "nut",
-    "notes": "<no_image_avail>"
-  },
-  {
-    "gst": "n-u-t-e-t (angle between",
-    "text": "n and u",
     "notes": "<no_image_avail>"
   },
   {
@@ -31821,8 +31747,8 @@
   },
   {
     "gst": "o-d-n-a-n-s",
-    "text": "ordnance; cf. o-tn-a-n-s",
-    "notes": "<no_image_avail>"
+    "text": "ordnance",
+    "notes": "<cf. o-tn-a-n-s>"
   },
   {
     "gst": "o-d-u-s",
@@ -32065,9 +31991,9 @@
     "notes": "angle between k and p"
   },
   {
-    "gst": "o-k-p (angle between k",
+    "gst": "o-k-p",
     "text": "occupy",
-    "notes": ""
+    "notes": "<angle between k and p>"
   },
   {
     "gst": "o-k-p/l",
@@ -33146,8 +33072,8 @@
   },
   {
     "gst": "o-tn-a-n-s",
-    "text": "ordinance; cf. o-d-n-a-n-s",
-    "notes": "<no_image_avail>"
+    "text": "ordinance",
+    "notes": "<cf. o-d-n-a-n-s>"
   },
   {
     "gst": "o-tn-e",
@@ -33671,13 +33597,8 @@
   },
   {
     "gst": "p-b-sh",
-    "text": "publish (1902",
-    "notes": "<no_image_avail>"
-  },
-  {
-    "gst": "p-b-sh",
-    "text": "S90)",
-    "notes": "<no_image_avail>"
+    "text": "publish",
+    "notes": "<1902><no_image_avail>"
   },
   {
     "gst": "p-d",
@@ -33756,8 +33677,8 @@
   },
   {
     "gst": "p-e-r-ch",
-    "text": "perch; cf. p-r-ch",
-    "notes": "<no_image_avail>"
+    "text": "perch",
+    "notes": "<cf. p-r-ch>"
   },
   {
     "gst": "p-e-s",
@@ -34016,13 +33937,8 @@
   },
   {
     "gst": "p-n",
-    "text": "upon (1916",
-    "notes": "<no_image_avail>"
-  },
-  {
-    "gst": "p-n",
-    "text": "Simp.)",
-    "notes": "<no_image_avail>"
+    "text": "upon",
+    "notes": "<1916><no_image_avail>"
   },
   {
     "gst": "p-n-a-m-a",
@@ -34381,8 +34297,8 @@
   },
   {
     "gst": "p-r-ch",
-    "text": "purchase; cf. p-e-r-ch",
-    "notes": "<no_image_avail>"
+    "text": "purchase",
+    "notes": "<cf. p-e-r-ch>"
   },
   {
     "gst": "p-r-ch/a",
@@ -35581,8 +35497,8 @@
   },
   {
     "gst": "r-e-jnt",
-    "text": "repent; cf. r-jnt",
-    "notes": "<no_image_avail>"
+    "text": "repent",
+    "notes": "<cf. r-jnt>"
   },
   {
     "gst": "r-e-k",
@@ -36151,8 +36067,8 @@
   },
   {
     "gst": "r-jnt",
-    "text": "regent; cf. r-e-jnt",
-    "notes": "<no_image_avail>"
+    "text": "regent",
+    "notes": "<cf. r-e-jnt>"
   },
   {
     "gst": "r-j-o-e-s",
@@ -37015,9 +36931,9 @@
     "notes": ""
   },
   {
-    "gst": "s/s-tn-s (s2,",
-    "text": "s1",
-    "notes": "<no_image_avail>"
+    "gst": "s/s-tn-s",
+    "text": "circumstances",
+    "notes": "<s2,s1><no_image_avail>"
   },
   {
     "gst": "s/s-tn-s",
@@ -37976,8 +37892,8 @@
   },
   {
     "gst": "s-e-nt-r",
-    "text": "cinder; cf. s-e-n/r",
-    "notes": "<no_image_avail>"
+    "text": "cinder",
+    "notes": "<cf. s-e-n/r>"
   },
   {
     "gst": "s-e-nt-r-e",
@@ -38655,9 +38571,9 @@
     "notes": "o on side <no_image_avail>"
   },
   {
-    "gst": "s-i-k/o (o on",
+    "gst": "s-i-k/o",
     "text": "psychology",
-    "notes": ""
+    "notes": "<o on side>"
   },
   {
     "gst": "s-i-k-l-o-n",
@@ -41055,9 +40971,9 @@
     "notes": "th1, s2, s below end of th"
   },
   {
-    "gst": "th/s (th1, s2, s",
+    "gst": "th/s",
     "text": "thinks",
-    "notes": ""
+    "notes": "<th1, s2, s>"
   },
   {
     "gst": "th/s-g-e-h",
@@ -41400,9 +41316,9 @@
     "notes": "s1"
   },
   {
-    "gst": "th-s (th20",
+    "gst": "th-s",
     "text": "there is",
-    "notes": "<no_image_avail>"
+    "notes": "<th2><no_image_avail>"
   },
   {
     "gst": "th-s-nt",
@@ -41891,8 +41807,8 @@
   },
   {
     "gst": "tm-u-r",
-    "text": "demur; cf. tm-e-u-r",
-    "notes": "<no_image_avail>"
+    "text": "demur",
+    "notes": "<cf. tm-e-u-r>"
   },
   {
     "gst": "tm-u-r-j",
@@ -57002,11 +56918,6 @@
   {
     "gst": "",
     "text": "diluted",
-    "notes": "<GST_not_available>"
-  },
-  {
-    "gst": "",
-    "text": "dilution",
     "notes": "<GST_not_available>"
   },
   {
