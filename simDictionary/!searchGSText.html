@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
-    //v2025.0821@1:59pm allow lower case page names on github
     //V2025.0820@07:004pm added group correction function prior to GST search
     //V2025.0819@02:14pm replace in-page search with GST Search 
     //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
@@ -13,7 +12,7 @@
         var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'v2025.0821@1:59pm'; // Version display element 
+            document.getElementById('version').textContent = ' V2025.0819@02:14pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -484,11 +483,11 @@
 
             const img = document.createElement('img');
             img.className = 'absolute max-w-none';
-            //if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages and ann pages are numeric) //commented out v2025.0821@1:59pm
-            //    img.src = `${objRef.page.toLowerCase()}.png`;
-            //} else {
+            if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages and ann pages are numeric)
+                img.src = `${objRef.page.toLowerCase()}.png`;
+            } else {
                 img.src = `${objRef.page}.png`;
-            //}
+            }
             img.alt = `Gregg shorthand for word: ${objRef.word}`;
             img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
             img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally

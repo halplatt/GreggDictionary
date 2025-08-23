@@ -2501,3 +2501,4 @@ bold,bold
 weld,weld
 sword,sword
 inequality,inequity
+alfalta,alfalfa

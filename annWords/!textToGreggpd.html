@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+//v2025.0821@11:13pm fix link to ../annDictionary/!searchGSText.html
 //v2025.0705.0258pm add more allowed suffixes 
 //V=2025.0616.0258pm add public_domain_only    
 //v=2025.0510.0433pm Put coorect version in button
@@ -44,7 +45,7 @@
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = ' V2025.0819@02:14pm';
+            document.getElementById('version').textContent = 'v2025.0821@11:13pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -490,7 +491,7 @@ function processInput() {
             <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
         </div>
         <div class="inner ann">
-           <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
+           <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
         </div>
         <div class="inner pre">
             <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>

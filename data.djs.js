@@ -1,3 +1,4 @@
+//v2025.0820.0300pm display image above page
 //v2025.0615.0553pm public-domain-only=pd hide link to andrew owen's
 //v2025.0611.0339pm add style="width:60%" to page images
 //v2025.0526.0350pm add annPhrase button
@@ -9,7 +10,7 @@
 // updated 1/15/2025 at 9:42 rename refeshImage to refreshDjsWord,refrshPhrase to refreshDjsPhrase, refrshName to refreshDjsName
 //updated 1/15/2025 at 2:27 to set lastButton to hold the last button clicked;
 function getdjsJSVersion() {
-    return 'djs.js v2025.0615.0553pm';
+    return 'djs.js v2025.0820.0300pm';
 }
 // Declare global variables for clarity
 var public_domain_only = typeof public_domain_only !== 'undefined' ? public_domain_only : '';
@@ -362,10 +363,35 @@ function refreshSimName(cntAdj) {
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Names)";
 	var word = document.getElementById('txt1').value;
+
+	// create a thumbnail image for the word
+	document.getElementById('record').innerHTML = ""
+	const result = findPageByWord(word);
+	if (result) {
+		const imageContainer = document.createElement('div');
+		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+        const IMG_WIDTH = 1281;
+		imageContainer.className = 'relative overflow-hidden border';
+		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+		const img = document.createElement('img');
+		img.className = 'absolute max-w-none';
+		img.src = `./simDictionary/${result.page}.png`;
+		img.alt = `Gregg shorthand for word: ${result.t}`;
+		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
+		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
+		img.style.width = '1281px'; // Assuming the image width is fixed
+		imageContainer.appendChild(img);
+		document.getElementById('record').appendChild(imageContainer);
+	}
+
+
+
 	var wordId = findIdx(word,simName);
 	var path = '<img src="simDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
-	document.getElementById('record').innerHTML = path;
+	document.getElementById('record').innerHTML += path;
 }
 function refreshAnnPhrase(cntAdj) {
 	setLastButton('refreshAnnPhrase');
