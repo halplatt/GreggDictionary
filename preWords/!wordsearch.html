@@ -541,34 +541,31 @@ h1 {
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
-            <div class="button-row">
-                <span>Link to main dictionary:</span>
-                <div class="inner">
-                    <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
-                </div>
-            </div>
-            <div class="button-row">
-                <span>Link to Regex search for:</span>
-                <div class="inner all">
-                    <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
-                </div>
-                <div class="inner djs">
-                    <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
-                </div>
-                <div class="inner sim">
-                    <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
-                </div>
-                <div class="inner ann">
-                    <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
-                </div>
-                <div class="inner ann">
-                    <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
-                </div>
-                <div class="inner pre">
-                    <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
-                </div>
-            </div>
-            <div class="button-row">
+        <!-- beg place holder where common links begin -->
+        <div id="shared-links" data-include="../shared-links.html"></div>
+        <script>
+        (function loadSharedLinks() {
+        const hostEl = document.getElementById('shared-links');
+        if (!hostEl) return;
+        const candidates = [
+            hostEl.dataset.include || '',
+            '../shared-links.html',
+            './shared-links.html',
+            '../../shared-links.html',
+            '/GreggDictionary/shared-links.html'
+        ].filter(Boolean);
+        const tryNext = (i=0) => {
+            if (i >= candidates.length) return;
+            fetch(candidates[i], { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw 0; return r.text(); })
+            .then(html => { hostEl.innerHTML = html; })
+            .catch(() => tryNext(i+1));
+        };
+        tryNext();
+        })();
+        </script>
+        <!-- end place holder where common links begin -->
+        <div class="button-row">
 					<span>Link to text to Gregg for:</span>
                     <div class="inner">
                         <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
