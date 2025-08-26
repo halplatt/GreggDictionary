@@ -6,6 +6,7 @@ It includes a search interface with various buttons that trigger different searc
 The search functions are defined in external JavaScript files that are linked in the head of this document. 
 The styles for this page are defined in an external CSS file also linked in the head.
 
+v2025.0819@1:56pm modify links where gst merged with in page
 v2025.0805@10:54pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
 v2025.0706.0430pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
 v2025.0624.0112am for public domain only, savedbuttons limited to pre or ann 
@@ -48,7 +49,7 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2025.0805@10:54pm";
+    			document.getElementById('version').innerHTML = "v2025.0825@11:11pm";
 				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
 				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
@@ -584,13 +585,13 @@ document.addEventListener('DOMContentLoaded', function() {
 								<a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
 							</div>
 							<div class="inner">
-								<a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
+								<a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
 							</div>
 							<div class="inner">
 								<a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
 							</div>
 							<div class="inner">
-								<a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
+								<a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
 							</div>
 							<div class="inner">
 								<a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
@@ -609,10 +610,6 @@ document.addEventListener('DOMContentLoaded', function() {
 							<br/>
 							<span>Link to search outlines in text notation:</span>
 							<div class="inner">
-								<a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
-							</div>
-							<div class="inner">
-								<a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!searchGSText.html', 'simGSText');">Simplified(GST)</a>
 								<a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!searchYAGATSText.html', 'simYAGATSText');">Simplified(YAGATS)</a>
 							</div>
 						</div>
