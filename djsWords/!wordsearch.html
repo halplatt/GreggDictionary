@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    V2025.0825@9:40pm use include shared-links.html
     V2025.0819@02:14pm replace in-page search with GST Search
     V2025.0616.0219pm add public_domain_only
     V2025.0614.1122am add words pre-fix suffix and add exact button
@@ -28,7 +29,7 @@
 		var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0819@02:14pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0825@11:11pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}		
@@ -541,63 +542,42 @@ h1 {
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
-            <div class="button-row">
-                <span>Link to main dictionary:</span>
-                <div class="inner">
-                    <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
-                </div>
-            </div>
-            <div class="button-row">
-                <span>Link to Regex search for:</span>
-                <div class="inner all">
-                    <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
-                </div>
-                <div class="inner djs">
-                    <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
-                </div>
-                <div class="inner sim">
-                    <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
-                </div>
-                <div class="inner ann">
-                    <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
-                </div>
-                <div class="inner ann">
-                    <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
-                </div>
-                <div class="inner pre">
-                    <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
-                </div>
-            </div>
-            <div class="button-row">
-					<span>Link to text to Gregg for:</span>
-                    <div class="inner">
-                        <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
-                    </div>
-                    <div class="inner">
-                        <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
-                    </div>
-                    <div class="inner">
-                        <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
-                    </div>
-            </div>
+        <!-- beg place holder where common links begin -->
+        <div id="shared-links" data-include="../shared-links.html"></div>
+        <script>
+        (function loadSharedLinks() {
+        const hostEl = document.getElementById('shared-links');
+        if (!hostEl) return;
+        const candidates = [
+            hostEl.dataset.include || '',
+            '../shared-links.html',
+            './shared-links.html'
+        ].filter(Boolean);
+        const tryNext = (i=0) => {
+            if (i >= candidates.length) return;
+            fetch(candidates[i], { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw 0; return r.text(); })
+            .then(html => { hostEl.innerHTML = html; })
+            .catch(() => tryNext(i+1));
+        };
+        tryNext();
+        })();
+        </script>
+        <!-- end place holder where common links begin -->    
             <br>
             <div class="input-container"></div>     
-            <div class="button-row">
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
-                    <small>^prefix</small>
-                </button>
+            <div class="button-row">  
+                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word"><small>^prefix</small></button>   
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button> 
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
                 <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
-                </button>
-
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
             </div>
             <div class="input-row">
                 <input type="text" id="regexInput" placeholder="Enter Regular Expression">

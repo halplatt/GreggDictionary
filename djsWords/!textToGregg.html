@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
-//v2025.0821@11:13pm fix link to ../annDictionary/!searchGSText.html
+//V2025.0825@9:40pm use include shared-links.html
 //v2025.0705.0258pm add more allowed suffixes 
 //V=2025.0616.0258pm add public_domain_only    
 //v=2025.0510.0433pm Put coorect version in button
@@ -45,7 +45,7 @@
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'v2025.0821@11:13pm';
+            document.getElementById('version').textContent = 'V2025.0825@9:40pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -470,45 +470,28 @@ function processInput() {
 </head>
 <body>
     <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
-    <div class="button-row">
-        <span>Link to main dictionary:</span>
-        <div class="inner">
-            <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
-        </div>
-    </div>
-    <div class="button-row">
-        <span>Link to Regex search for:</span>
-        <div class="inner all">
-            <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
-        </div>
-        <div class="inner djs">
-            <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
-        </div>
-        <div class="inner sim">
-            <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
-        </div>
-        <div class="inner ann">
-            <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
-        </div>
-        <div class="inner ann">
-           <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(GST)</a>
-        </div>
-        <div class="inner pre">
-            <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
-        </div>
-    </div>
-    <div class="button-row">
-            <span>Link to text to Gregg for:</span>
-            <div class="inner djs">
-                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
-            </div>
-            <div class="inner ann">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
-            </div>
-            <div class="inner pre">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
-            </div>
-    </div>
+    <!-- beg place holder where common links begin -->
+    <div id="shared-links" data-include="../shared-links.html"></div>
+    <script>
+    (function loadSharedLinks() {
+    const hostEl = document.getElementById('shared-links');
+    if (!hostEl) return;
+    const candidates = [
+        hostEl.dataset.include || '',
+        '../shared-links.html',
+        './shared-links.html'
+    ].filter(Boolean);
+    const tryNext = (i=0) => {
+        if (i >= candidates.length) return;
+        fetch(candidates[i], { cache: 'no-cache' })
+        .then(r => { if (!r.ok) throw 0; return r.text(); })
+        .then(html => { hostEl.innerHTML = html; })
+        .catch(() => tryNext(i+1));
+    };
+    tryNext();
+    })();
+    </script>
+    <!-- end place holder where common links begin -->    
     <br>     
     <form id="translatorForm">
         <input type="checkbox" id="checkboxUseDict2" checked>

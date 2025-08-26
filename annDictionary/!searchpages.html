@@ -4,7 +4,6 @@ This program displays the page of a dictionary on which the search word will be 
 To customize this program:
 1. Change the `dict` array to the page names of the .png images you are searching. The page names must be in alphabetical order.
 2. Change the src= in the `path` statement to the folder containing the .png images.
-version 2025/01/23 at 1PM adjust size of record display area.
 -->
 <html>
 	<head>
@@ -125,7 +124,7 @@ version 2025/01/23 at 1PM adjust size of record display area.
 	<body>
 		<div class="container">
 				<h3 id="searchTitle">Search pages in </h3>
-                <div id="version">Version 2025/01/23 at 1PM</div> <!-- Version display element -->
+                <div id="version">Version 2024/9/5@2:30pm</div> <!-- Version display element -->
 				<div class="search">
 					<div class="middle">
 						<div class="inner">
@@ -135,7 +134,7 @@ version 2025/01/23 at 1PM adjust size of record display area.
 							<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){refreshImage()}" autofocus class="djs"/>
 						</div>
 						<div class="inner">
-							<button id="btn1" class="djs" onclick="refreshImage()"><img src="!search.png" accesskey="s" title="Alt+Shift+s"></button>
+							<button id="btn1" class="djs" onclick="refreshImage()"><img src="search.png" accesskey="s" title="Alt+Shift+s"></button>
 						</div>
 						<div class="inner">
 							<button id="btnNext" class="djs" onclick="moveNext()">Next</button>
@@ -161,8 +160,7 @@ version 2025/01/23 at 1PM adjust size of record display area.
 	function refreshImage() {
 		var word = document.getElementById('txt1').value;
 		var wordId = findIdx(word, dict);
-		//var path = '<img src="' + "." + '/' + wordId + '.png">';
-		var path = '<img src="' + "." + '/' + wordId + '.png" style="max-width: 100%; height: auto;">';
+		var path = '<img src="' + "." + '/' + wordId + '.png">';
 		document.getElementById('record').innerHTML = path;
 		document.getElementById('txt1').focus();
 		document.getElementById('txt1').select();

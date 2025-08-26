@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+V2025.0825.1159pm rearanged buttons and fixed links
 v2025.0528.0915pm fix insert character at cursor position
 v=2025.0507.0109pm add link buttons to other tools
 Version 02/12/2025 at 6:34pm Copyright notice
@@ -158,7 +159,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0619.0500pm</p>
+    <p id="version">V2025.0825.1159pm</p>
 
     <div class="input-container">
         <div class="button-row">
@@ -173,52 +174,48 @@ version 02/06/2025 at 9:18pm First version
                 <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('./!wordsearchall.html', 'allWords')">all-versions</a>
             </div>
             <div class="inner djs">
-                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
+                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!wordsearch.html', 'djsWords')">djs</a>
             </div>
             <div class="inner sim">
-                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
+                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('./simDictionary/!searchGSText.html', 'simGST')">Simplified(GST)</a>
             </div>
             <div class="inner ann">
-                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch.html', 'annWords');">Anniversary</a>
+                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!wordsearch.html', 'annWords');">Anniversary</a>
             </div>
             <div class="inner ann">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!searchGSText.html', 'annGST');">Anniversary(GST)</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annDictionary/!searchGSText.html', 'annGST');">Anniversary(GST)</a>
             </div>
             <div class="inner pre">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch.html', 'preWords');">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!wordsearch.html', 'preWords');">pre-Anniversary</a>
             </div>
         </div>
         <div class="button-row">
             <span>Link to text to Gregg for:</span>
             <div class="inner">
-                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('./djsWords/!textToGregg.html', 't2djsWords');">djs</a>
             </div>
             <div class="inner">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg.html', 't2annWords');">Anniversary</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('./annWords/!textToGregg.html', 't2annWords');">Anniversary</a>
             </div>
             <div class="inner">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg.html', 't2preWords');">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('./preWords/!textToGregg.html', 't2preWords');">pre-Anniversary</a>
             </div>
         </div>
     </div>
     <br>
     <div class="input-container">
-        <div class="button-row">
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
-                    <small>^prefix</small>
-                </button>
+            <div class="button-row">  
+                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word"><small>^prefix</small></button>   
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button> 
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
                 <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
-                </button>
-
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter Regular Expression">

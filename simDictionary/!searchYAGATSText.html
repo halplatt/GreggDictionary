@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAGATS Search</title>
     <script>
+    //V2025.0825@9:40pm use include shared-links.html    
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
     </script>
     <style>
@@ -313,7 +314,7 @@
     </style>
 </head>
 <body>
-    <div class="version">Version 08/05/2025@10:21pm</div>
+    <div class="version">V2025.0825@9:40pm</div>
     <h1>GreggSimplified YAGATS Search</h1>
     <p class="subtitle">using YAGATS (Yet Another Gregg-ASCII Transliteration System)</p>
     <a href="!searchYAGATSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
@@ -324,40 +325,28 @@
                 <a href="javascript:void(0);" onclick="openOrFocusTab('../GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
             </div>
         </div>
-        <div class="button-row">
-            <span>Link to Regex search for:</span>
-            <div class="inner all">
-                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('../!wordsearchall.html', 'allWords')">all-versions</a>
-            </div>
-            <div class="inner djs">
-                <a a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!wordsearch.html', 'djsWords')">djs</a>
-            </div>
-            <div class="inner sim">
-                <a a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('../simDictionary/!wordsearch.html', 'simWords')">Simplified-in-page</a>
-            </div>
-            <div class="inner ann">
-                <a class="ann"  href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!wordsearch' + public_domain_only + '.html', 'annWords');">Anniversary</a>
-            </div>
-            <div class="inner ann">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annDictionary/!wordsearch' + public_domain_only + '.html', 'annWordsinpage');">Anniversary-in-page</a>
-            </div>
-            <div class="inner pre">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!wordsearch' + public_domain_only + '.html', 'preWords');">pre-Anniversary</a>
-            </div>
-        </div>
-        <div class="button-row">
-            <span>Link to text to Gregg for:</span>
-            <div class="inner">
-                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('../djsWords/!textToGregg.html', 't2djsWords');">djs</a>
-            </div>
-            <div class="inner">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('../annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
-            </div>
-            <div class="inner">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('../preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
-            </div>
-        </div>
-    </div>
+        <!-- beg place holder where common links begin -->
+        <div id="shared-links" data-include="../shared-links.html"></div>
+        <script>
+        (function loadSharedLinks() {
+        const hostEl = document.getElementById('shared-links');
+        if (!hostEl) return;
+        const candidates = [
+            hostEl.dataset.include || '',
+            '../shared-links.html',
+            './shared-links.html'
+        ].filter(Boolean);
+        const tryNext = (i=0) => {
+            if (i >= candidates.length) return;
+            fetch(candidates[i], { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw 0; return r.text(); })
+            .then(html => { hostEl.innerHTML = html; })
+            .catch(() => tryNext(i+1));
+        };
+        tryNext();
+        })();
+        </script>
+        <!-- end place holder where common links begin -->   
 
     <div class="button-row" style="margin-top: 15px;">
         <label><input type="radio" name="searchType" value="beginsWith" checked> Begins with</label>
@@ -365,11 +354,13 @@
         <label><input type="radio" name="searchType" value="endsWith"> Ends with</label>
         <label><input type="radio" name="searchType" value="exact"> Exact match</label>
     </div>
+    <div class="button-row" style="margin-top: 15px;">
     <input type="text" id="regexInput" placeholder="Enter search text">
-    <button id="searchGST" accesskey="y">YAGATS Search (Alt+Y)</button>
-    <button id="searchText" accesskey="t">Text Search (Enter)</button>
-    <button id="referenceBtn" class="reference-btn" accesskey="r">? Character Reference (Alt+R)</button>
     
+    <button id="searchText" accesskey="t">Search Text (Enter)</button>
+    <button id="searchGST" accesskey="y">Search YAGATS (Alt+Y)</button>
+    <button id="referenceBtn" class="reference-btn" accesskey="r">? Character Reference (Alt+R)</button>
+    </div>
     <!-- Tooltip for character reference -->
     <div id="referenceTooltip" class="reference-tooltip">
         <h3>YAGATS Special Characters</h3>

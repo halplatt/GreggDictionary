@@ -15,7 +15,7 @@
         var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0825@5:40pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0825@11:11pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -174,9 +174,7 @@
     const candidates = [
         hostEl.dataset.include || '',
         '../shared-links.html',
-        './shared-links.html',
-        '../../shared-links.html',
-        '/GreggDictionary/shared-links.html'
+        './shared-links.html'
     ].filter(Boolean);
     const tryNext = (i=0) => {
         if (i >= candidates.length) return;
@@ -198,11 +196,11 @@
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
                 <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter regular expression">
