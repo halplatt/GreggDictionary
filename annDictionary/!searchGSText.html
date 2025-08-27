@@ -165,28 +165,55 @@
     <div class="version" id="version"></div>
     <h1>Anniversary Gregg Shorthand Text Notation (GST) Search</h1>
     <a href="!searchGSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
-    <!-- beg place holder where common links begin -->
-    <div id="shared-links" data-include="../shared-links.html"></div>
-    <script>
-    (function loadSharedLinks() {
-    const hostEl = document.getElementById('shared-links');
-    if (!hostEl) return;
-    const candidates = [
-        hostEl.dataset.include || '',
-        '../shared-links.html',
-        './shared-links.html'
-    ].filter(Boolean);
-    const tryNext = (i=0) => {
-        if (i >= candidates.length) return;
-        fetch(candidates[i], { cache: 'no-cache' })
-        .then(r => { if (!r.ok) throw 0; return r.text(); })
-        .then(html => { hostEl.innerHTML = html; })
-        .catch(() => tryNext(i+1));
-    };
-    tryNext();
-    })();
-    </script>
-    <!-- end place holder where common links begin -->
+<!-- beg place holder where common links begin -->
+<div id="shared-links" data-include="../!shared-links.html"></div>
+<script>
+(function loadSharedLinks() {
+  const hostEl = document.getElementById('shared-links');
+  if (!hostEl) return;
+
+  const candidates = [
+    hostEl.dataset.include || '',
+    '../shared-links.html',
+    './shared-links.html'
+  ].filter(Boolean);
+
+  const tryNext = (i = 0) => {
+    if (i >= candidates.length) return;
+
+    fetch(candidates[i], { cache: 'no-cache' })
+      .then(r => {
+        if (!r.ok) throw 0;
+        return r.text().then(html => ({ html, url: r.url }));
+      })
+      .then(({ html, url }) => {
+        // Inject the HTML
+        hostEl.innerHTML = html;
+
+        // Compute the real directory of shared-links.html (ends with '/notes/')
+        const baseDir = new URL('.', url).pathname; // e.g., '/GreggDictionary/notes/'
+
+        // Rewrite only placeholder-prefixed URLs that start with '~/'
+        const rewrite = (selector, attr) => {
+          hostEl.querySelectorAll(selector).forEach(el => {
+            const v = el.getAttribute(attr);
+            if (!v || !v.startsWith('~/')) return;
+            el.setAttribute(attr, baseDir + v.slice(2));
+          });
+        };
+
+        rewrite('a[href]', 'href');
+        rewrite('img[src]', 'src');
+        rewrite('link[href]', 'href');
+        rewrite('script[src]', 'src');
+      })
+      .catch(() => tryNext(i + 1));
+  };
+
+  tryNext();
+})();
+</script>
+<!-- end place holder where common links begin -->
     <br>
     <div class="input-container">
             <div class="button-row">  
