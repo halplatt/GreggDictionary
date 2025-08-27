@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <!--
-V2025.0827@2:52pm use include !shared-links.html
-V2025.0825.1159pm rearanged buttons and fixed links
-v2025.0528.0915pm fix insert character at cursor position
-v=2025.0507.0109pm add link buttons to other tools
-Version 02/12/2025 at 6:34pm Copyright notice
-Version 02/07/2025 at 510pm Convert png names to lowercase, window.open
-version 02/06/2025 at 9:18pm First version
+This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
+THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+V2025.0827@1:56pm use include !shared-links.html
+V2025.0616.0310pm add public_domain_only
+V2025.0614.0824pm add words pre-fix suffix and add exact button
+v2025.0527.0646pm fix insert not to replace existing text
+v=2025.0507.0211pm add link buttons to other tools
+Version 05/03/2025 at 12:26pm Style text if click event added to resultItem
+Version 02/12/2025 at 5:47pm Add copyright notice
+Version 02/07/2025 at 5pm Convert png names to lowercase
+Version 01/24/2025 at 9:26pm if globalGsd is ann, open searchpages.html in new tab; stop propagation of click event
+Version 01/23/2025 at 11:45am modified work in xxxDictionary using globalGsd 
+Version 01/17/2025 at 12:00am open GreggDictionary in GreggDictionary tab     
+Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
+    Version 12/11/2024 at 11:14PM first version
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Search</title>
+    <script>
+        var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+               document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0827@1:56pm'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}		
+        });
+        if (public_domain_only === 'pd') {
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .sim,
+            .djs,
+            .cen,
+            .all,
+            .s90 {
+                display: none !important;
+            }`;
+            document.head.appendChild(style);
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -108,15 +138,15 @@ version 02/06/2025 at 9:18pm First version
         flex-direction: column;
         align-items: flex-start;
     }
+    .inner {
+    margin-right: 10px; /* Add spacing between links */
+    display: inline-block; /* Ensure links are displayed inline */
+    }   
     .button-row {
         display: flex;
         flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
         width: 100%;
-    }
-    .inner {
-    margin-right: 10px; /* Add spacing between links */
-    display: inline-block; /* Ensure links are displayed inline */
     }
     .input-row {
         display: flex;
@@ -146,110 +176,107 @@ version 02/06/2025 at 9:18pm First version
     #add0or1 {
         margin-right: 10px;
     }
-    .djs-item {
-        margin-top: 10px;
-        border-top: 1px solid #ccc; /* Add this line to create a line between list items */
-        padding-top: 10px; /* Add some padding to separate the border from the content */
-    }
-    #divAboutText p {
-        margin: 0;
-        line-height: 1.2;
-    }
     </style>
 </head>
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0827@2:52pm</p>
+    <p id="version">V2025.0827@1:56pm</p>
 
     <div class="input-container">
-    <!-- beg place holder where common links begin -->
-    <div id="shared-links" data-include="../!shared-links.html"></div>
-    <script>
-    var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd' 
-    (function loadSharedLinks() {
-    const hostEl = document.getElementById('shared-links');
-    if (!hostEl) return;
-
-    const candidates = [
-        hostEl.dataset.include || '',
-        '../!shared-links.html',
-        './!shared-links.html'
-    ].filter(Boolean);
-
-    const tryNext = (i = 0) => {
-        if (i >= candidates.length) return;
-
-        fetch(candidates[i], { cache: 'no-cache' })
-        .then(r => {
-            if (!r.ok) throw 0;
-            return r.text().then(html => ({ html, url: r.url }));
-        })
-        .then(({ html, url }) => {
-            hostEl.innerHTML = html;
-
-            // Directory of the fetched include (e.g., '/GreggDictionary/notes/')
-            const baseDir = new URL('.', url).pathname;
-
-            // Rewrite attributes that start with '~/'
-            const rewriteAttr = (selector, attr) => {
-            hostEl.querySelectorAll(selector).forEach(el => {
-                const v = el.getAttribute(attr);
-                if (!v || !v.startsWith('~/')) return;
-                el.setAttribute(attr, baseDir + v.slice(2));
-            });
-            };
-            rewriteAttr('a[href]', 'href');
-            rewriteAttr('img[src]', 'src');
-            rewriteAttr('link[href]', 'href');
-            rewriteAttr('script[src]', 'src');
-
-            // Rewrite "'~/" or '"~/' inside inline event handlers (e.g., onclick)
-            hostEl.querySelectorAll('*').forEach(el => {
-            for (const attr of Array.from(el.attributes)) {
-                if (!/^on/i.test(attr.name)) continue;
-                const v = attr.value;
-                if (!v) continue;
-                const replaced = v.replace(/(['"])~\//g, (_, q) => q + baseDir);
-                if (replaced !== v) el.setAttribute(attr.name, replaced);
-            }
-            });
-
-            // Safety: ensure openOrFocusTab resolves '~/'
-            (function installOpenWrapper(base) {
-            const prev = window.openOrFocusTab;
-            window.openOrFocusTab = function(url, name, ...rest) {
-                if (typeof url === 'string' && url.startsWith('~/')) {
-                url = base + url.slice(2);
-                }
-                if (typeof prev === 'function') {
-                return prev.call(this, url, name, ...rest);
-                }
-                return window.open(url, name, ...rest);
-            };
-            })(baseDir);
-        })
-        .catch(() => tryNext(i + 1));
-    };
-
-    tryNext();
-    })();
-    </script>
-    <!-- end place holder where common links -->
+         <!-- beg place holder where common links begin -->
+        <div id="shared-links" data-include="../!shared-links.html"></div>
+        <script>
+        (function loadSharedLinks() {
+          const hostEl = document.getElementById('shared-links');
+          if (!hostEl) return;
+        
+          const candidates = [
+            hostEl.dataset.include || '',
+            '../!shared-links.html',
+            '../shared-links.html',
+            './!shared-links.html',
+            './shared-links.html'
+          ].filter(Boolean);
+        
+          const tryNext = (i = 0) => {
+            if (i >= candidates.length) return;
+        
+            fetch(candidates[i], { cache: 'no-cache' })
+              .then(r => {
+                if (!r.ok) throw 0;
+                return r.text().then(html => ({ html, url: r.url }));
+              })
+              .then(({ html, url }) => {
+                hostEl.innerHTML = html;
+        
+                // Directory of the fetched include (e.g., '/GreggDictionary/notes/')
+                const baseDir = new URL('.', url).pathname;
+        
+                // Rewrite attributes that start with '~/'
+                const rewriteAttr = (selector, attr) => {
+                  hostEl.querySelectorAll(selector).forEach(el => {
+                    const v = el.getAttribute(attr);
+                    if (!v || !v.startsWith('~/')) return;
+                    el.setAttribute(attr, baseDir + v.slice(2));
+                  });
+                };
+                rewriteAttr('a[href]', 'href');
+                rewriteAttr('img[src]', 'src');
+                rewriteAttr('link[href]', 'href');
+                rewriteAttr('script[src]', 'src');
+        
+                // Rewrite "'~/" or '"~/' inside inline event handlers (e.g., onclick)
+                hostEl.querySelectorAll('*').forEach(el => {
+                  for (const attr of Array.from(el.attributes)) {
+                    if (!/^on/i.test(attr.name)) continue;
+                    const v = attr.value;
+                    if (!v) continue;
+                    const replaced = v.replace(/(['"])~\//g, (_, q) => q + baseDir);
+                    if (replaced !== v) el.setAttribute(attr.name, replaced);
+                  }
+                });
+        
+                // Safety: ensure openOrFocusTab resolves '~/'
+                (function installOpenWrapper(base) {
+                  const prev = window.openOrFocusTab;
+                  window.openOrFocusTab = function(url, name, ...rest) {
+                    if (typeof url === 'string' && url.startsWith('~/')) {
+                      url = base + url.slice(2);
+                    }
+                    if (typeof prev === 'function') {
+                      return prev.call(this, url, name, ...rest);
+                    }
+                    return window.open(url, name, ...rest);
+                  };
+                })(baseDir);
+              })
+              .catch(() => tryNext(i + 1));
+          };
+        
+          tryNext();
+        })();
+        </script>
+        <!-- end place holder where common links -->
+    </div>
     <br>
     <div class="input-container">
-            <div class="button-row">  
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word"><small>^prefix</small></button>   
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button> 
+        <div class="button-row">
+                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
+                    <small>^prefix</small>
+                </button>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
                 <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
+                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
+                </button>
+
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter Regular Expression">
@@ -266,13 +293,16 @@ version 02/06/2025 at 9:18pm First version
         const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
         const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
         const IMG_WIDTH = 1281;
-        
+        var globalGsd
         try {
-                const folderName = 'all versions';
+                const url = new URL(window.location.href);
+                const path = url.pathname;
+                const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
                 document.title = `Regex Search of ${folderName}`;
                 document.querySelector('h1').textContent = `Regex Search of ${folderName}`;
                 document.querySelector('title').textContent = `Regex Search of ${folderName}`;
+                globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `Regex Search of ${imagePath1}`;
             }
@@ -299,7 +329,7 @@ version 02/06/2025 at 9:18pm First version
         });
 
         async function fetchData() {
-            const response = await fetch('simDictionary/!reference.json');
+            const response = await fetch('!reference.json');
             const data = await response.json();
             return data;
         }
@@ -324,41 +354,9 @@ version 02/06/2025 at 9:18pm First version
                         }
                         resultCount++;
 
-
-                        // Create an img element for the word if the PNG file exists
-                        listItem = document.createElement("li");
-                        listItem.className = 'djs-item';
-                        listItem.textContent = 'djs: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'djs'));
-                        const imagePath1 = 'djsWords/'; //path to word.png images
-                        const img_djs = document.createElement("img");
-                        img_djs.src = `${imagePath1}${word.t}.png`;
-                        
-
-                        img_djs.onerror = function() {
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
-
-                        // Add vertical align to the image based on the content of a corresponding text file
-                        getVerticalAlign(img_djs.src).then(verticalAlign => {
-                            img_djs.style.verticalAlign = verticalAlign;
-                        });
-
-                        listItem.appendChild(img_djs);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
-
-
-
-                       
-
-
-
-
-                        const resultItem = document.createElement('li');
+                        const resultItem = document.createElement('div');
                         resultItem.className = 'result-item';
-                        resultItem.innerHTML = `Simplified: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
- 
+                        resultItem.innerHTML = `Page: ${page.page}, Word: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
 
                         const outerContainer = document.createElement('div');
                         outerContainer.className = 'max-w-screen overflow-x-auto';
@@ -370,11 +368,7 @@ version 02/06/2025 at 9:18pm First version
 
                         const img = document.createElement('img');
                         img.className = 'absolute max-w-none';
-                        if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github
-                            img.src = `simDictionary/${page.page.toLowerCase()}.png`;
-                        } else {
-                            img.src = `simDictionary/${page.page}.png`;
-                        }
+                        img.src = `${page.page}.png`;
                         img.alt = `Gregg shorthand for word: ${word.t}`;
                         img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
                         img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
@@ -394,10 +388,9 @@ version 02/06/2025 at 9:18pm First version
                             clipboardInput.value = word.t;
                             clipboardInput.select();
                             document.execCommand("copy");
-                            clipboardInput.value = "";                            
-                            var url = `GreggDictionary.html?x=${word.t}&gsd=sim`;
-                            var newTab=window.open(url, 'GreggDictionary');
-                            newTab.focus();
+                            clipboardInput.value = "";
+                            var url = `../GreggDictionary${public_domain_only}.html?x=${word.t}&gsd=${globalGsd}`;
+                            window.open(url, 'GreggDictionary');
                         };
 
                         const expandButton = document.createElement('button');
@@ -425,66 +418,29 @@ version 02/06/2025 at 9:18pm First version
                         outerContainer.appendChild(expandButton);
                         resultItem.appendChild(outerContainer);
                         resultsContainer.appendChild(resultItem);
-
-                         // Create an img element for the word if the PNG file exists
-                         listItem = document.createElement("li");
-                        listItem.textContent = 'anniversary: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'ann'));
-                        const imagePathann = 'annWords/'; //path to word.png images
-                        const img_ann = document.createElement("img");
-                        img_ann.src = `${imagePathann}${word.t}.png`;
-                        img_ann.onerror = function() {
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
-
-                        listItem.appendChild(img_ann);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
-
-
-
-
-                        // Create an img element for the word if the PNG file exists
-                        listItem = document.createElement("li");
-                        listItem.textContent = 'pre-anniversary: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'pre'));
-                        const imagePathpre = 'preWords/'; //path to word.png images
-                        const img_pre = document.createElement("img");
-                        img_pre.src = `${imagePathpre}${word.t}.png`;
-                        
-
-                        img_pre.onerror = function() {
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
-
-                        // Add vertical align to the image based on the content of a corresponding text file
-
-                        listItem.appendChild(img_pre);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
                     }
                 }
             }
-            var aboutText = "";
-            aboutText = aboutText.concat("<p><b>DJS images extracted from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");	
-            aboutText = aboutText.concat("<p><b>Simplified images extracted from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
-            aboutText = aboutText.concat("<p><i><b>Anniversary images extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond.</p>");
-            aboutText = aboutText.concat("<p><i><b>Pre-anniversary images extracted from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar.</p>");
+
             const endMessage = document.createElement('div');
-            const divAboutText = document.createElement('div');
-            divAboutText.id = 'divAboutText';
             endMessage.className = 'result-item';
+            const aboutText = document.createElement("div");
+            if (globalGsd=="sim") {
+                aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
+            } else if (globalGsd=="ann") {
+                aboutText.innerHTML = ("<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary,</i> a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg. </p>");
+            } 
             if (resultCount === 0) {
                 endMessage.textContent = 'No matches found';
-                aboutText = ""
+                aboutText.innerHTML = ""
             } else if (resultCount < maxResults) {
                 endMessage.textContent = `End of ${resultCount} matches`;
             } else {
                 endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches`;
             }
-            divAboutText.innerHTML = aboutText;
             resultsContainer.appendChild(endMessage);
-            resultsContainer.appendChild(divAboutText);
+            resultsContainer.appendChild(aboutText);
+
             regexInput.focus();
             regexInput.select();
         }
@@ -556,7 +512,7 @@ version 02/06/2025 at 9:18pm First version
         }
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
-                var regexInput = document.getElementById('regexInput');
+            var regexInput = document.getElementById('regexInput');
             regexInput.focus();
             var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
             var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
@@ -568,34 +524,6 @@ version 02/06/2025 at 9:18pm First version
             // Set the cursor position to the end of the inserted text
             var cursorPos = endPos + text.length;
             regexInput.selectionStart = regexInput.selectionEnd = cursorPos;     
-        }
-        //add vertical align to the image based on the content of a corresponding text file 
-        function getVerticalAlign(pngFile) {
-                var txtFile = pngFile.replace('.png', '.txt');
-                return fetch(txtFile)
-                    .then(response => {
-                        if (!response.ok) {
-                            return '0px';
-                        }
-                        return response.text();
-                    })
-                    .then(px => (-1 * parseFloat(px.trim())) + 'px')  // Prepend a '-' to the number
-                    .catch(() => '0px');
-        }
-        // Function to copy text to clipboard
-        function copyToClipboard(text,globalGsd) {
-            const clipboardInput = document.getElementById("clipboardInput");
-            clipboardInput.value = text;
-            clipboardInput.select();
-            document.execCommand("copy");
-            clipboardInput.value = "";
-            openInNewTab(text);
-        }
-        //Function to open in new tab
-        function openInNewTab(text,globalGsd) {
-            url = './GreggDictionary.html?x=' + text + '&gsd=' + globalGsd;
-            var newTab = window.open(url, 'GreggDictionary');
-            newTab.focus();
         }
         // Function to open or focus a tab with the given URL and target
         function openOrFocusTab(url, target) {
