@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YAGATS Search</title>
+    <title>GRASCII Search</title>
     <script>
     //V2025.0826@7:57pm add gst and notes columns in results
     //V2025.0825@9:40pm use include shared-links.html    
@@ -295,6 +295,15 @@
         font-size: 16px;
         font-weight: bold;
     }
+    /* GRASCII reference styles */
+    .grascii-reference { font-size: 14px; line-height: 1.5; }
+    .grascii-reference h2 { margin: 0 0 10px; font-size: 20px; }
+    .grascii-reference h3 { margin: 16px 0 6px; font-size: 16px; }
+    .grascii-reference p { margin: 6px 0; }
+    .grascii-reference ul { margin: 6px 0 10px 20px; padding: 0; }
+    .grascii-reference li { margin: 4px 0; }
+    .grascii-reference code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+    .grascii-reference img { height: 22px; vertical-align: middle; margin-left: 6px; border: 1px solid #ddd; border-radius: 2px; background: #fff; }
     
     @media (max-width: 768px) {
         .modal-content {
@@ -315,10 +324,9 @@
     </style>
 </head>
 <body>
-    <div class="version">V2025.0826@7:57pm</div>
-    <h1>GreggSimplified YAGATS Search</h1>
-    <p class="subtitle">using YAGATS (Yet Another Gregg-ASCII Transliteration System)</p>
-    <a href="!searchYAGATSText(help).html" target="_blank" style="float: right; margin-bottom: 10px;">Help</a>
+    <div class="version">V2025.0826@8:15pm</div>
+    <h1>GreggSimplified GRASCII Search</h1>
+    <p class="subtitle">using GRASCII (Gregg-ASCII Transliteration System)</p>
        <div class="input-container">
         <div class="button-row">
             <span>Link to main dictionary:</span>
@@ -359,49 +367,59 @@
     <input type="text" id="regexInput" placeholder="Enter search text">
     
     <button id="searchText" accesskey="t">Search Text (Enter)</button>
-    <button id="searchGST" accesskey="y">Search YAGATS (Alt+Y)</button>
+    <button id="searchGST" accesskey="y">Search GRASCII (Alt+Y)</button>
     <button id="referenceBtn" class="reference-btn" accesskey="r">? Character Reference (Alt+R)</button>
     </div>
-    <!-- Tooltip for character reference -->
-    <div id="referenceTooltip" class="reference-tooltip">
-        <h3>YAGATS Special Characters</h3>
-        <table class="tooltip-table">
-            <thead>
-                <tr>
-                    <th class="char-col">Char</th>
-                    <th>Meaning</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td class="char-col">(</td><td>the "over th" stroke</td></tr>
-                <tr><td class="char-col">)</td><td>the "under th" stroke</td></tr>
-                <tr><td class="char-col">$</td><td>the "sh" stroke</td></tr>
-                <tr><td class="char-col">^</td><td>caret indicates a high floating prefix e.g. o^du = "overdue"</td></tr>
-                <tr><td class="char-col">*</td><td>asterisk indicates an intersecting stroke; p*m = "p.m."</td></tr>
-                <tr><td class="char-col">:</td><td>colon indicates a disjoined stroke, for example, bro(:d = "brotherhood"</td></tr>
-                <tr><td class="char-col">%</td><td>percent sign indicates a special turning as in o% = "all"</td></tr>
-                <tr><td class="char-col">~</td><td>tilde indicates the "jog" as seen between m and n in "I am not"</td></tr>
-                <tr><td class="char-col">=</td><td>capitalization mark</td></tr>
-                <tr><td class="char-col">5</td><td>(left s + comma s) blend as in a5 = access</td></tr>
-                <tr><td class="char-col">3</td><td>(comma s + left s) blend</td></tr>
-                <tr><td class="char-col">c</td><td>ch stroke</td></tr>
-                <tr><td class="char-col">y</td><td>represents the -ally/-ily suffix loop</td></tr>
-                <tr><td class="char-col">h</td><td>the "h" dot</td></tr>
-                <tr><td class="char-col">q</td><td>the dot representing the suffix "-ing"</td></tr>
-                <tr><td class="char-col">@</td><td>the dot representing the word "a" or "an"</td></tr>
-                <tr><td class="char-col">A</td><td>the dot that replaces the first 'a' as in Ahed = "ahead" and Auak = "awake"</td></tr>
-                <tr><td class="char-col">w</td><td>indicates that the next vowel has the "w dash" under it; kwek = "quick"</td></tr>
-                <tr><td class="char-col">s</td><td>the "comma s" stroke</td></tr>
-                <tr><td class="char-col">z</td><td>the "left s" stroke</td></tr>
-            </tbody>
-        </table>
-    </div>
+        <!-- Tooltip for character reference -->
+        <div id="referenceTooltip" class="reference-tooltip">
+                <div class="grascii-reference">
+                    <h2>GRASCII Quick Reference</h2>
+
+                    <h3>Standard</h3>
+                    <p>K, G, R, L, N, M, T, D, P, B, F, V, J, S, X</p>
+
+                    <h3>Strokes</h3>
+                    <p>TH, CH, SH, NG, NK, LD, SS, XS</p>
+
+                    <h3>Blends</h3>
+                    <p>
+                        NT, ND &nbsp; MT, MD &nbsp; TN, DN &nbsp; TM, DM &nbsp; MN, MM <br>
+                        DT, TD, DD &nbsp; DF, DV, TV &nbsp; JNT, JND, PNT, PND
+                    </p>
+
+                    <h3>Special Vowel Forms</h3>
+                    <ul>
+                        <li>A&amp;E: circle inside I → <img src="../annWords/highly.png" alt="A&amp;E"></li>
+                        <li>A&amp;’: dot inside A → <img src="../annWords/piano.png" alt="A&amp;’"></li>
+                        <li>Hook vowels: O, U</li>
+                        <li>Circle vowels: A, E, I</li>
+                    </ul>
+
+                    <h3>Special Characters</h3>
+                    <ul>
+                        <li><code>'</code> → h or ing dot</li>
+                        <li><code>^</code> → disjoined</li>
+                        <li><code>~</code> → reverse circle (A~, E~, I~)</li>
+                        <li><code>_</code> → underline vowels: A_, E_, O_, U_, I_, EU_, OU_, OE_, A&amp;’_, A&amp;E_ (e.g., beware <img src="../annWords/beware.png" alt="w">)</li>
+                        <li><code>|</code> → make circle a loop: A|, E|, I|, A~|, E~|</li>
+                    </ul>
+
+                    <h3>Indicators</h3>
+                    <ul>
+                        <li>TH) → under-th</li>
+                        <li>S( → left-s</li>
+                        <li>S) → right-s</li>
+                        <li>O( → O on side</li>
+                        <li>U( → U on side</li>
+                    </ul>
+                </div>
+        </div>
     <table id="resultsTable">
         <thead>
             <tr>
                 <th>Text</th>
                 <th>Outline</th>
-                <th>YAGATS</th>
+                <th>GRASCII</th>
                 <th>G-S-T</th>
                 <th>Notes</th>
             </tr>
@@ -411,46 +429,56 @@
         </tbody>
     </table>
 
-    <!-- YAGATS Reference Modal -->
+        <!-- GRASCII Reference Modal -->
     <div id="referenceModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>YAGATS Special Characters Reference</h2>
-            <table class="reference-table">
-                <thead>
-                    <tr>
-                        <th class="char-col">Character</th>
-                        <th>Meaning</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="char-col">(</td><td>the "over th" stroke</td></tr>
-                    <tr><td class="char-col">)</td><td>the "under th" stroke</td></tr>
-                    <tr><td class="char-col">$</td><td>the "sh" stroke</td></tr>
-                    <tr><td class="char-col">^</td><td>caret indicates a high floating prefix e.g. o^du = "overdue"</td></tr>
-                    <tr><td class="char-col">*</td><td>asterisk indicates an intersecting stroke; p*m = "p.m."</td></tr>
-                    <tr><td class="char-col">:</td><td>colon indicates a disjoined stroke, for example, bro(:d = "brotherhood"</td></tr>
-                    <tr><td class="char-col">%</td><td>percent sign indicates a special turning as in o% = "all"</td></tr>
-                    <tr><td class="char-col">~</td><td>tilde indicates the "jog" as seen between m and n in "I am not"</td></tr>
-                    <tr><td class="char-col">=</td><td>capitalization mark</td></tr>
-                    <tr><td class="char-col">5</td><td>(left s + comma s) blend as in a5 = access</td></tr>
-                    <tr><td class="char-col">3</td><td>(comma s + left s) blend</td></tr>
-                    <tr><td class="char-col">c</td><td>ch stroke</td></tr>
-                    <tr><td class="char-col">y</td><td>represents the -ally/-ily suffix loop</td></tr>
-                    <tr><td class="char-col">h</td><td>the "h" dot</td></tr>
-                    <tr><td class="char-col">q</td><td>the dot representing the suffix "-ing"</td></tr>
-                    <tr><td class="char-col">@</td><td>the dot representing the word "a" or "an"</td></tr>
-                    <tr><td class="char-col">A</td><td>the dot that replaces the first 'a' as in Ahed = "ahead" and Auak = "awake"</td></tr>
-                    <tr><td class="char-col">w</td><td>indicates that the next vowel has the "w dash" under it; kwek = "quick"</td></tr>
-                    <tr><td class="char-col">s</td><td>the "comma s" stroke</td></tr>
-                    <tr><td class="char-col">z</td><td>the "left s" stroke</td></tr>
-                </tbody>
-            </table>
+                        <div class="grascii-reference">
+                            <h2>GRASCII Quick Reference</h2>
+
+                            <h3>Standard</h3>
+                            <p>K, G, R, L, N, M, T, D, P, B, F, V, J, S, X</p>
+
+                            <h3>Strokes</h3>
+                            <p>TH, CH, SH, NG, NK, LD, SS, XS</p>
+
+                            <h3>Blends</h3>
+                            <p>
+                                NT, ND &nbsp; MT, MD &nbsp; TN, DN &nbsp; TM, DM &nbsp; MN, MM <br>
+                                DT, TD, DD &nbsp; DF, DV, TV &nbsp; JNT, JND, PNT, PND
+                            </p>
+
+                            <h3>Special Vowel Forms</h3>
+                            <ul>
+                                <li>A&amp;E: circle inside I → <img src="../annWords/highly.png" alt="A&amp;E"></li>
+                                <li>A&amp;’: dot inside A → <img src="../annWords/piano.png" alt="A&amp;’"></li>
+                                <li>Hook vowels: O, U</li>
+                                <li>Circle vowels: A, E, I</li>
+                            </ul>
+
+                            <h3>Special Characters</h3>
+                            <ul>
+                                <li><code>'</code> → h or ing dot</li>
+                                <li><code>^</code> → disjoined</li>
+                                <li><code>~</code> → reverse circle (A~, E~, I~)</li>
+                                <li><code>_</code> → underline vowels: A_, E_, O_, U_, I_, EU_, OU_, OE_, A&amp;’_, A&amp;E_ (e.g., beware <img src="../annWords/beware.png" alt="w">)</li>
+                                <li><code>|</code> → make circle a loop: A|, E|, I|, A~|, E~|</li>
+                            </ul>
+
+                            <h3>Indicators</h3>
+                            <ul>
+                                <li>TH) → under-th</li>
+                                <li>S( → left-s</li>
+                                <li>S) → right-s</li>
+                                <li>O( → O on side</li>
+                                <li>U( → U on side</li>
+                            </ul>
+                        </div>
         </div>
     </div>
 
     <div class="license-info">
-        <p><strong>YAGATS Notation by:</strong> DailyGregg Consortium | <strong>License:</strong> Creative Commons NonCommercial 4.0 International License</p>
+    <p><strong>GRASCII Notation by:</strong> chanicpanic Copyright (c) 2025 <strong>MIT License</strong></p>
     </div>
 
     <script>
@@ -494,9 +522,9 @@
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `YAGATS Search of ${folderName}`;
-                document.querySelector('h1').textContent = `YAGATS Search of ${folderName}`;
-                document.querySelector('title').textContent = `YAGATS Search of ${folderName}`;
+                document.title = `GRASCII Search of ${folderName}`;
+                document.querySelector('h1').textContent = `GRASCII Search of ${folderName}`;
+                document.querySelector('title').textContent = `GRASCII Search of ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
                 //document.title = `GST Search of ${imagePath1}`;
@@ -540,7 +568,7 @@
                 const notesCell = document.createElement('td');
 
                 textCell.textContent = entry.text || ''; // Handle missing text
-                yagatsCell.textContent = entry.YAGATS || ''; // Handle missing YAGATS
+                yagatsCell.textContent = entry.grascii || ''; // Handle missing GRASCII
                 gstDashCell.textContent = entry.gst || ''; // Handle missing G-S-T
                 notesCell.textContent = entry.notes || ''; // Handle missing Notes
 
@@ -587,14 +615,14 @@
             }
         }
 
-        // Event listener for the "Search GST" button
+    // Event listener for the "Search GRASCII" button
         document.getElementById('searchGST').addEventListener('click', () => {
             const searchInput = document.getElementById('regexInput').value;
             const searchType = getSearchType();
             const results = dataGST.filter(entry => 
-                entry.YAGATS && performSearch(searchInput, entry.YAGATS, searchType, true) // Case-sensitive for YAGATS
+        entry.grascii && performSearch(searchInput, entry.grascii, searchType, false) // Case-insensitive for GRASCII
             );
-            displayResults(results, searchInput, searchType, 'YAGATS');
+        displayResults(results, searchInput, searchType, 'GRASCII');
             // Refocus and select text after search
             focusAndSelectText();
         });
@@ -789,13 +817,8 @@
         document.addEventListener('keydown', (event) => {
             if (event.altKey && event.key.toLowerCase() === 'r') {
                 event.preventDefault();
-                tooltipVisible = !tooltipVisible;
-                
-                if (tooltipVisible) {
-                    positionTooltip();
-                } else {
-                    tooltip.style.display = 'none';
-                }
+                // Reuse the same toggle logic as clicking the reference button
+                referenceBtn.click();
             } else if (event.key === 'Escape' && tooltipVisible) {
                 tooltipVisible = false;
                 tooltip.style.display = 'none';
