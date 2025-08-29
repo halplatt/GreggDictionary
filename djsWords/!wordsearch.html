@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
-    V2025.0827@2:52pm use include !shared-links.html
+    V2025.0825@9:40pm use include shared-links.html
     V2025.0819@02:14pm replace in-page search with GST Search
     V2025.0616.0219pm add public_domain_only
     V2025.0614.1122am add words pre-fix suffix and add exact button
@@ -542,26 +542,28 @@ h1 {
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
-<!-- beg place holder where common links begin if page one level above !shared-links.html -->
-<div id="shared-links"></div>
-<script>
-(function loadSharedLinks() {
-	const hostEl = document.getElementById('shared-links');
-	if (!hostEl) return;
-
-	fetch('../!shared-links.html', { cache: 'no-cache' })
-		.then(r => (r.ok ? r.text() : Promise.reject(r)))
-		.then(html => {
-			// Replace all "~/" paths with "../" since this page one level above the shared links
-			hostEl.innerHTML = html.replace(/~\//g, '../');
-		})
-		.catch(err => {
-			console.error('Failed to load shared links:', err);
-		});
-})();
-</script>
-<!-- end place holder where common links -->
-
+        <!-- beg place holder where common links begin -->
+        <div id="shared-links" data-include="../shared-links.html"></div>
+        <script>
+        (function loadSharedLinks() {
+        const hostEl = document.getElementById('shared-links');
+        if (!hostEl) return;
+        const candidates = [
+            hostEl.dataset.include || '',
+            '../shared-links.html',
+            './shared-links.html'
+        ].filter(Boolean);
+        const tryNext = (i=0) => {
+            if (i >= candidates.length) return;
+            fetch(candidates[i], { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw 0; return r.text(); })
+            .then(html => { hostEl.innerHTML = html; })
+            .catch(() => tryNext(i+1));
+        };
+        tryNext();
+        })();
+        </script>
+        <!-- end place holder where common links begin -->    
             <br>
             <div class="input-container"></div>     
             <div class="button-row">  
