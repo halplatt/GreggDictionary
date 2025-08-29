@@ -1,50 +1,85 @@
-<div class="container">
+<style>
+.links-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+</style>
+<div class="links-container">
+    <span id="search-label" role="heading" aria-level="3" style="display:block; font-weight:700; font-size:1.125rem; line-height:1.25; margin:0.5rem 0 0.25rem;">Links to Gregg Shorthand WebTools</span>
         <div class="button-row">
-            <span>Link to main dictionary:</span>
+            <span>&nbsp;Main dictionary:</span>
             <div class="inner">
-                <a href="javascript:void(0);" onclick="openOrFocusTab('~/GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')">Gregg Dictionary</a>
+                <a href="javascript:void(0);" onclick="openOrFocusTab('~/GreggDictionary' + public_domain_only + '.html', 'GreggDictionary')"
+                title="Search the Gregg Dictionaries. Find pages from all available dictionary versions here."
+                >Gregg Dictionary</a>
             </div>
         </div>
         <div class="button-row">
-            <span>Link to Regex search for:</span>
+            <span>&nbsp;Regex search for:</span>
             <div class="inner">
-                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/!wordsearchall.html', 'allWords')">all-versions</a>
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/!wordsearchall.html', 'allWords')"
+                title="Search by word or regex pattern to compare outlines across Gregg Dictionary versions."
+                >all-versions</a>
             </div>
             <div class="inner">
-                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('~/djsWords/!wordsearch.html', 'djsWords')">DJS</a>
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('~/djsWords/!wordsearch.html', 'djsWords')"
+                title="Find DJS outlines by entering a word, a regex pattern"
+                >DJS</a>
             </div>
             <div class="inner">
-                <a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('~/simDictionary/!searchGSText.html', 'simGST')">Simplified(G-S-T)</a>
+                <a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('~/simDictionary/!searchGSText.html', 'simGST')"
+                title="Find Simplified outlines by entering a word, a regex pattern, or by intuitive G-S-T (Gregg Shorthand Text) dash-delimited notation."
+                >Simplified(G-S-T)</a>
             </div>
             <div class="inner">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('~/annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');">Anniversary(G-S-T)</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('~/annDictionary/!searchGSText' + public_domain_only + '.html', 'annGST');"
+                title="Find Anniversary outlines by entering a word, a regex pattern, or by intuitive G-S-T (Gregg Shorthand Text) dash-delimited notation."
+                >Anniversary(G-S-T)</a>
             </div>
            <div class="inner">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('~/preDictionary/!searchGSText' + public_domain_only + '.html', 'preGST');">pre-Anniversary(G-S-T)</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('~/preDictionary/!searchGSText' + public_domain_only + '.html', 'preGST');"
+                title="Find pre-Anniversary outlines by entering a word, a regex pattern, or by intuitive G-S-T (Gregg Shorthand Text) dash-delimited notation."
+                >pre-Anniversary(G-S-T)</a>
             </div>   
         </div>
         <div class="button-row">
-            <span>Link to text to Gregg for:</span>
+            <span>&nbsp;Text to Gregg for:</span>
             <div class="inner">
-                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('~/djsWords/!textToGregg.html', 't2djsWords');">djs</a>
+                <a class="djs" href="javascript:void(0);" onclick="openOrFocusTab('~/djsWords/!textToGregg.html', 't2djsWords');"
+                title="Convert your words, phrases, or paragraphs into the DJS version of Gregg Shorthand."
+                >djs</a>
             </div>
             <div class="inner">
-                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('~/annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');">Anniversary</a>
+                <a class="ann" href="javascript:void(0);" onclick="openOrFocusTab('~/annWords/!textToGregg' + public_domain_only + '.html', 't2annWords');"
+                title="Convert your words, phrases, or paragraphs into the Anniversary version of Gregg Shorthand."
+                >Anniversary</a>
             </div>
             <div class="inner">
-                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('~/preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');">pre-Anniversary</a>
+                <a class="pre" href="javascript:void(0);" onclick="openOrFocusTab('~/preWords/!textToGregg' + public_domain_only + '.html', 't2preWords');"
+                title="Convert your words, phrases, or paragraphs into the pre-Anniversary version of Gregg Shorthand."
+                >pre-Anniversary</a>
             </div>
         </div>
-        <div class="button-row">
-            <span>Link to Reverse search outlines in Other notation:</span>
+        <div class="button-row all">
+            <span>&nbsp;Reverse search outlines in Other notation:</span>
             <div class="inner">
-                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/annDictionary/!searchGRASCIIText.html', 'annGRASCII');">Anniversary(GRASCII)</a>
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/annDictionary/!searchGRASCIIText.html', 'annGRASCII');"
+                title="Find Anniversary outlines with GRASCII (Gregg ASCII notation) or by entering a word."
+                >Anniversary(GRASCII)</a>
             </div>
            <div class="inner">
-                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/preDictionary/!searchGRASCIIText.html', 'preGRASCII');">pre-Anniversary(GRASCII)</a>
+                <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/preDictionary/!searchGRASCIIText.html', 'preGRASCII');"
+                title="Find pre-Anniversary outlines with GRASCII (Gregg ASCII notation) or by entering a word."
+                >pre-Anniversary(GRASCII)</a>
             </div>
             <div class="inner">
-                <a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('~/simDictionary/!searchYAGATSText.html', 'simYAGATS');">Simplified(YAGATS)</a>
+                <a class="sim" href="javascript:void(0);" onclick="openOrFocusTab('~/simDictionary/!searchYAGATSText.html', 'simYAGATS');"
+                title="Find Simplified outlines with YAGATS (Yet Another Gregg ASCII Text Subset) or by entering a word."
+                >Simplified(YAGATS)</a>
             </div>            
-        </div>              
+        </div>          
     </div>

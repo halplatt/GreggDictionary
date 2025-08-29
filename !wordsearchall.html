@@ -163,79 +163,25 @@ version 02/06/2025 at 9:18pm First version
     <p id="version">V2025.0827@2:52pm</p>
 
     <div class="input-container">
-    <!-- beg place holder where common links begin -->
-    <div id="shared-links" data-include="../!shared-links.html"></div>
-    <script>
-    var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd' 
-    (function loadSharedLinks() {
-    const hostEl = document.getElementById('shared-links');
-    if (!hostEl) return;
+<!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
+<div id="shared-links"></div>
+<script>
+(function loadSharedLinks() {
+	const hostEl = document.getElementById('shared-links');
+	if (!hostEl) return;
 
-    const candidates = [
-        hostEl.dataset.include || '',
-        '../!shared-links.html',
-        './!shared-links.html'
-    ].filter(Boolean);
-
-    const tryNext = (i = 0) => {
-        if (i >= candidates.length) return;
-
-        fetch(candidates[i], { cache: 'no-cache' })
-        .then(r => {
-            if (!r.ok) throw 0;
-            return r.text().then(html => ({ html, url: r.url }));
-        })
-        .then(({ html, url }) => {
-            hostEl.innerHTML = html;
-
-            // Directory of the fetched include (e.g., '/GreggDictionary/notes/')
-            const baseDir = new URL('.', url).pathname;
-
-            // Rewrite attributes that start with '~/'
-            const rewriteAttr = (selector, attr) => {
-            hostEl.querySelectorAll(selector).forEach(el => {
-                const v = el.getAttribute(attr);
-                if (!v || !v.startsWith('~/')) return;
-                el.setAttribute(attr, baseDir + v.slice(2));
-            });
-            };
-            rewriteAttr('a[href]', 'href');
-            rewriteAttr('img[src]', 'src');
-            rewriteAttr('link[href]', 'href');
-            rewriteAttr('script[src]', 'src');
-
-            // Rewrite "'~/" or '"~/' inside inline event handlers (e.g., onclick)
-            hostEl.querySelectorAll('*').forEach(el => {
-            for (const attr of Array.from(el.attributes)) {
-                if (!/^on/i.test(attr.name)) continue;
-                const v = attr.value;
-                if (!v) continue;
-                const replaced = v.replace(/(['"])~\//g, (_, q) => q + baseDir);
-                if (replaced !== v) el.setAttribute(attr.name, replaced);
-            }
-            });
-
-            // Safety: ensure openOrFocusTab resolves '~/'
-            (function installOpenWrapper(base) {
-            const prev = window.openOrFocusTab;
-            window.openOrFocusTab = function(url, name, ...rest) {
-                if (typeof url === 'string' && url.startsWith('~/')) {
-                url = base + url.slice(2);
-                }
-                if (typeof prev === 'function') {
-                return prev.call(this, url, name, ...rest);
-                }
-                return window.open(url, name, ...rest);
-            };
-            })(baseDir);
-        })
-        .catch(() => tryNext(i + 1));
-    };
-
-    tryNext();
-    })();
-    </script>
-    <!-- end place holder where common links -->
+	fetch('./!shared-links.html', { cache: 'no-cache' })
+		.then(r => (r.ok ? r.text() : Promise.reject(r)))
+		.then(html => {
+			// Replace all "~/" paths with "./" since this page is in the same directory
+			hostEl.innerHTML = html.replace(/~\//g, './');
+		})
+		.catch(err => {
+			console.error('Failed to load shared links:', err);
+		});
+})();
+</script>
+<!-- end place holder where common links -->
     <br>
     <div class="input-container">
             <div class="button-row">  
