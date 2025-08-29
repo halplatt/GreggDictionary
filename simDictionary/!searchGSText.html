@@ -15,7 +15,7 @@
         var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0827@1:56pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0828@12:47pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -398,7 +398,27 @@
                 pnt: 'jnt',
                 pnd: 'jnt',
                 gnt: 'jnt',
-                gnd: 'jnt'
+                gnd: 'jnt',
+                br: 'b-r',
+                kr: 'k-r',
+                gr: 'g-r',
+                kl: 'k-l',
+                gl: 'g-l',
+                lg: 'l-g',
+                pr: 'p-r',
+                pl: 'p-l',
+                bl: 'b-l',
+                sl: 's-l',
+                fr: 'f-r',
+                fl: 'f-l',
+                vr: 'v-r',
+                vl: 'v-l',
+                kf: 'k-f',
+                kv: 'k-v',
+                kp: 'k-p',
+                gf: 'g-f',
+                gv: 'g-v',
+                rK: 'r-k'
             };
             // Expose correction function in closure scope
             window.__correctRegexInputGroups = function(raw){
