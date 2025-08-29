@@ -217,6 +217,17 @@ h3 {color:white}
 			console.error('Failed to load shared links:', err);
 		});
 })();
+        // Function to open or focus a tab with the given URL and target (necessary for !shared-links.html)
+        const public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+        function openOrFocusTab(url, target) {
+            var newTab = window.open('', target);
+            if (newTab.location.href === "about:blank") {
+                newTab.location.href = url;
+            } else {
+                //do nothing, the tab is already open
+            }
+            newTab.focus();
+        }        
 </script>
 <!-- end place holder where common links -->
   <div class="related">
