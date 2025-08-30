@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #dayOfWeek {
+            font-size: 12vw;
+            text-align: center;
+            width: 100%;
+            margin-bottom: -4vh;
+        }
+
+        #timeOfDay {
+            font-size: 6vw;
+            margin-bottom: 1vh;
+        }
+
+        #currentTime {
+            font-size: 17vw;
+            margin-bottom: 1vh;
+        }
+
+        #currentDate {
+            font-size: 8vw;
+            margin-top: 1vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="dayOfWeek"></div>
+    <div id="timeOfDay"></div>
+    <div id="currentTime"></div>
+    <div id="currentDate"></div>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+            var dayOfWeek = days[now.getDay()];
+            var currentDate = `${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+
+            var hours24 = now.getHours();
+            var minutes = now.getMinutes();
+            var ampm = hours24 >= 12 ? 'PM' : 'AM';
+            hours12 = hours24 % 12;
+            hours12 = hours12 ? hours12 : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0'+minutes : minutes;
+
+            var currentTime = `${hours12}:${minutes} ${ampm}`;
+
+            var timeOfDay;
+            if (hours24 < 5) timeOfDay = "Pre-Dawn";
+            else if (hours24 < 7) timeOfDay = "Dawn";
+            else if (hours24 < 12) timeOfDay = "Morning";
+            else if (hours24 < 17) timeOfDay = "Afternoon";
+            else if (hours24 < 20) timeOfDay = "Evening";
+            else timeOfDay = "Night";
+
+            document.getElementById('dayOfWeek').textContent = dayOfWeek;
+            document.getElementById('timeOfDay').textContent = timeOfDay;
+            document.getElementById('currentTime').textContent = currentTime;
+            document.getElementById('currentDate').textContent = currentDate;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>

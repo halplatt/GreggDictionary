@@ -1,0 +1,735 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name="Microsoft Theme 2.00" content="canvas 101">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="regular_expression_patterns_files/filelist.xml">
+<link rel=Edit-Time-Data href="regular_expression_patterns_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Regular Expression Patterns</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Hal Platt</o:Author>
+  <o:LastAuthor>Hal Platt</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>50</o:TotalTime>
+  <o:LastPrinted>2001-10-22T15:09:00Z</o:LastPrinted>
+  <o:Created>2001-10-22T14:47:00Z</o:Created>
+  <o:LastSaved>2002-04-24T19:40:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>442</o:Words>
+  <o:Characters>2526</o:Characters>
+  <o:Company>Logility</o:Company>
+  <o:Lines>21</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2963</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DefaultTableStyle Number="155">Table Theme</w:DefaultTableStyle>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	color:#000066;}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:8.0pt;
+	font-family:Arial;
+	color:#663399;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{color:#663399;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#006699;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	color:#000066;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableTheme
+	{mso-style-name:"Table Theme";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid #339999 1.0pt;
+	mso-border-alt:solid #339999 .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid #339999;
+	mso-border-insidev:.5pt solid #339999;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white background="regular_expression_patterns_files/image001.jpg"
+lang=EN-US link="#663399" vlink="#006699" style='tab-interval:.5in'>
+<!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white" o:targetscreensize="800,600">
+  <v:fill src="regular_expression_patterns_files/image001.jpg" o:title="cnvbkgnd"
+   type="frame"/>
+ </v:background></xml><![endif]-->
+
+<div class=Section1>
+
+<h1><a name=top>Regular Expression Patterns </a></h1>
+
+<div class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1027" type="#_x0000_t75" style='width:450pt;
+ height:7.5pt' o:hrpct="0" o:hralign="center" o:hr="t">
+ <v:imagedata src="regular_expression_patterns_files/image002.gif" o:title="cnvrule"/>
+</v:shape><![endif]--><![if !vml]><img height=10 width=600
+src="regular_expression_patterns_files/image002.gif" alt=--- v:shapes="_x0000_i1027"><![endif]></div>
+
+<p><b>Character Classes</b> </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>[xyz]</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any one character enclosed in the character
+  set.&nbsp; <i>Example: &quot;[a-e]&quot; matches &quot;b&quot; in
+  &quot;basketball&quot;.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>[^xyz]</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any one character not enclosed in the character set.
+  <i>Example: &quot;[^a-e]&quot; matches &quot;s&quot; in
+  &quot;basketball&quot;.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>.</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any character except \n.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\w</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any word character. Equivalent to [a-zA-Z_0-9].</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\W</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any non-word character. Equivalent to [^a-zA-Z_0-9].</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\d</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any digit. Equivalent to [0-9].</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\D</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any non-digit. Equivalent to [^0-9].</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\s</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any space character. Equivalent to [ \t\r\n\v\f].</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\S</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match any non-space character. Equivalent to [^
+  \t\r\n\v\f].</p>
+  </td>
+ </tr>
+</table>
+
+<p><b>Repetition</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>{x}</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match exactly x occurrences of a regular expression. <i>Example:
+  &quot;\d{5}&quot; matches 5 digits.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>(x,}</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match x or more occurrences of a regular expression. <i>Example:
+  &quot;\s{2,}&quot; matches at least 2 space characters</i>.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>{x,y}</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches x to y number of occurrences of a regular
+  expression. <i>Example: &quot;\d{2,3}&quot; matches at least 2 but no more
+  than 3 digits.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>?</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match zero or one occurrences. Equivalent to {0,1}. <i>Example:
+  &quot;a\s?b&quot; matches &quot;ab&quot; or &quot;a b&quot;.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>*</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match zero or more occurrences. Equivalent to {0,}.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>+</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Match one or more occurrences. Equivalent to {1,}.</p>
+  </td>
+ </tr>
+</table>
+
+<p><b>Position Matching</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>^</p>
+  </td>
+  <td style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Only match the beginning of a string. <i>Example:
+  &quot;^A&quot; matches first &quot;A&quot; in &quot;An A+ for Anita.&quot;</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>$</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Only match the ending of a string. <i>Example:
+  &quot;t$&quot; matches the last &quot;t&quot; in &quot;A cat in the hat&quot;</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\b</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches any word boundary <i>Example: &quot;ly\b&quot;
+  matches &quot;ly&quot; in &quot;possibly tomorrow.&quot;</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\B</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches any non-word boundary</p>
+  </td>
+ </tr>
+</table>
+
+<p><b>Alternation &amp; Grouping</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>()</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Grouping a clause to create a clause. May be nested. <i>Example:
+  &quot;(ab)?(c)&quot; matches &quot;abc&quot; or &quot;c&quot;.</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>|</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Alternation combines clauses into one regular expression
+  and then matches any of the individual clauses.<br>
+  <i>Example:&nbsp; &quot;(ab)|(cd)|(ef)&quot; matches &quot;ab&quot; or
+  &quot;cd&quot; or &quot;ef&quot;.</i></p>
+  </td>
+ </tr>
+</table>
+
+<p><b>Back references</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\n</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Use in the Regular Expression Pattern to refer to a
+  submatch as numbered by the left parenthesis in pattern.<br>
+  <br>
+  &quot;(\w+)\s+\1&quot; matches any word that occurs twice in a row, such as
+  &quot;hubba hubba.&quot;</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>$n</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Use in the replace string to refer to a submatch as
+  numbered by the left parenthesis in pattern.</p>
+  </td>
+ </tr>
+</table>
+
+<b><span style='font-size:12.0pt;font-family:Arial;mso-fareast-font-family:
+"Times New Roman";color:#000066;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<p><b>Literals</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.0%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Alphanumeric</p>
+  </td>
+  <td style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches alphabetical and numerical characters literally.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\n</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches a new line</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\f</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches a form feed</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\r</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches carriage return</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\t</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches horizontal tab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\v</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches vertical tab</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\xxx</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches the ASCII character expressed by the octal number
+  xxx.&nbsp; <i>Example:&nbsp; &quot;\50&quot; matches &quot;(&quot; or chr
+  (40).</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\xdd</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches the ASCII character expressed by the hex number
+  dd.&nbsp;&nbsp; <i>Example:&nbsp; &quot;\x28&quot; matches &quot;(&quot; or
+  chr (40).</i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\uxxxx</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches the ASCII character expressed by the UNICODE
+  xxxx.&nbsp; <i>Example:&nbsp; &quot;\u00A3&quot; matches &quot;£&quot;.</i></p>
+  </td>
+ </tr>
+</table>
+
+<p><b>Characters Requiring Escape</b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="95%"
+ style='width:95.26%;mso-cellspacing:1.5pt;margin-left:-.75pt;mso-padding-alt:
+ 3.75pt 3.75pt 3.75pt 3.75pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td valign=top style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+  <td valign=top style='background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Symbol</p>
+  </td>
+  <td width="17%" style='width:17.4%;background:#A6CAF0;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Function</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\* </p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches * </p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\\</p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches \</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\+</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches +</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\[</p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches [</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\.</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches .</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\]</p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches ]</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\|</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches |</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\(</p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches (</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\{</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches {</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\)</p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches )</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>\}</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal>Matches }</p>
+  </td>
+  <td valign=top style='background:#EEEEEE;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width="17%" valign=top style='width:17.4%;background:#EEEEEE;padding:
+  3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

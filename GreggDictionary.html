@@ -202,10 +202,13 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			#btn1 {
 				font-size: 1em;
 				height: 2.2em;
-				width: 2.2em;
+				/* Let the label define width; ensure 'DJS' fits */
+				width: auto;
+				min-width: 3.4em;
+				white-space: nowrap;
 				margin: 0 0 0 0;
 				border: none;
-				padding: 8px;
+				padding: 8px 12px;
 			}
 
 			#btn1 img {
@@ -519,13 +522,13 @@ document.addEventListener('DOMContentLoaded', function() {
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
-                                <button id="btn1" class="djs" onclick="refreshDjsWord()" accesskey="d" title="(DJS) Alt+Shift+d">djs</button>
+                                <button id="btn1" class="djs" onclick="refreshDjsWord()" accesskey="d" title="Diamond Jublee Series (DJS) Alt+Shift+d">DJS</button>
 							</div>
                             <div class="inner">
-                                <button id="btn2" onclick="refreshDjsName()" class="djs">djsName</button>
+                                <button id="btn2" onclick="refreshDjsName()" title="Diamond Jublee Series (DJS) names" class="djs">DJSname</button>
 							</div>
 			                 <div class="inner">
-                                <button id="btn14" onclick="refreshDjsPhrase()"  accesskey="p" title="Alt+Shift+p" class="djs">djs<b>P</b>hrase</button>
+                                <button id="btn14" onclick="refreshDjsPhrase()"  accesskey="p" title="Diamond Jublee Series (DJS) phrases Alt+Shift+p" class="djs">DJS<b>p</b>hrase</button>
 							</div>
 							<div class="inner">
                                 <button id="btn3" onclick="refreshSimWord()" accesskey="s" class="sim" title="Alt+Shift+s"><b>S</b>implified</button>
