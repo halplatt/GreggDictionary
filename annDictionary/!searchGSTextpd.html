@@ -12,10 +12,23 @@
     //V2025.0819@02:14pm replace in-page search with GST Search 
     //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
-        var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+		// IIFE to set the global variable `public_domain_only` ;
+		// if page name ends in 'pd' only public domain dictionaries are shown.
+		(function () {
+			// Prefer explicit query param ?public_domain_only=...
+			var usp = new URLSearchParams(window.location.search || '');
+
+			// Derive from the current file name if no param: ends with "pd"
+			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
+			var baseName = fileName.replace(/\.[^.]+$/, ''); // strip extension like .html/.htm
+			var derived = baseName.endsWith('pd') ? 'pd' : '';
+
+			// Expose globally for existing code to use
+			window.public_domain_only = usp.get('public_domain_only') || derived;
+		})();
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0829@2:40pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0831@6:30pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}

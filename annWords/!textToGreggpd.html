@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
-//V2025.0825@9:40pm use include shared-links.html
+//V2025.0827@1:56pm use include !shared-links.html
 //v2025.0705.0258pm add more allowed suffixes 
 //V=2025.0616.0258pm add public_domain_only    
 //v=2025.0510.0433pm Put coorect version in button
@@ -41,11 +41,25 @@
 <html>
 <head>
     <script>
-        var public_domain_only = 'pd'; // Declare this global variable to hide non-public domain links when it is set to 'pd'   
+		// IIFE to set the global variable `public_domain_only` ;
+		// if page name ends in 'pd' only public domain dictionaries are shown.
+		(function () {
+			// Prefer explicit query param ?public_domain_only=...
+			var usp = new URLSearchParams(window.location.search || '');
+
+			// Derive from the current file name if no param: ends with "pd"
+			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
+			var baseName = fileName.replace(/\.[^.]+$/, ''); // strip extension like .html/.htm
+			var derived = baseName.endsWith('pd') ? 'pd' : '';
+
+			// Expose globally for existing code to use
+			window.public_domain_only = usp.get('public_domain_only') || derived;
+		})();
+
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'V2025.0829@2:40pm';
+            document.getElementById('version').textContent = 'V2025.0831@6:30pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
