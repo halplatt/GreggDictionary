@@ -3,46 +3,39 @@
 	opens dictionary based on GSD parm or last button pressed, Defaults to the DJS dictionary 
 This is the main HTML file for the Gregg Shorthand Dictionary Search application. 
 It includes a search interface with various buttons that trigger different search functions. 
-The search functions are defined in external JavaScript files that are linked in the head of this document. 
-The styles for this page are defined in an external CSS file also linked in the head.
 
+V2025.0831@5:37pm bring data.djs.js and data.ann.js into this main HTML file
 v2025.0828@3:45pm use generated links from !shared-links.html
 v2025.0819@1:56pm modify links where gst merged with in page
 v2025.0805@10:54pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
 v2025.0706.0430pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
 v2025.0624.0112am for public domain only, savedbuttons limited to pre or ann 
 V2025.0619.0245pm add show hide dictionaries button
-V2025.0616.0132pm public-domain-only=pd hide non-public domain links
-v2025.0611.0339pm change data.djs.js to add page style to image
-v2025.0530.0248pm add sim thumbnail above page
-v2025.0526.0414pm add annPhrase
-v2025.0523.0734pm move styles from shorthand.css into <style> tag
-v2025.0521.0730pm add s90Words
-v2025.0507.11:11am add cashbusting query stings to the data files.
-v2025.0505.1000pm persist last button clicked in local storage.
-v22025.0505.0238pm added array "djsWords/!words.array.js" for verification of words in the djsWords array.
-v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_reverse arrays. Modified code reflects this change.
-2025-01-24 at 11PM Anniversary link to Anniversary-in-page 
-2025-01-23 at 1PM center title 
-2025-01-17 at 12AM added links for text to gregg and always open in GreggDictionary tab
-2025-01-15 at 2:27 added and updated lastbutton so enter press will default to last button pushed
-2025-01-15 at 12:15am add < and > buttons to allow for previous and next page
-2025-01-14 at 3:09PM Add link to regex search of djsWords
-2024-12-08 at 5:56pm added arg to allow for default of gsd type (djs, ann, pre, sim, cen)
-2024-12-04 added pre-anniversary button
-2024-12-01 revised djs button replace icon with text
 -->
 <html>
 	<head>
 		<title>Gregg Shorthand Dictionary Search</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
-		<script type="text/javascript"> 
-			var public_domain_only = ''; // Declare this global variable to hide non-public domain links when it is set to 'pd'
+		<script>
+		// IIFE to set the global variable `public_domain_only` ;
+		// if page name ends in 'pd' only public domain dictionaries are shown.
+		(function () {
+			// Prefer explicit query param ?public_domain_only=...
+			var usp = new URLSearchParams(window.location.search || '');
+
+			// Derive from the current file name if no param: ends with "pd"
+			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
+			var baseName = fileName.replace(/\.[^.]+$/, ''); // strip extension like .html/.htm
+			var derived = baseName.endsWith('pd') ? 'pd' : '';
+
+			// Expose globally for existing code to use
+			window.public_domain_only = usp.get('public_domain_only') || derived;
+		})();
 		</script>
-		<!-- JavaScrips with cachebusting querystring-->
-		<script type="text/javascript" src="data.djs.js?v=2025.0615.0559pm"></script>
-		<script type="text/javascript" src="data.ann.js?v=2025.0622.0942pm"></script>
+
+		</script>
+		<!-- JavaScripts with cachebusting querystring-->
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
         <script type="text/javascript" src="dataset.ann.js?v=2025.0706.11:11am"></script>
@@ -51,8 +44,6 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
     			document.getElementById('version').innerHTML = "v2025.0828@3:45pm";
-				document.getElementById('version').innerHTML += "<br>" + getdjsJSVersion();
-				document.getElementById('version').innerHTML += "<br>" + getannJSVersion();
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 				}		
@@ -202,13 +193,10 @@ v22025.0505.0200pm arrays dataset.ann.js now renamed ann_dict and ann_dict_rever
 			#btn1 {
 				font-size: 1em;
 				height: 2.2em;
-				/* Let the label define width; ensure 'DJS' fits */
-				width: auto;
-				min-width: 3.4em;
-				white-space: nowrap;
+				width: 2.2em;
 				margin: 0 0 0 0;
 				border: none;
-				padding: 8px 12px;
+				padding: 8px;
 			}
 
 			#btn1 img {
@@ -506,6 +494,639 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 	//end show hide dictionaries  -------
+//begin inline data.djs.js
+
+let simReferencejson = [];
+
+// Function to load JSON and assign to global variable
+function loadsimReferencejson() {
+    fetch('./simDictionary/!reference.json')
+        .then(response => response.json())
+        .then(data => {
+            simReferencejson = data; // Now available globally
+            // You can call other functions here if needed
+        })
+        .catch(error => {
+            console.error('Error loading reference data:', error);
+        });
+}
+
+// Run after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    loadsimReferencejson();
+});
+function findPageByWord(searchValue) {
+	const regex = new RegExp('^'+searchValue+'$', 'i');
+    for (const page of simReferencejson) {
+        for (const word of page.words) {
+            if (regex.test(word.t)) {
+                // Return the page object and the matching word object
+                return {
+                    page: page.page,
+                    word: word.t,
+                    x: word.x,
+                    y: word.y
+                };
+            }
+        }
+    }
+    return null; // Not found
+}
+
+function findIdx(input,arrName) {
+    var i
+    for (i = 0; i < arrName.length; i++) 
+        {
+            if (arrName[i].toLowerCase() > input.toLowerCase()) {break}
+        }
+    if (i>0){i--}
+    return arrName[i]
+}
+
+function findNum(input,arrName) {
+    var i
+    for (i = 0; i < arrName.length; i++) 
+        {
+            if (arrName[i].toLowerCase() > input.toLowerCase()) {break}
+        }
+if (i==0){i++}
+    return i
+}
+// Generic function to handle page forward or back adjustment
+function pageCntAdj(cntAdj, arrayName) {
+	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
+        let word = document.getElementById('txt1').value;
+        let num = findNum(word, arrayName);
+        num = --num + cntAdj; // Adjust for page forward or back and commpensate for 0 based array
+        if (num < 0) { num = 0; }
+        if (num >= arrayName.length - 1) { num = arrayName.length - 1; }
+        document.getElementById('txt1').value = arrayName[num];
+    }
+}
+function buildWordImg(word) {
+    const regexPattern = new RegExp(`^${word}$`, 'i'); // Match the full word exactly (case-insensitive)
+    const verifiedWord=dict.find(entry => regexPattern.test(entry)); // Returns the first case-sensitive match
+	if (verifiedWord === undefined) {//word not in the array
+		return `<p style="text-align: center;">Outline for ${word} not in the DJS image collection.</p>`;
+	} else {//word is in the array
+		return `<img src="djsWords/${verifiedWord}.png" title="${verifiedWord}" alt="${verifiedWord}" onerror="this.outerHTML='<span>Outline for ${verifiedWord} not available</span>'"><br>`;
+	}
+}
+
+function refreshDjsWord(cntAdj) {
+	setLastButton('refreshDjsWord')
+	pageCntAdj(cntAdj, djsWord);
+	hideSuggestion()
+	loadAboutDJS()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,djsWord);
+	var path = buildWordImg(word)
+	path += '<img src="djsDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+
+function refreshDjsName(cntAdj) {
+	setLastButton('refreshDjsName')
+	pageCntAdj(cntAdj, pageCntAdj(cntAdj, djsName));
+	hideSuggestion()
+	loadAboutDJS()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Proper Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,djsName);
+	var path = buildWordImg(word)
+	path += '<img src="djsDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+
+function refreshDjsPhrase(cntAdj) {
+	setLastButton('refreshDjsPhrase');
+	pageCntAdj(cntAdj, djsPhrase);
+	hideSuggestion()
+	loadAboutDJS()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordNum = findNum(word,djsPhrase);
+	var path = buildWordImg(word)
+	path += '<img src="djsDictionary/';
+	path = path.concat('djsPhrase ','(',wordNum,')', '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+
+
+
+function refreshS90Word(cntAdj) {
+	setLastButton('refreshS90Word');
+	pageCntAdj(cntAdj, s90Word);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Word);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Phrase(cntAdj) {
+	setLastButton('refreshS90Phrase');
+	pageCntAdj(cntAdj, s90Phrase);
+	hideSuggestion() 
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Phrase);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+ 
+function refreshS90Women(cntAdj) {
+	setLastButton('refreshS90Women');
+	pageCntAdj(cntAdj, s90Women);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Women Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Women);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Men(cntAdj) {
+	setLastButton('refreshS90Men');
+	pageCntAdj(cntAdj, s90Men);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Men Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Men);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90Sur(cntAdj) {
+	setLastButton('refreshS90Sur');
+	pageCntAdj(cntAdj, s90Sur);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Sur Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90Sur);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90USName(cntAdj) {
+	setLastButton('refreshS90USName');
+	pageCntAdj(cntAdj, s90USName);
+	hideSuggestion()
+	loadAboutS90()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (US City Names)";
+
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90USName);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshS90GeoName(cntAdj) {
+	setLastButton('refreshS90GeoName');
+	pageCntAdj(cntAdj, s90GeoName);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Geographical Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,s90GeoName);
+	var path = '<img src="s90Dictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenWord(cntAdj) {
+	setLastButton('refreshCenWord');
+	pageCntAdj(cntAdj, cenWord);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenWord);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenBrief(cntAdj) {
+	setLastButton('refreshCenBrief');
+	pageCntAdj(cntAdj, cenBrief);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Brief Forms)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenBrief);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+
+function refreshCenPhrase(cntAdj) {
+	setLastButton('refreshCenPhrase');
+	pageCntAdj(cntAdj, cenPhrase);
+	hideSuggestion() 
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenPhrase);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+ 
+function refreshCenWomen(cntAdj) {
+	setLastButton('refreshCenWomen');
+	pageCntAdj(cntAdj, cenWomen);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Women Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenWomen);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenMen(cntAdj) {
+	setLastButton('refreshCenMen');
+	pageCntAdj(cntAdj, cenMen);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Men Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenMen);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenSur(cntAdj) {
+	setLastButton('refreshCenSur');
+	pageCntAdj(cntAdj, cenSur);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Sur Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenSur);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenUSName(cntAdj) {
+	setLastButton('refreshCenUSName');
+	pageCntAdj(cntAdj, cenUSName);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (US City Names)";
+
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenUSName);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshCenGeoName(cntAdj) {
+	setLastButton('refreshCenGeoName');
+	pageCntAdj(cntAdj, cenGeoName);
+	hideSuggestion()
+	loadAboutCen()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Geographical Names)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,cenGeoName);
+	var path = '<img src="cenDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshSimWord(cntAdj) {
+	setLastButton('refreshSimWord');
+	pageCntAdj(cntAdj, simWord);
+	hideSuggestion()
+	loadAboutSim()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand";
+	var word = document.getElementById('txt1').value;
+    // create a thumbnail image for the word
+	document.getElementById('record').innerHTML = ""
+	const result = findPageByWord(word);
+	if (result) {
+		const imageContainer = document.createElement('div');
+		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+        const IMG_WIDTH = 1281;
+		imageContainer.className = 'relative overflow-hidden border';
+		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+		const img = document.createElement('img');
+		img.className = 'absolute max-w-none';
+		img.src = `./simDictionary/${result.page}.png`;
+		img.alt = `Gregg shorthand for word: ${result.t}`;
+		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
+		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
+		img.style.width = '1281px'; // Assuming the image width is fixed
+		imageContainer.appendChild(img);
+		document.getElementById('record').appendChild(imageContainer);
+	}
+
+
+	var wordId = findIdx(word,simWord);
+	var path = '<img src="simDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML += path;
+}
+function refreshSimName(cntAdj) {
+	setLastButton('refreshSimName');
+	pageCntAdj(cntAdj, simName);
+	hideSuggestion()
+	loadAboutSim()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Names)";
+	var word = document.getElementById('txt1').value;
+
+	// create a thumbnail image for the word
+	document.getElementById('record').innerHTML = ""
+	const result = findPageByWord(word);
+	if (result) {
+		const imageContainer = document.createElement('div');
+		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+        const IMG_WIDTH = 1281;
+		imageContainer.className = 'relative overflow-hidden border';
+		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+		const img = document.createElement('img');
+		img.className = 'absolute max-w-none';
+		img.src = `./simDictionary/${result.page}.png`;
+		img.alt = `Gregg shorthand for word: ${result.t}`;
+		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
+		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
+		img.style.width = '1281px'; // Assuming the image width is fixed
+		imageContainer.appendChild(img);
+		document.getElementById('record').appendChild(imageContainer);
+	}
+
+
+
+	var wordId = findIdx(word,simName);
+	var path = '<img src="simDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML += path;
+}
+function refreshAnnPhrase(cntAdj) {
+	setLastButton('refreshAnnPhrase');
+	pageCntAdj(cntAdj, annPhrase);
+	hideSuggestion() 
+	loadAboutAnnPhrase()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand (Phrases)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,annPhrase);
+	var path = '<img src="annDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+function refreshPreWord(cntAdj) {
+	setLastButton('refreshPreWord');
+	pageCntAdj(cntAdj, preWord);
+	hideSuggestion()
+	loadAboutAnn()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
+	var word = document.getElementById('txt1').value;
+	var wordId = findIdx(word,preWord);
+	var path = '<img src="preWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="preDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
+async function refreshAnnWord(cntAdj) {
+	setLastButton('refreshAnnWord');
+	hideSuggestion();
+	loadAboutAnn();
+	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";	// Adjust for page forward or back
+	let word = document.getElementById('txt1').value.toLowerCase();
+	let entryWord = findEntry(word,ann_dict); // Set the global variable entryWord to the current word
+	let pageObj = await findPageObj(entryWord.toString()); // Use await here
+	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj) && cntAdj !== 0 && pageObj !== null) { //If there is a count adjustment, adjust the word accordingly
+		var pageNumber=parseInt(pageObj.page) + cntAdj;
+		pageObj=await getPageByNumber(pageNumber)
+		word=pageObj.words[0].t
+		document.getElementById('txt1').value = word; // Update the input field with the new word
+	}
+	
+	let order = findOrder(word);
+	let order_reverse = findOrderReverse(word);
+	let path;
+	if (order >= 0) { //If word is found order is positive, display the word image
+		path = '<img src="annWords/' + word + '.png">'
+	} else {
+		 path = "<p>Outline not available</p>";
+	}
+	//Add the page
+	if (pageObj === null) {
+		path += "<p>Dictionary Page not available</p>";
+	} else {
+		path += '<img src="annDictionary/';
+		path = path.concat(pageObj.page.toString(), '.png" style="width:60%; display: block; margin: 10px auto;">');
+	}
+
+
+
+	if (order >= 0) { //If word is found order is positive
+		//11/22/2020 Logic below adds suggestions
+		var starting = order - 1;
+		if (starting < 0) starting = 0;
+		if (starting > ann_dict.length-4) starting = ann_dict.length-5; 
+		for (let i = 0; i < 4; i++) {
+			var thisWord = ann_dict[starting + i];
+			document.getElementById('bt'.concat(i.toString())).value = thisWord;
+			imgpath = '<img src="annWords/'+thisWord+'.png">';
+			document.getElementById('sh'.concat(i.toString())).innerHTML  = imgpath;
+		}
+		starting = order_reverse - 1;
+		if (starting < 0) starting = 0;
+		if (starting > ann_dict_reverse.length-4) starting = ann_dict_reverse.length-5;
+		for (let i = 0; i < 4; i++) {
+			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
+			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
+			imgpath = '<img src="annWords/'+thisWord+'.png">';
+			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
+		}
+		document.getElementById("suggest").style.display="inline-block";
+	} else {
+		path += "<p>Sorry, the word '" + word + "' is not found in the <i>Gregg Anniversary Shorthand Dictionary.</i></p>";
+		var starting = -order-4;
+		if (starting < 0) starting = 0;
+		if (starting > ann_dict.length-4) starting = ann_dict.length-4;
+		for (let i = 0; i < 4; i++) {
+			var thisWord = ann_dict[starting + i];
+			document.getElementById('bt'.concat(i.toString())).value = thisWord;
+			imgpath = '<img src="annWords/'+thisWord+'.png">';
+			document.getElementById('sh'.concat(i.toString())).innerHTML  = imgpath;
+		}
+		starting = -order_reverse - 3;
+		if (starting < 0) starting = 0;
+		if (starting > ann_dict_reverse.length-4) starting = ann_dict_reverse.length-4;
+		for (let i = 0; i < 4; i++) {
+			var thisWord = ann_dict_reverse[starting + i].split("").reverse().join("");
+			document.getElementById('bt'.concat((i + 4).toString())).value = thisWord;
+			imgpath = '<img src="annWords/'+thisWord+'.png">';
+			document.getElementById('sh'.concat((i + 4).toString())).innerHTML = imgpath;
+		}
+		document.getElementById("suggest").style.display="block";		
+	}
+	document.getElementById('record').innerHTML = path;
+}
+
+
+function loadAboutDJS() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader.");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutS90() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Series 90,</i> a book published by The McGraw-Hill Publishing Company in 1978, written by Charles Rader.");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutCen() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Centennial Edition Abridged,</i> a book published by The McGraw-Hill Publishing Company in 1989, written by Charles E. Zoubek, Gregg Condon.");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutSim() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. ");
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutAnnPhrase() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<b>Page from</b> <i>Gregg Shorthand Phrase Book (1930),</i> a book published by The Gregg Publishing Company in 1930, forms written by Harriet M. Johnson.");
+	if (public_domain_only == '') {
+		aboutText = aboutText.concat(" A <a href=\"./annDictionary/AnnPhrasebook.pdf\" target=\"_blank\">pdf version here</a>.");
+	}
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutPre() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<i><b>Page from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar.");
+	if (public_domain_only == '') {
+		aboutText = aboutText.concat(" A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
+	}
+	document.getElementById('about').innerHTML = aboutText;
+}
+function loadAboutAnn() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<i><b>image extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond.");
+	if (public_domain_only=='') {
+		aboutText = aboutText.concat(" A <a href=\"https://greggshorthand.github.io/gsd.pdf\" target=\"_blank\">pdf version</a> dictionary can be found on <a href=\"https://greggshorthand.github.io\" target=\"_blank\">this site</a>.");
+	}
+	document.getElementById('about').innerHTML = aboutText;
+}
+//end inline data.djs.js
+
+//beg inline data.ann.js
+function findOrder(input) {
+	var left = 0;
+	var right = ann_dict.length - 1; // Dynamically set the right boundary
+	var center;
+	var comp;
+	let compLeft, compRight;
+	input = input.toLowerCase();
+	while (right - left > 1) {
+		center = Math.ceil((left + right) / 2);
+		comp = input.localeCompare(ann_dict[center].toLowerCase());
+		if (comp == 0) return center;
+		if (comp < 0) right = center;
+		if (comp > 0) left = center;
+	}
+	compLeft = input.localeCompare(ann_dict[left].toLowerCase());
+	compRight = input.localeCompare(ann_dict[right].toLowerCase());
+	if (compLeft == 0) return left;
+	if (compRight == 0) return right;
+	if (compLeft < 0) return -left - 1;
+	if (compLeft > 0 && compRight < 0) return -left - 2;
+	if (compRight > 0) return -left - 3;
+}
+
+function findOrderReverse(input) {
+	var left = 0;
+	var right = ann_dict_reverse.length - 1; // Dynamically set the right boundary
+	var center;
+	var comp;
+	let compLeft, compRight;
+	var input_reverse = input.toLowerCase().split("").reverse().join("");
+	while (right - left > 1) {
+		center = Math.ceil((left + right) / 2);
+		comp = input_reverse.localeCompare(ann_dict_reverse[center].toLowerCase());
+		if (comp == 0) return center;
+		if (comp < 0) right = center;
+		if (comp > 0) left = center;
+	}
+	compLeft = input_reverse.localeCompare(ann_dict_reverse[left].toLowerCase());
+	compRight = input_reverse.localeCompare(ann_dict_reverse[right].toLowerCase());
+	if (compLeft == 0) return left;
+	if (compRight == 0) return right;
+	// If not found, return the greatest value not greater than input_reverse
+	if (compLeft < 0) return left > 0 ? left - 1 : -1; // input_reverse < left element
+	if (compRight < 0) return left; // input_reverse is between left and right
+	return right; // input_reverse > right element, return right as greatest not greater
+}
+
+function findEntry(word, dict) { //returns the last entry in dict that is not greater than word
+	var left = 0;
+	var right = dict.length - 1;
+	var result = -1;
+	word = word.toLowerCase();
+	
+	while (left <= right) {
+		var center = Math.floor((left + right) / 2);
+		var comp = dict[center].toLowerCase().localeCompare(word);
+		
+		if (comp <= 0) { // dict[center] <= word
+			result = center;
+			left = center + 1; // Look for a later occurrence
+		} else { // dict[center] > word
+			right = center - 1;
+		}
+	}
+	
+	return result >= 0 ? dict[result] : (dict.length > 0 ? dict[0] : null);
+}
+
+async function fetchData() {
+	const response = await fetch('annDictionary/!reference.json');
+	const annMap = await response.json();
+	return annMap;
+}
+
+async function findPageObj(testWord) {
+	const data = await fetchData();
+	for (const page of data) {
+		for (const word of page.words) {
+			if (testWord.toLowerCase() === word.t.toLowerCase()) {
+				return page;
+			}
+		}
+	}
+	return null; // Return null if no match is found
+}
+
+async function getPageByNumber(pageNumber) { //returns the page object for a given page number
+	const data = await fetchData();
+	if (pageNumber >= data.length) { // If pageNumber is greater than the last page, return the last page
+		return data[data.length - 1];
+	}
+	if (pageNumber <= 1) { //if pageNumber is less than or equal to 1 Return the first page 
+		return data[0]; 
+	}
+	pageNumber = pageNumber.toString().padStart(3, '0');
+	return data.find(page => page.page === pageNumber) || null;
+}
+
+
+
+//end inline data.ann.js
 	</script>
 	<body>
 		<div class="container">
@@ -522,13 +1143,13 @@ document.addEventListener('DOMContentLoaded', function() {
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
-                                <button id="btn1" class="djs" onclick="refreshDjsWord()" accesskey="d" title="Diamond Jublee Series (DJS) Alt+Shift+d">DJS</button>
+                                <button id="btn1" class="djs" onclick="refreshDjsWord()" accesskey="d" title="(DJS) Alt+Shift+d">djs</button>
 							</div>
                             <div class="inner">
-                                <button id="btn2" onclick="refreshDjsName()" title="Diamond Jublee Series (DJS) names" class="djs">DJSname</button>
+                                <button id="btn2" onclick="refreshDjsName()" class="djs">djsName</button>
 							</div>
 			                 <div class="inner">
-                                <button id="btn14" onclick="refreshDjsPhrase()"  accesskey="p" title="Diamond Jublee Series (DJS) phrases Alt+Shift+p" class="djs">DJS<b>p</b>hrase</button>
+                                <button id="btn14" onclick="refreshDjsPhrase()"  accesskey="p" title="Alt+Shift+p" class="djs">djs<b>P</b>hrase</button>
 							</div>
 							<div class="inner">
                                 <button id="btn3" onclick="refreshSimWord()" accesskey="s" class="sim" title="Alt+Shift+s"><b>S</b>implified</button>
