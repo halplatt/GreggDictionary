@@ -17,7 +17,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0902@11:56am'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0902@1:23pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -349,6 +349,12 @@
                 row.appendChild(gstCell);
                 row.appendChild(notesCell);
                 row.appendChild(pageCell); // Append the new column
+                //add click event to row
+                row.addEventListener('click', function() {
+                    event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                    const url = `../GreggDictionary${public_domain_only}.html?x=${entry.text}&gsd=${globalGsd}`;
+                    window.open(url, 'GreggDictionary');
+            });
                 tableBody.appendChild(row);
             });
             
@@ -517,7 +523,8 @@
             const objRef = searchRefJson(searchTerm);
 
             const resultItem = document.createElement('div');
-                        resultItem.className = 'result-item';
+            resultItem.className = 'result-item';
+
              // If searchRefJson returns null, return an empty resultItem
             if (!objRef) {//There is no match in the reference file use png image
 
@@ -537,15 +544,12 @@
                 };
 
                 resultItem.appendChild(img_ann);
-               
-                resultItem.addEventListener('click', function() {
-                    const url = `../GreggDictionary${public_domain_only}.html?x=${searchTerm}&gsd=${globalGsd}`;
-                    window.open(url, 'GreggDictionary');
-                });
+
                 return resultItem;
             }
             resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
-    
+
+            
             const outerContainer = document.createElement('div');
             outerContainer.className = 'max-w-screen overflow-x-auto';
 
@@ -567,20 +571,6 @@
                 img.style.top = `-${objRef.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
                 img.style.left = `-${objRef.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
                 img.style.width = `${IMG_WIDTH}px`;
-            };
-
-            img.onclick = function() {
-
-                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                /*const clipboardInput = document.getElementById("clipboardInput");
-                clipboardInput.value = word.t;
-                clipboardInput.select();
-                document.execCommand("copy");
-                clipboardInput.value = ""; */
-
-                var url = `../GreggDictionary${public_domain_only}.html?x=${objRef.word}&gsd=${globalGsd}`;
-            
-                window.open(url, 'GreggDictionary');
             };
 
             const expandButton = document.createElement('button');
