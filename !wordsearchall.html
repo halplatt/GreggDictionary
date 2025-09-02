@@ -26,7 +26,9 @@ version 02/06/2025 at 9:18pm First version
             color: #888;
         }
         #regexInput {
-            width: 60%;
+            /* Allow the main input to shrink/grow so the row can stay on one line */
+            flex: 1 1 360px; /* grow, shrink, preferred width */
+            min-width: 220px; /* don’t get too tiny */
             padding: 5px;
             margin-right: 10px;
         }
@@ -112,6 +114,7 @@ version 02/06/2025 at 9:18pm First version
         display: flex;
         flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
+        align-items: flex-end; /* align bottoms with radio buttons */
         width: 100%;
     }
     .inner {
@@ -121,12 +124,19 @@ version 02/06/2025 at 9:18pm First version
     .input-row {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* keep controls on one line */
         gap: 10px;
         width: 100%;
+        min-width: 0; /* allow flex children to shrink properly */
     }
     .button-row button {
         margin-right: 5px;
+        padding: 2px 8px;        /* slimmer padding so buttons aren't tall */
+        font-size: 16px;         /* keep characters readable */
+        height: 30px;            /* target height */
+        line-height: 26px;       /* vertical centering for glyphs */
+        min-height: 0;           /* don't force taller than explicit height */
+        box-sizing: border-box;
     }
     #caretButton {
         margin-right: 10px;
@@ -160,7 +170,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0827@2:52pm</p>
+    <p id="version">V2025.0902@12:49am</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -185,10 +195,15 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 <!-- end place holder where common links -->
     <br>
     <div class="input-container">
-            <div class="button-row">  
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word"><small>^prefix</small></button>   
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button> 
+           <div class="button-row" style="margin-bottom:8px">
+                <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
+                    <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
+                    <label><input type="radio" name="searchType" value="exact"> Exact match</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+                    
+                </div>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
@@ -199,7 +214,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
             </div>
         <div class="input-row">
-            <input type="text" id="regexInput" placeholder="Enter Regular Expression">
+            <input type="text" id="regexInput" placeholder="Enter text or regex">
             <button id="searchButton" onclick="searchWords()">Search</button>
             <label for="maxResults">Maximum Words:</label>
             <input type="number" id="maxResults" value="25" min="1" style="width: 50px;">
@@ -440,70 +455,54 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             var caretButton = document.getElementById('caretButton');
             if (regexInput.value.startsWith('^')) {
                 caretButton.querySelector('small').textContent = "clear ^prefix";
-                caretButton.title = "Remove ^ from the start";
+                caretButton.title = "Remove ^ from the start � Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
             } else {
                 caretButton.querySelector('small').textContent = "^prefix";
-                caretButton.title = "Insert ^ to indicate the start of the word";
+                caretButton.title = "Insert ^ to indicate the start of the word � Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
             }
         }
+            // Radio-based search type control: sync with input anchors (^ at start, $ at end)
+            function updateSearchTypeRadiosFromInput() {
+                var el = document.getElementById('regexInput');
+                if (!el) return;
+                var v = el.value || '';
+                var type = 'contains';
+                if (v.startsWith('^') && v.endsWith('$') && v.length >= 2) {
+                    type = 'exact';
+                } else if (v.startsWith('^')) {
+                    type = 'beginsWith';
+                } else if (v.endsWith('$')) {
+                    type = 'endsWith';
+                }
+                var radios = document.querySelectorAll('input[name="searchType"]');
+                radios.forEach(function(r){ r.checked = (r.value === type); });
+            }
 
-        function updateDollarButton() {
-            var regexInput = document.getElementById('regexInput');
-            var dollarButton = document.getElementById('dollarButton');
-            if (regexInput.value.endsWith('$')) {
-                dollarButton.querySelector('small').textContent = "clear suffix$";
-                dollarButton.title = "Remove $ from the end";
-            } else {
-                dollarButton.querySelector('small').textContent = "suffix$";
-                dollarButton.title = "Insert $ to indicate the end of the word";
+            function applySearchTypeToInput(type) {
+                var el = document.getElementById('regexInput');
+                if (!el) return;
+                var v = el.value || '';
+                // Remove existing anchors first (only if at ends)
+                if (v.startsWith('^')) v = v.substring(1);
+                if (v.endsWith('$')) v = v.slice(0, -1);
+                // Apply by type
+                if (type === 'beginsWith') {
+                    v = '^' + v;
+                } else if (type === 'endsWith') {
+                    v = v + '$';
+                } else if (type === 'exact') {
+                    v = '^' + v + '$';
+                } // contains -> no anchors
+                el.value = v;
+                // Keep radios and focus in sync
+                updateSearchTypeRadiosFromInput();
+                el.focus();
+                // Select all to make it easy to continue editing
+                try { el.selectionStart = 0; el.selectionEnd = v.length; } catch(e) {}
             }
-        }
-        function addCaret() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            if (value.startsWith('^')) {
-                regexInput.value = value.substring(1);
-            } else {
-                regexInput.value = '^' + value;
-            }
-            regexInput.focus();
-            updateCaretButton();
-            updateDollarButton(); 
-        }
-        function addDollar() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            if (value.endsWith('$')) {
-                regexInput.value = value.slice(0, -1);
-            } else {
-                regexInput.value = value + '$';
-            }
-            regexInput.focus();
-            updateCaretButton();
-            updateDollarButton(); 
-        }
-
-        function addExact() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            // Add ^ at the start if not present
-            if (!value.startsWith('^')) {
-                value = '^' + value;
-            }
-            // Add $ at the end if not present
-            if (!value.endsWith('$')) {
-                value = value + '$';
-            }
-            regexInput.value = value;
-            regexInput.focus();
-            regexInput.selectionStart = 0;
-            regexInput.selectionEnd = value.length;
-            updateCaretButton();
-            updateDollarButton();             
-        }
         // Function to add text at the cursor position or end of the text if no cursor position
         function addTextAtCursor(text) {
-                var regexInput = document.getElementById('regexInput');
+            var regexInput = document.getElementById('regexInput');
             regexInput.focus();
             var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
             var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
@@ -553,7 +552,138 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 //do nothing, the tab is already open
             }
             newTab.focus();
-        }        
+        } 
+        document.getElementById('regexInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                let regexInput = document.getElementById('regexInput');
+                if(regexInput.value && (regexInput.value.includes('-') || regexInput.value.includes('/'))) {
+                    searchGST();
+                } else {
+                    searchText();
+                }
+            }
+            // Keyboard shortcuts for search type
+            // Ctrl+Alt+X/P/S (Alt+Shift+X/P/S) -> exact/beginsWith/endsWith
+            const ctrlAlt = (event.ctrlKey && event.altKey);
+            const altShift = (!event.ctrlKey && event.altKey && event.shiftKey);
+            if (ctrlAlt || altShift) {
+                const k = event.key.toLowerCase();
+                if (k === 'x') { event.preventDefault(); applySearchTypeToInput('exact'); return; }
+                if (k === 'p') { event.preventDefault(); applySearchTypeToInput('beginsWith'); return; }
+                if (k === 's') { event.preventDefault(); applySearchTypeToInput('endsWith'); return; }
+            }
+        });
+        // Sync radios as user types or pastes anchors
+        (function attachInputSync(){
+            try {
+                var el = document.getElementById('regexInput');
+                if(!el) return;
+                el.addEventListener('input', function(){
+                    updateSearchTypeRadiosFromInput();
+                });
+            } catch(e) { /* ignore */ }
+        })();
+        // Handle radio changes to update input
+        (function attachRadioHandlers(){
+            try {
+                var radios = document.querySelectorAll('input[name="searchType"]');
+                radios.forEach(function(r){
+                    r.addEventListener('change', function(ev){
+                        if (ev.target.checked) {
+                            applySearchTypeToInput(ev.target.value);
+                        }
+                    });
+                });
+                // Initial sync based on current input value
+                updateSearchTypeRadiosFromInput();
+            } catch(e) { /* ignore */ }
+        })();
+        // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
+        (function attachMaxResultsEnter(){
+            try {
+                const maxEl = document.getElementById('maxResults');
+                if(!maxEl) return;
+                maxEl.addEventListener('keydown', function(event){
+                    if(event.key === 'Enter'){
+                        const reEl = document.getElementById('regexInput');
+                        if(!reEl) return;
+                        const val = reEl.value || '';
+                        if(val && (val.includes('-') || val.includes('/'))){
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                });
+            } catch(e){ /* ignore */ }
+        })();
+        
+        // Function to focus and select regex input
+        function focusRegexInput() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+            }
+        }
+        
+        // Focus on regex input when page loads - placed at end of document
+        window.addEventListener('load', function() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+                // Initial sync of radio group with current input
+                updateSearchTypeRadiosFromInput();
+            }
+        });
+        
+        // Focus regex input when page receives focus
+        window.addEventListener('focus', function() {
+            focusRegexInput();
+        });
+        
+        // Focus regex input when user clicks anywhere on the page (except specific elements)
+        document.addEventListener('click', function(event) {
+            // Don't refocus if clicking on the input itself, buttons, links, or interactive elements
+            const clickedElement = event.target;
+            if (clickedElement.tagName === 'INPUT' || 
+                clickedElement.tagName === 'BUTTON' || 
+                clickedElement.tagName === 'A' || 
+                clickedElement.tagName === 'IMG' ||
+                clickedElement.closest('button') ||
+                clickedElement.closest('a') ||
+                clickedElement.closest('.result-item') ||
+                clickedElement.closest('.expand-button')) {
+                return; // Don't refocus if clicking on interactive elements
+            }
+            
+            // Small delay to ensure other click events complete first
+            setTimeout(focusRegexInput, 50);
+        });
+        // Insert attribution / copyright notice based on globalGsd
+        (function addAttributionFooter(){
+            try {
+                var footer = document.getElementById('resultsFooter');
+                if(!footer) return; // nothing to do
+                if(footer.dataset.populated) return; // already done
+                const aboutText = document.createElement('div');
+                aboutText.className = 'about-text';
+                if (globalGsd === 'sim') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Simplified</i>, a book published by The Gregg Publishing Company in 1945, written by Charles Rader.</p>";
+                } else if (globalGsd === 'ann') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary</i>, a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg.</p>";
+                } else if (globalGsd === 'pre') {
+                    aboutText.innerHTML = "<p><i><b>Images from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>";
+                } else {
+                    aboutText.innerHTML = "<p><b>Images Source:</b> Gregg Shorthand reference materials.</p>";
+                }
+                footer.appendChild(aboutText);
+                footer.dataset.populated = '1';
+            } catch(e) {
+                // silently ignore
+            }
+        })();
     </script>
 </body>
 </html>

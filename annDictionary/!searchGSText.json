@@ -116,7 +116,7 @@
     "grascii": "A^LOJ"
   },
   {
-    "gst": "a/m",
+    "gst": "a-/-m",
     "text": "a.m.",
     "notes": "intersected"
   },
@@ -210,7 +210,7 @@
     "notes": "<1916>"
   },
   {
-    "gst": "a-b/k",
+    "gst": "a-b-/-k",
     "text": "habeas corpus",
     "notes": "intersected"
   },
@@ -487,7 +487,7 @@
     "grascii": "AD"
   },
   {
-    "gst": "a-d/v",
+    "gst": "a-d-/-v",
     "text": "ad valorem",
     "notes": "intersected"
   },
@@ -945,7 +945,7 @@
     "grascii": "AJ"
   },
   {
-    "gst": "a-j/m",
+    "gst": "a-j-/-m",
     "text": "assistant general manager",
     "notes": "intersected"
   },
@@ -2499,7 +2499,7 @@
     "grascii": "APL"
   },
   {
-    "gst": "a-p-l/b",
+    "gst": "a-p-l-/-b",
     "text": "application blank",
     "notes": "intersected"
   },
@@ -2693,7 +2693,7 @@
     "grascii": "APT"
   },
   {
-    "gst": "a-p-t/m",
+    "gst": "a-p-t-/-m",
     "text": "assistant passenger traffic manager",
     "notes": "intersected"
   },
@@ -3989,7 +3989,7 @@
     "notes": ""
   },
   {
-    "gst": "b/d-r-s",
+    "gst": "b-/-d-r-s",
     "text": "board of directors",
     "notes": "intersected <DJS Expert>"
   },
@@ -6324,7 +6324,7 @@
     "grascii": "CH"
   },
   {
-    "gst": "ch/k",
+    "gst": "ch-/-k",
     "text": "chamber of commerce",
     "notes": "intersected"
   },
@@ -6710,7 +6710,7 @@
     "grascii": "D^B"
   },
   {
-    "gst": "d/j",
+    "gst": "d-/-j",
     "text": "de jure",
     "notes": "intersected"
   },
@@ -15085,7 +15085,7 @@
     "grascii": "FM"
   },
   {
-    "gst": "f-m/s",
+    "gst": "f-m-/-s",
     "text": "Federated Malay States",
     "notes": "intersected"
   },
@@ -15486,7 +15486,7 @@
     "grascii": "FR"
   },
   {
-    "gst": "f-r/b",
+    "gst": "f-r-/-b",
     "text": "Federal Reserve Board",
     "notes": "intersected <Expert>"
   },
@@ -16075,12 +16075,12 @@
     "grascii": "G^AVN"
   },
   {
-    "gst": "g/b",
+    "gst": "g-/-b",
     "text": "Great Britain",
     "notes": "intersected"
   },
   {
-    "gst": "g/b-i",
+    "gst": "g-/-b-i",
     "text": "Great Britain and Ireland",
     "notes": "intersected"
   },
@@ -19566,7 +19566,7 @@
     "grascii": "IVRE"
   },
   {
-    "gst": "j/k",
+    "gst": "j-/-k",
     "text": "Jesus Christ",
     "notes": "intersected"
   },
@@ -19577,17 +19577,17 @@
     "grascii": "J^L"
   },
   {
-    "gst": "j/m",
+    "gst": "j-/-m",
     "text": "general manager",
     "notes": "intersected"
   },
   {
-    "gst": "j/m-e-s-l",
+    "gst": "j-/-m-e-s-l",
     "text": "general manager eastern lines",
     "notes": "intersected, e1"
   },
   {
-    "gst": "j/m-u-e-s-l",
+    "gst": "j-/-m-u-e-s-l",
     "text": "general manager western lines",
     "notes": "intersected, e1"
   },
@@ -19610,7 +19610,7 @@
     "grascii": "J^OE"
   },
   {
-    "gst": "j/r-s-o-sh",
+    "gst": "j-/-r-s-o-sh",
     "text": "joint resolution",
     "notes": "j and r intersected <Expert>"
   },
@@ -20510,7 +20510,7 @@
     "notes": ""
   },
   {
-    "gst": "k/mt",
+    "gst": "k-/-mt",
     "text": "caveat emptor",
     "notes": "intersected"
   },
@@ -20521,7 +20521,7 @@
     "grascii": "K^NT"
   },
   {
-    "gst": "k/o-d",
+    "gst": "k-/-o-d",
     "text": "C.O.D.",
     "notes": "intersected"
   },
@@ -20574,7 +20574,7 @@
     "grascii": "K^T"
   },
   {
-    "gst": "k/t",
+    "gst": "k-/-t",
     "text": "quantity",
     "notes": "intersected"
   },
@@ -23287,7 +23287,7 @@
     "notes": ""
   },
   {
-    "gst": "k-o-s/r",
+    "gst": "k-o-s-/-r",
     "text": "Costa Rica",
     "notes": "intersected"
   },
@@ -32361,7 +32361,7 @@
     "notes": ""
   },
   {
-    "gst": "n/b",
+    "gst": "n-/-b",
     "text": "New Brunswick",
     "notes": "intersected"
   },
@@ -32430,7 +32430,7 @@
     "notes": ""
   },
   {
-    "gst": "n/f",
+    "gst": "n-/-f",
     "text": "Newfoundland",
     "notes": "intersected"
   },
@@ -32458,7 +32458,7 @@
     "grascii": "N^J"
   },
   {
-    "gst": "n/j",
+    "gst": "n-/-j",
     "text": "New Jersey",
     "notes": "intersected"
   },
@@ -32672,7 +32672,7 @@
     "notes": ""
   },
   {
-    "gst": "n/s",
+    "gst": "n-/-s",
     "text": "New Zealand",
     "notes": "intersected"
   },
@@ -32683,7 +32683,7 @@
     "grascii": "N^SH"
   },
   {
-    "gst": "n/s-k",
+    "gst": "n-/-s-k",
     "text": "Nova Scotia",
     "notes": "intersected"
   },
@@ -39235,12 +39235,12 @@
     "grascii": "P^L"
   },
   {
-    "gst": "p/l-s",
+    "gst": "p-/-l-s",
     "text": "price list",
     "notes": "intersected"
   },
   {
-    "gst": "p/m",
+    "gst": "p-/-m",
     "text": "p.m.",
     "notes": "intersected"
   },
@@ -39263,7 +39263,7 @@
     "grascii": "P^OS"
   },
   {
-    "gst": "p/p",
+    "gst": "p-/-p",
     "text": "parcel post",
     "notes": "intersected"
   },
@@ -39274,7 +39274,7 @@
     "grascii": "P^PON"
   },
   {
-    "gst": "p/r",
+    "gst": "p-/-r",
     "text": "Puerto Rico",
     "notes": "intersected"
   },
@@ -40453,7 +40453,7 @@
     "grascii": "PR^KAP"
   },
   {
-    "gst": "p-r/tm",
+    "gst": "p-r-/-tm",
     "text": "per diem",
     "notes": "intersected"
   },
@@ -41383,7 +41383,7 @@
     "grascii": "PT"
   },
   {
-    "gst": "p-t/m",
+    "gst": "p-t-/-m",
     "text": "passenger traffic manager",
     "notes": "intersected"
   },
@@ -41557,12 +41557,12 @@
     "grascii": "R"
   },
   {
-    "gst": "r/a",
+    "gst": "r-/-a",
     "text": "Rhode Island",
     "notes": "intersected"
   },
   {
-    "gst": "r/i",
+    "gst": "r-/-i",
     "text": "Rhode Island",
     "notes": "intersected <Simp.>"
   },
@@ -43521,7 +43521,7 @@
     "grascii": "S^M"
   },
   {
-    "gst": "s/m/p",
+    "gst": "s/m-/-p",
     "text": "superintendent of motive power",
     "notes": "m and p intersected"
   },
@@ -47620,7 +47620,7 @@
     "grascii": "T^LASH"
   },
   {
-    "gst": "t/m",
+    "gst": "t-/-m",
     "text": "traffic manager",
     "notes": "intersected"
   },

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    V2025.0902@1:49pm added radio buttons for type of search
     V2025.0825@9:40pm use include shared-links.html
     V2025.0819@02:14pm replace in-page search with GST Search
     V2025.0616.0219pm add public_domain_only
@@ -43,7 +44,7 @@
 
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0831@6:30pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0902@1:49pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}		
@@ -79,15 +80,13 @@
                 const searchButton = document.getElementById("searchButton");
                 searchButton.addEventListener("click", performSearch);
 
-                // Attach caret/dollar update on input
+                // Attach radio sync with input anchors (^ at start, $ at end)
                 var regexInput = document.getElementById('regexInput');
                 regexInput.addEventListener('input', function() {
-                    updateCaretButton();
-                    updateDollarButton();
+                    updateSearchTypeRadiosFromInput();
                 });
-                // Initial update
-                updateCaretButton();
-                updateDollarButton();
+                // Initial sync
+                updateSearchTypeRadiosFromInput();
             } catch (error) {
                 document.title = `Regex Search of ${imagePath1}`;
             }
@@ -95,17 +94,26 @@
        
             // Event to place focus and select text after focus or click
             document.addEventListener('click', function(event) {
-                const targetId = event.target.id;
+                const target = event.target;
+                const targetId = target.id;
+                const inSearchTypeGroup = !!(target && target.closest && target.closest('.search-type-group'));
+                const isRadio = target && target.tagName === 'INPUT' && target.type === 'radio';
                 const excludeIds = [
                     'maxWords','caretButton', 'addBegSet', 'addBegSetNot', 
                     'addEndSet', 'addPipe', 'addAnyChar', 'add0orMore', 
                     'add1orMore', 'add0or1', 'dollarButton'
                 ];
-                if (targetId !== 'maxWords') {
+                if (targetId !== 'maxWords' && !inSearchTypeGroup && !isRadio) {
                     document.getElementById('regexInput').focus();    
                 }
-                if (!excludeIds.includes(targetId)) {
+                if (!excludeIds.includes(targetId) && !inSearchTypeGroup && !isRadio) {
                     document.getElementById('regexInput').select();
+                }
+            });
+            // Handle radio changes to update input anchors
+            document.addEventListener('change', function(e){
+                if (e.target && e.target.name === 'searchType') {
+                    applySearchTypeToInput(e.target.value);
                 }
             });
             // create a script tag to load the dict1 array
@@ -169,12 +177,68 @@
                 var newTab = window.open(url, 'GreggDictionary');
                 newTab.focus();
             }
+            // Helper: read selected search type
+            function getSelectedSearchType(){
+                const sel = document.querySelector('input[name="searchType"]:checked');
+                return sel ? sel.value : 'contains';
+            }
+
+            // Helper: sync radios from input value (^...$ => exact, etc.)
+            function updateSearchTypeRadiosFromInput(){
+                try {
+                    var v = (document.getElementById('regexInput').value || '');
+                    var type = 'contains';
+                    if (v.startsWith('^') && v.endsWith('$') && v.length >= 2) {
+                        type = 'exact';
+                    } else if (v.startsWith('^')) {
+                        type = 'beginsWith';
+                    } else if (v.endsWith('$')) {
+                        type = 'endsWith';
+                    }
+                    var radio = document.querySelector('input[name="searchType"][value="'+type+'"]');
+                    if (radio) radio.checked = true;
+                } catch(e) { /* ignore */ }
+            }
+
+            // Helper: apply a chosen type to the input, adding/removing anchors
+            function applySearchTypeToInput(type){
+                var el = document.getElementById('regexInput');
+                if (!el) return;
+                var v = el.value || '';
+                // Remove existing anchors to avoid duplication
+                if (v.startsWith('^')) v = v.substring(1);
+                if (v.endsWith('$')) v = v.slice(0, -1);
+                switch(type){
+                    case 'exact': v = '^' + v + '$'; break;
+                    case 'beginsWith': v = '^' + v; break;
+                    case 'endsWith': v = v + '$'; break;
+                    case 'contains': default: /* no anchors */ break;
+                }
+                el.value = v;
+                // Focus and select to keep prior UX
+                el.focus();
+                el.selectionStart = 0;
+                el.selectionEnd = v.length;
+            }
             // Function to perform the search
             function performSearch() {
                 const maxWords = document.getElementById("maxWords").value;
                 const regexInput = document.getElementById("regexInput");
                 const resultList = document.getElementById("resultList");
-                const regexPattern = new RegExp(regexInput.value, 'i');
+                const searchType = getSelectedSearchType();
+                let raw = regexInput.value || '';
+                // Normalize anchors per selected type
+                // Strip any leading ^ and trailing $
+                if (raw.startsWith('^')) raw = raw.substring(1);
+                if (raw.endsWith('$')) raw = raw.slice(0,-1);
+                if (searchType === 'exact') {
+                    raw = '^' + raw + '$';
+                } else if (searchType === 'beginsWith') {
+                    raw = '^' + raw;
+                } else if (searchType === 'endsWith') {
+                    raw = raw + '$';
+                }
+                const regexPattern = new RegExp(raw, 'i');
                 let countMatches = 0;
                 let countDisplay = 0;
                 // Clear previous results
@@ -495,6 +559,7 @@ h1 {
     list-style-type: none;
     padding: 0;
     text-align: left;
+    margin-left: 16px; /* add some left spacing from container edge */
 }
 
 #resultList li {
@@ -515,6 +580,7 @@ h1 {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to the next line if needed */
     justify-content: flex-start;
+    align-items: flex-end; /* align bottoms with radio buttons */
     width: 100%;
 }
 .input-row {
@@ -526,6 +592,12 @@ h1 {
 }
 .button-row button {
     margin-right: 5px;
+    padding: 2px 8px;        /* slimmer padding so buttons aren't tall */
+    font-size: 16px;         /* keep characters readable */
+    height: 30px;            /* target height matching radios */
+    line-height: 26px;       /* vertical centering for glyphs */
+    min-height: 0;           /* prevent oversized defaults */
+    box-sizing: border-box;
 }
 .inner {
     margin-right: 10px; /* Add spacing between links */
@@ -550,6 +622,9 @@ h1 {
 #add0or1 {
     margin-right: 10px;
 }
+/* Left-align the search type header and radios inside the flex row */
+.search-type-group { text-align: left; }
+.search-type-title { text-align: left; }
 </style>
 </head>
 <body>
@@ -581,9 +656,13 @@ h1 {
             <br>
             <div class="input-container"></div>     
             <div class="button-row">  
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word"><small>^prefix</small></button>   
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button> 
+                <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
+                    <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
+                    <label><input type="radio" name="searchType" value="exact"> Exact match</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+                </div>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>

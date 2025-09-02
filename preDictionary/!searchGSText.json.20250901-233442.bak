@@ -3438,7 +3438,7 @@
   },
   {
     "text": "Anno Domini",
-    "gst": "a-/-d",
+    "gst": "a/d",
     "notes": "intersect",
     "grascii": "A\\D"
   },
@@ -9948,7 +9948,7 @@
   },
   {
     "text": "Bona Fide",
-    "gst": "b-/-f",
+    "gst": "b/f",
     "notes": "intersect",
     "grascii": "B\\F"
   },
@@ -42480,7 +42480,7 @@
   },
   {
     "text": "Quantity",
-    "gst": "k-/-t",
+    "gst": "k/t",
     "notes": "intersect",
     "grascii": "K\\T"
   },
@@ -93498,7 +93498,7 @@
   },
   {
     "text": "Vice Versa",
-    "gst": "v-/-v",
+    "gst": "v/v",
     "notes": "intersect",
     "grascii": "V\\V"
   },
@@ -95160,7 +95160,7 @@
   },
   {
     "text": "Abstract Of Title",
-    "gst": "a-b-/-t",
+    "gst": "a-b/t",
     "notes": "intersect",
     "grascii": "AB\\T"
   },
@@ -95214,7 +95214,7 @@
   },
   {
     "text": "A. D.",
-    "gst": "a-/-d",
+    "gst": "a/d",
     "notes": "intersect",
     "grascii": "A\\D"
   },
@@ -95328,7 +95328,7 @@
   },
   {
     "text": "A. M.",
-    "gst": "a-/-m",
+    "gst": "a/m",
     "notes": "intersect",
     "grascii": "A\\M"
   },
@@ -95364,7 +95364,7 @@
   },
   {
     "text": "Application Blank",
-    "gst": "a-p-l-/-b",
+    "gst": "a-p-l/b",
     "notes": "intersect",
     "grascii": "APL\\B"
   },
@@ -95466,7 +95466,7 @@
   },
   {
     "text": "Assistant General Manager",
-    "gst": "a-j-/-m",
+    "gst": "a-j/m",
     "notes": "intersect",
     "grascii": "AJ\\M"
   },
@@ -95490,7 +95490,7 @@
   },
   {
     "text": "Associated Press",
-    "gst": "a-/-p",
+    "gst": "a/p",
     "notes": "intersect",
     "grascii": "A\\P"
   },
@@ -97764,7 +97764,7 @@
   },
   {
     "text": "Baggage Master",
-    "gst": "b-/-m",
+    "gst": "b/m",
     "notes": "intersect",
     "grascii": "B\\M"
   },
@@ -97788,19 +97788,19 @@
   },
   {
     "text": "Baltimore & Ohio",
-    "gst": "b-/-nt-o",
+    "gst": "b/nt-o",
     "notes": "intersect",
     "grascii": "B\\NDO"
   },
   {
     "text": "Bank Draft",
-    "gst": "b-/-d",
+    "gst": "b/d",
     "notes": "intersect",
     "grascii": "B\\D"
   },
   {
     "text": "Bank Note",
-    "gst": "b-/-n",
+    "gst": "b/n",
     "notes": "intersect",
     "grascii": "B\\N"
   },
@@ -98082,49 +98082,49 @@
   },
   {
     "text": "Board Of Commissioners",
-    "gst": "b-/-k-m-sh-ye",
+    "gst": "b/k-m-sh-ye",
     "notes": "intersect,ye2",
     "grascii": "B\\KMSHE~|"
   },
   {
     "text": "Board Of Directors",
-    "gst": "b-/-d-r-k",
+    "gst": "b/d-r-k",
     "notes": "intersect",
     "grascii": "B\\DRK"
   },
   {
     "text": "Board Of Education",
-    "gst": "b-/-e-d-u",
+    "gst": "b/e-d-u",
     "notes": "intersect",
     "grascii": "B\\EDU"
   },
   {
     "text": "Board Of Health",
-    "gst": "b-/-e-l-th",
+    "gst": "b/e-l-th",
     "notes": "intersect",
     "grascii": "B\\ELTH"
   },
   {
     "text": "Board Of Management",
-    "gst": "b-/-mn-j-m",
+    "gst": "b/mn-j-m",
     "notes": "intersect",
     "grascii": "B\\MNJM"
   },
   {
     "text": "Board Of Managers",
-    "gst": "b-/-mn-j-ye",
+    "gst": "b/mn-j-ye",
     "notes": "intersect,ye2",
     "grascii": "B\\MNJE~|"
   },
   {
     "text": "Board Of Trade",
-    "gst": "b-/-t",
+    "gst": "b/t",
     "notes": "intersect",
     "grascii": "B\\T"
   },
   {
     "text": "Bond And Mortgage",
-    "gst": "b-/-nt-m",
+    "gst": "b/nt-m",
     "notes": "intersect",
     "grascii": "B\\NDM"
   },
@@ -98460,7 +98460,7 @@
   },
   {
     "text": "Chamber Of Commerce",
-    "gst": "ch-/-k",
+    "gst": "ch/k",
     "notes": "intersect",
     "grascii": "CH\\K"
   },
@@ -99000,7 +99000,7 @@
   },
   {
     "text": "Democratic Party",
-    "gst": "d-m-/-p",
+    "gst": "d-m/p",
     "notes": "intersect",
     "grascii": "DM\\P"
   },
@@ -99270,19 +99270,19 @@
   },
   {
     "text": "Dry Goods",
-    "gst": "d-/-g",
+    "gst": "d/g",
     "notes": "intersect",
     "grascii": "D\\G"
   },
   {
     "text": "Dry Goods Department",
-    "gst": "d-/-g-d",
+    "gst": "d/g-d",
     "notes": "intersect",
     "grascii": "D\\GD"
   },
   {
     "text": "Dry Goods Store",
-    "gst": "d-/-g-s-t-o-r",
+    "gst": "d/g-s-t-o-r",
     "notes": "intersect",
     "grascii": "D\\GSTOR"
   },
@@ -100512,7 +100512,7 @@
   },
   {
     "text": "Illinois Central",
-    "gst": "e-l-/-s",
+    "gst": "e-l/s",
     "notes": "intersect",
     "grascii": "EL\\S"
   },
@@ -100548,13 +100548,13 @@
   },
   {
     "text": "Union Pacific",
-    "gst": "e-u-n-/-p",
+    "gst": "e-u-n/p",
     "notes": "intersect",
     "grascii": "EUN\\P"
   },
   {
     "text": "United Kingdom Of Great Britain And Ireland",
-    "gst": "e-u-k-g-/-b-i",
+    "gst": "e-u-k-g/b-i",
     "notes": "intersect",
     "grascii": "EUKG\\BI"
   },
@@ -102102,25 +102102,25 @@
   },
   {
     "text": "Grand Jury",
-    "gst": "g-/-j",
+    "gst": "g/j",
     "notes": "intersect",
     "grascii": "G\\J"
   },
   {
     "text": "Grand Trunk",
-    "gst": "g-/-t",
+    "gst": "g/t",
     "notes": "intersect",
     "grascii": "G\\T"
   },
   {
     "text": "Great Britain",
-    "gst": "g-/-b",
+    "gst": "g/b",
     "notes": "intersect",
     "grascii": "G\\B"
   },
   {
     "text": "Great Britain And Ireland",
-    "gst": "g-/-b-i",
+    "gst": "g/b-i",
     "notes": "intersect",
     "grascii": "G\\BI"
   },
@@ -102318,7 +102318,7 @@
   },
   {
     "text": "General Manager",
-    "gst": "j-/-m",
+    "gst": "j/m",
     "notes": "intersect",
     "grascii": "J\\M"
   },
@@ -102330,7 +102330,7 @@
   },
   {
     "text": "Jesus Christ",
-    "gst": "j-/-k",
+    "gst": "j/k",
     "notes": "intersect",
     "grascii": "J\\K"
   },
@@ -102474,7 +102474,7 @@
   },
   {
     "text": "Canadian Pacific",
-    "gst": "k-a-n-/-p",
+    "gst": "k-a-n/p",
     "notes": "intersect",
     "grascii": "KAN\\P"
   },
@@ -102690,7 +102690,7 @@
   },
   {
     "text": "C. O. D.",
-    "gst": "k-/-o-d",
+    "gst": "k/o-d",
     "notes": "intersect",
     "grascii": "K\\OD"
   },
@@ -102720,7 +102720,7 @@
   },
   {
     "text": "Conservative Party",
-    "gst": "k-/-p",
+    "gst": "k/p",
     "notes": "intersect",
     "grascii": "K\\P"
   },
@@ -102828,7 +102828,7 @@
   },
   {
     "text": "County Council",
-    "gst": "k-/-k",
+    "gst": "k/k",
     "notes": "intersect",
     "grascii": "K\\K"
   },
@@ -103236,7 +103236,7 @@
   },
   {
     "text": "Liberal Party",
-    "gst": "l-/-p",
+    "gst": "l/p",
     "notes": "intersect",
     "grascii": "L\\P"
   },
@@ -103278,13 +103278,13 @@
   },
   {
     "text": "List Price",
-    "gst": "l-s-/-p",
+    "gst": "l-s/p",
     "notes": "intersect",
     "grascii": "LS\\P"
   },
   {
     "text": "List Prices",
-    "gst": "l-s-/-p-s",
+    "gst": "l-s/p-s",
     "notes": "intersect",
     "grascii": "LS\\PS"
   },
@@ -103356,7 +103356,7 @@
   },
   {
     "text": "Loss And Damage",
-    "gst": "l-/-d",
+    "gst": "l/d",
     "notes": "intersect",
     "grascii": "L\\D"
   },
@@ -103674,7 +103674,7 @@
   },
   {
     "text": "Market Price",
-    "gst": "m-r-/-p",
+    "gst": "m-r/p",
     "notes": "intersect",
     "grascii": "MR\\P"
   },
@@ -103758,7 +103758,7 @@
   },
   {
     "text": "Member Of Parliament",
-    "gst": "m-m-/-p",
+    "gst": "m-m/p",
     "notes": "intersect",
     "grascii": "MM\\P"
   },
@@ -103836,7 +103836,7 @@
   },
   {
     "text": "Michigan Central",
-    "gst": "m-/-sh",
+    "gst": "m/sh",
     "notes": "intersect",
     "grascii": "M\\SH"
   },
@@ -104490,7 +104490,7 @@
   },
   {
     "text": "Endowment Policy",
-    "gst": "nt-/-p",
+    "gst": "nt/p",
     "notes": "intersect",
     "grascii": "ND\\P"
   },
@@ -104766,7 +104766,7 @@
   },
   {
     "text": "Indemnity Policy",
-    "gst": "nt-m-/-p",
+    "gst": "nt-m/p",
     "notes": "intersect",
     "grascii": "NDM\\P"
   },
@@ -106008,13 +106008,13 @@
   },
   {
     "text": "New York Central",
-    "gst": "n-o-k-/-s",
+    "gst": "n-o-k/s",
     "notes": "intersect",
     "grascii": "NOK\\S"
   },
   {
     "text": "New York Draft",
-    "gst": "n-o-k-/-d",
+    "gst": "n-o-k/d",
     "notes": "intersect",
     "grascii": "NOK\\D"
   },
@@ -106176,7 +106176,7 @@
   },
   {
     "text": "Northern Pacific",
-    "gst": "n-/-p",
+    "gst": "n/p",
     "notes": "intersect",
     "grascii": "N\\P"
   },
@@ -107568,19 +107568,19 @@
   },
   {
     "text": "People's Party",
-    "gst": "p-/-p",
+    "gst": "p/p",
     "notes": "intersect",
     "grascii": "P\\P"
   },
   {
     "text": "Per Barrel",
-    "gst": "p-r-/-b",
+    "gst": "p-r/b",
     "notes": "intersect",
     "grascii": "PR\\B"
   },
   {
     "text": "Per Bushel",
-    "gst": "p-r-/-b-sh",
+    "gst": "p-r/b-sh",
     "notes": "intersect",
     "grascii": "PR\\BSH"
   },
@@ -107592,19 +107592,19 @@
   },
   {
     "text": "Per Dozen",
-    "gst": "p-r-/-d",
+    "gst": "p-r/d",
     "notes": "intersect",
     "grascii": "PR\\D"
   },
   {
     "text": "Per Gallon",
-    "gst": "p-r-/-g",
+    "gst": "p-r/g",
     "notes": "intersect",
     "grascii": "PR\\G"
   },
   {
     "text": "Per Hundred",
-    "gst": "p-r-/-n",
+    "gst": "p-r/n",
     "notes": "intersect",
     "grascii": "PR\\N"
   },
@@ -107886,7 +107886,7 @@
   },
   {
     "text": "P. M.",
-    "gst": "p-/-m",
+    "gst": "p/m",
     "notes": "intersect",
     "grascii": "P\\M"
   },
@@ -107904,7 +107904,7 @@
   },
   {
     "text": "Postmaster General",
-    "gst": "p-/-m-j",
+    "gst": "p/m-j",
     "notes": "intersect",
     "grascii": "P\\MJ"
   },
@@ -107958,7 +107958,7 @@
   },
   {
     "text": "Price List",
-    "gst": "p-/-l",
+    "gst": "p/l",
     "notes": "intersect",
     "grascii": "P\\L"
   },
@@ -107970,7 +107970,7 @@
   },
   {
     "text": "Printed Matter",
-    "gst": "p-/-m",
+    "gst": "p/m",
     "notes": "intersect",
     "grascii": "P\\M"
   },
@@ -108168,7 +108168,7 @@
   },
   {
     "text": "Republican Party",
-    "gst": "r-/-p",
+    "gst": "r/p",
     "notes": "intersect",
     "grascii": "R\\P"
   },
@@ -108462,7 +108462,7 @@
   },
   {
     "text": "Chicago & Alton",
-    "gst": "sh-/-a",
+    "gst": "sh/a",
     "notes": "intersect",
     "grascii": "SH\\A"
   },
@@ -108654,13 +108654,13 @@
   },
   {
     "text": "School Board",
-    "gst": "s-k-l-/-b",
+    "gst": "s-k-l/b",
     "notes": "intersect",
     "grascii": "SKL\\B"
   },
   {
     "text": "School Board Committee",
-    "gst": "s-k-l-/-b-k-e-t-e",
+    "gst": "s-k-l/b-k-e-t-e",
     "notes": "intersect",
     "grascii": "SKL\\BKETE"
   },
@@ -108756,7 +108756,7 @@
   },
   {
     "text": "Selling Price",
-    "gst": "s-e-l-/-p",
+    "gst": "s-e-l/p",
     "notes": "intersect",
     "grascii": "SEL\\P"
   },
@@ -109230,7 +109230,7 @@
   },
   {
     "text": "Something Else",
-    "gst": "s-m-/-l-s",
+    "gst": "s-m/l-s",
     "notes": "intersect",
     "grascii": "SM\\LS"
   },
@@ -109362,7 +109362,7 @@
   },
   {
     "text": "Southern Pacific",
-    "gst": "s-u-th-/-p",
+    "gst": "s-u-th/p",
     "notes": "intersect",
     "grascii": "SUTH\\P"
   },
@@ -112368,7 +112368,7 @@
   },
   {
     "text": "Traffic Manager",
-    "gst": "t-r-a-f-/-m",
+    "gst": "t-r-a-f/m",
     "notes": "intersect",
     "grascii": "TRAF\\M"
   },
@@ -112566,7 +112566,7 @@
   },
   {
     "text": "Order Blank",
-    "gst": "u-d-/-b",
+    "gst": "u-d/b",
     "notes": "intersect",
     "grascii": "UD\\B"
   },

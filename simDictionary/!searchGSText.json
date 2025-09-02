@@ -2066,7 +2066,7 @@
   {
     "text": "Associated Press",
     "YAGATS": "a*p",
-    "gst": "a-*-p",
+    "gst": "a-/-p",
     "notes": ""
   },
   {
@@ -9212,7 +9212,7 @@
   {
     "text": "Great Britain",
     "YAGATS": "g*b",
-    "gst": "g-*-b",
+    "gst": "g-/-b",
     "notes": ""
   },
   {
@@ -15692,7 +15692,7 @@
   {
     "text": "New Jersey",
     "YAGATS": "n*j",
-    "gst": "n-*-j",
+    "gst": "n-/-j",
     "notes": ""
   },
   {
@@ -18386,7 +18386,7 @@
   {
     "text": "quantities",
     "YAGATS": "k*tz",
-    "gst": "k-*-t-s",
+    "gst": "k-/-t-s",
     "notes": "s2"
   },
   {
@@ -27320,7 +27320,7 @@
   {
     "text": "Virgin Islands",
     "YAGATS": "verjn*i",
-    "gst": "v-e-r-j-n-*-i",
+    "gst": "v-e-r-j-n-/-i",
     "notes": ""
   },
   {
