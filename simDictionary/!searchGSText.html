@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2025.0902@11:45am fix URL paths for github
     //V2025.0827@1:56pm use include !shared-links.html
     //V2025.0825@12:00am changes to accomodate pre-anniversary
     //V2025.0821@07:@12:45pm add max result limit
@@ -14,6 +15,13 @@
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
 		// IIFE to set the global variable `public_domain_only` ;
 		// if page name ends in 'pd' only public domain dictionaries are shown.
+        document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0902@11:56am'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}
+        });
 		(function () {
 			// Prefer explicit query param ?public_domain_only=...
 			var usp = new URLSearchParams(window.location.search || '');
@@ -26,13 +34,6 @@
 			// Expose globally for existing code to use
 			window.public_domain_only = usp.get('public_domain_only') || derived;
 		})();
-        document.addEventListener('DOMContentLoaded', (event) => { 
-            // Set the version number
-            document.getElementById('version').textContent = 'V2025.0901@11:45pm'; // Version display element 
-            if (public_domain_only === 'pd') {
-					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
-			}
-        });
         if (public_domain_only === 'pd') {
             const style = document.createElement('style');
             style.innerHTML = `
@@ -538,19 +539,13 @@
                 resultItem.appendChild(img_ann);
                
                 resultItem.addEventListener('click', function() {
-                    const url = `/GreggDictionary${public_domain_only}.html?x=${searchTerm}&gsd=${globalGsd}`;
+                    const url = `../GreggDictionary${public_domain_only}.html?x=${searchTerm}&gsd=${globalGsd}`;
                     window.open(url, 'GreggDictionary');
                 });
                 return resultItem;
             }
             resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
-            if (globalGsd === 'ann') {
-                resultItem.addEventListener('click', function() {
-                const url = `!searchpages.html?w=${objRef.page}`;
-                window.open(url, `searchpages${globalGsd}`);
-                });
-            }
-
+    
             const outerContainer = document.createElement('div');
             outerContainer.className = 'max-w-screen overflow-x-auto';
 
@@ -561,11 +556,7 @@
 
             const img = document.createElement('img');
             img.className = 'absolute max-w-none';
-            if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github (this only matters for the sim pages and ann pages are numeric)
-                img.src = `${objRef.page.toLowerCase()}.png`;
-            } else {
-                img.src = `${objRef.page}.png`;
-            }
+            img.src = `${objRef.page}.png`;
             img.alt = `Gregg shorthand for word: ${objRef.word}`;
             img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
             img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
@@ -586,11 +577,9 @@
                 clipboardInput.select();
                 document.execCommand("copy");
                 clipboardInput.value = ""; */
-                if (window.location.hostname == "halplatt.github.io") {
-                    var url = `/GreggDictionary/GreggDictionary${public_domain_only}.html?x=${objRef.word}&gsd=${globalGsd}`;
-                } else {
-                    var url = `/GreggDictionary${public_domain_only}.html?x=${objRef.word}&gsd=${globalGsd}`;
-                }
+
+                var url = `../GreggDictionary${public_domain_only}.html?x=${objRef.word}&gsd=${globalGsd}`;
+            
                 window.open(url, 'GreggDictionary');
             };
 
