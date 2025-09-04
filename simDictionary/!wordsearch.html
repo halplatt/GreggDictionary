@@ -2,6 +2,7 @@
 <!--
 This version of !wordsearch.html is for the /annDictionary and /simDictionary directories utilizing !reference.json to get the word's coordinates on page png. 
 THis is not the version for the /preWord, /annWord and /djsWord directories that utilizes !words.array.js to get list png's containing outline images.
+V2025.0903@01:00pm add \w button
 V2025.0827@1:56pm use include !shared-links.html
 V2025.0616.0310pm add public_domain_only
 V2025.0614.0824pm add words pre-fix suffix and add exact button
@@ -22,6 +23,13 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Search</title>
     <script>
+        document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0903@01:00pm'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}		
+        });
 		// IIFE to set the global variable `public_domain_only` ;
 		// if page name ends in 'pd' only public domain dictionaries are shown.
 		(function () {
@@ -37,13 +45,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 			window.public_domain_only = usp.get('public_domain_only') || derived;
 		})();
             
-        document.addEventListener('DOMContentLoaded', (event) => { 
-            // Set the version number
-            document.getElementById('version').textContent = 'V2025.0829@6:30pm'; // Version display element 
-            if (public_domain_only === 'pd') {
-					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
-			}		
-        });
+
         if (public_domain_only === 'pd') {
             const style = document.createElement('style');
             style.innerHTML = `
@@ -160,6 +162,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
         display: flex;
         flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
+        align-items: flex-end; /* align bottoms with radio buttons */
         width: 100%;
     }
     .input-row {
@@ -171,6 +174,12 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     }
     .button-row button {
         margin-right: 5px;
+        padding: 2px 8px;        /* slimmer padding so buttons aren't tall */
+        font-size: 16px;         /* keep characters readable */
+        height: 30px;            /* target height matching radios */
+        line-height: 26px;       /* vertical centering for glyphs */
+        min-height: 0;           /* prevent oversized defaults */
+        box-sizing: border-box;
     }
     #caretButton {
         margin-right: 10px;
@@ -222,21 +231,21 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
     <br>
     <div class="input-container">
         <div class="button-row">
-                <button id="caretButton" onclick="addCaret()" title="Insert ^ to indicate the start of the word">
-                    <small>^prefix</small>
-                </button>
+                <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
+                    <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
+                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> Exact match</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
+                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+                </div>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
                 <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
-                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
                 <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
-                <button id="dollarButton" onclick="addDollar()" title="Insert $ to indicate the end of the word"><small>suffix$</small></button>
-                <button id="exactButton" onclick="addExact()" title="Match the exact word (adds ^ and $)"><small>^exact$</small></button>   
-                </button>
-
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter Regular Expression">
@@ -259,12 +268,12 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
                 const path = url.pathname;
                 const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
 
-                document.title = `Regex Search of ${folderName}`;
-                document.querySelector('h1').textContent = `Regex Search of ${folderName}`;
-                document.querySelector('title').textContent = `Regex Search of ${folderName}`;
+                document.title = `Regex Search of Pages in ${folderName}`;
+                document.querySelector('h1').textContent = `Regex Search Pages in ${folderName}`;
+                document.querySelector('title').textContent = `Regex Search Pages in ${folderName}`;
                 globalGsd = folderName.substring(0,3);
             } catch (error) {
-                //document.title = `Regex Search of ${imagePath1}`;
+ 
             }
         document.getElementById('regexInput').focus();
         document.getElementById('regexInput').select();
@@ -273,20 +282,92 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
             if (event.key === 'Enter') {
                 searchWords();
             }
-            try {
-                // Attach caret/dollar update on input
-                var regexInput = document.getElementById('regexInput');
-                regexInput.addEventListener('input', function() {
-                    updateCaretButton();
-                    updateDollarButton();
-                });
-                // Initial update
-                updateCaretButton();
-                updateDollarButton();
-            } catch (error) {
-                document.title = `Regex Search of ${imagePath1}`;
+            // Keyboard shortcuts for search type
+            const ctrlAlt = (event.ctrlKey && event.altKey);
+            const altShift = (!event.ctrlKey && event.altKey && event.shiftKey);
+            if (ctrlAlt || altShift) {
+                const k = event.key.toLowerCase();
+                if (k === 'x') { event.preventDefault(); applySearchTypeToInput('exact'); return; }
+                if (k === 'p') { event.preventDefault(); applySearchTypeToInput('beginsWith'); return; }
+                if (k === 's') { event.preventDefault(); applySearchTypeToInput('endsWith'); return; }
             }
         });
+
+        // Radio-based search type helpers
+        function getSelectedSearchType() {
+            const sel = document.querySelector('input[name="searchType"]:checked');
+            return sel ? sel.value : 'contains';
+        }
+        function updateSearchTypeRadiosFromInput(){
+            try {
+                var v = (document.getElementById('regexInput').value || '');
+                var type = 'contains';
+                if (v.startsWith('^') && v.endsWith('$') && v.length >= 2) {
+                    type = 'exact';
+                } else if (v.startsWith('^')) {
+                    type = 'beginsWith';
+                } else if (v.endsWith('$')) {
+                    type = 'endsWith';
+                }
+                var radio = document.querySelector('input[name="searchType"][value="'+type+'"]');
+                if (radio) radio.checked = true;
+            } catch(e) { /* ignore */ }
+        }
+        function applySearchTypeToInput(type){
+            var el = document.getElementById('regexInput');
+            if (!el) return;
+            var v = el.value || '';
+            if (v.startsWith('^')) v = v.substring(1);
+            if (v.endsWith('$')) v = v.slice(0, -1);
+            switch(type){
+                case 'exact': v = '^' + v + '$'; break;
+                case 'beginsWith': v = '^' + v; break;
+                case 'endsWith': v = v + '$'; break;
+                case 'contains': default: break;
+            }
+            el.value = v;
+            updateSearchTypeRadiosFromInput();
+            try { el.focus(); el.selectionStart = 0; el.selectionEnd = v.length; } catch(e) {}
+        }
+        // Sync radios as user types or pastes anchors
+        (function attachInputSync(){
+            try {
+                var el = document.getElementById('regexInput');
+                if(!el) return;
+                el.addEventListener('input', function(){
+                    updateSearchTypeRadiosFromInput();
+                });
+                updateSearchTypeRadiosFromInput();
+            } catch(e) { /* ignore */ }
+        })();
+        // Handle radio changes to update input
+        (function attachRadioHandlers(){
+            try {
+                document.addEventListener('change', function(e){
+                    if (e.target && e.target.name === 'searchType') {
+                        applySearchTypeToInput(e.target.value);
+                    }
+                });
+            } catch(e) { /* ignore */ }
+        })();
+
+        // Function to add text at the cursor position or end if no selection
+        function addTextAtCursor(text) {
+            var regexInput = document.getElementById('regexInput');
+            if (!regexInput) return;
+            regexInput.focus();
+            var startPos = typeof regexInput.selectionStart === 'number' ? regexInput.selectionStart : regexInput.value.length;
+            var endPos = typeof regexInput.selectionEnd === 'number' ? regexInput.selectionEnd : regexInput.value.length;
+            // Insert after current selection (do not replace selected text)
+            regexInput.value =
+                regexInput.value.substring(0, endPos) +
+                text +
+                regexInput.value.substring(endPos);
+            var cursorPos = endPos + text.length;
+            try { regexInput.selectionStart = regexInput.selectionEnd = cursorPos; } catch(e) {}
+            // keep radios in sync if anchors typed
+            updateSearchTypeRadiosFromInput();
+        }
 
         async function fetchData() {
             const response = await fetch('!reference.json');
@@ -296,7 +377,15 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
 
         async function searchWords() {
             const regexInput = document.getElementById('regexInput');
-            const regex = new RegExp(regexInput.value, 'i');
+            const type = getSelectedSearchType();
+            // Normalize anchors according to radio selection
+            let raw = regexInput.value || '';
+            if (raw.startsWith('^')) raw = raw.substring(1);
+            if (raw.endsWith('$')) raw = raw.slice(0, -1);
+            if (type === 'exact') raw = '^' + raw + '$';
+            else if (type === 'beginsWith') raw = '^' + raw;
+            else if (type === 'endsWith') raw = raw + '$';
+            const regex = new RegExp(raw, 'i');
             const resultsContainer = document.getElementById('results');
             const maxResults = parseInt(document.getElementById('maxResults').value, 10) || 25;
             resultsContainer.innerHTML = '';
@@ -404,87 +493,7 @@ Version 12/13/2024 at 12:23PM Renamed files to use page names instead of numbers
             regexInput.focus();
             regexInput.select();
         }
-        function updateCaretButton() {
-            var regexInput = document.getElementById('regexInput');
-            var caretButton = document.getElementById('caretButton');
-            if (regexInput.value.startsWith('^')) {
-                caretButton.querySelector('small').textContent = "clear ^prefix";
-                caretButton.title = "Remove ^ from the start";
-            } else {
-                caretButton.querySelector('small').textContent = "^prefix";
-                caretButton.title = "Insert ^ to indicate the start of the word";
-            }
-        }
-
-        function updateDollarButton() {
-            var regexInput = document.getElementById('regexInput');
-            var dollarButton = document.getElementById('dollarButton');
-            if (regexInput.value.endsWith('$')) {
-                dollarButton.querySelector('small').textContent = "clear suffix$";
-                dollarButton.title = "Remove $ from the end";
-            } else {
-                dollarButton.querySelector('small').textContent = "suffix$";
-                dollarButton.title = "Insert $ to indicate the end of the word";
-            }
-        }
-        function addCaret() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            if (value.startsWith('^')) {
-                regexInput.value = value.substring(1);
-            } else {
-                regexInput.value = '^' + value;
-            }
-            regexInput.focus();
-            updateCaretButton();
-            updateDollarButton(); 
-        }
-        function addDollar() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            if (value.endsWith('$')) {
-                regexInput.value = value.slice(0, -1);
-            } else {
-                regexInput.value = value + '$';
-            }
-            regexInput.focus();
-            updateCaretButton();
-            updateDollarButton(); 
-        }
-
-        function addExact() {
-            var regexInput = document.getElementById('regexInput');
-            var value = regexInput.value;
-            // Add ^ at the start if not present
-            if (!value.startsWith('^')) {
-                value = '^' + value;
-            }
-            // Add $ at the end if not present
-            if (!value.endsWith('$')) {
-                value = value + '$';
-            }
-            regexInput.value = value;
-            regexInput.focus();
-            regexInput.selectionStart = 0;
-            regexInput.selectionEnd = value.length;
-            updateCaretButton();
-            updateDollarButton();             
-        }
-        // Function to add text at the cursor position or end of the text if no cursor position
-        function addTextAtCursor(text) {
-            var regexInput = document.getElementById('regexInput');
-            regexInput.focus();
-            var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
-            var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
-            // Insert the text after the selected text, not replacing it
-            regexInput.value = 
-                regexInput.value.substring(0, endPos) + 
-                text + 
-                regexInput.value.substring(endPos);
-            // Set the cursor position to the end of the inserted text
-            var cursorPos = endPos + text.length;
-            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;     
-        }
+    // caret/dollar/exact helpers removed; replaced by radio-based controls
         // Function to open or focus a tab with the given URL and target
         function openOrFocusTab(url, target) {
             var newTab = window.open('', target);

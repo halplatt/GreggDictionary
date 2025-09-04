@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+V2025.0903@01:00pm add \w button
 V2025.0827@2:52pm use include !shared-links.html
 V2025.0825.1159pm rearanged buttons and fixed links
 v2025.0528.0915pm fix insert character at cursor position
@@ -170,7 +171,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0902@12:49am</p>
+    <p id="version">V2025.0903@01:00pm</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -207,7 +208,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
                 <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                

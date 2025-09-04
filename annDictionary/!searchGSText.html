@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2025.0903@01:00pm add \w button
     //V2025.0902@11:45am fix URL paths for github
     //V2025.0827@1:56pm use include !shared-links.html
     //V2025.0825@12:00am changes to accomodate pre-anniversary
@@ -17,7 +18,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0902@1:23pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0903@01:00pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -220,8 +221,9 @@
             <div class="version" id="version"></div>
         </div>
     </div>
+    <div class="input-container">
 <!-- beg place holder where common links begin if page one level above !shared-links.html -->
-<div id="shared-links"></div>
+        <div id="shared-links"></div>
 
 <script>
 (function loadSharedLinks() {
@@ -242,12 +244,12 @@
 <!-- end place holder where common links -->
  
     <br>
-    <div class="input-container">
+
            <div class="button-row" style="margin-bottom:8px">
                 <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
                     <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
                     <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
-                    <label><input type="radio" name="searchType" value="exact"> Exact match</label>
+                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> Exact match</label>
                     <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
                     <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
                   
@@ -255,7 +257,7 @@
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                 <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addAnyChar" onclick="addTextAtCursor('.')" title="Insert . to represent any character">.</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
                 <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                 <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
                 <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                

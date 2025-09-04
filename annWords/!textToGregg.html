@@ -59,7 +59,7 @@
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'V2025.0831@6:30pm';
+            document.getElementById('version').textContent = 'V2025.0903@6:30pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -215,6 +215,11 @@ img:not(:first-child) {
     font-size: 0.3em; /* Adjust font size as needed */
     margin-bottom: 5px; /* Adjust spacing as needed */
 }
+.input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 /* Add some space above the resultContainer */
 #resultContainer {
     margin-top: 20px; /* Adjust the value as needed */
@@ -484,6 +489,7 @@ function processInput() {
 </head>
 <body>
     <h1>Convert Text to Gregg Diamond Jubliee Shorthand</h1>
+    <div class="input-container">
 <!-- beg place holder where common links begin if page one level above !shared-links.html -->
 <div id="shared-links"></div>
 <script>
@@ -503,7 +509,7 @@ function processInput() {
 })();
 </script>
 <!-- end place holder where common links -->
-
+    </div>
     <br>     
     <form id="translatorForm">
         <input type="checkbox" id="checkboxUseDict2" checked>

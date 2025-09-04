@@ -2502,3 +2502,9 @@ weld,weld
 sword,sword
 inequality,inequity
 alfalta,alfalfa
+shutott,shutoff
+snowdritt,snowdrift
+dandruft,dandruff
+dufter,duffer
+gruft,gruff
+whitfled,whiffled
