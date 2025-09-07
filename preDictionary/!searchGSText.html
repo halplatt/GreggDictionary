@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2025.0904@11:00am Ignore digits unless input contains digits    
     //V2025.0903@01:00pm add \w button
     //V2025.0902@11:45am fix URL paths for github
     //V2025.0827@1:56pm use include !shared-links.html
@@ -18,7 +19,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0903@01:00pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0904@11:00am'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -276,9 +277,9 @@
         <thead>
             <tr>
                 <th>Text</th>
+                <th>Outline</th>
                 <th>GST</th>
                 <th>Notes</th>
-                <th>Outline</th>
             </tr>
         </thead>
         <tbody>
@@ -347,10 +348,11 @@
                 const imageDiv = imageContainer(entry.text || '');
                 pageCell.appendChild(imageDiv);
 
+                // Column order: Text, Outline, GST, Notes
                 row.appendChild(textCell);
+                row.appendChild(pageCell); // Outline column
                 row.appendChild(gstCell);
                 row.appendChild(notesCell);
-                row.appendChild(pageCell); // Append the new column
                 //add click event to row
                 row.addEventListener('click', function() {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
@@ -479,7 +481,15 @@
             const regexInput = inputEl.value;
             try {
                 const regex = new RegExp(regexInput, 'i'); // Case-insensitive
-                const results = dataGST.filter(entry => regex.test(entry.gst));
+                //beg Ignore digits unless input contains digits 
+                const hasDigitInInput = /[0-9]/.test(regexInput);
+                const results = dataGST.filter(entry => {
+                    const gstVal = (entry && typeof entry.gst === 'string') ? entry.gst : '';
+                    // If the input has no digits, ignore digits in the GST by stripping them before testing
+                    const target = hasDigitInInput ? gstVal : gstVal.replace(/\d+/g, '');
+                    return regex.test(target);
+                });
+                //end Ignore digits unless input contains digits
                 displayResults(results, regexInput, 'GST');
             } catch (error) {
                 alert('Invalid regular expression');

@@ -326,7 +326,7 @@
     </style>
 </head>
 <body>
-    <div class="version">V2025.0829@2:40pm</div>
+    <div class="version">V2025.0907.2:28pm</div>
     <h1>GreggSimplified GRASCII Search</h1>
     <p class="subtitle">using GRASCII (Gregg-ASCII Transliteration System)</p>
        <div class="input-container">
@@ -844,13 +844,25 @@
             const resultItem = document.createElement('div');
                         resultItem.className = 'result-item';
              // If searchRefJson returns null, return an empty resultItem
-            if (!objRef) {
-                resultItem.innerHTML = 'No match found';
-               
-                resultItem.addEventListener('click', function() {
-                    const url = `/GreggDictionary.html?x=${searchTerm}&gsd=${globalGsd}`;
-                    window.open(url, 'GreggDictionary');
-                });
+             if (!objRef) {//There is no match in the reference file use png image
+
+                const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
+                const img_ann = document.createElement("img");
+                img_ann.src = `${imagePathann}${searchTerm}.png`;
+                img_ann.style.width = 'auto';  // Set the width to 1/4 of the original size
+                img_ann.style.height = '50px'; // Set the height to 1/4 of the original size
+
+                img_ann.onerror = function() {
+                    this.style.display = "none";  // Hide the image
+                    const errorText = document.createElement("span");
+                    errorText.textContent = "image not available";
+                    errorText.style.color = "#888";
+                    errorText.style.fontStyle = "italic";
+                    resultItem.appendChild(errorText);
+                };
+
+                resultItem.appendChild(img_ann);
+
                 return resultItem;
             }
             resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
@@ -896,11 +908,9 @@
                 clipboardInput.select();
                 document.execCommand("copy");
                 clipboardInput.value = ""; */
-                if (window.location.hostname == "halplatt.github.io") {
-                    var url = `/GreggDictionary/GreggDictionary.html?x=${objRef.word}&gsd=${globalGsd}`;
-                } else {
-                    var url = `/GreggDictionary.html?x=${objRef.word}&gsd=${globalGsd}`;
-                }
+                
+                var url = `../GreggDictionary.html?x=${objRef.word}&gsd=${globalGsd}`;
+                
                 window.open(url, 'GreggDictionary');
             };
 

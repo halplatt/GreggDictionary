@@ -277,9 +277,9 @@
         <thead>
             <tr>
                 <th>Text</th>
+                <th>Outline</th>
                 <th>GST</th>
                 <th>Notes</th>
-                <th>Outline</th>
             </tr>
         </thead>
         <tbody>
@@ -348,10 +348,11 @@
                 const imageDiv = imageContainer(entry.text || '');
                 pageCell.appendChild(imageDiv);
 
+                // Column order: Text, Outline, GST, Notes
                 row.appendChild(textCell);
+                row.appendChild(pageCell); // Outline column
                 row.appendChild(gstCell);
                 row.appendChild(notesCell);
-                row.appendChild(pageCell); // Append the new column
                 //add click event to row
                 row.addEventListener('click', function() {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
