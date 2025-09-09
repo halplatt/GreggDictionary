@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+V2025.0909@12:12pm prefetch data
 V2025.0903@01:00pm add \w button
 V2025.0827@2:52pm use include !shared-links.html
 V2025.0825.1159pm rearanged buttons and fixed links
@@ -171,7 +172,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0903@01:00pm</p>
+    <p id="version">V2025.0909@12:12pm</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -261,11 +262,18 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             }
         });
 
-        async function fetchData() {
-            const response = await fetch('simDictionary/!reference.json');
-            const data = await response.json();
-            return data;
-        }
+        // Preload and cache reference data once at page load
+        let refData = null;
+        const refDataReady = fetch('simDictionary/!reference.json', { cache: 'default' })
+            .then(r => {
+                if (!r.ok) throw new Error('Failed to load simDictionary/!reference.json');
+                return r.json();
+            })
+            .then(json => (refData = json))
+            .catch(err => {
+                console.error('reference.json load error:', err);
+                refData = [];
+            });
 
         async function searchWords() {
             const regexInput = document.getElementById('regexInput');
@@ -274,7 +282,8 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             const maxResults = parseInt(document.getElementById('maxResults').value, 10) || 25;
             resultsContainer.innerHTML = '';
 
-            const data = await fetchData();
+            // Use preloaded data; wait for it if still loading
+            const data = refData || (await refDataReady) || [];
             let resultCount = 0;
             let totalMatches = 0;
 
@@ -288,7 +297,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         resultCount++;
 
 
-                        // Create an img element for the word if the PNG file exists
+                        // Create DJS image
                         listItem = document.createElement("li");
                         listItem.className = 'djs-item';
                         listItem.textContent = 'djs: '+word.t;
@@ -317,7 +326,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
 
 
-
+                        // Create Simplified image
                         const resultItem = document.createElement('li');
                         resultItem.className = 'result-item';
                         resultItem.innerHTML = `Simplified: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
@@ -382,14 +391,13 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 expandButton.innerHTML = 'Expand';
                             }
                         };
-
                         imageContainer.appendChild(img);
                         outerContainer.appendChild(imageContainer);
                         outerContainer.appendChild(expandButton);
                         resultItem.appendChild(outerContainer);
                         resultsContainer.appendChild(resultItem);
 
-                         // Create an img element for the word if the PNG file exists
+                         // Create Anniversary image
                          listItem = document.createElement("li");
                         listItem.textContent = 'anniversary: '+word.t;
                         listItem.addEventListener("click", () => copyToClipboard(word.t,'ann'));
@@ -407,7 +415,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
 
 
-                        // Create an img element for the word if the PNG file exists
+                        // Create pre-Anniversary image
                         listItem = document.createElement("li");
                         listItem.textContent = 'pre-anniversary: '+word.t;
                         listItem.addEventListener("click", () => copyToClipboard(word.t,'pre'));

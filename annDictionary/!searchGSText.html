@@ -19,7 +19,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0904@11:00am'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0909@12:12am'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -456,12 +456,28 @@
                 }
                 // Split on - or / preserving separators
                 const parts = core.split(/([-\/])/); // tokens include separators
+                // 1) Map standalone tokens via GROUP_MAP
                 for(let i=0;i<parts.length;i++){
                     const tok = parts[i];
                     if(tok === '-' || tok === '/') continue;
                     const key = tok.toLowerCase();
                     if(Object.prototype.hasOwnProperty.call(GROUP_MAP, key)){
                         parts[i] = GROUP_MAP[key];
+                    }
+                }
+                // 2) Separator-aware adjustments:
+                //    - If a token 'h' is immediately followed by '/', convert to 'h-'
+                //    - If a '/' is immediately followed by token 'h', convert to '-h'
+                for(let i=0;i<parts.length - 1;i++){
+                    const cur = parts[i];
+                    const next = parts[i+1];
+                    // h/ -> h-
+                    if(cur && cur.toLowerCase() === 'h' && next === '/'){
+                        parts[i+1] = '-';
+                    }
+                    // /h -> -h
+                    if(cur === '/' && parts[i+1] && parts[i+1].toLowerCase() === 'h'){
+                        parts[i] = '-';
                     }
                 }
                 const newCore = parts.join('');
