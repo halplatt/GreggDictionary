@@ -337,7 +337,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
             for (const item of data) {
                 const candidate = item.text
-                    if (regex.test(candidate)) {
+                    if (regex.test(candidate)) {-
                         totalMatches++;
                         if (resultCount >= maxResults) {
                             continue;
@@ -394,11 +394,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
                             const img = document.createElement('img');
                             img.className = 'absolute max-w-none';
-                            if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github
-                                img.src = `simDictionary/${objSim.page.toLowerCase()}.png`;
-                            } else {
-                                img.src = `simDictionary/${objSim.page}.png`;
-                            }
+                            img.src = `simDictionary/${objSim.page}.png`;
                             img.alt = `Gregg shorthand for word: ${objSim.word}`;
                             img.style.top = `-${objSim.y - 50}px`; // Adjust to center the word vertically
                             img.style.left = `-${objSim.x - 182.5}px`; // Adjust to center the word horizontally
