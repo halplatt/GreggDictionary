@@ -494,8 +494,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 	//end show hide dictionaries  -------
-//begin inline data.djs.js
 
+//beg functions needed for sim dictionary
 let simReferencejson = [];
 
 // Function to load JSON and assign to global variable
@@ -532,7 +532,8 @@ function findPageByWord(searchValue) {
     }
     return null; // Not found
 }
-
+//end functions needed for sim dictionary
+// Generic function to find the closest matching word in an array
 function findIdx(input,arrName) {
     var i
     for (i = 0; i < arrName.length; i++) 

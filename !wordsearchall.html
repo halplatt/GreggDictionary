@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+V2025.0911@11:37pm the driver is now !whordsearchall.json
 V2025.0909@12:12pm prefetch data
 V2025.0903@01:00pm add \w button
 V2025.0827@2:52pm use include !shared-links.html
@@ -172,7 +173,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0909@12:12pm</p>
+    <p id="version">V2025.0911@11:37pm</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -238,7 +239,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 document.querySelector('h1').textContent = `Regex Search of ${folderName}`;
                 document.querySelector('title').textContent = `Regex Search of ${folderName}`;
             } catch (error) {
-                //document.title = `Regex Search of ${imagePath1}`;
+                //document.title 
             }
         document.getElementById('regexInput').focus();
         document.getElementById('regexInput').select();
@@ -250,46 +251,93 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             try {
                 // Attach caret/dollar update on input
                 var regexInput = document.getElementById('regexInput');
-                regexInput.addEventListener('input', function() {
-                    updateCaretButton();
-                    updateDollarButton();
-                });
-                // Initial update
-                updateCaretButton();
-                updateDollarButton();
             } catch (error) {
-                document.title = `Regex Search of ${imagePath1}`;
+                // ignore   
             }
         });
-
-        // Preload and cache reference data once at page load
-        let refData = null;
-        const refDataReady = fetch('simDictionary/!reference.json', { cache: 'default' })
+        // Preload allData 
+        let allData = null;
+        const allDataReady = fetch('!wordsearchall.json', { cache: 'default' })
             .then(r => {
-                if (!r.ok) throw new Error('Failed to load simDictionary/!reference.json');
+                if (!r.ok) throw new Error('Failed to load !wordsearchall.json');
                 return r.json();
             })
-            .then(json => (refData = json))
+            .then(json => (allData = json))
             .catch(err => {
-                console.error('reference.json load error:', err);
-                refData = [];
+                console.error('websearchall.json load error:', err);
+                allData = [];
             });
+        // Preload and cache reference data once at page load
+        //beg functions needed for sim dictionary
+        let simReferencejson = [];
+        // Function to load JSON and assign to global variable
+        function loadsimReferencejson() {
+            fetch('./simDictionary/!reference.json')
+                .then(response => response.json())
+                .then(data => {
+                    simReferencejson = data; // Now available globally
+                    // You can call other functions here if needed
+                })
+                .catch(error => {
+                    console.error('Error loading reference data:', error);
+                });
+        }
 
+        // Run after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            loadsimReferencejson();
+        });
+        function findPageByWord(searchValue) {
+            const regex = new RegExp('^'+searchValue+'$', 'i');
+            for (const page of simReferencejson) {
+                for (const word of page.words) {
+                    if (regex.test(word.t)) {
+                        // Return the page object and the matching word object
+                        return {
+                            page: page.page,
+                            word: word.t,
+                            x: word.x,
+                            y: word.y
+                        };
+                    }
+                }
+            }
+            return null; // Not found
+        }
         async function searchWords() {
             const regexInput = document.getElementById('regexInput');
-            const regex = new RegExp(regexInput.value, 'i');
+            // Build a safe, sanitized regex from user input
+            let rawPattern = regexInput.value;
+            // Remove common invisible / zero-width characters & normalize Unicode
+            const cleanedPattern = rawPattern
+                .replace(/[\u200B\u200C\u200D\uFEFF]/g, '') // zero‑width chars
+                .replace(/\r?\n/g, '')                       // stray newlines
+                .normalize('NFC');
+            let regex;
+            try {
+                regex = new RegExp(cleanedPattern, 'i');
+            } catch(e) {
+                console.warn('Invalid regex pattern, escaping literally:', cleanedPattern, e.message);
+                const escaped = cleanedPattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                regex = new RegExp(escaped, 'i');
+            }
+            if (rawPattern !== cleanedPattern) {
+                console.warn('Pattern sanitized (invisible chars removed):', { rawPattern, cleanedPattern, lengthRaw: rawPattern.length, lengthClean: cleanedPattern.length });
+            }
+            // Lightweight one-time debug for very short patterns when no matches occur
+            const debugShortPattern = cleanedPattern.length <= 3;
             const resultsContainer = document.getElementById('results');
             const maxResults = parseInt(document.getElementById('maxResults').value, 10) || 25;
             resultsContainer.innerHTML = '';
 
             // Use preloaded data; wait for it if still loading
-            const data = refData || (await refDataReady) || [];
+            const data = allData || (await allDataReady) || [];
             let resultCount = 0;
             let totalMatches = 0;
 
-            for (const page of data) {
-                for (const word of page.words) {
-                    if (regex.test(word.t)) {
+            for (const item of data) {
+                const candidate = item.text
+                    if (regex.test(candidate)) {
                         totalMatches++;
                         if (resultCount >= maxResults) {
                             continue;
@@ -300,11 +348,11 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         // Create DJS image
                         listItem = document.createElement("li");
                         listItem.className = 'djs-item';
-                        listItem.textContent = 'djs: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'djs'));
-                        const imagePath1 = 'djsWords/'; //path to word.png images
+                        listItem.textContent = 'djs: '+candidate;
+                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'djs', e));
+                        const imagePathdjs = 'djsWords/'; //path to word.png images
                         const img_djs = document.createElement("img");
-                        img_djs.src = `${imagePath1}${word.t}.png`;
+                        img_djs.src = `${imagePathdjs}${candidate}.png`;
                         
 
                         img_djs.onerror = function() {
@@ -327,83 +375,88 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
 
                         // Create Simplified image
+                        const objSim = findPageByWord(candidate);
+                        
                         const resultItem = document.createElement('li');
-                        resultItem.className = 'result-item';
-                        resultItem.innerHTML = `Simplified: ${word.t}`; // , X: ${word.x}, Y: ${word.y}`;
- 
+                        //resultItem.className = 'result-item';
+                        resultItem.innerHTML = `Simplified: ${candidate}`; // , X: ${word.x}, Y: ${word.y}`;
+                        resultItem.addEventListener("click", () => copyToClipboard(candidate,'sim'));
+                        if (objSim) {
+                            
 
-                        const outerContainer = document.createElement('div');
-                        outerContainer.className = 'max-w-screen overflow-x-auto';
+                            const outerContainer = document.createElement('div');
+                            outerContainer.className = 'max-w-screen overflow-x-auto';
 
-                        const imageContainer = document.createElement('div');
-                        imageContainer.className = 'relative overflow-hidden border';
-                        imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                        imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                            const imageContainer = document.createElement('div');
+                            imageContainer.className = 'relative overflow-hidden border';
+                            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
 
-                        const img = document.createElement('img');
-                        img.className = 'absolute max-w-none';
-                        if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github
-                            img.src = `simDictionary/${page.page.toLowerCase()}.png`;
-                        } else {
-                            img.src = `simDictionary/${page.page}.png`;
-                        }
-                        img.alt = `Gregg shorthand for word: ${word.t}`;
-                        img.style.top = `-${word.y - 50}px`; // Adjust to center the word vertically
-                        img.style.left = `-${word.x - 182.5}px`; // Adjust to center the word horizontally
-                        img.style.width = '1281px'; // Assuming the image width is fixed
-
-                        img.onload = function() {
-                            const scale = IMG_WIDTH / img.naturalWidth;
-                            img.style.top = `-${word.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
-                            img.style.left = `-${word.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
-                            img.style.width = `${IMG_WIDTH}px`;
-                        };
-
-                        img.onclick = function() {
-
-                            event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                            const clipboardInput = document.getElementById("clipboardInput");
-                            clipboardInput.value = word.t;
-                            clipboardInput.select();
-                            document.execCommand("copy");
-                            clipboardInput.value = "";                            
-                            var url = `GreggDictionary.html?x=${word.t}&gsd=sim`;
-                            var newTab=window.open(url, 'GreggDictionary');
-                            newTab.focus();
-                        };
-
-                        const expandButton = document.createElement('button');
-                        expandButton.className = 'expand-button';
-                        expandButton.innerHTML = 'Expand';
-                        expandButton.onclick = function() {
-                            event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                            if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
-                                imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
-                                imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
-                                img.style.top = `-${word.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
-                                img.style.left = `-${word.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
-                                expandButton.innerHTML = 'Shrink';
+                            const img = document.createElement('img');
+                            img.className = 'absolute max-w-none';
+                            if (window.location.hostname == "halplatt.github.io") { //names must be lower case on github
+                                img.src = `simDictionary/${objSim.page.toLowerCase()}.png`;
                             } else {
-                                imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                                imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-                                img.style.top = `-${word.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
-                                img.style.left = `-${word.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
-                                expandButton.innerHTML = 'Expand';
+                                img.src = `simDictionary/${objSim.page}.png`;
                             }
-                        };
-                        imageContainer.appendChild(img);
-                        outerContainer.appendChild(imageContainer);
-                        outerContainer.appendChild(expandButton);
-                        resultItem.appendChild(outerContainer);
-                        resultsContainer.appendChild(resultItem);
+                            img.alt = `Gregg shorthand for word: ${objSim.word}`;
+                            img.style.top = `-${objSim.y - 50}px`; // Adjust to center the word vertically
+                            img.style.left = `-${objSim.x - 182.5}px`; // Adjust to center the word horizontally
+                            img.style.width = '1281px'; // Assuming the image width is fixed
 
+                            img.onload = function() {
+                                const scale = IMG_WIDTH / img.naturalWidth;
+                                img.style.top = `-${objSim.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                                img.style.left = `-${objSim.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                                img.style.width = `${IMG_WIDTH}px`;
+                            };
+
+                            img.onclick = function() {
+
+                                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                                const clipboardInput = document.getElementById("clipboardInput");
+                                clipboardInput.value = objSim.word;
+                                clipboardInput.select();
+                                document.execCommand("copy");
+                                clipboardInput.value = "";                            
+                                var url = `GreggDictionary.html?x=${objSim.word}&gsd=sim`;
+                                var newTab=window.open(url, 'GreggDictionary');
+                                newTab.focus();
+                            };
+
+                            const expandButton = document.createElement('button');
+                            expandButton.className = 'expand-button';
+                            expandButton.innerHTML = 'Expand';
+                            expandButton.onclick = function() {
+                                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
+                                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
+                                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                                    img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                                    img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
+                                    expandButton.innerHTML = 'Shrink';
+                                } else {
+                                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                                    img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                                    img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
+                                    expandButton.innerHTML = 'Expand';
+                                }
+                            };
+                            imageContainer.appendChild(img);
+                            outerContainer.appendChild(imageContainer);
+                            outerContainer.appendChild(expandButton);
+                            resultItem.appendChild(outerContainer);
+                            
+                        }
+                        resultsContainer.appendChild(resultItem); 
                          // Create Anniversary image
                          listItem = document.createElement("li");
-                        listItem.textContent = 'anniversary: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'ann'));
+                        listItem.textContent = 'anniversary: '+candidate;
+                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'ann', e));
                         const imagePathann = 'annWords/'; //path to word.png images
                         const img_ann = document.createElement("img");
-                        img_ann.src = `${imagePathann}${word.t}.png`;
+                        img_ann.src = `${imagePathann}${candidate}.png`;
                         img_ann.onerror = function() {
                             this.style.display = "none";  // Hide the image if it fails to load
                         };
@@ -416,15 +469,24 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
 
                         // Create pre-Anniversary image
-                        listItem = document.createElement("li");
-                        listItem.textContent = 'pre-anniversary: '+word.t;
-                        listItem.addEventListener("click", () => copyToClipboard(word.t,'pre'));
+                         listItem = document.createElement("li");
+                        listItem.textContent = 'pre-anniversary: '+candidate;
+                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'pre', e));
                         const imagePathpre = 'preWords/'; //path to word.png images
                         const img_pre = document.createElement("img");
-                        img_pre.src = `${imagePathpre}${word.t}.png`;
+                        // For pre-anniversary we use the candidate directly (no page lookup performed)
+                        img_pre.src = `${imagePathpre}${candidate}.png`;
                         
 
                         img_pre.onerror = function() {
+            if (debugShortPattern && resultCount === 0) {
+                // Detailed debug report for unexpected misses
+                console.warn('DEBUG: No matches for short pattern. Char codes:', {
+                    pattern: cleanedPattern,
+                    patternCodes: Array.from(cleanedPattern, c => c.charCodeAt(0)),
+                    sampleFirst5: data.slice(0,5).map(w => ({ word: w, codes: Array.from(String(w).normalize('NFC'), c => c.charCodeAt(0)) }))
+                });
+            }
                             this.style.display = "none";  // Hide the image if it fails to load
                         };
 
@@ -434,7 +496,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         // Add the list item to the result list
                         resultsContainer.appendChild(listItem);
                     }
-                }
+                
             }
             var aboutText = "";
             aboutText = aboutText.concat("<p><b>DJS images extracted from</b> <i>Gregg Shorthand Dictionary DJS,</i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>");	
@@ -458,17 +520,6 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             resultsContainer.appendChild(divAboutText);
             regexInput.focus();
             regexInput.select();
-        }
-        function updateCaretButton() {
-            var regexInput = document.getElementById('regexInput');
-            var caretButton = document.getElementById('caretButton');
-            if (regexInput.value.startsWith('^')) {
-                caretButton.querySelector('small').textContent = "clear ^prefix";
-                caretButton.title = "Remove ^ from the start � Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
-            } else {
-                caretButton.querySelector('small').textContent = "^prefix";
-                caretButton.title = "Insert ^ to indicate the start of the word � Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
-            }
         }
             // Radio-based search type control: sync with input anchors (^ at start, $ at end)
             function updateSearchTypeRadiosFromInput() {
@@ -538,13 +589,14 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                     .catch(() => '0px');
         }
         // Function to copy text to clipboard
-        function copyToClipboard(text,globalGsd) {
+        function copyToClipboard(text, globalGsd, ev) {
+            try { if (ev && typeof ev.stopPropagation === 'function') ev.stopPropagation(); } catch(_) {}
             const clipboardInput = document.getElementById("clipboardInput");
             clipboardInput.value = text;
             clipboardInput.select();
             document.execCommand("copy");
             clipboardInput.value = "";
-            openInNewTab(text);
+            openInNewTab(text, globalGsd);
         }
         //Function to open in new tab
         function openInNewTab(text,globalGsd) {
@@ -565,11 +617,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
         document.getElementById('regexInput').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 let regexInput = document.getElementById('regexInput');
-                if(regexInput.value && (regexInput.value.includes('-') || regexInput.value.includes('/'))) {
-                    searchGST();
-                } else {
-                    searchText();
-                }
+                searchWords();
             }
             // Keyboard shortcuts for search type
             // Ctrl+Alt+X/P/S (Alt+Shift+X/P/S) -> exact/beginsWith/endsWith
@@ -617,11 +665,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         const reEl = document.getElementById('regexInput');
                         if(!reEl) return;
                         const val = reEl.value || '';
-                        if(val && (val.includes('-') || val.includes('/'))){
-                            searchGST();
-                        } else {
-                            searchText();
-                        }
+                            searchWords();
                     }
                 });
             } catch(e){ /* ignore */ }
