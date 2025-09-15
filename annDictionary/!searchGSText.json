@@ -1978,7 +1978,7 @@
     "grascii": "AMNE"
   },
   {
-    "gst": "a2-mn-ia2-n",
+    "gst": "a2-mn-ie2-n",
     "text": "Armenian",
     "notes": "a2",
     "grascii": "A~MNA&E~N"
@@ -4889,7 +4889,7 @@
     "grascii": "BI"
   },
   {
-    "gst": "b-ia-n-l",
+    "gst": "b-ie-n-l",
     "text": "biennial",
     "notes": "",
     "grascii": "BA&ENL"
@@ -5872,7 +5872,7 @@
     "grascii": "BRI"
   },
   {
-    "gst": "b-r-ia",
+    "gst": "b-r-ie",
     "text": "brightly",
     "notes": "",
     "grascii": "BRA&E"
@@ -7906,13 +7906,13 @@
     "grascii": "DI"
   },
   {
-    "gst": "d-ia-n-l",
+    "gst": "d-ie-n-l",
     "text": "diurnal",
     "notes": "",
     "grascii": "DA&ENL"
   },
   {
-    "gst": "d-ia-ss",
+    "gst": "d-ie-ss",
     "text": "diocese",
     "notes": "<Simp.>",
     "grascii": "DA&ESS"
@@ -7990,7 +7990,7 @@
     "grascii": "DIRSS"
   },
   {
-    "gst": "d-ia-ss",
+    "gst": "d-ie-ss",
     "text": "diocese",
     "notes": ""
   },
@@ -15072,7 +15072,7 @@
     "grascii": "FLUTDE"
   },
   {
-    "gst": "f-l-w-ia-l",
+    "gst": "f-l-w-ie-l",
     "text": "flywheel",
     "notes": "",
     "grascii": "FLA&E_L"
@@ -16178,7 +16178,7 @@
     "grascii": "GA~D"
   },
   {
-    "gst": "g-a2-d-ia2-n",
+    "gst": "g-a2-d-ie2-n",
     "text": "guardian",
     "notes": "a2",
     "grascii": "GA~DA&E~N"
@@ -18487,13 +18487,13 @@
     "grascii": "'I"
   },
   {
-    "gst": "h-ia",
+    "gst": "h-ie",
     "text": "highly",
     "notes": "",
     "grascii": "'A&E"
   },
   {
-    "gst": "h-ia-t-u-s",
+    "gst": "h-ie-t-u-s",
     "text": "hiatus",
     "notes": "",
     "grascii": "'A&ETUS"
@@ -19325,25 +19325,25 @@
     "notes": "<Cen.>"
   },
   {
-    "gst": "ia-d-a",
+    "gst": "ie-d-a",
     "text": "iodate",
     "notes": "",
     "grascii": "A&EDA"
   },
   {
-    "gst": "ia-d-i",
+    "gst": "ie-d-i",
     "text": "iodide",
     "notes": "",
     "grascii": "A&EDI"
   },
   {
-    "gst": "ia-t-a",
+    "gst": "ie-t-a",
     "text": "iota",
     "notes": "",
     "grascii": "A&ETA"
   },
   {
-    "gst": "ia-tn",
+    "gst": "ie-tn",
     "text": "iodine",
     "notes": "",
     "grascii": "A&ETN"
@@ -20405,7 +20405,7 @@
     "grascii": "JUSS"
   },
   {
-    "gst": "j-u-s2-t-e-sh-ia2",
+    "gst": "j-u-s2-t-e-sh-ie2",
     "text": "justiciar",
     "notes": "ea2",
     "grascii": "JUS(TESHA&E~"
@@ -21898,13 +21898,13 @@
     "grascii": "KI"
   },
   {
-    "gst": "k-ia",
+    "gst": "k-ie",
     "text": "kindly",
     "notes": "",
     "grascii": "KA&E"
   },
   {
-    "gst": "k-ia-n",
+    "gst": "k-ie-n",
     "text": "carry on",
     "notes": "<Expert>",
     "grascii": "KA&EN"
@@ -26549,7 +26549,7 @@
     "grascii": "LENAM"
   },
   {
-    "gst": "l-e-n-ia2",
+    "gst": "l-e-n-ie2",
     "text": "linear",
     "notes": "ea2",
     "grascii": "LENA&E~"
@@ -27096,25 +27096,25 @@
     "grascii": "LI^T"
   },
   {
-    "gst": "l-ia",
+    "gst": "l-ie",
     "text": "lightly",
     "notes": "",
     "grascii": "LA&E"
   },
   {
-    "gst": "l-ia-n-a-s",
+    "gst": "l-ie-n-a-s",
     "text": "lyonnaise",
     "notes": "",
     "grascii": "LA&ENAS"
   },
   {
-    "gst": "l-ia-r",
+    "gst": "l-ie-r",
     "text": "liar",
     "notes": "",
     "grascii": "LA&ER"
   },
   {
-    "gst": "l-ia-s",
+    "gst": "l-ie-s",
     "text": "likewise",
     "notes": "",
     "grascii": "LA&ES"
@@ -29904,7 +29904,7 @@
     "grascii": "MI^"
   },
   {
-    "gst": "m-ia-p-ea",
+    "gst": "m-ie-p-ea",
     "text": "myopia",
     "notes": "",
     "grascii": "MA&EPA&'"
@@ -31507,7 +31507,7 @@
     "grascii": "MPI"
   },
   {
-    "gst": "m-p-ia-t-e",
+    "gst": "m-p-ie-t-e",
     "text": "impiety",
     "notes": "",
     "grascii": "MPA&ETE"
@@ -36030,7 +36030,7 @@
     "grascii": "NTI"
   },
   {
-    "gst": "nt-ia",
+    "gst": "nt-ie",
     "text": "entirely",
     "notes": "",
     "grascii": "NTA&E"
@@ -42549,7 +42549,7 @@
     "grascii": "RI^N"
   },
   {
-    "gst": "r-ia",
+    "gst": "r-ie",
     "text": "rightly",
     "notes": "",
     "grascii": "RA&E"
@@ -45510,7 +45510,7 @@
     "grascii": "SI"
   },
   {
-    "gst": "s2-ia-nt-f",
+    "gst": "s2-ie-nt-f",
     "text": "scientific",
     "notes": "",
     "grascii": "S(A&ENDF"
@@ -45849,7 +45849,7 @@
     "grascii": "SLI"
   },
   {
-    "gst": "s-l-ia",
+    "gst": "s-l-ie",
     "text": "slightly",
     "notes": "",
     "grascii": "SLA&E"
@@ -50273,7 +50273,7 @@
     "grascii": "TRI"
   },
   {
-    "gst": "t-r-ia-ng",
+    "gst": "t-r-ie-ng",
     "text": "triangle",
     "notes": "",
     "grascii": "TRA&ENG"
@@ -51363,7 +51363,7 @@
     "grascii": "UN'APE"
   },
   {
-    "gst": "u-n-ia",
+    "gst": "u-n-ie",
     "text": "unknightly",
     "notes": "",
     "grascii": "UNA&E"
@@ -52189,7 +52189,7 @@
     "grascii": "VEU"
   },
   {
-    "gst": "v-ia",
+    "gst": "v-ie",
     "text": "via",
     "notes": "",
     "grascii": "VA&E"
@@ -65231,7 +65231,7 @@
     "notes": ""
   },
   {
-    "gst": "df-sh-ia-t",
+    "gst": "df-sh-ie-t",
     "text": "differentiate",
     "notes": "",
     "grascii": "DFSHA&ET"
@@ -134000,19 +134000,19 @@
   },
   {
     "text": "differentiated",
-    "gst": "df-sh-ia-td",
+    "gst": "df-sh-ie-td",
     "notes": "",
     "grascii": "DFSHA&ETD"
   },
   {
     "text": "differentiating",
-    "gst": "df-sh-ia-t-h",
+    "gst": "df-sh-ie-t-h",
     "notes": "",
     "grascii": "DFSHA&ET'"
   },
   {
     "text": "differentiates",
-    "gst": "df-sh-ia-t-s",
+    "gst": "df-sh-ie-t-s",
     "notes": "",
     "grascii": "DFSHA&ETS"
   },
@@ -140618,19 +140618,19 @@
   },
   {
     "text": "guardians",
-    "gst": "g-a2-d-ia2-n-s",
+    "gst": "g-a2-d-ie2-n-s",
     "notes": "a2,ia2",
     "grascii": "GA~DA&E~NS"
   },
   {
     "text": "guardianship",
-    "gst": "g-a2-d-ia2-n-sh",
+    "gst": "g-a2-d-ie2-n-sh",
     "notes": "a2,ia2",
     "grascii": "GA~DA&E~NSH"
   },
   {
     "text": "guardianships",
-    "gst": "g-a2-d-ia2-n-sh-s",
+    "gst": "g-a2-d-ie2-n-sh-s",
     "notes": "a2,ia2",
     "grascii": "GA~DA&E~NSHS"
   },
@@ -170522,25 +170522,25 @@
   },
   {
     "text": "viable",
-    "gst": "v-ia-b",
+    "gst": "v-ie-b",
     "notes": "",
     "grascii": "VA&EB"
   },
   {
     "text": "viableability",
-    "gst": "v-ia-b/b",
+    "gst": "v-ie-b/b",
     "notes": "",
     "grascii": "VA&EB^B"
   },
   {
     "text": "viably",
-    "gst": "v-ia-b-e",
+    "gst": "v-ie-b-e",
     "notes": "",
     "grascii": "VA&EBE"
   },
   {
     "text": "viability",
-    "gst": "v-ia/b",
+    "gst": "v-ie/b",
     "notes": "",
     "grascii": "VA&E^B"
   },
@@ -171462,7 +171462,7 @@
   },
   {
     "text": "brightly",
-    "gst": "b-r-ia"
+    "gst": "b-r-ie"
   },
   {
     "text": "brighten",

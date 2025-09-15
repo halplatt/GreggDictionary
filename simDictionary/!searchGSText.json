@@ -2960,7 +2960,7 @@
     {
         "text": "biopsy",
         "YAGATS": "biopze",
-        "gst": "b-io-p-s2-e",
+        "gst": "b-ie-p-s2-e",
         "notes": ""
     },
     {
@@ -3560,7 +3560,7 @@
     {
         "text": "Bryant",
         "YAGATS": "brioNT",
-        "gst": "b-r-io-nt",
+        "gst": "b-r-ie-nt",
         "notes": ""
     },
     {
@@ -4604,7 +4604,7 @@
     {
         "text": "Cheyenne",
         "YAGATS": "$ion",
-        "gst": "sh-io-n",
+        "gst": "sh-ie-n",
         "notes": ""
     },
     {
@@ -5528,7 +5528,7 @@
     {
         "text": "cyanide",
         "YAGATS": "sionid",
-        "gst": "s1-io-n-i-d",
+        "gst": "s1-ie-n-i-d",
         "notes": ""
     },
     {
@@ -5930,7 +5930,7 @@
     {
         "text": "defiant",
         "YAGATS": "DVioNT",
-        "gst": "tf-io-nt",
+        "gst": "tf-ie-nt",
         "notes": ""
     },
     {
@@ -6164,7 +6164,7 @@
     {
         "text": "denial",
         "YAGATS": "TNiol",
-        "gst": "tn-io-l",
+        "gst": "tn-ie-l",
         "notes": ""
     },
     {
@@ -6704,7 +6704,7 @@
     {
         "text": "drier",
         "YAGATS": "drior",
-        "gst": "d-r-io-r",
+        "gst": "d-r-ie-r",
         "notes": ""
     },
     {
@@ -8888,7 +8888,7 @@
     {
         "text": "giant",
         "YAGATS": "gioNT",
-        "gst": "g-io-nt",
+        "gst": "g-ie-nt",
         "notes": ""
     },
     {
@@ -12302,19 +12302,19 @@
     {
         "text": "iodide",
         "YAGATS": "iodid",
-        "gst": "io-d-i-d",
+        "gst": "ie-d-i-d",
         "notes": ""
     },
     {
         "text": "ion",
         "YAGATS": "ion",
-        "gst": "io-n",
+        "gst": "ie-n",
         "notes": ""
     },
     {
         "text": "ionize",
         "YAGATS": "ioniz",
-        "gst": "io-n-i-s2",
+        "gst": "ie-n-i-s2",
         "notes": ""
     },
     {
@@ -12704,7 +12704,7 @@
     {
         "text": "Jeremiah",
         "YAGATS": "jeremio",
-        "gst": "j-e-r-e-m-io",
+        "gst": "j-e-r-e-m-ie",
         "notes": ""
     },
     {
@@ -13010,7 +13010,7 @@
     {
         "text": "kayak",
         "YAGATS": "kiok",
-        "gst": "k-io-k",
+        "gst": "k-ie-k",
         "notes": ""
     },
     {
@@ -13868,13 +13868,13 @@
     {
         "text": "lion",
         "YAGATS": "lion",
-        "gst": "l-io-n",
+        "gst": "l-ie-n",
         "notes": ""
     },
     {
         "text": "lionize",
         "YAGATS": "lioniz",
-        "gst": "l-io-n-i-s2",
+        "gst": "l-ie-n-i-s2",
         "notes": ""
     },
     {
@@ -18488,7 +18488,7 @@
     {
         "text": "quiet",
         "YAGATS": "kwiot",
-        "gst": "k-w-io-t",
+        "gst": "k-w-ie-t",
         "notes": ""
     },
     {
@@ -20006,7 +20006,7 @@
     {
         "text": "riotous",
         "YAGATS": "riotus",
-        "gst": "r-io-t-u-s1",
+        "gst": "r-ie-t-u-s1",
         "notes": ""
     },
     {
@@ -20984,25 +20984,25 @@
     {
         "text": "sciatica",
         "YAGATS": "sioteka",
-        "gst": "s1-io-t-e-k-a",
+        "gst": "s1-ie-t-e-k-a",
         "notes": ""
     },
     {
         "text": "scientific",
         "YAGATS": "sionDVk",
-        "gst": "s1-io-n-tf-k",
+        "gst": "s1-ie-n-tf-k",
         "notes": ""
     },
     {
         "text": "scientist",
         "YAGATS": "sioNTez",
-        "gst": "s1-io-nt-e-s2",
+        "gst": "s1-ie-nt-e-s2",
         "notes": ""
     },
     {
         "text": "scion",
         "YAGATS": "sion",
-        "gst": "s1-io-n",
+        "gst": "s1-ie-n",
         "notes": ""
     },
     {
@@ -21878,7 +21878,7 @@
     {
         "text": "Siamese",
         "YAGATS": "siomez",
-        "gst": "s1-io-m-e-s2",
+        "gst": "s1-ie-m-e-s2",
         "notes": ""
     },
     {
@@ -23630,7 +23630,7 @@
     {
         "text": "striated",
         "YAGATS": "strioTD",
-        "gst": "s1-t-r-io-td",
+        "gst": "s1-t-r-ie-td",
         "notes": ""
     },
     {
@@ -24020,7 +24020,7 @@
     {
         "text": "sundial",
         "YAGATS": "sNTiol",
-        "gst": "s1-nt-io-l",
+        "gst": "s1-nt-ie-l",
         "notes": ""
     },
     {
@@ -25802,7 +25802,7 @@
     {
         "text": "trial",
         "YAGATS": "triol",
-        "gst": "t-r-io-l",
+        "gst": "t-r-ie-l",
         "notes": ""
     },
     {
@@ -26084,7 +26084,7 @@
     {
         "text": "unbiased",
         "YAGATS": "nbiozt",
-        "gst": "n-b-io-s2-t",
+        "gst": "n-b-ie-s2-t",
         "notes": ""
     },
     {
@@ -27134,7 +27134,7 @@
     {
         "text": "viaduct",
         "YAGATS": "vioduk",
-        "gst": "v-io-d-u-k",
+        "gst": "v-ie-d-u-k",
         "notes": ""
     },
     {
@@ -27272,37 +27272,37 @@
     {
         "text": "violate",
         "YAGATS": "violat",
-        "gst": "v-io-l-a-t",
+        "gst": "v-ie-l-a-t",
         "notes": ""
     },
     {
         "text": "violation",
         "YAGATS": "viola$",
-        "gst": "v-io-l-a-sh",
+        "gst": "v-ie-l-a-sh",
         "notes": ""
     },
     {
         "text": "violence",
         "YAGATS": "violenz",
-        "gst": "v-io-l-e-n-s2",
+        "gst": "v-ie-l-e-n-s2",
         "notes": ""
     },
     {
         "text": "violently",
         "YAGATS": "violeNTe",
-        "gst": "v-io-l-e-nt-e",
+        "gst": "v-ie-l-e-nt-e",
         "notes": ""
     },
     {
         "text": "violets",
         "YAGATS": "violez",
-        "gst": "v-io-l-e-s2",
+        "gst": "v-ie-l-e-s2",
         "notes": ""
     },
     {
         "text": "violinist",
         "YAGATS": "violenez",
-        "gst": "v-io-l-e-n-e-s2",
+        "gst": "v-ie-l-e-n-e-s2",
         "notes": ""
     },
     {
@@ -30164,13 +30164,13 @@
     {
         "text": "Zion",
         "YAGATS": "sion",
-        "gst": "s1-io-n",
+        "gst": "s1-ie-n",
         "notes": ""
     },
     {
         "text": "Zionist",
         "YAGATS": "sionez",
-        "gst": "s1-io-n-e-s2",
+        "gst": "s1-ie-n-e-s2",
         "notes": ""
     },
     {

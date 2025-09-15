@@ -2460,7 +2460,7 @@
   },
   {
     "text": "alliance",
-    "gst": "a-l-ia-n-s",
+    "gst": "a-l-ie-n-s",
     "notes": "",
     "grascii": "ALA&ENS"
   },
@@ -3870,7 +3870,7 @@
   },
   {
     "text": "anxiety",
-    "gst": "a-ng-s-ia",
+    "gst": "a-ng-s-ie",
     "notes": "",
     "grascii": "ANGSA&E"
   },
@@ -4176,7 +4176,7 @@
   },
   {
     "text": "appliance",
-    "gst": "a-p-l-ia-n-s",
+    "gst": "a-p-l-ie-n-s",
     "notes": "",
     "grascii": "APLA&ENS"
   },
@@ -4554,7 +4554,7 @@
   },
   {
     "text": "archdiocese",
-    "gst": "a2-ch-d-ia-ss",
+    "gst": "a2-ch-d-ie-ss",
     "notes": "a2",
     "grascii": "A~CHDA&ESS"
   },
@@ -6894,13 +6894,13 @@
   },
   {
     "text": "hiatus",
-    "gst": "h-ia-t-u-s",
+    "gst": "h-ie-t-u-s",
     "notes": "",
     "grascii": "'A&ETUS"
   },
   {
     "text": "highly",
-    "gst": "h-ia",
+    "gst": "h-ie",
     "notes": "",
     "grascii": "'A&E"
   },
@@ -6936,13 +6936,13 @@
   },
   {
     "text": "hyena",
-    "gst": "h-ia-n-a",
+    "gst": "h-ie-n-a",
     "notes": "",
     "grascii": "'A&ENA"
   },
   {
     "text": "iambic",
-    "gst": "ia-m-b-k",
+    "gst": "ie-m-b-k",
     "notes": "",
     "grascii": "A&EMBK"
   },
@@ -7050,19 +7050,19 @@
   },
   {
     "text": "iodine",
-    "gst": "ia-d-e-n",
+    "gst": "ie-d-e-n",
     "notes": "",
     "grascii": "A&EDEN"
   },
   {
     "text": "iodoform",
-    "gst": "ia-df-m",
+    "gst": "ie-df-m",
     "notes": "",
     "grascii": "A&EDFM"
   },
   {
     "text": "iota",
-    "gst": "ia-t-a",
+    "gst": "ie-t-a",
     "notes": "",
     "grascii": "A&ETA"
   },
@@ -8940,19 +8940,19 @@
   },
   {
     "text": "biangular",
-    "gst": "b-ia-ng",
+    "gst": "b-ie-ng",
     "notes": "",
     "grascii": "BA&ENG"
   },
   {
     "text": "biannual",
-    "gst": "b-ia-n-l",
+    "gst": "b-ie-n-l",
     "notes": "",
     "grascii": "BA&ENL"
   },
   {
     "text": "bias",
-    "gst": "b-ia-s",
+    "gst": "b-ie-s",
     "notes": "",
     "grascii": "BA&ES"
   },
@@ -9048,7 +9048,7 @@
   },
   {
     "text": "biennial",
-    "gst": "b-ia-n-ea-l",
+    "gst": "b-ie-n-ea-l",
     "notes": "",
     "grascii": "BA&ENA&'L"
   },
@@ -14850,13 +14850,13 @@
   },
   {
     "text": "diacritical",
-    "gst": "d-ia-k-r/ya",
+    "gst": "d-ie-k-r/ya",
     "notes": "",
     "grascii": "DA&EKR^A|"
   },
   {
     "text": "diadem",
-    "gst": "d-ia-d-m",
+    "gst": "d-ie-d-m",
     "notes": "",
     "grascii": "DA&EDM"
   },
@@ -14886,7 +14886,7 @@
   },
   {
     "text": "diagram",
-    "gst": "d-ia/g",
+    "gst": "d-ie/g",
     "notes": "",
     "grascii": "DA&E^G"
   },
@@ -14898,7 +14898,7 @@
   },
   {
     "text": "dial",
-    "gst": "d-ia-l",
+    "gst": "d-ie-l",
     "notes": "",
     "grascii": "DA&EL"
   },
@@ -15024,13 +15024,13 @@
   },
   {
     "text": "diet",
-    "gst": "d-ia-t",
+    "gst": "d-ie-t",
     "notes": "",
     "grascii": "DA&ET"
   },
   {
     "text": "dietetic",
-    "gst": "d-ia-t/a",
+    "gst": "d-ie-t/a",
     "notes": "",
     "grascii": "DA&ET^A"
   },
@@ -15348,7 +15348,7 @@
   },
   {
     "text": "dioxide",
-    "gst": "d-ia-x",
+    "gst": "d-ie-x",
     "notes": "",
     "grascii": "DA&EX"
   },
@@ -25398,7 +25398,7 @@
   },
   {
     "text": "fiat",
-    "gst": "f-ia-t",
+    "gst": "f-ie-t",
     "notes": "",
     "grascii": "FA&ET"
   },
@@ -27540,7 +27540,7 @@
   },
   {
     "text": "friar",
-    "gst": "f-r-ia-r",
+    "gst": "f-r-ie-r",
     "notes": "",
     "grascii": "FRA&ER"
   },
@@ -28212,7 +28212,7 @@
   },
   {
     "text": "phial",
-    "gst": "f-ia-l",
+    "gst": "f-ie-l",
     "notes": "",
     "grascii": "FA&EL"
   },
@@ -34218,7 +34218,7 @@
   },
   {
     "text": "cayenne",
-    "gst": "k-ia-n",
+    "gst": "k-ie-n",
     "notes": "",
     "grascii": "KA&EN"
   },
@@ -40674,7 +40674,7 @@
   },
   {
     "text": "coyote",
-    "gst": "k-ia-t-e",
+    "gst": "k-ie-t-e",
     "notes": "",
     "grascii": "KA&ETE"
   },
@@ -42216,13 +42216,13 @@
   },
   {
     "text": "kindliness",
-    "gst": "k-ia-n",
+    "gst": "k-ie-n",
     "notes": "",
     "grascii": "KA&EN"
   },
   {
     "text": "kindly",
-    "gst": "k-ia",
+    "gst": "k-ie",
     "notes": "",
     "grascii": "KA&E"
   },
@@ -42708,7 +42708,7 @@
   },
   {
     "text": "quietus",
-    "gst": "k-ia-t-u-s",
+    "gst": "k-ie-t-u-s",
     "notes": "",
     "grascii": "KA&ETUS"
   },
@@ -44628,7 +44628,7 @@
   },
   {
     "text": "lion",
-    "gst": "l-ia-n",
+    "gst": "l-ie-n",
     "notes": "",
     "grascii": "LA&EN"
   },
@@ -48978,7 +48978,7 @@
   },
   {
     "text": "miasma",
-    "gst": "m-ia-s-m-a",
+    "gst": "m-ie-s-m-a",
     "notes": "",
     "grascii": "MA&ESMA"
   },
@@ -51066,7 +51066,7 @@
   },
   {
     "text": "myopia",
-    "gst": "m-ia-p-ea",
+    "gst": "m-ie-p-ea",
     "notes": "",
     "grascii": "MA&EPA&'"
   },
@@ -51660,7 +51660,7 @@
   },
   {
     "text": "entirely",
-    "gst": "nt-ia",
+    "gst": "nt-ie",
     "notes": "",
     "grascii": "NTA&E"
   },
@@ -53436,7 +53436,7 @@
   },
   {
     "text": "inquiry",
-    "gst": "nk-ia",
+    "gst": "nk-ie",
     "notes": "",
     "grascii": "NKA&E"
   },
@@ -55116,13 +55116,13 @@
   },
   {
     "text": "naive",
-    "gst": "n-ia-v",
+    "gst": "n-ie-v",
     "notes": "",
     "grascii": "NA&EV"
   },
   {
     "text": "naivete",
-    "gst": "n-ia-v-t-e",
+    "gst": "n-ie-v-t-e",
     "notes": "",
     "grascii": "NA&EVTE"
   },
@@ -63870,7 +63870,7 @@
   },
   {
     "text": "piety",
-    "gst": "p-ia-t-e",
+    "gst": "p-ie-t-e",
     "notes": "",
     "grascii": "PA&ETE"
   },
@@ -64002,13 +64002,13 @@
   },
   {
     "text": "pioneer",
-    "gst": "p-ia-n-e2",
+    "gst": "p-ie-n-e2",
     "notes": "e2",
     "grascii": "PA&ENE~"
   },
   {
     "text": "pious",
-    "gst": "p-ia-s",
+    "gst": "p-ie-s",
     "notes": "",
     "grascii": "PA&ES"
   },
@@ -66714,7 +66714,7 @@
   },
   {
     "text": "prior",
-    "gst": "p-r-ia-r",
+    "gst": "p-r-ie-r",
     "notes": "",
     "grascii": "PRA&ER"
   },
@@ -66756,7 +66756,7 @@
   },
   {
     "text": "privately",
-    "gst": "p-r-ia",
+    "gst": "p-r-ie",
     "notes": "",
     "grascii": "PRA&E"
   },
@@ -72540,7 +72540,7 @@
   },
   {
     "text": "rightly",
-    "gst": "r-ia",
+    "gst": "r-ie",
     "notes": "",
     "grascii": "RA&E"
   },
@@ -72588,13 +72588,13 @@
   },
   {
     "text": "riot",
-    "gst": "r-ia-t",
+    "gst": "r-ie-t",
     "notes": "",
     "grascii": "RA&ET"
   },
   {
     "text": "riotous",
-    "gst": "r-ia-t-u-s",
+    "gst": "r-ie-t-u-s",
     "notes": "",
     "grascii": "RA&ETUS"
   },
@@ -75612,25 +75612,25 @@
   },
   {
     "text": "sciatica",
-    "gst": "s-ia-t-e-k-a",
+    "gst": "s-ie-t-e-k-a",
     "notes": "",
     "grascii": "SA&ETEKA"
   },
   {
     "text": "science",
-    "gst": "s-ia-n-s",
+    "gst": "s-ie-n-s",
     "notes": "",
     "grascii": "SA&ENS"
   },
   {
     "text": "scientific",
-    "gst": "s-ia-nt-f",
+    "gst": "s-ie-nt-f",
     "notes": "",
     "grascii": "SA&ENDF"
   },
   {
     "text": "scientist",
-    "gst": "s-ia-nt-e-s",
+    "gst": "s-ie-nt-e-s",
     "notes": "",
     "grascii": "SA&ENTES"
   },
@@ -75648,7 +75648,7 @@
   },
   {
     "text": "scion",
-    "gst": "s-ia-n",
+    "gst": "s-ie-n",
     "notes": "",
     "grascii": "SA&EN"
   },
@@ -78780,7 +78780,7 @@
   },
   {
     "text": "slyly",
-    "gst": "s-l-ia",
+    "gst": "s-l-ie",
     "notes": "",
     "grascii": "SLA&E"
   },
@@ -79140,7 +79140,7 @@
   },
   {
     "text": "sobriety",
-    "gst": "s-o-b-r-ia-t-e",
+    "gst": "s-o-b-r-ie-t-e",
     "notes": "",
     "grascii": "SOBRA&ETE"
   },
@@ -86328,7 +86328,7 @@
   },
   {
     "text": "tiara",
-    "gst": "t-ia-r-a",
+    "gst": "t-ie-r-a",
     "notes": "",
     "grascii": "TA&ERA"
   },
@@ -87936,7 +87936,7 @@
   },
   {
     "text": "triad",
-    "gst": "t-r-ia-d",
+    "gst": "t-r-ie-d",
     "notes": "",
     "grascii": "TRA&ED"
   },
@@ -87948,19 +87948,19 @@
   },
   {
     "text": "triangle",
-    "gst": "t-r-ia-ng",
+    "gst": "t-r-ie-ng",
     "notes": "",
     "grascii": "TRA&ENG"
   },
   {
     "text": "triangular",
-    "gst": "t-r-ia-ng-u",
+    "gst": "t-r-ie-ng-u",
     "notes": "",
     "grascii": "TRA&ENGU"
   },
   {
     "text": "triangularity",
-    "gst": "t-r-ia/r",
+    "gst": "t-r-ie/r",
     "notes": "",
     "grascii": "TRA&E^R"
   },
@@ -88068,7 +88068,7 @@
   },
   {
     "text": "triennial",
-    "gst": "t-r-ia-n-l",
+    "gst": "t-r-ie-n-l",
     "notes": "",
     "grascii": "TRA&ENL"
   },
@@ -88128,7 +88128,7 @@
   },
   {
     "text": "trihedron",
-    "gst": "t-r-h-ia-d-r-n",
+    "gst": "t-r-h-ie-d-r-n",
     "notes": "",
     "grascii": "TR'A&EDRN"
   },
@@ -93432,19 +93432,19 @@
   },
   {
     "text": "viaduct",
-    "gst": "v-ia-d-u-k",
+    "gst": "v-ie-d-u-k",
     "notes": "",
     "grascii": "VA&EDUK"
   },
   {
     "text": "vial",
-    "gst": "v-ia-l",
+    "gst": "v-ie-l",
     "notes": "",
     "grascii": "VA&EL"
   },
   {
     "text": "viand",
-    "gst": "v-ia-nt",
+    "gst": "v-ie-nt",
     "notes": "",
     "grascii": "VA&END"
   },
@@ -103512,7 +103512,7 @@
   },
   {
     "text": "will you kindly",
-    "gst": "l-u-k-ia",
+    "gst": "l-u-k-ie",
     "notes": "",
     "grascii": "LUKA&E"
   },
