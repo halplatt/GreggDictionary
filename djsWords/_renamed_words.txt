@@ -2508,3 +2508,4 @@ dandruft,dandruff
 dufter,duffer
 gruft,gruff
 whitfled,whiffled
+bircarbonate,bicarbonate

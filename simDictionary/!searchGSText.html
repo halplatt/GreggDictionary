@@ -54,6 +54,43 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        .reference-btn {
+            background-color: #6c757d;
+            color: white;
+            border: 1px solid #5a6268;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .reference-btn:hover { background-color: #5a6268; border-color:#545b62; }
+        .reference-tooltip {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border: 2px solid #888;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        .reference-tooltip h3 { margin-top:0; margin-bottom:10px; font-size:16px; color:#333; }
+        .G-S-T-reference { font-size:14px; line-height:1.5; }
+        .G-S-T-reference h2 { margin:0 0 10px; font-size:20px; }
+        .G-S-T-reference h3 { margin:16px 0 6px; font-size:16px; }
+        .G-S-T-reference p { margin:6px 0; }
+        .G-S-T-reference ul { margin:6px 0 10px 20px; padding:0; }
+        .G-S-T-reference li { margin:4px 0; }
+        .G-S-T-reference code { background:#f4f4f4; padding:1px 4px; border-radius:3px; }
+        .G-S-T-reference img { height:22px; vertical-align:middle; margin-left:6px; border:1px solid #ddd; border-radius:2px; background:#fff; }
+        @media (max-width:768px){
+            .reference-tooltip { max-width:90vw; max-height:70vh; left:5% !important; right:5% !important; font-size:11px; }
+            .reference-btn { font-size:11px; padding:6px 10px; }
+        }
         #version {
             position: absolute;
             top: 10px;
@@ -270,7 +307,11 @@
             <button id="searchGST">Search G-S-T</button>
             <label for="maxResults">Maximum Words:</label>
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
-             <a href="!searchGSText(help).html" target="_blank" class="help-link">Help</a>
+             <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
+             <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+             <div id="referenceTooltip" class="reference-tooltip" role="dialog" aria-label="G-S-T Quick Reference" aria-hidden="true" data-include="../annDictionary/!searchGSText(tooltip).html">
+                <div style="font-size:12px;color:#666;">Loading reference…</div>
+             </div>
         </div>
     </div>
     <table id="resultsTable">
@@ -834,6 +875,95 @@
             } catch(e) {
                 // silently ignore
             }
+        })();
+
+        // Reference tooltip logic (hover on desktop, click/tap on touch devices)
+        (function initReferenceTooltip(){
+            const btn = document.getElementById('referenceBtn');
+            const tip = document.getElementById('referenceTooltip');
+            if(!btn || !tip) return;
+            // Lazy load shared include if data-include attribute present
+            (function loadInclude(){
+                const inc = tip.getAttribute('data-include');
+                if(!inc) return;
+                fetch(inc, {cache:'no-cache'})
+                    .then(r=> r.ok ? r.text(): Promise.reject(r))
+                    .then(html => { tip.innerHTML = html; })
+                    .catch(()=>{ tip.innerHTML = '<div style="color:#c00">Failed to load reference.</div>'; });
+            })();
+            let visible = false;
+            let hoverIntentTimer = null;
+            let leaveIntentTimer = null;
+
+            const prefersHover = window.matchMedia('(hover: hover)').matches;
+
+            function position(){
+                const rect = btn.getBoundingClientRect();
+                tip.style.display = 'block';
+                void tip.offsetHeight;
+                const tRect = tip.getBoundingClientRect();
+                const winW = window.innerWidth;
+                const winH = window.innerHeight;
+                let left = rect.left;
+                let top = rect.top - tRect.height - 10;
+                if(top < 0){ top = rect.bottom + 10; }
+                if(left + tRect.width > winW){ left = Math.max(10, winW - tRect.width - 10); }
+                if(left < 0) left = 10;
+                if(top + tRect.height > winH){ top = Math.max(10, winH - tRect.height - 10); }
+                tip.style.left = left + 'px';
+                tip.style.top = top + 'px';
+            }
+            function show(){
+                if(visible) return;
+                visible = true;
+                tip.setAttribute('aria-hidden','false');
+                btn.setAttribute('aria-expanded','true');
+                position();
+            }
+            function hide(){
+                if(!visible) return;
+                visible = false;
+                tip.style.display='none';
+                tip.setAttribute('aria-hidden','true');
+                btn.setAttribute('aria-expanded','false');
+            }
+            function toggle(){ visible ? hide() : show(); }
+
+            // Keyboard support
+            document.addEventListener('keydown', function(e){
+                if(e.altKey && (e.key === 'r' || e.key === 'R')){ e.preventDefault(); toggle(); }
+                else if(e.key === 'Escape' && visible){ hide(); btn.focus(); }
+            });
+
+            // Click / tap (always enabled for accessibility)
+            btn.addEventListener('click', function(e){ e.preventDefault(); toggle(); });
+            document.addEventListener('click', function(e){
+                if(!visible) return;
+                if(!tip.contains(e.target) && e.target !== btn){ hide(); }
+            });
+            window.addEventListener('resize', function(){ if(visible) position(); });
+
+            // Hover behavior (desktop pointer devices only)
+            if(prefersHover){
+                btn.addEventListener('mouseenter', function(){
+                    clearTimeout(leaveIntentTimer);
+                    hoverIntentTimer = setTimeout(show, 120);
+                });
+                btn.addEventListener('mouseleave', function(){
+                    clearTimeout(hoverIntentTimer);
+                    leaveIntentTimer = setTimeout(hide, 180);
+                });
+                tip.addEventListener('mouseenter', function(){
+                    clearTimeout(leaveIntentTimer);
+                });
+                tip.addEventListener('mouseleave', function(){
+                    leaveIntentTimer = setTimeout(hide, 150);
+                });
+            }
+
+            // Focus accessibility: show on focus, hide on blur (desktop only)
+            btn.addEventListener('focus', function(){ if(prefersHover) show(); });
+            btn.addEventListener('blur', function(){ if(prefersHover) hide(); });
         })();
     </script>
 </body>
