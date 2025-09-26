@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2025.0923@2:00pm performSeach when searchtype changes
     //V2025.0904@11:00am Ignore digits unless input contains digits    
     //V2025.0903@01:00pm add \w button
     //V2025.0902@11:45am fix URL paths for github
@@ -19,7 +20,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0909@12:12am'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0923@2:00pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -286,10 +287,10 @@
            <div class="button-row" style="margin-bottom:8px">
                 <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
                     <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
-                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> Exact match</label>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+C (Alt+Shift+C) selects Contains"><input type="radio" name="searchType" value="contains" checked> <b>C</b>ontains</label>
+                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> E<b>x</b>act match</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+B (Alt+Shift+B) selects Begins with"><input type="radio" name="searchType" value="beginsWith"> <b>B</b>egins with</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+E (Alt+Shift+E) selects Ends with"><input type="radio" name="searchType" value="endsWith"> <b>E</b>nds with</label>
                   
                 </div>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
@@ -755,14 +756,67 @@
                 }
             }
             // Keyboard shortcuts for search type
-            // Ctrl+Alt+X/P/S (Alt+Shift+X/P/S) -> exact/beginsWith/endsWith
+            // Ctrl+Alt+X/B/E (Alt+Shift+X/B/E) -> exact/beginsWith/endsWith
             const ctrlAlt = (event.ctrlKey && event.altKey);
             const altShift = (!event.ctrlKey && event.altKey && event.shiftKey);
             if (ctrlAlt || altShift) {
                 const k = event.key.toLowerCase();
-                if (k === 'x') { event.preventDefault(); applySearchTypeToInput('exact'); return; }
-                if (k === 'p') { event.preventDefault(); applySearchTypeToInput('beginsWith'); return; }
-                if (k === 's') { event.preventDefault(); applySearchTypeToInput('endsWith'); return; }
+                if (k === 'x') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('exact'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'b') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('beginsWith'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'e') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('endsWith'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'c') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('contains'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
             }
         });
         // Sync radios as user types or pastes anchors
@@ -775,7 +829,7 @@
                 });
             } catch(e) { /* ignore */ }
         })();
-        // Handle radio changes to update input
+        // Handle radio changes to update input and launch search
         (function attachRadioHandlers(){
             try {
                 var radios = document.querySelectorAll('input[name="searchType"]');
@@ -783,6 +837,15 @@
                     r.addEventListener('change', function(ev){
                         if (ev.target.checked) {
                             applySearchTypeToInput(ev.target.value);
+                            // Automatically launch search when search type changes
+                            let regexInput = document.getElementById('regexInput');
+                            if(regexInput && regexInput.value) {
+                                if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                                    searchGST();
+                                } else {
+                                    searchText();
+                                }
+                            }
                         }
                     });
                 });

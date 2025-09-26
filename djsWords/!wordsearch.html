@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Version Combined version of wordsearch.html and wordsearch.js and !wordsearch.css
+    V2025.0923@2:00pm lauch a search on change of search type
     V2025.0903@01:00pm add \w button
     V2025.0902@1:49pm added radio buttons for type of search
     V2025.0825@9:40pm use include shared-links.html
@@ -30,7 +31,7 @@
     <script>
 		document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0903@01:00pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2025.0923@2:00pm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}		
@@ -112,10 +113,11 @@
                     document.getElementById('regexInput').select();
                 }
             });
-            // Handle radio changes to update input anchors
+            // Handle radio changes to update input anchors and launch search
             document.addEventListener('change', function(e){
                 if (e.target && e.target.name === 'searchType') {
                     applySearchTypeToInput(e.target.value);
+                    performSearch(); // Automatically launch search when search type changes
                 }
             });
             // create a script tag to load the dict1 array
@@ -134,6 +136,38 @@
                 if (event.key === "Enter") {
                 // Call the displayHello function
                 performSearch();
+                }
+                
+                // Keyboard shortcuts for search type
+                // Ctrl+Alt+C/X/B/E (Alt+Shift+C/X/B/E) -> contains/exact/beginsWith/endsWith
+                const ctrlAlt = (event.ctrlKey && event.altKey);
+                const altShift = (!event.ctrlKey && event.altKey && event.shiftKey);
+                if (ctrlAlt || altShift) {
+                    const k = event.key.toLowerCase();
+                    if (k === 'c') { 
+                        event.preventDefault(); 
+                        applySearchTypeToInput('contains'); 
+                        performSearch();
+                        return; 
+                    }
+                    if (k === 'x') { 
+                        event.preventDefault(); 
+                        applySearchTypeToInput('exact'); 
+                        performSearch();
+                        return; 
+                    }
+                    if (k === 'b') { 
+                        event.preventDefault(); 
+                        applySearchTypeToInput('beginsWith'); 
+                        performSearch();
+                        return; 
+                    }
+                    if (k === 'e') { 
+                        event.preventDefault(); 
+                        applySearchTypeToInput('endsWith'); 
+                        performSearch();
+                        return; 
+                    }
                 }
             });
             
@@ -217,6 +251,8 @@
                     case 'contains': default: /* no anchors */ break;
                 }
                 el.value = v;
+                // Update radio buttons to match the applied search type
+                updateSearchTypeRadiosFromInput();
                 // Focus and select to keep prior UX
                 el.focus();
                 el.selectionStart = 0;
@@ -658,10 +694,10 @@ h1 {
             <div class="button-row">  
                 <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
                     <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="contains" checked> Contains</label>
-                    <label><input type="radio" name="searchType" value="exact"> Exact match</label>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="beginsWith"> Begins with</label>
-                    <label style="margin-right:10px;"><input type="radio" name="searchType" value="endsWith"> Ends with</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+C (Alt+Shift+C) selects Contains"><input type="radio" name="searchType" value="contains" checked> <b>C</b>ontains</label>
+                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> E<b>x</b>act match</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+B (Alt+Shift+B) selects Begins with"><input type="radio" name="searchType" value="beginsWith"> <b>B</b>egins with</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+E (Alt+Shift+E) selects Ends with"><input type="radio" name="searchType" value="endsWith"> <b>E</b>nds with</label>
                 </div>
                 <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                 <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
