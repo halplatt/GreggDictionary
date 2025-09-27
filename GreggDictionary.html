@@ -494,8 +494,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 	//end show hide dictionaries  -------
+//begin inline data.djs.js
 
-//beg functions needed for sim dictionary
 let simReferencejson = [];
 
 // Function to load JSON and assign to global variable
@@ -532,8 +532,7 @@ function findPageByWord(searchValue) {
     }
     return null; // Not found
 }
-//end functions needed for sim dictionary
-// Generic function to find the closest matching word in an array
+
 function findIdx(input,arrName) {
     var i
     for (i = 0; i < arrName.length; i++) 
@@ -556,7 +555,7 @@ if (i==0){i++}
 // Generic function to handle page forward or back adjustment
 function pageCntAdj(cntAdj, arrayName) {
 	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj)) {
-        let word = document.getElementById('txt1').value;
+        let word = getTrimmedTxt1();
         let num = findNum(word, arrayName);
         num = --num + cntAdj; // Adjust for page forward or back and commpensate for 0 based array
         if (num < 0) { num = 0; }
@@ -574,13 +573,20 @@ function buildWordImg(word) {
 	}
 }
 
+// Helper function to get and trim txt1 value, then update the input field
+function getTrimmedTxt1() {
+	var word = document.getElementById('txt1').value.trim();
+	document.getElementById('txt1').value = word;
+	return word;
+}
+
 function refreshDjsWord(cntAdj) {
 	setLastButton('refreshDjsWord')
 	pageCntAdj(cntAdj, djsWord);
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,djsWord);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
@@ -594,7 +600,7 @@ function refreshDjsName(cntAdj) {
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Proper Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,djsName);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
@@ -608,7 +614,7 @@ function refreshDjsPhrase(cntAdj) {
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Phrases)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordNum = findNum(word,djsPhrase);
 	var path = buildWordImg(word)
 	path += '<img src="djsDictionary/';
@@ -624,7 +630,7 @@ function refreshS90Word(cntAdj) {
 	hideSuggestion()
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90Word);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -636,7 +642,7 @@ function refreshS90Phrase(cntAdj) {
 	hideSuggestion() 
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Phrases)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90Phrase);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -649,7 +655,7 @@ function refreshS90Women(cntAdj) {
 	hideSuggestion()
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Women Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90Women);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -661,7 +667,7 @@ function refreshS90Men(cntAdj) {
 	hideSuggestion()
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Men Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90Men);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -673,7 +679,7 @@ function refreshS90Sur(cntAdj) {
 	hideSuggestion()
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Sur Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90Sur);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -686,7 +692,7 @@ function refreshS90USName(cntAdj) {
 	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (US City Names)";
 
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90USName);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -698,7 +704,7 @@ function refreshS90GeoName(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Geographical Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90GeoName);
 	var path = '<img src="s90Dictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -710,7 +716,7 @@ function refreshCenWord(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenWord);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -722,7 +728,7 @@ function refreshCenBrief(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Brief Forms)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenBrief);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -735,7 +741,7 @@ function refreshCenPhrase(cntAdj) {
 	hideSuggestion() 
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Phrases)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenPhrase);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -748,7 +754,7 @@ function refreshCenWomen(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Women Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenWomen);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -760,7 +766,7 @@ function refreshCenMen(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Men Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenMen);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -772,7 +778,7 @@ function refreshCenSur(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Sur Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenSur);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -785,7 +791,7 @@ function refreshCenUSName(cntAdj) {
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (US City Names)";
 
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenUSName);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -797,7 +803,7 @@ function refreshCenGeoName(cntAdj) {
 	hideSuggestion()
 	loadAboutCen()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Centennial Shorthand (Geographical Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,cenGeoName);
 	var path = '<img src="cenDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -809,7 +815,7 @@ function refreshSimWord(cntAdj) {
 	hideSuggestion()
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
     // create a thumbnail image for the word
 	document.getElementById('record').innerHTML = ""
 	const result = findPageByWord(word);
@@ -844,7 +850,7 @@ function refreshSimName(cntAdj) {
 	hideSuggestion()
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Names)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 
 	// create a thumbnail image for the word
 	document.getElementById('record').innerHTML = ""
@@ -881,7 +887,7 @@ function refreshAnnPhrase(cntAdj) {
 	hideSuggestion() 
 	loadAboutAnnPhrase()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand (Phrases)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,annPhrase);
 	var path = '<img src="annDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
@@ -893,7 +899,7 @@ function refreshPreWord(cntAdj) {
 	hideSuggestion()
 	loadAboutAnn()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
-	var word = document.getElementById('txt1').value;
+	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,preWord);
 	var path = '<img src="preWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
 	path += '<img src="preDictionary/';
@@ -905,7 +911,7 @@ async function refreshAnnWord(cntAdj) {
 	hideSuggestion();
 	loadAboutAnn();
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand";	// Adjust for page forward or back
-	let word = document.getElementById('txt1').value.toLowerCase();
+	let word = getTrimmedTxt1().toLowerCase();
 	let entryWord = findEntry(word,ann_dict); // Set the global variable entryWord to the current word
 	let pageObj = await findPageObj(entryWord.toString()); // Use await here
 	if (typeof cntAdj !== 'undefined' && !isNaN(cntAdj) && cntAdj !== 0 && pageObj !== null) { //If there is a count adjustment, adjust the word accordingly
