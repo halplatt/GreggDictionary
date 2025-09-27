@@ -424,7 +424,7 @@
     "grascii": "ABS(OS(M"
   },
   {
-    "gst": "a-b-s2-t-m-u-s",
+    "gst": "a-b-s2-tm-u-s",
     "text": "abstemious",
     "notes": "",
     "grascii": "ABS(TMUS"
@@ -1141,7 +1141,7 @@
     "grascii": "AKA^T"
   },
   {
-    "gst": "a-k-a-t-m-e",
+    "gst": "a-k-a-tm-e",
     "text": "academy",
     "notes": "",
     "grascii": "AKATME"
@@ -2115,7 +2115,7 @@
     "grascii": "AMSSA"
   },
   {
-    "gst": "a-m-s2-t-e-t-m",
+    "gst": "a-m-s2-t-e-tm",
     "text": "Amsterdam",
     "notes": "s1",
     "grascii": "AMS(TETM"
@@ -2132,7 +2132,7 @@
     "grascii": "AMTD"
   },
   {
-    "gst": "a-mt-h-e-s",
+    "gst": "a-m-th-e-s",
     "text": "amethyst",
     "notes": "",
     "grascii": "AMTHES"
@@ -3481,19 +3481,19 @@
     "grascii": "ATLANT"
   },
   {
-    "gst": "a-t-m",
+    "gst": "a-tm",
     "text": "atom",
     "notes": "",
     "grascii": "ATM"
   },
   {
-    "gst": "a-t-m",
+    "gst": "a-tm",
     "text": "item",
     "notes": "",
     "grascii": "ATM"
   },
   {
-    "gst": "a-t-m-b-r-a-sh",
+    "gst": "a-tm-b-r-a-sh",
     "text": "adumbration",
     "notes": "",
     "grascii": "ATMBRASH"
@@ -3504,19 +3504,19 @@
     "notes": ""
   },
   {
-    "gst": "a-t-m-o-s",
+    "gst": "a-tm-o-s",
     "text": "atmosphere",
     "notes": "",
     "grascii": "ATMOS"
   },
   {
-    "gst": "a-t-mt",
+    "gst": "a-tm-t",
     "text": "attempt",
     "notes": "",
     "grascii": "ATMT"
   },
   {
-    "gst": "a-t-mt-d",
+    "gst": "a-tm-t-d",
     "text": "attempted",
     "notes": "",
     "grascii": "ATMTD"
@@ -3665,7 +3665,7 @@
     "grascii": "ATNTE"
   },
   {
-    "gst": "a-tn-t-m",
+    "gst": "a-tn-tm",
     "text": "addendum",
     "notes": "",
     "grascii": "ATNTM"
@@ -5041,7 +5041,7 @@
     "grascii": "BLAML"
   },
   {
-    "gst": "b-l-a-mt-h-e",
+    "gst": "b-l-a-m-th-e",
     "text": "blameworthy",
     "notes": "",
     "grascii": "BLAMTHE"
@@ -5675,7 +5675,7 @@
     "grascii": "BOTL"
   },
   {
-    "gst": "b-o-t-m",
+    "gst": "b-o-tm",
     "text": "bottom",
     "notes": "",
     "grascii": "BOTM"
@@ -6849,13 +6849,13 @@
     "notes": ""
   },
   {
-    "gst": "d-a-t-m",
+    "gst": "d-a-tm",
     "text": "datum",
     "notes": "",
     "grascii": "DATM"
   },
   {
-    "gst": "d-a-t-m",
+    "gst": "d-a-tm",
     "text": "daytime",
     "notes": "",
     "grascii": "DATM"
@@ -7218,7 +7218,7 @@
     "grascii": "DEKTE~"
   },
   {
-    "gst": "d-e-k-t-m",
+    "gst": "d-e-k-tm",
     "text": "dictum",
     "notes": "",
     "grascii": "DEKTM"
@@ -7995,7 +7995,7 @@
     "notes": ""
   },
   {
-    "gst": "d-i-t-m",
+    "gst": "d-i-tm",
     "text": "diadem",
     "notes": "",
     "grascii": "DITM"
@@ -10436,7 +10436,7 @@
     "grascii": "ELEJB"
   },
   {
-    "gst": "e-l-e-j-t-m-a-t",
+    "gst": "e-l-e-j-tm-a-t",
     "text": "illegitimate",
     "notes": "",
     "grascii": "ELEJTMAT"
@@ -11463,19 +11463,19 @@
     "grascii": "EPTHE~LM"
   },
   {
-    "gst": "e-p-t-m-e",
+    "gst": "e-p-tm-e",
     "text": "epitome",
     "notes": "",
     "grascii": "EPTME"
   },
   {
-    "gst": "e-p-t-m-e-k",
+    "gst": "e-p-tm-e-k",
     "text": "epidemic",
     "notes": "",
     "grascii": "EPTMEK"
   },
   {
-    "gst": "e-p-t-m-i-s",
+    "gst": "e-p-tm-i-s",
     "text": "epitomize",
     "notes": "",
     "grascii": "EPTMIS"
@@ -11543,7 +11543,7 @@
     "grascii": "ERASHL"
   },
   {
-    "gst": "e-r-a-t-m",
+    "gst": "e-r-a-tm",
     "text": "erratum",
     "notes": "",
     "grascii": "ERATM"
@@ -11650,7 +11650,7 @@
     "grascii": "ERESEP"
   },
   {
-    "gst": "e-r-e-t-m",
+    "gst": "e-r-e-tm",
     "text": "iridium",
     "notes": "",
     "grascii": "ERETM"
@@ -12257,7 +12257,7 @@
     "grascii": "ES(IT'"
   },
   {
-    "gst": "e-s2-i-t-m",
+    "gst": "e-s2-i-tm",
     "text": "excitement",
     "notes": "",
     "grascii": "ES(ITM"
@@ -12939,37 +12939,37 @@
     "grascii": "ES(TJD"
   },
   {
-    "gst": "e-s2-t-m",
+    "gst": "e-s2-tm",
     "text": "esteem",
     "notes": "",
     "grascii": "ES(TM"
   },
   {
-    "gst": "e-s2-t-m-a-t",
+    "gst": "e-s2-tm-a-t",
     "text": "estimate",
     "notes": "",
     "grascii": "ES(TMAT"
   },
   {
-    "gst": "e-s2-t-m-a-td",
+    "gst": "e-s2-tm-a-td",
     "text": "estimated",
     "notes": "",
     "grascii": "ES(TMATD"
   },
   {
-    "gst": "e-s2-t-mt",
+    "gst": "e-s2-tm-t",
     "text": "esteemed",
     "notes": "",
     "grascii": "ES(TMD"
   },
   {
-    "gst": "e-s2-t-m-p-r-e",
+    "gst": "e-s2-tm-p-r-e",
     "text": "extempore",
     "notes": "",
     "grascii": "ES(TMPRE"
   },
   {
-    "gst": "e-s2-t-m-sh",
+    "gst": "e-s2-tm-sh",
     "text": "estimation",
     "notes": "",
     "grascii": "ES(TMSH"
@@ -13212,13 +13212,13 @@
     "grascii": "ETHUS"
   },
   {
-    "gst": "e-t-m",
+    "gst": "e-tm",
     "text": "idiom",
     "notes": "",
     "grascii": "ETM"
   },
   {
-    "gst": "e-t-m/o",
+    "gst": "e-tm/o",
     "text": "etymology",
     "notes": "o on side,o on side",
     "grascii": "ETM^O("
@@ -14976,7 +14976,7 @@
     "grascii": "FLI"
   },
   {
-    "gst": "f-l-ng-t-m",
+    "gst": "f-l-ng-tm",
     "text": "for a long time",
     "notes": "",
     "grascii": "FLNGTM"
@@ -15173,7 +15173,7 @@
     "grascii": "FMS"
   },
   {
-    "gst": "f-mt-h",
+    "gst": "f-m-th",
     "text": "from the",
     "notes": "",
     "grascii": "FMTH"
@@ -15651,7 +15651,7 @@
     "grascii": "FRESHMN"
   },
   {
-    "gst": "f-r-e-t-m",
+    "gst": "f-r-e-tm",
     "text": "freedom",
     "notes": "",
     "grascii": "FRETM"
@@ -15793,7 +15793,7 @@
     "grascii": "FS(EPS("
   },
   {
-    "gst": "f-s2-e-tn-t-m",
+    "gst": "f-s2-e-tn-tm",
     "text": "for a certain time",
     "notes": "",
     "grascii": "FS(ETNTM"
@@ -15900,7 +15900,7 @@
     "grascii": "FTHP"
   },
   {
-    "gst": "f-t-m-b",
+    "gst": "f-tm-b",
     "text": "for the time being",
     "notes": "",
     "grascii": "FTMB"
@@ -16376,7 +16376,7 @@
     "grascii": "GATHD"
   },
   {
-    "gst": "g-a-t-m",
+    "gst": "g-a-tm",
     "text": "Guatamala",
     "notes": "",
     "grascii": "GATM"
@@ -17890,7 +17890,7 @@
     "grascii": "'EK"
   },
   {
-    "gst": "h-e-k-a-t-m",
+    "gst": "h-e-k-a-tm",
     "text": "hecatomb",
     "notes": "",
     "grascii": "'EKATM"
@@ -18040,7 +18040,7 @@
     "grascii": "'EPNSS"
   },
   {
-    "gst": "h-e-p-p-t-m",
+    "gst": "h-e-p-p-tm",
     "text": "hippopotamus",
     "notes": "",
     "grascii": "'EPPTM"
@@ -20109,7 +20109,7 @@
     "grascii": "JNT"
   },
   {
-    "gst": "jnt-mn",
+    "gst": "jntmn",
     "text": "gentleman",
     "notes": "<1916>"
   },
@@ -21187,7 +21187,7 @@
     "grascii": "KATLSS"
   },
   {
-    "gst": "k-a-t-mn-t",
+    "gst": "k-a-tm-nt",
     "text": "catamount",
     "notes": "",
     "grascii": "KATMNT"
@@ -21533,7 +21533,7 @@
     "grascii": "KENGLE"
   },
   {
-    "gst": "k-e-ng-t-m",
+    "gst": "k-e-ng-tm",
     "text": "kingdom",
     "notes": "",
     "grascii": "KENGTM"
@@ -21963,7 +21963,7 @@
     "grascii": "KJNK"
   },
   {
-    "gst": "k-jnt-m",
+    "gst": "k-jntm",
     "text": "compendium",
     "notes": "",
     "grascii": "KJNTM"
@@ -23351,7 +23351,7 @@
     "grascii": "KOS(T"
   },
   {
-    "gst": "k-o-s2-t-m",
+    "gst": "k-o-s2-tm",
     "text": "costume",
     "notes": "",
     "grascii": "KOS(TM"
@@ -24706,7 +24706,7 @@
     "grascii": "KSHNSHUS"
   },
   {
-    "gst": "k-sh-t-m",
+    "gst": "k-sh-tm",
     "text": "question of time",
     "notes": "",
     "grascii": "KSHTM"
@@ -25041,43 +25041,43 @@
     "grascii": "KTLUP"
   },
   {
-    "gst": "k-t-m",
+    "gst": "k-tm",
     "text": "condemn",
     "notes": "<cf. k-tn>",
     "grascii": "KTM"
   },
   {
-    "gst": "k-t-m-a-sh",
+    "gst": "k-tm-a-sh",
     "text": "contumacious",
     "notes": "",
     "grascii": "KTMASH"
   },
   {
-    "gst": "k-t-m-p",
+    "gst": "k-tm-p",
     "text": "contemplate",
     "notes": "",
     "grascii": "KTMP"
   },
   {
-    "gst": "k-t-m-p-r-a-n-u-s",
+    "gst": "k-tm-p-r-a-n-u-s",
     "text": "contemporaneous",
     "notes": "",
     "grascii": "KTMPRANUS"
   },
   {
-    "gst": "k-t-m-p-r-r-e",
+    "gst": "k-tm-p-r-r-e",
     "text": "contemporary",
     "notes": "",
     "grascii": "KTMPRRE"
   },
   {
-    "gst": "k-t-m-s-e",
+    "gst": "k-tm-s-e",
     "text": "contumacy",
     "notes": "",
     "grascii": "KTMSE"
   },
   {
-    "gst": "k-t-mt",
+    "gst": "k-tm-t",
     "text": "contempt",
     "notes": "",
     "grascii": "KTMT"
@@ -26425,7 +26425,7 @@
     "grascii": "LEJNT"
   },
   {
-    "gst": "l-e-j-t-m-a-n",
+    "gst": "l-e-j-tm-a-n",
     "text": "legerdemain",
     "notes": "",
     "grascii": "LEJTMAN"
@@ -26947,7 +26947,7 @@
     "grascii": "LETLE"
   },
   {
-    "gst": "l-e-t-m-u-s",
+    "gst": "l-e-tm-u-s",
     "text": "litmus",
     "notes": "",
     "grascii": "LETMUS"
@@ -27256,19 +27256,19 @@
     "grascii": "LJT"
   },
   {
-    "gst": "l-j-t-m-a-t",
+    "gst": "l-j-tm-a-t",
     "text": "legitimate",
     "notes": "",
     "grascii": "LJTMAT"
   },
   {
-    "gst": "l-j-t-m-e-s",
+    "gst": "l-j-tm-e-s",
     "text": "legitimist",
     "notes": "",
     "grascii": "LJTMES"
   },
   {
-    "gst": "l-j-t-m-sh",
+    "gst": "l-j-tm-sh",
     "text": "legitimation",
     "notes": "",
     "grascii": "LJTMSH"
@@ -27961,7 +27961,7 @@
     "notes": ""
   },
   {
-    "gst": "m/a-t-m",
+    "gst": "m/a-tm",
     "text": "macadam",
     "notes": "",
     "grascii": "M^ATM"
@@ -28549,7 +28549,7 @@
     "grascii": "MARETL"
   },
   {
-    "gst": "m-a-r-e-t-m",
+    "gst": "m-a-r-e-tm",
     "text": "maritume",
     "notes": "",
     "grascii": "MARETM"
@@ -28865,7 +28865,7 @@
     "grascii": "MATERA|"
   },
   {
-    "gst": "m-a2-t-e-t-m",
+    "gst": "m-a2-t-e-tm",
     "text": "martyrdom",
     "notes": "a2",
     "grascii": "MA~TETM"
@@ -28889,7 +28889,7 @@
     "grascii": "MATHTSH"
   },
   {
-    "gst": "m-a-t-m",
+    "gst": "m-a-tm",
     "text": "madam",
     "notes": "",
     "grascii": "MATM"
@@ -29745,19 +29745,19 @@
     "grascii": "METLK"
   },
   {
-    "gst": "m-e-t-m",
+    "gst": "m-e-tm",
     "text": "medium",
     "notes": "",
     "grascii": "METM"
   },
   {
-    "gst": "m-e-t-m-o-r-f-s2",
+    "gst": "m-e-tm-o-r-f-s2",
     "text": "metamorphose",
     "notes": "",
     "grascii": "METMORFS("
   },
   {
-    "gst": "m-e-t-m-o-r-f-s2s1",
+    "gst": "m-e-tm-o-r-f-s2s1",
     "text": "metamorphosis",
     "notes": "",
     "grascii": "METMORFSS)"
@@ -30870,13 +30870,13 @@
     "grascii": "MNTLPES"
   },
   {
-    "gst": "mn-t-m",
+    "gst": "mn-tm",
     "text": "in the meantime",
     "notes": "",
     "grascii": "MNTM"
   },
   {
-    "gst": "mn-t-m",
+    "gst": "mn-tm",
     "text": "meantime",
     "notes": "",
     "grascii": "MNTM"
@@ -31972,7 +31972,7 @@
     "grascii": "MS(TE"
   },
   {
-    "gst": "m-s2-t-m",
+    "gst": "m-s2-tm",
     "text": "misdemeanor",
     "notes": "",
     "grascii": "MS(TM"
@@ -32013,7 +32013,7 @@
     "grascii": "MTE"
   },
   {
-    "gst": "mt-h-n",
+    "gst": "m-th-n",
     "text": "more than",
     "notes": "",
     "grascii": "MTHN"
@@ -34235,7 +34235,7 @@
     "grascii": "NITE~"
   },
   {
-    "gst": "n-i-t-m",
+    "gst": "n-i-tm",
     "text": "nighttime",
     "notes": "",
     "grascii": "NITM"
@@ -34684,7 +34684,7 @@
     "grascii": "NKRSERA"
   },
   {
-    "gst": "nk-r-s2-t-m",
+    "gst": "nk-r-s2-tm",
     "text": "in the course of time",
     "notes": "",
     "grascii": "NKRS(TM"
@@ -36102,61 +36102,61 @@
     "grascii": "NTLJ"
   },
   {
-    "gst": "nt-m/nt",
+    "gst": "ntm/nt",
     "text": "indemnity",
     "notes": "",
     "grascii": "NTM^NT"
   },
   {
-    "gst": "nt-m/o",
+    "gst": "ntm/o",
     "text": "entomology",
     "notes": "o on side,o on side",
     "grascii": "NTM^O("
   },
   {
-    "gst": "nt-m-a-t",
+    "gst": "ntm-a-t",
     "text": "intimate",
     "notes": "",
     "grascii": "NTMAT"
   },
   {
-    "gst": "nt-m-e-td",
+    "gst": "ntm-e-td",
     "text": "intimidate",
     "notes": "",
     "grascii": "NTMETD"
   },
   {
-    "gst": "nt-m-j-d",
+    "gst": "ntm-j-d",
     "text": "undamaged",
     "notes": "",
     "grascii": "NTMJD"
   },
   {
-    "gst": "nt-mn-f",
+    "gst": "ntmn-f",
     "text": "indemify",
     "notes": "",
     "grascii": "NTMNF"
   },
   {
-    "gst": "nt-m-p",
+    "gst": "ntm-p",
     "text": "intemperance",
     "notes": "",
     "grascii": "NTMP"
   },
   {
-    "gst": "nt-m-p-r-a",
+    "gst": "ntm-p-r-a",
     "text": "intemperate",
     "notes": "",
     "grascii": "NTMPRA"
   },
   {
-    "gst": "nt-m-s-e",
+    "gst": "ntm-s-e",
     "text": "intimacy",
     "notes": "",
     "grascii": "NTMSE"
   },
   {
-    "gst": "nt-m-sh",
+    "gst": "ntm-sh",
     "text": "intimation",
     "notes": "",
     "grascii": "NTMSH"
@@ -36460,7 +36460,7 @@
     "grascii": "NTUTH"
   },
   {
-    "gst": "nt-u-t-m",
+    "gst": "nt-u-tm",
     "text": "in due time",
     "notes": "",
     "grascii": "NTUTM"
@@ -37926,7 +37926,7 @@
     "grascii": "OMA"
   },
   {
-    "gst": "o-m-a-t-m",
+    "gst": "o-m-a-tm",
     "text": "all my time",
     "notes": "",
     "grascii": "OMATM"
@@ -38420,19 +38420,19 @@
     "grascii": "OPSH"
   },
   {
-    "gst": "o-p-t-m-e-t-r-e",
+    "gst": "o-p-tm-e-t-r-e",
     "text": "optometry",
     "notes": "",
     "grascii": "OPTMETRE"
   },
   {
-    "gst": "o-p-t-m-s2-m",
+    "gst": "o-p-tm-s2-m",
     "text": "optimism",
     "notes": "",
     "grascii": "OPTMS(M"
   },
   {
-    "gst": "o-p-t-m-u-m",
+    "gst": "o-p-tm-u-m",
     "text": "optimum",
     "notes": "",
     "grascii": "OPTMUM"
@@ -39033,31 +39033,31 @@
     "notes": ""
   },
   {
-    "gst": "o-t-m",
+    "gst": "o-tm",
     "text": "odium",
     "notes": "",
     "grascii": "OTM"
   },
   {
-    "gst": "o-t-m/a",
+    "gst": "o-tm/a",
     "text": "automatic",
     "notes": "",
     "grascii": "OTM^A"
   },
   {
-    "gst": "o-t-m-a-tn",
+    "gst": "o-tm-a-tn",
     "text": "automaton",
     "notes": "",
     "grascii": "OTMATN"
   },
   {
-    "gst": "o-t-m-b",
+    "gst": "o-tm-b",
     "text": "automobile",
     "notes": "",
     "grascii": "OTMB"
   },
   {
-    "gst": "o-t-m-l",
+    "gst": "o-tm-l",
     "text": "autumnal",
     "notes": "",
     "grascii": "OTML"
@@ -41093,7 +41093,7 @@
     "grascii": "PROTES"
   },
   {
-    "gst": "p-r-o-t-m",
+    "gst": "p-r-o-tm",
     "text": "pro tem",
     "notes": "",
     "grascii": "PROTM"
@@ -42924,7 +42924,7 @@
     "grascii": "ROT"
   },
   {
-    "gst": "r-o-t-e-t-m",
+    "gst": "r-o-t-e-tm",
     "text": "Rotterdam",
     "notes": "",
     "grascii": "ROTETM"
@@ -44320,7 +44320,7 @@
     "grascii": "SELS"
   },
   {
-    "gst": "s-e-l-t-m",
+    "gst": "s-e-l-tm",
     "text": "seldom",
     "notes": "",
     "grascii": "SELTM"
@@ -44433,19 +44433,19 @@
     "grascii": "S(EMT"
   },
   {
-    "gst": "s2-e-mt-h/a",
+    "gst": "s2-e-m-th/a",
     "text": "sympathetic",
     "notes": "",
     "grascii": "S(EMTH^A"
   },
   {
-    "gst": "s2-e-mt-h-e",
+    "gst": "s2-e-m-th-e",
     "text": "sympathy",
     "notes": "",
     "grascii": "S(EMTHE"
   },
   {
-    "gst": "s2-e-mt-h-i-s",
+    "gst": "s2-e-m-th-i-s",
     "text": "sympathize",
     "notes": "",
     "grascii": "S(EMTHIS"
@@ -45998,13 +45998,13 @@
     "grascii": "S(MOT"
   },
   {
-    "gst": "s2-mt-h-m",
+    "gst": "s2-m-th-m",
     "text": "some of them",
     "notes": "",
     "grascii": "S(MTHM"
   },
   {
-    "gst": "s2-mt-h-s2",
+    "gst": "s2-m-th-s2",
     "text": "some of those",
     "notes": "s2",
     "grascii": "S(MTHS("
@@ -46997,25 +46997,25 @@
     "grascii": "S(TLU"
   },
   {
-    "gst": "s2-t-m",
+    "gst": "s2-tm",
     "text": "sometime",
     "notes": "",
     "grascii": "S(TM"
   },
   {
-    "gst": "s2-t-m",
+    "gst": "s2-tm",
     "text": "statement",
     "notes": "",
     "grascii": "S(TM"
   },
   {
-    "gst": "s2-t-m-a-k",
+    "gst": "s2-tm-a-k",
     "text": "stomach",
     "notes": "",
     "grascii": "S(TMAK"
   },
   {
-    "gst": "s2-t-m-u-th",
+    "gst": "s2-tm-u-th",
     "text": "sometime or other",
     "notes": "angle between tm and u",
     "grascii": "S(TMUTH"
@@ -48282,13 +48282,13 @@
     "grascii": "TES(KV"
   },
   {
-    "gst": "t-e-s2-t-m",
+    "gst": "t-e-s2-tm",
     "text": "testimonial",
     "notes": "",
     "grascii": "TES(TM"
   },
   {
-    "gst": "t-e-s2-t-m-e",
+    "gst": "t-e-s2-tm-e",
     "text": "testimony",
     "notes": "",
     "grascii": "TES(TME"
@@ -48871,157 +48871,157 @@
     "grascii": "TLOS"
   },
   {
-    "gst": "t-m",
+    "gst": "tm",
     "text": "time",
     "notes": "",
     "grascii": "TM"
   },
   {
-    "gst": "t-m/r",
+    "gst": "tm/r",
     "text": "temerity",
     "notes": "",
     "grascii": "TM^R"
   },
   {
-    "gst": "t-m/s2-t",
+    "gst": "tm/s2-t",
     "text": "domestic",
     "notes": "",
     "grascii": "TM^S(T"
   },
   {
-    "gst": "t-m/s2-t-a",
+    "gst": "tm/s2-t-a",
     "text": "domesticate",
     "notes": "",
     "grascii": "TM^S(TA"
   },
   {
-    "gst": "t-m-a",
+    "gst": "tm-a",
     "text": "to my",
     "notes": "",
     "grascii": "TMA"
   },
   {
-    "gst": "t-m-a2-b",
+    "gst": "tm-a2-b",
     "text": "it may be",
     "notes": "a2",
     "grascii": "TMA~B"
   },
   {
-    "gst": "t-m-a-g",
+    "gst": "tm-a-g",
     "text": "demagogue",
     "notes": "",
     "grascii": "TMAG"
   },
   {
-    "gst": "t-m-a-k",
+    "gst": "tm-a-k",
     "text": "to make",
     "notes": "",
     "grascii": "TMAK"
   },
   {
-    "gst": "t-m-a-n",
+    "gst": "tm-a-n",
     "text": "demand",
     "notes": "",
     "grascii": "TMAN"
   },
   {
-    "gst": "t-m-a-n-b",
+    "gst": "tm-a-n-b",
     "text": "it may not be",
     "notes": "",
     "grascii": "TMANB"
   },
   {
-    "gst": "t-m-a-s2-k",
+    "gst": "tm-a-s2-k",
     "text": "damask",
     "notes": "",
     "grascii": "TMAS(K"
   },
   {
-    "gst": "t-m-a-t-b",
+    "gst": "tm-a-t-b",
     "text": "it might be",
     "notes": "",
     "grascii": "TMATB"
   },
   {
-    "gst": "t-m-a-t-o",
+    "gst": "tm-a-t-o",
     "text": "tomato",
     "notes": "",
     "grascii": "TMATO"
   },
   {
-    "gst": "t-m-b-l-r",
+    "gst": "tm-b-l-r",
     "text": "temblor",
     "notes": "",
     "grascii": "TMBLR"
   },
   {
-    "gst": "t-m-b-r",
+    "gst": "tm-b-r",
     "text": "timber",
     "notes": "",
     "grascii": "TMBR"
   },
   {
-    "gst": "t-m-e",
+    "gst": "tm-e",
     "text": "timely",
     "notes": "",
     "grascii": "TME"
   },
   {
-    "gst": "t-m-e",
+    "gst": "tm-e",
     "text": "to me",
     "notes": "",
     "grascii": "TME"
   },
   {
-    "gst": "t-m-e-d",
+    "gst": "tm-e-d",
     "text": "timid",
     "notes": "",
     "grascii": "TMED"
   },
   {
-    "gst": "t-m-e-n",
+    "gst": "tm-e-n",
     "text": "to mean",
     "notes": "",
     "grascii": "TMEN"
   },
   {
-    "gst": "t-m-e-n-e2",
+    "gst": "tm-e-n-e2",
     "text": "demeanor",
     "notes": "e1, e2",
     "grascii": "TMENE~"
   },
   {
-    "gst": "t-m-e-n-e-u",
+    "gst": "tm-e-n-e-u",
     "text": "diminutive",
     "notes": "",
     "grascii": "TMENEU"
   },
   {
-    "gst": "t-m-e-n-sh",
+    "gst": "tm-e-n-sh",
     "text": "dimension",
     "notes": "",
     "grascii": "TMENSH"
   },
   {
-    "gst": "t-m-e-n-sh",
+    "gst": "tm-e-n-sh",
     "text": "diminish",
     "notes": "",
     "grascii": "TMENSH"
   },
   {
-    "gst": "t-m-e-s",
+    "gst": "tm-e-s",
     "text": "dear Miss",
     "notes": "",
     "grascii": "TMES"
   },
   {
-    "gst": "t-m-e-s/s",
+    "gst": "tm-e-s/s",
     "text": "domesticity",
     "notes": "",
     "grascii": "TMES^S"
   },
   {
-    "gst": "t-m-e-t",
+    "gst": "tm-e-t",
     "text": "to meet",
     "notes": "",
     "grascii": "TMET"
@@ -49032,151 +49032,151 @@
     "notes": "e2"
   },
   {
-    "gst": "t-m-e-td-e",
+    "gst": "tm-e-td-e",
     "text": "timidity",
     "notes": "",
     "grascii": "TMETDE"
   },
   {
-    "gst": "t-m-e-u-r",
+    "gst": "tm-e-u-r",
     "text": "demure",
     "notes": "",
     "grascii": "TMEUR"
   },
   {
-    "gst": "t-m-i-s",
+    "gst": "tm-i-s",
     "text": "demise",
     "notes": "",
     "grascii": "TMIS"
   },
   {
-    "gst": "t-m-j",
+    "gst": "tm-j",
     "text": "damage",
     "notes": "",
     "grascii": "TMJ"
   },
   {
-    "gst": "t-m-r",
+    "gst": "tm-r",
     "text": "democrat",
     "notes": "",
     "grascii": "TMR"
   },
   {
-    "gst": "t-m-k",
+    "gst": "tm-k",
     "text": "democratic",
     "notes": "",
     "grascii": "TMK"
   },
   {
-    "gst": "t-m-k-p/r",
+    "gst": "tm-k-p/r",
     "text": "timekeeper",
     "notes": "",
     "grascii": "TMKP^R"
   },
   {
-    "gst": "t-m-k-s-e",
+    "gst": "tm-k-s-e",
     "text": "democracy",
     "notes": "",
     "grascii": "TMKSE"
   },
   {
-    "gst": "t-m-l",
+    "gst": "tm-l",
     "text": "timeless",
     "notes": "",
     "grascii": "TML"
   },
   {
-    "gst": "t-mn",
+    "gst": "tmn",
     "text": "at the moment",
     "notes": "<Expert>",
     "grascii": "TMN"
   },
   {
-    "gst": "t-m-o",
+    "gst": "tm-o",
     "text": "tomorrow",
     "notes": "",
     "grascii": "TMO"
   },
   {
-    "gst": "t-m-o-b-l-i-s",
+    "gst": "tm-o-b-l-i-s",
     "text": "demobilize",
     "notes": "",
     "grascii": "TMOBLIS"
   },
   {
-    "gst": "t-m-o-e",
+    "gst": "tm-o-e",
     "text": "Des Moines",
     "notes": "",
     "grascii": "TMOE"
   },
   {
-    "gst": "t-m-o-l-e-sh",
+    "gst": "tm-o-l-e-sh",
     "text": "demolition",
     "notes": "",
     "grascii": "TMOLESH"
   },
   {
-    "gst": "t-m-o-l-sh",
+    "gst": "tm-o-l-sh",
     "text": "demolish",
     "notes": "",
     "grascii": "TMOLSH"
   },
   {
-    "gst": "t-m-o-n-e2/t",
+    "gst": "tm-o-n-e2/t",
     "text": "time-honored",
     "notes": "e2",
     "grascii": "TMONE~^T"
   },
   {
-    "gst": "t-m-o-n-s",
+    "gst": "tm-o-n-s",
     "text": "demonstrate",
     "notes": "",
     "grascii": "TMONS"
   },
   {
-    "gst": "t-m-o-n-s-sh",
+    "gst": "tm-o-n-s-sh",
     "text": "demonstration",
     "notes": "",
     "grascii": "TMONSSH"
   },
   {
-    "gst": "t-m-p",
+    "gst": "tm-p",
     "text": "temperance",
     "notes": "",
     "grascii": "TMP"
   },
   {
-    "gst": "t-m-p-e-s",
+    "gst": "tm-p-e-s",
     "text": "tempest",
     "notes": "",
     "grascii": "TMPES"
   },
   {
-    "gst": "t-m-p-e-s",
+    "gst": "tm-p-e-s",
     "text": "timepiece",
     "notes": "",
     "grascii": "TMPES"
   },
   {
-    "gst": "t-m-p-k",
+    "gst": "tm-p-k",
     "text": "Tampico",
     "notes": "",
     "grascii": "TMPK"
   },
   {
-    "gst": "t-m-p-l",
+    "gst": "tm-p-l",
     "text": "dimple",
     "notes": "",
     "grascii": "TMPL"
   },
   {
-    "gst": "t-m-p-l",
+    "gst": "tm-p-l",
     "text": "temple",
     "notes": "",
     "grascii": "TMPL"
   },
   {
-    "gst": "t-m-p-l-a",
+    "gst": "tm-p-l-a",
     "text": "template",
     "notes": "",
     "grascii": "TMPLA"
@@ -49187,13 +49187,13 @@
     "notes": ""
   },
   {
-    "gst": "t-m-p-r",
+    "gst": "tm-p-r",
     "text": "tamper",
     "notes": "",
     "grascii": "TMPR"
   },
   {
-    "gst": "t-m-p-r",
+    "gst": "tm-p-r",
     "text": "temper",
     "notes": "",
     "grascii": "TMPR"
@@ -49204,7 +49204,7 @@
     "notes": ""
   },
   {
-    "gst": "t-m-p-r-a",
+    "gst": "tm-p-r-a",
     "text": "temperate",
     "notes": "",
     "grascii": "TMPRA"
@@ -49215,25 +49215,25 @@
     "notes": ""
   },
   {
-    "gst": "t-m-p-r-a-t-r",
+    "gst": "tm-p-r-a-t-r",
     "text": "temperature",
     "notes": "",
     "grascii": "TMPRATR"
   },
   {
-    "gst": "t-m-p-r-r-e",
+    "gst": "tm-p-r-r-e",
     "text": "temporary",
     "notes": "",
     "grascii": "TMPRRE"
   },
   {
-    "gst": "t-m-p-r-r-ye",
+    "gst": "tm-p-r-r-ye",
     "text": "temporarily",
     "notes": "",
     "grascii": "TMPRRE|"
   },
   {
-    "gst": "t-m-r",
+    "gst": "tm-r",
     "text": "dear Mr.",
     "notes": "",
     "grascii": "TMR"
@@ -49249,109 +49249,109 @@
     "notes": "<Expert>"
   },
   {
-    "gst": "t-m-r",
+    "gst": "tm-r",
     "text": "timer",
     "notes": "",
     "grascii": "TMR"
   },
   {
-    "gst": "t-m-r",
+    "gst": "tm-r",
     "text": "to Mr.",
     "notes": "",
     "grascii": "TMR"
   },
   {
-    "gst": "t-m-r-k-a-sh",
+    "gst": "tm-r-k-a-sh",
     "text": "demarcation",
     "notes": "",
     "grascii": "TMRKASH"
   },
   {
-    "gst": "t-m-r-u-s",
+    "gst": "tm-r-u-s",
     "text": "timorous",
     "notes": "",
     "grascii": "TMRUS"
   },
   {
-    "gst": "t-m-s",
+    "gst": "tm-s",
     "text": "dear Ms.",
     "notes": "<S90>",
     "grascii": "TMS"
   },
   {
-    "gst": "t-m-s",
+    "gst": "tm-s",
     "text": "it must",
     "notes": "",
     "grascii": "TMS"
   },
   {
-    "gst": "t-m-s",
+    "gst": "tm-s",
     "text": "times",
     "notes": "",
     "grascii": "TMS"
   },
   {
-    "gst": "t-m-s-b",
+    "gst": "tm-s-b",
     "text": "it must be",
     "notes": "",
     "grascii": "TMSB"
   },
   {
-    "gst": "t-m-s-b-tn",
+    "gst": "tm-s-b-tn",
     "text": "it must be done",
     "notes": "",
     "grascii": "TMSBTN"
   },
   {
-    "gst": "t-m-s-e-l",
+    "gst": "tm-s-e-l",
     "text": "domicile",
     "notes": "",
     "grascii": "TMSEL"
   },
   {
-    "gst": "t-mt",
+    "gst": "tmt",
     "text": "tempt",
     "notes": "",
     "grascii": "TMT"
   },
   {
-    "gst": "t-mt-a-b",
+    "gst": "tmt-a-b",
     "text": "timetable",
     "notes": "",
     "grascii": "TMTAB"
   },
   {
-    "gst": "t-mt-d",
+    "gst": "tm-td",
     "text": "tempted",
     "notes": "",
     "grascii": "TMTD"
   },
   {
-    "gst": "t-mt-m",
+    "gst": "tm-tm",
     "text": "from time to time",
     "notes": "<Expert>",
     "grascii": "TMTM"
   },
   {
-    "gst": "t-mt-sh",
+    "gst": "tmt-sh",
     "text": "temptation",
     "notes": "",
     "grascii": "TMTSH"
   },
   {
-    "gst": "t-m-u-l",
+    "gst": "tm-u-l",
     "text": "tumult",
     "notes": "",
     "grascii": "TMUL"
   },
   {
-    "gst": "t-m-u-r",
+    "gst": "tm-u-r",
     "text": "demur",
     "notes": "<cf. tm-e-u-r>",
     "grascii": "TMUR"
   },
   {
-    "gst": "t-m-u-r-j",
+    "gst": "tm-u-r-j",
     "text": "demurrage",
     "notes": "",
     "grascii": "TMURJ"
@@ -49481,7 +49481,7 @@
     "grascii": "TNE"
   },
   {
-    "gst": "tn-e-f-t-t-m",
+    "gst": "tn-e-f-t-tm",
     "text": "at any future time",
     "notes": "",
     "grascii": "TNEFTTM"
@@ -49529,7 +49529,7 @@
     "grascii": "TNETD"
   },
   {
-    "gst": "tn-e-t-m",
+    "gst": "tn-e-tm",
     "text": "at any time",
     "notes": "",
     "grascii": "TNETM"
@@ -49802,13 +49802,13 @@
     "grascii": "TNTLM"
   },
   {
-    "gst": "tn-t-m",
+    "gst": "tn-tm",
     "text": "tandem",
     "notes": "",
     "grascii": "TNTM"
   },
   {
-    "gst": "tn-t-mn-t",
+    "gst": "tn-t-a-mn-t",
     "text": "tantamount",
     "notes": "",
     "grascii": "TNTMNT"
@@ -50006,7 +50006,7 @@
     "notes": ""
   },
   {
-    "gst": "t-o-t-m-s",
+    "gst": "t-o-tm-s",
     "text": "at all times",
     "notes": "",
     "grascii": "TOTMS"
@@ -50054,7 +50054,7 @@
     "grascii": "TPRI"
   },
   {
-    "gst": "t-p-t-m",
+    "gst": "t-p-tm",
     "text": "at the present time",
     "notes": "",
     "grascii": "TPTM"
@@ -50375,7 +50375,7 @@
     "grascii": "TSA"
   },
   {
-    "gst": "t-s2-a-t-m",
+    "gst": "t-s2-a-tm",
     "text": "at the same time",
     "notes": "",
     "grascii": "TS(ATM"
@@ -50393,7 +50393,7 @@
     "grascii": "TSE"
   },
   {
-    "gst": "t-s2-e-t-m-e",
+    "gst": "t-s2-e-tm-e",
     "text": "it seems to me",
     "notes": "<Expert>",
     "grascii": "TS(ETME"
@@ -51090,7 +51090,7 @@
     "notes": ""
   },
   {
-    "gst": "u-e-s2-t-m",
+    "gst": "u-e-s2-tm",
     "text": "wisdom",
     "notes": "",
     "grascii": "UES(TM"
@@ -51592,7 +51592,7 @@
     "grascii": "UPS(TA|"
   },
   {
-    "gst": "u-p-t-m",
+    "gst": "u-p-tm",
     "text": "up to the time",
     "notes": "",
     "grascii": "UPTM"
@@ -51754,7 +51754,7 @@
     "grascii": "UTHS"
   },
   {
-    "gst": "u-t-m-o",
+    "gst": "u-tm-o",
     "text": "utmost",
     "notes": "",
     "grascii": "UTMO"
@@ -52087,7 +52087,7 @@
     "grascii": "VEKT"
   },
   {
-    "gst": "v-e-k-t-m",
+    "gst": "v-e-k-tm",
     "text": "victim",
     "notes": "",
     "grascii": "VEKTM"
@@ -52999,7 +52999,7 @@
   },
   {
     "gst": "",
-    "text": "absent-mindedly",
+    "text": "absentmindedly",
     "notes": ""
   },
   {
@@ -56727,13 +56727,13 @@
     "notes": ""
   },
   {
-    "gst": "a-t-m-e-k",
+    "gst": "a-tm-e-k",
     "text": "atomic",
     "notes": "",
     "grascii": "ATMEK"
   },
   {
-    "gst": "a-t-m-i-s",
+    "gst": "a-tm-i-s",
     "text": "atomize",
     "notes": "",
     "grascii": "ATMIS"
@@ -61651,7 +61651,7 @@
     "notes": ""
   },
   {
-    "gst": "k-t-mn-sh",
+    "gst": "k-tm-n-sh",
     "text": "condemnation",
     "notes": "",
     "grascii": "KTMNSH"
@@ -61662,7 +61662,7 @@
     "notes": ""
   },
   {
-    "gst": "k-t-mt",
+    "gst": "k-tm-t",
     "text": "condemned",
     "notes": "",
     "grascii": "KTMD"
@@ -62945,7 +62945,7 @@
   },
   {
     "gst": "",
-    "text": "court-martial",
+    "text": "courtmartial",
     "notes": ""
   },
   {
@@ -63553,7 +63553,7 @@
     "grascii": "DALEANS"
   },
   {
-    "gst": "t-m-j-d",
+    "gst": "tm-j-d",
     "text": "damaged",
     "notes": "",
     "grascii": "TMJD"
@@ -64306,13 +64306,13 @@
     "notes": ""
   },
   {
-    "gst": "t-m-o-b-l-i-s-a-sh",
+    "gst": "tm-o-b-l-i-s-a-sh",
     "text": "demobilization",
     "notes": "",
     "grascii": "TMOBLISASH"
   },
   {
-    "gst": "t-m-o-b-l-i-s-d",
+    "gst": "tm-o-b-l-i-s-d",
     "text": "demobilized",
     "notes": "",
     "grascii": "TMOBLISD"
@@ -64323,7 +64323,7 @@
     "notes": ""
   },
   {
-    "gst": "t-m-k-e",
+    "gst": "tm-k-e",
     "text": "democratically",
     "notes": "",
     "grascii": "TMKE"
@@ -64354,7 +64354,7 @@
     "notes": ""
   },
   {
-    "gst": "t-m-o-n-s-r",
+    "gst": "tm-o-n-s-r",
     "text": "demonstrator",
     "notes": "",
     "grascii": "TMONSR"
@@ -65361,7 +65361,7 @@
     "notes": ""
   },
   {
-    "gst": "t-m-e-n-sh-l",
+    "gst": "tm-e-n-sh-l",
     "text": "dimensional",
     "notes": "",
     "grascii": "TMENSHL"
@@ -81425,13 +81425,13 @@
     "notes": ""
   },
   {
-    "gst": "nt-m-e-td-d",
+    "gst": "ntm-e-td-d",
     "text": "intimidated",
     "notes": "",
     "grascii": "NTMETDD"
   },
   {
-    "gst": "nt-m-e-td-sh",
+    "gst": "ntm-e-td-sh",
     "text": "intimidation",
     "notes": "",
     "grascii": "NTMETDSH"
@@ -83911,7 +83911,7 @@
     "grascii": "LAFLNG"
   },
   {
-    "gst": "l-a-f-t-m",
+    "gst": "l-a-f-tm",
     "text": "lifetime",
     "notes": "",
     "grascii": "LAFTM"
@@ -83928,7 +83928,7 @@
   },
   {
     "gst": "",
-    "text": "light-minded",
+    "text": "lightminded",
     "notes": ""
   },
   {
@@ -89868,13 +89868,13 @@
     "grascii": "OPT^L"
   },
   {
-    "gst": "o-p-t-m-e-s2",
+    "gst": "o-p-tm-e-s2",
     "text": "optimist",
     "notes": "s1",
     "grascii": "OPTMES("
   },
   {
-    "gst": "o-p-t-m/s2-t",
+    "gst": "o-p-tm/s2-t",
     "text": "optimistic",
     "notes": "s1",
     "grascii": "OPTM^S(T"
@@ -90550,7 +90550,7 @@
     "notes": ""
   },
   {
-    "gst": "o/t-m",
+    "gst": "o/tm",
     "text": "overtime",
     "notes": "",
     "grascii": "O^TM"
@@ -98668,7 +98668,7 @@
     "notes": ""
   },
   {
-    "gst": "r-a-nt-m",
+    "gst": "r-a-ntm",
     "text": "random",
     "notes": "",
     "grascii": "RANDM"
@@ -99731,19 +99731,19 @@
     "notes": ""
   },
   {
-    "gst": "r-t-m",
+    "gst": "r-tm",
     "text": "redeem",
     "notes": "",
     "grascii": "RTM"
   },
   {
-    "gst": "r-t-m-r",
+    "gst": "r-tm-r",
     "text": "redeemer",
     "notes": "",
     "grascii": "RTMR"
   },
   {
-    "gst": "r-t-m-sh",
+    "gst": "r-tm-sh",
     "text": "redemption",
     "notes": "",
     "grascii": "RTMSH"
@@ -107885,7 +107885,7 @@
     "notes": ""
   },
   {
-    "gst": "s2-t-m-s",
+    "gst": "s2-tm-s",
     "text": "sometimes",
     "notes": "s1",
     "grascii": "S(TMS"
@@ -109535,19 +109535,19 @@
     "notes": ""
   },
   {
-    "gst": "s-t-m-l-a-nt",
+    "gst": "s-tm-l-a-nt",
     "text": "stimulant",
     "notes": "",
     "grascii": "STMLANT"
   },
   {
-    "gst": "s-t-m/u",
+    "gst": "s-tm/u",
     "text": "stimulate",
     "notes": "",
     "grascii": "STM^U"
   },
   {
-    "gst": "s-t-m/l-u-s",
+    "gst": "s-tm/l-u-s",
     "text": "stimulus",
     "notes": "",
     "grascii": "STM^LUS"
@@ -112487,13 +112487,13 @@
     "notes": ""
   },
   {
-    "gst": "s-e-mt-m",
+    "gst": "s-e-m-tm",
     "text": "symptom",
     "notes": "",
     "grascii": "SEMTM"
   },
   {
-    "gst": "s-e-mt-m/a",
+    "gst": "s-e-m-tm/a",
     "text": "symptomatic",
     "notes": "",
     "grascii": "SEMTM^A"
@@ -113438,19 +113438,19 @@
     "notes": ""
   },
   {
-    "gst": "t-m-p-r-a-m",
+    "gst": "tm-p-r-a-m",
     "text": "temperament",
     "notes": "",
     "grascii": "TMPRAM"
   },
   {
-    "gst": "t-m-p-r/m",
+    "gst": "tm-p-r/m",
     "text": "temperamental",
     "notes": "",
     "grascii": "TMPR^M"
   },
   {
-    "gst": "t-m-p-r/m-e",
+    "gst": "tm-p-r/m-e",
     "text": "temperamentally",
     "notes": "",
     "grascii": "TMPR^ME"
@@ -113476,31 +113476,31 @@
     "notes": ""
   },
   {
-    "gst": "t-m-p-r-l",
+    "gst": "tm-p-r-l",
     "text": "temporal",
     "notes": "",
     "grascii": "TMPRL"
   },
   {
-    "gst": "t-m-p-r/l",
+    "gst": "tm-p-r/l",
     "text": "temporality",
     "notes": "",
     "grascii": "TMPR^L"
   },
   {
-    "gst": "t-m-p-r-i-s-a-sh",
+    "gst": "tm-p-r-i-s-a-sh",
     "text": "temporization",
     "notes": "",
     "grascii": "TMPRISASH"
   },
   {
-    "gst": "t-m-p-r-i-s",
+    "gst": "tm-p-r-i-s",
     "text": "temporize",
     "notes": "",
     "grascii": "TMPRIS"
   },
   {
-    "gst": "t-m-p-r-i-s-e-r",
+    "gst": "tm-p-r-i-s-e-r",
     "text": "temporizer",
     "notes": "",
     "grascii": "TMPRISER"
@@ -113652,19 +113652,19 @@
     "notes": ""
   },
   {
-    "gst": "t-mn-l",
+    "gst": "tmn-l",
     "text": "terminal",
     "notes": "",
     "grascii": "TMNL"
   },
   {
-    "gst": "t-mn-l-e",
+    "gst": "tmn-l-e",
     "text": "terminally",
     "notes": "",
     "grascii": "TMNLE"
   },
   {
-    "gst": "t-mn-a-t",
+    "gst": "tmn-a-t",
     "text": "terminate",
     "notes": "",
     "grascii": "TMNAT"
@@ -118347,7 +118347,7 @@
     "notes": ""
   },
   {
-    "gst": "u-t-m-a-t",
+    "gst": "u-tm-a-t",
     "text": "ultimate",
     "notes": "",
     "grascii": "UTMAT"
@@ -122115,7 +122115,7 @@
     "notes": ""
   },
   {
-    "gst": "v-e-k-t-m-i-s",
+    "gst": "v-e-k-tm-i-s",
     "text": "victimize",
     "notes": "",
     "grascii": "VEKTMIS"
@@ -128300,7 +128300,7 @@
   },
   {
     "text": "allotments",
-    "gst": "a-l-o-t-m-s",
+    "gst": "a-l-o-tm-s",
     "notes": "",
     "grascii": "ALOTMS"
   },
@@ -128348,13 +128348,13 @@
   },
   {
     "text": "anatomy",
-    "gst": "a-n-a-t-m-e",
+    "gst": "a-n-a-tm-e",
     "notes": "",
     "grascii": "ANATME"
   },
   {
     "text": "anatomical",
-    "gst": "a-n-a-t-m/k",
+    "gst": "a-n-a-tm/k",
     "notes": "",
     "grascii": "ANATM^K"
   },
@@ -128630,25 +128630,25 @@
   },
   {
     "text": "atomics",
-    "gst": "a-t-m-e-k-s",
+    "gst": "a-tm-e-k-s",
     "notes": "",
     "grascii": "ATMEKS"
   },
   {
     "text": "atomized",
-    "gst": "a-t-m-i-s-d",
+    "gst": "a-tm-i-s-d",
     "notes": "",
     "grascii": "ATMISD"
   },
   {
     "text": "atomizing",
-    "gst": "a-t-m-i-s-h",
+    "gst": "a-tm-i-s-h",
     "notes": "",
     "grascii": "ATMIS'"
   },
   {
     "text": "atomizes",
-    "gst": "a-t-m-i-ss",
+    "gst": "a-tm-i-ss",
     "notes": "",
     "grascii": "ATMISS"
   },
@@ -129356,7 +129356,7 @@
   },
   {
     "text": "atoms",
-    "gst": "a-t-m-s",
+    "gst": "a-tm-s",
     "notes": "",
     "grascii": "ATMS"
   },
@@ -132260,31 +132260,31 @@
   },
   {
     "text": "bottomed",
-    "gst": "b-o-t-mt",
+    "gst": "b-o-tm-t",
     "notes": "",
     "grascii": "BOTMD"
   },
   {
     "text": "bottoming",
-    "gst": "b-o-t-m-h",
+    "gst": "b-o-tm-h",
     "notes": "",
     "grascii": "BOTM'"
   },
   {
     "text": "bottomless",
-    "gst": "b-o-t-m-l",
+    "gst": "b-o-tm-l",
     "notes": "",
     "grascii": "BOTML"
   },
   {
     "text": "bottomlessly",
-    "gst": "b-o-t-m-l-e",
+    "gst": "b-o-tm-l-e",
     "notes": "",
     "grascii": "BOTMLE"
   },
   {
     "text": "bottoms",
-    "gst": "b-o-t-m-s",
+    "gst": "b-o-tm-s",
     "notes": "",
     "grascii": "BOTMS"
   },
@@ -133784,7 +133784,7 @@
   },
   {
     "text": "distemper",
-    "gst": "d-s-t-m-p-r",
+    "gst": "d-s-tm-p-r",
     "notes": "",
     "grascii": "DSTMPR"
   },
@@ -133820,19 +133820,19 @@
   },
   {
     "text": "deuteronomy",
-    "gst": "d-u-t-m-e",
+    "gst": "d-u-tm-e",
     "notes": "",
     "grascii": "DUTME"
   },
   {
     "text": "deuteronomic",
-    "gst": "d-u-t-m-e-k",
+    "gst": "d-u-tm-e-k",
     "notes": "",
     "grascii": "DUTMEK"
   },
   {
     "text": "deuteronomist",
-    "gst": "d-u-t-m-e-s-t",
+    "gst": "d-u-tm-e-s-t",
     "notes": "",
     "grascii": "DUTMEST"
   },
@@ -134330,13 +134330,13 @@
   },
   {
     "text": "downtime",
-    "gst": "tn-t-m",
+    "gst": "tn-tm",
     "notes": "",
     "grascii": "DNTM"
   },
   {
     "text": "downtimes",
-    "gst": "tn-t-m-s",
+    "gst": "tn-tm-s",
     "notes": "",
     "grascii": "DNTMS"
   },
@@ -137834,7 +137834,7 @@
   },
   {
     "text": "excitements",
-    "gst": "e-s2-i-t-m-s",
+    "gst": "e-s2-i-tm-s",
     "notes": "s1",
     "grascii": "ES(ITMS"
   },
@@ -140456,25 +140456,25 @@
   },
   {
     "text": "fulltime",
-    "gst": "f-u-t-m",
+    "gst": "f-u-tm",
     "notes": "",
     "grascii": "FUTM"
   },
   {
     "text": "fulltimed",
-    "gst": "f-u-t-mt",
+    "gst": "f-u-tm-t",
     "notes": "",
     "grascii": "FUTMD"
   },
   {
     "text": "fulltiming",
-    "gst": "f-u-t-m-h",
+    "gst": "f-u-tm-h",
     "notes": "",
     "grascii": "FUTM'"
   },
   {
     "text": "fulltimes",
-    "gst": "f-u-t-m-s",
+    "gst": "f-u-tm-s",
     "notes": "",
     "grascii": "FUTMS"
   },
@@ -141872,19 +141872,19 @@
   },
   {
     "text": "condemning",
-    "gst": "k-t-m-h",
+    "gst": "k-tm-h",
     "notes": "",
     "grascii": "KTM'"
   },
   {
     "text": "condemnations",
-    "gst": "k-t-mn-sh-s",
+    "gst": "k-tm-n-sh-s",
     "notes": "",
     "grascii": "KTMNSHS"
   },
   {
     "text": "condemns",
-    "gst": "k-t-m-s",
+    "gst": "k-tm-s",
     "notes": "",
     "grascii": "KTMS"
   },
@@ -143090,13 +143090,13 @@
   },
   {
     "text": "contemporaneously",
-    "gst": "k-t-m-p-r-a-n-u-s-e",
+    "gst": "k-tm-p-r-a-n-u-s-e",
     "notes": "",
     "grascii": "KTMPRANUSE"
   },
   {
     "text": "contemporaries",
-    "gst": "k-t-m-p-r-r-e-s",
+    "gst": "k-tm-p-r-r-e-s",
     "notes": "",
     "grascii": "KTMPRRES"
   },
@@ -143666,7 +143666,7 @@
   },
   {
     "text": "contentments",
-    "gst": "k-tn-t-m-s",
+    "gst": "k-tn-tm-s",
     "notes": "",
     "grascii": "KTNTMS"
   },
@@ -144476,7 +144476,7 @@
   },
   {
     "text": "commitments",
-    "gst": "k-m-e-t-m-s",
+    "gst": "k-m-e-tm-s",
     "notes": "",
     "grascii": "KMETMS"
   },
@@ -144728,19 +144728,19 @@
   },
   {
     "text": "kingdomed",
-    "gst": "k-e-ng-t-mt",
+    "gst": "k-e-ng-tm-t",
     "notes": "",
     "grascii": "KENGTMD"
   },
   {
     "text": "kingdoming",
-    "gst": "k-e-ng-t-m-h",
+    "gst": "k-e-ng-tm-h",
     "notes": "",
     "grascii": "KENGTM'"
   },
   {
     "text": "kingdoms",
-    "gst": "k-e-ng-t-m-s",
+    "gst": "k-e-ng-tm-s",
     "notes": "",
     "grascii": "KENGTMS"
   },
@@ -146228,7 +146228,7 @@
   },
   {
     "text": "lifetimes",
-    "gst": "l-a-f-t-m-s",
+    "gst": "l-a-f-tm-s",
     "notes": "",
     "grascii": "LAFTMS"
   },
@@ -149804,19 +149804,19 @@
   },
   {
     "text": "intimidating",
-    "gst": "nt-m-e-td-h",
+    "gst": "ntm-e-td-h",
     "notes": "",
     "grascii": "NTMETD'"
   },
   {
     "text": "intimidates",
-    "gst": "nt-m-e-td-s",
+    "gst": "ntm-e-td-s",
     "notes": "",
     "grascii": "NTMETDS"
   },
   {
     "text": "intimidations",
-    "gst": "nt-m-e-td-sh-s",
+    "gst": "ntm-e-td-sh-s",
     "notes": "",
     "grascii": "NTMETDSHS"
   },
@@ -151934,19 +151934,19 @@
   },
   {
     "text": "indictments",
-    "gst": "nt-i-t-m-s",
+    "gst": "nt-i-tm-s",
     "notes": "",
     "grascii": "NTITMS"
   },
   {
     "text": "entitlement",
-    "gst": "nt-i-t-m",
+    "gst": "nt-i-tm",
     "notes": "",
     "grascii": "NTITM"
   },
   {
     "text": "entitlements",
-    "gst": "nt-i-t-m-s",
+    "gst": "nt-i-tm-s",
     "notes": "",
     "grascii": "NTITMS"
   },
@@ -152534,13 +152534,13 @@
   },
   {
     "text": "neurotransmitter",
-    "gst": "n-u-r-t-m-e-t-r",
+    "gst": "n-u-r-tm-e-t-r",
     "notes": "",
     "grascii": "NURTMETR"
   },
   {
     "text": "neurotransmitters",
-    "gst": "n-u-r-t-m-e-t-r-s",
+    "gst": "n-u-r-tm-e-t-r-s",
     "notes": "",
     "grascii": "NURTMETRS"
   },
@@ -153062,43 +153062,43 @@
   },
   {
     "text": "optimists",
-    "gst": "o-p-t-m-e-s2-s",
+    "gst": "o-p-tm-e-s2-s",
     "notes": "s1",
     "grascii": "OPTMES(S"
   },
   {
     "text": "optimize",
-    "gst": "o-p-t-m-i-s",
+    "gst": "o-p-tm-i-s",
     "notes": "",
     "grascii": "OPTMIS"
   },
   {
     "text": "optimized",
-    "gst": "o-p-t-m-i-s-d",
+    "gst": "o-p-tm-i-s-d",
     "notes": "",
     "grascii": "OPTMISD"
   },
   {
     "text": "optimizing",
-    "gst": "o-p-t-m-i-s-h",
+    "gst": "o-p-tm-i-s-h",
     "notes": "",
     "grascii": "OPTMIS'"
   },
   {
     "text": "optimizes",
-    "gst": "o-p-t-m-i-ss",
+    "gst": "o-p-tm-i-ss",
     "notes": "",
     "grascii": "OPTMISS"
   },
   {
     "text": "optimization",
-    "gst": "o-p-t-m-i-s-sh",
+    "gst": "o-p-tm-i-s-sh",
     "notes": "",
     "grascii": "OPTMISSH"
   },
   {
     "text": "optimizations",
-    "gst": "o-p-t-m-i-s-sh-s",
+    "gst": "o-p-tm-i-s-sh-s",
     "notes": "",
     "grascii": "OPTMISSHS"
   },
@@ -153482,7 +153482,7 @@
   },
   {
     "text": "automatons",
-    "gst": "o-t-m-a-tn-s",
+    "gst": "o-tm-a-tn-s",
     "notes": "",
     "grascii": "OTMATNS"
   },
@@ -153986,7 +153986,7 @@
   },
   {
     "text": "automatically",
-    "gst": "o-t-m/a-e",
+    "gst": "o-tm/a-e",
     "notes": "",
     "grascii": "OTM^AE"
   },
@@ -154004,13 +154004,13 @@
   },
   {
     "text": "overstatement",
-    "gst": "o/s2-t-m/",
+    "gst": "o/s2-tm/",
     "notes": "s1",
     "grascii": "O^S(TM^"
   },
   {
     "text": "overstatements",
-    "gst": "o/s2-t-m-s/",
+    "gst": "o/s2-tm-s/",
     "notes": "s1",
     "grascii": "O^S(TMS^"
   },
@@ -154214,13 +154214,13 @@
   },
   {
     "text": "automation",
-    "gst": "o-t-m-a-sh",
+    "gst": "o-tm-a-sh",
     "notes": "",
     "grascii": "OTMASH"
   },
   {
     "text": "automations",
-    "gst": "o-t-m-a-sh-s",
+    "gst": "o-tm-a-sh-s",
     "notes": "",
     "grascii": "OTMASHS"
   },
@@ -155492,19 +155492,19 @@
   },
   {
     "text": "parasympathetic",
-    "gst": "p/s2-e-mt-h/a",
+    "gst": "p/s2-e-m-th/a",
     "notes": "s1",
     "grascii": "P^S(EMTH^A"
   },
   {
     "text": "parasympathetically",
-    "gst": "p/s2-e-mt-h/a-e",
+    "gst": "p/s2-e-m-th/a-e",
     "notes": "s1",
     "grascii": "P^S(EMTH^AE"
   },
   {
     "text": "parasympathy",
-    "gst": "p/s2-e-mt-h-e",
+    "gst": "p/s2-e-m-th-e",
     "notes": "s1",
     "grascii": "P^S(EMTHE"
   },
@@ -158096,25 +158096,25 @@
   },
   {
     "text": "randomize",
-    "gst": "r-a-nt-m-i-s",
+    "gst": "r-a-ntm-i-s",
     "notes": "",
     "grascii": "RANDMIS"
   },
   {
     "text": "randomized",
-    "gst": "r-a-nt-m-i-s-d",
+    "gst": "r-a-ntm-i-s-d",
     "notes": "",
     "grascii": "RANDMISD"
   },
   {
     "text": "randomizing",
-    "gst": "r-a-nt-m-i-s-h",
+    "gst": "r-a-ntm-i-s-h",
     "notes": "",
     "grascii": "RANDMIS'"
   },
   {
     "text": "randomizes",
-    "gst": "r-a-nt-m-i-ss",
+    "gst": "r-a-ntm-i-ss",
     "notes": "",
     "grascii": "RANDMISS"
   },
@@ -159680,19 +159680,19 @@
   },
   {
     "text": "randomly",
-    "gst": "r-a-nt-m-e",
+    "gst": "r-a-ntm-e",
     "notes": "",
     "grascii": "RANDME"
   },
   {
     "text": "randomness",
-    "gst": "r-a-nt-mn-e-s",
+    "gst": "r-a-ntmn-e-s",
     "notes": "",
     "grascii": "RANDMNES"
   },
   {
     "text": "randoms",
-    "gst": "r-a-nt-m-s",
+    "gst": "r-a-ntm-s",
     "notes": "",
     "grascii": "RANDMS"
   },
@@ -161606,7 +161606,7 @@
   },
   {
     "text": "realtime",
-    "gst": "r-e-t-m",
+    "gst": "r-e-tm",
     "notes": "",
     "grascii": "RETM"
   },
@@ -161918,13 +161918,13 @@
   },
   {
     "text": "runtime",
-    "gst": "r-nt-m",
+    "gst": "r-ntm",
     "notes": "",
     "grascii": "RNTM"
   },
   {
     "text": "runtimes",
-    "gst": "r-nt-m-s",
+    "gst": "r-ntm-s",
     "notes": "",
     "grascii": "RNTMS"
   },
@@ -162116,31 +162116,31 @@
   },
   {
     "text": "redeemed",
-    "gst": "r-t-mt",
+    "gst": "r-tm-t",
     "notes": "",
     "grascii": "RTMD"
   },
   {
     "text": "redeeming",
-    "gst": "r-t-m-h",
+    "gst": "r-tm-h",
     "notes": "",
     "grascii": "RTM'"
   },
   {
     "text": "redeemers",
-    "gst": "r-t-m-r-s",
+    "gst": "r-tm-r-s",
     "notes": "",
     "grascii": "RTMRS"
   },
   {
     "text": "redeems",
-    "gst": "r-t-m-s",
+    "gst": "r-tm-s",
     "notes": "",
     "grascii": "RTMS"
   },
   {
     "text": "redemptions",
-    "gst": "r-t-m-sh-s",
+    "gst": "r-tm-sh-s",
     "notes": "",
     "grascii": "RTMSHS"
   },
@@ -162428,7 +162428,7 @@
   },
   {
     "text": "sympathetically",
-    "gst": "s2-e-mt-h/a-e",
+    "gst": "s2-e-m-th/a-e",
     "notes": "s1",
     "grascii": "S(EMTH^AE"
   },
@@ -163394,43 +163394,43 @@
   },
   {
     "text": "stimulants",
-    "gst": "s-t-m-l-a-nt-s",
+    "gst": "s-tm-l-a-nt-s",
     "notes": "",
     "grascii": "STMLANTS"
   },
   {
     "text": "stimuluses",
-    "gst": "s-t-m/l-u-ss",
+    "gst": "s-tm/l-u-ss",
     "notes": "",
     "grascii": "STM^LUSS"
   },
   {
     "text": "stimulated",
-    "gst": "s-t-m/u-d",
+    "gst": "s-tm/u-d",
     "notes": "",
     "grascii": "STM^UD"
   },
   {
     "text": "stimulating",
-    "gst": "s-t-m/u-h",
+    "gst": "s-tm/u-h",
     "notes": "",
     "grascii": "STM^U'"
   },
   {
     "text": "stimulates",
-    "gst": "s-t-m/u-s",
+    "gst": "s-tm/u-s",
     "notes": "",
     "grascii": "STM^US"
   },
   {
     "text": "stimulation",
-    "gst": "s-t-m/u-sh",
+    "gst": "s-tm/u-sh",
     "notes": "",
     "grascii": "STM^USH"
   },
   {
     "text": "stimulations",
-    "gst": "s-t-m/u-sh-s",
+    "gst": "s-tm/u-sh-s",
     "notes": "",
     "grascii": "STM^USHS"
   },
@@ -163736,7 +163736,7 @@
   },
   {
     "text": "sympathies",
-    "gst": "s2-e-mt-h-e-s",
+    "gst": "s2-e-m-th-e-s",
     "notes": "s1",
     "grascii": "S(EMTHES"
   },
@@ -164156,19 +164156,19 @@
   },
   {
     "text": "sympathized",
-    "gst": "s2-e-mt-h-i-s-d",
+    "gst": "s2-e-m-th-i-s-d",
     "notes": "s1",
     "grascii": "S(EMTHISD"
   },
   {
     "text": "sympathizing",
-    "gst": "s2-e-mt-h-i-s-h",
+    "gst": "s2-e-m-th-i-s-h",
     "notes": "s1",
     "grascii": "S(EMTHIS'"
   },
   {
     "text": "sympathizes",
-    "gst": "s2-e-mt-h-i-ss",
+    "gst": "s2-e-m-th-i-ss",
     "notes": "s1",
     "grascii": "S(EMTHISS"
   },
@@ -165878,7 +165878,7 @@
   },
   {
     "text": "symptoms",
-    "gst": "s-e-mt-m-s",
+    "gst": "s-e-m-tm-s",
     "notes": "",
     "grascii": "SEMTMS"
   },
@@ -165968,7 +165968,7 @@
   },
   {
     "text": "statements",
-    "gst": "s2-t-m-s",
+    "gst": "s2-tm-s",
     "notes": "s1",
     "grascii": "S(TMS"
   },
@@ -166808,67 +166808,67 @@
   },
   {
     "text": "dimensionally",
-    "gst": "t-mn-sh-l-e",
+    "gst": "tmn-sh-l-e",
     "notes": "",
     "grascii": "TMNSHLE"
   },
   {
     "text": "democrats",
-    "gst": "t-m-k-s",
+    "gst": "tm-k-s",
     "notes": "",
     "grascii": "TMKS"
   },
   {
     "text": "dimensioned",
-    "gst": "t-m-e-n-sh-d",
+    "gst": "tm-e-n-sh-d",
     "notes": "",
     "grascii": "TMENSHD"
   },
   {
     "text": "dimensioning",
-    "gst": "t-mn-sh-h",
+    "gst": "tmn-sh-h",
     "notes": "",
     "grascii": "TMNSH'"
   },
   {
     "text": "dimensionality",
-    "gst": "t-m-e-n-sh/l",
+    "gst": "tm-e-n-sh/l",
     "notes": "",
     "grascii": "TMENSH^L"
   },
   {
     "text": "dimensions",
-    "gst": "t-m-e-n-sh-s",
+    "gst": "tm-e-n-sh-s",
     "notes": "",
     "grascii": "TMENSHS"
   },
   {
     "text": "demobilizing",
-    "gst": "t-m-o-b-l-i-s-h",
+    "gst": "tm-o-b-l-i-s-h",
     "notes": "",
     "grascii": "TMOBLIS'"
   },
   {
     "text": "demobilizes",
-    "gst": "t-m-o-b-l-i-ss",
+    "gst": "tm-o-b-l-i-ss",
     "notes": "",
     "grascii": "TMOBLISS"
   },
   {
     "text": "demobilizations",
-    "gst": "t-m-o-b-l-i-s-a-sh-s",
+    "gst": "tm-o-b-l-i-s-a-sh-s",
     "notes": "",
     "grascii": "TMOBLISASHS"
   },
   {
     "text": "demonstrators",
-    "gst": "t-m-o-n-s-r-s",
+    "gst": "tm-o-n-s-r-s",
     "notes": "",
     "grascii": "TMONSRS"
   },
   {
     "text": "demonstrations",
-    "gst": "t-m-o-n-s-sh-s",
+    "gst": "tm-o-n-s-sh-s",
     "notes": "",
     "grascii": "TMONSSHS"
   },
@@ -167078,31 +167078,31 @@
   },
   {
     "text": "terminated",
-    "gst": "t-mn-a-td",
+    "gst": "tmn-a-td",
     "notes": "",
     "grascii": "TMNATD"
   },
   {
     "text": "terminating",
-    "gst": "t-mn-a-t-h",
+    "gst": "tmn-a-t-h",
     "notes": "",
     "grascii": "TMNAT'"
   },
   {
     "text": "terminates",
-    "gst": "t-mn-a-t-s",
+    "gst": "tmn-a-t-s",
     "notes": "",
     "grascii": "TMNATS"
   },
   {
     "text": "terminals",
-    "gst": "t-mn-l-s",
+    "gst": "tmn-l-s",
     "notes": "",
     "grascii": "TMNLS"
   },
   {
     "text": "terminations",
-    "gst": "t-mn-a-sh-s",
+    "gst": "tmn-a-sh-s",
     "notes": "",
     "grascii": "TMNASHS"
   },
@@ -167198,85 +167198,85 @@
   },
   {
     "text": "temperaments",
-    "gst": "t-m-p-r-a-m-s",
+    "gst": "tm-p-r-a-m-s",
     "notes": "",
     "grascii": "TMPRAMS"
   },
   {
     "text": "tempered",
-    "gst": "t-m-p-r-d",
+    "gst": "tm-p-r-d",
     "notes": "",
     "grascii": "TMPRD"
   },
   {
     "text": "tempering",
-    "gst": "t-m-p-r-h",
+    "gst": "tm-p-r-h",
     "notes": "",
     "grascii": "TMPR'"
   },
   {
     "text": "temporized",
-    "gst": "t-m-p-r-i-s-d",
+    "gst": "tm-p-r-i-s-d",
     "notes": "",
     "grascii": "TMPRISD"
   },
   {
     "text": "temporizing",
-    "gst": "t-m-p-r-i-s-h",
+    "gst": "tm-p-r-i-s-h",
     "notes": "",
     "grascii": "TMPRIS'"
   },
   {
     "text": "temporizes",
-    "gst": "t-m-p-r-i-ss",
+    "gst": "tm-p-r-i-ss",
     "notes": "",
     "grascii": "TMPRISS"
   },
   {
     "text": "temporizations",
-    "gst": "t-m-p-r-i-s-a-sh-s",
+    "gst": "tm-p-r-i-s-a-sh-s",
     "notes": "",
     "grascii": "TMPRISASHS"
   },
   {
     "text": "temporally",
-    "gst": "t-m-p-r-l-e",
+    "gst": "tm-p-r-l-e",
     "notes": "",
     "grascii": "TMPRLE"
   },
   {
     "text": "temporalities",
-    "gst": "t-m-p-r/l-s",
+    "gst": "tm-p-r/l-s",
     "notes": "",
     "grascii": "TMPR^LS"
   },
   {
     "text": "tempers",
-    "gst": "t-m-p-r-s",
+    "gst": "tm-p-r-s",
     "notes": "",
     "grascii": "TMPRS"
   },
   {
     "text": "timestamp",
-    "gst": "t-m-s-t-m",
+    "gst": "tm-s-tm",
     "notes": "",
     "grascii": "TMSTM"
   },
   {
     "text": "timestamped",
-    "gst": "t-m-s-t-mt",
+    "gst": "tm-s-tm-t",
     "notes": "",
     "grascii": "TMSTMD"
   },
   {
     "text": "timestamping",
-    "gst": "t-m-s-t-m-h",
+    "gst": "tm-s-tm-h",
     "notes": "",
     "grascii": "TMSTM'"
   },
   {
     "text": "timestamps",
-    "gst": "t-m-s-t-m-s",
+    "gst": "tm-s-tm-s",
     "notes": "",
     "grascii": "TMSTMS"
   },
@@ -167306,13 +167306,13 @@
   },
   {
     "text": "timesheet",
-    "gst": "t-m-sh-e-t",
+    "gst": "tm-sh-e-t",
     "notes": "",
     "grascii": "TMSHET"
   },
   {
     "text": "timesheets",
-    "gst": "t-m-sh-e-t-s",
+    "gst": "tm-sh-e-t-s",
     "notes": "",
     "grascii": "TMSHETS"
   },
@@ -167732,25 +167732,25 @@
   },
   {
     "text": "democracies",
-    "gst": "t-m-k-s-e-s",
+    "gst": "tm-k-s-e-s",
     "notes": "",
     "grascii": "TMKSES"
   },
   {
     "text": "demonstrated",
-    "gst": "t-m-o-n-s-d",
+    "gst": "tm-o-n-s-d",
     "notes": "",
     "grascii": "TMONSD"
   },
   {
     "text": "demonstrating",
-    "gst": "t-m-o-n-s-h",
+    "gst": "tm-o-n-s-h",
     "notes": "",
     "grascii": "TMONS'"
   },
   {
     "text": "demonstrates",
-    "gst": "t-m-o-n-ss",
+    "gst": "tm-o-n-ss",
     "notes": "",
     "grascii": "TMONSS"
   },
@@ -168074,7 +168074,7 @@
   },
   {
     "text": "timed",
-    "gst": "t-mt",
+    "gst": "tmt",
     "notes": "",
     "grascii": "TMD"
   },
@@ -168122,7 +168122,7 @@
   },
   {
     "text": "timings",
-    "gst": "t-m/s2",
+    "gst": "tm/s2",
     "notes": "s1",
     "grascii": "TM^S("
   },
@@ -168158,7 +168158,7 @@
   },
   {
     "text": "temples",
-    "gst": "t-m-p-l-s",
+    "gst": "tm-p-l-s",
     "notes": "",
     "grascii": "TMPLS"
   },
@@ -168230,13 +168230,13 @@
   },
   {
     "text": "damaging",
-    "gst": "t-m-j-h",
+    "gst": "tm-j-h",
     "notes": "",
     "grascii": "TMJ'"
   },
   {
     "text": "damages",
-    "gst": "t-m-j-s",
+    "gst": "tm-j-s",
     "notes": "",
     "grascii": "TMJS"
   },
@@ -168314,19 +168314,19 @@
   },
   {
     "text": "demanded",
-    "gst": "t-m-a-nt",
+    "gst": "tm-a-nt",
     "notes": "",
     "grascii": "TMAND"
   },
   {
     "text": "demanding",
-    "gst": "t-m-a-n-h",
+    "gst": "tm-a-n-h",
     "notes": "",
     "grascii": "TMAN'"
   },
   {
     "text": "demands",
-    "gst": "t-m-a-n-s",
+    "gst": "tm-a-n-s",
     "notes": "",
     "grascii": "TMANS"
   },
@@ -168470,13 +168470,13 @@
   },
   {
     "text": "timeout",
-    "gst": "t-m-a-u",
+    "gst": "tm-a-u",
     "notes": "",
     "grascii": "TMAU"
   },
   {
     "text": "timeouts",
-    "gst": "t-m-a-u-s",
+    "gst": "tm-a-u-s",
     "notes": "",
     "grascii": "TMAUS"
   },
@@ -168488,7 +168488,7 @@
   },
   {
     "text": "timing",
-    "gst": "t-m-h",
+    "gst": "tm-h",
     "notes": "",
     "grascii": "TM'"
   },
@@ -168704,19 +168704,19 @@
   },
   {
     "text": "templated",
-    "gst": "t-m-p-l-a-d",
+    "gst": "tm-p-l-a-d",
     "notes": "",
     "grascii": "TMPLAD"
   },
   {
     "text": "templating",
-    "gst": "t-m-p-l-a-h",
+    "gst": "tm-p-l-a-h",
     "notes": "",
     "grascii": "TMPLA'"
   },
   {
     "text": "templates",
-    "gst": "t-m-p-l-a-s",
+    "gst": "tm-p-l-a-s",
     "notes": "",
     "grascii": "TMPLAS"
   },
@@ -169424,7 +169424,7 @@
   },
   {
     "text": "ultimately",
-    "gst": "u-t-m-a-t-e",
+    "gst": "u-tm-a-t-e",
     "notes": "",
     "grascii": "UTMATE"
   },
@@ -169628,7 +169628,7 @@
   },
   {
     "text": "wisdoms",
-    "gst": "u-e-s2-t-m-s",
+    "gst": "u-e-s2-tm-s",
     "notes": "s1",
     "grascii": "UES(TMS"
   },
@@ -170210,31 +170210,31 @@
   },
   {
     "text": "victimized",
-    "gst": "v-e-k-t-m-i-s-d",
+    "gst": "v-e-k-tm-i-s-d",
     "notes": "",
     "grascii": "VEKTMISD"
   },
   {
     "text": "victimizing",
-    "gst": "v-e-k-t-m-i-s-h",
+    "gst": "v-e-k-tm-i-s-h",
     "notes": "",
     "grascii": "VEKTMIS'"
   },
   {
     "text": "victimizes",
-    "gst": "v-e-k-t-m-i-ss",
+    "gst": "v-e-k-tm-i-ss",
     "notes": "",
     "grascii": "VEKTMISS"
   },
   {
     "text": "victimization",
-    "gst": "v-e-k-t-m-i-s-sh",
+    "gst": "v-e-k-tm-i-s-sh",
     "notes": "",
     "grascii": "VEKTMISSH"
   },
   {
     "text": "victimizations",
-    "gst": "v-e-k-t-m-i-s-sh-s",
+    "gst": "v-e-k-tm-i-s-sh-s",
     "notes": "",
     "grascii": "VEKTMISSHS"
   },
@@ -170570,7 +170570,7 @@
   },
   {
     "text": "victims",
-    "gst": "v-e-k-t-m-s",
+    "gst": "v-e-k-tm-s",
     "notes": "",
     "grascii": "VEKTMS"
   },
