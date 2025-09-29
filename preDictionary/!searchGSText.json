@@ -50028,7 +50028,7 @@
   },
   {
     "text": "momentum",
-    "gst": "m-o-mt-m",
+    "gst": "m-o-m-tm",
     "notes": "",
     "grascii": "MOMTM"
   },
@@ -52368,7 +52368,7 @@
   },
   {
     "text": "indebted",
-    "gst": "nt-t/t",
+    "gst": "n-td/t",
     "notes": "",
     "grascii": "NDT^T"
   },
@@ -52458,31 +52458,31 @@
   },
   {
     "text": "indemnify",
-    "gst": "nt-m-e-f",
+    "gst": "n-tm-e-f",
     "notes": "",
     "grascii": "NDMEF"
   },
   {
     "text": "indemnity",
-    "gst": "nt-m/nt",
+    "gst": "n-tm/nt",
     "notes": "",
     "grascii": "NDM^NT"
   },
   {
     "text": "indent",
-    "gst": "nt-nt",
+    "gst": "n-tn-t",
     "notes": "",
     "grascii": "NDNT"
   },
   {
     "text": "indentation",
-    "gst": "nt-nt-sh",
+    "gst": "n-tn-t-sh",
     "notes": "",
     "grascii": "NDNTSH"
   },
   {
     "text": "indenture",
-    "gst": "nt-nt-r",
+    "gst": "n-tn-t-r",
     "notes": "",
     "grascii": "NDNTR"
   },
@@ -52542,43 +52542,43 @@
   },
   {
     "text": "indict",
-    "gst": "nt-i-t",
+    "gst": "n-d-i-t",
     "notes": "",
     "grascii": "NDIT"
   },
   {
     "text": "indictable",
-    "gst": "nt-i-t-b",
+    "gst": "n-d-i-t-b",
     "notes": "",
     "grascii": "NDITB"
   },
   {
     "text": "indictment",
-    "gst": "nt-i-t-m",
+    "gst": "n-d-i-t-m",
     "notes": "",
     "grascii": "NDITM"
   },
   {
     "text": "indifference",
-    "gst": "nt-f",
+    "gst": "n-d-f",
     "notes": "",
     "grascii": "NDF"
   },
   {
     "text": "indifferent",
-    "gst": "nt-f",
+    "gst": "n-d-f",
     "notes": "",
     "grascii": "NDF"
   },
   {
     "text": "indigence",
-    "gst": "nt-j-n-s",
+    "gst": "n-d-j-n-s",
     "notes": "",
     "grascii": "NDJNS"
   },
   {
     "text": "indigenous",
-    "gst": "nt-j-n-u-s",
+    "gst": "n-d-j-n-u-s",
     "notes": "",
     "grascii": "NDJNUS"
   },
@@ -82290,7 +82290,7 @@
   },
   {
     "text": "stumble",
-    "gst": "s-tm-b",
+    "gst": "s-t-m-b",
     "notes": "",
     "grascii": "STMB"
   },
@@ -84102,7 +84102,7 @@
   },
   {
     "text": "symptom",
-    "gst": "s-e-mt-m",
+    "gst": "s-e-m-tm",
     "notes": "",
     "grascii": "SEMTM"
   },
@@ -105552,7 +105552,7 @@
   },
   {
     "text": "in the meantime",
-    "gst": "n-mt-m",
+    "gst": "n-m-tm",
     "notes": "",
     "grascii": "NMTM"
   },
@@ -109878,7 +109878,7 @@
   },
   {
     "text": "from time to time",
-    "gst": "t-mt-m",
+    "gst": "tm-tm",
     "notes": "",
     "grascii": "TMTM"
   },
