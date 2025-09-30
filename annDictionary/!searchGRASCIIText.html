@@ -352,10 +352,10 @@
 
 
     <div class="button-row" style="margin-top: 15px;">
-        <label><input type="radio" name="searchType" value="beginsWith" checked> Begins with</label>
-        <label><input type="radio" name="searchType" value="contains"> Contains</label>
-        <label><input type="radio" name="searchType" value="endsWith"> Ends with</label>
-        <label><input type="radio" name="searchType" value="exact"> Exact match</label>
+        <label title="Ctrl+Alt+B (Alt+Shift+B)"><input type="radio" name="searchType" value="beginsWith" checked> <strong>B</strong>egins with</label>
+        <label title="Ctrl+Alt+C (Alt+Shift+C)"><input type="radio" name="searchType" value="contains"> <strong>C</strong>ontains</label>
+        <label title="Ctrl+Alt+E (Alt+Shift+E)"><input type="radio" name="searchType" value="endsWith"> <strong>E</strong>nds with</label>
+        <label title="Ctrl+Alt+X (Alt+Shift+X)"><input type="radio" name="searchType" value="exact"> E<strong>x</strong>act match</label>
     </div>
     <div class="button-row" style="margin-top: 15px;">
     <input type="text" id="regexInput" placeholder="Enter search text">
@@ -655,6 +655,57 @@
             } else if (event.key === 'Enter') {
                 event.preventDefault();
                 document.getElementById('searchText').click();
+            }
+            
+            // Radio button shortcuts
+            if (event.ctrlKey && event.altKey) {
+                switch (event.key.toLowerCase()) {
+                    case 'c':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="contains"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'x':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="exact"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'b':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="beginsWith"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'e':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="endsWith"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                }
+            }
+            // Alternative shortcuts with Alt+Shift
+            else if (event.altKey && event.shiftKey) {
+                switch (event.key.toLowerCase()) {
+                    case 'c':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="contains"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'x':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="exact"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'b':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="beginsWith"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                    case 'e':
+                        event.preventDefault();
+                        document.querySelector('input[name="searchType"][value="endsWith"]').checked = true;
+                        focusAndSelectText();
+                        break;
+                }
             }
         });
 
