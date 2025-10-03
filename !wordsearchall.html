@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+V2025.1003@10:47am remove simplified expand button
 V2025.0923@2:00pm launch a search on change of search type and add tooltips to radio buttons
 V2025.0911@11:37pm the driver is now !whordsearchall.json
 V2025.0909@12:12pm prefetch data
@@ -174,7 +175,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.0923@2:00pm</p>
+    <p id="version">V2025.1003@10:47am</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -421,28 +422,28 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 newTab.focus();
                             };
 
-                            const expandButton = document.createElement('button');
-                            expandButton.className = 'expand-button';
-                            expandButton.innerHTML = 'Expand';
-                            expandButton.onclick = function() {
-                                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
-                                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
-                                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
-                                    img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
-                                    img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
-                                    expandButton.innerHTML = 'Shrink';
-                                } else {
-                                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-                                    img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
-                                    img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
-                                    expandButton.innerHTML = 'Expand';
-                                }
-                            };
+                            // const expandButton = document.createElement('button');
+                            // expandButton.className = 'expand-button';
+                            // expandButton.innerHTML = 'Expand';
+                            // expandButton.onclick = function() {
+                            //     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                            //     if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
+                            //         imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
+                            //         imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                            //         img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                            //         img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
+                            //         expandButton.innerHTML = 'Shrink';
+                            //     } else {
+                            //         imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                            //         imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                            //         img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                            //         img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
+                            //         expandButton.innerHTML = 'Expand';
+                            //     }
+                            // };
                             imageContainer.appendChild(img);
                             outerContainer.appendChild(imageContainer);
-                            outerContainer.appendChild(expandButton);
+                            // outerContainer.appendChild(expandButton);
                             resultItem.appendChild(outerContainer);
                             
                         }
