@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .search-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-field {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .search-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #495057;
+        }
+        
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .search-input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+        
+        .search-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+        
+        .display-button, .clear-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .display-button {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .display-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .clear-button {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .clear-button:hover {
+            background-color: #545b62;
+        }
+        
+        .search-help {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+        
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .results-container {
+            margin-top: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .totals-row {
+            background-color: #e3f2fd !important;
+            border-top: 2px solid #1976d2;
+            font-weight: bold;
+        }
+        
+        .totals-row:hover {
+            background-color: #e3f2fd !important;
+        }
+        
+        .number {
+            text-align: right;
+        }
+        
+        .company-name {
+            font-size: 0.9em;
+            color: #666;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .loading-name {
+            color: #999;
+            font-style: italic;
+        }
+        
+        .symbol-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .symbol-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        .symbol-link:visited {
+            color: #6f42c1;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Viewer</h1>
+        
+        <div class="search-container">
+            <div class="search-row">
+                <div class="search-field">
+                    <label class="search-label" for="symbolSearch">Symbol</label>
+                    <input type="text" 
+                           class="search-input" 
+                           id="symbolSearch" 
+                           placeholder="e.g., AAPL, SCH.*, JNJ|MSFT"
+                           value="">
+                </div>
+                
+                <div class="search-field">
+                    <label class="search-label" for="companySearch">Company Name</label>
+                    <input type="text" 
+                           class="search-input" 
+                           id="companySearch" 
+                           placeholder="e.g., ETF, Apple, Schwab.*Fund"
+                           value="">
+                </div>
+                
+                <div class="search-field">
+                    <label class="search-label" for="portfolioSearch">Portfolio</label>
+                    <input type="text" 
+                           class="search-input" 
+                           id="portfolioSearch" 
+                           placeholder="e.g., IP, 891, .*401.*"
+                           value="">
+                </div>
+                
+                <div class="search-buttons">
+                    <button class="display-button" onclick="searchPortfolio()">Search</button>
+                    <button class="clear-button" onclick="clearSearch()">Clear</button>
+                </div>
+            </div>
+            
+            <div class="search-help">
+                <strong>Search Tips:</strong> Use regular expressions for advanced patterns. 
+                Leave fields empty to ignore that criteria. Examples: "SCH.*" for symbols starting with SCH, 
+                "ETF" in company name, "IP" in portfolio.
+            </div>
+        </div>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="results-container" id="resultsContainer">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        let portfolioData = [];
+        
+        // Load CSV data when page loads
+        window.onload = function() {
+            console.log('%c🚀 Portfolio Viewer Starting...', 'color: blue; font-size: 14px; font-weight: bold;');
+            loadCSVData();
+            
+            // Focus and select the first search box for immediate use
+            const symbolSearch = document.getElementById('symbolSearch');
+            symbolSearch.focus();
+            symbolSearch.select();
+        };
+        
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    status.style.display = 'none';
+                }, 3000);
+            }
+        }
+        
+        function loadCSVData() {
+            showStatus('Loading portfolio data...', 'success');
+            
+            fetch('Portfolios.csv')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load CSV file');
+                    }
+                    return response.text();
+                })
+                .then(csvText => {
+                    portfolioData = parseCSV(csvText);
+                    showStatus(`Loaded ${portfolioData.length} portfolio entries`, 'success');
+                    // Load company names for all symbols
+                    loadCompanyNames();
+                })
+                .catch(error => {
+                    showStatus('Error loading CSV file: ' + error.message, 'error');
+                });
+        }
+        
+        function parseCSV(csvText) {
+            const lines = csvText.split('\n');
+            const data = [];
+            
+            // Skip header row
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line) {
+                    const columns = parseCSVLine(line);
+                    if (columns.length >= 8) {
+                        data.push({
+                            portfolio: columns[0],
+                            symbol: columns[1],
+                            shares: parseFloat(columns[2]) || 0,
+                            last: parseFloat(columns[3]) || 0,
+                            netChange: columns[4],
+                            costBasis: columns[5],
+                            gainLoss: columns[6],
+                            value: parseFloat(columns[7]) || 0,
+                            companyName: 'Loading...'
+                        });
+                    }
+                }
+            }
+            
+            return data;
+        }
+        
+        function parseCSVLine(line) {
+            const columns = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    columns.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            columns.push(current.trim());
+            return columns;
+        }
+        
+        function searchPortfolio() {
+            const symbolTerm = document.getElementById('symbolSearch').value.trim();
+            const companyTerm = document.getElementById('companySearch').value.trim();
+            const portfolioTerm = document.getElementById('portfolioSearch').value.trim();
+            
+            // Check if at least one search field has content
+            if (!symbolTerm && !companyTerm && !portfolioTerm) {
+                showStatus('Please enter at least one search criteria', 'error');
+                return;
+            }
+            
+            if (portfolioData.length === 0) {
+                showStatus('No portfolio data loaded', 'error');
+                return;
+            }
+            
+            try {
+                // Create search criteria
+                const searchCriteria = {
+                    symbol: symbolTerm ? new RegExp(symbolTerm, 'i') : null,
+                    company: companyTerm ? new RegExp(companyTerm, 'i') : null,
+                    portfolio: portfolioTerm ? new RegExp(portfolioTerm, 'i') : null
+                };
+                
+                // Filter data based on ALL specified criteria (AND logic)
+                const filteredData = portfolioData.filter(item => {
+                    let matches = true;
+                    
+                    // Check symbol if specified
+                    if (searchCriteria.symbol) {
+                        matches = matches && searchCriteria.symbol.test(item.symbol);
+                    }
+                    
+                    // Check company name if specified
+                    if (searchCriteria.company) {
+                        const companyName = item.companyName || '';
+                        matches = matches && searchCriteria.company.test(companyName);
+                    }
+                    
+                    // Check portfolio if specified
+                    if (searchCriteria.portfolio) {
+                        matches = matches && searchCriteria.portfolio.test(item.portfolio);
+                    }
+                    
+                    return matches;
+                });
+                
+                // Sort by symbol first, then by value (highest first) within each symbol
+                filteredData.sort((a, b) => {
+                    // First sort by symbol alphabetically
+                    const symbolCompare = a.symbol.localeCompare(b.symbol);
+                    if (symbolCompare !== 0) {
+                        return symbolCompare;
+                    }
+                    // If symbols are the same, sort by value (highest first)
+                    return b.value - a.value;
+                });
+                
+                // Create search description
+                const searchTerms = [];
+                if (symbolTerm) searchTerms.push(`Symbol: "${symbolTerm}"`);
+                if (companyTerm) searchTerms.push(`Company: "${companyTerm}"`);
+                if (portfolioTerm) searchTerms.push(`Portfolio: "${portfolioTerm}"`);
+                const searchDescription = searchTerms.join(', ');
+                
+                displayResults(filteredData, searchDescription);
+                
+                if (filteredData.length > 0) {
+                    showStatus(`Found ${filteredData.length} matching entries`, 'success');
+                } else {
+                    showStatus('No entries found matching the search criteria', 'error');
+                }
+                
+            } catch (error) {
+                showStatus('Invalid regular expression: ' + error.message, 'error');
+            }
+            
+            // Refocus and select first search box for next search
+            setTimeout(() => {
+                const symbolSearch = document.getElementById('symbolSearch');
+                symbolSearch.focus();
+                symbolSearch.select();
+            }, 100);
+        }
+        
+        function clearSearch() {
+            document.getElementById('symbolSearch').value = '';
+            document.getElementById('companySearch').value = '';
+            document.getElementById('portfolioSearch').value = '';
+            document.getElementById('resultsContainer').innerHTML = '';
+            document.getElementById('status').style.display = 'none';
+            
+            // Focus the first search field
+            const symbolSearch = document.getElementById('symbolSearch');
+            symbolSearch.focus();
+        }
+        
+        function displayResults(data, searchTerm) {
+            const container = document.getElementById('resultsContainer');
+            
+            if (data.length === 0) {
+                container.innerHTML = '<div class="no-results">No matching symbols found</div>';
+                return;
+            }
+            
+            let html = `
+                <h3>Search Results for "${searchTerm}" (${data.length} matches)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Shares</th>
+                            <th>Last</th>
+                            <th>Portfolio</th>
+                            <th>Value</th>
+                            <th>Company Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            data.forEach(item => {
+                const yahooFinanceUrl = getYahooFinanceUrl(item.symbol);
+                html += `
+                    <tr>
+                        <td><a href="${yahooFinanceUrl}" target="yahoo" class="symbol-link">${item.symbol}</a></td>
+                        <td class="number">${formatNumber(item.shares, 3)}</td>
+                        <td class="number">$${formatNumber(item.last, 2)}</td>
+                        <td>${item.portfolio}</td>
+                        <td class="number">$${formatNumber(item.value, 2)}</td>
+                        <td class="company-name">${item.companyName || 'Loading...'}</td>
+                    </tr>
+                `;
+            });
+            
+            // Add totals row if more than one result
+            if (data.length > 1) {
+                const totalShares = data.reduce((sum, item) => sum + item.shares, 0);
+                const totalValue = data.reduce((sum, item) => sum + item.value, 0);
+                
+                html += `
+                    <tr class="totals-row">
+                        <td><strong>TOTALS</strong></td>
+                        <td class="number"><strong>${formatNumber(totalShares, 3)}</strong></td>
+                        <td class="number">—</td>
+                        <td>—</td>
+                        <td class="number"><strong>$${formatNumber(totalValue, 2)}</strong></td>
+                        <td class="company-name">—</td>
+                    </tr>
+                `;
+            }
+            
+            html += `
+                    </tbody>
+                </table>
+            `;
+            
+            container.innerHTML = html;
+        }
+        
+        function getYahooFinanceUrl(symbol) {
+            // Handle special cases for symbols with slashes
+            if (symbol.includes('/')) {
+                // Convert BRK/B to BRK-B format for Yahoo Finance
+                symbol = symbol.replace('/', '-');
+            }
+            
+            // Skip non-stock symbols
+            const nonStockSymbols = ['Cash ($)', 'Margin ($)', 'Short ($)'];
+            if (nonStockSymbols.includes(symbol)) {
+                return '#'; // Return dummy link for non-stock items
+            }
+            
+            return `https://finance.yahoo.com/quote/${symbol}`;
+        }
+        
+        function formatNumber(num, decimals) {
+            if (isNaN(num)) return '0.00';
+            return num.toLocaleString('en-US', {
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals
+            });
+        }
+        
+        // Allow Enter key to trigger search from any search field
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchFields = ['symbolSearch', 'companySearch', 'portfolioSearch'];
+            
+            searchFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    // Enter key to trigger search
+                    field.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            searchPortfolio();
+                        }
+                    });
+                    
+                    // Select all text when field gains focus (click or tab)
+                    field.addEventListener('focus', function() {
+                        // Small delay to ensure the focus event completes before selecting
+                        setTimeout(() => {
+                            this.select();
+                        }, 10);
+                    });
+                    
+                    // Also select all text on click (backup for some browsers)
+                    field.addEventListener('click', function() {
+                        this.select();
+                    });
+                }
+            });
+        });
+        
+        // Company name lookup functionality
+        const companyNameCache = {};
+        
+        // Manual company name additions - ADD YOUR CUSTOM MAPPINGS HERE
+        const customCompanyNames = {
+            // Format: 'SYMBOL': 'Company Name',
+            'Cash ($)': 'Cash Holdings',
+            
+            // ETFs and Index Funds
+            'VTEB': 'Vanguard Tax-Exempt Bond ETF',
+            'SCHI': 'Schwab International Equity ETF',
+            'SMBS': 'First Trust Short Term High Yield Bond ETF',
+            'VSS': 'Vanguard FTSE All-World ex-US Small-Cap ETF',
+            'DGRO': 'iShares Core Dividend Growth ETF',
+            'BSV': 'Vanguard Short-Term Bond ETF',
+            'IEFA': 'iShares Core MSCI EAFE ETF',
+            'IEMG': 'iShares Core MSCI Emerging Markets IMI Index ETF',
+            'IVV': 'iShares Core S&P 500 ETF',
+            'IWD': 'iShares Russell 1000 Value ETF',
+            'IWF': 'iShares Russell 1000 Growth ETF',
+            'IWP': 'iShares Russell Mid-Cap Growth ETF',
+            'IWS': 'iShares Russell Mid-Cap Value ETF',
+            'IQLT': 'iShares MSCI International Quality Factor ETF',
+            'RSP': 'Invesco S&P 500 Equal Weight ETF',
+            'XLV': 'Health Care Select Sector SPDR Fund',
+            'XLF': 'Financial Select Sector SPDR Fund',
+            'XLK': 'Technology Select Sector SPDR Fund',
+            'SDY': 'SPDR S&P Dividend ETF',
+            'SMDV': 'ProShares Russell 2000 Dividend Growers ETF',
+            'EMB': 'iShares J.P. Morgan USD Emerging Markets Bond ETF',
+            'PCY': 'Invesco Emerging Markets Sovereign Debt Portfolio',
+            'SCHB': 'Schwab U.S. Broad Market ETF',
+            'SCHO': 'Schwab Short-Term U.S. Treasury ETF',
+            'SCHP': 'Schwab U.S. TIPS ETF',
+            'SCHZ': 'Schwab Intermediate-Term U.S. Treasury ETF',
+            'SHY': 'iShares 1-3 Year Treasury Bond ETF',
+            'ITOT': 'iShares Core S&P Total U.S. Stock Market ETF',
+            'TIP': 'iShares TIPS Bond ETF',
+            'VWO': 'Vanguard Emerging Markets Stock Index Fund ETF',
+            
+            // Mutual Funds
+            'JENSX': 'Jensen Quality Growth Fund Class A',
+            'JBALX': 'JPMorgan Balanced Fund Class A',
+            'CPXIX': 'Columbia Contrarian Core Fund Class A',
+            'SNSXX': 'State Street Navigator Securities Lending Government Money Market Fund',
+            'VADAX': 'Vanguard Value Fund Admiral Shares',
+            
+            // Individual Stocks
+            'BRK/B': 'Berkshire Hathaway Inc. Class B',
+            'KVUE': 'Kenvue Inc.',
+            'ABT': 'Abbott Laboratories',
+            'ADP': 'Automatic Data Processing Inc.',
+            'AMGN': 'Amgen Inc.',
+            'CAT': 'Caterpillar Inc.',
+            'CL': 'Colgate-Palmolive Company',
+            'DHS': 'DHS Technologies Inc.',
+            'EMR': 'Emerson Electric Co.',
+            'NVS': 'Novartis AG',
+            'QCOM': 'QUALCOMM Incorporated',
+            'SNV': 'Synovus Financial Corp.',
+            'SO': 'Southern Company',
+            'UPS': 'United Parcel Service Inc.',
+            'ASML': 'ASML Holding N.V.',
+            'AXP': 'American Express Company',
+            'CMI': 'Cummins Inc.',
+            'EFR': 'Eaton Vance Senior Floating-Rate Fund',
+            'EMLP': 'First Trust North American Energy Infrastructure Fund',
+            'HON': 'Honeywell International Inc.',
+            'HYI': 'Western Asset High Yield Defined Opportunity Fund',
+            'IBTF': 'Invesco Galaxy Blockchain Users and Decentralized Commerce ETF',
+            'IBTG': 'Invesco Galaxy Crypto Economy ETF',
+            'JFR': 'Nuveen Floating Rate Income Fund',
+            'LMT': 'Lockheed Martin Corporation',
+            'MMC': 'Marsh & McLennan Companies Inc.',
+            'NEM': 'Newmont Corporation',
+            'ALB': 'Albemarle Corporation',
+            'AMD': 'Advanced Micro Devices Inc.',
+            'AOS': 'A. O. Smith Corporation',
+            'AXON': 'Axon Enterprise Inc.',
+            'BBY': 'Best Buy Co. Inc.',
+            'BF/B': 'Brown-Forman Corporation Class B',
+            'BIIB': 'Biogen Inc.',
+            'CEG': 'Constellation Energy Corporation',
+            'COIN': 'Coinbase Global Inc.',
+            'CSX': 'CSX Corporation',
+            'DASH': 'DoorDash Inc.',
+            'DVA': 'DaVita Inc.',
+            'DXCM': 'DexCom Inc.',
+            'EBAY': 'eBay Inc.',
+            'EFX': 'Equifax Inc.',
+            'EMN': 'Eastman Chemical Company',
+            'FDX': 'FedEx Corporation',
+            'FICO': 'Fair Isaac Corporation',
+            'FOXA': 'Fox Corporation Class A',
+            'FSLR': 'First Solar Inc.',
+            'GD': 'General Dynamics Corporation',
+            'GILD': 'Gilead Sciences Inc.',
+            'HII': 'Huntington Ingalls Industries Inc.',
+            'HOLX': 'Hologic Inc.',
+            'HUM': 'Humana Inc.',
+            'INCY': 'Incyte Corporation',
+            'INTU': 'Intuit Inc.',
+            'LDOS': 'Leidos Holdings Inc.',
+            'LH': 'Laboratory Corporation of America Holdings',
+            'LYB': 'LyondellBasell Industries N.V.',
+            'MO': 'Altria Group Inc.',
+            'MOH': 'Molina Healthcare Inc.',
+            'MRNA': 'Moderna Inc.',
+            'MTCH': 'Match Group Inc.',
+            'NOC': 'Northrop Grumman Corporation',
+            'PLTR': 'Palantir Technologies Inc.',
+            'PSKY': 'PolarityTE Inc.',
+            'SWK': 'Stanley Black & Decker Inc.',
+            'TER': 'Teradyne Inc.',
+            'TXT': 'Textron Inc.',
+            'VRSN': 'VeriSign Inc.',
+            'VRTX': 'Vertex Pharmaceuticals Incorporated',
+            'YUM': 'Yum! Brands Inc.',
+            'RITM': 'Rithm Capital Corp.',
+            'C': 'Citigroup Inc.',
+            
+            // Special entries (not actual symbols)
+            'Margin ($)': 'Margin Balance',
+            'Short ($)': 'Short Position Balance'
+        };
+        
+        async function loadCompanyNames() {
+            const uniqueSymbols = [...new Set(portfolioData.map(item => item.symbol))];
+            showStatus(`Loading company names for ${uniqueSymbols.length} symbols...`, 'success');
+            
+            // Process symbols in batches to avoid rate limiting
+            const batchSize = 5;
+            for (let i = 0; i < uniqueSymbols.length; i += batchSize) {
+                const batch = uniqueSymbols.slice(i, i + batchSize);
+                await Promise.all(batch.map(symbol => lookupCompanyName(symbol)));
+                
+                // Small delay between batches
+                if (i + batchSize < uniqueSymbols.length) {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            }
+            
+            showStatus('Company names loaded', 'success');
+            
+            // Show missing company names for easy manual addition
+            console.log('🔍 Starting symbol analysis...');
+            showMissingCompanyNames();
+        }
+        
+        function showMissingCompanyNames() {
+            console.log('🔍 showMissingCompanyNames function called');
+            console.log('📊 Portfolio data length:', portfolioData.length);
+            
+            const missingSymbols = [];
+            const foundSymbols = [];
+            const uniqueSymbols = [...new Set(portfolioData.map(item => item.symbol))];
+            
+            console.log('🔤 Unique symbols found:', uniqueSymbols);
+            
+            uniqueSymbols.forEach(symbol => {
+                const item = portfolioData.find(p => p.symbol === symbol);
+                console.log(`Checking ${symbol}: companyName = "${item?.companyName}"`);
+                
+                if (item && item.companyName && item.companyName.includes('(Company Name Not Available)')) {
+                    missingSymbols.push(symbol);
+                } else if (item && item.companyName && !item.companyName.includes('Loading')) {
+                    foundSymbols.push(symbol);
+                }
+            });
+            
+            console.log('%c=== PORTFOLIO SYMBOL ANALYSIS ===', 'color: blue; font-weight: bold; font-size: 16px;');
+            console.log(`Total unique symbols: ${uniqueSymbols.length}`);
+            console.log(`Found company names: ${foundSymbols.length}`);
+            console.log(`Missing company names: ${missingSymbols.length}`);
+            console.log('');
+            
+            if (foundSymbols.length > 0) {
+                console.log('%c✅ Symbols with company names:', 'color: green; font-weight: bold;', foundSymbols.join(', '));
+                console.log('');
+            }
+            
+            if (missingSymbols.length > 0) {
+                console.log('%c❌ MISSING company names for symbols:', 'color: red; font-weight: bold;', missingSymbols.join(', '));
+                console.log('');
+                console.log('%c📝 To add these manually, copy and paste into customCompanyNames object:', 'color: orange; font-weight: bold;');
+                missingSymbols.forEach(symbol => {
+                    console.log(`    '${symbol}': 'Company Name Here',`);
+                });
+                console.log('');
+                console.log('%c💡 Common symbols you might recognize:', 'color: purple; font-weight: bold;');
+                missingSymbols.forEach(symbol => {
+                    if (symbol.includes('X') && symbol.length === 5) {
+                        console.log(`    '${symbol}': '${symbol} (Mutual Fund)',`);
+                    } else if (symbol.length <= 4) {
+                        console.log(`    '${symbol}': '${symbol} (Stock)',`);
+                    } else {
+                        console.log(`    '${symbol}': '${symbol} (ETF/Fund)',`);
+                    }
+                });
+            } else {
+                console.log('%c🎉 All symbols have company names!', 'color: green; font-weight: bold; font-size: 14px;');
+            }
+        }
+        
+        async function lookupCompanyName(symbol) {
+            if (companyNameCache[symbol]) {
+                updateCompanyNameInData(symbol, companyNameCache[symbol]);
+                return;
+            }
+            
+            // First check custom mappings
+            if (customCompanyNames[symbol]) {
+                companyNameCache[symbol] = customCompanyNames[symbol];
+                updateCompanyNameInData(symbol, customCompanyNames[symbol]);
+                return;
+            }
+            
+            // Then check the comprehensive hardcoded database BEFORE API calls
+            if (await lookupCompanyNameFromDatabase(symbol)) {
+                return;
+            }
+            
+            // Only try API lookup if not found in hardcoded database
+            if (await tryAPILookup(symbol)) {
+                return;
+            }
+            
+            // Final fallback for unknown symbols
+            const companyName = `${symbol} (Company Name Not Available)`;
+            companyNameCache[symbol] = companyName;
+            updateCompanyNameInData(symbol, companyName);
+        }
+        
+        async function tryAPILookup(symbol) {
+            // API calls are disabled to avoid errors and API key usage
+            // Option 1: Enable this for Yahoo Finance API (may have CORS issues)
+            // if (await tryYahooFinanceAPI(symbol)) return true;
+            
+            // Option 2: Enable this for Alpha Vantage API (requires API key)
+            // if (await tryAlphaVantageAPI(symbol)) return true;
+            
+            // Option 3: Finnhub API disabled due to 403 errors
+            // if (await tryFinnhubAPI(symbol)) return true;
+            
+            return false; // No API enabled
+        }
+        
+        
+        // Uncomment and configure these API functions as needed:
+        
+        /*
+        async function tryYahooFinanceAPI(symbol) {
+            try {
+                const response = await fetch(`https://query1.finance.yahoo.com/v1/finance/search?q=${symbol}&quotesCount=1&newsCount=0`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.quotes && data.quotes.length > 0) {
+                        const companyName = data.quotes[0].longname || data.quotes[0].shortname;
+                        if (companyName && companyName !== symbol) {
+                            companyNameCache[symbol] = companyName;
+                            updateCompanyNameInData(symbol, companyName);
+                            return true;
+                        }
+                    }
+                }
+            } catch (error) {
+                console.log(`Yahoo Finance API failed for ${symbol}:`, error);
+            }
+            return false;
+        }
+        */
+        
+        
+        async function tryAlphaVantageAPI(symbol) {
+            const API_KEY = 'B0FJUT38ZZODF5R0'; // Get free key from https://www.alphavantage.co/
+            try {
+                const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${API_KEY}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.Name && data.Name !== 'None') {
+                        companyNameCache[symbol] = data.Name;
+                        updateCompanyNameInData(symbol, data.Name);
+                        return true;
+                    }
+                }
+            } catch (error) {
+                console.log(`Alpha Vantage API failed for ${symbol}:`, error);
+            }
+            return false;
+        }
+        
+        
+        
+        async function tryFinnhubAPI(symbol) {
+            const API_KEY = 'd3hckc1r01qstnq8m4i0d3hckc1r01qstnq8m4ig'; // Get free key from https://finnhub.io/
+            try {
+                const response = await fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=${API_KEY}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.name) {
+                        companyNameCache[symbol] = data.name;
+                        updateCompanyNameInData(symbol, data.name);
+                        return true;
+                    }
+                }
+            } catch (error) {
+                console.log(`Finnhub API failed for ${symbol}:`, error);
+            }
+            return false;
+        }
+        
+        
+        async function lookupCompanyNameFromDatabase(symbol) {
+            // Comprehensive company name mapping for common stocks and ETFs
+            const companyNames = {
+                // Major Stocks
+                'JNJ': 'Johnson & Johnson',
+                'AAPL': 'Apple Inc.',
+                'MSFT': 'Microsoft Corporation',
+                'GOOGL': 'Alphabet Inc. (Class A)',
+                'GOOG': 'Alphabet Inc. (Class C)',
+                'AMZN': 'Amazon.com Inc.',
+                'TSLA': 'Tesla Inc.',
+                'META': 'Meta Platforms Inc.',
+                'NVDA': 'NVIDIA Corporation',
+                'JPM': 'JPMorgan Chase & Co.',
+                'V': 'Visa Inc.',
+                'PG': 'Procter & Gamble Co.',
+                'HD': 'Home Depot Inc.',
+                'MA': 'Mastercard Inc.',
+                'UNH': 'UnitedHealth Group Inc.',
+                'DIS': 'Walt Disney Co.',
+                'ADBE': 'Adobe Inc.',
+                'NFLX': 'Netflix Inc.',
+                'KO': 'Coca-Cola Co.',
+                'PEP': 'PepsiCo Inc.',
+                'INTC': 'Intel Corporation',
+                'CSCO': 'Cisco Systems Inc.',
+                'VZ': 'Verizon Communications Inc.',
+                'MRK': 'Merck & Co. Inc.',
+                'T': 'AT&T Inc.',
+                'PFE': 'Pfizer Inc.',
+                'WMT': 'Walmart Inc.',
+                'BAC': 'Bank of America Corp.',
+                'XOM': 'Exxon Mobil Corporation',
+                'CVX': 'Chevron Corporation',
+                'ABBV': 'AbbVie Inc.',
+                'TMO': 'Thermo Fisher Scientific Inc.',
+                'ACN': 'Accenture plc',
+                'AVGO': 'Broadcom Inc.',
+                'TXN': 'Texas Instruments Inc.',
+                'LLY': 'Eli Lilly and Co.',
+                'WFC': 'Wells Fargo & Co.',
+                'ORCL': 'Oracle Corporation',
+                'BMY': 'Bristol-Myers Squibb Co.',
+                
+                // ETFs
+                'EMLC': 'VanEck J.P. Morgan EM Local Currency Bond ETF',
+                'FNDA': 'Schwab Fundamental U.S. Large Company Index ETF',
+                'FNDC': 'Schwab Fundamental International Large Company Index ETF',
+                'FNDE': 'Schwab Fundamental Emerging Markets Large Company Index ETF',
+                'FNDF': 'Schwab Fundamental International Small Company Index ETF',
+                'FNDX': 'Schwab Fundamental U.S. Small Company Index ETF',
+                'HAUZ': 'Xtrackers International Real Estate ETF',
+                'PRFZ': 'Invesco FTSE RAFI US 1500 Small-Mid ETF',
+                'PXH': 'Invesco FTSE RAFI Emerging Markets ETF',
+                'SCHA': 'Schwab U.S. Small-Cap ETF',
+                'SCHC': 'Schwab International Small-Cap Equity ETF',
+                'SCHE': 'Schwab Emerging Markets Equity ETF',
+                'SCHF': 'Schwab International Equity ETF',
+                'SCHG': 'Schwab U.S. Large-Cap Growth ETF',
+                'SCHH': 'Schwab U.S. REIT ETF',
+                'SCHX': 'Schwab U.S. Large-Cap ETF',
+                'USRT': 'iShares Core U.S. REIT ETF',
+                'VEA': 'Vanguard FTSE Developed Markets ETF',
+                'VNQI': 'Vanguard Global ex-U.S. Real Estate ETF',
+                'SPY': 'SPDR S&P 500 ETF Trust',
+                'QQQ': 'Invesco QQQ Trust',
+                'IWM': 'iShares Russell 2000 ETF',
+                'VTI': 'Vanguard Total Stock Market ETF',
+                'VTV': 'Vanguard Value ETF',
+                'VUG': 'Vanguard Growth ETF',
+                'VOO': 'Vanguard S&P 500 ETF',
+                'VB': 'Vanguard Small-Cap ETF',
+                'VO': 'Vanguard Mid-Cap ETF',
+                'VT': 'Vanguard Total World Stock ETF',
+                'BND': 'Vanguard Total Bond Market ETF',
+                'AGG': 'iShares Core U.S. Aggregate Bond ETF',
+                'TLT': 'iShares 20+ Year Treasury Bond ETF'
+            };
+            
+            if (companyNames[symbol]) {
+                companyNameCache[symbol] = companyNames[symbol];
+                updateCompanyNameInData(symbol, companyNames[symbol]);
+                return true;
+            }
+            
+            return false;
+        }
+        
+        function updateCompanyNameInData(symbol, companyName) {
+            portfolioData.forEach(item => {
+                if (item.symbol === symbol) {
+                    item.companyName = companyName;
+                }
+            });
+            
+            // Update display if currently showing results
+            const resultsContainer = document.getElementById('resultsContainer');
+            if (resultsContainer.innerHTML.includes(symbol)) {
+                // Refresh the current search results
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput.value) {
+                    searchPortfolio();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
