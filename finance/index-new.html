@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Finance Tools</title>
+    <meta http-equiv="refresh" content="0; url=portfolio-viewer.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .loading {
+            color: #666;
+            font-size: 18px;
+        }
+        .redirect-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .redirect-link:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📊</div>
+        <h1>Portfolio Finance Tools</h1>
+        <p class="loading">Redirecting to Portfolio Viewer...</p>
+        <p>If you are not redirected automatically, <a href="portfolio-viewer.html" class="redirect-link">click here</a>.</p>
+        
+        <div style="margin-top: 30px; font-size: 14px; color: #666;">
+            <p><strong>Portfolio Viewer Features:</strong></p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Search and filter your portfolio holdings</li>
+                <li>View company names and financial data</li>
+                <li>Click symbols to view Yahoo Finance details</li>
+                <li>Mobile-friendly responsive design</li>
+                <li>Real-time search with totals summary</li>
+            </ul>
+        </div>
+        
+        <script>
+            // JavaScript redirect as backup
+            setTimeout(function() {
+                window.location.href = 'portfolio-viewer.html';
+            }, 500);
+        </script>
+    </div>
+</body>
+</html>
