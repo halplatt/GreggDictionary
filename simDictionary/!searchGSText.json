@@ -1034,7 +1034,7 @@
     {
         "text": "alternative",
         "YAGATS": "otenaDV",
-        "gst": "o-t-e-n-a-tf",
+        "gst": "o-t-e-n-a-df",
         "notes": ""
     },
     {
@@ -1838,7 +1838,7 @@
     {
         "text": "artificial",
         "YAGATS": "arDVe$",
-        "gst": "a-r-tf-e-sh",
+        "gst": "a-r-df-e-sh",
         "notes": ""
     },
     {
@@ -4154,7 +4154,7 @@
     {
         "text": "captivate",
         "YAGATS": "kapDVat",
-        "gst": "k-a-p-tf-a-t",
+        "gst": "k-a-p-df-a-t",
         "notes": ""
     },
     {
@@ -5900,97 +5900,97 @@
     {
         "text": "defame",
         "YAGATS": "DVam",
-        "gst": "tf-a-m",
+        "gst": "df-a-m",
         "notes": ""
     },
     {
         "text": "defend",
         "YAGATS": "DVNT",
-        "gst": "tf-nt",
+        "gst": "df-nt",
         "notes": ""
     },
     {
         "text": "defer",
         "YAGATS": "DVer",
-        "gst": "tf-e-r",
+        "gst": "df-e-r",
         "notes": ""
     },
     {
         "text": "deferential",
         "YAGATS": "DVeren$",
-        "gst": "tf-e-r-e-n-sh",
+        "gst": "df-e-r-e-n-sh",
         "notes": ""
     },
     {
         "text": "deferred",
         "YAGATS": "DVeRD",
-        "gst": "tf-e-rd",
+        "gst": "df-e-rd",
         "notes": ""
     },
     {
         "text": "defiant",
         "YAGATS": "DVioNT",
-        "gst": "tf-ie-nt",
+        "gst": "df-ie-nt",
         "notes": ""
     },
     {
         "text": "deficient",
         "YAGATS": "DVe$t",
-        "gst": "tf-e-sh-t",
+        "gst": "df-e-sh-t",
         "notes": ""
     },
     {
         "text": "defiled",
         "YAGATS": "DViLD",
-        "gst": "tf-i-ld",
+        "gst": "df-i-ld",
         "notes": ""
     },
     {
         "text": "definite",
         "YAGATS": "DVnet",
-        "gst": "tf-n-e-t",
+        "gst": "df-n-e-t",
         "notes": ""
     },
     {
         "text": "definition",
         "YAGATS": "DVn$",
-        "gst": "tf-n-sh",
+        "gst": "df-n-sh",
         "notes": ""
     },
     {
         "text": "deflate",
         "YAGATS": "DVlat",
-        "gst": "tf-l-a-t",
+        "gst": "df-l-a-t",
         "notes": ""
     },
     {
         "text": "deflected",
         "YAGATS": "DVlek:t",
-        "gst": "tf-l-e-k/t",
+        "gst": "df-l-e-k/t",
         "notes": ""
     },
     {
         "text": "deforestation",
         "YAGATS": "DVorez$",
-        "gst": "tf-o-r-e-s2-sh",
+        "gst": "df-o-r-e-s2-sh",
         "notes": ""
     },
     {
         "text": "deformation",
         "YAGATS": "DVm$",
-        "gst": "tf-m-sh",
+        "gst": "df-m-sh",
         "notes": ""
     },
     {
         "text": "deformity",
         "YAGATS": "DVmete",
-        "gst": "tf-m-e-t-e",
+        "gst": "df-m-e-t-e",
         "notes": ""
     },
     {
         "text": "defray",
         "YAGATS": "DVra",
-        "gst": "tf-r-a",
+        "gst": "df-r-a",
         "notes": ""
     },
     {
@@ -6002,7 +6002,7 @@
     {
         "text": "defunct",
         "YAGATS": "DVNK",
-        "gst": "tf-nk",
+        "gst": "df-nk",
         "notes": ""
     },
     {
@@ -6092,7 +6092,7 @@
     {
         "text": "deliberative",
         "YAGATS": "dlebraDV",
-        "gst": "d-l-e-b-r-a-tf",
+        "gst": "d-l-e-b-r-a-df",
         "notes": ""
     },
     {
@@ -6260,13 +6260,13 @@
     {
         "text": "develop",
         "YAGATS": "DVelp",
-        "gst": "tf-e-l-p",
+        "gst": "df-e-l-p",
         "notes": ""
     },
     {
         "text": "devote",
         "YAGATS": "DVot",
-        "gst": "tf-o-t",
+        "gst": "df-o-t",
         "notes": ""
     },
     {
@@ -6302,7 +6302,7 @@
     {
         "text": "different",
         "YAGATS": "DVreNT",
-        "gst": "tf-r-e-nt",
+        "gst": "df-r-e-nt",
         "notes": ""
     },
     {
@@ -6464,13 +6464,13 @@
     {
         "text": "diverse",
         "YAGATS": "DVerz",
-        "gst": "tf-e-r-s2",
+        "gst": "df-e-r-s2",
         "notes": ""
     },
     {
         "text": "divine",
         "YAGATS": "DVin",
-        "gst": "tf-i-n",
+        "gst": "df-i-n",
         "notes": ""
     },
     {
@@ -11516,7 +11516,7 @@
     {
         "text": "identify",
         "YAGATS": "iTNDV",
-        "gst": "i-tn-tf",
+        "gst": "i-tn-df",
         "notes": ""
     },
     {
@@ -12242,7 +12242,7 @@
     {
         "text": "interpretative",
         "YAGATS": "n:pretaDV",
-        "gst": "n/p-r-e-t-a-tf",
+        "gst": "n/p-r-e-t-a-df",
         "notes": ""
     },
     {
@@ -14090,7 +14090,7 @@
     {
         "text": "locomotive",
         "YAGATS": "lokmoDV",
-        "gst": "l-o-k-m-o-tf",
+        "gst": "l-o-k-m-o-df",
         "notes": ""
     },
     {
@@ -14252,7 +14252,7 @@
     {
         "text": "lucrative",
         "YAGATS": "lukraDV",
-        "gst": "l-u-k-r-a-tf",
+        "gst": "l-u-k-r-a-df",
         "notes": ""
     },
     {
@@ -15224,7 +15224,7 @@
     {
         "text": "motive",
         "YAGATS": "moDV",
-        "gst": "m-o-tf",
+        "gst": "m-o-df",
         "notes": ""
     },
     {
@@ -15620,7 +15620,7 @@
     {
         "text": "negative",
         "YAGATS": "negaDV",
-        "gst": "n-e-g-a-tf",
+        "gst": "n-e-g-a-df",
         "notes": ""
     },
     {
@@ -18266,7 +18266,7 @@
     {
         "text": "putative",
         "YAGATS": "peutaDV",
-        "gst": "p-e-u-t-a-tf",
+        "gst": "p-e-u-t-a-df",
         "notes": ""
     },
     {
@@ -19454,7 +19454,7 @@
     {
         "text": "repetitive",
         "YAGATS": "rpteDV",
-        "gst": "r-p-t-e-tf",
+        "gst": "r-p-t-e-df",
         "notes": ""
     },
     {
@@ -20990,7 +20990,7 @@
     {
         "text": "scientific",
         "YAGATS": "sionDVk",
-        "gst": "s1-ie-n-tf-k",
+        "gst": "s1-ie-n-df-k",
         "notes": ""
     },
     {
@@ -21458,7 +21458,7 @@
     {
         "text": "sensitive",
         "YAGATS": "senzDV",
-        "gst": "s1-e-n-s2-tf",
+        "gst": "s1-e-n-s2-df",
         "notes": ""
     },
     {
@@ -22592,7 +22592,7 @@
     {
         "text": "solidify",
         "YAGATS": "soleDV",
-        "gst": "s1-o-l-e-tf",
+        "gst": "s1-o-l-e-df",
         "notes": ""
     },
     {
@@ -23816,7 +23816,7 @@
     {
         "text": "subdivide",
         "YAGATS": "sDVid",
-        "gst": "s1-tf-i-d",
+        "gst": "s1-df-i-d",
         "notes": ""
     },
     {
@@ -24044,7 +24044,7 @@
     {
         "text": "superlative",
         "YAGATS": "s:laDV",
-        "gst": "s1/l-a-tf",
+        "gst": "s1/l-a-df",
         "notes": ""
     },
     {
