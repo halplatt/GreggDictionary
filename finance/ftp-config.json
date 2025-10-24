@@ -1,0 +1,8 @@
+﻿{
+    "FtpServer":  "108.179.234.89",
+    "FtpUsername":  "admin@halplatt.com",
+    "UsePassiveMode":  true,
+    "LocalFilePath":  "D:\\HostGatorFiles\\public_html\\notes\\finance\\Portfolios.csv",
+    "RemotePath":  "/public_html/notes/finance/",
+    "FtpPassword":  "X@ss3038H"
+}

@@ -246,6 +246,7 @@
                            class="search-input" 
                            id="symbolSearch" 
                            placeholder="e.g., AAPL, SCH.*, JNJ|MSFT"
+                           enterkeyhint="search"
                            value="">
                 </div>
                 
@@ -255,6 +256,7 @@
                            class="search-input" 
                            id="companySearch" 
                            placeholder="e.g., ETF, Apple, Schwab.*Fund"
+                           enterkeyhint="search"
                            value="">
                 </div>
                 
@@ -264,6 +266,7 @@
                            class="search-input" 
                            id="portfolioSearch" 
                            placeholder="e.g., IP, 891, .*401.*"
+                           enterkeyhint="search"
                            value="">
                 </div>
                 
@@ -290,7 +293,7 @@
     <script>
         // ===== VERSION CONFIGURATION =====
         // Update this version string for new releases
-        const APP_VERSION = 'v2025.1005@11:41pm';
+        const APP_VERSION = 'v2025.1021@03:25pm';
         // ================================
         
         let portfolioData = [];
@@ -414,7 +417,7 @@
             try {
                 // Create search criteria
                 const searchCriteria = {
-                    symbol: symbolTerm ? new RegExp(symbolTerm, 'i') : null,
+                    symbol: symbolTerm ? new RegExp('^' + symbolTerm, 'i') : null,
                     company: companyTerm ? new RegExp(companyTerm, 'i') : null,
                     portfolio: portfolioTerm ? new RegExp(portfolioTerm, 'i') : null
                 };
@@ -586,9 +589,10 @@
             searchFields.forEach(fieldId => {
                 const field = document.getElementById(fieldId);
                 if (field) {
-                    // Enter key to trigger search
-                    field.addEventListener('keypress', function(e) {
+                    // Enter key to trigger search (using keydown for better mobile compatibility)
+                    field.addEventListener('keydown', function(e) {
                         if (e.key === 'Enter') {
+                            e.preventDefault(); // Prevent default behavior (tabbing to next field)
                             searchPortfolio();
                         }
                     });
