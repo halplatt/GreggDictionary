@@ -2510,3 +2510,5 @@ gruft,gruff
 whitfled,whiffled
 bircarbonate,bicarbonate
 spplementation,supplementation
+hdget,fidget
+hduciary,fiduciary

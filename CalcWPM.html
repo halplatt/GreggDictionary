@@ -34,15 +34,16 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 3/21/2025@12:16PM</div>
-    <h1>Shorthand Speed Calculator</h1>
+    <div class="version-tag">vers 10/25/2025@10:04PM</div>
+    <h1>Gregg Shorthand WPM Calculator</h1>
+    <p><strong>Note:</strong>For Gregg shorthand WPM calculations, a standard word is defined as 1.4 syllables.</p>
     <div>
         <label for="textInput">Enter Text:</label>
         <textarea id="textInput" rows="4" cols="50"></textarea>
     </div>
     <button id="countButton">Count Syllables</button>
     <p id="syllableCount">Syllables: 0</p>
-    <p id="wordCount">Words: 0</p>
+    <p id="wordCount">Standard Words: 0</p>
     <div>
         <label for="timeInput">Enter Time (MM:SS):</label>
         <input type="text" id="timeInput" placeholder="MM:SS" size="5">
@@ -78,7 +79,7 @@
             document.getElementById('syllableCount').innerText = `Syllables: ${syllables}`;
 
             const words = syllables / 1.4;
-            document.getElementById('wordCount').innerText = `Words: ${words.toFixed(2)}`;
+            document.getElementById('wordCount').innerText = `Standard Words: ${words.toFixed(2)}`;
         });
 
         document.getElementById('calculateWpmButton').addEventListener('click', function() {
