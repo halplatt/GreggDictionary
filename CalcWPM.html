@@ -34,7 +34,7 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 10/25/2025@10:04PM</div>
+    <div class="version-tag">vers 11/03/2025@12:07am</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <p><strong>Note:</strong>For Gregg shorthand WPM calculations, a standard word is defined as 1.4 syllables.</p>
     <div>
@@ -82,7 +82,7 @@
             document.getElementById('wordCount').innerText = `Standard Words: ${words.toFixed(2)}`;
         });
 
-        document.getElementById('calculateWpmButton').addEventListener('click', function() {
+        function calculateWpm() {
             const syllables = parseFloat(document.getElementById('syllableCount').innerText.split(': ')[1]);
             const timeInput = document.getElementById('timeInput').value.split(':');
             const minutes = parseInt(timeInput[0]) || 0;
@@ -94,6 +94,14 @@
                 document.getElementById('wpmCount').innerText = `Words per Minute: ${wordsPerMinute.toFixed(2)}`;
             } else {
                 document.getElementById('wpmCount').innerText = 'Please enter a valid time.';
+            }
+        }
+
+        document.getElementById('calculateWpmButton').addEventListener('click', calculateWpm);
+
+        document.getElementById('timeInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculateWpm();
             }
         });
     </script>
