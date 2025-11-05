@@ -34,18 +34,21 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/04/2025@9:38pm</div>
+    <div class="version-tag">vers 11/04/2025@9:46pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <p><strong>Note:</strong>For Gregg shorthand WPM calculations, a standard word is defined as 1.4 syllables.</p>
     <div>
-        <label for="textInput">Enter Text:</label>
+        <label for="textInput">Paste/Enter Text:</label>
         <textarea id="textInput" rows="4" cols="50"></textarea>
     </div>
-    <button id="countButton">Count Syllables</button>
+    <button id="countButton">Count Words</button>
     <p id="syllableCount">Syllables: 0</p>
-    <p id="wordCount">Standard Words: 0</p>
     <div>
-        <label for="timeInput">Enter Time (e.g. 120 or 2:00) :</label>
+        <label for="wordCountInput">Standard Words:</label>
+        <input type="number" id="wordCountInput" value="0" size="10" style="width: 80px;">
+    </div>
+    <div>
+        <label for="timeInput">Enter Time (enter mm:ss or seconds) :</label>
         <input type="text" id="timeInput" placeholder="mm:ss" size="10">
     </div>
     <button id="calculateWpmButton">Calculate WPM</button>
@@ -79,7 +82,7 @@
             document.getElementById('syllableCount').innerText = `Syllables: ${syllables}`;
 
             const words = syllables / 1.4;
-            document.getElementById('wordCount').innerText = `Standard Words: ${words.toFixed(2)}`;
+            document.getElementById('wordCountInput').value = Math.round(words);
         });
 
         function parseAndFormatTime(timeInputValue) {
@@ -133,7 +136,7 @@
         }
 
         function calculateWpm() {
-            const syllables = parseFloat(document.getElementById('syllableCount').innerText.split(': ')[1]);
+            const wordCount = parseFloat(document.getElementById('wordCountInput').value) || 0;
             const timeInputElement = document.getElementById('timeInput');
             const timeInputValue = timeInputElement.value;
             
@@ -149,17 +152,23 @@
             
             const totalTimeInSeconds = timeData.minutes * 60 + timeData.seconds;
 
-            if (totalTimeInSeconds > 0) {
-                const wordsPerMinute = calculateWordsPerMinute(syllables, totalTimeInSeconds);
+            if (totalTimeInSeconds > 0 && wordCount > 0) {
+                const wordsPerMinute = (wordCount / totalTimeInSeconds) * 60;
                 document.getElementById('wpmCount').innerText = `Words per Minute: ${wordsPerMinute.toFixed(2)}`;
             } else {
-                document.getElementById('wpmCount').innerText = 'Please enter a valid time.';
+                document.getElementById('wpmCount').innerText = 'Please enter valid time and word count.';
             }
         }
 
         document.getElementById('calculateWpmButton').addEventListener('click', calculateWpm);
 
         document.getElementById('timeInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculateWpm();
+            }
+        });
+
+        document.getElementById('wordCountInput').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
                 calculateWpm();
             }
