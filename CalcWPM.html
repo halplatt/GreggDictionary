@@ -31,12 +31,18 @@
             font-size: 0.8em;
             color: gray;
         }
+        .info-note {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+            margin-top: 2px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/04/2025@9:46pm</div>
+    <div class="version-tag">vers 11/04/2025@10:07pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
-    <p><strong>Note:</strong>For Gregg shorthand WPM calculations, a standard word is defined as 1.4 syllables.</p>
     <div>
         <label for="textInput">Paste/Enter Text:</label>
         <textarea id="textInput" rows="4" cols="50"></textarea>
@@ -46,6 +52,7 @@
     <div>
         <label for="wordCountInput">Standard Words:</label>
         <input type="number" id="wordCountInput" value="0" size="10" style="width: 80px;">
+        <div class="info-note">Calculated as syllables ÷ 1.4 (Gregg shorthand standard)</div>
     </div>
     <div>
         <label for="timeInput">Enter Time (enter mm:ss or seconds) :</label>
@@ -154,7 +161,7 @@
 
             if (totalTimeInSeconds > 0 && wordCount > 0) {
                 const wordsPerMinute = (wordCount / totalTimeInSeconds) * 60;
-                document.getElementById('wpmCount').innerText = `Words per Minute: ${wordsPerMinute.toFixed(2)}`;
+                document.getElementById('wpmCount').innerText = `Words per Minute: ${Math.round(wordsPerMinute)}`;
             } else {
                 document.getElementById('wpmCount').innerText = 'Please enter valid time and word count.';
             }
