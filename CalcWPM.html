@@ -34,7 +34,7 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/03/2025@12:07am</div>
+    <div class="version-tag">vers 11/04/2025@9:38pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <p><strong>Note:</strong>For Gregg shorthand WPM calculations, a standard word is defined as 1.4 syllables.</p>
     <div>
@@ -45,8 +45,8 @@
     <p id="syllableCount">Syllables: 0</p>
     <p id="wordCount">Standard Words: 0</p>
     <div>
-        <label for="timeInput">Enter Time (MM:SS):</label>
-        <input type="text" id="timeInput" placeholder="MM:SS" size="5">
+        <label for="timeInput">Enter Time (e.g. 120 or 2:00) :</label>
+        <input type="text" id="timeInput" placeholder="mm:ss" size="10">
     </div>
     <button id="calculateWpmButton">Calculate WPM</button>
     <p id="wpmCount">Words per Minute: 0</p>
@@ -82,12 +82,72 @@
             document.getElementById('wordCount').innerText = `Standard Words: ${words.toFixed(2)}`;
         });
 
+        function parseAndFormatTime(timeInputValue) {
+            // Remove any whitespace
+            timeInputValue = timeInputValue.trim();
+            
+            if (!timeInputValue) {
+                return { minutes: 0, seconds: 0, formatted: "0:00", valid: false };
+            }
+            
+            // Check if input contains only digits (seconds only)
+            if (/^\d+$/.test(timeInputValue)) {
+                const totalSeconds = parseInt(timeInputValue);
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+                const formatted = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                return { minutes, seconds, formatted, valid: true };
+            }
+            
+            // Check for two numbers separated by non-digit characters
+            const matches = timeInputValue.match(/(\d+)[^\d]+(\d+)/);
+            if (matches) {
+                let minutes = parseInt(matches[1]);
+                let seconds = parseInt(matches[2]);
+                
+                // Handle cases where seconds >= 60
+                if (seconds >= 60) {
+                    minutes += Math.floor(seconds / 60);
+                    seconds = seconds % 60;
+                }
+                
+                const formatted = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                return { minutes, seconds, formatted, valid: true };
+            }
+            
+            // Fallback: try to parse as MM:SS format
+            const timeParts = timeInputValue.split(':');
+            if (timeParts.length === 2) {
+                const minutes = parseInt(timeParts[0]) || 0;
+                let seconds = parseInt(timeParts[1]) || 0;
+                
+                // Handle cases where seconds >= 60
+                let finalMinutes = minutes + Math.floor(seconds / 60);
+                seconds = seconds % 60;
+                
+                const formatted = `${finalMinutes}:${seconds.toString().padStart(2, '0')}`;
+                return { minutes: finalMinutes, seconds, formatted, valid: true };
+            }
+            
+            return { minutes: 0, seconds: 0, formatted: timeInputValue, valid: false };
+        }
+
         function calculateWpm() {
             const syllables = parseFloat(document.getElementById('syllableCount').innerText.split(': ')[1]);
-            const timeInput = document.getElementById('timeInput').value.split(':');
-            const minutes = parseInt(timeInput[0]) || 0;
-            const seconds = parseInt(timeInput[1]) || 0;
-            const totalTimeInSeconds = minutes * 60 + seconds;
+            const timeInputElement = document.getElementById('timeInput');
+            const timeInputValue = timeInputElement.value;
+            
+            const timeData = parseAndFormatTime(timeInputValue);
+            
+            if (!timeData.valid) {
+                document.getElementById('wpmCount').innerText = 'Please enter a valid time.';
+                return;
+            }
+            
+            // Update the input field with the formatted time
+            timeInputElement.value = timeData.formatted;
+            
+            const totalTimeInSeconds = timeData.minutes * 60 + timeData.seconds;
 
             if (totalTimeInSeconds > 0) {
                 const wordsPerMinute = calculateWordsPerMinute(syllables, totalTimeInSeconds);
