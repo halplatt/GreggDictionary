@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/09/2025@2:47pm</div>
+    <div class="version-tag">vers 11/09/2025@3:12pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <div>
         <label for="textInput">Paste/Enter Text:</label>
@@ -253,6 +253,12 @@
         });
 
         document.getElementById('timerDisplay').addEventListener('click', function() {
+            // Stop the timer if it's running
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+            // Copy the time to the input field
             const timerValue = document.getElementById('timerDisplay').innerText;
             document.getElementById('timeInput').value = timerValue;
         });
