@@ -38,10 +38,35 @@
             margin-top: 2px;
             margin-bottom: 10px;
         }
+        .timer-section {
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 2px solid #ddd;
+        }
+        .timer-display {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+        }
+        .timer-display:hover {
+            color: #0066cc;
+        }
+        .timer-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .timer-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/04/2025@10:07pm</div>
+    <div class="version-tag">vers 11/09/2025@2:47pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <div>
         <label for="textInput">Paste/Enter Text:</label>
@@ -60,6 +85,17 @@
     </div>
     <button id="calculateWpmButton">Calculate WPM</button>
     <p id="wpmCount">Words per Minute: 0</p>
+
+    <div class="timer-section">
+        <h2>Timer</h2>
+        <div class="timer-display" id="timerDisplay">0:00</div>
+        <div class="info-note">Click on the time to copy it to the time input field above</div>
+        <div class="timer-buttons">
+            <button id="startButton">Start</button>
+            <button id="stopButton">Stop</button>
+        </div>
+    </div>
+
     <script>
         function countSyllables(word) {
             word = word.toLowerCase();
@@ -179,6 +215,46 @@
             if (event.key === 'Enter') {
                 calculateWpm();
             }
+        });
+
+        // Timer functionality
+        let timerInterval = null;
+        let timerSeconds = 0;
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timerSeconds / 60);
+            const seconds = timerSeconds % 60;
+            document.getElementById('timerDisplay').innerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Clear any existing timer
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+            }
+            // Reset to zero and start
+            timerSeconds = 0;
+            updateTimerDisplay();
+            timerInterval = setInterval(function() {
+                timerSeconds++;
+                updateTimerDisplay();
+            }, 1000);
+        });
+
+        document.getElementById('stopButton').addEventListener('click', function() {
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            } else {
+                // Timer is already stopped, so clear it
+                timerSeconds = 0;
+                updateTimerDisplay();
+            }
+        });
+
+        document.getElementById('timerDisplay').addEventListener('click', function() {
+            const timerValue = document.getElementById('timerDisplay').innerText;
+            document.getElementById('timeInput').value = timerValue;
         });
     </script>
 </body>
