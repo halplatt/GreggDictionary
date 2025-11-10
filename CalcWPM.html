@@ -91,8 +91,7 @@
         <div class="timer-display" id="timerDisplay">0:00</div>
         <div class="info-note">Click on the time to copy it to the time input field above</div>
         <div class="timer-buttons">
-            <button id="startButton">Start</button>
-            <button id="stopButton">Stop</button>
+            <button id="toggleButton">Start</button>
         </div>
     </div>
 
@@ -220,6 +219,7 @@
         // Timer functionality
         let timerInterval = null;
         let timerSeconds = 0;
+        let isRunning = false;
 
         function updateTimerDisplay() {
             const minutes = Math.floor(timerSeconds / 60);
@@ -227,28 +227,25 @@
             document.getElementById('timerDisplay').innerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
         }
 
-        document.getElementById('startButton').addEventListener('click', function() {
-            // Clear any existing timer
-            if (timerInterval !== null) {
-                clearInterval(timerInterval);
-            }
-            // Reset to zero and start
-            timerSeconds = 0;
-            updateTimerDisplay();
-            timerInterval = setInterval(function() {
-                timerSeconds++;
-                updateTimerDisplay();
-            }, 1000);
-        });
-
-        document.getElementById('stopButton').addEventListener('click', function() {
-            if (timerInterval !== null) {
-                clearInterval(timerInterval);
-                timerInterval = null;
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            if (isRunning) {
+                // Stop the timer
+                if (timerInterval !== null) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+                isRunning = false;
+                this.innerText = 'Start';
             } else {
-                // Timer is already stopped, so clear it
+                // Start the timer from zero
                 timerSeconds = 0;
                 updateTimerDisplay();
+                timerInterval = setInterval(function() {
+                    timerSeconds++;
+                    updateTimerDisplay();
+                }, 1000);
+                isRunning = true;
+                this.innerText = 'Stop';
             }
         });
 
@@ -257,6 +254,8 @@
             if (timerInterval !== null) {
                 clearInterval(timerInterval);
                 timerInterval = null;
+                isRunning = false;
+                document.getElementById('toggleButton').innerText = 'Start';
             }
             // Copy the time to the input field
             const timerValue = document.getElementById('timerDisplay').innerText;
