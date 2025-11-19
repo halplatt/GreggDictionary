@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/18/2025@10:37pm</div>
+    <div class="version-tag">vers 11/19/2025@12:41pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <div>
         <label for="textInput">Paste/Enter Text:</label>
@@ -99,10 +99,21 @@
     <script>
         function countSyllables(word) {
             word = word.toLowerCase();
-            if (word.length <= 3) return 1;
-            word = word.replace(/e$/, '');
             const syllableCount = word.match(/[aeiouy]{1,2}/g);
-            return syllableCount ? syllableCount.length : 0;
+            
+            // If word has vowels
+            if (syllableCount) {
+                if (word.length <= 3) return 1;
+                const wordWithoutFinalE = word.replace(/e$/, '');
+                const adjustedCount = wordWithoutFinalE.match(/[aeiouy]{1,2}/g);
+                return adjustedCount ? adjustedCount.length : 1;
+            }
+            
+            // For words with no vowels (consonants, symbols, digits only),
+            // strip trailing punctuation and count each character as 1 syllable
+            // (e.g., txn. = 3, $1.00 = 4)
+            const wordWithoutTrailingPunc = word.replace(/[.,?!]+$/, '');
+            return wordWithoutTrailingPunc.length;
         }
 
         function calculateSyllables(text) {
