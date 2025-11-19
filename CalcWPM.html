@@ -66,13 +66,14 @@
     </style>
 </head>
 <body>
-    <div class="version-tag">vers 11/09/2025@3:12pm</div>
+    <div class="version-tag">vers 11/18/2025@10:37pm</div>
     <h1>Gregg Shorthand WPM Calculator</h1>
     <div>
         <label for="textInput">Paste/Enter Text:</label>
         <textarea id="textInput" rows="4" cols="50"></textarea>
     </div>
     <button id="countButton">Count Words</button>
+    <p id="actualWordCount">Actual Word Count: 0</p>
     <p id="syllableCount">Syllables: 0</p>
     <div>
         <label for="wordCountInput">Standard Words:</label>
@@ -105,7 +106,7 @@
         }
 
         function calculateSyllables(text) {
-            const words = text.split(/\s+/);
+            const words = text.split(/\s+/).filter(word => word.length > 0);
             let totalSyllables = 0;
             words.forEach(word => {
                 totalSyllables += countSyllables(word);
@@ -120,11 +121,15 @@
 
         document.getElementById('countButton').addEventListener('click', function() {
             const text = document.getElementById('textInput').value;
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const actualWordCount = words.length;
+            document.getElementById('actualWordCount').innerText = `Actual Word Count: ${actualWordCount}`;
+            
             const syllables = calculateSyllables(text);
             document.getElementById('syllableCount').innerText = `Syllables: ${syllables}`;
 
-            const words = syllables / 1.4;
-            document.getElementById('wordCountInput').value = Math.round(words);
+            const standardWords = syllables / 1.4;
+            document.getElementById('wordCountInput').value = Math.round(standardWords);
         });
 
         function parseAndFormatTime(timeInputValue) {
