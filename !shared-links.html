@@ -7,8 +7,30 @@
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+#toggleLinksBtn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #507ec9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#toggleLinksBtn:hover {
+    background-color: #3d6bb0;
+}
+.links-content {
+    display: block;
+}
+.links-content.hidden {
+    display: none;
+}
 </style>
 <div class="links-container">
+    <button id="toggleLinksBtn" onclick="(function(btn) { var content = document.getElementById('linksContent'); if (content.classList.contains('hidden')) { content.classList.remove('hidden'); btn.textContent = 'Hide Links to other Gregg Tools'; } else { content.classList.add('hidden'); btn.textContent = 'Show Links to other Gregg Tools'; } })(this)">Show Links to other Gregg Tools</button>
+    <div class="links-content hidden" id="linksContent">
      <span id="search-label" role="heading" aria-level="3" style="display:block; font-weight:700; font-size:1.125rem; line-height:1.25; margin:0.5rem 0 0.25rem; text-align:left;">Links to Gregg Shorthand WebTools</span>
         <div class="button-row">
             <span>&nbsp;<b>Main dictionary:</b></span>
@@ -46,7 +68,8 @@
                 >pre-Anniversary(G-S-T)</a>
             </div>   
         </div> 
-        <div class="button-row all">
+        <!-- To show "Search in Other notation" section, remove style="display:none;" from the div below 
+        <div class="button-row all" style="display:none;">
             <span>&nbsp;<b>Search in Other notation:</b></span>
             <div class="inner">
                 <a class="all" href="javascript:void(0);" onclick="openOrFocusTab('~/annDictionary/!searchGRASCIIText.html', 'annGRASCII');"
@@ -63,7 +86,8 @@
                 title="Find Simplified outlines with YAGATS (Yet Another Gregg ASCII Text Subset) or by entering a word."
                 >Simplified(YAGATS)</a>
             </div>            
-        </div>       
+        </div>
+        -->      
             <div class="button-row">
             <span><b>&nbsp;Text to Gregg for:</b></span>
             <div class="inner">
@@ -86,3 +110,4 @@
             </div>
         </div>   
     </div>
+</div>
