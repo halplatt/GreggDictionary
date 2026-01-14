@@ -509,10 +509,10 @@
                     <thead>
                         <tr>
                             <th>Symbol</th>
+                            <th>Value</th>
                             <th>Shares</th>
                             <th>Last</th>
                             <th>Portfolio</th>
-                            <th>Value</th>
                             <th>Company Name</th>
                         </tr>
                     </thead>
@@ -524,10 +524,10 @@
                 html += `
                     <tr>
                         <td><a href="${yahooFinanceUrl}" target="yahoo" class="symbol-link">${item.symbol}</a></td>
+                        <td class="number">$${formatNumber(item.value, 2)}</td>
                         <td class="number">${formatNumber(item.shares, 3)}</td>
                         <td class="number">$${formatNumber(item.last, 2)}</td>
                         <td>${item.portfolio}</td>
-                        <td class="number">$${formatNumber(item.value, 2)}</td>
                         <td class="company-name">${item.companyName || 'Loading...'}</td>
                     </tr>
                 `;
@@ -541,10 +541,10 @@
                 html += `
                     <tr class="totals-row">
                         <td><strong>TOTALS</strong></td>
+                        <td class="number"><strong>$${formatNumber(totalValue, 2)}</strong></td>
                         <td class="number"><strong>${formatNumber(totalShares, 3)}</strong></td>
                         <td class="number">—</td>
                         <td>—</td>
-                        <td class="number"><strong>$${formatNumber(totalValue, 2)}</strong></td>
                         <td class="company-name">—</td>
                     </tr>
                 `;
