@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Modification of Pavel Krevanek's translator.html -->
 <!--
+//V2026.0204@3:30pm ctl Enert instead of alt-g to Generate Gregg
 //V2025.0827@1:56pm use include !shared-links.html
 //v2025.0705.0258pm add more allowed suffixes 
 //V=2025.0616.0258pm add public_domain_only    
@@ -59,7 +60,7 @@
         var globalGsd; //global variable to store the gsd value;   
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'V2025.0903@6:30pm';
+            document.getElementById('version').textContent = 'V2026.0204@3:30pm';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -239,6 +240,12 @@ img:not(:first-child) {
 window.onload = function() {
     document.getElementById('submitBtn').addEventListener('click', function() {
         processInput()
+    });
+    document.getElementById('inputText').addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'Enter') {
+            event.preventDefault();
+            processInput();
+        }
     });
 }
 const allowedSuffixes = [  //try them, first success wins
@@ -517,7 +524,7 @@ function processInput() {
         <input type="checkbox" id="checkboxShowTitle" checked>
         <label for="checkboxShowTitle">Show words above outline</label>
         <textarea id="inputText" rows="4" cols="50"></textarea><br>
-        <button type="button" id="submitBtn" accesskey="g" title="Press Alt + g to Generate Gregg"><strong>G</strong>enerate Gregg</button>
+        <button type="button" id="submitBtn" title="Press Ctrl + Enter to Generate Gregg"><strong>G</strong>enerate Gregg</button>
     <form>
     <input type="checkbox" id="columnsToggle" checked><label for="columnsToggle">Two columns</label>
     <div id="resultContainer" class="generated"></div>
