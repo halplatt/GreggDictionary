@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Viewer</title>
+    <title>Portfolio View</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@
         h1 {
             color: #333;
             text-align: center;
+            font-size: 1.8rem;
             margin-bottom: 30px;
         }
         
@@ -228,15 +229,30 @@
             border-radius: 4px;
             border: 1px solid #dee2e6;
             font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            line-height: 1.2;
+        }
+
+        .version-line {
+            font-weight: bold;
+        }
+
+        .data-as-of-line {
+            font-size: 11px;
         }
     </style>
 </head>
 <body>
     <!-- Version Display - Easy to Update -->
-    <div class="version-display" id="versionDisplay">update-APP_VERSION</div>
+    <div class="version-display">
+        <div class="version-line" id="versionDisplay">update-APP_VERSION</div>
+        <div class="data-as-of-line" id="dataAsOfDisplay">data: --/--/---- --:-- --</div>
+    </div>
     
     <div class="container">
-        <h1>Portfolio Viewer</h1>
+        <h1>Portfolio View</h1>
         
         <div class="search-container">
             <div class="search-row">
@@ -293,7 +309,7 @@
     <script>
         // ===== VERSION CONFIGURATION =====
         // Update this version string for new releases
-        const APP_VERSION = 'v2026.0113@11:03pm';
+        const APP_VERSION = 'v2026.0317@05:50pm';
         // ================================
         
         let portfolioData = [];
@@ -305,6 +321,7 @@
             
             // Set version display
             document.getElementById('versionDisplay').textContent = APP_VERSION;
+            updatePageTitle();
             
             loadCSVData();
             
@@ -340,7 +357,7 @@
                     if (lastModified) {
                         const fileDate = new Date(lastModified);
                         const formattedDate = formatDateWithTime(fileDate);
-                        updatePageTitle(formattedDate);
+                        updateDataAsOf(formattedDate);
                     }
                     return response.text();
                 })
@@ -359,17 +376,27 @@
             const month = String(date.getMonth() + 1).padStart(2, '0');
             const day = String(date.getDate()).padStart(2, '0');
             const year = date.getFullYear();
-            const hours = String(date.getHours()).padStart(2, '0');
+            const hours24 = date.getHours();
+            const meridiem = hours24 >= 12 ? 'pm' : 'am';
+            const hours12 = hours24 % 12 || 12;
+            const hours = String(hours12).padStart(2, '0');
             const minutes = String(date.getMinutes()).padStart(2, '0');
-            return `${month}/${day}/${year} ${hours}:${minutes}`;
+            return `${month}/${day}/${year} ${hours}:${minutes} ${meridiem}`;
         }
         
-        function updatePageTitle(formattedDate) {
-            const newTitle = `Portfolio Viewer (data as of ${formattedDate})`;
-            document.title = newTitle;
+        function updatePageTitle() {
+            const fixedTitle = 'Portfolio View';
+            document.title = fixedTitle;
             const h1Element = document.querySelector('h1');
             if (h1Element) {
-                h1Element.textContent = newTitle;
+                h1Element.textContent = fixedTitle;
+            }
+        }
+
+        function updateDataAsOf(formattedDate) {
+            const dataAsOfElement = document.getElementById('dataAsOfDisplay');
+            if (dataAsOfElement) {
+                dataAsOfElement.textContent = `data: ${formattedDate}`;
             }
         }
         
