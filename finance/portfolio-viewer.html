@@ -309,7 +309,7 @@
     <script>
         // ===== VERSION CONFIGURATION =====
         // Update this version string for new releases
-        const APP_VERSION = 'v2026.0317@05:50pm';
+        const APP_VERSION = 'v2026.0326@07:00pm';
         // ================================
         
         let portfolioData = [];
@@ -347,7 +347,7 @@
         function loadCSVData() {
             showStatus('Loading portfolio data...', 'success');
             
-            fetch('Portfolios.csv')
+            fetch('Portfolios.csv?_=' + Date.now())
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load CSV file');
