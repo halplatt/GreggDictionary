@@ -3,10 +3,14 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 from typing import List, Set, Sequence
 
 # ---------------- Parsing Helpers ---------------- #
 STRING_REGEX = re.compile(r"(['\"`])(.*?)\1")
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = SCRIPT_DIR.parent
 
 
 FALLBACK_ENCODINGS: Sequence[str] = (
@@ -23,6 +27,7 @@ def read_text_with_fallback(path: str, preferred: str | None = None) -> str:
     preferred: if supplied, tried first before the default fallback list.
     Raises the last UnicodeDecodeError if all fail.
     """
+    resolved_path = resolve_path(path)
     tried = []
     enc_list = []
     if preferred:
@@ -33,10 +38,10 @@ def read_text_with_fallback(path: str, preferred: str | None = None) -> str:
     last_err: Exception | None = None
     for enc in enc_list:
         try:
-            with open(path, 'r', encoding=enc) as f:
+            with open(resolved_path, 'r', encoding=enc) as f:
                 content = f.read()
             if enc != enc_list[0]:
-                print(f"Note: decoded '{path}' using fallback encoding '{enc}'.")
+                print(f"Note: decoded '{resolved_path}' using fallback encoding '{enc}'.")
             return content
         except (UnicodeDecodeError, OSError) as e:
             last_err = e
@@ -44,7 +49,24 @@ def read_text_with_fallback(path: str, preferred: str | None = None) -> str:
             continue
     if last_err:
         raise last_err
-    raise RuntimeError(f"Failed to read file {path} for unknown reasons. Tried encodings: {tried}")
+    raise RuntimeError(f"Failed to read file {resolved_path} for unknown reasons. Tried encodings: {tried}")
+
+
+def resolve_path(path: str) -> Path:
+    raw_path = Path(path)
+    if raw_path.is_absolute():
+        return raw_path
+
+    candidates = [
+        Path.cwd() / raw_path,
+        SCRIPT_DIR / raw_path,
+        PROJECT_DIR / raw_path,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+
+    return SCRIPT_DIR / raw_path
 
 
 def extract_words_from_js(js_content: str) -> List[str]:
@@ -100,17 +122,18 @@ def extract_words_from_js(js_content: str) -> List[str]:
 
 
 def load_json_entries(path: str) -> List[dict]:
-    if not os.path.exists(path):
-        print(f"JSON file not found: {path}", file=sys.stderr)
+    resolved_path = resolve_path(path)
+    if not os.path.exists(resolved_path):
+        print(f"JSON file not found: {resolved_path}", file=sys.stderr)
         return []
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(resolved_path, 'r', encoding='utf-8') as f:
         try:
             data = json.load(f)
         except json.JSONDecodeError as e:
-            print(f"Failed to parse JSON {path}: {e}", file=sys.stderr)
+            print(f"Failed to parse JSON {resolved_path}: {e}", file=sys.stderr)
             return []
     if not isinstance(data, list):
-        print(f"JSON root is not a list in {path}", file=sys.stderr)
+        print(f"JSON root is not a list in {resolved_path}", file=sys.stderr)
         return []
     return data
 
@@ -138,23 +161,24 @@ def update_json(words: List[str], json_entries: List[dict]) -> int:
 
 
 def save_json(path: str, data: List[dict], backup: bool):
-    if backup and os.path.exists(path):
-        bak_path = path + ".bak"
+    resolved_path = resolve_path(path)
+    if backup and os.path.exists(resolved_path):
+        bak_path = str(resolved_path) + ".bak"
         try:
             if os.path.exists(bak_path):
                 os.remove(bak_path)
-            os.replace(path, bak_path)
+            os.replace(resolved_path, bak_path)
             print(f"Backup created: {bak_path}")
         except OSError as e:
             print(f"Warning: could not create backup: {e}", file=sys.stderr)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(resolved_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write('\n')
 
 
 def main():
     parser = argparse.ArgumentParser(description="Update !wordsearchall.json with words from !words.array.js")
-    parser.add_argument('--words-file', default='djsWords/!words.array.js', help='Path to JS file containing array of words')
+    parser.add_argument('--words-file', default='annWords/!words.array.js', help='Path to JS file containing array of words')
     parser.add_argument('--json-file', default='!wordsearchall.json', help='Path to JSON file to update')
     parser.add_argument('--no-backup', action='store_true', help='Do not create .bak backup of JSON before writing')
     parser.add_argument('--dry-run', action='store_true', help='Parse and report but do not modify JSON file')
