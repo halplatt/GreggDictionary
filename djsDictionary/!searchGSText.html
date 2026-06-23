@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Search</title>
+    <script>
+    //V2025.0923@2:00pm performSeach when searchtype changes
+    //V2025.0904@11:00am Ignore digits unless input contains digits    
+    //V2025.0903@01:00pm add \w button
+    //V2025.0902@11:45am fix URL paths for github
+    //V2025.0827@1:56pm use include !shared-links.html
+    //V2025.0825@12:00am changes to accomodate pre-anniversary
+    //V2025.0821@07:@12:45pm add max result limit
+    //V2025.0820@07:004pm added group correction function prior to GST search
+    //V2025.0819@02:14pm replace in-page search with GST Search 
+    //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
+    //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
+		// IIFE to set the global variable `public_domain_only` ;
+		// if page name ends in 'pd' only public domain dictionaries are shown.
+        document.addEventListener('DOMContentLoaded', (event) => { 
+            // Set the version number
+            document.getElementById('version').textContent = 'V2025.0923@2:00pm'; // Version display element 
+            if (public_domain_only === 'pd') {
+					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
+			}
+        });
+		(function () {
+			// Prefer explicit query param ?public_domain_only=...
+			var usp = new URLSearchParams(window.location.search || '');
+
+			// Derive from the current file name if no param: ends with "pd"
+			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
+			var baseName = fileName.replace(/\.[^.]+$/, ''); // strip extension like .html/.htm
+			var derived = baseName.endsWith('pd') ? 'pd' : '';
+
+			// Expose globally for existing code to use
+			window.public_domain_only = usp.get('public_domain_only') || derived;
+		})();
+        if (public_domain_only === 'pd') {
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .sim,
+            .djs,
+            .cen,
+            .all,
+            .s90 {
+                display: none !important;
+            }`;
+            document.head.appendChild(style);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .reference-btn {
+            background-color: #6c757d;
+            color: white;
+            border: 1px solid #5a6268;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .reference-btn:hover { background-color: #5a6268; border-color:#545b62; }
+        .reference-tooltip {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border: 2px solid #888;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        .reference-tooltip h3 { margin-top:0; margin-bottom:10px; font-size:16px; color:#333; }
+        .G-S-T-reference { font-size:14px; line-height:1.5; }
+        .G-S-T-reference h2 { margin:0 0 10px; font-size:20px; }
+        .G-S-T-reference h3 { margin:16px 0 6px; font-size:16px; }
+        .G-S-T-reference p { margin:6px 0; }
+        .G-S-T-reference ul { margin:6px 0 10px 20px; padding:0; }
+        .G-S-T-reference li { margin:4px 0; }
+        .G-S-T-reference code { background:#f4f4f4; padding:1px 4px; border-radius:3px; }
+        .G-S-T-reference img { height:22px; vertical-align:middle; margin-left:6px; border:1px solid #ddd; border-radius:2px; background:#fff; }
+        @media (max-width:768px){
+            .reference-tooltip { max-width:90vw; max-height:70vh; left:5% !important; right:5% !important; font-size:11px; }
+            .reference-btn { font-size:11px; padding:6px 10px; }
+        }
+        #version {
+            position: absolute;
+            top: 10px;
+            right: 75px;
+            font-size: 0.8em;
+            color: #888;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .version {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+         /* these styles are dictionary window */
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .max-w-none {
+            max-width: none;
+        }
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        .border {
+            border: 1px solid black;
+        }
+        .max-w-screen {
+            max-width: 100vw;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
+        .expand-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+                /* these styles are for button and input row */
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .inner {
+    margin-right: 10px; /* Add spacing between links */
+    display: inline-block; /* Ensure links are displayed inline */
+    }   
+    .button-row {
+        display: flex;
+        flex-wrap: nowrap; /* keep all controls on one line */
+        justify-content: flex-start;
+        align-items: flex-end; /* align bottoms with radio buttons */
+        gap: 8px;
+        width: 100%;
+        min-width: 0;           /* allow children to shrink */
+        overflow-x: auto;       /* scroll horizontally if too many */
+        -webkit-overflow-scrolling: touch;
+    }
+    .button-row .search-type-group { margin-top: 0 !important; }
+    .input-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap; /* keep controls on one line */
+        gap: 10px;
+        width: 100%;
+        min-width: 0; /* allow flex children to shrink properly */
+    }
+    .button-row button {
+        margin-right: 5px;
+        padding: 2px 8px;        /* slimmer padding so buttons aren't tall */
+        font-size: 16px;         /* keep characters readable */
+        height: 30px;            /* target height */
+        line-height: 26px;       /* vertical centering for glyphs */
+        min-height: 0;           /* don't force taller than explicit height */
+        box-sizing: border-box;
+    }
+    .button-row button {
+        margin-right: 5px;
+    }
+    #caretButton {
+        margin-right: 10px;
+    }
+    #addBegSetNot {
+        margin-right: 5px;
+    }
+    #addEndSet {
+        margin-right: 20px;
+    }
+    #addPipe {
+        margin-right: 20px;
+    }
+    #addAnyChar {
+        margin-right: 20px;
+    }
+    #add0or1 {
+        margin-right: 10px;
+    }
+    /* footer styles */
+    .results-footer { 
+        margin: 28px 0 12px; 
+        padding: 12px 16px; 
+        border-top: 1px solid #ccc; 
+        font-size: 0.85rem; 
+        background: #f9f9f9;
+        line-height: 1.3;
+    }
+    .results-footer p { margin: 0; }
+        /* Top bar for title + version + help */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    .topbar h1 { margin: 0; }
+        /* Override absolute positioning for #version when used in the top bar */
+        #version {
+            position: static;
+            top: auto;
+            right: auto;
+            font-size: 0.8em;
+            color: #888;
+        }
+        a.help-link { margin-right: 16px; }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <h1>Anniversary Gregg Shorthand Text Notation (GST) Search</h1>
+        <div class="topbar-right">
+            <div class="version" id="version"></div>
+        </div>
+    </div>
+    <div class="input-container">
+<!-- beg place holder where common links begin if page one level above !shared-links.html -->
+        <div id="shared-links"></div>
+
+<script>
+(function loadSharedLinks() {
+	const hostEl = document.getElementById('shared-links');
+	if (!hostEl) return;
+
+	fetch('../!shared-links.html', { cache: 'no-cache' })
+		.then(r => (r.ok ? r.text() : Promise.reject(r)))
+		.then(html => {
+			// Replace all "~/" paths with "../" since this page one level above the shared links
+			hostEl.innerHTML = html.replace(/~\//g, '../');
+		})
+		.catch(err => {
+			console.error('Failed to load shared links:', err);
+		});
+})();
+</script>
+<!-- end place holder where common links -->
+ 
+    <br>
+
+           <div class="button-row" style="margin-bottom:8px">
+                <div class="search-type-group" style="margin-top: 15px; margin-right: 16px;">
+                    <div class="search-type-title" style="font-weight:600; margin-bottom:6px;">Select search type</div>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+C (Alt+Shift+C) selects Contains"><input type="radio" name="searchType" value="contains" checked> <b>C</b>ontains</label>
+                    <label title="Shortcut: Ctrl+Alt+X (Alt+Shift+X) selects Exact"><input type="radio" name="searchType" value="exact"> E<b>x</b>act match</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+B (Alt+Shift+B) selects Begins with"><input type="radio" name="searchType" value="beginsWith"> <b>B</b>egins with</label>
+                    <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+E (Alt+Shift+E) selects Ends with"><input type="radio" name="searchType" value="endsWith"> <b>E</b>nds with</label>
+                  
+                </div>
+                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
+                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
+                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
+                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+            </div>
+        <div class="input-row">
+            <input type="text" id="regexInput" placeholder="Search text, G‑S‑T, or regex">
+            <button id="searchText">Search Text</button>
+            <button id="searchGST">Search G-S-T</button>
+            <label for="maxResults">Maximum Words:</label>
+            <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
+             <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
+             <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+             <div id="referenceTooltip" class="reference-tooltip" role="dialog" aria-label="G-S-T Quick Reference" aria-hidden="true" data-include="../annDictionary/!searchGSText(tooltip).html">
+                <div style="font-size:12px;color:#666;">Loading reference…</div>
+             </div>
+        </div>
+    </div>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Outline</th>
+                <th>GST</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be displayed here -->
+        </tbody>
+    </table>
+    <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
+    <div id="resultsFooter" class="results-footer"></div>
+
+    <script>
+        // Load the JSON file
+        let dataGST = [];
+        fetch('!searchGSText.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                dataGST = jsonData;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+
+     
+        let dataRef = [];
+        fetch('!reference.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                dataRef = jsonData;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+        // determine if the page is in the ann or sim directory
+        var globalGsd
+        try {
+                const url = new URL(window.location.href);
+                const path = url.pathname;
+                const folderName = path.substring(0,path.lastIndexOf('/')).split('/').pop();
+
+                document.title = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
+                document.querySelector('h1').textContent = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
+                document.querySelector('title').textContent = `Gregg Shorthand Text (G-S-T) Search of ${folderName}`;
+                globalGsd = folderName.substring(0,3);
+            } catch (error) {
+                //document.title = `GST Search of ${imagePath1}`;
+            }
+  
+        // Function to display results in the table
+        function displayResults(results, searchTerm = '', searchType = '') {
+            const tableBody = document.querySelector('#resultsTable tbody');
+            tableBody.innerHTML = ''; // Clear previous results
+            // Determine limits
+            const maxResultsEl = document.getElementById('maxResults');
+            const maxResults = parseInt(maxResultsEl && maxResultsEl.value, 10) || 100;
+            const totalMatches = Array.isArray(results) ? results.length : 0;
+            const toDisplay = results.slice(0, Math.max(0, Math.min(totalMatches, maxResults)));
+
+            toDisplay.forEach(entry => {
+                const row = document.createElement('tr');
+                const textCell = document.createElement('td');
+                const gstCell = document.createElement('td');
+                const notesCell = document.createElement('td');
+                const pageCell = document.createElement('td'); // New column for page.page
+
+                textCell.textContent = entry.text || ''; // Handle missing text
+                gstCell.textContent = entry.gst || ''; // Handle missing gst
+                notesCell.textContent = entry.notes || ''; // Handle missing notes
+
+                // Call searchRefJson and get the page value
+                // Call imageContainer and append the resulting div to pageCell
+                const imageDiv = imageContainer(entry.text || '');
+                pageCell.appendChild(imageDiv);
+
+                // Column order: Text, Outline, GST, Notes
+                row.appendChild(textCell);
+                row.appendChild(pageCell); // Outline column
+                row.appendChild(gstCell);
+                row.appendChild(notesCell);
+                //add click event to row
+                row.addEventListener('click', function() {
+                    event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                    const url = `../GreggDictionary${public_domain_only}.html?x=${entry.text}&gsd=${globalGsd}`;
+                    window.open(url, 'GreggDictionary');
+            });
+                tableBody.appendChild(row);
+            });
+            
+            // Single consolidated summary message
+            const summaryDiv = document.getElementById('searchSummary');
+            const searchTermDisplay = searchTerm ? `"${searchTerm}"` : '';
+            const typeDisplay = searchType ? ` (${searchType})` : '';
+            let summaryText = '';
+            if (totalMatches === 0) {
+                summaryText = `0 results for search${typeDisplay} ${searchTermDisplay}`;
+            } else if (totalMatches > maxResults) {
+                summaryText = `Max display limited to ${toDisplay.length} of ${totalMatches} matches for search${typeDisplay} ${searchTermDisplay}`;
+            } else {
+                summaryText = `${totalMatches} result${totalMatches !== 1 ? 's' : ''} for search${typeDisplay} ${searchTermDisplay}`;
+            }
+            summaryDiv.textContent = summaryText;
+            
+            const regexInput = document.getElementById('regexInput');
+            regexInput.focus();
+            regexInput.select();
+        }
+
+        // Event listener for the "Search GST" button
+        document.getElementById('searchGST').addEventListener('click', () => {
+            searchGST()
+        });
+        // Mapping and preprocessing for regexInput prior to GST search
+        (function initRegexGroupCorrection(){
+            // Map of whole-group replacements
+            const GROUP_MAP = {
+                yo: 'e-o',
+                ou: 'a-u',
+                oe: 'o-e',
+                eu: 'e-u',
+                eo: 'e-o',
+                au: 'o-e',
+                ae: 'ea',
+                ei: 'ie',
+                ia: 'ie',
+                io: 'ie',
+                oo: 'u',
+                c: 'k',
+                z: 's',
+                dot: 'h',
+                ing: 'h',
+                dm: 'tm',
+                dn: 'tn',
+                tf: 'df',
+                dv: 'df',
+                tv: 'df',
+                md: 'mt',
+                nm: 'mn',
+                tt: 'td',
+                dt: 'td',
+                dd: 'td',
+                pnt: 'jnt',
+                pnd: 'jnt',
+                gnt: 'jnt',
+                gnd: 'jnt',
+                br: 'b-r',
+                kr: 'k-r',
+                gr: 'g-r',
+                kl: 'k-l',
+                gl: 'g-l',
+                lg: 'l-g',
+                pr: 'p-r',
+                pl: 'p-l',
+                bl: 'b-l',
+                sl: 's-l',
+                fr: 'f-r',
+                fl: 'f-l',
+                vr: 'v-r',
+                vl: 'v-l',
+                kf: 'k-f',
+                kv: 'k-v',
+                kp: 'k-p',
+                gf: 'g-f',
+                gv: 'g-v',
+                rK: 'r-k'
+            };
+            // Expose correction function in closure scope
+            window.__correctRegexInputGroups = function(raw){
+                if(!raw) return raw;
+                let str = raw.trim();
+                // Keep original if any meta characters (other than ^ $) exist
+                // meta: () [] {} * + ? . | \ 
+                // we test AFTER stripping starting ^ or ending $
+                const hasStart = str.startsWith('^');
+                const hasEnd = str.endsWith('$');
+                let core = str;
+                if(hasStart) core = core.slice(1);
+                if(hasEnd && core.length) core = core.slice(0, -1);
+                if(/[()[\]{}*+?.\\|]/.test(core)) {
+                    return raw; // leave unchanged
+                }
+                // Split on - or / preserving separators
+                const parts = core.split(/([-\/])/); // tokens include separators
+                // 1) Map standalone tokens via GROUP_MAP
+                for(let i=0;i<parts.length;i++){
+                    const tok = parts[i];
+                    if(tok === '-' || tok === '/') continue;
+                    const key = tok.toLowerCase();
+                    if(Object.prototype.hasOwnProperty.call(GROUP_MAP, key)){
+                        parts[i] = GROUP_MAP[key];
+                    }
+                }
+                // 2) Separator-aware adjustments:
+                //    - If a token 'h' is immediately followed by '/', convert to 'h-'
+                //    - If a '/' is immediately followed by token 'h', convert to '-h'
+                for(let i=0;i<parts.length - 1;i++){
+                    const cur = parts[i];
+                    const next = parts[i+1];
+                    // h/ -> h-
+                    if(cur && cur.toLowerCase() === 'h' && next === '/'){
+                        parts[i+1] = '-';
+                    }
+                    // /h -> -h
+                    if(cur === '/' && parts[i+1] && parts[i+1].toLowerCase() === 'h'){
+                        parts[i] = '-';
+                    }
+                }
+                const newCore = parts.join('');
+                const rebuilt = (hasStart ? '^' : '') + newCore + (hasEnd ? '$' : '');
+                return rebuilt;
+            };
+        })();
+        function searchGST() {
+            const inputEl = document.getElementById('regexInput');
+            // Preprocess & update input value prior to constructing RegExp
+            try {
+                const corrected = window.__correctRegexInputGroups(inputEl.value);
+                if(corrected !== inputEl.value){
+                    inputEl.value = corrected;
+                }
+            } catch(e) { /* fail safe: ignore */ }
+            const regexInput = inputEl.value;
+            try {
+                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
+                //beg Ignore digits unless input contains digits 
+                const hasDigitInInput = /[0-9]/.test(regexInput);
+                const results = dataGST.filter(entry => {
+                    const gstVal = (entry && typeof entry.gst === 'string') ? entry.gst : '';
+                    // If the input has no digits, ignore digits in the GST by stripping them before testing
+                    const target = hasDigitInInput ? gstVal : gstVal.replace(/\d+/g, '');
+                    return regex.test(target);
+                });
+                //end Ignore digits unless input contains digits
+                displayResults(results, regexInput, 'GST');
+            } catch (error) {
+                alert('Invalid regular expression');
+            }
+        }
+
+        // Event listener for the "Search Text" button
+        document.getElementById('searchText').addEventListener('click', () => {
+            searchText();
+        });
+        function searchText() {
+            const regexInput = document.getElementById('regexInput').value;
+            try {
+                const regex = new RegExp(regexInput, 'i'); // Case-insensitive
+                const results = dataGST.filter(entry => regex.test(entry.text));
+                displayResults(results, regexInput, 'text');
+            } catch (error) {
+                alert('Invalid regular expression');
+            }
+        }
+
+        // Function to search for a specific text in the JSON data
+        function searchRefJson(searchTerm) {
+            const lowerCaseSearchTerm = searchTerm.toLowerCase();
+            for (const page of dataRef) {
+                for (const word of page.words) {
+                    if (word.t.toLowerCase() === lowerCaseSearchTerm) {
+                        return {
+                            page: page.page,
+                            word: word.t,
+                            x: word.x,
+                            y: word.y
+                        };
+                    }
+                }
+            }
+            return null; // Return null if no match is found
+        }
+        function imageContainer(searchTerm) {
+            const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
+            const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
+            const IMG_WIDTH = 1281;
+            const objRef = searchRefJson(searchTerm);
+
+            const resultItem = document.createElement('div');
+            resultItem.className = 'result-item';
+
+             // If searchRefJson returns null, return an empty resultItem
+            if (!objRef) {//There is no match in the reference file use png image
+
+                const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
+                const img_ann = document.createElement("img");
+                img_ann.src = `${imagePathann}${searchTerm}.png`;
+                img_ann.style.width = 'auto';  // Set the width to 1/4 of the original size
+                img_ann.style.height = '50px'; // Set the height to 1/4 of the original size
+
+                img_ann.onerror = function() {
+                    this.style.display = "none";  // Hide the image
+                    const errorText = document.createElement("span");
+                    errorText.textContent = "image not available";
+                    errorText.style.color = "#888";
+                    errorText.style.fontStyle = "italic";
+                    resultItem.appendChild(errorText);
+                };
+
+                resultItem.appendChild(img_ann);
+
+                return resultItem;
+            }
+            resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
+
+            
+            const outerContainer = document.createElement('div');
+            outerContainer.className = 'max-w-screen overflow-x-auto';
+
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'relative overflow-hidden border';
+            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+
+            const img = document.createElement('img');
+            img.className = 'absolute max-w-none';
+            img.src = `${objRef.page}.png`;
+            img.alt = `Gregg shorthand for word: ${objRef.word}`;
+            img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
+            img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
+            img.style.width = '1281px'; // Assuming the image width is fixed
+
+            img.onload = function() {
+                const scale = IMG_WIDTH / img.naturalWidth;
+                img.style.top = `-${objRef.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                img.style.left = `-${objRef.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                img.style.width = `${IMG_WIDTH}px`;
+            };
+
+            const expandButton = document.createElement('button');
+            expandButton.className = 'expand-button';
+            expandButton.innerHTML = 'Expand';
+            expandButton.onclick = function() {
+                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
+                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
+                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
+                    expandButton.innerHTML = 'Shrink';
+                } else {
+                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
+                    expandButton.innerHTML = 'Expand';
+                }
+                // Focus and select regex input after expand/shrink action
+                setTimeout(focusRegexInput, 10);
+            };
+
+            imageContainer.appendChild(img);
+            outerContainer.appendChild(imageContainer);
+            outerContainer.appendChild(expandButton);
+            resultItem.appendChild(outerContainer);
+            return resultItem;
+        }
+        function updateCaretButton() {
+            var regexInput = document.getElementById('regexInput');
+            var caretButton = document.getElementById('caretButton');
+            if (regexInput.value.startsWith('^')) {
+                caretButton.querySelector('small').textContent = "clear ^prefix";
+                caretButton.title = "Remove ^ from the start — Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
+            } else {
+                caretButton.querySelector('small').textContent = "^prefix";
+                caretButton.title = "Insert ^ to indicate the start of the word — Shortcut: Ctrl+Alt+P (Alt+Shift+P), Access: Alt+P";
+            }
+        }
+            // Radio-based search type control: sync with input anchors (^ at start, $ at end)
+            function updateSearchTypeRadiosFromInput() {
+                var el = document.getElementById('regexInput');
+                if (!el) return;
+                var v = el.value || '';
+                var type = 'contains';
+                if (v.startsWith('^') && v.endsWith('$') && v.length >= 2) {
+                    type = 'exact';
+                } else if (v.startsWith('^')) {
+                    type = 'beginsWith';
+                } else if (v.endsWith('$')) {
+                    type = 'endsWith';
+                }
+                var radios = document.querySelectorAll('input[name="searchType"]');
+                radios.forEach(function(r){ r.checked = (r.value === type); });
+            }
+
+            function applySearchTypeToInput(type) {
+                var el = document.getElementById('regexInput');
+                if (!el) return;
+                var v = el.value || '';
+                // Remove existing anchors first (only if at ends)
+                if (v.startsWith('^')) v = v.substring(1);
+                if (v.endsWith('$')) v = v.slice(0, -1);
+                // Apply by type
+                if (type === 'beginsWith') {
+                    v = '^' + v;
+                } else if (type === 'endsWith') {
+                    v = v + '$';
+                } else if (type === 'exact') {
+                    v = '^' + v + '$';
+                } // contains -> no anchors
+                el.value = v;
+                // Keep radios and focus in sync
+                updateSearchTypeRadiosFromInput();
+                el.focus();
+                // Select all to make it easy to continue editing
+                try { el.selectionStart = 0; el.selectionEnd = v.length; } catch(e) {}
+            }
+        // Function to add text at the cursor position or end of the text if no cursor position
+        function addTextAtCursor(text) {
+            var regexInput = document.getElementById('regexInput');
+            regexInput.focus();
+            var startPos = typeof regexInput.selectionStart === "number" ? regexInput.selectionStart : regexInput.value.length;
+            var endPos = typeof regexInput.selectionEnd === "number" ? regexInput.selectionEnd : regexInput.value.length;
+            // Insert the text after the selected text, not replacing it
+            regexInput.value = 
+                regexInput.value.substring(0, endPos) + 
+                text + 
+                regexInput.value.substring(endPos);
+            // Set the cursor position to the end of the inserted text
+            var cursorPos = endPos + text.length;
+            regexInput.selectionStart = regexInput.selectionEnd = cursorPos;     
+        }
+        // Function to open or focus a tab with the given URL and target
+        function openOrFocusTab(url, target) {
+            var newTab = window.open('', target);
+            if (newTab.location.href === "about:blank") {
+                newTab.location.href = url;
+            } else {
+                //do nothing, the tab is already open
+            }
+            newTab.focus();
+        } 
+        document.getElementById('regexInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                let regexInput = document.getElementById('regexInput');
+                if(regexInput.value && (regexInput.value.includes('-') || regexInput.value.includes('/'))) {
+                    searchGST();
+                } else {
+                    searchText();
+                }
+            }
+            // Keyboard shortcuts for search type
+            // Ctrl+Alt+X/B/E (Alt+Shift+X/B/E) -> exact/beginsWith/endsWith
+            const ctrlAlt = (event.ctrlKey && event.altKey);
+            const altShift = (!event.ctrlKey && event.altKey && event.shiftKey);
+            if (ctrlAlt || altShift) {
+                const k = event.key.toLowerCase();
+                if (k === 'x') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('exact'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'b') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('beginsWith'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'e') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('endsWith'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+                if (k === 'c') { 
+                    event.preventDefault(); 
+                    applySearchTypeToInput('contains'); 
+                    // Trigger search after applying search type via keyboard shortcut
+                    let regexInput = document.getElementById('regexInput');
+                    if(regexInput && regexInput.value) {
+                        if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                    return; 
+                }
+            }
+        });
+        // Sync radios as user types or pastes anchors
+        (function attachInputSync(){
+            try {
+                var el = document.getElementById('regexInput');
+                if(!el) return;
+                el.addEventListener('input', function(){
+                    updateSearchTypeRadiosFromInput();
+                });
+            } catch(e) { /* ignore */ }
+        })();
+        // Handle radio changes to update input and launch search
+        (function attachRadioHandlers(){
+            try {
+                var radios = document.querySelectorAll('input[name="searchType"]');
+                radios.forEach(function(r){
+                    r.addEventListener('change', function(ev){
+                        if (ev.target.checked) {
+                            applySearchTypeToInput(ev.target.value);
+                            // Automatically launch search when search type changes
+                            let regexInput = document.getElementById('regexInput');
+                            if(regexInput && regexInput.value) {
+                                if(regexInput.value.includes('-') || regexInput.value.includes('/')) {
+                                    searchGST();
+                                } else {
+                                    searchText();
+                                }
+                            }
+                        }
+                    });
+                });
+                // Initial sync based on current input value
+                updateSearchTypeRadiosFromInput();
+            } catch(e) { /* ignore */ }
+        })();
+        // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
+        (function attachMaxResultsEnter(){
+            try {
+                const maxEl = document.getElementById('maxResults');
+                if(!maxEl) return;
+                maxEl.addEventListener('keydown', function(event){
+                    if(event.key === 'Enter'){
+                        const reEl = document.getElementById('regexInput');
+                        if(!reEl) return;
+                        const val = reEl.value || '';
+                        if(val && (val.includes('-') || val.includes('/'))){
+                            searchGST();
+                        } else {
+                            searchText();
+                        }
+                    }
+                });
+            } catch(e){ /* ignore */ }
+        })();
+        
+        // Function to focus and select regex input
+        function focusRegexInput() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+            }
+        }
+        
+        // Focus on regex input when page loads - placed at end of document
+        window.addEventListener('load', function() {
+            const regexInput = document.getElementById('regexInput');
+            if (regexInput) {
+                regexInput.focus();
+                regexInput.select();
+                // Initial sync of radio group with current input
+                updateSearchTypeRadiosFromInput();
+            }
+        });
+        
+        // Focus regex input when page receives focus
+        window.addEventListener('focus', function() {
+            focusRegexInput();
+        });
+        
+        // Focus regex input when user clicks anywhere on the page (except specific elements)
+        document.addEventListener('click', function(event) {
+            // Don't refocus if clicking on the input itself, buttons, links, or interactive elements
+            const clickedElement = event.target;
+            if (clickedElement.tagName === 'INPUT' || 
+                clickedElement.tagName === 'BUTTON' || 
+                clickedElement.tagName === 'A' || 
+                clickedElement.tagName === 'IMG' ||
+                clickedElement.closest('button') ||
+                clickedElement.closest('a') ||
+                clickedElement.closest('.result-item') ||
+                clickedElement.closest('.expand-button')) {
+                return; // Don't refocus if clicking on interactive elements
+            }
+            
+            // Small delay to ensure other click events complete first
+            setTimeout(focusRegexInput, 50);
+        });
+        // Insert attribution / copyright notice based on globalGsd
+        (function addAttributionFooter(){
+            try {
+                var footer = document.getElementById('resultsFooter');
+                if(!footer) return; // nothing to do
+                if(footer.dataset.populated) return; // already done
+                const aboutText = document.createElement('div');
+                aboutText.className = 'about-text';
+                if (globalGsd === 'sim') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Simplified</i>, a book published by The Gregg Publishing Company in 1945, written by Charles Rader.</p>";
+                } else if (globalGsd === 'ann') {
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Gregg Shorthand Dictionary Anniversary</i>, a book published by The Gregg Publishing Company in 1929, written by John Robert Gregg.</p>";
+                } else if (globalGsd === 'pre') {
+                    aboutText.innerHTML = "<p><i><b>Images from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>";
+                } else {
+                    aboutText.innerHTML = "<p><b>Images Source:</b> Gregg Shorthand reference materials.</p>";
+                }
+                footer.appendChild(aboutText);
+                footer.dataset.populated = '1';
+            } catch(e) {
+                // silently ignore
+            }
+        })();
+
+        // Reference tooltip logic (hover on desktop, click/tap on touch devices)
+        (function initReferenceTooltip(){
+            const btn = document.getElementById('referenceBtn');
+            const tip = document.getElementById('referenceTooltip');
+            if(!btn || !tip) return;
+            // Lazy load shared include if data-include attribute present
+            (function loadInclude(){
+                const inc = tip.getAttribute('data-include');
+                if(!inc) return;
+                fetch(inc, {cache:'no-cache'})
+                    .then(r=> r.ok ? r.text(): Promise.reject(r))
+                    .then(html => { tip.innerHTML = html; })
+                    .catch(()=>{ tip.innerHTML = '<div style="color:#c00">Failed to load reference.</div>'; });
+            })();
+            let visible = false;
+            let hoverIntentTimer = null;
+            let leaveIntentTimer = null;
+
+            const prefersHover = window.matchMedia('(hover: hover)').matches;
+
+            function position(){
+                const rect = btn.getBoundingClientRect();
+                tip.style.display = 'block';
+                void tip.offsetHeight;
+                const tRect = tip.getBoundingClientRect();
+                const winW = window.innerWidth;
+                const winH = window.innerHeight;
+                let left = rect.left;
+                let top = rect.top - tRect.height - 10;
+                if(top < 0){ top = rect.bottom + 10; }
+                if(left + tRect.width > winW){ left = Math.max(10, winW - tRect.width - 10); }
+                if(left < 0) left = 10;
+                if(top + tRect.height > winH){ top = Math.max(10, winH - tRect.height - 10); }
+                tip.style.left = left + 'px';
+                tip.style.top = top + 'px';
+            }
+            function show(){
+                if(visible) return;
+                visible = true;
+                tip.setAttribute('aria-hidden','false');
+                btn.setAttribute('aria-expanded','true');
+                position();
+            }
+            function hide(){
+                if(!visible) return;
+                visible = false;
+                tip.style.display='none';
+                tip.setAttribute('aria-hidden','true');
+                btn.setAttribute('aria-expanded','false');
+            }
+            function toggle(){ visible ? hide() : show(); }
+
+            // Keyboard support
+            document.addEventListener('keydown', function(e){
+                if(e.altKey && (e.key === 'r' || e.key === 'R')){ e.preventDefault(); toggle(); }
+                else if(e.key === 'Escape' && visible){ hide(); btn.focus(); }
+            });
+
+            // Click / tap (always enabled for accessibility)
+            btn.addEventListener('click', function(e){ e.preventDefault(); toggle(); });
+            document.addEventListener('click', function(e){
+                if(!visible) return;
+                if(!tip.contains(e.target) && e.target !== btn){ hide(); }
+            });
+            window.addEventListener('resize', function(){ if(visible) position(); });
+
+            // Hover behavior (desktop pointer devices only)
+            if(prefersHover){
+                btn.addEventListener('mouseenter', function(){
+                    clearTimeout(leaveIntentTimer);
+                    hoverIntentTimer = setTimeout(show, 120);
+                });
+                btn.addEventListener('mouseleave', function(){
+                    clearTimeout(hoverIntentTimer);
+                    leaveIntentTimer = setTimeout(hide, 180);
+                });
+                tip.addEventListener('mouseenter', function(){
+                    clearTimeout(leaveIntentTimer);
+                });
+                tip.addEventListener('mouseleave', function(){
+                    leaveIntentTimer = setTimeout(hide, 150);
+                });
+            }
+
+            // Focus accessibility: show on focus, hide on blur (desktop only)
+            btn.addEventListener('focus', function(){ if(prefersHover) show(); });
+            btn.addEventListener('blur', function(){ if(prefersHover) hide(); });
+        })();
+    </script>
+</body>
+</html>

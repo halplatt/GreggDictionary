@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJS GST Editor</title>
+<style>
+  :root{
+    --paper:#f4efe3; --card:#fffdf7; --ink:#23211c; --faint:#7a7363;
+    --rule:#ddd5c2; --accent:#b8472d; --focus:#2c6e8f; --ok:#3c7a4e;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px}
+
+  header{position:sticky;top:0;z-index:10;background:var(--paper);
+    border-bottom:1px solid var(--rule);padding:10px 16px 0;
+    display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+  header h1{font-family:var(--serif);font-size:18px;font-weight:600;margin:0 8px 0 0}
+  .grp{display:flex;gap:6px;align-items:center}
+  button{font-family:var(--sans);font-size:13px;border:1px solid var(--rule);
+    background:var(--card);color:var(--ink);padding:6px 11px;border-radius:5px;cursor:pointer}
+  button:hover{border-color:var(--ink)}
+  button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  button:disabled{opacity:.45;cursor:default}
+  input[type=text],input[type=search],select{font-family:var(--sans);font-size:13px;
+    border:1px solid var(--rule);background:var(--card);color:var(--ink);
+    padding:6px 9px;border-radius:5px}
+  input[type=search]{width:190px}
+  #textFilter,#gstFilter{width:150px;font-family:var(--mono)}
+  input.bad{border-color:var(--accent);background:#fbeee6}
+  .pos{font-family:var(--mono);font-size:12px;color:var(--faint);white-space:nowrap}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);
+    margin-left:6px;vertical-align:middle;visibility:hidden}
+  .dirty .dot{visibility:visible}
+  label.chk{display:flex;gap:5px;align-items:center;color:var(--faint);font-size:12px}
+
+  .progress{flex-basis:100%;height:6px;background:var(--rule);border-radius:3px;
+    margin-top:8px;position:relative;overflow:hidden}
+  .progress > i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+  .progress .lbl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:10px;color:#fff;mix-blend-mode:difference}
+
+  main{padding:16px;max-width:1500px;margin:0 auto}
+  .empty{font-family:var(--serif);color:var(--faint);text-align:center;
+    padding:54px 20px;line-height:1.6;font-size:15px}
+  .empty b{color:var(--ink)}
+  .empty .resume{margin-top:18px}
+
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+  .card{position:relative;background:var(--card);border:1px solid var(--rule);border-radius:7px;
+    padding:10px;display:flex;flex-direction:column;gap:7px}
+  .card.reviewed{background:#f3f6ee}
+  .card.reviewed::after{content:"✓";position:absolute;top:6px;right:8px;
+    color:var(--ok);font-weight:700;font-size:13px}
+  .card.changed{border-color:var(--accent)}
+  .imgwrap{height:84px;display:flex;align-items:center;justify-content:center;
+    background:repeating-linear-gradient(transparent,transparent 27px,#eef0e6 27px,#eef0e6 28px) bottom/100% 28px no-repeat,#fbf9f2;
+    border:1px solid #ece5d3;border-radius:4px;overflow:hidden}
+  .imgwrap img{max-height:74px;max-width:100%;mix-blend-mode:multiply}
+  .imgwrap .miss{font-size:11px;color:var(--faint);font-family:var(--mono)}
+  .word{font-family:var(--serif);font-size:16px;line-height:1.2;word-break:break-word;padding-right:16px}
+  .gst{font-family:var(--mono);font-size:14px;width:100%;padding:7px 8px;
+    border:1px solid var(--rule);border-radius:4px;background:#fffef9}
+  .gst:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 2px rgba(44,110,143,.18)}
+  .note{font-family:var(--sans);font-size:12px;width:100%;padding:5px 8px;
+    border:1px solid transparent;border-bottom:1px dashed var(--rule);border-radius:3px;
+    background:transparent;color:var(--faint)}
+  .note:focus{outline:none;color:var(--ink);border-color:var(--rule);background:#fffef9}
+  .rev{font-size:11px;color:var(--faint);display:flex;gap:5px;align-items:center}
+  .card.flash{animation:flash 1.1s ease}
+  @keyframes flash{0%{background:#fbeee6}100%{background:var(--card)}}
+
+  footer{position:sticky;bottom:0;background:var(--paper);border-top:1px solid var(--rule);
+    padding:8px 16px;display:flex;gap:12px;align-items:center;justify-content:center;font-size:12px;color:var(--faint);flex-wrap:wrap}
+  kbd{font-family:var(--mono);font-size:11px;background:var(--card);border:1px solid var(--rule);
+    border-bottom-width:2px;border-radius:3px;padding:1px 5px}
+  @media (prefers-reduced-motion:reduce){.card.flash{animation:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>DJS GST Editor</h1>
+  <div class="grp">
+    <button id="openJson" class="primary">Open JSON…</button>
+    <button id="openDir">Image folder…</button>
+    <button id="save" disabled>Save<span class="dot"></span></button>
+    <label class="chk"><input type="checkbox" id="autosave"> autosave</label>
+  </div>
+  <div class="grp">
+    <input type="search" id="search" placeholder="Jump to word…" disabled>
+    <button id="go" disabled>Go</button>
+    <select id="filter" disabled title="filter">
+      <option value="all">All</option>
+      <option value="unreviewed">Unreviewed</option>
+      <option value="reviewed">Reviewed</option>
+      <option value="changed">Edited</option>
+    </select>
+    <button id="nextUn" disabled title="jump to first unreviewed">Next unreviewed ›</button>
+  </div>
+  <div class="grp">
+    <input type="text" id="textFilter" placeholder="text regex…" disabled title="filter by text (regular expression)">
+    <input type="text" id="gstFilter" placeholder="gst regex…" disabled title="filter by gst (regular expression)">
+    <button id="applyFilter" disabled>Apply</button>
+    <button id="clearFilter" disabled>Clear</button>
+  </div>
+  <div class="grp">
+    <button id="prev" disabled>‹ Prev</button>
+    <button id="next" disabled>Next ›</button>
+    <select id="pageSize" title="rows per page">
+      <option>12</option><option selected>24</option><option>48</option><option>96</option>
+    </select>
+  </div>
+  <span class="pos" id="pos">no file loaded</span>
+  <div class="progress"><i id="bar"></i><span class="lbl" id="barLbl"></span></div>
+</header>
+
+<main id="main">
+  <div class="empty" id="empty">
+    <p><b>1.</b> Click <b>Open JSON…</b> and choose <b>!searchGSText.json</b>.<br>
+    <b>2.</b> Click <b>Image folder…</b> and choose the <b>djsWords</b> folder.</p>
+    <p>Edit a <b>gst</b> field, press <b>Enter</b> to mark it reviewed and move on. The bar
+    above tracks how many of the entries you've reviewed; use the filter or
+    <b>Next unreviewed</b> to pick up where you left off.</p>
+    <p style="font-size:13px">Best in Chrome or Edge — they save straight back to the file and
+    remember it next time. Other browsers download an updated copy instead.</p>
+    <div class="resume" id="resumeWrap" hidden></div>
+  </div>
+  <div class="grid" id="grid" hidden></div>
+</main>
+
+<footer>
+  <span><kbd>Enter</kbd> reviewed + next</span>
+  <span><kbd>Ctrl</kbd>+<kbd>S</kbd> save</span>
+  <span><kbd>PgUp</kbd>/<kbd>PgDn</kbd> pages</span>
+  <span id="loadedName"></span>
+</footer>
+
+<script>
+const HAS_FS = 'showOpenFilePicker' in window;
+let data = [];                 // [{text, gst, notes, _orig}]
+let view = [];                 // indices into data, after filter
+let reviewed = new Set();      // texts marked reviewed
+let fileHandle = null, dirHandle = null, imageMap = null;
+let start = 0;                 // page offset INTO view
+let dirty = false, urls = [], currentName = '';
+let gstRe = null, textRe = null;   // active compiled regex filters (or null)
+
+const $ = id => document.getElementById(id);
+const pageSize = () => parseInt($('pageSize').value, 10);
+
+/* ---------- tiny IndexedDB key/value ---------- */
+function db(){ return new Promise((res,rej)=>{ const r=indexedDB.open('gstEditor',1);
+  r.onupgradeneeded=()=>r.result.createObjectStore('kv'); r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }); }
+async function kvSet(k,v){ const d=await db(); return new Promise((res,rej)=>{ const t=d.transaction('kv','readwrite');
+  t.objectStore('kv').put(v,k); t.oncomplete=()=>res(); t.onerror=()=>rej(t.error); }); }
+async function kvGet(k){ const d=await db(); return new Promise((res,rej)=>{ const t=d.transaction('kv','readonly');
+  const q=t.objectStore('kv').get(k); q.onsuccess=()=>res(q.result); q.onerror=()=>rej(q.error); }); }
+
+/* ---------- open JSON ---------- */
+$('openJson').onclick = async () => {
+  try{
+    if (HAS_FS){
+      [fileHandle] = await window.showOpenFilePicker({types:[{description:'JSON',accept:{'application/json':['.json']}}]});
+      await kvSet('jsonHandle', fileHandle);
+      const f = await fileHandle.getFile();
+      await loadData(JSON.parse(await f.text()), f.name);
+    } else {
+      pickFile('.json', async f => loadData(JSON.parse(await f.text()), f.name));
+    }
+  }catch(e){ if(e.name!=='AbortError') alert('Could not open file: '+e.message); }
+};
+
+async function loadData(arr, name){
+  if(!Array.isArray(arr)){ alert('That file is not a JSON array.'); return; }
+  data = arr.map(o => ({text:o.text??'', gst:o.gst??'', notes:o.notes??'', _orig:o.gst??''}));
+  currentName = name;
+  reviewed = new Set(await kvGet('reviewed:'+name) || []);
+  start = 0; setDirty(false);
+  $('loadedName').textContent = name + ' — ' + data.length.toLocaleString() + ' entries';
+  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter'].forEach(id => $(id).disabled = false);
+  buildView(); render();
+}
+
+/* ---------- open image folder ---------- */
+$('openDir').onclick = async () => {
+  try{
+    if (HAS_FS){
+      dirHandle = await window.showDirectoryPicker();
+      await kvSet('dirHandle', dirHandle);
+      render();
+    } else {
+      pickFile('dir', files => { imageMap = new Map(); for(const f of files) imageMap.set(f.name,f); render(); });
+    }
+  }catch(e){ if(e.name!=='AbortError') alert('Could not open folder: '+e.message); }
+};
+
+function pickFile(kind, cb){
+  const i = document.createElement('input'); i.type='file';
+  if(kind==='dir'){ i.webkitdirectory=true; i.onchange=()=>cb([...i.files]); }
+  else { i.accept=kind; i.onchange=()=>cb(i.files[0]); }
+  i.click();
+}
+
+/* ---------- resume last session ---------- */
+window.addEventListener('DOMContentLoaded', tryResume);
+async function tryResume(){
+  if(!HAS_FS) return;
+  let jh, dh;
+  try{ jh = await kvGet('jsonHandle'); dh = await kvGet('dirHandle'); }catch(_){ return; }
+  if(!jh) return;
+  const granted = (await jh.queryPermission({})) === 'granted';
+  if(granted){
+    fileHandle = jh;
+    if(dh && (await dh.queryPermission({}))==='granted') dirHandle = dh;
+    const f = await jh.getFile(); await loadData(JSON.parse(await f.text()), f.name);
+  } else {
+    const w = $('resumeWrap'); w.hidden=false;
+    const b = document.createElement('button'); b.className='primary';
+    b.textContent = 'Reopen last session (' + jh.name + ')';
+    b.onclick = async () => {
+      if((await jh.requestPermission({}))!=='granted'){ alert('Permission denied.'); return; }
+      fileHandle = jh;
+      if(dh){ try{ await dh.requestPermission({}); dirHandle = dh; }catch(_){} }
+      const f = await jh.getFile(); await loadData(JSON.parse(await f.text()), f.name);
+    };
+    w.appendChild(b);
+  }
+}
+
+/* ---------- filter / view ---------- */
+$('filter').onchange = () => { start=0; buildView(); render(); };
+
+function passes(d){                       // regex filters (text AND gst)
+  if(textRe && !textRe.test(d.text)) return false;
+  if(gstRe  && !gstRe.test(d.gst))   return false;
+  return true;
+}
+function applyFilters(){
+  const tp=$('textFilter').value, gp=$('gstFilter').value;
+  let t=null, g=null, bad=false;
+  try{ t = tp?new RegExp(tp):null; $('textFilter').classList.remove('bad'); }
+  catch(_){ $('textFilter').classList.add('bad'); bad=true; }
+  try{ g = gp?new RegExp(gp):null; $('gstFilter').classList.remove('bad'); }
+  catch(_){ $('gstFilter').classList.add('bad'); bad=true; }
+  if(bad){ $('pos').textContent='invalid regular expression'; return; }
+  textRe=t; gstRe=g; start=0; buildView(); render();
+}
+function clearFilters(){
+  $('textFilter').value=''; $('gstFilter').value='';
+  $('textFilter').classList.remove('bad'); $('gstFilter').classList.remove('bad');
+  textRe=null; gstRe=null; start=0; buildView(); render();
+}
+$('applyFilter').onclick = applyFilters;
+$('clearFilter').onclick = clearFilters;
+$('textFilter').addEventListener('keydown', e=>{ if(e.key==='Enter') applyFilters(); });
+$('gstFilter').addEventListener('keydown', e=>{ if(e.key==='Enter') applyFilters(); });
+
+function buildView(){
+  const f = $('filter').value;
+  view = [];
+  for(let i=0;i<data.length;i++){
+    const d = data[i];
+    if(!passes(d)) continue;
+    if(f==='unreviewed' && reviewed.has(d.text)) continue;
+    if(f==='reviewed' && !reviewed.has(d.text)) continue;
+    if(f==='changed' && d.gst===d._orig) continue;
+    view.push(i);
+  }
+  if(start>=view.length) start = Math.max(0, view.length - pageSize());
+}
+
+/* ---------- render a page ---------- */
+async function render(){
+  urls.forEach(u=>URL.revokeObjectURL(u)); urls=[];
+  const grid=$('grid'); grid.innerHTML='';
+  updateProgress();
+  if(!data.length){ $('empty').hidden=false; grid.hidden=true; updatePos(); return; }
+  $('empty').hidden=true; grid.hidden=false;
+
+  const endP = Math.min(start+pageSize(), view.length);
+  for(let p=start;p<endP;p++){
+    const i = view[p]; const d = data[i];
+    const card=document.createElement('div');
+    card.className='card'+(reviewed.has(d.text)?' reviewed':'')+(d.gst!==d._orig?' changed':'');
+    card.dataset.p=p;
+
+    const iw=document.createElement('div'); iw.className='imgwrap';
+    iw.innerHTML='<span class="miss">…</span>'; loadImage(iw,d.text);
+
+    const w=document.createElement('div'); w.className='word'; w.textContent=d.text;
+
+    const g=document.createElement('input');
+    g.className='gst'; g.value=d.gst; g.spellcheck=false; g.dataset.p=p;
+    g.addEventListener('input', ()=>{ d.gst=g.value; card.classList.toggle('changed', d.gst!==d._orig);
+      mark(d.text,true,card); setDirty(true); scheduleAutosave(); });
+    g.addEventListener('keydown', ev=>{ if(ev.key==='Enter'){ ev.preventDefault();
+      mark(d.text,true,card); next(p); } });
+
+    const n=document.createElement('input');
+    n.className='note'; n.value=d.notes; n.placeholder='notes'; n.spellcheck=false;
+    n.addEventListener('input', ()=>{ d.notes=n.value; setDirty(true); scheduleAutosave(); });
+
+    const rev=document.createElement('label'); rev.className='rev';
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=reviewed.has(d.text);
+    cb.addEventListener('change', ()=> mark(d.text, cb.checked, card));
+    rev.append(cb, document.createTextNode('reviewed'));
+
+    card.append(iw,w,g,n,rev); grid.appendChild(card);
+  }
+  updatePos();
+}
+
+async function loadImage(iw,text){
+  const name=text+'.png'; let file=null;
+  try{
+    if(dirHandle){ const fh=await dirHandle.getFileHandle(name); file=await fh.getFile(); }
+    else if(imageMap){ file=imageMap.get(name)||null; }
+  }catch(_){ file=null; }
+  if(!file){ iw.innerHTML='<span class="miss">no image</span>'; return; }
+  const url=URL.createObjectURL(file); urls.push(url);
+  iw.innerHTML=''; const img=new Image(); img.src=url; img.alt=text; iw.appendChild(img);
+}
+
+/* ---------- reviewed marking ---------- */
+let revTimer=null;
+function mark(text, val, card){
+  if(val) reviewed.add(text); else reviewed.delete(text);
+  if(card) card.classList.toggle('reviewed', val);
+  updateProgress();
+  clearTimeout(revTimer); revTimer=setTimeout(()=>kvSet('reviewed:'+currentName,[...reviewed]),600);
+}
+
+/* ---------- navigation ---------- */
+function next(p){
+  const np=p+1; if(np>=view.length) return;
+  if(np>=start+pageSize()){ start=np; render().then(()=>focusP(np)); }
+  else focusP(np);
+}
+function focusP(p){ const el=document.querySelector('.gst[data-p="'+p+'"]'); if(el){el.focus();el.select();} }
+$('prev').onclick=()=>{ start=Math.max(0,start-pageSize()); render(); };
+$('next').onclick=()=>{ if(start+pageSize()<view.length){ start+=pageSize(); render(); } };
+$('pageSize').onchange=render;
+
+$('nextUn').onclick=()=>{
+  const di=data.findIndex(d=>!reviewed.has(d.text) && passes(d));
+  if(di<0){ $('pos').textContent='all reviewed ✓'; return; }
+  if($('filter').value==='reviewed') $('filter').value='all'; buildView();
+  start=view.indexOf(di); render().then(()=>{ const c=document.querySelector('.card[data-p="'+start+'"]');
+    if(c){ c.classList.add('flash'); const g=c.querySelector('.gst'); if(g){g.focus();g.select();} } });
+};
+
+$('go').onclick=doSearch;
+$('search').addEventListener('keydown',e=>{ if(e.key==='Enter') doSearch(); });
+function doSearch(){
+  const q=$('search').value.trim().toLowerCase(); if(!q) return;
+  let p=view.findIndex(i=>data[i].text.toLowerCase().startsWith(q));
+  if(p<0) p=view.findIndex(i=>data[i].text.toLowerCase().includes(q));
+  if(p<0){ $('pos').textContent='no match for “'+q+'”'; return; }
+  start=p; render().then(()=>{ const c=document.querySelector('.card[data-p="'+p+'"]');
+    if(c){ c.classList.add('flash'); const g=c.querySelector('.gst'); if(g){g.focus();g.select();} } });
+}
+
+function updatePos(){
+  const endP=Math.min(start+pageSize(),view.length);
+  $('pos').textContent = data.length ? (view.length?(start+1):0)+'–'+endP+' of '+view.length.toLocaleString()
+    + (view.length!==data.length?' (filtered)':'') : 'no file loaded';
+  $('prev').disabled = start<=0;
+  $('next').disabled = endP>=view.length;
+}
+function updateProgress(){
+  const n=data.length, r=reviewed.size, pct=n?Math.round(r/n*100):0;
+  $('bar').style.width=pct+'%';
+  $('barLbl').textContent = n ? r.toLocaleString()+' / '+n.toLocaleString()+' reviewed · '+pct+'%' : '';
+}
+
+/* ---------- saving ---------- */
+let saveTimer=null;
+function scheduleAutosave(){ if(!$('autosave').checked) return; clearTimeout(saveTimer); saveTimer=setTimeout(save,1200); }
+$('save').onclick=save;
+async function save(){
+  if(!data.length) return;
+  const text=JSON.stringify(data.map(({text,gst,notes})=>({text,gst,notes})),null,4);
+  try{
+    if(fileHandle){
+      if(!(await ensureWrite(fileHandle))){ alert('Write permission denied.'); return; }
+      const w=await fileHandle.createWritable(); await w.write(text); await w.close();
+    } else {
+      const blob=new Blob([text],{type:'application/json'}); const a=document.createElement('a');
+      a.href=URL.createObjectURL(blob); a.download='!searchGSText.json'; a.click(); URL.revokeObjectURL(a.href);
+    }
+    data.forEach(d=>d._orig=d.gst); setDirty(false);
+    document.querySelectorAll('.card.changed').forEach(c=>c.classList.remove('changed'));
+  }catch(e){ alert('Save failed: '+e.message); }
+}
+async function ensureWrite(h){ const o={mode:'readwrite'};
+  if(await h.queryPermission(o)==='granted') return true;
+  return (await h.requestPermission(o))==='granted'; }
+function setDirty(v){ dirty=v; document.body.classList.toggle('dirty',v); }
+
+/* ---------- shortcuts ---------- */
+document.addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){ e.preventDefault(); save(); }
+  else if(e.key==='PageDown'&&e.target.tagName!=='INPUT'){ e.preventDefault(); $('next').click(); }
+  else if(e.key==='PageUp'&&e.target.tagName!=='INPUT'){ e.preventDefault(); $('prev').click(); }
+});
+window.addEventListener('beforeunload',e=>{ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+</script>
+</body>
+</html>
