@@ -55,7 +55,6 @@
   .card.reviewed{background:#f3f6ee}
   .card.reviewed::after{content:"✓";position:absolute;top:6px;right:8px;
     color:var(--ok);font-weight:700;font-size:13px}
-  .card.selected{box-shadow:inset 0 0 0 2px var(--focus)}
   .card.changed{border-color:var(--accent)}
   .imgwrap{height:84px;display:flex;align-items:center;justify-content:center;
     background:repeating-linear-gradient(transparent,transparent 27px,#eef0e6 27px,#eef0e6 28px) bottom/100% 28px no-repeat,#fbf9f2;
@@ -108,12 +107,6 @@
     <button id="clearFilter" disabled>Clear</button>
   </div>
   <div class="grp">
-    <input type="text" id="replaceFind" placeholder="find regex…" disabled title="find pattern (regular expression)">
-    <input type="text" id="replaceWith" placeholder="replace with…" disabled title="replacement text">
-    <button id="selectFiltered" disabled>Select filtered</button>
-    <button id="replaceBtn" disabled>Replace selected</button>
-  </div>
-  <div class="grp">
     <button id="prev" disabled>‹ Prev</button>
     <button id="next" disabled>Next ›</button>
     <select id="pageSize" title="rows per page">
@@ -154,7 +147,6 @@ let fileHandle = null, dirHandle = null, imageMap = null;
 let start = 0;                 // page offset INTO view
 let dirty = false, urls = [], currentName = '';
 let gstRe = null, textRe = null;   // active compiled regex filters (or null)
-let selected = new Set();      // selected object indices in data
 
 const $ = id => document.getElementById(id);
 const pageSize = () => parseInt($('pageSize').value, 10);
@@ -186,10 +178,9 @@ async function loadData(arr, name){
   data = arr.map(o => ({text:o.text??'', gst:o.gst??'', notes:o.notes??'', _orig:o.gst??''}));
   currentName = name;
   reviewed = new Set(await kvGet('reviewed:'+name) || []);
-  selected = new Set();
   start = 0; setDirty(false);
   $('loadedName').textContent = name + ' — ' + data.length.toLocaleString() + ' entries';
-  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter','replaceFind','replaceWith','selectFiltered','replaceBtn'].forEach(id => $(id).disabled = false);
+  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter'].forEach(id => $(id).disabled = false);
   buildView(); render();
 }
 
@@ -267,53 +258,6 @@ $('clearFilter').onclick = clearFilters;
 $('textFilter').addEventListener('keydown', e=>{ if(e.key==='Enter') applyFilters(); });
 $('gstFilter').addEventListener('keydown', e=>{ if(e.key==='Enter') applyFilters(); });
 
-function buildReplaceRegex(src){
-  if(!src) throw new Error('find regex is required');
-  if(src.startsWith('/') && src.lastIndexOf('/')>0){
-    const li = src.lastIndexOf('/');
-    const body = src.slice(1, li);
-    let flags = src.slice(li+1);
-    if(!flags.includes('g')) flags += 'g';
-    return new RegExp(body, flags);
-  }
-  return new RegExp(src, 'g');
-}
-function replaceSelectedGst(){
-  const findSrc = $('replaceFind').value;
-  const repl = $('replaceWith').value;
-  let re = null;
-  try{ re = buildReplaceRegex(findSrc); $('replaceFind').classList.remove('bad'); }
-  catch(_){ $('replaceFind').classList.add('bad'); $('pos').textContent='invalid regular expression'; return; }
-
-  if(!selected.size){ $('pos').textContent='no selected objects'; return; }
-
-  let changed = 0;
-  selected.forEach(i => {
-    const d = data[i];
-    if(!d) return;
-    const next = String(d.gst).replace(re, repl);
-    if(next !== d.gst){ d.gst = next; changed++; }
-  });
-
-  if(changed){
-    setDirty(true);
-    scheduleAutosave();
-  }
-  buildView();
-  render();
-  $('pos').textContent = changed
-    ? 'updated '+changed.toLocaleString()+' selected object'+(changed===1?'':'s')
-    : 'no selected gst values changed';
-}
-$('selectFiltered').onclick = () => {
-  selected = new Set(view);
-  render();
-  $('pos').textContent = 'selected '+selected.size.toLocaleString()+' filtered object'+(selected.size===1?'':'s');
-};
-$('replaceBtn').onclick = replaceSelectedGst;
-$('replaceWith').addEventListener('keydown', e=>{ if(e.key==='Enter') replaceSelectedGst(); });
-$('replaceFind').addEventListener('keydown', e=>{ if(e.key==='Enter') replaceSelectedGst(); });
-
 function buildView(){
   const f = $('filter').value;
   view = [];
@@ -341,7 +285,6 @@ async function render(){
     const i = view[p]; const d = data[i];
     const card=document.createElement('div');
     card.className='card'+(reviewed.has(d.text)?' reviewed':'')+(d.gst!==d._orig?' changed':'');
-    if(selected.has(i)) card.classList.add('selected');
     card.dataset.p=p;
 
     const iw=document.createElement('div'); iw.className='imgwrap';
@@ -365,15 +308,7 @@ async function render(){
     cb.addEventListener('change', ()=> mark(d.text, cb.checked, card));
     rev.append(cb, document.createTextNode('reviewed'));
 
-    const sel=document.createElement('label'); sel.className='rev';
-    const sb=document.createElement('input'); sb.type='checkbox'; sb.checked=selected.has(i);
-    sb.addEventListener('change', ()=>{
-      if(sb.checked) selected.add(i); else selected.delete(i);
-      card.classList.toggle('selected', sb.checked);
-    });
-    sel.append(sb, document.createTextNode('selected'));
-
-    card.append(iw,w,g,n,rev,sel); grid.appendChild(card);
+    card.append(iw,w,g,n,rev); grid.appendChild(card);
   }
   updatePos();
 }
