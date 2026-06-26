@@ -38,7 +38,7 @@ V2025.0619.0245pm add show hide dictionaries button
 		<!-- JavaScripts with cachebusting querystring-->
 		<!-- Data arrays of words -->
 		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
-        <script type="text/javascript" src="dataset.ann.js?v=2025.0706.11:11am"></script>
+        <script type="text/javascript" src="dataset.ann.js?v=2026.0621.11:11am"></script>
 		<script type="text/javascript" src="dataset.ann.reverse.js?v=2025.0706.11:11am"></script>
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
@@ -305,7 +305,7 @@ V2025.0619.0245pm add show hide dictionaries button
 						if (savedButton === 'refreshPreWord') {
 							lastButton = 'refreshPreWord'
 						} else if (savedButton === 'refreshAnnPhrase') {
-						
+							lastButton = 'refreshAnnPhrase'
 						} else {
 							lastButton = 'refreshAnnWord'
 						}
@@ -368,6 +368,17 @@ V2025.0619.0245pm add show hide dictionaries button
 					} else {
 						refreshDjsWord();
 					}
+			}
+
+			function lookupCurrentDictionary() {
+				initializeLastButton();
+				if (typeof window[lastButton] === 'function') {
+					window[lastButton]();
+				} else if (public_domain_only === 'pd') {
+					refreshAnnWord();
+				} else {
+					refreshDjsWord();
+				}
 			}
 			function hideSuggestion() {
 				document.getElementById("suggest").style.display = "none";
@@ -596,7 +607,7 @@ function refreshDjsWord(cntAdj) {
 
 function refreshDjsName(cntAdj) {
 	setLastButton('refreshDjsName')
-	pageCntAdj(cntAdj, pageCntAdj(cntAdj, djsName));
+	pageCntAdj(cntAdj, djsName);
 	hideSuggestion()
 	loadAboutDJS()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Diamond Jubilee Shorthand (Proper Names)";
@@ -1146,7 +1157,7 @@ async function getPageByNumber(pageNumber) { //returns the page object for a giv
 					<div class="middle">
 							<div class="input-container">
 								<button onclick="window[lastButton](-1);" style="color: black; background-color: #f0f0f0;">&lt;</button>
-								<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){handleGsdParam()}" autofocus />
+								<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){lookupCurrentDictionary()}" autofocus />
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
