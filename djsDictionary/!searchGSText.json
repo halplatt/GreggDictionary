@@ -13171,7 +13171,7 @@
     },
     {
         "text": "beatings",
-        "gst": "b-t-e-ng-s",
+        "gst": "b-t/s",
         "notes": ""
     },
     {
@@ -13631,7 +13631,7 @@
     },
     {
         "text": "beheadings",
-        "gst": "b-h-e-d-e-ng-s",
+        "gst": "b-h-e-d/s",
         "notes": ""
     },
     {
@@ -13896,7 +13896,7 @@
     },
     {
         "text": "belongings",
-        "gst": "b-l-o-ng-e-ng-s",
+        "gst": "b-l-o-ng/s",
         "notes": ""
     },
     {
@@ -14686,7 +14686,7 @@
     },
     {
         "text": "billings",
-        "gst": "b-e-l-e-ng-s",
+        "gst": "b-e-l/s",
         "notes": ""
     },
     {
@@ -14786,7 +14786,7 @@
     },
     {
         "text": "bindings",
-        "gst": "b-i-nt-e-ng-s",
+        "gst": "b-i-nt/s",
         "notes": ""
     },
     {
@@ -14821,42 +14821,42 @@
     },
     {
         "text": "biographer",
-        "gst": "b-i-a-g-r-f-r",
+        "gst": "b-g-r-f-r",
         "notes": ""
     },
     {
         "text": "biographic",
-        "gst": "b-i-o-g-r-a-f-k",
+        "gst": "b-g-r-a-f-k",
         "notes": ""
     },
     {
         "text": "biographical",
-        "gst": "b-i-g-r-a-f/k",
+        "gst": "b-g-r-a-f/k",
         "notes": ""
     },
     {
         "text": "biographically",
-        "gst": "b-i-o-g-r-a-f/k-e",
+        "gst": "b-g-r-a-f/k-e",
         "notes": ""
     },
     {
         "text": "biography",
-        "gst": "b-i-a-g-r-f-e",
+        "gst": "b-g-r-f-e",
         "notes": ""
     },
     {
         "text": "biological",
-        "gst": "b-i-l-a-j/k",
+        "gst": "b-o-l/k",
         "notes": ""
     },
     {
         "text": "biologically",
-        "gst": "b-i-l-a-j-e-k-e",
+        "gst": "b-o-l/k-e",
         "notes": ""
     },
     {
         "text": "biologist",
-        "gst": "b-i-a-l-j-s-t",
+        "gst": "b-o-l-e-s-t",
         "notes": ""
     },
     {
@@ -14866,7 +14866,7 @@
     },
     {
         "text": "biopsy",
-        "gst": "b-i-a-p-s-e",
+        "gst": "b-i-e-p-s-e",
         "notes": ""
     },
     {
@@ -15431,7 +15431,7 @@
     },
     {
         "text": "blendings",
-        "gst": "b-l-e-nt-e-ng-s",
+        "gst": "b-l-e-nt/s",
         "notes": ""
     },
     {
@@ -15446,7 +15446,7 @@
     },
     {
         "text": "blessings",
-        "gst": "b-l-e-s-e-ng-s",
+        "gst": "b-l-e-s/s",
         "notes": ""
     },
     {
@@ -16441,7 +16441,7 @@
     },
     {
         "text": "bookings",
-        "gst": "b-u-k-e-ng-s",
+        "gst": "b-u-k/s",
         "notes": ""
     },
     {
@@ -16721,7 +16721,7 @@
     },
     {
         "text": "borings",
-        "gst": "b-o-r-e-ng-s",
+        "gst": "b-o-r/s",
         "notes": ""
     },
     {
@@ -16756,7 +16756,7 @@
     },
     {
         "text": "borrowings",
-        "gst": "b-a-r-o-e-ng-s",
+        "gst": "b-a-r-o/s",
         "notes": ""
     },
     {
@@ -19131,7 +19131,7 @@
     },
     {
         "text": "buildings",
-        "gst": "b-e-ld-e-ng-s",
+        "gst": "b-e-ld/s",
         "notes": ""
     },
     {
@@ -19636,7 +19636,7 @@
     },
     {
         "text": "bushings",
-        "gst": "b-u-sh-e-ng-s",
+        "gst": "b-u-sh/s",
         "notes": ""
     },
     {
@@ -21321,7 +21321,7 @@
     },
     {
         "text": "caperings",
-        "gst": "k-a-p-r-e-ng-s",
+        "gst": "k-a-p-r/s",
         "notes": ""
     },
     {
@@ -21831,7 +21831,7 @@
     },
     {
         "text": "carloadings",
-        "gst": "k-a-r-l-o-d-e-ng-s",
+        "gst": "k-a-r-l-o-d/s",
         "notes": ""
     },
     {
@@ -22116,7 +22116,7 @@
     },
     {
         "text": "carvings",
-        "gst": "k-a-r-v-e-ng-s",
+        "gst": "k-a-r-v/s",
         "notes": ""
     },
     {
@@ -22911,7 +22911,7 @@
     },
     {
         "text": "ceilings",
-        "gst": "s-e-l-e-ng-s",
+        "gst": "s-e-l/s",
         "notes": ""
     },
     {
@@ -24846,7 +24846,7 @@
     },
     {
         "text": "christenings",
-        "gst": "k-r-e-s-n-e-ng-s",
+        "gst": "k-r-e-s-n/s",
         "notes": ""
     },
     {
@@ -26196,7 +26196,7 @@
     },
     {
         "text": "clippings",
-        "gst": "k-l-e-p-e-ng-s",
+        "gst": "k-l-e-p/s",
         "notes": ""
     },
     {
@@ -26651,7 +26651,7 @@
     },
     {
         "text": "coatings",
-        "gst": "k-o-t-e-ng-s",
+        "gst": "k-o-t/s",
         "notes": ""
     },
     {
@@ -27576,7 +27576,7 @@
     },
     {
         "text": "combings",
-        "gst": "k-o-m-b-e-ng-s",
+        "gst": "k-o-m-b/s",
         "notes": ""
     },
     {
@@ -27676,7 +27676,7 @@
     },
     {
         "text": "comings",
-        "gst": "k-u-m-e-ng-s",
+        "gst": "k-u-m/s",
         "notes": ""
     },
     {
@@ -32916,7 +32916,7 @@
     },
     {
         "text": "cravings",
-        "gst": "k-r-a-v-e-ng-s",
+        "gst": "k-r-a-v/s",
         "notes": ""
     },
     {
@@ -33631,7 +33631,7 @@
     },
     {
         "text": "crossings",
-        "gst": "k-r-o-s-e-ng-s",
+        "gst": "k-r-o-s/s",
         "notes": ""
     },
     {
@@ -34251,7 +34251,7 @@
     },
     {
         "text": "Cummings",
-        "gst": "k-u-m-e-ng-s",
+        "gst": "k-u-m/s",
         "notes": ""
     },
     {
@@ -34741,7 +34741,7 @@
     },
     {
         "text": "cuttings",
-        "gst": "k-u-t-e-ng-s",
+        "gst": "k-u-t/s",
         "notes": ""
     },
     {
@@ -35596,7 +35596,7 @@
     },
     {
         "text": "dealings",
-        "gst": "d-e-l-e-ng-s",
+        "gst": "d-e-l/s",
         "notes": ""
     },
     {
@@ -39546,7 +39546,7 @@
     },
     {
         "text": "diggings",
-        "gst": "d-e-g-e-ng-s",
+        "gst": "d-e-g/s",
         "notes": ""
     },
     {
@@ -40796,7 +40796,7 @@
     },
     {
         "text": "disjoinings",
-        "gst": "d-s-j-o-e-n-e-ng-s",
+        "gst": "d-s-j-o-e-n/s",
         "notes": ""
     },
     {
@@ -42196,12 +42196,12 @@
     },
     {
         "text": "doing so",
-        "gst": "d-u-e-ng-s-o",
+        "gst": "d-u-h-s-o",
         "notes": ""
     },
     {
         "text": "doings",
-        "gst": "d-u-e-ng-s",
+        "gst": "d-u/s",
         "notes": ""
     },
     {
@@ -43006,7 +43006,7 @@
     },
     {
         "text": "drawings",
-        "gst": "d-r-o-e-ng-s",
+        "gst": "d-r-o/s",
         "notes": ""
     },
     {
@@ -43191,7 +43191,7 @@
     },
     {
         "text": "dressings",
-        "gst": "d-r-e-s-e-ng-s",
+        "gst": "d-r-e-s/s",
         "notes": ""
     },
     {
@@ -43281,7 +43281,7 @@
     },
     {
         "text": "drippings",
-        "gst": "d-r-e-p-e-ng-s",
+        "gst": "d-r-e-p/s",
         "notes": ""
     },
     {
@@ -43356,7 +43356,7 @@
     },
     {
         "text": "droolings",
-        "gst": "d-r-u-l-e-ng-s",
+        "gst": "d-r-u-l/s",
         "notes": ""
     },
     {
@@ -43386,7 +43386,7 @@
     },
     {
         "text": "droppings",
-        "gst": "d-r-a-p-e-ng-s",
+        "gst": "d-r-a-p/s",
         "notes": ""
     },
     {
@@ -43426,7 +43426,7 @@
     },
     {
         "text": "drownings",
-        "gst": "d-r-a-u-n-e-ng-s",
+        "gst": "d-r-a-u-n/s",
         "notes": ""
     },
     {
@@ -44011,7 +44011,7 @@
     },
     {
         "text": "dwellings",
-        "gst": "d-w-e-l-e-ng-s",
+        "gst": "d-w-e-l/s",
         "notes": ""
     },
     {
@@ -44221,7 +44221,7 @@
     },
     {
         "text": "earnings",
-        "gst": "r-n-e-ng-s",
+        "gst": "r-n/s",
         "notes": ""
     },
     {
@@ -44231,7 +44231,7 @@
     },
     {
         "text": "earrings",
-        "gst": "e-r-e-ng-s",
+        "gst": "e-r/s",
         "notes": ""
     },
     {
@@ -48586,7 +48586,7 @@
     },
     {
         "text": "etchings",
-        "gst": "e-ch-e-ng-s",
+        "gst": "e-ch/s",
         "notes": ""
     },
     {
@@ -48916,7 +48916,7 @@
     },
     {
         "text": "evenings",
-        "gst": "e-v-n-e-ng-s",
+        "gst": "e-v-n/s",
         "notes": ""
     },
     {
@@ -51071,7 +51071,7 @@
     },
     {
         "text": "facings",
-        "gst": "f-a-s-e-ng-s",
+        "gst": "f-a-s/s",
         "notes": ""
     },
     {
@@ -51181,7 +51181,7 @@
     },
     {
         "text": "failings",
-        "gst": "f-a-l-e-ng-s",
+        "gst": "f-a-l/s",
         "notes": ""
     },
     {
@@ -51761,7 +51761,7 @@
     },
     {
         "text": "fastenings",
-        "gst": "f-a-s-n-e-ng-s",
+        "gst": "f-a-s-n/s",
         "notes": ""
     },
     {
@@ -52226,7 +52226,7 @@
     },
     {
         "text": "feedings",
-        "gst": "f-e-d-e-ng-s",
+        "gst": "f-e-d/s",
         "notes": ""
     },
     {
@@ -52246,7 +52246,7 @@
     },
     {
         "text": "feelings",
-        "gst": "f-e-l-e-ng-s",
+        "gst": "f-e-l/s",
         "notes": ""
     },
     {
@@ -53041,7 +53041,7 @@
     },
     {
         "text": "filings",
-        "gst": "f-i-l-e-ng-s",
+        "gst": "f-i-l/s",
         "notes": ""
     },
     {
@@ -53066,7 +53066,7 @@
     },
     {
         "text": "fillings",
-        "gst": "f-e-l-e-ng-s",
+        "gst": "f-e-l/s",
         "notes": ""
     },
     {
@@ -53191,7 +53191,7 @@
     },
     {
         "text": "findings",
-        "gst": "f-i-nt-e-ng-s",
+        "gst": "f-i-nt/s",
         "notes": ""
     },
     {
@@ -53541,7 +53541,7 @@
     },
     {
         "text": "fittings",
-        "gst": "f-e-t-e-ng-s",
+        "gst": "f-e-t/s",
         "notes": ""
     },
     {
@@ -53576,7 +53576,7 @@
     },
     {
         "text": "fixings",
-        "gst": "f-e-k-s-e-ng-s",
+        "gst": "f-e-k-s/s",
         "notes": ""
     },
     {
@@ -54011,7 +54011,7 @@
     },
     {
         "text": "flavorings",
-        "gst": "f-l-a-v-r-e-ng-s",
+        "gst": "f-l-a-v-r/s",
         "notes": ""
     },
     {
@@ -54131,7 +54131,7 @@
     },
     {
         "text": "fleshings",
-        "gst": "f-l-e-sh-e-ng-s",
+        "gst": "f-l-e-sh/s",
         "notes": ""
     },
     {
@@ -54386,7 +54386,7 @@
     },
     {
         "text": "floggings",
-        "gst": "f-l-a-g-e-ng-s",
+        "gst": "f-l-a-g/s",
         "notes": ""
     },
     {
@@ -54806,7 +54806,7 @@
     },
     {
         "text": "flutings",
-        "gst": "f-l-u-t-e-ng-s",
+        "gst": "f-l-u-t/s",
         "notes": ""
     },
     {
@@ -55261,7 +55261,7 @@
     },
     {
         "text": "footings",
-        "gst": "f-u-t-e-ng-s",
+        "gst": "f-u-t/s",
         "notes": ""
     },
     {
@@ -55651,7 +55651,7 @@
     },
     {
         "text": "forebodings",
-        "gst": "f-b-d-e-ng-s",
+        "gst": "f-b-d/s",
         "notes": ""
     },
     {
@@ -56451,7 +56451,7 @@
     },
     {
         "text": "foundlings",
-        "gst": "f-a-u-nt-l-e-ng-s",
+        "gst": "f-a-u-nt-l/s",
         "notes": ""
     },
     {
@@ -59956,7 +59956,7 @@
     },
     {
         "text": "gleanings",
-        "gst": "g-l-e-n-e-ng-s",
+        "gst": "g-l-e-n/s",
         "notes": ""
     },
     {
@@ -60006,7 +60006,7 @@
     },
     {
         "text": "glimmerings",
-        "gst": "g-l-e-m-r-e-ng-s",
+        "gst": "g-l-e-m-r/s",
         "notes": ""
     },
     {
@@ -60341,7 +60341,7 @@
     },
     {
         "text": "gnawings",
-        "gst": "n-o-e-ng-s",
+        "gst": "n-o/s",
         "notes": ""
     },
     {
@@ -60526,7 +60526,7 @@
     },
     {
         "text": "goings",
-        "gst": "g-o-e-ng-s",
+        "gst": "g-o/s",
         "notes": ""
     },
     {
@@ -61266,7 +61266,7 @@
     },
     {
         "text": "gratings",
-        "gst": "g-r-a-t-e-ng-s",
+        "gst": "g-r-a-t/s",
         "notes": ""
     },
     {
@@ -61616,7 +61616,7 @@
     },
     {
         "text": "greetings",
-        "gst": "g-r-e-t-e-ng-s",
+        "gst": "g-r-e-t/s",
         "notes": ""
     },
     {
@@ -62046,7 +62046,7 @@
     },
     {
         "text": "groupings",
-        "gst": "g-r-u-p-e-ng-s",
+        "gst": "g-r-u-p/s",
         "notes": ""
     },
     {
@@ -63381,7 +63381,7 @@
     },
     {
         "text": "hangings",
-        "gst": "h-a-ng-g-e-ng-s",
+        "gst": "h-a-ng-g/s",
         "notes": ""
     },
     {
@@ -63446,7 +63446,7 @@
     },
     {
         "text": "happenings",
-        "gst": "h-a-p-n-e-ng-s",
+        "gst": "h-a-p-n/s",
         "notes": ""
     },
     {
@@ -64861,7 +64861,7 @@
     },
     {
         "text": "headings",
-        "gst": "h-e-d-e-ng-s",
+        "gst": "h-e-d/s",
         "notes": ""
     },
     {
@@ -65046,7 +65046,7 @@
     },
     {
         "text": "hearings",
-        "gst": "h-e-r-e-ng-s",
+        "gst": "h-e-r/s",
         "notes": ""
     },
     {
@@ -66671,7 +66671,7 @@
     },
     {
         "text": "holdings",
-        "gst": "h-o-ld-e-ng-s",
+        "gst": "h-o-ld/s",
         "notes": ""
     },
     {
@@ -68191,7 +68191,7 @@
     },
     {
         "text": "hustings",
-        "gst": "h-u-s-t-e-ng-s",
+        "gst": "h-u-s-t/s",
         "notes": ""
     },
     {
@@ -74551,7 +74551,7 @@
     },
     {
         "text": "inklings",
-        "gst": "nk-l-e-ng-s",
+        "gst": "nk-l/s",
         "notes": ""
     },
     {
@@ -74631,7 +74631,7 @@
     },
     {
         "text": "innings",
-        "gst": "n-e-ng-s",
+        "gst": "n/s",
         "notes": ""
     },
     {
@@ -77471,7 +77471,7 @@
     },
     {
         "text": "ironings",
-        "gst": "i-r-n-e-ng-s",
+        "gst": "i-r-n/s",
         "notes": ""
     },
     {
@@ -78921,7 +78921,7 @@
     },
     {
         "text": "joinings",
-        "gst": "j-o-e-n-e-ng-s",
+        "gst": "j-o-e-n/s",
         "notes": ""
     },
     {
@@ -79856,7 +79856,7 @@
     },
     {
         "text": "killings",
-        "gst": "k-e-l-e-ng-s",
+        "gst": "k-e-l/s",
         "notes": ""
     },
     {
@@ -80611,7 +80611,7 @@
     },
     {
         "text": "laclings",
-        "gst": "l-a-k-l-e-ng-s",
+        "gst": "l-a-k-l/s",
         "notes": ""
     },
     {
@@ -81286,7 +81286,7 @@
     },
     {
         "text": "lashings",
-        "gst": "l-a-sh-e-ng-s",
+        "gst": "l-a-sh/s",
         "notes": ""
     },
     {
@@ -81541,7 +81541,7 @@
     },
     {
         "text": "laughingstock",
-        "gst": "l-a-f-e-ng-s-t-a-k",
+        "gst": "l-a-f-h-s-t-a-k",
         "notes": ""
     },
     {
@@ -81561,7 +81561,7 @@
     },
     {
         "text": "launchings",
-        "gst": "l-o-n-ch-e-ng-s",
+        "gst": "l-o-n-ch/s",
         "notes": ""
     },
     {
@@ -81881,7 +81881,7 @@
     },
     {
         "text": "leanings",
-        "gst": "l-e-n-e-ng-s",
+        "gst": "l-e-n/s",
         "notes": ""
     },
     {
@@ -82161,7 +82161,7 @@
     },
     {
         "text": "leggings",
-        "gst": "l-e-g-e-ng-s",
+        "gst": "l-e-g/s",
         "notes": ""
     },
     {
@@ -82286,7 +82286,7 @@
     },
     {
         "text": "lemmings",
-        "gst": "l-e-m-e-ng-s",
+        "gst": "l-e-m/s",
         "notes": ""
     },
     {
@@ -83196,7 +83196,7 @@
     },
     {
         "text": "likings",
-        "gst": "l-i-k-e-ng-s",
+        "gst": "l-i-k/s",
         "notes": ""
     },
     {
@@ -83526,7 +83526,7 @@
     },
     {
         "text": "linings",
-        "gst": "l-i-n-e-ng-s",
+        "gst": "l-i-n/s",
         "notes": ""
     },
     {
@@ -83736,7 +83736,7 @@
     },
     {
         "text": "listings",
-        "gst": "l-e-s-t-e-ng-s",
+        "gst": "l-e-s-t/s",
         "notes": ""
     },
     {
@@ -84041,12 +84041,12 @@
     },
     {
         "text": "livings",
-        "gst": "l-e-v-e-ng-s",
+        "gst": "l-e-v/s",
         "notes": ""
     },
     {
         "text": "Livingston",
-        "gst": "l-e-v-e-ng-s-tn",
+        "gst": "l-e-v-h-tn",
         "notes": ""
     },
     {
@@ -84086,7 +84086,7 @@
     },
     {
         "text": "loadings",
-        "gst": "l-o-d-e-ng-s",
+        "gst": "l-o-d/s",
         "notes": ""
     },
     {
@@ -84331,7 +84331,7 @@
     },
     {
         "text": "lodgings",
-        "gst": "l-a-j-e-ng-s",
+        "gst": "l-a-j/s",
         "notes": ""
     },
     {
@@ -84491,7 +84491,7 @@
     },
     {
         "text": "loneings",
-        "gst": "l-o-n-e-ng-s",
+        "gst": "l-o-n/s",
         "notes": ""
     },
     {
@@ -84786,7 +84786,7 @@
     },
     {
         "text": "losings",
-        "gst": "l-o-s-e-ng-s",
+        "gst": "l-o-s/s",
         "notes": ""
     },
     {
@@ -86066,7 +86066,7 @@
     },
     {
         "text": "mailings",
-        "gst": "m-a-l-e-ng-s",
+        "gst": "m-a-l/s",
         "notes": ""
     },
     {
@@ -86196,7 +86196,7 @@
     },
     {
         "text": "makings",
-        "gst": "m-a-k-e-ng-s",
+        "gst": "m-a-k/s",
         "notes": ""
     },
     {
@@ -87316,7 +87316,7 @@
     },
     {
         "text": "markings",
-        "gst": "m-a-r-k-e-ng-s",
+        "gst": "m-a-r-k/s",
         "notes": ""
     },
     {
@@ -88041,7 +88041,7 @@
     },
     {
         "text": "mattings",
-        "gst": "m-a-t-e-ng-s",
+        "gst": "m-a-t/s",
         "notes": ""
     },
     {
@@ -88396,7 +88396,7 @@
     },
     {
         "text": "meanings",
-        "gst": "m-e-n-e-ng-s",
+        "gst": "m-e-n/s",
         "notes": ""
     },
     {
@@ -88751,7 +88751,7 @@
     },
     {
         "text": "meetings",
-        "gst": "m-e-t-e-ng-s",
+        "gst": "m-e-t/s",
         "notes": ""
     },
     {
@@ -89121,7 +89121,7 @@
     },
     {
         "text": "meninges",
-        "gst": "m-e-n-e-ng-s",
+        "gst": "m-e-n/s",
         "notes": ""
     },
     {
@@ -91026,7 +91026,7 @@
     },
     {
         "text": "misgivings",
-        "gst": "m-e-s-g-e-v-e-ng-s",
+        "gst": "m-e-s-g-e-v/s",
         "notes": ""
     },
     {
@@ -91306,7 +91306,7 @@
     },
     {
         "text": "misspellings",
-        "gst": "m-e-s-s-p-e-l-e-ng-s",
+        "gst": "m-e-s-s-p-e-l/s",
         "notes": ""
     },
     {
@@ -91446,7 +91446,7 @@
     },
     {
         "text": "misunderstandings",
-        "gst": "m-e-s-nt-r-s-t-a-nt-e-ng-s",
+        "gst": "m-e-s-nt-r-s-t-a-nt/s",
         "notes": ""
     },
     {
@@ -91981,7 +91981,7 @@
     },
     {
         "text": "moldings",
-        "gst": "m-o-ld-e-ng-s",
+        "gst": "m-o-ld/s",
         "notes": ""
     },
     {
@@ -92681,7 +92681,7 @@
     },
     {
         "text": "moorings",
-        "gst": "m-u-r-e-ng-s",
+        "gst": "m-u-r/s",
         "notes": ""
     },
     {
@@ -92851,7 +92851,7 @@
     },
     {
         "text": "mornings",
-        "gst": "m-o-r-n-e-ng-s",
+        "gst": "m-o-r-n/s",
         "notes": ""
     },
     {
@@ -93266,7 +93266,7 @@
     },
     {
         "text": "mountings",
-        "gst": "m-a-u-nt-e-ng-s",
+        "gst": "m-a-u-nt/s",
         "notes": ""
     },
     {
@@ -94306,7 +94306,7 @@
     },
     {
         "text": "mutterings",
-        "gst": "m-u-t-r-e-ng-s",
+        "gst": "m-u-t-r/s",
         "notes": ""
     },
     {
@@ -95691,7 +95691,7 @@
     },
     {
         "text": "nestlings",
-        "gst": "n-e-s-t-l-e-ng-s",
+        "gst": "n-e-s-t-l/s",
         "notes": ""
     },
     {
@@ -95726,7 +95726,7 @@
     },
     {
         "text": "nettings",
-        "gst": "n-e-t-e-ng-s",
+        "gst": "n-e-t/s",
         "notes": ""
     },
     {
@@ -97046,7 +97046,7 @@
     },
     {
         "text": "nosings",
-        "gst": "n-o-s-e-ng-s",
+        "gst": "n-o-s/s",
         "notes": ""
     },
     {
@@ -97611,7 +97611,7 @@
     },
     {
         "text": "nurslings",
-        "gst": "n-r-s-l-e-ng-s",
+        "gst": "n-r-s-l/s",
         "notes": ""
     },
     {
@@ -98821,7 +98821,7 @@
     },
     {
         "text": "offerings",
-        "gst": "o-f-r-e-ng-s",
+        "gst": "o-f-r/s",
         "notes": ""
     },
     {
@@ -99616,7 +99616,7 @@
     },
     {
         "text": "openings",
-        "gst": "o-p-n-e-ng-s",
+        "gst": "o-p-n/s",
         "notes": ""
     },
     {
@@ -100831,7 +100831,7 @@
     },
     {
         "text": "outings",
-        "gst": "a-u-t-e-ng-s",
+        "gst": "a-u-t/s",
         "notes": ""
     },
     {
@@ -101916,7 +101916,7 @@
     },
     {
         "text": "packings",
-        "gst": "p-a-k-e-ng-s",
+        "gst": "p-a-k/s",
         "notes": ""
     },
     {
@@ -101951,7 +101951,7 @@
     },
     {
         "text": "paddings",
-        "gst": "p-a-d-e-ng-s",
+        "gst": "p-a-d/s",
         "notes": ""
     },
     {
@@ -102096,7 +102096,7 @@
     },
     {
         "text": "paintings",
-        "gst": "p-a-nt-e-ng-s",
+        "gst": "p-a-nt/s",
         "notes": ""
     },
     {
@@ -102116,7 +102116,7 @@
     },
     {
         "text": "pairings",
-        "gst": "p-e-r-e-ng-s",
+        "gst": "p-e-r/s",
         "notes": ""
     },
     {
@@ -102241,7 +102241,7 @@
     },
     {
         "text": "palings",
-        "gst": "p-a-l-e-ng-s",
+        "gst": "p-a-l/s",
         "notes": ""
     },
     {
@@ -103166,7 +103166,7 @@
     },
     {
         "text": "parings",
-        "gst": "p-e-r-e-ng-s",
+        "gst": "p-e-r/s",
         "notes": ""
     },
     {
@@ -103536,7 +103536,7 @@
     },
     {
         "text": "partings",
-        "gst": "p-a-r-t-e-ng-s",
+        "gst": "p-a-r-t/s",
         "notes": ""
     },
     {
@@ -104706,7 +104706,7 @@
     },
     {
         "text": "peelings",
-        "gst": "p-e-l-e-ng-s",
+        "gst": "p-e-l/s",
         "notes": ""
     },
     {
@@ -107251,7 +107251,7 @@
     },
     {
         "text": "pickings",
-        "gst": "p-e-k-e-ng-s",
+        "gst": "p-e-k/s",
         "notes": ""
     },
     {
@@ -107611,7 +107611,7 @@
     },
     {
         "text": "pilterings",
-        "gst": "p-e-l-t-r-e-ng-s",
+        "gst": "p-e-l-t-r/s",
         "notes": ""
     },
     {
@@ -107846,7 +107846,7 @@
     },
     {
         "text": "pipings",
-        "gst": "p-i-p-e-ng-s",
+        "gst": "p-i-p/s",
         "notes": ""
     },
     {
@@ -108276,7 +108276,7 @@
     },
     {
         "text": "plaitings",
-        "gst": "p-l-a-t-e-ng-s",
+        "gst": "p-l-a-t/s",
         "notes": ""
     },
     {
@@ -108391,7 +108391,7 @@
     },
     {
         "text": "plantings",
-        "gst": "p-l-a-nt-e-ng-s",
+        "gst": "p-l-a-nt/s",
         "notes": ""
     },
     {
@@ -108491,7 +108491,7 @@
     },
     {
         "text": "platings",
-        "gst": "p-l-a-t-e-ng-s",
+        "gst": "p-l-a-t/s",
         "notes": ""
     },
     {
@@ -108616,7 +108616,7 @@
     },
     {
         "text": "playings",
-        "gst": "p-l-a-e-ng-s",
+        "gst": "p-l-a/s",
         "notes": ""
     },
     {
@@ -108686,7 +108686,7 @@
     },
     {
         "text": "pleadings",
-        "gst": "p-l-e-d-e-ng-s",
+        "gst": "p-l-e-d/s",
         "notes": ""
     },
     {
@@ -108956,7 +108956,7 @@
     },
     {
         "text": "plowings",
-        "gst": "p-l-a-u-e-ng-s",
+        "gst": "p-l-a-u/s",
         "notes": ""
     },
     {
@@ -110486,7 +110486,7 @@
     },
     {
         "text": "postings",
-        "gst": "p/e-ng-s",
+        "gst": "p-o-s-t/s",
         "notes": ""
     },
     {
@@ -110596,7 +110596,7 @@
     },
     {
         "text": "posturings",
-        "gst": "p-a-s-ch-r-e-ng-s",
+        "gst": "p-a-s-ch-r/s",
         "notes": ""
     },
     {
@@ -110816,7 +110816,7 @@
     },
     {
         "text": "poundings",
-        "gst": "p-a-u-nt-e-ng-s",
+        "gst": "p-a-u-nt/s",
         "notes": ""
     },
     {
@@ -111041,7 +111041,7 @@
     },
     {
         "text": "pratings",
-        "gst": "p-r-a-t-e-ng-s",
+        "gst": "p-r-a-t/s",
         "notes": ""
     },
     {
@@ -112276,7 +112276,7 @@
     },
     {
         "text": "pressings",
-        "gst": "p-r-e-s-e-ng-s",
+        "gst": "p-r-e-s/s",
         "notes": ""
     },
     {
@@ -112826,7 +112826,7 @@
     },
     {
         "text": "printings",
-        "gst": "p-r-e-nt-e-ng-s",
+        "gst": "p-r-e-nt/s",
         "notes": ""
     },
     {
@@ -113021,7 +113021,7 @@
     },
     {
         "text": "proceedings",
-        "gst": "p-r-o-s-e-d-e-ng-s",
+        "gst": "p-r-o-s-e-d/s",
         "notes": ""
     },
     {
@@ -115006,7 +115006,7 @@
     },
     {
         "text": "puddings",
-        "gst": "p-u-d-e-ng-s",
+        "gst": "p-u-d/s",
         "notes": ""
     },
     {
@@ -115296,7 +115296,7 @@
     },
     {
         "text": "punchings",
-        "gst": "p-u-nk-e-ng-s",
+        "gst": "p-u-nk/s",
         "notes": ""
     },
     {
@@ -116301,7 +116301,7 @@
     },
     {
         "text": "quarterings",
-        "gst": "k-w-o-r-t-r-e-ng-s",
+        "gst": "k-w-o-r-t-r/s",
         "notes": ""
     },
     {
@@ -117231,7 +117231,7 @@
     },
     {
         "text": "railings",
-        "gst": "r-a-l-e-ng-s",
+        "gst": "r-a-l/s",
         "notes": ""
     },
     {
@@ -117806,7 +117806,7 @@
     },
     {
         "text": "ratings",
-        "gst": "r-a-t-e-ng-s",
+        "gst": "r-a-t/s",
         "notes": ""
     },
     {
@@ -117931,7 +117931,7 @@
     },
     {
         "text": "rattlings",
-        "gst": "r-a-t-l-e-ng-s",
+        "gst": "r-a-t-l/s",
         "notes": ""
     },
     {
@@ -118011,7 +118011,7 @@
     },
     {
         "text": "ravings",
-        "gst": "r-a-v-e-ng-s",
+        "gst": "r-a-v/s",
         "notes": ""
     },
     {
@@ -118226,7 +118226,7 @@
     },
     {
         "text": "reachings",
-        "gst": "r-e-ch-e-ng-s",
+        "gst": "r-e-ch/s",
         "notes": ""
     },
     {
@@ -118281,7 +118281,7 @@
     },
     {
         "text": "readings",
-        "gst": "r-e-d-e-ng-s",
+        "gst": "r-e-d/s",
         "notes": ""
     },
     {
@@ -119041,7 +119041,7 @@
     },
     {
         "text": "reckonings",
-        "gst": "r-e-k-n-e-ng-s",
+        "gst": "r-e-k-n/s",
         "notes": ""
     },
     {
@@ -119286,7 +119286,7 @@
     },
     {
         "text": "recordings",
-        "gst": "r-e-k-o-rd-e-ng-s",
+        "gst": "r-e-k-o-rd/s",
         "notes": ""
     },
     {
@@ -121436,7 +121436,7 @@
     },
     {
         "text": "renderings",
-        "gst": "r-e-nt-r-e-ng-s",
+        "gst": "r-e-nt-r/s",
         "notes": ""
     },
     {
@@ -123111,7 +123111,7 @@
     },
     {
         "text": "retellings",
-        "gst": "r-e-t-e-l-e-ng-s",
+        "gst": "r-e-t-e-l/s",
         "notes": ""
     },
     {
@@ -124341,7 +124341,7 @@
     },
     {
         "text": "riflings",
-        "gst": "r-i-f-l-e-ng-s",
+        "gst": "r-i-f-l/s",
         "notes": ""
     },
     {
@@ -124691,7 +124691,7 @@
     },
     {
         "text": "risings",
-        "gst": "r-i-s-e-ng-s",
+        "gst": "r-i-s/s",
         "notes": ""
     },
     {
@@ -124876,7 +124876,7 @@
     },
     {
         "text": "roamings",
-        "gst": "r-o-m-e-ng-s",
+        "gst": "r-o-m/s",
         "notes": ""
     },
     {
@@ -124896,7 +124896,7 @@
     },
     {
         "text": "roarings",
-        "gst": "r-o-r-e-ng-s",
+        "gst": "r-o-r/s",
         "notes": ""
     },
     {
@@ -125766,7 +125766,7 @@
     },
     {
         "text": "rovings",
-        "gst": "r-o-v-e-ng-s",
+        "gst": "r-o-v/s",
         "notes": ""
     },
     {
@@ -125876,7 +125876,7 @@
     },
     {
         "text": "rubbings",
-        "gst": "r-u-b-e-ng-s",
+        "gst": "r-u-b/s",
         "notes": ""
     },
     {
@@ -126131,7 +126131,7 @@
     },
     {
         "text": "rulings",
-        "gst": "r-u-l-e-ng-s",
+        "gst": "r-u-l/s",
         "notes": ""
     },
     {
@@ -126156,7 +126156,7 @@
     },
     {
         "text": "rumblings",
-        "gst": "r-u-m-b-l-e-ng-s",
+        "gst": "r-u-m-b-l/s",
         "notes": ""
     },
     {
@@ -126446,7 +126446,7 @@
     },
     {
         "text": "rustlings",
-        "gst": "r-u-s-l-e-ng-s",
+        "gst": "r-u-s-l/s",
         "notes": ""
     },
     {
@@ -126861,7 +126861,7 @@
     },
     {
         "text": "sailings",
-        "gst": "s-a-l-e-ng-s",
+        "gst": "s-a-l/s",
         "notes": ""
     },
     {
@@ -127251,7 +127251,7 @@
     },
     {
         "text": "samplings",
-        "gst": "s-a-m-p-l-e-ng-s",
+        "gst": "s-a-m-p-l/s",
         "notes": ""
     },
     {
@@ -127586,7 +127586,7 @@
     },
     {
         "text": "saplings",
-        "gst": "s-a-p-l-e-ng-s",
+        "gst": "s-a-p-l/s",
         "notes": ""
     },
     {
@@ -127986,7 +127986,7 @@
     },
     {
         "text": "saunterings",
-        "gst": "s-o-nt-r-e-ng-s",
+        "gst": "s-o-nt-r/s",
         "notes": ""
     },
     {
@@ -128056,7 +128056,7 @@
     },
     {
         "text": "savings",
-        "gst": "s-a-v-e-ng-s",
+        "gst": "s-a-v/s",
         "notes": ""
     },
     {
@@ -128131,7 +128131,7 @@
     },
     {
         "text": "sayings",
-        "gst": "s-a-e-ng-s",
+        "gst": "s-a/s",
         "notes": ""
     },
     {
@@ -128346,7 +128346,7 @@
     },
     {
         "text": "scantlings",
-        "gst": "s-k-a-nt-l-e-ng-s",
+        "gst": "s-k-a-nt-l/s",
         "notes": ""
     },
     {
@@ -128501,7 +128501,7 @@
     },
     {
         "text": "scatterings",
-        "gst": "s-k-a-t-r-e-ng-s",
+        "gst": "s-k-a-t-r/s",
         "notes": ""
     },
     {
@@ -128931,7 +128931,7 @@
     },
     {
         "text": "scoldings",
-        "gst": "s-k-o-ld-e-ng-s",
+        "gst": "s-k-o-ld/s",
         "notes": ""
     },
     {
@@ -129016,7 +129016,7 @@
     },
     {
         "text": "scorings",
-        "gst": "s-k-o-r-e-ng-s",
+        "gst": "s-k-o-r/s",
         "notes": ""
     },
     {
@@ -129121,7 +129121,7 @@
     },
     {
         "text": "scourings",
-        "gst": "s-k-a-u-r-e-ng-s",
+        "gst": "s-k-a-u-r/s",
         "notes": ""
     },
     {
@@ -129171,7 +129171,7 @@
     },
     {
         "text": "scrabblings",
-        "gst": "s-k-r-a-b-l-e-ng-s",
+        "gst": "s-k-r-a-b-l/s",
         "notes": ""
     },
     {
@@ -129191,7 +129191,7 @@
     },
     {
         "text": "scramblings",
-        "gst": "s-k-r-a-m-b-l-e-ng-s",
+        "gst": "s-k-r-a-m-b-l/s",
         "notes": ""
     },
     {
@@ -129226,7 +129226,7 @@
     },
     {
         "text": "scrapings",
-        "gst": "s-k-r-a-p-e-ng-s",
+        "gst": "s-k-r-a-p/s",
         "notes": ""
     },
     {
@@ -129271,7 +129271,7 @@
     },
     {
         "text": "scratchings",
-        "gst": "s-k-r-a-ch-e-ng-s",
+        "gst": "s-k-r-a-ch/s",
         "notes": ""
     },
     {
@@ -129291,7 +129291,7 @@
     },
     {
         "text": "scrawlings",
-        "gst": "s-k-r-o-l-e-ng-s",
+        "gst": "s-k-r-o-l/s",
         "notes": ""
     },
     {
@@ -129366,7 +129366,7 @@
     },
     {
         "text": "screenings",
-        "gst": "s-k-r-e-n-e-ng-s",
+        "gst": "s-k-r-e-n/s",
         "notes": ""
     },
     {
@@ -129411,7 +129411,7 @@
     },
     {
         "text": "scribblings",
-        "gst": "s-k-r-e-b-l-e-ng-s",
+        "gst": "s-k-r-e-b-l/s",
         "notes": ""
     },
     {
@@ -129561,7 +129561,7 @@
     },
     {
         "text": "scrubbings",
-        "gst": "s-k-r-u-b-e-ng-s",
+        "gst": "s-k-r-u-b/s",
         "notes": ""
     },
     {
@@ -129691,7 +129691,7 @@
     },
     {
         "text": "scufflings",
-        "gst": "s-k-u-f-l-e-ng-s",
+        "gst": "s-k-u-f-l/s",
         "notes": ""
     },
     {
@@ -130001,7 +130001,7 @@
     },
     {
         "text": "seasonings",
-        "gst": "s-e-s-n-e-ng-s",
+        "gst": "s-e-s-n/s",
         "notes": ""
     },
     {
@@ -130486,7 +130486,7 @@
     },
     {
         "text": "seedlings",
-        "gst": "s-e-d-l-e-ng-s",
+        "gst": "s-e-d-l/s",
         "notes": ""
     },
     {
@@ -130951,7 +130951,7 @@
     },
     {
         "text": "self-registering",
-        "gst": "s2/r-e-s-j-e-r-e-j-e-ng-s",
+        "gst": "s2/r-e-s-j-e-r-e-j/s",
         "notes": ""
     },
     {
@@ -132231,7 +132231,7 @@
     },
     {
         "text": "servings",
-        "gst": "s-r-v-e-ng-s",
+        "gst": "s-r-v/s",
         "notes": ""
     },
     {
@@ -132311,7 +132311,7 @@
     },
     {
         "text": "settings",
-        "gst": "s-e-t-e-ng-s",
+        "gst": "s-e-t/s",
         "notes": ""
     },
     {
@@ -132571,7 +132571,7 @@
     },
     {
         "text": "shadings",
-        "gst": "sh-a-d-e-ng-s",
+        "gst": "sh-a-d/s",
         "notes": ""
     },
     {
@@ -133071,7 +133071,7 @@
     },
     {
         "text": "shavings",
-        "gst": "sh-a-v-e-ng-s",
+        "gst": "sh-a-v/s",
         "notes": ""
     },
     {
@@ -133156,7 +133156,7 @@
     },
     {
         "text": "shearings",
-        "gst": "sh-e-r-e-ng-s",
+        "gst": "sh-e-r/s",
         "notes": ""
     },
     {
@@ -133266,7 +133266,7 @@
     },
     {
         "text": "sheetings",
-        "gst": "sh-e-t-e-ng-s",
+        "gst": "sh-e-t/s",
         "notes": ""
     },
     {
@@ -133516,7 +133516,7 @@
     },
     {
         "text": "shillings",
-        "gst": "sh-e-l-e-ng-s",
+        "gst": "sh-e-l/s",
         "notes": ""
     },
     {
@@ -133746,7 +133746,7 @@
     },
     {
         "text": "shirtings",
-        "gst": "sh-r-t-e-ng-s",
+        "gst": "sh-r-t/s",
         "notes": ""
     },
     {
@@ -133771,7 +133771,7 @@
     },
     {
         "text": "shiverings",
-        "gst": "sh-e-v-r-e-ng-s",
+        "gst": "sh-e-v-r/s",
         "notes": ""
     },
     {
@@ -133881,7 +133881,7 @@
     },
     {
         "text": "shootings",
-        "gst": "sh-u-t-e-ng-s",
+        "gst": "sh-u-t/s",
         "notes": ""
     },
     {
@@ -133971,7 +133971,7 @@
     },
     {
         "text": "shortcomings",
-        "gst": "sh-t-k-u-m-e-ng-s",
+        "gst": "sh-t-k-u-m/s",
         "notes": ""
     },
     {
@@ -134206,7 +134206,7 @@
     },
     {
         "text": "showings",
-        "gst": "sh-o-e-ng-s",
+        "gst": "sh-o/s",
         "notes": ""
     },
     {
@@ -134486,7 +134486,7 @@
     },
     {
         "text": "shudderings",
-        "gst": "sh-u-d-r-e-s-e-ng-s",
+        "gst": "sh-u-d-r-e-s/s",
         "notes": ""
     },
     {
@@ -134506,7 +134506,7 @@
     },
     {
         "text": "shufflings",
-        "gst": "sh-u-f-l-e-ng-s",
+        "gst": "sh-u-f-l/s",
         "notes": ""
     },
     {
@@ -134766,7 +134766,7 @@
     },
     {
         "text": "sidings",
-        "gst": "s-i-d-e-ng-s",
+        "gst": "s-i-d/s",
         "notes": ""
     },
     {
@@ -134806,7 +134806,7 @@
     },
     {
         "text": "siftings",
-        "gst": "s-e-f-t-e-ng-s",
+        "gst": "s-e-f-t/s",
         "notes": ""
     },
     {
@@ -134826,7 +134826,7 @@
     },
     {
         "text": "sighings",
-        "gst": "s-i-e-ng-s",
+        "gst": "s-i/s",
         "notes": ""
     },
     {
@@ -134841,7 +134841,7 @@
     },
     {
         "text": "sightings",
-        "gst": "s-i-t-e-ng-s",
+        "gst": "s-i-t/s",
         "notes": ""
     },
     {
@@ -135511,7 +135511,7 @@
     },
     {
         "text": "sinkings",
-        "gst": "s-e-nk-e-ng-s",
+        "gst": "s-e-nk/s",
         "notes": ""
     },
     {
@@ -135726,7 +135726,7 @@
     },
     {
         "text": "sittings",
-        "gst": "s-e-t-e-ng-s",
+        "gst": "s-e-t/s",
         "notes": ""
     },
     {
@@ -135776,7 +135776,7 @@
     },
     {
         "text": "sizings",
-        "gst": "s-i-s-e-ng-s",
+        "gst": "s-i-s/s",
         "notes": ""
     },
     {
@@ -135906,7 +135906,7 @@
     },
     {
         "text": "skewings",
-        "gst": "s-k-u-e-ng-s",
+        "gst": "s-k-u/s",
         "notes": ""
     },
     {
@@ -136111,7 +136111,7 @@
     },
     {
         "text": "skirtings",
-        "gst": "s-k-r-t-e-ng-s",
+        "gst": "s-k-r-t/s",
         "notes": ""
     },
     {
@@ -136161,7 +136161,7 @@
     },
     {
         "text": "skivings",
-        "gst": "s-k-i-v-e-ng-s",
+        "gst": "s-k-i-v/s",
         "notes": ""
     },
     {
@@ -136436,7 +136436,7 @@
     },
     {
         "text": "slashings",
-        "gst": "s-l-a-sh-e-ng-s",
+        "gst": "s-l-a-sh/s",
         "notes": ""
     },
     {
@@ -136536,7 +136536,7 @@
     },
     {
         "text": "slayings",
-        "gst": "s-l-a-e-ng-s",
+        "gst": "s-l-a/s",
         "notes": ""
     },
     {
@@ -137211,7 +137211,7 @@
     },
     {
         "text": "sluicings",
-        "gst": "s-l-u-s-e-ng-s",
+        "gst": "s-l-u-s/s",
         "notes": ""
     },
     {
@@ -137426,7 +137426,7 @@
     },
     {
         "text": "smatterings",
-        "gst": "s-m-a-t-r-e-ng-s",
+        "gst": "s-m-a-t-r/s",
         "notes": ""
     },
     {
@@ -138076,7 +138076,7 @@
     },
     {
         "text": "snickerings",
-        "gst": "s-n-e-k-r-e-ng-s",
+        "gst": "s-n-e-k-r/s",
         "notes": ""
     },
     {
@@ -138106,7 +138106,7 @@
     },
     {
         "text": "sniffings",
-        "gst": "s-n-e-f-e-ng-s",
+        "gst": "s-n-e-f/s",
         "notes": ""
     },
     {
@@ -138261,7 +138261,7 @@
     },
     {
         "text": "snorings",
-        "gst": "s-n-o-r-e-ng-s",
+        "gst": "s-n-o-r/s",
         "notes": ""
     },
     {
@@ -138281,7 +138281,7 @@
     },
     {
         "text": "snortings",
-        "gst": "s-n-o-r-t-e-ng-s",
+        "gst": "s-n-o-r-t/s",
         "notes": ""
     },
     {
@@ -138431,7 +138431,7 @@
     },
     {
         "text": "snubbings",
-        "gst": "s-n-u-b-e-ng-s",
+        "gst": "s-n-u-b/s",
         "notes": ""
     },
     {
@@ -138466,7 +138466,7 @@
     },
     {
         "text": "snufflings",
-        "gst": "s-n-u-f-l-e-ng-s",
+        "gst": "s-n-u-f-l/s",
         "notes": ""
     },
     {
@@ -139836,7 +139836,7 @@
     },
     {
         "text": "soundings",
-        "gst": "s-a-u-nt-e-ng-s",
+        "gst": "s-a-u-nt/s",
         "notes": ""
     },
     {
@@ -140061,7 +140061,7 @@
     },
     {
         "text": "sowings",
-        "gst": "s-o-e-ng-s",
+        "gst": "s-o/s",
         "notes": ""
     },
     {
@@ -140191,7 +140191,7 @@
     },
     {
         "text": "spankings",
-        "gst": "s-p-a-nk-e-ng-s",
+        "gst": "s-p-a-nk/s",
         "notes": ""
     },
     {
@@ -140366,7 +140366,7 @@
     },
     {
         "text": "spatterings",
-        "gst": "s-p-a-t-r-e-ng-s",
+        "gst": "s-p-a-t-r/s",
         "notes": ""
     },
     {
@@ -140766,7 +140766,7 @@
     },
     {
         "text": "spellings",
-        "gst": "s-p-e-l-e-ng-s",
+        "gst": "s-p-e-l/s",
         "notes": ""
     },
     {
@@ -140791,7 +140791,7 @@
     },
     {
         "text": "spendings",
-        "gst": "s-p-e-nt-e-ng-s",
+        "gst": "s-p-e-nt/s",
         "notes": ""
     },
     {
@@ -141166,7 +141166,7 @@
     },
     {
         "text": "splashings",
-        "gst": "s-p-l-a-sh-e-ng-s",
+        "gst": "s-p-l-a-sh/s",
         "notes": ""
     },
     {
@@ -141251,7 +141251,7 @@
     },
     {
         "text": "splicings",
-        "gst": "s-p-l-i-s-e-ng-s",
+        "gst": "s-p-l-i-s/s",
         "notes": ""
     },
     {
@@ -141286,7 +141286,7 @@
     },
     {
         "text": "splittings",
-        "gst": "s-p-l-e-t-e-ng-s",
+        "gst": "s-p-l-e-t/s",
         "notes": ""
     },
     {
@@ -141436,7 +141436,7 @@
     },
     {
         "text": "spongings",
-        "gst": "s-p-a-ng-e-ng-s",
+        "gst": "s-p-a-ng/s",
         "notes": ""
     },
     {
@@ -141661,7 +141661,7 @@
     },
     {
         "text": "spoutings",
-        "gst": "s-p-a-u-t-e-ng-s",
+        "gst": "s-p-a-u-t/s",
         "notes": ""
     },
     {
@@ -141836,7 +141836,7 @@
     },
     {
         "text": "sprinklings",
-        "gst": "s-p-r-e-nk-l-e-ng-s",
+        "gst": "s-p-r-e-nk-l/s",
         "notes": ""
     },
     {
@@ -142011,7 +142011,7 @@
     },
     {
         "text": "sputterings",
-        "gst": "s-p-u-t-r-e-ng-s",
+        "gst": "s-p-u-t-r/s",
         "notes": ""
     },
     {
@@ -142071,7 +142071,7 @@
     },
     {
         "text": "squabblings",
-        "gst": "s-k-w-a-b-l-e-ng-s",
+        "gst": "s-k-w-a-b-l/s",
         "notes": ""
     },
     {
@@ -142111,7 +142111,7 @@
     },
     {
         "text": "squallings",
-        "gst": "s-k-w-o-l-e-ng-s",
+        "gst": "s-k-w-o-l/s",
         "notes": ""
     },
     {
@@ -142306,7 +142306,7 @@
     },
     {
         "text": "squirmings",
-        "gst": "s-k-w-r-m-e-ng-s",
+        "gst": "s-k-w-r-m/s",
         "notes": ""
     },
     {
@@ -142381,7 +142381,7 @@
     },
     {
         "text": "stabbings",
-        "gst": "s-t-a-b-e-ng-s",
+        "gst": "s-t-a-b/s",
         "notes": ""
     },
     {
@@ -142711,7 +142711,7 @@
     },
     {
         "text": "stampings",
-        "gst": "s-t-a-m-p-e-ng-s",
+        "gst": "s-t-a-m-p/s",
         "notes": ""
     },
     {
@@ -142756,7 +142756,7 @@
     },
     {
         "text": "standings",
-        "gst": "s-t-a-nt-e-ng-s",
+        "gst": "s-t-a-nt/s",
         "notes": ""
     },
     {
@@ -142906,7 +142906,7 @@
     },
     {
         "text": "starlings",
-        "gst": "s-t-a-r-l-e-ng-s",
+        "gst": "s-t-a-r-l/s",
         "notes": ""
     },
     {
@@ -143956,7 +143956,7 @@
     },
     {
         "text": "stipplings",
-        "gst": "s-t-e-p-l-e-ng-s",
+        "gst": "s-t-e-p-l/s",
         "notes": ""
     },
     {
@@ -144011,7 +144011,7 @@
     },
     {
         "text": "stirrings",
-        "gst": "s-t-r-e-ng-s",
+        "gst": "s-t-r/s",
         "notes": ""
     },
     {
@@ -144036,7 +144036,7 @@
     },
     {
         "text": "stitchings",
-        "gst": "s-t-e-ch-e-ng-s",
+        "gst": "s-t-e-ch/s",
         "notes": ""
     },
     {
@@ -144121,7 +144121,7 @@
     },
     {
         "text": "stockings",
-        "gst": "s-t-a-k-e-ng-s",
+        "gst": "s-t-a-k/s",
         "notes": ""
     },
     {
@@ -144686,7 +144686,7 @@
     },
     {
         "text": "strainings",
-        "gst": "s-t-r-a-n-e-ng-s",
+        "gst": "s-t-r-a-n/s",
         "notes": ""
     },
     {
@@ -144821,7 +144821,7 @@
     },
     {
         "text": "strappings",
-        "gst": "s-t-r-a-p-e-ng-s",
+        "gst": "s-t-r-a-p/s",
         "notes": ""
     },
     {
@@ -145226,7 +145226,7 @@
     },
     {
         "text": "striplings",
-        "gst": "s-t-r-e-p-l-e-ng-s",
+        "gst": "s-t-r-e-p-l/s",
         "notes": ""
     },
     {
@@ -145236,7 +145236,7 @@
     },
     {
         "text": "strippings",
-        "gst": "s-t-r-e-p-e-ng-s",
+        "gst": "s-t-r-e-p/s",
         "notes": ""
     },
     {
@@ -145276,7 +145276,7 @@
     },
     {
         "text": "strokings",
-        "gst": "s-t-r-o-k-e-ng-s",
+        "gst": "s-t-r-o-k/s",
         "notes": ""
     },
     {
@@ -145406,7 +145406,7 @@
     },
     {
         "text": "strugglings",
-        "gst": "s-t-r-u-g-l-e-ng-s",
+        "gst": "s-t-r-u-g-l/s",
         "notes": ""
     },
     {
@@ -145451,7 +145451,7 @@
     },
     {
         "text": "struttings",
-        "gst": "s-t-r-u-t-e-ng-s",
+        "gst": "s-t-r-u-t/s",
         "notes": ""
     },
     {
@@ -145606,7 +145606,7 @@
     },
     {
         "text": "stuffings",
-        "gst": "s-t-u-f-e-ng-s",
+        "gst": "s-t-u-f/s",
         "notes": ""
     },
     {
@@ -145846,7 +145846,7 @@
     },
     {
         "text": "stylings",
-        "gst": "s-t-i-l-e-ng-s",
+        "gst": "s-t-i-l/s",
         "notes": ""
     },
     {
@@ -146921,7 +146921,7 @@
     },
     {
         "text": "sucklings",
-        "gst": "s-u-k-l-e-ng-s",
+        "gst": "s-u-k-l/s",
         "notes": ""
     },
     {
@@ -147186,7 +147186,7 @@
     },
     {
         "text": "Suitings",
-        "gst": "s-u-t-e-ng-s",
+        "gst": "s-u-t/s",
         "notes": ""
     },
     {
@@ -147201,7 +147201,7 @@
     },
     {
         "text": "sulferings",
-        "gst": "s-u-l-f-r-e-ng-s",
+        "gst": "s-u-l-f-r/s",
         "notes": ""
     },
     {
@@ -148336,7 +148336,7 @@
     },
     {
         "text": "surfacings",
-        "gst": "s-r-f-s-e-ng-s",
+        "gst": "s-r-f-s/s",
         "notes": ""
     },
     {
@@ -148546,7 +148546,7 @@
     },
     {
         "text": "surroundings",
-        "gst": "s-r-a-u-nt-e-ng-s",
+        "gst": "s-r-a-u-nt/s",
         "notes": ""
     },
     {
@@ -149096,7 +149096,7 @@
     },
     {
         "text": "sweepings",
-        "gst": "s-u-e-p-e-ng-s",
+        "gst": "s-u-e-p/s",
         "notes": ""
     },
     {
@@ -149136,7 +149136,7 @@
     },
     {
         "text": "sweetenings",
-        "gst": "s-u-e-tn-e-ng-s",
+        "gst": "s-u-e-tn/s",
         "notes": ""
     },
     {
@@ -149216,7 +149216,7 @@
     },
     {
         "text": "swellings",
-        "gst": "s-u-e-l-e-ng-s",
+        "gst": "s-u-e-l/s",
         "notes": ""
     },
     {
@@ -150381,7 +150381,7 @@
     },
     {
         "text": "tailings",
-        "gst": "t-a-l-e-ng-s",
+        "gst": "t-a-l/s",
         "notes": ""
     },
     {
@@ -150461,7 +150461,7 @@
     },
     {
         "text": "takings",
-        "gst": "t-a-k-e-ng-s",
+        "gst": "t-a-k/s",
         "notes": ""
     },
     {
@@ -150866,7 +150866,7 @@
     },
     {
         "text": "tannings",
-        "gst": "t-a-n-e-ng-s",
+        "gst": "t-a-n/s",
         "notes": ""
     },
     {
@@ -151001,7 +151001,7 @@
     },
     {
         "text": "tappings",
-        "gst": "t-a-p-e-ng-s",
+        "gst": "t-a-p/s",
         "notes": ""
     },
     {
@@ -151306,7 +151306,7 @@
     },
     {
         "text": "tastings",
-        "gst": "t-a-s-t-e-ng-s",
+        "gst": "t-a-s-t/s",
         "notes": ""
     },
     {
@@ -151596,7 +151596,7 @@
     },
     {
         "text": "teachings",
-        "gst": "t-e-ch-e-ng-s",
+        "gst": "t-e-ch/s",
         "notes": ""
     },
     {
@@ -152006,7 +152006,7 @@
     },
     {
         "text": "tellings",
-        "gst": "t-e-l-e-ng-s",
+        "gst": "t-e-l/s",
         "notes": ""
     },
     {
@@ -152836,7 +152836,7 @@
     },
     {
         "text": "testings",
-        "gst": "t-e-s-t-e-ng-s",
+        "gst": "t-e-s-t/s",
         "notes": ""
     },
     {
@@ -154111,7 +154111,7 @@
     },
     {
         "text": "things",
-        "gst": "th-e-ng-s",
+        "gst": "th/s",
         "notes": ""
     },
     {
@@ -154526,7 +154526,7 @@
     },
     {
         "text": "thrashings",
-        "gst": "th-r-a-sh-e-ng-s",
+        "gst": "th-r-a-sh/s",
         "notes": ""
     },
     {
@@ -154991,7 +154991,7 @@
     },
     {
         "text": "thumpings",
-        "gst": "th-u-m-p-e-ng-s",
+        "gst": "th-u-m-p/s",
         "notes": ""
     },
     {
@@ -155036,7 +155036,7 @@
     },
     {
         "text": "thunderings",
-        "gst": "th-u-nt-r-e-ng-s",
+        "gst": "th-u-nt-r/s",
         "notes": ""
     },
     {
@@ -155171,7 +155171,7 @@
     },
     {
         "text": "tickings",
-        "gst": "t-e-k-e-ng-s",
+        "gst": "t-e-k/s",
         "notes": ""
     },
     {
@@ -155271,7 +155271,7 @@
     },
     {
         "text": "tidings",
-        "gst": "t-i-d-e-ng-s",
+        "gst": "t-i-d/s",
         "notes": ""
     },
     {
@@ -155596,7 +155596,7 @@
     },
     {
         "text": "timings",
-        "gst": "t-i-m-e-ng-s",
+        "gst": "t-i-m/s",
         "notes": ""
     },
     {
@@ -155701,7 +155701,7 @@
     },
     {
         "text": "tinglings",
-        "gst": "t-e-ng-g-l-e-ng-s",
+        "gst": "t-e-ng-g-l/s",
         "notes": ""
     },
     {
@@ -155736,7 +155736,7 @@
     },
     {
         "text": "tinklings",
-        "gst": "t-e-nk-l-e-ng-s",
+        "gst": "t-e-nk-l/s",
         "notes": ""
     },
     {
@@ -156011,7 +156011,7 @@
     },
     {
         "text": "tithings",
-        "gst": "t-i-th-e-ng-s",
+        "gst": "t-i-th/s",
         "notes": ""
     },
     {
@@ -156111,7 +156111,7 @@
     },
     {
         "text": "titterings",
-        "gst": "t-e-t-r-e-ng-s",
+        "gst": "t-e-t-r/s",
         "notes": ""
     },
     {
@@ -157116,7 +157116,7 @@
     },
     {
         "text": "tooling's",
-        "gst": "t-u-l-e-ng-s",
+        "gst": "t-u-l/s",
         "notes": ""
     },
     {
@@ -157331,7 +157331,7 @@
     },
     {
         "text": "toppings",
-        "gst": "t-a-p-e-ng-s",
+        "gst": "t-a-p/s",
         "notes": ""
     },
     {
@@ -157601,7 +157601,7 @@
     },
     {
         "text": "tossings",
-        "gst": "t-o-s-e-ng-s",
+        "gst": "t-o-s/s",
         "notes": ""
     },
     {
@@ -157701,7 +157701,7 @@
     },
     {
         "text": "totterings",
-        "gst": "t-a-t-r-e-ng-s",
+        "gst": "t-a-t-r/s",
         "notes": ""
     },
     {
@@ -157911,7 +157911,7 @@
     },
     {
         "text": "towelings",
-        "gst": "t-a-u-l-e-ng-s",
+        "gst": "t-a-u-l/s",
         "notes": ""
     },
     {
@@ -158086,7 +158086,7 @@
     },
     {
         "text": "tracings",
-        "gst": "t-r-a-s-e-ng-s",
+        "gst": "t-r-a-s/s",
         "notes": ""
     },
     {
@@ -159086,7 +159086,7 @@
     },
     {
         "text": "trappings",
-        "gst": "t-r-a-p-e-ng-s",
+        "gst": "t-r-a-p/s",
         "notes": ""
     },
     {
@@ -159381,7 +159381,7 @@
     },
     {
         "text": "tremblings",
-        "gst": "t-r-e-m-b-l-e-ng-s",
+        "gst": "t-r-e-m-b-l/s",
         "notes": ""
     },
     {
@@ -159696,7 +159696,7 @@
     },
     {
         "text": "tricklings",
-        "gst": "t-r-e-k-l-e-ng-s",
+        "gst": "t-r-e-k-l/s",
         "notes": ""
     },
     {
@@ -159776,7 +159776,7 @@
     },
     {
         "text": "triflings",
-        "gst": "t-r-i-f-l-e-ng-s",
+        "gst": "t-r-i-f-l/s",
         "notes": ""
     },
     {
@@ -159876,7 +159876,7 @@
     },
     {
         "text": "trimmings",
-        "gst": "t-r-e-m-e-ng-s",
+        "gst": "t-r-e-m/s",
         "notes": ""
     },
     {
@@ -160351,7 +160351,7 @@
     },
     {
         "text": "trouncings",
-        "gst": "t-r-a-u-n-s-e-ng-s",
+        "gst": "t-r-a-u-n-s/s",
         "notes": ""
     },
     {
@@ -160581,7 +160581,7 @@
     },
     {
         "text": "trumpetings",
-        "gst": "t-r-u-m-p-t-e-ng-s",
+        "gst": "t-r-u-m-p-t/s",
         "notes": ""
     },
     {
@@ -160651,7 +160651,7 @@
     },
     {
         "text": "trussings",
-        "gst": "t-r-u-s-e-ng-s",
+        "gst": "t-r-u-s/s",
         "notes": ""
     },
     {
@@ -160791,7 +160791,7 @@
     },
     {
         "text": "tubbings",
-        "gst": "t-u-b-e-ng-s",
+        "gst": "t-u-b/s",
         "notes": ""
     },
     {
@@ -160846,7 +160846,7 @@
     },
     {
         "text": "tubings",
-        "gst": "t-u-b-e-ng-s",
+        "gst": "t-u-b/s",
         "notes": ""
     },
     {
@@ -160901,7 +160901,7 @@
     },
     {
         "text": "tuftings",
-        "gst": "t-u-f-t-e-ng-s",
+        "gst": "t-u-f-t/s",
         "notes": ""
     },
     {
@@ -160926,7 +160926,7 @@
     },
     {
         "text": "tuggings",
-        "gst": "t-u-g-e-ng-s",
+        "gst": "t-u-g/s",
         "notes": ""
     },
     {
@@ -161116,7 +161116,7 @@
     },
     {
         "text": "tunings",
-        "gst": "t-u-n-e-ng-s",
+        "gst": "t-u-n/s",
         "notes": ""
     },
     {
@@ -161291,7 +161291,7 @@
     },
     {
         "text": "turnings",
-        "gst": "t-r-n-e-ng-s",
+        "gst": "t-r-n/s",
         "notes": ""
     },
     {
@@ -161571,7 +161571,7 @@
     },
     {
         "text": "twinklings",
-        "gst": "t-w-e-nk-l-e-ng-s",
+        "gst": "t-w-e-nk-l/s",
         "notes": ""
     },
     {
@@ -161601,7 +161601,7 @@
     },
     {
         "text": "twistings",
-        "gst": "t-w-e-s-t-e-ng-s",
+        "gst": "t-w-e-s-t/s",
         "notes": ""
     },
     {
@@ -161641,7 +161641,7 @@
     },
     {
         "text": "twitterings",
-        "gst": "t-w-e-t-r-e-ng-s",
+        "gst": "t-w-e-t-r/s",
         "notes": ""
     },
     {
@@ -161746,7 +161746,7 @@
     },
     {
         "text": "typings",
-        "gst": "t-i-p-e-ng-s",
+        "gst": "t-i-p/s",
         "notes": ""
     },
     {
@@ -163261,7 +163261,7 @@
     },
     {
         "text": "underlings",
-        "gst": "u/l-e-ng-s",
+        "gst": "u/l/s",
         "notes": ""
     },
     {
@@ -163306,7 +163306,7 @@
     },
     {
         "text": "underpinnings",
-        "gst": "u/p-e-n-e-ng-s",
+        "gst": "u/p-e-n/s",
         "notes": ""
     },
     {
@@ -163406,7 +163406,7 @@
     },
     {
         "text": "understandings",
-        "gst": "u/s-t-a-nt-e-ng-s",
+        "gst": "u/s-t-a-nt/s",
         "notes": ""
     },
     {
@@ -163446,12 +163446,12 @@
     },
     {
         "text": "undertakings",
-        "gst": "u/t-a-k-e-ng-s",
+        "gst": "u/t-a-k/s",
         "notes": ""
     },
     {
         "text": "underthings",
-        "gst": "u/th-e-ng-s",
+        "gst": "u/th/s",
         "notes": ""
     },
     {
@@ -167936,7 +167936,7 @@
     },
     {
         "text": "unwincingly",
-        "gst": "u-n-w-e-ng-s/e",
+        "gst": "u-n-u-e-n-s/e",
         "notes": ""
     },
     {
@@ -168316,7 +168316,7 @@
     },
     {
         "text": "uprisings",
-        "gst": "u-p-r-i-s-e-ng-s",
+        "gst": "u-p-r-i-s/s",
         "notes": ""
     },
     {
@@ -168506,7 +168506,7 @@
     },
     {
         "text": "urgings",
-        "gst": "r-j-e-ng-s",
+        "gst": "r-j/s",
         "notes": ""
     },
     {
@@ -169216,7 +169216,7 @@
     },
     {
         "text": "vaporings",
-        "gst": "v-a-p-r-e-ng-s",
+        "gst": "v-a-p-r/s",
         "notes": ""
     },
     {
@@ -169351,7 +169351,7 @@
     },
     {
         "text": "varnishings",
-        "gst": "v-a-r-n-e-sh-e-ng-s",
+        "gst": "v-a-r-n-e-sh/s",
         "notes": ""
     },
     {
@@ -169561,7 +169561,7 @@
     },
     {
         "text": "veinings",
-        "gst": "v-i-n-e-ng-s",
+        "gst": "v-i-n/s",
         "notes": ""
     },
     {
@@ -170701,7 +170701,7 @@
     },
     {
         "text": "vikings",
-        "gst": "v-i-k-e-ng-s",
+        "gst": "v-i-k/s",
         "notes": ""
     },
     {
@@ -171936,17 +171936,17 @@
     },
     {
         "text": "wad",
-        "gst": "w-a-d",
+        "gst": "u-o-d",
         "notes": ""
     },
     {
         "text": "wadded",
-        "gst": "w-a-td",
+        "gst": "u-o-td",
         "notes": ""
     },
     {
         "text": "waddings",
-        "gst": "w-a-d-e-ng-s",
+        "gst": "u-o-d/s",
         "notes": ""
     },
     {
@@ -171956,27 +171956,27 @@
     },
     {
         "text": "waddle",
-        "gst": "w-a-d-l",
+        "gst": "u-o-d-l",
         "notes": ""
     },
     {
         "text": "waddlingly",
-        "gst": "w-a-d-l/e",
+        "gst": "u-o-d-l/e",
         "notes": ""
     },
     {
         "text": "wade",
-        "gst": "w-a-d",
+        "gst": "u-a-d",
         "notes": ""
     },
     {
         "text": "waded",
-        "gst": "w-a-td",
+        "gst": "u-a-td",
         "notes": ""
     },
     {
         "text": "wader",
-        "gst": "w-a-d-r",
+        "gst": "u-a-d-r",
         "notes": ""
     },
     {
@@ -171986,72 +171986,72 @@
     },
     {
         "text": "waffle",
-        "gst": "w-a-f",
+        "gst": "u-o-f",
         "notes": ""
     },
     {
         "text": "waft",
-        "gst": "w-a-f-t",
+        "gst": "u-a-f-t",
         "notes": ""
     },
     {
         "text": "wag",
-        "gst": "w-a-g",
+        "gst": "u-a-g",
         "notes": ""
     },
     {
         "text": "wage",
-        "gst": "w-a-j",
+        "gst": "u-a-j",
         "notes": ""
     },
     {
         "text": "waged",
-        "gst": "w-a-j-d",
+        "gst": "u-a-j-d",
         "notes": ""
     },
     {
         "text": "wager",
-        "gst": "w-a-j-r",
+        "gst": "u-a-j-r",
         "notes": ""
     },
     {
         "text": "wagered",
-        "gst": "w-a-j-rd",
+        "gst": "u-a-j-rd",
         "notes": ""
     },
     {
         "text": "wagerings",
-        "gst": "w-a-j-r-e-ng-s",
+        "gst": "u-a-j-r/s",
         "notes": ""
     },
     {
         "text": "wages",
-        "gst": "w-a-j-s",
+        "gst": "u-a-j-s",
         "notes": ""
     },
     {
         "text": "wagged",
-        "gst": "w-a-g-d",
+        "gst": "u-a-g-d",
         "notes": ""
     },
     {
         "text": "waggish",
-        "gst": "w-a-g-sh",
+        "gst": "u-a-g-sh",
         "notes": ""
     },
     {
         "text": "waggle",
-        "gst": "w-a-g-l",
+        "gst": "u-a-g-l",
         "notes": ""
     },
     {
         "text": "waggled",
-        "gst": "w-a-g-ld",
+        "gst": "u-a-g-ld",
         "notes": ""
     },
     {
         "text": "wagglingly",
-        "gst": "w-a-g-l-e-ng",
+        "gst": "u-a-g-l-e-ng",
         "notes": ""
     },
     {
@@ -172061,107 +172061,107 @@
     },
     {
         "text": "wagon",
-        "gst": "w-a-g-n",
+        "gst": "u-a-g-n",
         "notes": ""
     },
     {
         "text": "wagtail",
-        "gst": "w-a-g-t-a-l",
+        "gst": "u-a-g-t-a-l",
         "notes": ""
     },
     {
         "text": "waif",
-        "gst": "w-a-f",
+        "gst": "u-a-f",
         "notes": ""
     },
     {
         "text": "wailed",
-        "gst": "w-a-ld",
+        "gst": "u-a-ld",
         "notes": ""
     },
     {
         "text": "wailingly",
-        "gst": "w-a-l/e",
+        "gst": "u-a-l/e",
         "notes": ""
     },
     {
         "text": "wailings",
-        "gst": "w-a-l-e-ng-s",
+        "gst": "u-a-l/s",
         "notes": ""
     },
     {
         "text": "wain",
-        "gst": "w-a-n",
+        "gst": "u-a-n",
         "notes": ""
     },
     {
         "text": "wainscot",
-        "gst": "w-a-n-s-k-a-t",
+        "gst": "u-a-n-s-k-a-t",
         "notes": ""
     },
     {
         "text": "waist",
-        "gst": "w-a-s-t",
+        "gst": "u-a-s-t",
         "notes": ""
     },
     {
         "text": "waistband",
-        "gst": "w-a-s-t-b-a-nt",
+        "gst": "u-a-s-t-b-a-nt",
         "notes": ""
     },
     {
         "text": "waistcoat",
-        "gst": "w-a-s-t-k-o-t",
+        "gst": "u-a-s-t-k-o-t",
         "notes": ""
     },
     {
         "text": "waistline",
-        "gst": "w-a-s-t-l-i-n",
+        "gst": "u-a-s-t-l-i-n",
         "notes": ""
     },
     {
         "text": "wait",
-        "gst": "w-a-t",
+        "gst": "u-a-t",
         "notes": ""
     },
     {
         "text": "waited",
-        "gst": "w-a-td",
+        "gst": "u-a-td",
         "notes": ""
     },
     {
         "text": "waiter",
-        "gst": "w-a-t-r",
+        "gst": "u-a-t-r",
         "notes": ""
     },
     {
         "text": "waitress",
-        "gst": "w-a-t-r-s",
+        "gst": "u-a-t-r-s",
         "notes": ""
     },
     {
         "text": "waive",
-        "gst": "w-a-v",
+        "gst": "u-a-v",
         "notes": ""
     },
     {
         "text": "waived",
-        "gst": "w-a-v-d",
+        "gst": "u-a-v-d",
         "notes": ""
     },
     {
         "text": "waiver",
-        "gst": "w-a-v-r",
+        "gst": "u-a-v-r",
         "notes": ""
     },
     {
         "text": "wake",
-        "gst": "w-a-k",
+        "gst": "u-a-k",
         "notes": ""
     },
     {
         "text": "waked",
-        "gst": "w-a-k-t",
+        "gst": "u-o-k-t",
         "notes": ""
     },
     {
@@ -172171,82 +172171,82 @@
     },
     {
         "text": "wakeful",
-        "gst": "w-a-k-f",
+        "gst": "u-o-k-f",
         "notes": ""
     },
     {
         "text": "wakefulness",
-        "gst": "w-a-k-f-n-e-s",
+        "gst": "u-o-k-f-n-e-s",
         "notes": ""
     },
     {
         "text": "waken",
-        "gst": "w-a-k-n",
+        "gst": "u-o-k-n",
         "notes": ""
     },
     {
         "text": "wakened",
-        "gst": "w-a-k-nt",
+        "gst": "u-o-k-nt",
         "notes": ""
     },
     {
         "text": "waketully",
-        "gst": "w-a-k-t-u-e",
+        "gst": "u-o-k-t-u-e",
         "notes": ""
     },
     {
         "text": "wakingly",
-        "gst": "w-a-k/e",
+        "gst": "u-o-k/e",
         "notes": ""
     },
     {
         "text": "wale",
-        "gst": "w-a-l",
+        "gst": "u-o-l",
         "notes": ""
     },
     {
         "text": "waled",
-        "gst": "w-a-ld",
+        "gst": "u-o-ld",
         "notes": ""
     },
     {
         "text": "walk",
-        "gst": "w-o-k",
+        "gst": "u-o-k",
         "notes": ""
     },
     {
         "text": "walked",
-        "gst": "w-o-k-t",
+        "gst": "u-o-k-t",
         "notes": ""
     },
     {
         "text": "walker",
-        "gst": "w-o-k-r",
+        "gst": "u-o-k-r",
         "notes": ""
     },
     {
         "text": "walkout",
-        "gst": "w-o-k-a-u-t",
+        "gst": "u-o-k-a-u-t",
         "notes": ""
     },
     {
         "text": "walkover",
-        "gst": "w-o-k-v-r",
+        "gst": "u-o-k-v-r",
         "notes": ""
     },
     {
         "text": "walkup",
-        "gst": "w-o-k-u-p",
+        "gst": "u-o-k-u-p",
         "notes": ""
     },
     {
         "text": "walkway",
-        "gst": "w-o-k-w-a",
+        "gst": "u-o-k-w-a",
         "notes": ""
     },
     {
         "text": "wall",
-        "gst": "w-o-l",
+        "gst": "u-o-l",
         "notes": ""
     },
     {
@@ -172256,22 +172256,22 @@
     },
     {
         "text": "wallboard",
-        "gst": "w-o-l-b-o-rd",
+        "gst": "u-o-l-b-o-rd",
         "notes": ""
     },
     {
         "text": "walled",
-        "gst": "w-o-ld",
+        "gst": "u-o-ld",
         "notes": ""
     },
     {
         "text": "wallet",
-        "gst": "w-o-l-t",
+        "gst": "u-o-l-t",
         "notes": ""
     },
     {
         "text": "walleyed",
-        "gst": "w-o-l-d",
+        "gst": "u-o-l-d",
         "notes": ""
     },
     {
@@ -172286,27 +172286,27 @@
     },
     {
         "text": "wallop",
-        "gst": "w-a-l-p",
+        "gst": "u-o-l-p",
         "notes": ""
     },
     {
         "text": "wallow",
-        "gst": "w-a-l-o",
+        "gst": "u-o-l-o",
         "notes": ""
     },
     {
         "text": "wallowed",
-        "gst": "w-a-l-o-d",
+        "gst": "u-o-l-o-d",
         "notes": ""
     },
     {
         "text": "wallpaper",
-        "gst": "w-o-l-p-a-p-r",
+        "gst": "u-o-l-p-a-p-r",
         "notes": ""
     },
     {
         "text": "walnut",
-        "gst": "w-o-l-n-u-t",
+        "gst": "u-o-l-n-u-t",
         "notes": ""
     },
     {
@@ -172316,7 +172316,7 @@
     },
     {
         "text": "walrus",
-        "gst": "w-o-l-r-s",
+        "gst": "u-o-l-r-s",
         "notes": ""
     },
     {
@@ -172336,327 +172336,327 @@
     },
     {
         "text": "waltz",
-        "gst": "w-o-l-t-s",
+        "gst": "u-o-l-t-s",
         "notes": ""
     },
     {
         "text": "waltzed",
-        "gst": "w-o-l-t-s-t",
+        "gst": "u-o-l-t-s-t",
         "notes": ""
     },
     {
         "text": "wampum",
-        "gst": "w-a-m-p-m",
+        "gst": "u-o-m-p-m",
         "notes": ""
     },
     {
         "text": "wan",
-        "gst": "w-a-n",
+        "gst": "u-o-n",
         "notes": ""
     },
     {
         "text": "wand",
-        "gst": "w-a-nt",
+        "gst": "u-o-nt",
         "notes": ""
     },
     {
         "text": "wander",
-        "gst": "w-a-nt-r",
+        "gst": "u-o-nt-r",
         "notes": ""
     },
     {
         "text": "wandered",
-        "gst": "w-a-nt-rd",
+        "gst": "u-o-nt-rd",
         "notes": ""
     },
     {
         "text": "wanderer",
-        "gst": "w-a-nt-r-r",
+        "gst": "u-o-nt-r-r",
         "notes": ""
     },
     {
         "text": "wanderingly",
-        "gst": "w-a-nt-r/e",
+        "gst": "u-o-nt-r/e",
         "notes": ""
     },
     {
         "text": "wanderings",
-        "gst": "w-a-nt-r-e-ng-s",
+        "gst": "u-o-nt-r/s",
         "notes": ""
     },
     {
         "text": "wane",
-        "gst": "w-a-n",
+        "gst": "u-o-n",
         "notes": ""
     },
     {
         "text": "waned",
-        "gst": "w-a-nt",
+        "gst": "u-o-nt",
         "notes": ""
     },
     {
         "text": "wangle",
-        "gst": "u-a-ng-l",
+        "gst": "u-o-ng-l",
         "notes": ""
     },
     {
         "text": "wangled",
-        "gst": "u-a-ng-ld",
+        "gst": "u-o-ng-ld",
         "notes": ""
     },
     {
         "text": "want to see",
-        "gst": "w-a-nt-t-u-s-e",
+        "gst": "u-o-nt-t-u-s-e",
         "notes": ""
     },
     {
         "text": "want",
-        "gst": "w-a-nt",
+        "gst": "u-o-nt",
         "notes": ""
     },
     {
         "text": "wanted",
-        "gst": "w-a-ntd",
+        "gst": "u-o-ntd",
         "notes": ""
     },
     {
         "text": "wantingly",
-        "gst": "w-o-nt/e",
+        "gst": "u-o-nt/e",
         "notes": ""
     },
     {
         "text": "wanton",
-        "gst": "w-o-nt-n",
+        "gst": "u-o-nt-n",
         "notes": ""
     },
     {
         "text": "war",
-        "gst": "w-o-r",
+        "gst": "u-o-r",
         "notes": ""
     },
     {
         "text": "warble",
-        "gst": "w-o-r-b",
+        "gst": "u-o-r-b",
         "notes": ""
     },
     {
         "text": "warbled",
-        "gst": "w-o-r-b-ld",
+        "gst": "u-o-r-b-ld",
         "notes": ""
     },
     {
         "text": "warbler",
-        "gst": "w-o-r-b-l-r",
+        "gst": "u-o-r-b-l-r",
         "notes": ""
     },
     {
         "text": "warblingly",
-        "gst": "w-o-r-b-l/e",
+        "gst": "u-o-r-b-l/e",
         "notes": ""
     },
     {
         "text": "warblings",
-        "gst": "w-o-r-b-l-e-ng-s",
+        "gst": "u-o-r-b-l/s",
         "notes": ""
     },
     {
         "text": "ward",
-        "gst": "w-o-rd",
+        "gst": "u-o-rd",
         "notes": ""
     },
     {
         "text": "warded",
-        "gst": "w-o-rtd",
+        "gst": "u-o-rtd",
         "notes": ""
     },
     {
         "text": "warden",
-        "gst": "w-o-r-tn",
+        "gst": "u-o-r-tn",
         "notes": ""
     },
     {
         "text": "warder",
-        "gst": "w-o-rd-r",
+        "gst": "u-o-rd-r",
         "notes": ""
     },
     {
         "text": "wardrobe",
-        "gst": "w-o-rd-r-o-b",
+        "gst": "u-o-rd-r-o-b",
         "notes": ""
     },
     {
         "text": "wardroom",
-        "gst": "w-o-rd-r-u-m",
+        "gst": "u-o-rd-r-u-m",
         "notes": ""
     },
     {
         "text": "warehouse",
-        "gst": "w-e-r-h-a-u-s",
+        "gst": "u-e-r-h-a-u-s",
         "notes": ""
     },
     {
         "text": "warehouseman",
-        "gst": "w-e-r-h-a-u-s-m",
+        "gst": "u-e-r-h-a-u-s-m",
         "notes": ""
     },
     {
         "text": "wareroom",
-        "gst": "w-o-r-r-m",
+        "gst": "u-o-r-r-m",
         "notes": ""
     },
     {
         "text": "wares",
-        "gst": "w-e-r-s",
+        "gst": "u-e-r-s",
         "notes": ""
     },
     {
         "text": "warfare",
-        "gst": "w-o-r-f-e-r",
+        "gst": "u-o-r-f-e-r",
         "notes": ""
     },
     {
         "text": "warily",
-        "gst": "w-e-r-ye",
+        "gst": "u-e-r-ye",
         "notes": ""
     },
     {
         "text": "wariness",
-        "gst": "w-e-r-e-n-e-s",
+        "gst": "u-e-r-e-n-e-s",
         "notes": ""
     },
     {
         "text": "warlike",
-        "gst": "w-o-r-l-i-k",
+        "gst": "u-o-r-l-i-k",
         "notes": ""
     },
     {
         "text": "warlock",
-        "gst": "w-o-r-l-k",
+        "gst": "u-o-r-l-k",
         "notes": ""
     },
     {
         "text": "warm",
-        "gst": "w-o-r-m",
+        "gst": "u-o-r-m",
         "notes": ""
     },
     {
         "text": "warmed",
-        "gst": "w-o-r-m-d",
+        "gst": "u-o-r-m-d",
         "notes": ""
     },
     {
         "text": "warmer",
-        "gst": "w-o-r-m-r",
+        "gst": "u-o-r-m-r",
         "notes": ""
     },
     {
         "text": "warmest",
-        "gst": "w-o-r-m-e-s-t",
+        "gst": "u-o-r-m-e-s-t",
         "notes": ""
     },
     {
         "text": "warmhearted",
-        "gst": "w-o-r-m-h-a-r-td",
+        "gst": "u-o-r-m-h-a-r-td",
         "notes": ""
     },
     {
         "text": "warmly",
-        "gst": "w-o-r-m-e",
+        "gst": "u-o-r-m-e",
         "notes": ""
     },
     {
         "text": "warmness",
-        "gst": "w-o-r-mn-e-s",
+        "gst": "u-o-r-mn-e-s",
         "notes": ""
     },
     {
         "text": "warmonger",
-        "gst": "w-o-r-m-a-ng-g-r",
+        "gst": "u-o-r-m-a-ng-g-r",
         "notes": ""
     },
     {
         "text": "warmth",
-        "gst": "w-o-r-m-th",
+        "gst": "u-o-r-m-th",
         "notes": ""
     },
     {
         "text": "warn",
-        "gst": "w-o-r-n",
+        "gst": "u-o-r-n",
         "notes": ""
     },
     {
         "text": "warned",
-        "gst": "w-o-r-nt",
+        "gst": "u-o-r-nt",
         "notes": ""
     },
     {
         "text": "warningly",
-        "gst": "w-o-r-n/e",
+        "gst": "u-o-r-n/e",
         "notes": ""
     },
     {
         "text": "warnings",
-        "gst": "w-o-r-n-e-ng-s",
+        "gst": "u-o-r-n/s",
         "notes": ""
     },
     {
         "text": "warp",
-        "gst": "w-o-r-p",
+        "gst": "u-o-r-p",
         "notes": ""
     },
     {
         "text": "warpage",
-        "gst": "w-o-r-p-e-j",
+        "gst": "u-o-r-p-e-j",
         "notes": ""
     },
     {
         "text": "warpath",
-        "gst": "w-o-r-p-a-th",
+        "gst": "u-o-r-p-a-th",
         "notes": ""
     },
     {
         "text": "warped",
-        "gst": "w-o-r-p-t",
+        "gst": "u-o-r-p-t",
         "notes": ""
     },
     {
         "text": "warplane",
-        "gst": "w-o-r-p-l-a-n",
+        "gst": "u-o-r-p-l-a-n",
         "notes": ""
     },
     {
         "text": "warrant",
-        "gst": "w-o-r-nt",
+        "gst": "u-o-r-nt",
         "notes": ""
     },
     {
         "text": "warrantable",
-        "gst": "w-o-r-nt-b",
+        "gst": "u-o-r-nt-b",
         "notes": ""
     },
     {
         "text": "warranted",
-        "gst": "w-o-r-ntd",
+        "gst": "u-o-r-ntd",
         "notes": ""
     },
     {
         "text": "warrantor",
-        "gst": "w-o-r-nt-r",
+        "gst": "u-o-r-nt-r",
         "notes": ""
     },
     {
         "text": "warranty",
-        "gst": "w-o-r-nt-e",
+        "gst": "u-o-r-nt-e",
         "notes": ""
     },
     {
         "text": "warred",
-        "gst": "w-o-rd",
+        "gst": "u-o-rd",
         "notes": ""
     },
     {
         "text": "warren",
-        "gst": "w-o-r-n",
+        "gst": "u-o-r-n",
         "notes": ""
     },
     {
@@ -172671,112 +172671,112 @@
     },
     {
         "text": "warship",
-        "gst": "w-o-r-sh-e-p",
+        "gst": "u-o-r-sh-e-p",
         "notes": ""
     },
     {
         "text": "wart",
-        "gst": "w-o-r-t",
+        "gst": "u-o-r-t",
         "notes": ""
     },
     {
         "text": "wartime",
-        "gst": "w-o-r-tm",
+        "gst": "u-o-r-tm",
         "notes": ""
     },
     {
         "text": "wartless",
-        "gst": "w-o-r-t-l-e-s",
+        "gst": "u-o-r-t-l-e-s",
         "notes": ""
     },
     {
         "text": "wary",
-        "gst": "w-e-r-e",
+        "gst": "u-e-r-e",
         "notes": ""
     },
     {
         "text": "was done",
-        "gst": "w-a-s-d-u-n",
+        "gst": "u-o-s-d-u-n",
         "notes": ""
     },
     {
         "text": "was it",
-        "gst": "w-a-s-e-t",
+        "gst": "u-o-s-e-t",
         "notes": ""
     },
     {
         "text": "was made",
-        "gst": "w-a-s-m-a-d",
+        "gst": "u-o-s-m-a-d",
         "notes": ""
     },
     {
         "text": "was that",
-        "gst": "w-a-s-th-a-t",
+        "gst": "u-o-s-th-a-t",
         "notes": ""
     },
     {
         "text": "was the",
-        "gst": "w-a-s-th",
+        "gst": "u-o-s-th",
         "notes": ""
     },
     {
         "text": "was this",
-        "gst": "w-a-s-th-e-s",
+        "gst": "u-o-s-th-e-s",
         "notes": ""
     },
     {
         "text": "was",
-        "gst": "w-a-s",
+        "gst": "u-o-s",
         "notes": ""
     },
     {
         "text": "wash",
-        "gst": "w-a-sh",
+        "gst": "u-o-sh",
         "notes": ""
     },
     {
         "text": "washable",
-        "gst": "w-a-sh-b",
+        "gst": "u-o-sh-b",
         "notes": ""
     },
     {
         "text": "washboard",
-        "gst": "w-a-sh-b-o-rd",
+        "gst": "u-o-sh-b-o-rd",
         "notes": ""
     },
     {
         "text": "washbowl",
-        "gst": "w-a-sh-b-o-l",
+        "gst": "u-o-sh-b-o-l",
         "notes": ""
     },
     {
         "text": "washcloth",
-        "gst": "w-a-sh-k-l-o-th",
+        "gst": "u-o-sh-k-l-o-th",
         "notes": ""
     },
     {
         "text": "washed",
-        "gst": "w-a-sh-t",
+        "gst": "u-o-sh-t",
         "notes": ""
     },
     {
         "text": "washer",
-        "gst": "w-a-sh-r",
+        "gst": "u-o-sh-r",
         "notes": ""
     },
     {
         "text": "washerwoman",
-        "gst": "w-a-sh-r-sh-m-o-n",
+        "gst": "u-o-sh-r-sh-m-o-n",
         "notes": ""
     },
     {
         "text": "washhouse",
-        "gst": "w-a-sh-sh-s",
+        "gst": "u-o-sh-sh-s",
         "notes": ""
     },
     {
         "text": "washings",
-        "gst": "w-a-sh-e-ng-s",
+        "gst": "u-o-sh/s",
         "notes": ""
     },
     {
@@ -172786,182 +172786,182 @@
     },
     {
         "text": "washout",
-        "gst": "w-a-sh-a-u-t",
+        "gst": "u-o-sh-a-u-t",
         "notes": ""
     },
     {
         "text": "washroom",
-        "gst": "w-a-sh-r-u-m",
+        "gst": "u-o-sh-r-u-m",
         "notes": ""
     },
     {
         "text": "washstand",
-        "gst": "w-a-sh-t-s-a-nt",
+        "gst": "u-o-sh-t-s-a-nt",
         "notes": ""
     },
     {
         "text": "washup",
-        "gst": "w-a-sh-u-p",
+        "gst": "u-o-sh-u-p",
         "notes": ""
     },
     {
         "text": "wasn't",
-        "gst": "w-a-s-nt",
+        "gst": "u-o-s-nt",
         "notes": ""
     },
     {
         "text": "wasp",
-        "gst": "w-a-s-p",
+        "gst": "u-o-s-p",
         "notes": ""
     },
     {
         "text": "waspish",
-        "gst": "w-a-s-p-sh",
+        "gst": "u-o-s-p-sh",
         "notes": ""
     },
     {
         "text": "wassail",
-        "gst": "w-o-s-t-a-l",
+        "gst": "u-o-s-t-a-l",
         "notes": ""
     },
     {
         "text": "wastage",
-        "gst": "w-a-s-t-j",
+        "gst": "u-o-s-t-j",
         "notes": ""
     },
     {
         "text": "waste",
-        "gst": "w-a-s-t",
+        "gst": "u-o-s-t",
         "notes": ""
     },
     {
         "text": "wastebasket",
-        "gst": "w-a-s-t-b-a-s-k-t",
+        "gst": "u-o-s-t-b-a-s-k-t",
         "notes": ""
     },
     {
         "text": "wasted",
-        "gst": "w-a-s-td",
+        "gst": "u-o-s-td",
         "notes": ""
     },
     {
         "text": "wasteful",
-        "gst": "w-a-s-t-f",
+        "gst": "u-o-s-t-f",
         "notes": ""
     },
     {
         "text": "wastefully",
-        "gst": "w-a-s-t-f-e",
+        "gst": "u-o-s-t-f-e",
         "notes": ""
     },
     {
         "text": "wastefulness",
-        "gst": "w-a-s-t-f-l-n-e-s",
+        "gst": "u-o-s-t-f-l-n-e-s",
         "notes": ""
     },
     {
         "text": "wasteland",
-        "gst": "w-a-s-t-l-a-nt",
+        "gst": "u-o-s-t-l-a-nt",
         "notes": ""
     },
     {
         "text": "wastepaper",
-        "gst": "w-a-s-t-p-a-p-r",
+        "gst": "u-o-s-t-p-a-p-r",
         "notes": ""
     },
     {
         "text": "waster",
-        "gst": "w-a-s-t-r",
+        "gst": "u-o-s-t-r",
         "notes": ""
     },
     {
         "text": "wastingly",
-        "gst": "w-a-s-t/e",
+        "gst": "u-o-s-t/e",
         "notes": ""
     },
     {
         "text": "wastrel",
-        "gst": "w-a-s-t-r-l",
+        "gst": "u-o-s-t-r-l",
         "notes": ""
     },
     {
         "text": "watch",
-        "gst": "w-a-ch",
+        "gst": "u-o-ch",
         "notes": ""
     },
     {
         "text": "watchcase",
-        "gst": "w-a-ch-k-a-s",
+        "gst": "u-o-ch-k-a-s",
         "notes": ""
     },
     {
         "text": "watchdog",
-        "gst": "w-a-ch-d-o-g",
+        "gst": "u-o-ch-d-o-g",
         "notes": ""
     },
     {
         "text": "watched",
-        "gst": "w-a-ch-t",
+        "gst": "u-o-ch-t",
         "notes": ""
     },
     {
         "text": "watcher",
-        "gst": "w-a-ch-r",
+        "gst": "u-o-ch-r",
         "notes": ""
     },
     {
         "text": "watchful",
-        "gst": "w-a-ch-f",
+        "gst": "u-o-ch-f",
         "notes": ""
     },
     {
         "text": "watchfully",
-        "gst": "w-a-ch-f-e",
+        "gst": "u-o-ch-f-e",
         "notes": ""
     },
     {
         "text": "watchfulness",
-        "gst": "w-a-ch-f-l-n-n-e-s",
+        "gst": "u-o-ch-f-l-n-n-e-s",
         "notes": ""
     },
     {
         "text": "watchhouse",
-        "gst": "w-a-ch-h-a-u-s",
+        "gst": "u-o-ch-h-a-u-s",
         "notes": ""
     },
     {
         "text": "watchkeeper",
-        "gst": "w-a-k-ch-e-p-r",
+        "gst": "u-o-k-ch-e-p-r",
         "notes": ""
     },
     {
         "text": "watchmaker",
-        "gst": "w-o-ch-m-a-k-r",
+        "gst": "u-o-ch-m-a-k-r",
         "notes": ""
     },
     {
         "text": "watchman",
-        "gst": "w-a-ch-mn",
+        "gst": "u-o-ch-mn",
         "notes": ""
     },
     {
         "text": "watchmen",
-        "gst": "w-a-ch-m-e-n",
+        "gst": "u-o-ch-m-e-n",
         "notes": ""
     },
     {
         "text": "watchtower",
-        "gst": "w-o-t-ch-o-r",
+        "gst": "u-o-t-ch-o-r",
         "notes": ""
     },
     {
         "text": "watchword",
-        "gst": "w-a-ch-u-e-rd",
+        "gst": "u-o-ch-u-e-rd",
         "notes": ""
     },
     {
         "text": "water",
-        "gst": "w-o-t-r",
+        "gst": "u-o-t-r",
         "notes": ""
     },
     {
@@ -172971,47 +172971,47 @@
     },
     {
         "text": "watered",
-        "gst": "w-o-t-rd",
+        "gst": "u-o-t-rd",
         "notes": ""
     },
     {
         "text": "waterfall",
-        "gst": "w-o-t-r-f-o-l",
+        "gst": "u-o-t-r-f-o-l",
         "notes": ""
     },
     {
         "text": "waterfinder",
-        "gst": "w-o-t-r-f-e-nt-r",
+        "gst": "u-o-t-r-f-e-nt-r",
         "notes": ""
     },
     {
         "text": "waterfowl",
-        "gst": "w-o-t-r-f-a-u-l",
+        "gst": "u-o-t-r-f-a-u-l",
         "notes": ""
     },
     {
         "text": "wateriness",
-        "gst": "w-o-t-r-i-n-e-s",
+        "gst": "u-o-t-r-i-n-e-s",
         "notes": ""
     },
     {
         "text": "waterings",
-        "gst": "w-o-t-r-e-ng-s",
+        "gst": "u-o-t-r/s",
         "notes": ""
     },
     {
         "text": "waterline",
-        "gst": "w-o-t-r-l-i-n",
+        "gst": "u-o-t-r-l-i-n",
         "notes": ""
     },
     {
         "text": "waterlog",
-        "gst": "w-o-t-r-l-a-g",
+        "gst": "u-o-t-r-l-a-g",
         "notes": ""
     },
     {
         "text": "waterlogged",
-        "gst": "w-o-t-r-l-a-g-d",
+        "gst": "u-o-t-r-l-a-g-d",
         "notes": ""
     },
     {
@@ -173021,42 +173021,42 @@
     },
     {
         "text": "waterman",
-        "gst": "w-o-t-r-mn",
+        "gst": "u-o-t-r-mn",
         "notes": ""
     },
     {
         "text": "watermark",
-        "gst": "w-o-t-r-m-a-r-k",
+        "gst": "u-o-t-r-m-a-r-k",
         "notes": ""
     },
     {
         "text": "watermelon",
-        "gst": "w-o-t-r-m-e-l-n",
+        "gst": "u-o-t-r-m-e-l-n",
         "notes": ""
     },
     {
         "text": "waterproofed",
-        "gst": "w-o-t-r-p-r-u-d-f",
+        "gst": "u-o-t-r-p-r-u-d-f",
         "notes": ""
     },
     {
         "text": "waterproot",
-        "gst": "w-o-t-r-p-r-u-t",
+        "gst": "u-o-t-r-p-r-u-t",
         "notes": ""
     },
     {
         "text": "watershed",
-        "gst": "w-o-t-r-sh-d",
+        "gst": "u-o-t-r-sh-d",
         "notes": ""
     },
     {
         "text": "waterside",
-        "gst": "w-o-t-r-s-i-d",
+        "gst": "u-o-t-r-s-i-d",
         "notes": ""
     },
     {
         "text": "waterspout",
-        "gst": "w-o-t-r-s-t-w-u-p-t",
+        "gst": "u-o-t-r-s-t-w-u-p-t",
         "notes": ""
     },
     {
@@ -173066,22 +173066,22 @@
     },
     {
         "text": "waterway",
-        "gst": "w-o-t-r-w-a",
+        "gst": "u-o-t-r-w-a",
         "notes": ""
     },
     {
         "text": "waterweed",
-        "gst": "w-o-t-r-w-a-d",
+        "gst": "u-o-t-r-w-a-d",
         "notes": ""
     },
     {
         "text": "waterworks",
-        "gst": "w-o-t-r-w-r-k-s",
+        "gst": "u-o-t-r-w-r-k-s",
         "notes": ""
     },
     {
         "text": "watery",
-        "gst": "w-o-t-r-e",
+        "gst": "u-o-t-r-e",
         "notes": ""
     },
     {
@@ -173091,27 +173091,27 @@
     },
     {
         "text": "watt",
-        "gst": "w-a-t",
+        "gst": "u-o-t",
         "notes": ""
     },
     {
         "text": "wattage",
-        "gst": "w-a-t-j",
+        "gst": "u-o-t-j",
         "notes": ""
     },
     {
         "text": "wattle",
-        "gst": "w-a-t-l",
+        "gst": "u-o-t-l",
         "notes": ""
     },
     {
         "text": "wattled",
-        "gst": "w-a-t-ld",
+        "gst": "u-o-t-ld",
         "notes": ""
     },
     {
         "text": "wattmeter",
-        "gst": "w-a-tm-e-t-r",
+        "gst": "u-o-tm-e-t-r",
         "notes": ""
     },
     {
@@ -173121,32 +173121,32 @@
     },
     {
         "text": "waved",
-        "gst": "w-a-v-d",
+        "gst": "u-o-v-d",
         "notes": ""
     },
     {
         "text": "wavemeter",
-        "gst": "w-a-v-m-e-t-r",
+        "gst": "u-o-v-m-e-t-r",
         "notes": ""
     },
     {
         "text": "waver",
-        "gst": "w-a-v-r",
+        "gst": "u-o-v-r",
         "notes": ""
     },
     {
         "text": "wavered",
-        "gst": "w-a-v-rd",
+        "gst": "u-o-v-rd",
         "notes": ""
     },
     {
         "text": "waveringly",
-        "gst": "w-a-v-r/e",
+        "gst": "u-o-v-r/e",
         "notes": ""
     },
     {
         "text": "waverings",
-        "gst": "w-a-v-r-e-ng-s",
+        "gst": "u-o-v-r/s",
         "notes": ""
     },
     {
@@ -173156,82 +173156,82 @@
     },
     {
         "text": "waviness",
-        "gst": "w-a-v-n-e-s",
+        "gst": "u-o-v-n-e-s",
         "notes": ""
     },
     {
         "text": "wavy",
-        "gst": "w-a-v-e",
+        "gst": "u-o-v-e",
         "notes": ""
     },
     {
         "text": "wax",
-        "gst": "w-a-k-s",
+        "gst": "u-o-k-s",
         "notes": ""
     },
     {
         "text": "waxed",
-        "gst": "w-a-k-s-t",
+        "gst": "u-o-k-s-t",
         "notes": ""
     },
     {
         "text": "waxen",
-        "gst": "w-a-k-s-n",
+        "gst": "u-o-k-s-n",
         "notes": ""
     },
     {
         "text": "waxingly",
-        "gst": "w-a-k-s/e",
+        "gst": "u-o-k-s/e",
         "notes": ""
     },
     {
         "text": "waxness",
-        "gst": "w-a-k-s-n-e-s",
+        "gst": "u-o-k-s-n-e-s",
         "notes": ""
     },
     {
         "text": "waxwing",
-        "gst": "w-a-k-s-w-e-ng",
+        "gst": "u-o-k-s-w-e-ng",
         "notes": ""
     },
     {
         "text": "waxwork",
-        "gst": "w-a-k-s-w-r-k",
+        "gst": "u-o-k-s-w-r-k",
         "notes": ""
     },
     {
         "text": "waxy",
-        "gst": "w-a-k-s-e",
+        "gst": "u-o-k-s-e",
         "notes": ""
     },
     {
         "text": "way",
-        "gst": "w-a",
+        "gst": "u-o",
         "notes": ""
     },
     {
         "text": "waybill",
-        "gst": "w-a-b-e-l",
+        "gst": "u-o-b-e-l",
         "notes": ""
     },
     {
         "text": "wayfarer",
-        "gst": "w-a-f-r-s-r",
+        "gst": "u-o-f-r-s-r",
         "notes": ""
     },
     {
         "text": "wayfellow",
-        "gst": "w-a-f-s-o-l",
+        "gst": "u-o-f-s-o-l",
         "notes": ""
     },
     {
         "text": "waylaid",
-        "gst": "w-a-l-a-d",
+        "gst": "u-o-l-a-d",
         "notes": ""
     },
     {
         "text": "waylay",
-        "gst": "w-a-l-a",
+        "gst": "u-o-l-a",
         "notes": ""
     },
     {
@@ -173241,62 +173241,62 @@
     },
     {
         "text": "wayside",
-        "gst": "w-a-s-i-d",
+        "gst": "u-o-s-i-d",
         "notes": ""
     },
     {
         "text": "wayward",
-        "gst": "w-a/d",
+        "gst": "u-o/d",
         "notes": ""
     },
     {
         "text": "we are not yet",
-        "gst": "w-e-a-r-n-a-t-ye-t",
+        "gst": "u-e-a-r-n-a-t-ye-t",
         "notes": ""
     },
     {
         "text": "we are not",
-        "gst": "w-e-a-r-n-a-t",
+        "gst": "u-e-a-r-n-a-t",
         "notes": ""
     },
     {
         "text": "we are of the opinion",
-        "gst": "w-e-a-r-u-v-th-o-p-e-n-u-n",
+        "gst": "u-e-a-r-u-v-th-o-p-e-n-u-n",
         "notes": ""
     },
     {
         "text": "we are sending",
-        "gst": "w-e-a-r-s-e-nt-e-ng",
+        "gst": "u-e-a-r-s-e-nt-e-ng",
         "notes": ""
     },
     {
         "text": "we are sure",
-        "gst": "w-e-a-r-sh-u-r",
+        "gst": "u-e-a-r-sh-u-r",
         "notes": ""
     },
     {
         "text": "we are",
-        "gst": "w-e-a-r",
+        "gst": "u-e-a-r",
         "notes": ""
     },
     {
         "text": "we can be",
-        "gst": "w-e-k-a-n-b-e",
+        "gst": "u-e-k-a-n-b-e",
         "notes": ""
     },
     {
         "text": "we can have",
-        "gst": "w-e-k-a-n-h-a-v",
+        "gst": "u-e-k-a-n-h-a-v",
         "notes": ""
     },
     {
         "text": "we can see",
-        "gst": "w-e-k-a-n-s-e",
+        "gst": "u-e-k-a-n-s-e",
         "notes": ""
     },
     {
         "text": "we can't",
-        "gst": "w-e-k-a-nt",
+        "gst": "u-e-k-a-nt",
         "notes": ""
     },
     {
@@ -173306,142 +173306,142 @@
     },
     {
         "text": "we cannot be",
-        "gst": "w-e-k-a-n-a-t-b-e",
+        "gst": "u-e-k-a-n-a-t-b-e",
         "notes": ""
     },
     {
         "text": "we cannot say",
-        "gst": "w-e-k-a-n-a-t-s-a",
+        "gst": "u-e-k-a-n-a-t-s-a",
         "notes": ""
     },
     {
         "text": "we cannot",
-        "gst": "w-e-k-a-n-a-t",
+        "gst": "u-e-k-a-n-a-t",
         "notes": ""
     },
     {
         "text": "we could be",
-        "gst": "w-e-k-u-d-b-e",
+        "gst": "u-e-k-u-d-b-e",
         "notes": ""
     },
     {
         "text": "we could have",
-        "gst": "w-e-k-u-d-h-a-v",
+        "gst": "u-e-k-u-d-h-a-v",
         "notes": ""
     },
     {
         "text": "we could not",
-        "gst": "w-e-k-u-d-n-a-t",
+        "gst": "u-e-k-u-d-n-a-t",
         "notes": ""
     },
     {
         "text": "we could",
-        "gst": "w-e-k-u-d",
+        "gst": "u-e-k-u-d",
         "notes": ""
     },
     {
         "text": "we desire",
-        "gst": "w-e-d-e-s-i-r",
+        "gst": "u-e-d-e-s-i-r",
         "notes": ""
     },
     {
         "text": "we did not",
-        "gst": "w-e-d-e-d-n-a-t",
+        "gst": "u-e-d-e-d-n-a-t",
         "notes": ""
     },
     {
         "text": "we did",
-        "gst": "w-e-td",
+        "gst": "u-e-td",
         "notes": ""
     },
     {
         "text": "we do not say",
-        "gst": "w-e-d-u-n-a-t-s-a",
+        "gst": "u-e-d-u-n-a-t-s-a",
         "notes": ""
     },
     {
         "text": "we do not see",
-        "gst": "w-e-d-u-n-a-t-s-e",
+        "gst": "u-e-d-u-n-a-t-s-e",
         "notes": ""
     },
     {
         "text": "we do not think",
-        "gst": "w-e-d-u-n-a-t-th-h",
+        "gst": "u-e-d-u-n-a-t-th-h",
         "notes": ""
     },
     {
         "text": "we do not",
-        "gst": "w-e-d-u-n-a-t",
+        "gst": "u-e-d-u-n-a-t",
         "notes": ""
     },
     {
         "text": "we do",
-        "gst": "w-e-d-u",
+        "gst": "u-e-d-u",
         "notes": ""
     },
     {
         "text": "we enclose",
-        "gst": "w-e-e-n-k-l-o-s",
+        "gst": "u-e-e-n-k-l-o-s",
         "notes": ""
     },
     {
         "text": "we feel sure",
-        "gst": "w-e-f-e-l-sh-u-r",
+        "gst": "u-e-f-e-l-sh-u-r",
         "notes": ""
     },
     {
         "text": "we feel",
-        "gst": "w-e-f-e-l",
+        "gst": "u-e-f-e-l",
         "notes": ""
     },
     {
         "text": "we felt",
-        "gst": "w-e-f-e-l-t",
+        "gst": "u-e-f-e-l-t",
         "notes": ""
     },
     {
         "text": "we find",
-        "gst": "w-e-f-i-nt",
+        "gst": "u-e-f-i-nt",
         "notes": ""
     },
     {
         "text": "we found",
-        "gst": "w-e-f-a-u-nt",
+        "gst": "u-e-f-a-u-nt",
         "notes": ""
     },
     {
         "text": "we give",
-        "gst": "w-e-g-e-v",
+        "gst": "u-e-g-e-v",
         "notes": ""
     },
     {
         "text": "we have been able",
-        "gst": "w-e-h-a-v-b-e-n-a-b",
+        "gst": "u-e-h-a-v-b-e-n-a-b",
         "notes": ""
     },
     {
         "text": "we have been",
-        "gst": "w-e-h-a-v-b-e-n",
+        "gst": "u-e-h-a-v-b-e-n",
         "notes": ""
     },
     {
         "text": "we have done",
-        "gst": "w-e-h-a-v-d-u-n",
+        "gst": "u-e-h-a-v-d-u-n",
         "notes": ""
     },
     {
         "text": "we have had",
-        "gst": "w-e-h-a-v-h-a-d",
+        "gst": "u-e-h-a-v-h-a-d",
         "notes": ""
     },
     {
         "text": "we have made",
-        "gst": "w-e-h-a-v-m-a-d",
+        "gst": "u-e-h-a-v-m-a-d",
         "notes": ""
     },
     {
         "text": "we have not been",
-        "gst": "w-e-h-a-v-n-a-t-b-e-n",
+        "gst": "u-e-h-a-v-n-a-t-b-e-n",
         "notes": ""
     },
     {
@@ -173451,282 +173451,282 @@
     },
     {
         "text": "we have not",
-        "gst": "w-e-h-a-v-n-a-t",
+        "gst": "u-e-h-a-v-n-a-t",
         "notes": ""
     },
     {
         "text": "we have your order",
-        "gst": "w-e-h-a-v-u-o-r-o-rd-r",
+        "gst": "u-e-h-a-v-u-o-r-o-rd-r",
         "notes": ""
     },
     {
         "text": "we have",
-        "gst": "w-e-h-a-v",
+        "gst": "u-e-h-a-v",
         "notes": ""
     },
     {
         "text": "we hope it will",
-        "gst": "w-e-h-o-p-e-t-w-e-l",
+        "gst": "u-e-h-o-p-e-t-w-e-l",
         "notes": ""
     },
     {
         "text": "we hope that the",
-        "gst": "w-e-h-o-p-th-a-t-th",
+        "gst": "u-e-h-o-p-th-a-t-th",
         "notes": ""
     },
     {
         "text": "we hope that",
-        "gst": "w-e-h-o-p-th-a-t",
+        "gst": "u-e-h-o-p-th-a-t",
         "notes": ""
     },
     {
         "text": "we hope this will",
-        "gst": "w-e-h-o-p-th-e-s-w-e-l",
+        "gst": "u-e-h-o-p-th-e-s-w-e-l",
         "notes": ""
     },
     {
         "text": "we hope to have",
-        "gst": "w-e-h-o-p-t-u-h-a-v",
+        "gst": "u-e-h-o-p-t-u-h-a-v",
         "notes": ""
     },
     {
         "text": "we hope you will not",
-        "gst": "w-e-h-o-p-u-l-n-a-t",
+        "gst": "u-e-h-o-p-u-l-n-a-t",
         "notes": ""
     },
     {
         "text": "we hope you will",
-        "gst": "w-e-h-o-p-u-l",
+        "gst": "u-e-h-o-p-u-l",
         "notes": ""
     },
     {
         "text": "we hope",
-        "gst": "w-e-h-o-p",
+        "gst": "u-e-h-o-p",
         "notes": ""
     },
     {
         "text": "we knew",
-        "gst": "w-e-n-u",
+        "gst": "u-e-n-u",
         "notes": ""
     },
     {
         "text": "we know",
-        "gst": "w-e-n-o",
+        "gst": "u-e-n-o",
         "notes": ""
     },
     {
         "text": "we made",
-        "gst": "w-e-m-a-d",
+        "gst": "u-e-m-a-d",
         "notes": ""
     },
     {
         "text": "we mailed",
-        "gst": "w-e-m-a-ld",
+        "gst": "u-e-m-a-ld",
         "notes": ""
     },
     {
         "text": "we make",
-        "gst": "w-e-m-a-k",
+        "gst": "u-e-m-a-k",
         "notes": ""
     },
     {
         "text": "we may be able",
-        "gst": "w-e-m-a-b-e-a-b",
+        "gst": "u-e-m-a-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we may be",
-        "gst": "w-e-m-a-b-e",
+        "gst": "u-e-m-a-b-e",
         "notes": ""
     },
     {
         "text": "we may have",
-        "gst": "w-e-m-a-h-a-v",
+        "gst": "u-e-m-a-h-a-v",
         "notes": ""
     },
     {
         "text": "we may",
-        "gst": "w-e-m-a",
+        "gst": "u-e-m-a",
         "notes": ""
     },
     {
         "text": "we might be able",
-        "gst": "w-e-m-i-t-b-e-a-b",
+        "gst": "u-e-m-i-t-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we might be",
-        "gst": "w-e-m-i-t-b-e",
+        "gst": "u-e-m-i-t-b-e",
         "notes": ""
     },
     {
         "text": "we might have",
-        "gst": "w-e-m-i-t-h-a-v",
+        "gst": "u-e-m-i-t-h-a-v",
         "notes": ""
     },
     {
         "text": "we might",
-        "gst": "w-e-m-i-t",
+        "gst": "u-e-m-i-t",
         "notes": ""
     },
     {
         "text": "we must be",
-        "gst": "w-e-m-s-b-e",
+        "gst": "u-e-m-s-b-e",
         "notes": ""
     },
     {
         "text": "we must have",
-        "gst": "w-e-m-s-h-a-v",
+        "gst": "u-e-m-s-h-a-v",
         "notes": ""
     },
     {
         "text": "we must",
-        "gst": "w-e-m-s",
+        "gst": "u-e-m-s",
         "notes": ""
     },
     {
         "text": "we need",
-        "gst": "w-e-n-d",
+        "gst": "u-e-n-d",
         "notes": ""
     },
     {
         "text": "we realize that",
-        "gst": "w-e-r-e-l-i-s-th-a-t",
+        "gst": "u-e-r-e-l-i-s-th-a-t",
         "notes": ""
     },
     {
         "text": "we shall be able",
-        "gst": "w-e-sh-a-l-b-e-a-b",
+        "gst": "u-e-sh-a-l-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we shall be glad",
-        "gst": "w-e-sh-a-l-b-e-g-l-a-d",
+        "gst": "u-e-sh-a-l-b-e-g-l-a-d",
         "notes": ""
     },
     {
         "text": "we shall be",
-        "gst": "w-e-sh-a-l-b-e",
+        "gst": "u-e-sh-a-l-b-e",
         "notes": ""
     },
     {
         "text": "we shall have",
-        "gst": "w-e-sh-a-l-h-a-v",
+        "gst": "u-e-sh-a-l-h-a-v",
         "notes": ""
     },
     {
         "text": "we shall not be able",
-        "gst": "w-e-sh-a-l-n-a-t-b-e-a-b",
+        "gst": "u-e-sh-a-l-n-a-t-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we shall not",
-        "gst": "w-e-sh-a-l-n-a-t",
+        "gst": "u-e-sh-a-l-n-a-t",
         "notes": ""
     },
     {
         "text": "we shall",
-        "gst": "w-e-sh-a-l",
+        "gst": "u-e-sh-a-l",
         "notes": ""
     },
     {
         "text": "we should be glad",
-        "gst": "w-e-sh-u-d-b-e-g-l-a-d",
+        "gst": "u-e-sh-u-d-b-e-g-l-a-d",
         "notes": ""
     },
     {
         "text": "we should be",
-        "gst": "w-e-sh-u-d-b-e",
+        "gst": "u-e-sh-u-d-b-e",
         "notes": ""
     },
     {
         "text": "we should have",
-        "gst": "w-e-sh-u-d-h-a-v",
+        "gst": "u-e-sh-u-d-h-a-v",
         "notes": ""
     },
     {
         "text": "we should not be able",
-        "gst": "w-e-sh-u-d-n-a-t-b-e-a-b",
+        "gst": "u-e-sh-u-d-n-a-t-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we should",
-        "gst": "w-e-sh-u-d",
+        "gst": "u-e-sh-u-d",
         "notes": ""
     },
     {
         "text": "we thank you for the",
-        "gst": "w-e-th-h-e-u-f-o-r-th",
+        "gst": "u-e-th-h-e-u-f-o-r-th",
         "notes": ""
     },
     {
         "text": "we thank you for",
-        "gst": "w-e-th-h-e-u-f-o-r",
+        "gst": "u-e-th-h-e-u-f-o-r",
         "notes": ""
     },
     {
         "text": "we thank you",
-        "gst": "w-e-th-h-e-u",
+        "gst": "u-e-th-h-e-u",
         "notes": ""
     },
     {
         "text": "we think",
-        "gst": "w-e-th-h",
+        "gst": "u-e-th-h",
         "notes": ""
     },
     {
         "text": "we tried",
-        "gst": "w-e-t-r-i-d",
+        "gst": "u-e-t-r-i-d",
         "notes": ""
     },
     {
         "text": "we try",
-        "gst": "w-e-t-r-i",
+        "gst": "u-e-t-r-i",
         "notes": ""
     },
     {
         "text": "we want",
-        "gst": "w-e-w-a-nt",
+        "gst": "u-e-w-a-nt",
         "notes": ""
     },
     {
         "text": "we will be able",
-        "gst": "w-e-w-e-l-b-e-a-b",
+        "gst": "u-e-w-e-l-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we will be",
-        "gst": "w-e-w-e-l-b-e",
+        "gst": "u-e-w-e-l-b-e",
         "notes": ""
     },
     {
         "text": "we will have",
-        "gst": "w-e-w-e-l-h-a-v",
+        "gst": "u-e-w-e-l-h-a-v",
         "notes": ""
     },
     {
         "text": "we will not be",
-        "gst": "w-e-w-e-l-n-a-t-b-e",
+        "gst": "u-e-w-e-l-n-a-t-b-e",
         "notes": ""
     },
     {
         "text": "we will not",
-        "gst": "w-e-w-e-l-n-a-t",
+        "gst": "u-e-w-e-l-n-a-t",
         "notes": ""
     },
     {
         "text": "we will see",
-        "gst": "w-e-w-e-l-s-e",
+        "gst": "u-e-w-e-l-s-e",
         "notes": ""
     },
     {
         "text": "we will send you",
-        "gst": "w-e-w-e-l-s-e-nt-e-u",
+        "gst": "u-e-w-e-l-s-e-nt-e-u",
         "notes": ""
     },
     {
         "text": "we will",
-        "gst": "w-e-w-e-l",
+        "gst": "u-e-w-e-l",
         "notes": ""
     },
     {
@@ -173736,232 +173736,232 @@
     },
     {
         "text": "we would be glad",
-        "gst": "w-e-w-u-d-b-e-g-l-a-d",
+        "gst": "u-e-w-u-d-b-e-g-l-a-d",
         "notes": ""
     },
     {
         "text": "we would be",
-        "gst": "w-e-w-u-d-b-e",
+        "gst": "u-e-w-u-d-b-e",
         "notes": ""
     },
     {
         "text": "we would have",
-        "gst": "w-e-w-u-d-h-a-v",
+        "gst": "u-e-w-u-d-h-a-v",
         "notes": ""
     },
     {
         "text": "we would not be able",
-        "gst": "w-e-w-u-d-n-a-t-b-e-a-b",
+        "gst": "u-e-w-u-d-n-a-t-b-e-a-b",
         "notes": ""
     },
     {
         "text": "we would not be",
-        "gst": "w-e-w-u-d-n-a-t-b-e",
+        "gst": "u-e-w-u-d-n-a-t-b-e",
         "notes": ""
     },
     {
         "text": "we would not",
-        "gst": "w-e-w-u-d-n-a-t",
+        "gst": "u-e-w-u-d-n-a-t",
         "notes": ""
     },
     {
         "text": "we would",
-        "gst": "w-e-d",
+        "gst": "u-e-d",
         "notes": ""
     },
     {
         "text": "we wrote",
-        "gst": "w-e-r-o-t",
+        "gst": "u-e-r-o-t",
         "notes": ""
     },
     {
         "text": "we're",
-        "gst": "w-e-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "we've",
-        "gst": "w-e-v",
+        "gst": "u-e-v",
         "notes": ""
     },
     {
         "text": "we",
-        "gst": "w-e",
+        "gst": "u-e",
         "notes": ""
     },
     {
         "text": "weak",
-        "gst": "w-e-k",
+        "gst": "u-e-k",
         "notes": ""
     },
     {
         "text": "weaken",
-        "gst": "w-e-k-n",
+        "gst": "u-e-k-n",
         "notes": ""
     },
     {
         "text": "weakened",
-        "gst": "w-e-k-nt",
+        "gst": "u-e-k-nt",
         "notes": ""
     },
     {
         "text": "weaker",
-        "gst": "w-e-k-r",
+        "gst": "u-e-k-r",
         "notes": ""
     },
     {
         "text": "weakest",
-        "gst": "w-e-k-e-s-t",
+        "gst": "u-e-k-e-s-t",
         "notes": ""
     },
     {
         "text": "weakling",
-        "gst": "w-e-k-l-e-ng",
+        "gst": "u-e-k-l-e-ng",
         "notes": ""
     },
     {
         "text": "weakly",
-        "gst": "w-e-k-e",
+        "gst": "u-e-k-e",
         "notes": ""
     },
     {
         "text": "weakness",
-        "gst": "w-e-k-n-e-s",
+        "gst": "u-e-k-n-e-s",
         "notes": ""
     },
     {
         "text": "weal",
-        "gst": "w-e-l",
+        "gst": "u-e-l",
         "notes": ""
     },
     {
         "text": "wealth",
-        "gst": "w-e-l-th",
+        "gst": "u-e-l-th",
         "notes": ""
     },
     {
         "text": "wealthier",
-        "gst": "w-e-l-th-e-r",
+        "gst": "u-e-l-th-e-r",
         "notes": ""
     },
     {
         "text": "wealthiest",
-        "gst": "w-e-l-th-e-s-t",
+        "gst": "u-e-l-th-e-s-t",
         "notes": ""
     },
     {
         "text": "wealthy",
-        "gst": "w-e-l-th-e",
+        "gst": "u-e-l-th-e",
         "notes": ""
     },
     {
         "text": "wean",
-        "gst": "w-e-n",
+        "gst": "u-e-n",
         "notes": ""
     },
     {
         "text": "weaned",
-        "gst": "w-e-nt",
+        "gst": "u-e-nt",
         "notes": ""
     },
     {
         "text": "weapon",
-        "gst": "w-e-p-n",
+        "gst": "u-e-p-n",
         "notes": ""
     },
     {
         "text": "weaponless",
-        "gst": "w-e-p-l-n-s",
+        "gst": "u-e-p-l-n-s",
         "notes": ""
     },
     {
         "text": "wear",
-        "gst": "w-e-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "wearability",
-        "gst": "w-e-r-b/l",
+        "gst": "u-e-r-b/l",
         "notes": ""
     },
     {
         "text": "wearable",
-        "gst": "w-e-r-b",
+        "gst": "u-e-r-b",
         "notes": ""
     },
     {
         "text": "wearer",
-        "gst": "w-e-r-r",
+        "gst": "u-e-r-r",
         "notes": ""
     },
     {
         "text": "wearied",
-        "gst": "w-e-r-d",
+        "gst": "u-e-r-d",
         "notes": ""
     },
     {
         "text": "wearier",
-        "gst": "w-e-r-e-r",
+        "gst": "u-e-r-e-r",
         "notes": ""
     },
     {
         "text": "weariest",
-        "gst": "w-e-r-e-s-t",
+        "gst": "u-e-r-e-s-t",
         "notes": ""
     },
     {
         "text": "wearily",
-        "gst": "w-e-r-ye",
+        "gst": "u-e-r-ye",
         "notes": ""
     },
     {
         "text": "weariness",
-        "gst": "w-e-r-e-n-e-s",
+        "gst": "u-e-r-e-n-e-s",
         "notes": ""
     },
     {
         "text": "wearings",
-        "gst": "w-e-r-e-ng-s",
+        "gst": "u-e-r/s",
         "notes": ""
     },
     {
         "text": "wearisome",
-        "gst": "w-e-r-e-s-m",
+        "gst": "u-e-r-e-s-m",
         "notes": ""
     },
     {
         "text": "wearisomeness",
-        "gst": "w-e-r-e-s-mn-e-s",
+        "gst": "u-e-r-e-s-mn-e-s",
         "notes": ""
     },
     {
         "text": "weary",
-        "gst": "w-e-r-e",
+        "gst": "u-e-r-e",
         "notes": ""
     },
     {
         "text": "weasel",
-        "gst": "w-e-s-l",
+        "gst": "u-e-s-l",
         "notes": ""
     },
     {
         "text": "weather",
-        "gst": "w-e-th",
+        "gst": "u-e-th",
         "notes": ""
     },
     {
         "text": "weatherboard",
-        "gst": "w-e-th-r-b-o-rd",
+        "gst": "u-e-th-r-b-o-rd",
         "notes": ""
     },
     {
         "text": "weathercock",
-        "gst": "w-e-th-r-k-k",
+        "gst": "u-e-th-r-k-k",
         "notes": ""
     },
     {
         "text": "weathered",
-        "gst": "w-e-th-rd",
+        "gst": "u-e-th-rd",
         "notes": ""
     },
     {
@@ -173971,32 +173971,32 @@
     },
     {
         "text": "weatherproof",
-        "gst": "w-e-th-r-p-r-u-f",
+        "gst": "u-e-th-r-p-r-u-f",
         "notes": ""
     },
     {
         "text": "weatherproofed",
-        "gst": "w-e-th-r-p-r-u-d",
+        "gst": "u-e-th-r-p-r-u-d",
         "notes": ""
     },
     {
         "text": "weaver",
-        "gst": "w-e-v-r",
+        "gst": "u-e-v-r",
         "notes": ""
     },
     {
         "text": "web",
-        "gst": "w-e-b",
+        "gst": "u-e-b",
         "notes": ""
     },
     {
         "text": "webbed",
-        "gst": "w-e-b-d",
+        "gst": "u-e-b-d",
         "notes": ""
     },
     {
         "text": "webbings",
-        "gst": "w-e-b-e-ng-s",
+        "gst": "u-e-b/s",
         "notes": ""
     },
     {
@@ -174006,32 +174006,32 @@
     },
     {
         "text": "wed",
-        "gst": "w-d",
+        "gst": "w-e-d",
         "notes": ""
     },
     {
         "text": "wedded",
-        "gst": "w-e-td",
+        "gst": "u-e-td",
         "notes": ""
     },
     {
         "text": "weddings",
-        "gst": "w-e-d-e-ng-s",
+        "gst": "u-e-d/s",
         "notes": ""
     },
     {
         "text": "wedge",
-        "gst": "w-e-j",
+        "gst": "u-e-j",
         "notes": ""
     },
     {
         "text": "wedged",
-        "gst": "w-e-j-d",
+        "gst": "u-e-j-d",
         "notes": ""
     },
     {
         "text": "wedlock",
-        "gst": "w-e-d-l-a-k",
+        "gst": "u-e-d-l-a-k",
         "notes": ""
     },
     {
@@ -174041,157 +174041,157 @@
     },
     {
         "text": "weed",
-        "gst": "w-d",
+        "gst": "we-d",
         "notes": ""
     },
     {
         "text": "weeded",
-        "gst": "w-e-td",
+        "gst": "u-e-td",
         "notes": ""
     },
     {
         "text": "weeder",
-        "gst": "w-e-d-r",
+        "gst": "u-e-d-r",
         "notes": ""
     },
     {
         "text": "weediest",
-        "gst": "w-e-d-e-s-t",
+        "gst": "u-e-d-e-s-t",
         "notes": ""
     },
     {
         "text": "weedy",
-        "gst": "w-e-d-e",
+        "gst": "u-e-d-e",
         "notes": ""
     },
     {
         "text": "week or two ago",
-        "gst": "w-e-k-o-r-t-u-a-g-o",
+        "gst": "u-e-k-o-r-t-u-a-g-o",
         "notes": ""
     },
     {
         "text": "week or two",
-        "gst": "w-e-k-o-r-t-u",
+        "gst": "u-e-k-o-r-t-u",
         "notes": ""
     },
     {
         "text": "week",
-        "gst": "w-e-k",
+        "gst": "u-e-k",
         "notes": ""
     },
     {
         "text": "weekday",
-        "gst": "w-e-k-d-a",
+        "gst": "u-e-k-d-a",
         "notes": ""
     },
     {
         "text": "weekend",
-        "gst": "w-e-k-e-nt",
+        "gst": "u-e-k-e-nt",
         "notes": ""
     },
     {
         "text": "weeklies",
-        "gst": "w-e-k-l-e-s",
+        "gst": "u-e-k-l-e-s",
         "notes": ""
     },
     {
         "text": "weekly",
-        "gst": "w-e-k-e",
+        "gst": "u-e-k-e",
         "notes": ""
     },
     {
         "text": "weeks ago",
-        "gst": "w-e-k-s-a-g-o",
+        "gst": "u-e-k-s-a-g-o",
         "notes": ""
     },
     {
         "text": "weep",
-        "gst": "w-e-p",
+        "gst": "u-e-p",
         "notes": ""
     },
     {
         "text": "weepingly",
-        "gst": "w-e-p-e-ng-g-e",
+        "gst": "u-e-p-e-ng-g-e",
         "notes": ""
     },
     {
         "text": "weevil",
-        "gst": "w-e-v-l",
+        "gst": "u-e-v-l",
         "notes": ""
     },
     {
         "text": "weft",
-        "gst": "w-e-f-t",
+        "gst": "u-e-f-t",
         "notes": ""
     },
     {
         "text": "weigh",
-        "gst": "w-a",
+        "gst": "u-a",
         "notes": ""
     },
     {
         "text": "weighed",
-        "gst": "w-a-d",
+        "gst": "u-a-d",
         "notes": ""
     },
     {
         "text": "weighmaster",
-        "gst": "w-i-m-a-s-t-r",
+        "gst": "u-i-m-a-s-t-r",
         "notes": ""
     },
     {
         "text": "weight",
-        "gst": "w-a-t",
+        "gst": "u-a-t",
         "notes": ""
     },
     {
         "text": "weighted",
-        "gst": "w-a-td",
+        "gst": "u-a-td",
         "notes": ""
     },
     {
         "text": "weightier",
-        "gst": "w-a-t-e-r",
+        "gst": "u-a-t-e-r",
         "notes": ""
     },
     {
         "text": "weightiest",
-        "gst": "w-a-t-e-s-t",
+        "gst": "u-a-t-e-s-t",
         "notes": ""
     },
     {
         "text": "weightings",
-        "gst": "w-a-t-e-ng-s",
+        "gst": "u-a-t/s",
         "notes": ""
     },
     {
         "text": "weightlessness",
-        "gst": "w-a-t-l-e-s-n-e-s",
+        "gst": "u-a-t-l-e-s-n-e-s",
         "notes": ""
     },
     {
         "text": "weighty",
-        "gst": "w-a-t-e",
+        "gst": "u-a-t-e",
         "notes": ""
     },
     {
         "text": "weir",
-        "gst": "w-e-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "weird",
-        "gst": "w-e-rd",
+        "gst": "u-e-rd",
         "notes": ""
     },
     {
         "text": "weirdly",
-        "gst": "w-e-rd-e",
+        "gst": "u-e-rd-e",
         "notes": ""
     },
     {
         "text": "weirdness",
-        "gst": "w-e-r-t-n-e-s",
+        "gst": "u-e-r-t-n-e-s",
         "notes": ""
     },
     {
@@ -174201,52 +174201,52 @@
     },
     {
         "text": "welcome",
-        "gst": "w-e-l-k-m",
+        "gst": "u-e-l-k-m",
         "notes": ""
     },
     {
         "text": "welcomed",
-        "gst": "w-e-l-k-m-d",
+        "gst": "u-e-l-k-m-d",
         "notes": ""
     },
     {
         "text": "welcomingly",
-        "gst": "w-e-l-k-m/e",
+        "gst": "u-e-l-k-m/e",
         "notes": ""
     },
     {
         "text": "weld",
-        "gst": "w-e-ld",
+        "gst": "u-e-ld",
         "notes": ""
     },
     {
         "text": "welded",
-        "gst": "w-e-ltd",
+        "gst": "u-e-ltd",
         "notes": ""
     },
     {
         "text": "welfare",
-        "gst": "w-e-l-f-e-r",
+        "gst": "u-e-l-f-e-r",
         "notes": ""
     },
     {
         "text": "welkin",
-        "gst": "w-e-l-k-e-n",
+        "gst": "u-e-l-k-e-n",
         "notes": ""
     },
     {
         "text": "well",
-        "gst": "w-e-l",
+        "gst": "u-e-l",
         "notes": ""
     },
     {
         "text": "wellborn",
-        "gst": "w-e-l-b-o-r-n",
+        "gst": "u-e-l-b-o-r-n",
         "notes": ""
     },
     {
         "text": "welled",
-        "gst": "w-e-ld",
+        "gst": "u-e-ld",
         "notes": ""
     },
     {
@@ -174256,12 +174256,12 @@
     },
     {
         "text": "wellhead",
-        "gst": "w-e-l-h-d",
+        "gst": "u-e-l-h-d",
         "notes": ""
     },
     {
         "text": "wellhole",
-        "gst": "w-e-l-h-o-l",
+        "gst": "u-e-l-h-o-l",
         "notes": ""
     },
     {
@@ -174276,77 +174276,77 @@
     },
     {
         "text": "wellspring",
-        "gst": "w-e-l-s-p-r-e-ng",
+        "gst": "u-e-l-s-p-r-e-ng",
         "notes": ""
     },
     {
         "text": "welt",
-        "gst": "w-e-l-t",
+        "gst": "u-e-l-t",
         "notes": ""
     },
     {
         "text": "welted",
-        "gst": "w-e-l-td",
+        "gst": "u-e-l-td",
         "notes": ""
     },
     {
         "text": "welter",
-        "gst": "w-e-l-t-r",
+        "gst": "u-e-l-t-r",
         "notes": ""
     },
     {
         "text": "weltered",
-        "gst": "w-e-l-t-rd",
+        "gst": "u-e-l-t-rd",
         "notes": ""
     },
     {
         "text": "wen",
-        "gst": "w-e-n",
+        "gst": "u-e-n",
         "notes": ""
     },
     {
         "text": "wench",
-        "gst": "w-e-n-ch",
+        "gst": "u-e-n-ch",
         "notes": ""
     },
     {
         "text": "wend",
-        "gst": "w-e-nt",
+        "gst": "u-e-nt",
         "notes": ""
     },
     {
         "text": "wended",
-        "gst": "w-e-ntd",
+        "gst": "u-e-ntd",
         "notes": ""
     },
     {
         "text": "went",
-        "gst": "w-e-nt",
+        "gst": "u-e-nt",
         "notes": ""
     },
     {
         "text": "wept",
-        "gst": "w-e-p-t",
+        "gst": "u-e-p-t",
         "notes": ""
     },
     {
         "text": "were not",
-        "gst": "w-r-n-a-t",
+        "gst": "u-e-r-n-a-t",
         "notes": ""
     },
     {
         "text": "were sure",
-        "gst": "w-r-sh-u-r",
+        "gst": "u-e-r-sh-u-r",
         "notes": ""
     },
     {
         "text": "were",
-        "gst": "w-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "werewolf",
-        "gst": "w-e-r-w-u-l-f",
+        "gst": "u-e-r-w-u-l-f",
         "notes": ""
     },
     {
@@ -174361,7 +174361,7 @@
     },
     {
         "text": "west",
-        "gst": "w-e-s-t",
+        "gst": "u-e-s-t",
         "notes": ""
     },
     {
@@ -174371,17 +174371,17 @@
     },
     {
         "text": "westerly",
-        "gst": "w-e-s-t-r-e",
+        "gst": "u-e-s-t-r-e",
         "notes": ""
     },
     {
         "text": "western",
-        "gst": "w-e-s-t-r-n",
+        "gst": "u-e-s-t-r-n",
         "notes": ""
     },
     {
         "text": "westerner",
-        "gst": "w-e-s-t-r-n-r",
+        "gst": "u-e-s-t-r-n-r",
         "notes": ""
     },
     {
@@ -174396,7 +174396,7 @@
     },
     {
         "text": "westward",
-        "gst": "w-e-s-t/d",
+        "gst": "u-e-s-t/d",
         "notes": ""
     },
     {
@@ -174406,42 +174406,42 @@
     },
     {
         "text": "wet",
-        "gst": "w-e-t",
+        "gst": "u-e-t",
         "notes": ""
     },
     {
         "text": "wetness",
-        "gst": "w-e-t-n-e-s",
+        "gst": "u-e-t-n-e-s",
         "notes": ""
     },
     {
         "text": "wettability",
-        "gst": "w-e-t-b-a-l-t-e",
+        "gst": "u-e-t-b-a-l-t-e",
         "notes": ""
     },
     {
         "text": "wettable",
-        "gst": "w-e-t-b",
+        "gst": "u-e-t-b",
         "notes": ""
     },
     {
         "text": "wetted",
-        "gst": "w-e-td",
+        "gst": "u-e-td",
         "notes": ""
     },
     {
         "text": "wetter",
-        "gst": "w-e-t-r",
+        "gst": "u-e-t-r",
         "notes": ""
     },
     {
         "text": "wettest",
-        "gst": "w-e-t-e-s-t",
+        "gst": "u-e-t-e-s-t",
         "notes": ""
     },
     {
         "text": "wettings",
-        "gst": "w-e-t-e-ng-s",
+        "gst": "u-e-t/s",
         "notes": ""
     },
     {
@@ -174451,17 +174451,17 @@
     },
     {
         "text": "whack",
-        "gst": "w-a-k",
+        "gst": "u-a-k",
         "notes": ""
     },
     {
         "text": "whacked",
-        "gst": "w-a-k-t",
+        "gst": "u-a-k-t",
         "notes": ""
     },
     {
         "text": "whale",
-        "gst": "w-a-l",
+        "gst": "u-a-l",
         "notes": ""
     },
     {
@@ -174476,87 +174476,87 @@
     },
     {
         "text": "whaleman",
-        "gst": "w-a-l-mn",
+        "gst": "u-a-l-mn",
         "notes": ""
     },
     {
         "text": "whaler",
-        "gst": "w-a-l-r",
+        "gst": "u-a-l-r",
         "notes": ""
     },
     {
         "text": "wharf",
-        "gst": "w-o-r-f",
+        "gst": "u-o-r-f",
         "notes": ""
     },
     {
         "text": "wharfage",
-        "gst": "w-o-r-f-a-j",
+        "gst": "u-o-r-f-a-j",
         "notes": ""
     },
     {
         "text": "wharfinger",
-        "gst": "w-o-r-f-e-ng-r",
+        "gst": "u-o-r-f-e-ng-r",
         "notes": ""
     },
     {
         "text": "what are",
-        "gst": "w-u-t-a-r",
+        "gst": "u-u-t-a-r",
         "notes": ""
     },
     {
         "text": "what has been",
-        "gst": "w-u-t-h-a-s-b-e-n",
+        "gst": "u-u-t-h-a-s-b-e-n",
         "notes": ""
     },
     {
         "text": "what is",
-        "gst": "w-u-t-e-s",
+        "gst": "u-u-t-e-s",
         "notes": ""
     },
     {
         "text": "what our",
-        "gst": "w-u-t-a-u-r",
+        "gst": "u-u-t-a-u-r",
         "notes": ""
     },
     {
         "text": "what was",
-        "gst": "w-u-t-w-a-s",
+        "gst": "u-u-t-w-a-s",
         "notes": ""
     },
     {
         "text": "what will",
-        "gst": "w-u-t-w-e-l",
+        "gst": "u-u-t-w-e-l",
         "notes": ""
     },
     {
         "text": "what",
-        "gst": "w-u-t",
+        "gst": "u-u-t",
         "notes": ""
     },
     {
         "text": "whatever",
-        "gst": "w-u-t-v-r",
+        "gst": "u-u-t-v-r",
         "notes": ""
     },
     {
         "text": "whatnot",
-        "gst": "w-u-tn-a-t",
+        "gst": "u-u-tn-a-t",
         "notes": ""
     },
     {
         "text": "whatsoever",
-        "gst": "w-u-t-s-o-e-v-r",
+        "gst": "u-u-t-s-o-e-v-r",
         "notes": ""
     },
     {
         "text": "wheat",
-        "gst": "w-e-t",
+        "gst": "u-e-t",
         "notes": ""
     },
     {
         "text": "wheaten",
-        "gst": "w-e-tn",
+        "gst": "u-e-tn",
         "notes": ""
     },
     {
@@ -174566,42 +174566,42 @@
     },
     {
         "text": "wheatworm",
-        "gst": "w-e-t-w-o-r-m",
+        "gst": "u-e-t-w-o-r-m",
         "notes": ""
     },
     {
         "text": "wheedle",
-        "gst": "w-e-d-l",
+        "gst": "u-e-d-l",
         "notes": ""
     },
     {
         "text": "wheedled",
-        "gst": "w-e-d-l-d",
+        "gst": "u-e-d-l-d",
         "notes": ""
     },
     {
         "text": "wheedlingly",
-        "gst": "w-e-d-l/e",
+        "gst": "u-e-d-l/e",
         "notes": ""
     },
     {
         "text": "wheel",
-        "gst": "w-e-l",
+        "gst": "u-e-l",
         "notes": ""
     },
     {
         "text": "wheelbarrow",
-        "gst": "w-e-l-b-e-r-o",
+        "gst": "u-e-l-b-e-r-o",
         "notes": ""
     },
     {
         "text": "wheeled",
-        "gst": "w-e-ld",
+        "gst": "u-e-ld",
         "notes": ""
     },
     {
         "text": "wheelhouse",
-        "gst": "w-e-l-h-a-u-s",
+        "gst": "u-e-l-h-a-u-s",
         "notes": ""
     },
     {
@@ -174611,177 +174611,177 @@
     },
     {
         "text": "wheelwright",
-        "gst": "w-e-l-r-i-t",
+        "gst": "u-e-l-r-i-t",
         "notes": ""
     },
     {
         "text": "wheeze",
-        "gst": "w-e-s",
+        "gst": "u-e-s",
         "notes": ""
     },
     {
         "text": "wheezed",
-        "gst": "w-e-s-d",
+        "gst": "u-e-s-d",
         "notes": ""
     },
     {
         "text": "wheezier",
-        "gst": "w-e-s-e-r",
+        "gst": "u-e-s-e-r",
         "notes": ""
     },
     {
         "text": "wheeziest",
-        "gst": "w-e-s-e-s-t",
+        "gst": "u-e-s-e-s-t",
         "notes": ""
     },
     {
         "text": "wheezily",
-        "gst": "w-e-s-e-ye",
+        "gst": "u-e-s-e-ye",
         "notes": ""
     },
     {
         "text": "wheezingly",
-        "gst": "w-e-s/e",
+        "gst": "u-e-s/e",
         "notes": ""
     },
     {
         "text": "wheezy",
-        "gst": "w-e-s-e",
+        "gst": "u-e-s-e",
         "notes": ""
     },
     {
         "text": "whelk",
-        "gst": "w-e-l-k",
+        "gst": "u-e-l-k",
         "notes": ""
     },
     {
         "text": "whelp",
-        "gst": "w-e-l-p",
+        "gst": "u-e-l-p",
         "notes": ""
     },
     {
         "text": "whelped",
-        "gst": "w-e-l-p-t",
+        "gst": "u-e-l-p-t",
         "notes": ""
     },
     {
         "text": "when that",
-        "gst": "w-e-n-th-a-t",
+        "gst": "u-e-n-th-a-t",
         "notes": ""
     },
     {
         "text": "when the",
-        "gst": "w-e-n-th",
+        "gst": "u-e-n-th",
         "notes": ""
     },
     {
         "text": "when they",
-        "gst": "w-e-n-th-a",
+        "gst": "u-e-n-th-a",
         "notes": ""
     },
     {
         "text": "when this",
-        "gst": "w-e-n-th-e-s",
+        "gst": "u-e-n-th-e-s",
         "notes": ""
     },
     {
         "text": "when those",
-        "gst": "w-e-n-th-o-s",
+        "gst": "u-e-n-th-o-s",
         "notes": ""
     },
     {
         "text": "when you are",
-        "gst": "w-e-n-e-u-a-r",
+        "gst": "u-e-n-e-u-a-r",
         "notes": ""
     },
     {
         "text": "when you",
-        "gst": "w-e-n-e-u",
+        "gst": "u-e-n-e-u",
         "notes": ""
     },
     {
         "text": "when",
-        "gst": "w-e-n",
+        "gst": "u-e-n",
         "notes": ""
     },
     {
         "text": "whence",
-        "gst": "w-e-n-s",
+        "gst": "u-e-n-s",
         "notes": ""
     },
     {
         "text": "whenceforth",
-        "gst": "w-e-n-s-f-o-r-th",
+        "gst": "u-e-n-s-f-o-r-th",
         "notes": ""
     },
     {
         "text": "whenever",
-        "gst": "w-e-n-e-v",
+        "gst": "u-e-n-e-v",
         "notes": ""
     },
     {
         "text": "whensoever",
-        "gst": "w-e-n-s-v-r",
+        "gst": "u-e-n-s-v-r",
         "notes": ""
     },
     {
         "text": "where",
-        "gst": "w-e-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "whereabouts",
-        "gst": "w-e-r-b-a-u-t-s",
+        "gst": "u-e-r-b-a-u-t-s",
         "notes": ""
     },
     {
         "text": "whereafter",
-        "gst": "w-e-r-f-t-r",
+        "gst": "u-e-r-f-t-r",
         "notes": ""
     },
     {
         "text": "whereas",
-        "gst": "w-e-r-a-s",
+        "gst": "u-e-r-a-s",
         "notes": ""
     },
     {
         "text": "whereat",
-        "gst": "w-e-r-a-t",
+        "gst": "u-e-r-a-t",
         "notes": ""
     },
     {
         "text": "whereby",
-        "gst": "w-e-r-b-i",
+        "gst": "u-e-r-b-i",
         "notes": ""
     },
     {
         "text": "wherefore",
-        "gst": "w-e-r-e-f-o-r",
+        "gst": "u-e-r-e-f-o-r",
         "notes": ""
     },
     {
         "text": "wherefrom",
-        "gst": "w-e-r-f-r-m",
+        "gst": "u-e-r-f-r-m",
         "notes": ""
     },
     {
         "text": "wherein",
-        "gst": "w-e-r-e-n",
+        "gst": "u-e-r-e-n",
         "notes": ""
     },
     {
         "text": "whereof",
-        "gst": "w-e-r-e-f",
+        "gst": "u-e-r-e-f",
         "notes": ""
     },
     {
         "text": "whereon",
-        "gst": "w-e-r-e-n",
+        "gst": "u-e-r-e-n",
         "notes": ""
     },
     {
         "text": "wheresoever",
-        "gst": "w-e-r-e-s-o-v-r",
+        "gst": "u-e-r-e-s-o-v-r",
         "notes": ""
     },
     {
@@ -174791,107 +174791,107 @@
     },
     {
         "text": "wherever",
-        "gst": "w-e-r-e-v-r",
+        "gst": "u-e-r-e-v-r",
         "notes": ""
     },
     {
         "text": "wherewith",
-        "gst": "w-e-r-e-w-e-th",
+        "gst": "u-e-r-e-w-e-th",
         "notes": ""
     },
     {
         "text": "wherewithal",
-        "gst": "w-e-r-w-e-th-o-l",
+        "gst": "u-e-r-w-e-th-o-l",
         "notes": ""
     },
     {
         "text": "wherry",
-        "gst": "w-e-r-e",
+        "gst": "u-e-r-e",
         "notes": ""
     },
     {
         "text": "whet",
-        "gst": "w-e-t",
+        "gst": "u-e-t",
         "notes": ""
     },
     {
         "text": "whether",
-        "gst": "w-e-th",
+        "gst": "u-e-th",
         "notes": ""
     },
     {
         "text": "whetstone",
-        "gst": "w-e-t-s-t-o-n",
+        "gst": "u-e-t-s-t-o-n",
         "notes": ""
     },
     {
         "text": "whetted",
-        "gst": "w-e-td",
+        "gst": "u-e-td",
         "notes": ""
     },
     {
         "text": "whey",
-        "gst": "w-a",
+        "gst": "u-a",
         "notes": ""
     },
     {
         "text": "which does",
-        "gst": "w-e-ch-d-u-s",
+        "gst": "u-e-ch-d-u-s",
         "notes": ""
     },
     {
         "text": "which has",
-        "gst": "w-e-ch-h-a-s",
+        "gst": "u-e-ch-h-a-s",
         "notes": ""
     },
     {
         "text": "which have",
-        "gst": "w-e-ch-h-a-v",
+        "gst": "u-e-ch-h-a-v",
         "notes": ""
     },
     {
         "text": "which Is",
-        "gst": "w-e-ch-e-s",
+        "gst": "u-e-ch-e-s",
         "notes": ""
     },
     {
         "text": "which may be",
-        "gst": "w-e-ch-m-a-b-e",
+        "gst": "u-e-ch-m-a-b-e",
         "notes": ""
     },
     {
         "text": "which may",
-        "gst": "w-e-ch-m-a",
+        "gst": "u-e-ch-m-a",
         "notes": ""
     },
     {
         "text": "which means",
-        "gst": "w-e-ch-m-e-n-s",
+        "gst": "u-e-ch-m-e-n-s",
         "notes": ""
     },
     {
         "text": "which must",
-        "gst": "w-e-ch-m-s",
+        "gst": "u-e-ch-m-s",
         "notes": ""
     },
     {
         "text": "which they have",
-        "gst": "w-e-ch-th-a-h-a-v",
+        "gst": "u-e-ch-th-a-h-a-v",
         "notes": ""
     },
     {
         "text": "which was",
-        "gst": "w-e-ch-w-a-s",
+        "gst": "u-e-ch-w-a-s",
         "notes": ""
     },
     {
         "text": "which way",
-        "gst": "w-e-ch-w-a",
+        "gst": "u-e-ch-w-a",
         "notes": ""
     },
     {
         "text": "which we are",
-        "gst": "w-e-ch-w-e-a-r",
+        "gst": "u-e-ch-w-e-a-r",
         "notes": ""
     },
     {
@@ -174901,37 +174901,37 @@
     },
     {
         "text": "which you cannot",
-        "gst": "w-e-ch-e-u-k-a-n-a-t",
+        "gst": "u-e-ch-e-u-k-a-n-a-t",
         "notes": ""
     },
     {
         "text": "which",
-        "gst": "w-e-ch",
+        "gst": "u-e-ch",
         "notes": ""
     },
     {
         "text": "whichever",
-        "gst": "w-e-ch-e-v-r",
+        "gst": "u-e-ch-e-v-r",
         "notes": ""
     },
     {
         "text": "whichsoever",
-        "gst": "w-e-s-k-o-v-r",
+        "gst": "u-e-s-k-o-v-r",
         "notes": ""
     },
     {
         "text": "whiff",
-        "gst": "w-e-f",
+        "gst": "u-e-f",
         "notes": ""
     },
     {
         "text": "whiffed",
-        "gst": "w-e-f-t",
+        "gst": "u-e-f-t",
         "notes": ""
     },
     {
         "text": "whiffled",
-        "gst": "w-e-f-ld",
+        "gst": "u-e-f-ld",
         "notes": ""
     },
     {
@@ -174941,177 +174941,177 @@
     },
     {
         "text": "while",
-        "gst": "w-i-l",
+        "gst": "u-i-l",
         "notes": ""
     },
     {
         "text": "whiled",
-        "gst": "w-i-ld",
+        "gst": "u-i-ld",
         "notes": ""
     },
     {
         "text": "whilom",
-        "gst": "w-e-l-m",
+        "gst": "u-e-l-m",
         "notes": ""
     },
     {
         "text": "whim",
-        "gst": "w-e-m",
+        "gst": "u-e-m",
         "notes": ""
     },
     {
         "text": "whimper",
-        "gst": "w-e-m-p-r",
+        "gst": "u-e-m-p-r",
         "notes": ""
     },
     {
         "text": "whimpered",
-        "gst": "w-e-m-p-rd",
+        "gst": "u-e-m-p-rd",
         "notes": ""
     },
     {
         "text": "whimperingly",
-        "gst": "w-e-m-p-r/e",
+        "gst": "u-e-m-p-r/e",
         "notes": ""
     },
     {
         "text": "whimperings",
-        "gst": "w-e-m-p-r-e-ng-s",
+        "gst": "u-e-m-p-r/s",
         "notes": ""
     },
     {
         "text": "whimsey",
-        "gst": "w-e-s-m-e",
+        "gst": "u-e-s-m-e",
         "notes": ""
     },
     {
         "text": "whimsical",
-        "gst": "w-e-m-s/k",
+        "gst": "u-e-m-s/k",
         "notes": ""
     },
     {
         "text": "whine",
-        "gst": "w-i-n",
+        "gst": "u-i-n",
         "notes": ""
     },
     {
         "text": "whined",
-        "gst": "w-i-nt",
+        "gst": "u-i-nt",
         "notes": ""
     },
     {
         "text": "whiningly",
-        "gst": "w-i-n/e",
+        "gst": "u-i-n/e",
         "notes": ""
     },
     {
         "text": "whinings",
-        "gst": "w-i-n-e-ng-s",
+        "gst": "u-i-n/s",
         "notes": ""
     },
     {
         "text": "whinnied",
-        "gst": "w-e-n-d",
+        "gst": "u-e-n-d",
         "notes": ""
     },
     {
         "text": "whinny",
-        "gst": "w-e-n-e",
+        "gst": "u-e-n-e",
         "notes": ""
     },
     {
         "text": "whip",
-        "gst": "w-e-p",
+        "gst": "u-e-p",
         "notes": ""
     },
     {
         "text": "whipcord",
-        "gst": "w-e-p-k-rd",
+        "gst": "u-e-p-k-rd",
         "notes": ""
     },
     {
         "text": "whipped",
-        "gst": "w-e-p-t",
+        "gst": "u-e-p-t",
         "notes": ""
     },
     {
         "text": "whippersnapper",
-        "gst": "w-e-p-s-p-r-n-r",
+        "gst": "u-e-p-s-p-r-n-r",
         "notes": ""
     },
     {
         "text": "whippet",
-        "gst": "w-e-p-e-t",
+        "gst": "u-e-p-e-t",
         "notes": ""
     },
     {
         "text": "whippingly",
-        "gst": "w-e-p/e",
+        "gst": "u-e-p/e",
         "notes": ""
     },
     {
         "text": "whippings",
-        "gst": "w-e-p-e-ng-s",
+        "gst": "u-e-p/s",
         "notes": ""
     },
     {
         "text": "whippoorwill",
-        "gst": "w-e-p-r-w-e-l",
+        "gst": "u-e-p-r-w-e-l",
         "notes": ""
     },
     {
         "text": "whipsaw",
-        "gst": "w-e-p-s-o",
+        "gst": "u-e-p-s-o",
         "notes": ""
     },
     {
         "text": "whipstitch",
-        "gst": "w-e-p-s-t-e-t",
+        "gst": "u-e-p-s-t-e-t",
         "notes": ""
     },
     {
         "text": "whipstock",
-        "gst": "w-e-p-s-t-a-k",
+        "gst": "u-e-p-s-t-a-k",
         "notes": ""
     },
     {
         "text": "whipworm",
-        "gst": "w-e-p-w-r-m",
+        "gst": "u-e-p-w-r-m",
         "notes": ""
     },
     {
         "text": "whir",
-        "gst": "w-e-r",
+        "gst": "u-e-r",
         "notes": ""
     },
     {
         "text": "whirl",
-        "gst": "w-r-l",
+        "gst": "u-e-r-l",
         "notes": ""
     },
     {
         "text": "whirled",
-        "gst": "w-r-ld",
+        "gst": "u-e-r-ld",
         "notes": ""
     },
     {
         "text": "whirligig",
-        "gst": "w-r-l-e-g-r-e",
+        "gst": "u-e-r-l-e-g-r-e",
         "notes": ""
     },
     {
         "text": "whirlingly",
-        "gst": "w-r-l/e",
+        "gst": "u-e-r-l/e",
         "notes": ""
     },
     {
         "text": "whirlpool",
-        "gst": "w-r-l-p-u-l",
+        "gst": "u-e-r-l-p-u-l",
         "notes": ""
     },
     {
         "text": "whirlwind",
-        "gst": "w-r-l-w-e-nt",
+        "gst": "u-e-r-l-w-e-nt",
         "notes": ""
     },
     {
@@ -175121,67 +175121,67 @@
     },
     {
         "text": "whisk",
-        "gst": "w-e-s-k",
+        "gst": "u-e-s-k",
         "notes": ""
     },
     {
         "text": "whisked",
-        "gst": "w-e-s-k-t",
+        "gst": "u-e-s-k-t",
         "notes": ""
     },
     {
         "text": "whisker",
-        "gst": "w-e-s-k-r",
+        "gst": "u-e-s-k-r",
         "notes": ""
     },
     {
         "text": "whiskered",
-        "gst": "w-e-s-k-rd",
+        "gst": "u-e-s-k-rd",
         "notes": ""
     },
     {
         "text": "whisky",
-        "gst": "w-e-s-k-e",
+        "gst": "u-e-s-k-e",
         "notes": ""
     },
     {
         "text": "whisper",
-        "gst": "w-e-s-p-r",
+        "gst": "u-e-s-p-r",
         "notes": ""
     },
     {
         "text": "whispered",
-        "gst": "w-e-s-p-rd",
+        "gst": "u-e-s-p-rd",
         "notes": ""
     },
     {
         "text": "whisperer",
-        "gst": "w-e-s-p-r-r",
+        "gst": "u-e-s-p-r-r",
         "notes": ""
     },
     {
         "text": "whisperingly",
-        "gst": "w-e-s-p-r/e",
+        "gst": "u-e-s-p-r/e",
         "notes": ""
     },
     {
         "text": "whisperings",
-        "gst": "w-e-s-p-r-e-ng-s",
+        "gst": "u-e-s-p-r/s",
         "notes": ""
     },
     {
         "text": "whist",
-        "gst": "w-e-s-t",
+        "gst": "u-e-s-t",
         "notes": ""
     },
     {
         "text": "whistle",
-        "gst": "w-e-s-l",
+        "gst": "u-e-s-l",
         "notes": ""
     },
     {
         "text": "whistled",
-        "gst": "w-e-s-ld",
+        "gst": "u-e-s-ld",
         "notes": ""
     },
     {
@@ -175191,87 +175191,87 @@
     },
     {
         "text": "whistlings",
-        "gst": "w-e-s-l-e-n-j-e-s",
+        "gst": "u-e-s-l-e-n-j-e-s",
         "notes": ""
     },
     {
         "text": "whit",
-        "gst": "w-e-t",
+        "gst": "u-e-t",
         "notes": ""
     },
     {
         "text": "white",
-        "gst": "w-i-t",
+        "gst": "u-i-t",
         "notes": ""
     },
     {
         "text": "whitecap",
-        "gst": "w-i-t-k-a-p",
+        "gst": "u-i-t-k-a-p",
         "notes": ""
     },
     {
         "text": "whited",
-        "gst": "w-i-td",
+        "gst": "u-i-td",
         "notes": ""
     },
     {
         "text": "whitefish",
-        "gst": "w-i-t-f-e-sh",
+        "gst": "u-i-t-f-e-sh",
         "notes": ""
     },
     {
         "text": "whiten",
-        "gst": "w-i-tn",
+        "gst": "u-i-tn",
         "notes": ""
     },
     {
         "text": "whitened",
-        "gst": "w-i-tn-d",
+        "gst": "u-i-tn-d",
         "notes": ""
     },
     {
         "text": "whiteness",
-        "gst": "w-i-t-n-e-s",
+        "gst": "u-i-t-n-e-s",
         "notes": ""
     },
     {
         "text": "whitewash",
-        "gst": "w-i-t-w-a-sh",
+        "gst": "u-i-t-w-a-sh",
         "notes": ""
     },
     {
         "text": "whitewashed",
-        "gst": "w-i-t-w-a-sh-t",
+        "gst": "u-i-t-w-a-sh-t",
         "notes": ""
     },
     {
         "text": "whitewing",
-        "gst": "w-i-t-w-e-ng",
+        "gst": "u-i-t-w-e-ng",
         "notes": ""
     },
     {
         "text": "whitewood",
-        "gst": "w-i-t-u-u-d",
+        "gst": "u-i-t-u-u-d",
         "notes": ""
     },
     {
         "text": "whither",
-        "gst": "w-e-th",
+        "gst": "u-e-th",
         "notes": ""
     },
     {
         "text": "whitings",
-        "gst": "w-i-t-e-ng-s",
+        "gst": "u-i-t/s",
         "notes": ""
     },
     {
         "text": "whitish",
-        "gst": "w-i-t-sh",
+        "gst": "u-i-t-sh",
         "notes": ""
     },
     {
         "text": "whitlow",
-        "gst": "w-e-t-l-o",
+        "gst": "u-e-t-l-o",
         "notes": ""
     },
     {
@@ -175286,17 +175286,17 @@
     },
     {
         "text": "whittle",
-        "gst": "w-e-t-l",
+        "gst": "u-e-t-l",
         "notes": ""
     },
     {
         "text": "whittled",
-        "gst": "w-e-t-ld",
+        "gst": "u-e-t-ld",
         "notes": ""
     },
     {
         "text": "whittlings",
-        "gst": "w-e-t-l-e-ng-s",
+        "gst": "u-e-t-l/s",
         "notes": ""
     },
     {
@@ -175566,17 +175566,17 @@
     },
     {
         "text": "whoop",
-        "gst": "w-u-p",
+        "gst": "u-u-p",
         "notes": ""
     },
     {
         "text": "whooped",
-        "gst": "w-u-p-t",
+        "gst": "u-u-p-t",
         "notes": ""
     },
     {
         "text": "whoopingly",
-        "gst": "w-u-p/e",
+        "gst": "u-u-p/e",
         "notes": ""
     },
     {
@@ -175591,12 +175591,12 @@
     },
     {
         "text": "why not",
-        "gst": "w-i-n-a-t",
+        "gst": "u-i-n-a-t",
         "notes": ""
     },
     {
         "text": "why",
-        "gst": "w-i",
+        "gst": "u-i",
         "notes": ""
     },
     {
@@ -175606,87 +175606,87 @@
     },
     {
         "text": "wick",
-        "gst": "w-e-k",
+        "gst": "u-e-k",
         "notes": ""
     },
     {
         "text": "wicked",
-        "gst": "w-e-k-d",
+        "gst": "u-e-k-d",
         "notes": ""
     },
     {
         "text": "wickedly",
-        "gst": "w-e-k-e-d-e",
+        "gst": "u-e-k-e-d-e",
         "notes": ""
     },
     {
         "text": "wickedness",
-        "gst": "w-e-k-t-n-e-s",
+        "gst": "u-e-k-t-n-e-s",
         "notes": ""
     },
     {
         "text": "wicker",
-        "gst": "w-e-k-r",
+        "gst": "u-e-k-r",
         "notes": ""
     },
     {
         "text": "wickerwork",
-        "gst": "w-e-k-r-w-r-k",
+        "gst": "u-e-k-r-w-r-k",
         "notes": ""
     },
     {
         "text": "wicket",
-        "gst": "w-e-k-t",
+        "gst": "u-e-k-t",
         "notes": ""
     },
     {
         "text": "wide",
-        "gst": "w-i-d",
+        "gst": "u-i-d",
         "notes": ""
     },
     {
         "text": "widely",
-        "gst": "w-i-d-e",
+        "gst": "u-i-d-e",
         "notes": ""
     },
     {
         "text": "widen",
-        "gst": "w-i-tn",
+        "gst": "u-i-tn",
         "notes": ""
     },
     {
         "text": "widened",
-        "gst": "w-i-tn-d",
+        "gst": "u-i-tn-d",
         "notes": ""
     },
     {
         "text": "wideness",
-        "gst": "w-e-d-e-n-e-s",
+        "gst": "u-e-d-e-n-e-s",
         "notes": ""
     },
     {
         "text": "wider",
-        "gst": "w-i-d-r",
+        "gst": "u-i-d-r",
         "notes": ""
     },
     {
         "text": "widespread",
-        "gst": "w-i-d-s-p-r-d",
+        "gst": "u-i-d-s-p-r-d",
         "notes": ""
     },
     {
         "text": "widest",
-        "gst": "w-i-d-e-s-t",
+        "gst": "u-i-d-e-s-t",
         "notes": ""
     },
     {
         "text": "widow",
-        "gst": "w-e-d-o",
+        "gst": "u-e-d-o",
         "notes": ""
     },
     {
         "text": "widowed",
-        "gst": "w-e-d-o-d",
+        "gst": "u-e-d-o-d",
         "notes": ""
     },
     {
@@ -175696,92 +175696,92 @@
     },
     {
         "text": "widowhood",
-        "gst": "w-e-d-o/d",
+        "gst": "u-e-d-o/d",
         "notes": ""
     },
     {
         "text": "width",
-        "gst": "w-e-d-th",
+        "gst": "u-e-d-th",
         "notes": ""
     },
     {
         "text": "wield",
-        "gst": "w-e-ld",
+        "gst": "u-e-ld",
         "notes": ""
     },
     {
         "text": "wielded",
-        "gst": "w-e-ltd",
+        "gst": "u-e-ltd",
         "notes": ""
     },
     {
         "text": "wife",
-        "gst": "w-i-f",
+        "gst": "u-i-f",
         "notes": ""
     },
     {
         "text": "wifehood",
-        "gst": "w-e-f/d",
+        "gst": "u-e-f/d",
         "notes": ""
     },
     {
         "text": "wifeless",
-        "gst": "w-e-f-l-e-s-e-s",
+        "gst": "u-e-f-l-e-s-e-s",
         "notes": ""
     },
     {
         "text": "wifely",
-        "gst": "w-i-f-e",
+        "gst": "u-i-f-e",
         "notes": ""
     },
     {
         "text": "wig",
-        "gst": "w-e-g",
+        "gst": "u-e-g",
         "notes": ""
     },
     {
         "text": "wiggle",
-        "gst": "w-e-g-l",
+        "gst": "u-e-g-l",
         "notes": ""
     },
     {
         "text": "wiggled",
-        "gst": "w-e-g-ld",
+        "gst": "u-e-g-ld",
         "notes": ""
     },
     {
         "text": "wiggler",
-        "gst": "w-e-g-l-r",
+        "gst": "u-e-g-l-r",
         "notes": ""
     },
     {
         "text": "wigglings",
-        "gst": "w-e-g-l-e-ng-s",
+        "gst": "u-e-g-l/s",
         "notes": ""
     },
     {
         "text": "wight",
-        "gst": "w-i-t",
+        "gst": "u-i-t",
         "notes": ""
     },
     {
         "text": "wigmaker",
-        "gst": "w-e-g-m-a-k-r",
+        "gst": "u-e-g-m-a-k-r",
         "notes": ""
     },
     {
         "text": "wigwag",
-        "gst": "w-e-g-w-a-g",
+        "gst": "u-e-g-w-a-g",
         "notes": ""
     },
     {
         "text": "wigwam",
-        "gst": "w-e-g-w-a-m",
+        "gst": "u-e-g-w-a-m",
         "notes": ""
     },
     {
         "text": "wikipedia",
-        "gst": "w-e-k-e-p-e-d-e",
+        "gst": "u-e-k-e-p-e-d-e",
         "notes": ""
     },
     {
@@ -175791,37 +175791,37 @@
     },
     {
         "text": "wild",
-        "gst": "w-i-ld",
+        "gst": "u-i-ld",
         "notes": ""
     },
     {
         "text": "wilder",
-        "gst": "w-i-ld-r",
+        "gst": "u-i-ld-r",
         "notes": ""
     },
     {
         "text": "wilderness",
-        "gst": "w-e-ld-r-n-e-s",
+        "gst": "u-e-ld-r-n-e-s",
         "notes": ""
     },
     {
         "text": "wildest",
-        "gst": "w-i-ld-e-s-t",
+        "gst": "u-i-ld-e-s-t",
         "notes": ""
     },
     {
         "text": "wildfire",
-        "gst": "w-i-ld-f-i-r",
+        "gst": "u-i-ld-f-i-r",
         "notes": ""
     },
     {
         "text": "wildness",
-        "gst": "w-i-l-t-n-e-s",
+        "gst": "u-i-l-t-n-e-s",
         "notes": ""
     },
     {
         "text": "wile",
-        "gst": "w-i-l",
+        "gst": "u-i-l",
         "notes": ""
     },
     {
@@ -175831,12 +175831,12 @@
     },
     {
         "text": "wilier",
-        "gst": "w-i-l-e-r",
+        "gst": "u-i-l-e-r",
         "notes": ""
     },
     {
         "text": "wiliest",
-        "gst": "w-e-l-e-s-t",
+        "gst": "u-e-l-e-s-t",
         "notes": ""
     },
     {
@@ -175851,52 +175851,52 @@
     },
     {
         "text": "will be able",
-        "gst": "w-e-l-b-e-a-b",
+        "gst": "u-e-l-b-e-a-b",
         "notes": ""
     },
     {
         "text": "will be done",
-        "gst": "w-e-l-b-e-d-u-n",
+        "gst": "u-e-l-b-e-d-u-n",
         "notes": ""
     },
     {
         "text": "will be glad",
-        "gst": "w-e-l-b-e-g-l-a-d",
+        "gst": "u-e-l-b-e-g-l-a-d",
         "notes": ""
     },
     {
         "text": "will be",
-        "gst": "w-e-l-b-e",
+        "gst": "u-e-l-b-e",
         "notes": ""
     },
     {
         "text": "will find",
-        "gst": "w-e-l-f-i-nt",
+        "gst": "u-e-l-f-i-nt",
         "notes": ""
     },
     {
         "text": "will have",
-        "gst": "w-e-l-h-a-v",
+        "gst": "u-e-l-h-a-v",
         "notes": ""
     },
     {
         "text": "will not be able",
-        "gst": "w-e-l-n-a-t-b-e-a-b",
+        "gst": "u-e-l-n-a-t-b-e-a-b",
         "notes": ""
     },
     {
         "text": "will not be",
-        "gst": "w-e-l-n-a-t-b-e",
+        "gst": "u-e-l-n-a-t-b-e",
         "notes": ""
     },
     {
         "text": "will you please",
-        "gst": "w-e-l-e-u-p-l-e-s",
+        "gst": "u-e-l-e-u-p-l-e-s",
         "notes": ""
     },
     {
         "text": "will you",
-        "gst": "w-e-l-e-u",
+        "gst": "u-e-l-e-u",
         "notes": ""
     },
     {
@@ -175911,22 +175911,22 @@
     },
     {
         "text": "willed",
-        "gst": "w-e-ld",
+        "gst": "u-e-ld",
         "notes": ""
     },
     {
         "text": "willful",
-        "gst": "w-e-l-f",
+        "gst": "u-e-l-f",
         "notes": ""
     },
     {
         "text": "willfully",
-        "gst": "w-e-l-f-e",
+        "gst": "u-e-l-f-e",
         "notes": ""
     },
     {
         "text": "willfulness",
-        "gst": "w-e-l-f-l-s-n-e-s",
+        "gst": "u-e-l-f-l-s-n-e-s",
         "notes": ""
     },
     {
@@ -175936,12 +175936,12 @@
     },
     {
         "text": "willingly",
-        "gst": "w-e-l/e",
+        "gst": "u-e-l/e",
         "notes": ""
     },
     {
         "text": "willingness",
-        "gst": "w-e-l-e-ng-n-e-s",
+        "gst": "u-e-l-e-ng-n-e-s",
         "notes": ""
     },
     {
@@ -175956,7 +175956,7 @@
     },
     {
         "text": "willow",
-        "gst": "w-e-l-o",
+        "gst": "u-e-l-o",
         "notes": ""
     },
     {
@@ -175976,192 +175976,192 @@
     },
     {
         "text": "wilt",
-        "gst": "w-e-l-t",
+        "gst": "u-e-l-t",
         "notes": ""
     },
     {
         "text": "wilted",
-        "gst": "w-e-l-td",
+        "gst": "u-e-l-td",
         "notes": ""
     },
     {
         "text": "wily",
-        "gst": "w-i-ye",
+        "gst": "u-i-ye",
         "notes": ""
     },
     {
         "text": "win",
-        "gst": "w-e-n",
+        "gst": "u-e-n",
         "notes": ""
     },
     {
         "text": "wince",
-        "gst": "w-e-n-s",
+        "gst": "u-e-n-s",
         "notes": ""
     },
     {
         "text": "winced",
-        "gst": "w-e-n-s-t",
+        "gst": "u-e-n-s-t",
         "notes": ""
     },
     {
         "text": "wincingly",
-        "gst": "w-e-ng/e",
+        "gst": "u-e-ng/e",
         "notes": ""
     },
     {
         "text": "wind",
-        "gst": "w-i-nt",
+        "gst": "u-i-nt",
         "notes": ""
     },
     {
         "text": "windage",
-        "gst": "w-e-nt-e-j",
+        "gst": "u-e-nt-e-j",
         "notes": ""
     },
     {
         "text": "windbag",
-        "gst": "w-e-nt-b-a-g",
+        "gst": "u-e-nt-b-a-g",
         "notes": ""
     },
     {
         "text": "windbreak",
-        "gst": "w-e-nt-b-r-e-k",
+        "gst": "u-e-nt-b-r-e-k",
         "notes": ""
     },
     {
         "text": "winded",
-        "gst": "w-e-ntd",
+        "gst": "u-e-ntd",
         "notes": ""
     },
     {
         "text": "winder",
-        "gst": "w-e-nt-r",
+        "gst": "u-e-nt-r",
         "notes": ""
     },
     {
         "text": "windily",
-        "gst": "w-e-nt-ye",
+        "gst": "u-e-nt-ye",
         "notes": ""
     },
     {
         "text": "windiness",
-        "gst": "w-e-nt-e-n-e-s",
+        "gst": "u-e-nt-e-n-e-s",
         "notes": ""
     },
     {
         "text": "windingly",
-        "gst": "w-e-nt/e",
+        "gst": "u-e-nt/e",
         "notes": ""
     },
     {
         "text": "windings",
-        "gst": "w-i-nt-e-ng-s",
+        "gst": "u-i-nt/s",
         "notes": ""
     },
     {
         "text": "windjammer",
-        "gst": "w-e-n-j-m-a-r",
+        "gst": "u-e-n-j-m-a-r",
         "notes": ""
     },
     {
         "text": "windlass",
-        "gst": "w-e-nt-l-s",
+        "gst": "u-e-nt-l-s",
         "notes": ""
     },
     {
         "text": "windmill",
-        "gst": "w-e-nt-m-e-l",
+        "gst": "u-e-nt-m-e-l",
         "notes": ""
     },
     {
         "text": "window",
-        "gst": "w-e-nt-o",
+        "gst": "u-e-nt-o",
         "notes": ""
     },
     {
         "text": "windowed",
-        "gst": "w-e-nt-o-d",
+        "gst": "u-e-nt-o-d",
         "notes": ""
     },
     {
         "text": "windowpane",
-        "gst": "w-e-nt-o-p-a-n",
+        "gst": "u-e-nt-o-p-a-n",
         "notes": ""
     },
     {
         "text": "windpipe",
-        "gst": "w-e-nt-p-i-p",
+        "gst": "u-e-nt-p-i-p",
         "notes": ""
     },
     {
         "text": "windrow",
-        "gst": "w-e-nt-r-o",
+        "gst": "u-e-nt-r-o",
         "notes": ""
     },
     {
         "text": "windrowed",
-        "gst": "w-e-nt-r-a-u-d",
+        "gst": "u-e-nt-r-a-u-d",
         "notes": ""
     },
     {
         "text": "windshield",
-        "gst": "w-e-nt-sh-e-ld",
+        "gst": "u-e-nt-sh-e-ld",
         "notes": ""
     },
     {
         "text": "windstorm",
-        "gst": "w-e-nt-s-t-o-r-m",
+        "gst": "u-e-nt-s-t-o-r-m",
         "notes": ""
     },
     {
         "text": "windtall",
-        "gst": "w-e-nt-l",
+        "gst": "u-e-nt-l",
         "notes": ""
     },
     {
         "text": "windward",
-        "gst": "w-e-nt/d",
+        "gst": "u-e-nt/d",
         "notes": ""
     },
     {
         "text": "windwardly",
-        "gst": "w-e-nt-w-r-ld-e",
+        "gst": "u-e-nt-w-r-ld-e",
         "notes": ""
     },
     {
         "text": "windway",
-        "gst": "w-e-nt-w-a",
+        "gst": "u-e-nt-w-a",
         "notes": ""
     },
     {
         "text": "windy",
-        "gst": "w-e-nt-e",
+        "gst": "u-e-nt-e",
         "notes": ""
     },
     {
         "text": "wine",
-        "gst": "w-i-n",
+        "gst": "u-i-n",
         "notes": ""
     },
     {
         "text": "wineberry",
-        "gst": "w-i-n-b-e-r-e",
+        "gst": "u-i-n-b-e-r-e",
         "notes": ""
     },
     {
         "text": "wined",
-        "gst": "w-i-nt",
+        "gst": "u-i-nt",
         "notes": ""
     },
     {
         "text": "wineglass",
-        "gst": "w-e-n-g-l-s",
+        "gst": "u-e-n-g-l-s",
         "notes": ""
     },
     {
         "text": "wineskin",
-        "gst": "w-e-n-e-s-k-e-n",
+        "gst": "u-e-n-e-s-k-e-n",
         "notes": ""
     },
     {
@@ -176171,27 +176171,27 @@
     },
     {
         "text": "wing",
-        "gst": "w-e-ng",
+        "gst": "u-e-ng",
         "notes": ""
     },
     {
         "text": "winged",
-        "gst": "w-e-ng-d",
+        "gst": "u-e-ng-d",
         "notes": ""
     },
     {
         "text": "wingfish",
-        "gst": "w-e-ng-f-e-sh",
+        "gst": "u-e-ng-f-e-sh",
         "notes": ""
     },
     {
         "text": "wingless",
-        "gst": "w-e-ng-g-l-e-s",
+        "gst": "u-e-ng-g-l-e-s",
         "notes": ""
     },
     {
         "text": "wingspread",
-        "gst": "w-e-ng-s-p-r-d",
+        "gst": "u-e-ng-s-p-r-d",
         "notes": ""
     },
     {
@@ -176201,37 +176201,37 @@
     },
     {
         "text": "wink",
-        "gst": "w-e-nk",
+        "gst": "u-e-nk",
         "notes": ""
     },
     {
         "text": "winked",
-        "gst": "w-e-nk-t",
+        "gst": "u-e-nk-t",
         "notes": ""
     },
     {
         "text": "winkingly",
-        "gst": "w-e-nk/e",
+        "gst": "u-e-nk/e",
         "notes": ""
     },
     {
         "text": "winkle",
-        "gst": "w-e-nk-l",
+        "gst": "u-e-nk-l",
         "notes": ""
     },
     {
         "text": "winner",
-        "gst": "w-e-n-r",
+        "gst": "u-e-n-r",
         "notes": ""
     },
     {
         "text": "winningly",
-        "gst": "w-e-n/e",
+        "gst": "u-e-n/e",
         "notes": ""
     },
     {
         "text": "winnings",
-        "gst": "w-e-n-e-ng-s",
+        "gst": "u-e-n/s",
         "notes": ""
     },
     {
@@ -176241,12 +176241,12 @@
     },
     {
         "text": "winnow",
-        "gst": "w-e-n-o",
+        "gst": "u-e-n-o",
         "notes": ""
     },
     {
         "text": "winnowed",
-        "gst": "w-e-n-o-d",
+        "gst": "u-e-n-o-d",
         "notes": ""
     },
     {
@@ -176261,7 +176261,7 @@
     },
     {
         "text": "winsome",
-        "gst": "w-e-n-s-m",
+        "gst": "u-e-n-s-m",
         "notes": ""
     },
     {
@@ -176271,17 +176271,17 @@
     },
     {
         "text": "winter",
-        "gst": "w-e-nt-r",
+        "gst": "u-e-nt-r",
         "notes": ""
     },
     {
         "text": "wintered",
-        "gst": "w-e-nt-rd",
+        "gst": "u-e-nt-rd",
         "notes": ""
     },
     {
         "text": "winterize",
-        "gst": "w-e-nt-r-i-s",
+        "gst": "u-e-nt-r-i-s",
         "notes": ""
     },
     {
@@ -176291,67 +176291,67 @@
     },
     {
         "text": "wipe",
-        "gst": "w-i-p",
+        "gst": "u-i-p",
         "notes": ""
     },
     {
         "text": "wiped",
-        "gst": "w-i-p-t",
+        "gst": "u-i-p-t",
         "notes": ""
     },
     {
         "text": "wiper",
-        "gst": "w-i-p-r",
+        "gst": "u-i-p-r",
         "notes": ""
     },
     {
         "text": "wire",
-        "gst": "w-i-r",
+        "gst": "u-i-r",
         "notes": ""
     },
     {
         "text": "wired",
-        "gst": "w-i-rd",
+        "gst": "u-i-rd",
         "notes": ""
     },
     {
         "text": "wireless",
-        "gst": "w-i-r-l-e-s",
+        "gst": "u-i-r-l-e-s",
         "notes": ""
     },
     {
         "text": "wirepuller",
-        "gst": "w-e-r-p-e-u-r",
+        "gst": "u-e-r-p-e-u-r",
         "notes": ""
     },
     {
         "text": "wirepulling",
-        "gst": "w-i-r-p-u-l-e-ng",
+        "gst": "u-i-r-p-u-l-e-ng",
         "notes": ""
     },
     {
         "text": "wireway",
-        "gst": "w-i-r-w-a",
+        "gst": "u-i-r-w-a",
         "notes": ""
     },
     {
         "text": "wirework",
-        "gst": "w-i-r-w-r-k",
+        "gst": "u-i-r-w-r-k",
         "notes": ""
     },
     {
         "text": "wireworker",
-        "gst": "w-i-r-w-r-k-r",
+        "gst": "u-i-r-w-r-k-r",
         "notes": ""
     },
     {
         "text": "wireworm",
-        "gst": "w-i-r-w-r-m",
+        "gst": "u-i-r-w-r-m",
         "notes": ""
     },
     {
         "text": "wiry",
-        "gst": "w-e-r-e",
+        "gst": "u-e-r-e",
         "notes": ""
     },
     {
@@ -176361,47 +176361,47 @@
     },
     {
         "text": "wisdom",
-        "gst": "w-e-s-tm",
+        "gst": "u-e-s-tm",
         "notes": ""
     },
     {
         "text": "wise",
-        "gst": "w-i-s",
+        "gst": "u-i-s",
         "notes": ""
     },
     {
         "text": "wiseacre",
-        "gst": "w-e-s-e-r-k",
+        "gst": "u-e-s-e-r-k",
         "notes": ""
     },
     {
         "text": "wisecrack",
-        "gst": "w-i-s-k-r-a-k",
+        "gst": "u-i-s-k-r-a-k",
         "notes": ""
     },
     {
         "text": "wisecracker",
-        "gst": "w-i-s-k-a-r-k-r",
+        "gst": "u-i-s-k-a-r-k-r",
         "notes": ""
     },
     {
         "text": "wisely",
-        "gst": "w-i-s-e",
+        "gst": "u-i-s-e",
         "notes": ""
     },
     {
         "text": "wiseness",
-        "gst": "w-i-s-n-e-s",
+        "gst": "u-i-s-n-e-s",
         "notes": ""
     },
     {
         "text": "wiser",
-        "gst": "w-i-s-r",
+        "gst": "u-i-s-r",
         "notes": ""
     },
     {
         "text": "wisest",
-        "gst": "w-i-s-e-s-t",
+        "gst": "u-i-s-e-s-t",
         "notes": ""
     },
     {
@@ -176446,332 +176446,332 @@
     },
     {
         "text": "wisp",
-        "gst": "w-e-s-p",
+        "gst": "u-e-s-p",
         "notes": ""
     },
     {
         "text": "wispier",
-        "gst": "w-e-s-p-e-r",
+        "gst": "u-e-s-p-e-r",
         "notes": ""
     },
     {
         "text": "wispiest",
-        "gst": "w-e-s-p-e-s-t",
+        "gst": "u-e-s-p-e-s-t",
         "notes": ""
     },
     {
         "text": "wispy",
-        "gst": "w-e-s-p-e",
+        "gst": "u-e-s-p-e",
         "notes": ""
     },
     {
         "text": "wisteria",
-        "gst": "w-e-s-t-r-e",
+        "gst": "u-e-s-t-r-e",
         "notes": ""
     },
     {
         "text": "wistful",
-        "gst": "w-e-s-t-f",
+        "gst": "u-e-s-t-f",
         "notes": ""
     },
     {
         "text": "wistfully",
-        "gst": "w-e-s-t-f-e",
+        "gst": "u-e-s-t-f-e",
         "notes": ""
     },
     {
         "text": "wistfulness",
-        "gst": "w-e-s-t-f-l-n-e-s",
+        "gst": "u-e-s-t-f-l-n-e-s",
         "notes": ""
     },
     {
         "text": "wit",
-        "gst": "w-e-t",
+        "gst": "u-e-t",
         "notes": ""
     },
     {
         "text": "witch",
-        "gst": "w-e-ch",
+        "gst": "u-e-ch",
         "notes": ""
     },
     {
         "text": "witchcraft",
-        "gst": "w-e-ch-k-r-a-f-t",
+        "gst": "u-e-ch-k-r-a-f-t",
         "notes": ""
     },
     {
         "text": "witchery",
-        "gst": "w-e-ch-r-e",
+        "gst": "u-e-ch-r-e",
         "notes": ""
     },
     {
         "text": "witchingly",
-        "gst": "w-e-ch/e",
+        "gst": "u-e-ch/e",
         "notes": ""
     },
     {
         "text": "witchweed",
-        "gst": "w-e-ch-w-d",
+        "gst": "u-e-ch-w-d",
         "notes": ""
     },
     {
         "text": "with him",
-        "gst": "w-e-th-h-e-m",
+        "gst": "u-e-th-h-e-m",
         "notes": ""
     },
     {
         "text": "with his",
-        "gst": "w-e-th-h-e-s",
+        "gst": "u-e-th-h-e-s",
         "notes": ""
     },
     {
         "text": "with our",
-        "gst": "w-e-th-a-u-r",
+        "gst": "u-e-th-a-u-r",
         "notes": ""
     },
     {
         "text": "with such",
-        "gst": "w-e-th-s-u-ch",
+        "gst": "u-e-th-s-u-ch",
         "notes": ""
     },
     {
         "text": "with that",
-        "gst": "w-e-th-th-a-t",
+        "gst": "u-e-th-th-a-t",
         "notes": ""
     },
     {
         "text": "with the",
-        "gst": "w-e-th-th",
+        "gst": "u-e-th-th",
         "notes": ""
     },
     {
         "text": "with them",
-        "gst": "w-e-th-th-e-m",
+        "gst": "u-e-th-th-e-m",
         "notes": ""
     },
     {
         "text": "with these",
-        "gst": "w-e-th-th-e-s",
+        "gst": "u-e-th-th-e-s",
         "notes": ""
     },
     {
         "text": "with this",
-        "gst": "w-e-th-th-e-s",
+        "gst": "u-e-th-th-e-s",
         "notes": ""
     },
     {
         "text": "with us",
-        "gst": "w-e-th-u-s",
+        "gst": "u-e-th-u-s",
         "notes": ""
     },
     {
         "text": "with which",
-        "gst": "w-e-th-w-e-ch",
+        "gst": "u-e-th-w-e-ch",
         "notes": ""
     },
     {
         "text": "with whom",
-        "gst": "w-e-th-h-u-m",
+        "gst": "u-e-th-h-u-m",
         "notes": ""
     },
     {
         "text": "with you",
-        "gst": "w-e-th-e-u",
+        "gst": "u-e-th-e-u",
         "notes": ""
     },
     {
         "text": "with",
-        "gst": "w-e-th",
+        "gst": "u-e-th",
         "notes": ""
     },
     {
         "text": "withal",
-        "gst": "w-e-th-l",
+        "gst": "u-e-th-l",
         "notes": ""
     },
     {
         "text": "withdraw",
-        "gst": "w-e-th-d-r-o",
+        "gst": "u-e-th-d-r-o",
         "notes": ""
     },
     {
         "text": "withdrawal",
-        "gst": "w-e-th-d-r-o-l",
+        "gst": "u-e-th-d-r-o-l",
         "notes": ""
     },
     {
         "text": "withdrawn",
-        "gst": "w-e-th-d-r-o-n",
+        "gst": "u-e-th-d-r-o-n",
         "notes": ""
     },
     {
         "text": "withdrew",
-        "gst": "w-e-th-d-r-u",
+        "gst": "u-e-th-d-r-u",
         "notes": ""
     },
     {
         "text": "wither",
-        "gst": "w-e-th",
+        "gst": "u-e-th",
         "notes": ""
     },
     {
         "text": "withered",
-        "gst": "w-e-th-rd",
+        "gst": "u-e-th-rd",
         "notes": ""
     },
     {
         "text": "witheringly",
-        "gst": "w-e-th-r/e",
+        "gst": "u-e-th-r/e",
         "notes": ""
     },
     {
         "text": "withheld",
-        "gst": "w-e-th-h-e-ld",
+        "gst": "u-e-th-h-e-ld",
         "notes": ""
     },
     {
         "text": "withhold",
-        "gst": "w-e-th-h-o-ld",
+        "gst": "u-e-th-h-o-ld",
         "notes": ""
     },
     {
         "text": "withholdings",
-        "gst": "w-e-th-h-o-ld-e-ng-s",
+        "gst": "u-e-th-h-o-ld/s",
         "notes": ""
     },
     {
         "text": "within the",
-        "gst": "w-e-th-e-n-th",
+        "gst": "u-e-th-e-n-th",
         "notes": ""
     },
     {
         "text": "within",
-        "gst": "w-e-th-e-n",
+        "gst": "u-e-th-e-n",
         "notes": ""
     },
     {
         "text": "without",
-        "gst": "w-e-th-a-u-t",
+        "gst": "u-e-th-a-u-t",
         "notes": ""
     },
     {
         "text": "withstand",
-        "gst": "w-e-th-s-t-a-nt",
+        "gst": "u-e-th-s-t-a-nt",
         "notes": ""
     },
     {
         "text": "withstood",
-        "gst": "w-e-th-s-t-u-d",
+        "gst": "u-e-th-s-t-u-d",
         "notes": ""
     },
     {
         "text": "witless",
-        "gst": "w-e-t-l-e-s",
+        "gst": "u-e-t-l-e-s",
         "notes": ""
     },
     {
         "text": "witlessly",
-        "gst": "w-e-t-l-e-s-e",
+        "gst": "u-e-t-l-e-s-e",
         "notes": ""
     },
     {
         "text": "witlessness",
-        "gst": "w-e-t-l-e-s-n-e-s",
+        "gst": "u-e-t-l-e-s-n-e-s",
         "notes": ""
     },
     {
         "text": "witness",
-        "gst": "w-e-t-n-e-s",
+        "gst": "u-e-t-n-e-s",
         "notes": ""
     },
     {
         "text": "witnessed",
-        "gst": "w-e-tn-s-t",
+        "gst": "u-e-tn-s-t",
         "notes": ""
     },
     {
         "text": "witticism",
-        "gst": "w-e-t-e-s-e-s-m",
+        "gst": "u-e-t-e-s-e-s-m",
         "notes": ""
     },
     {
         "text": "wittier",
-        "gst": "w-e-t-e-r",
+        "gst": "u-e-t-e-r",
         "notes": ""
     },
     {
         "text": "wittiest",
-        "gst": "w-e-t-e-s-t",
+        "gst": "u-e-t-e-s-t",
         "notes": ""
     },
     {
         "text": "wittingly",
-        "gst": "w-e-t/e",
+        "gst": "u-e-t/e",
         "notes": ""
     },
     {
         "text": "witty",
-        "gst": "w-e-t-e",
+        "gst": "u-e-t-e",
         "notes": ""
     },
     {
         "text": "wived",
-        "gst": "w-i-v-d",
+        "gst": "u-i-v-d",
         "notes": ""
     },
     {
         "text": "wives",
-        "gst": "w-i-v-s",
+        "gst": "u-i-v-s",
         "notes": ""
     },
     {
         "text": "wizard",
-        "gst": "w-e-s-rd",
+        "gst": "u-e-s-rd",
         "notes": ""
     },
     {
         "text": "wizardly",
-        "gst": "w-e-s-rd-r-e",
+        "gst": "u-e-s-rd-r-e",
         "notes": ""
     },
     {
         "text": "wizardry",
-        "gst": "w-e-s-rd-r-e",
+        "gst": "u-e-s-rd-r-e",
         "notes": ""
     },
     {
         "text": "wizened",
-        "gst": "w-i-s-nt",
+        "gst": "u-i-s-nt",
         "notes": ""
     },
     {
         "text": "woad",
-        "gst": "w-o-d",
+        "gst": "u-o-d",
         "notes": ""
     },
     {
         "text": "wobble",
-        "gst": "w-a-b",
+        "gst": "u-a-b",
         "notes": ""
     },
     {
         "text": "wobbled",
-        "gst": "w-a-b-ld",
+        "gst": "u-a-b-ld",
         "notes": ""
     },
     {
         "text": "wobbliness",
-        "gst": "w-a-b-l-n-e-s",
+        "gst": "u-a-b-l-n-e-s",
         "notes": ""
     },
     {
         "text": "wobblingly",
-        "gst": "w-a-b-l/e",
+        "gst": "u-a-b-l/e",
         "notes": ""
     },
     {
         "text": "wobbly",
-        "gst": "w-a-b-e",
+        "gst": "u-a-b-e",
         "notes": ""
     },
     {
@@ -176781,167 +176781,167 @@
     },
     {
         "text": "woe",
-        "gst": "w-o",
+        "gst": "u-o",
         "notes": ""
     },
     {
         "text": "woebegone",
-        "gst": "w-o-b-e-g-o-n",
+        "gst": "u-o-b-e-g-o-n",
         "notes": ""
     },
     {
         "text": "woeful",
-        "gst": "w-o-f",
+        "gst": "u-o-f",
         "notes": ""
     },
     {
         "text": "woefully",
-        "gst": "w-o-f-e",
+        "gst": "u-o-f-e",
         "notes": ""
     },
     {
         "text": "woefulness",
-        "gst": "w-o-f-l-n-e-s",
+        "gst": "u-o-f-l-n-e-s",
         "notes": ""
     },
     {
         "text": "wolf",
-        "gst": "w-u-l-f",
+        "gst": "u-u-l-f",
         "notes": ""
     },
     {
         "text": "wolfed",
-        "gst": "w-u-l-f-t",
+        "gst": "u-u-l-f-t",
         "notes": ""
     },
     {
         "text": "wolfhound",
-        "gst": "w-u-l-f-h-a-u-nt",
+        "gst": "u-u-l-f-h-a-u-nt",
         "notes": ""
     },
     {
         "text": "wolfish",
-        "gst": "w-u-l-f-sh",
+        "gst": "u-u-l-f-sh",
         "notes": ""
     },
     {
         "text": "wolverine",
-        "gst": "w-u-l-v-r-e-n",
+        "gst": "u-u-l-v-r-e-n",
         "notes": ""
     },
     {
         "text": "wolves",
-        "gst": "w-u-l-v-s",
+        "gst": "u-u-l-v-s",
         "notes": ""
     },
     {
         "text": "woman",
-        "gst": "w-u-mn",
+        "gst": "u-u-mn",
         "notes": ""
     },
     {
         "text": "womanhood",
-        "gst": "w-u-mn/d",
+        "gst": "u-u-mn/d",
         "notes": ""
     },
     {
         "text": "womanish",
-        "gst": "w-u-mn-sh",
+        "gst": "u-u-mn-sh",
         "notes": ""
     },
     {
         "text": "womankind",
-        "gst": "w-u-m-k-nt-e-ng",
+        "gst": "u-u-m-k-nt-e-ng",
         "notes": ""
     },
     {
         "text": "womanlike",
-        "gst": "w-u-mn-l-i-k",
+        "gst": "u-u-mn-l-i-k",
         "notes": ""
     },
     {
         "text": "womanliness",
-        "gst": "w-u-mn-l-n-e-s",
+        "gst": "u-u-mn-l-n-e-s",
         "notes": ""
     },
     {
         "text": "womanly",
-        "gst": "w-u-mn-e",
+        "gst": "u-u-mn-e",
         "notes": ""
     },
     {
         "text": "women",
-        "gst": "w-e-mn",
+        "gst": "u-e-mn",
         "notes": ""
     },
     {
         "text": "won't",
-        "gst": "w-o-nt",
+        "gst": "u-o-nt",
         "notes": ""
     },
     {
         "text": "won",
-        "gst": "w-u-n",
+        "gst": "u-u-n",
         "notes": ""
     },
     {
         "text": "wonder",
-        "gst": "w-u-nt-r",
+        "gst": "u-u-nt-r",
         "notes": ""
     },
     {
         "text": "wondered",
-        "gst": "w-u-nt-rd",
+        "gst": "u-u-nt-rd",
         "notes": ""
     },
     {
         "text": "wonderful",
-        "gst": "w-u-nt-r-f",
+        "gst": "u-u-nt-r-f",
         "notes": ""
     },
     {
         "text": "wonderfully",
-        "gst": "w-u-nt-r-f-e",
+        "gst": "u-u-nt-r-f-e",
         "notes": ""
     },
     {
         "text": "wonderingly",
-        "gst": "w-u-nt-r/e",
+        "gst": "u-u-nt-r/e",
         "notes": ""
     },
     {
         "text": "wonderland",
-        "gst": "w-u-nt-r-l-a-nt",
+        "gst": "u-u-nt-r-l-a-nt",
         "notes": ""
     },
     {
         "text": "wonderment",
-        "gst": "w-u-nt-r-m",
+        "gst": "u-u-nt-r-m",
         "notes": ""
     },
     {
         "text": "wonderwork",
-        "gst": "w-u-nt-r-w-r-k",
+        "gst": "u-u-nt-r-w-r-k",
         "notes": ""
     },
     {
         "text": "wondrous",
-        "gst": "w-u-nt-r-s",
+        "gst": "u-u-nt-r-s",
         "notes": ""
     },
     {
         "text": "wondrously",
-        "gst": "w-u-nt-r-s-e",
+        "gst": "u-u-nt-r-s-e",
         "notes": ""
     },
     {
         "text": "wont",
-        "gst": "w-o-nt",
+        "gst": "u-o-nt",
         "notes": ""
     },
     {
         "text": "woo",
-        "gst": "w-u",
+        "gst": "u-u",
         "notes": ""
     },
     {
@@ -176951,12 +176951,12 @@
     },
     {
         "text": "woodbin",
-        "gst": "w-u-d-b-e-n",
+        "gst": "u-u-d-b-e-n",
         "notes": ""
     },
     {
         "text": "woodbine",
-        "gst": "w-u-d-b-i-n",
+        "gst": "u-u-d-b-i-n",
         "notes": ""
     },
     {
@@ -176966,67 +176966,67 @@
     },
     {
         "text": "woodchuck",
-        "gst": "w-u-d-ch-u-k",
+        "gst": "u-u-d-ch-u-k",
         "notes": ""
     },
     {
         "text": "woodcraft",
-        "gst": "w-u-d-k-r-a-f-t",
+        "gst": "u-u-d-k-r-a-f-t",
         "notes": ""
     },
     {
         "text": "woodcut",
-        "gst": "w-u-d-k-u-t",
+        "gst": "u-u-d-k-u-t",
         "notes": ""
     },
     {
         "text": "wooded",
-        "gst": "w-u-td",
+        "gst": "u-u-td",
         "notes": ""
     },
     {
         "text": "wooden",
-        "gst": "w-u-tn",
+        "gst": "u-u-tn",
         "notes": ""
     },
     {
         "text": "woodenhead",
-        "gst": "w-u-tn-h-d",
+        "gst": "u-u-tn-h-d",
         "notes": ""
     },
     {
         "text": "woodfish",
-        "gst": "w-u-d-f-e-sh",
+        "gst": "u-u-d-f-e-sh",
         "notes": ""
     },
     {
         "text": "woodland",
-        "gst": "w-u-d-l-a-nt",
+        "gst": "u-u-d-l-a-nt",
         "notes": ""
     },
     {
         "text": "woodman",
-        "gst": "w-u-tm-n",
+        "gst": "u-u-tm-n",
         "notes": ""
     },
     {
         "text": "woodpecker",
-        "gst": "w-u-d-p-e-k-r",
+        "gst": "u-u-d-p-e-k-r",
         "notes": ""
     },
     {
         "text": "woodpile",
-        "gst": "w-u-d-p-i-l",
+        "gst": "u-u-d-p-i-l",
         "notes": ""
     },
     {
         "text": "woodshop",
-        "gst": "w-u-d-sh-a-p",
+        "gst": "u-u-d-sh-a-p",
         "notes": ""
     },
     {
         "text": "woodsman",
-        "gst": "w-u-d-s-m-a-n",
+        "gst": "u-u-d-s-m-a-n",
         "notes": ""
     },
     {
@@ -177036,17 +177036,17 @@
     },
     {
         "text": "woodwork",
-        "gst": "w-u-d-w-r-k",
+        "gst": "u-u-d-w-r-k",
         "notes": ""
     },
     {
         "text": "woodworker",
-        "gst": "w-u-d-w-r-k-r",
+        "gst": "u-u-d-w-r-k-r",
         "notes": ""
     },
     {
         "text": "woodworm",
-        "gst": "w-u-d-w-r-m",
+        "gst": "u-u-d-w-r-m",
         "notes": ""
     },
     {
@@ -177056,47 +177056,47 @@
     },
     {
         "text": "wooer",
-        "gst": "w-u-r",
+        "gst": "u-u-r",
         "notes": ""
     },
     {
         "text": "wool",
-        "gst": "w-u-l",
+        "gst": "u-u-l",
         "notes": ""
     },
     {
         "text": "woolen",
-        "gst": "w-u-l-n",
+        "gst": "u-u-l-n",
         "notes": ""
     },
     {
         "text": "woollier",
-        "gst": "w-u-l-e-r",
+        "gst": "u-u-l-e-r",
         "notes": ""
     },
     {
         "text": "woolliest",
-        "gst": "w-u-l-e-s-t",
+        "gst": "u-u-l-e-s-t",
         "notes": ""
     },
     {
         "text": "woolliness",
-        "gst": "w-u-l-i-n-e-s",
+        "gst": "u-u-l-i-n-e-s",
         "notes": ""
     },
     {
         "text": "woolly",
-        "gst": "w-u-e",
+        "gst": "u-u-e",
         "notes": ""
     },
     {
         "text": "woolwork",
-        "gst": "w-u-l-w-r-k",
+        "gst": "u-u-l-w-r-k",
         "notes": ""
     },
     {
         "text": "woolworker",
-        "gst": "w-u-l-w-r-k-r",
+        "gst": "u-u-l-w-r-k-r",
         "notes": ""
     },
     {
@@ -177111,12 +177111,12 @@
     },
     {
         "text": "woot",
-        "gst": "w-u-t",
+        "gst": "u-u-t",
         "notes": ""
     },
     {
         "text": "woozy",
-        "gst": "w-u-s-e",
+        "gst": "u-u-s-e",
         "notes": ""
     },
     {
@@ -177141,7 +177141,7 @@
     },
     {
         "text": "worded",
-        "gst": "w-rtd",
+        "gst": "u-e-rtd",
         "notes": ""
     },
     {
@@ -177186,327 +177186,327 @@
     },
     {
         "text": "wore",
-        "gst": "w-o-r",
+        "gst": "u-o-r",
         "notes": ""
     },
     {
         "text": "work",
-        "gst": "w-r-k",
+        "gst": "u-e-r-k",
         "notes": ""
     },
     {
         "text": "workability",
-        "gst": "w-r-k-b-a-l-t-e",
+        "gst": "u-e-r-k-b-a-l-t-e",
         "notes": ""
     },
     {
         "text": "workable",
-        "gst": "w-r-k-b",
+        "gst": "u-e-r-k-b",
         "notes": ""
     },
     {
         "text": "workbag",
-        "gst": "w-r-k-b-a-g",
+        "gst": "u-e-r-k-b-a-g",
         "notes": ""
     },
     {
         "text": "workbasket",
-        "gst": "w-r-k-b-a-s-k-t",
+        "gst": "u-e-r-k-b-a-s-k-t",
         "notes": ""
     },
     {
         "text": "workbench",
-        "gst": "w-r-k-b-e-n-ch",
+        "gst": "u-e-r-k-b-e-n-ch",
         "notes": ""
     },
     {
         "text": "workbook",
-        "gst": "w-r-k-b-u-k",
+        "gst": "u-e-r-k-b-u-k",
         "notes": ""
     },
     {
         "text": "workbox",
-        "gst": "w-r-k-b-a-k-s",
+        "gst": "u-e-r-k-b-a-k-s",
         "notes": ""
     },
     {
         "text": "workday",
-        "gst": "w-r-k-d-a",
+        "gst": "u-e-r-k-d-a",
         "notes": ""
     },
     {
         "text": "worked",
-        "gst": "w-r-k-t",
+        "gst": "u-e-r-k-t",
         "notes": ""
     },
     {
         "text": "worker",
-        "gst": "w-r-k-r",
+        "gst": "u-e-r-k-r",
         "notes": ""
     },
     {
         "text": "workhouse",
-        "gst": "w-r-k-h-a-u-s",
+        "gst": "u-e-r-k-h-a-u-s",
         "notes": ""
     },
     {
         "text": "workingman",
-        "gst": "w-r-k-e-ng-mn",
+        "gst": "u-e-r-k-e-ng-mn",
         "notes": ""
     },
     {
         "text": "workings",
-        "gst": "w-r-k-e-ng-s",
+        "gst": "u-e-r-k/s",
         "notes": ""
     },
     {
         "text": "workless",
-        "gst": "w-r-k-l-e-s",
+        "gst": "u-e-r-k-l-e-s",
         "notes": ""
     },
     {
         "text": "workman",
-        "gst": "w-r-k-mn",
+        "gst": "u-e-r-k-mn",
         "notes": ""
     },
     {
         "text": "workmanlike",
-        "gst": "w-r-k-m-a-n-l-i-k",
+        "gst": "u-e-r-k-m-a-n-l-i-k",
         "notes": ""
     },
     {
         "text": "workmanship",
-        "gst": "w-r-k-mn-sh-e-p",
+        "gst": "u-e-r-k-mn-sh-e-p",
         "notes": ""
     },
     {
         "text": "workmen",
-        "gst": "w-r-k-m-e-n",
+        "gst": "u-e-r-k-m-e-n",
         "notes": ""
     },
     {
         "text": "workout",
-        "gst": "w-r-k-a-u-t",
+        "gst": "u-e-r-k-a-u-t",
         "notes": ""
     },
     {
         "text": "workpan",
-        "gst": "w-r-k-p-a-n",
+        "gst": "u-e-r-k-p-a-n",
         "notes": ""
     },
     {
         "text": "workpeople",
-        "gst": "w-r-k-p-e-p-u-l",
+        "gst": "u-e-r-k-p-e-p-u-l",
         "notes": ""
     },
     {
         "text": "workplace",
-        "gst": "w-r-k-p-l-a-s",
+        "gst": "u-e-r-k-p-l-a-s",
         "notes": ""
     },
     {
         "text": "workroom",
-        "gst": "w-r-k-r-u-m",
+        "gst": "u-e-r-k-r-u-m",
         "notes": ""
     },
     {
         "text": "works",
-        "gst": "w-r-k-s",
+        "gst": "u-e-r-k-s",
         "notes": ""
     },
     {
         "text": "workshop",
-        "gst": "w-r-k-sh-a-p",
+        "gst": "u-e-r-k-sh-a-p",
         "notes": ""
     },
     {
         "text": "worktable",
-        "gst": "w-r-k-t-a-b",
+        "gst": "u-e-r-k-t-a-b",
         "notes": ""
     },
     {
         "text": "workwoman",
-        "gst": "w-r-k-w-u-mn",
+        "gst": "u-e-r-k-w-u-mn",
         "notes": ""
     },
     {
         "text": "workwomen",
-        "gst": "w-r-k-w-u-mn",
+        "gst": "u-e-r-k-w-u-mn",
         "notes": ""
     },
     {
         "text": "world",
-        "gst": "w-r-ld",
+        "gst": "u-e-r-ld",
         "notes": ""
     },
     {
         "text": "worldliness",
-        "gst": "w-r-ld-l-e-n-e-s",
+        "gst": "u-e-r-ld-l-e-n-e-s",
         "notes": ""
     },
     {
         "text": "worldly",
-        "gst": "w-r-ld-e",
+        "gst": "u-e-r-ld-e",
         "notes": ""
     },
     {
         "text": "worm",
-        "gst": "w-r-m",
+        "gst": "u-e-r-m",
         "notes": ""
     },
     {
         "text": "wormed",
-        "gst": "w-r-m-d",
+        "gst": "u-e-r-m-d",
         "notes": ""
     },
     {
         "text": "wormhole",
-        "gst": "w-r-m-h-o-l",
+        "gst": "u-e-r-m-h-o-l",
         "notes": ""
     },
     {
         "text": "wormier",
-        "gst": "w-r-m-e-r",
+        "gst": "u-e-r-m-e-r",
         "notes": ""
     },
     {
         "text": "wormiest",
-        "gst": "w-r-m-e-s-t",
+        "gst": "u-e-r-m-e-s-t",
         "notes": ""
     },
     {
         "text": "wormlike",
-        "gst": "w-r-m-l-i-k",
+        "gst": "u-e-r-m-l-i-k",
         "notes": ""
     },
     {
         "text": "wormproof",
-        "gst": "w-r-m-p-r-u-f",
+        "gst": "u-e-r-m-p-r-u-f",
         "notes": ""
     },
     {
         "text": "wormwood",
-        "gst": "w-r-m-u-u-d",
+        "gst": "u-e-r-m-u-u-d",
         "notes": ""
     },
     {
         "text": "wormy",
-        "gst": "w-r-m-e",
+        "gst": "u-e-r-m-e",
         "notes": ""
     },
     {
         "text": "worn",
-        "gst": "w-o-r-n",
+        "gst": "u-o-r-n",
         "notes": ""
     },
     {
         "text": "worried",
-        "gst": "w-r-d",
+        "gst": "u-e-r-d",
         "notes": ""
     },
     {
         "text": "worriedly",
-        "gst": "w-r-e-d-e",
+        "gst": "u-e-r-e-d-e",
         "notes": ""
     },
     {
         "text": "worrier",
-        "gst": "w-r-e-r",
+        "gst": "u-e-r-e-r",
         "notes": ""
     },
     {
         "text": "worriment",
-        "gst": "w-r-m",
+        "gst": "u-e-r-m",
         "notes": ""
     },
     {
         "text": "worrisome",
-        "gst": "w-r-e-s-m",
+        "gst": "u-e-r-e-s-m",
         "notes": ""
     },
     {
         "text": "worrisomeness",
-        "gst": "w-r-s-mn-e-s",
+        "gst": "u-e-r-s-mn-e-s",
         "notes": ""
     },
     {
         "text": "worry",
-        "gst": "w-r-e",
+        "gst": "u-e-r-e",
         "notes": ""
     },
     {
         "text": "worse",
-        "gst": "w-r-s",
+        "gst": "u-e-r-s",
         "notes": ""
     },
     {
         "text": "worsen",
-        "gst": "w-r-s-n",
+        "gst": "u-e-r-s-n",
         "notes": ""
     },
     {
         "text": "worsened",
-        "gst": "w-r-s-nt",
+        "gst": "u-e-r-s-nt",
         "notes": ""
     },
     {
         "text": "worship",
-        "gst": "w-r-sh-p",
+        "gst": "u-e-r-sh-p",
         "notes": ""
     },
     {
         "text": "worshiped",
-        "gst": "w-r-sh-e-p-t",
+        "gst": "u-e-r-sh-e-p-t",
         "notes": ""
     },
     {
         "text": "worshiper",
-        "gst": "w-r-sh-p-r",
+        "gst": "u-e-r-sh-p-r",
         "notes": ""
     },
     {
         "text": "worshipful",
-        "gst": "w-r-sh-p-f",
+        "gst": "u-e-r-sh-p-f",
         "notes": ""
     },
     {
         "text": "worshipfully",
-        "gst": "w-r-sh-p-f-e",
+        "gst": "u-e-r-sh-p-f-e",
         "notes": ""
     },
     {
         "text": "worst",
-        "gst": "w-r-s-t",
+        "gst": "u-e-r-s-t",
         "notes": ""
     },
     {
         "text": "worsted",
-        "gst": "w-r-s-td",
+        "gst": "u-e-r-s-td",
         "notes": ""
     },
     {
         "text": "worth",
-        "gst": "w-r-th",
+        "gst": "u-e-r-th",
         "notes": ""
     },
     {
         "text": "worthier",
-        "gst": "w-r-th-e-r",
+        "gst": "u-e-r-th-e-r",
         "notes": ""
     },
     {
         "text": "worthiest",
-        "gst": "w-r-th-e-s-t",
+        "gst": "u-e-r-th-e-s-t",
         "notes": ""
     },
     {
         "text": "worthily",
-        "gst": "w-r-th-ye",
+        "gst": "u-e-r-th-ye",
         "notes": ""
     },
     {
         "text": "worthiness",
-        "gst": "w-r-th-e-n-e-s",
+        "gst": "u-e-r-th-e-n-e-s",
         "notes": ""
     },
     {
@@ -177516,57 +177516,57 @@
     },
     {
         "text": "worthwhile",
-        "gst": "w-r-th-w-i-l",
+        "gst": "u-e-r-th-w-i-l",
         "notes": ""
     },
     {
         "text": "worthy",
-        "gst": "w-r-th-e",
+        "gst": "u-e-r-th-e",
         "notes": ""
     },
     {
         "text": "would be able",
-        "gst": "w-u-d-b-e-a-b",
+        "gst": "u-u-d-b-e-a-b",
         "notes": ""
     },
     {
         "text": "would be done",
-        "gst": "w-u-d-b-e-d-u-n",
+        "gst": "u-u-d-b-e-d-u-n",
         "notes": ""
     },
     {
         "text": "would be glad",
-        "gst": "w-u-d-b-e-g-l-a-d",
+        "gst": "u-u-d-b-e-g-l-a-d",
         "notes": ""
     },
     {
         "text": "would be",
-        "gst": "w-u-d-b-e",
+        "gst": "u-u-d-b-e",
         "notes": ""
     },
     {
         "text": "would have been",
-        "gst": "w-u-d-h-a-v-b-e-n",
+        "gst": "u-u-d-h-a-v-b-e-n",
         "notes": ""
     },
     {
         "text": "would have",
-        "gst": "w-u-d-h-a-v",
+        "gst": "u-u-d-h-a-v",
         "notes": ""
     },
     {
         "text": "would not be",
-        "gst": "w-u-d-n-a-t-b-e",
+        "gst": "u-u-d-n-a-t-b-e",
         "notes": ""
     },
     {
         "text": "would not have been",
-        "gst": "w-u-d-n-a-t-h-a-v-b-e-n",
+        "gst": "u-u-d-n-a-t-h-a-v-b-e-n",
         "notes": ""
     },
     {
         "text": "would not",
-        "gst": "w-u-d-n-a-t",
+        "gst": "u-u-d-n-a-t",
         "notes": ""
     },
     {
@@ -177576,37 +177576,37 @@
     },
     {
         "text": "wouldn't",
-        "gst": "w-u-tn-t",
+        "gst": "u-u-tn-t",
         "notes": ""
     },
     {
         "text": "wound",
-        "gst": "w-a-u-nt",
+        "gst": "u-a-u-nt",
         "notes": ""
     },
     {
         "text": "wounded",
-        "gst": "w-u-ntd",
+        "gst": "u-u-ntd",
         "notes": ""
     },
     {
         "text": "woundingly",
-        "gst": "w-u-nt/e",
+        "gst": "u-u-nt/e",
         "notes": ""
     },
     {
         "text": "woundless",
-        "gst": "w-u-nt-l-e-s",
+        "gst": "u-u-nt-l-e-s",
         "notes": ""
     },
     {
         "text": "wove",
-        "gst": "w-o-v",
+        "gst": "u-o-v",
         "notes": ""
     },
     {
         "text": "woven",
-        "gst": "w-o-v-n",
+        "gst": "u-o-v-n",
         "notes": ""
     },
     {
@@ -177651,7 +177651,7 @@
     },
     {
         "text": "wrappings",
-        "gst": "r-a-p-e-ng-s",
+        "gst": "r-a-p/s",
         "notes": ""
     },
     {
@@ -177896,7 +177896,7 @@
     },
     {
         "text": "writings",
-        "gst": "r-i-t-e-ng-s",
+        "gst": "r-i-t/s",
         "notes": ""
     },
     {
@@ -178201,7 +178201,7 @@
     },
     {
         "text": "yearnings",
-        "gst": "r-n-e-ng-s",
+        "gst": "r-n/s",
         "notes": ""
     },
     {
