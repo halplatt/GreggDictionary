@@ -436,6 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const dictClasses = ['ann', 'pre', 'sim', 'djs', 'cen', 's90', 'all'];
   const btn = document.getElementById('toggleDictBtn');
   let showingAll = false;
+	initializeLastButton();
 
 	function setDisplayForClass(cls, visible) {
 		document.querySelectorAll('.' + cls).forEach(el => {
@@ -481,7 +482,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-	const currentDict = getCurrentClass(); // e.g., "ann"
+	const params = getQueryParams();
+	const allowedDicts = ['ann', 'pre', 'sim', 'djs', 'cen', 's90'];
+	const currentDict = allowedDicts.includes(params.gsd) ? params.gsd : getCurrentClass(); // e.g., "ann"
 	if (public_domain_only === 'pd') {
 		showPdDictOnly();
 	} else
