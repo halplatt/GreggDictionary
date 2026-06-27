@@ -459,8 +459,8 @@ document.addEventListener('DOMContentLoaded', function() {
     showingAll = false;
   }
 
-  function showCurrentDict() {
-		const currentDict = getCurrentClass(); // e.g., "ann"
+  function showCurrentDict(currentDictOverride) {
+		const currentDict = currentDictOverride || getCurrentClass() || initialDict; // e.g., "ann"
 		dictClasses.forEach(cls => {
 			setDisplayForClass(cls, cls === currentDict);
 		});
@@ -474,22 +474,41 @@ document.addEventListener('DOMContentLoaded', function() {
     showingAll = true;
   }
 
-  btn.addEventListener('click', () => {
-    if (showingAll) {
-      showCurrentDict();
-    } else {
-      showAllDicts();
-    }
-  });
-
 	const params = getQueryParams();
 	const allowedDicts = ['ann', 'pre', 'sim', 'djs', 'cen', 's90'];
-	const currentDict = allowedDicts.includes(params.gsd) ? params.gsd : getCurrentClass(); // e.g., "ann"
+	const initialGsd = (params.gsd || '').toLowerCase();
+	const initialDict = allowedDicts.includes(initialGsd) ? initialGsd : null;
+	let lockToInitialDict = !!initialDict;
+
+	function showFewerDicts() {
+		if (lockToInitialDict && initialDict) {
+			showCurrentDict(initialDict);
+		} else {
+			showCurrentDict();
+		}
+	}
+
+	document.addEventListener('click', function(event) {
+		const dictButton = event.target.closest('button.ann, button.pre, button.sim, button.djs, button.cen, button.s90');
+		if (dictButton) {
+			lockToInitialDict = false;
+		}
+	});
+
+	btn.addEventListener('click', () => {
+		if (showingAll) {
+			showFewerDicts();
+		} else {
+			showAllDicts();
+		}
+	});
+
+	const currentDict = initialDict || getCurrentClass(); // e.g., "ann"
 	if (public_domain_only === 'pd') {
 		showPdDictOnly();
 	} else
 	if (currentDict) {
-  		showCurrentDict();
+		showCurrentDict(currentDict);
 	} else {
 		showAllDicts();			
 	}
@@ -503,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			} else if (showingAll) {
 				showAllDicts();
 			} else {
-				showCurrentDict();
+				showFewerDicts();
 			}
 		});
 		mo.observe(shared, { childList: true, subtree: true });
