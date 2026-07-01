@@ -1641,7 +1641,7 @@
     },
     {
         "text": "acquaintanceship",
-        "gst": "a-k-w-a-nt-n-s-sh-e-p",
+        "gst": "a-k-w-a-nt-n-s/sh",
         "notes": ""
     },
     {
@@ -3811,7 +3811,7 @@
     },
     {
         "text": "airship",
-        "gst": "e-r-sh-e-p",
+        "gst": "e-r/sh",
         "notes": ""
     },
     {
@@ -5286,7 +5286,7 @@
     },
     {
         "text": "amidships",
-        "gst": "a-m-e-d-sh-e-p-s",
+        "gst": "a-m-e-d/sh-s",
         "notes": ""
     },
     {
@@ -7576,7 +7576,7 @@
     },
     {
         "text": "apprenticeship",
-        "gst": "a-p-r-e-nt-s-sh-e-p",
+        "gst": "a-p-r-e-nt-s/sh",
         "notes": ""
     },
     {
@@ -9061,7 +9061,7 @@
     },
     {
         "text": "as you have",
-        "gst": "a-s-u-h",
+        "gst": "a-s-u-v",
         "notes": ""
     },
     {
@@ -9161,7 +9161,7 @@
     },
     {
         "text": "as you would have",
-        "gst": "a-s-u-d-h",
+        "gst": "a-s-u-dv",
         "notes": ""
     },
     {
@@ -9681,7 +9681,7 @@
     },
     {
         "text": "assessorship",
-        "gst": "a-s-e-s-r-sh-e-p",
+        "gst": "a-s-e-s-r/sh",
         "notes": ""
     },
     {
@@ -10996,7 +10996,7 @@
     },
     {
         "text": "authorship",
-        "gst": "o-th-r-sh-e-p",
+        "gst": "o-th-r/sh",
         "notes": ""
     },
     {
@@ -12936,7 +12936,7 @@
     },
     {
         "text": "battleship",
-        "gst": "b-a-t-l-sh-e-p",
+        "gst": "b-a-t-l/sh",
         "notes": ""
     },
     {
@@ -17496,7 +17496,7 @@
     },
     {
         "text": "bratling",
-        "gst": "b-r-a-t-l/h",
+        "gst": "b-r-a-t-l-h",
         "notes": ""
     },
     {
@@ -19126,7 +19126,7 @@
     },
     {
         "text": "building",
-        "gst": "b-e-ld/h",
+        "gst": "b-e-ld-h",
         "notes": ""
     },
     {
@@ -22906,7 +22906,7 @@
     },
     {
         "text": "ceding",
-        "gst": "s-e-d/h",
+        "gst": "s-e-d-h",
         "notes": ""
     },
     {
@@ -23096,7 +23096,7 @@
     },
     {
         "text": "censorship",
-        "gst": "s-e-n-s-r-sh-e-p",
+        "gst": "s-e-n-s-r/sh",
         "notes": ""
     },
     {
@@ -23566,7 +23566,7 @@
     },
     {
         "text": "championship",
-        "gst": "ch-a-m-p-e-n-sh-e-p",
+        "gst": "ch-a-m-p-e-n/sh",
         "notes": ""
     },
     {
@@ -23636,7 +23636,7 @@
     },
     {
         "text": "changeling",
-        "gst": "ch-a-ng-l/h",
+        "gst": "ch-a-ng-l-h",
         "notes": ""
     },
     {
@@ -24621,7 +24621,7 @@
     },
     {
         "text": "chitterling",
-        "gst": "ch-e-t-r-l/h",
+        "gst": "ch-e-t-r-l-h",
         "notes": ""
     },
     {
@@ -25396,7 +25396,7 @@
     },
     {
         "text": "cirrhotic",
-        "gst": "s-r-r-o-t-e-k",
+        "gst": "s-e-r-o-t-e-k",
         "notes": ""
     },
     {
@@ -25441,7 +25441,7 @@
     },
     {
         "text": "citizenship",
-        "gst": "s-e-t-e-s-n-sh-e-p",
+        "gst": "s-e-t-e-s-n/sh",
         "notes": ""
     },
     {
@@ -25626,7 +25626,7 @@
     },
     {
         "text": "clanship",
-        "gst": "k-l-a-n-sh-p",
+        "gst": "k-l-a-n/sh",
         "notes": ""
     },
     {
@@ -26326,7 +26326,7 @@
     },
     {
         "text": "clothier",
-        "gst": "k-l-o-th-o-e-r",
+        "gst": "k-l-o-th-e-r",
         "notes": ""
     },
     {
@@ -27281,7 +27281,7 @@
     },
     {
         "text": "collectorship",
-        "gst": "k-o-l-e-k-t-r-sh-e-p-s",
+        "gst": "k-o-l-e-k-t-r/sh",
         "notes": ""
     },
     {
@@ -27670,8 +27670,8 @@
         "notes": ""
     },
     {
-        "text": "Corning",
-        "gst": "k-o-r-n/h",
+        "text": "Coming",
+        "gst": "k-u-r-n-h",
         "notes": ""
     },
     {
@@ -28106,7 +28106,7 @@
     },
     {
         "text": "companionship",
-        "gst": "k-p-a-n-u-n-sh-e-p",
+        "gst": "k-p-a-n-u-n/sh",
         "notes": ""
     },
     {
@@ -31231,7 +31231,7 @@
     },
     {
         "text": "copartnership",
-        "gst": "k-o-p-a-nt-r-sh-e-p-r-a-n",
+        "gst": "k-o-p-a-nt-r/sh",
         "notes": ""
     },
     {
@@ -31266,7 +31266,7 @@
     },
     {
         "text": "coping",
-        "gst": "k-o-p/h",
+        "gst": "k-o-p-h",
         "notes": ""
     },
     {
@@ -32041,7 +32041,7 @@
     },
     {
         "text": "coterminous",
-        "gst": "k-o-t-r-m-e-n-e-s",
+        "gst": "k-o-t-e-mn-u-s",
         "notes": ""
     },
     {
@@ -32386,7 +32386,7 @@
     },
     {
         "text": "coupling",
-        "gst": "k-u-p-l/h",
+        "gst": "k-u-p-l-h",
         "notes": ""
     },
     {
@@ -32471,7 +32471,7 @@
     },
     {
         "text": "courtship",
-        "gst": "k-o-r-ch-e-p",
+        "gst": "k-o-t/sh",
         "notes": ""
     },
     {
@@ -32631,7 +32631,7 @@
     },
     {
         "text": "coyote",
-        "gst": "k-i-o-t-e",
+        "gst": "k-i-e-t",
         "notes": ""
     },
     {
@@ -33036,7 +33036,7 @@
     },
     {
         "text": "creating",
-        "gst": "k-r-e-a-t/h",
+        "gst": "k-r-e-a-t-h",
         "notes": ""
     },
     {
@@ -34276,7 +34276,7 @@
     },
     {
         "text": "cunning",
-        "gst": "k-u-n/h",
+        "gst": "k-u-n-h",
         "notes": ""
     },
     {
@@ -35311,7 +35311,7 @@
     },
     {
         "text": "darling",
-        "gst": "d-a-r-l/h",
+        "gst": "d-a-r-l-h",
         "notes": ""
     },
     {
@@ -35841,7 +35841,7 @@
     },
     {
         "text": "debugging",
-        "gst": "d-e-b-u-g/h",
+        "gst": "d-e-b-u-g-h",
         "notes": ""
     },
     {
@@ -39361,7 +39361,7 @@
     },
     {
         "text": "dictatorship",
-        "gst": "d-e-k-t-a-t-r-sh-e-p",
+        "gst": "d-e-k-t-a-t-r/sh",
         "notes": ""
     },
     {
@@ -40236,7 +40236,7 @@
     },
     {
         "text": "discipleship",
-        "gst": "d-s-e-l-s-p-h-e-p",
+        "gst": "d-s-i-p-l/sh",
         "notes": ""
     },
     {
@@ -43606,7 +43606,7 @@
     },
     {
         "text": "duckling",
-        "gst": "d-u-k-l/h",
+        "gst": "d-u-k-l-h",
         "notes": ""
     },
     {
@@ -43771,12 +43771,12 @@
     },
     {
         "text": "dumping",
-        "gst": "d-u-m-p/h",
+        "gst": "d-u-m-p-h",
         "notes": ""
     },
     {
         "text": "dumpling",
-        "gst": "d-u-m-p-l/h",
+        "gst": "d-u-m-p-l-h",
         "notes": ""
     },
     {
@@ -44106,7 +44106,7 @@
     },
     {
         "text": "each morning",
-        "gst": "e-ch-mn/h",
+        "gst": "e-ch-mn-h",
         "notes": ""
     },
     {
@@ -44396,7 +44396,7 @@
     },
     {
         "text": "easygoing",
-        "gst": "e-s-e-g-o/h",
+        "gst": "e-s-e-g-o-h",
         "notes": ""
     },
     {
@@ -45516,7 +45516,7 @@
     },
     {
         "text": "eliminating",
-        "gst": "e-l-e-mn-a-t/h",
+        "gst": "e-l-e-mn-a-t-h",
         "notes": ""
     },
     {
@@ -48911,7 +48911,7 @@
     },
     {
         "text": "evening",
-        "gst": "e-v-n/h",
+        "gst": "e-v-n-h",
         "notes": ""
     },
     {
@@ -48996,7 +48996,7 @@
     },
     {
         "text": "everlasting",
-        "gst": "e-v-l-a-s-t/h",
+        "gst": "e-v-l-a-s-t-h",
         "notes": ""
     },
     {
@@ -49066,7 +49066,7 @@
     },
     {
         "text": "everything",
-        "gst": "e-v-e-th/h",
+        "gst": "e-v-e-th-h",
         "notes": ""
     },
     {
@@ -49576,7 +49576,7 @@
     },
     {
         "text": "excruciatingly",
-        "gst": "e-k-s-k-r-u-s-e-a-t/e",
+        "gst": "e-k-s-k-r-u-sh-e-a-t/e",
         "notes": ""
     },
     {
@@ -51676,7 +51676,7 @@
     },
     {
         "text": "farseeing",
-        "gst": "f-a-r-s-e/h",
+        "gst": "f-a-r-s-e-h",
         "notes": ""
     },
     {
@@ -51696,7 +51696,7 @@
     },
     {
         "text": "farthing",
-        "gst": "f-a-r-th/h",
+        "gst": "f-a-r-th-h",
         "notes": ""
     },
     {
@@ -52331,7 +52331,7 @@
     },
     {
         "text": "fellowship",
-        "gst": "f-e-l-o-sh-e-p",
+        "gst": "f-e-l-o/sh",
         "notes": ""
     },
     {
@@ -53531,7 +53531,7 @@
     },
     {
         "text": "fitting",
-        "gst": "f-e-t/h",
+        "gst": "f-e-t-h",
         "notes": ""
     },
     {
@@ -53686,7 +53686,7 @@
     },
     {
         "text": "flagship",
-        "gst": "f-l-a-g-sh-e-p",
+        "gst": "f-l-a-g/sh",
         "notes": ""
     },
     {
@@ -54071,7 +54071,7 @@
     },
     {
         "text": "fledgling",
-        "gst": "f-l-e-j-l/h",
+        "gst": "f-l-e-j-l-h",
         "notes": ""
     },
     {
@@ -54111,7 +54111,7 @@
     },
     {
         "text": "Fleming",
-        "gst": "f-l-e-m/h",
+        "gst": "f-l-e-m-h",
         "notes": ""
     },
     {
@@ -55436,7 +55436,7 @@
     },
     {
         "text": "for one thing",
-        "gst": "f-u-n-th/h",
+        "gst": "f-u-n-th-h",
         "notes": ""
     },
     {
@@ -56246,7 +56246,7 @@
     },
     {
         "text": "forthcoming",
-        "gst": "f-th-k-u-m/h",
+        "gst": "f-th-k-u-m-h",
         "notes": ""
     },
     {
@@ -56446,7 +56446,7 @@
     },
     {
         "text": "foundling",
-        "gst": "f-a-u-nt-l/h",
+        "gst": "f-a-u-nt-l-h",
         "notes": ""
     },
     {
@@ -56926,7 +56926,7 @@
     },
     {
         "text": "freewheeling",
-        "gst": "f-r-e/h-u-e-l/h",
+        "gst": "f-r-e/h-u-e-l-h",
         "notes": ""
     },
     {
@@ -57116,7 +57116,7 @@
     },
     {
         "text": "friendship",
-        "gst": "f-r-e-nt-sh-e-p",
+        "gst": "f-r-e-nt/sh",
         "notes": ""
     },
     {
@@ -57741,7 +57741,7 @@
     },
     {
         "text": "fumbling",
-        "gst": "f-m-b/h",
+        "gst": "f-m-b-h",
         "notes": ""
     },
     {
@@ -59016,7 +59016,7 @@
     },
     {
         "text": "generalship",
-        "gst": "j-e-n-r-l-sh-e-p",
+        "gst": "j-e-n-r-l/sh",
         "notes": ""
     },
     {
@@ -60521,7 +60521,7 @@
     },
     {
         "text": "going",
-        "gst": "g-o/h",
+        "gst": "g-o-h",
         "notes": ""
     },
     {
@@ -60746,7 +60746,7 @@
     },
     {
         "text": "gosling",
-        "gst": "g-a-s-l/h",
+        "gst": "g-a-s-l-h",
         "notes": ""
     },
     {
@@ -62241,7 +62241,7 @@
     },
     {
         "text": "guardianship",
-        "gst": "g-a-rd-e-n-sh-e-p",
+        "gst": "g-a-rd-e-n/sh",
         "notes": ""
     },
     {
@@ -62556,7 +62556,7 @@
     },
     {
         "text": "gunrunning",
-        "gst": "g-u-n-r-n/h",
+        "gst": "g-u-n-r-n-h",
         "notes": ""
     },
     {
@@ -63346,7 +63346,7 @@
     },
     {
         "text": "handwriting",
-        "gst": "h-a-nt-r-i-t/h",
+        "gst": "h-a-nt-r-i-t-h",
         "notes": ""
     },
     {
@@ -63561,7 +63561,7 @@
     },
     {
         "text": "Harding",
-        "gst": "h-a-rd/h",
+        "gst": "h-a-rd-h",
         "notes": ""
     },
     {
@@ -63581,7 +63581,7 @@
     },
     {
         "text": "hardship",
-        "gst": "h-a-rd-sh-e-p",
+        "gst": "h-a-rd/sh",
         "notes": ""
     },
     {
@@ -65511,7 +65511,7 @@
     },
     {
         "text": "helping",
-        "gst": "h-e-l-p/h",
+        "gst": "h-e-l-p-h",
         "notes": ""
     },
     {
@@ -65966,7 +65966,7 @@
     },
     {
         "text": "herring",
-        "gst": "h-e-r/h",
+        "gst": "h-e-r-h",
         "notes": ""
     },
     {
@@ -66396,7 +66396,7 @@
     },
     {
         "text": "hireling",
-        "gst": "h-i-r-l/h",
+        "gst": "h-i-r-l-h",
         "notes": ""
     },
     {
@@ -67276,7 +67276,7 @@
     },
     {
         "text": "horsemanship",
-        "gst": "h-o-r-s-mn-sh-e-p",
+        "gst": "h-o-r-s-mn/sh",
         "notes": ""
     },
     {
@@ -67541,7 +67541,7 @@
     },
     {
         "text": "housewarming",
-        "gst": "h-a-u-s-u-o-r-m/h",
+        "gst": "h-a-u-s-u-o-r-m-h",
         "notes": ""
     },
     {
@@ -67556,7 +67556,7 @@
     },
     {
         "text": "housing",
-        "gst": "h-a-u-s/h",
+        "gst": "h-a-u-s-h",
         "notes": ""
     },
     {
@@ -70331,7 +70331,7 @@
     },
     {
         "text": "immortality",
-        "gst": "e-m-o-r-t/l",
+        "gst": "e-m-o-t/l",
         "notes": ""
     },
     {
@@ -73111,7 +73111,7 @@
     },
     {
         "text": "indivisibility",
-        "gst": "nt-v-e-s-e-t/l",
+        "gst": "n-dv-e-s-e-t/l",
         "notes": ""
     },
     {
@@ -74546,7 +74546,7 @@
     },
     {
         "text": "inkling",
-        "gst": "e-nk-l/h",
+        "gst": "e-nk-l-h",
         "notes": ""
     },
     {
@@ -74626,7 +74626,7 @@
     },
     {
         "text": "inning",
-        "gst": "e-n/h",
+        "gst": "e-n-h",
         "notes": ""
     },
     {
@@ -79181,7 +79181,7 @@
     },
     {
         "text": "judgeship",
-        "gst": "j-u-j-sh-e-p",
+        "gst": "j-u-j/sh",
         "notes": ""
     },
     {
@@ -79626,7 +79626,7 @@
     },
     {
         "text": "keeping",
-        "gst": "k-e-p/h",
+        "gst": "k-e-p-h",
         "notes": ""
     },
     {
@@ -80031,7 +80031,7 @@
     },
     {
         "text": "kingship",
-        "gst": "k-e-ng-sh-e-p",
+        "gst": "k-e-ng/sh",
         "notes": ""
     },
     {
@@ -80056,7 +80056,7 @@
     },
     {
         "text": "kinship",
-        "gst": "k-e-n-sh-e-p",
+        "gst": "k-e-n/sh",
         "notes": ""
     },
     {
@@ -80711,7 +80711,7 @@
     },
     {
         "text": "ladyship",
-        "gst": "l-a-d-e-sh-e-p",
+        "gst": "l-a-d-e/sh",
         "notes": ""
     },
     {
@@ -81816,7 +81816,7 @@
     },
     {
         "text": "leadership",
-        "gst": "l-e-d-r-sh-e-p",
+        "gst": "l-e-d-r/sh",
         "notes": ""
     },
     {
@@ -81986,7 +81986,7 @@
     },
     {
         "text": "leaving",
-        "gst": "l-e-v/h",
+        "gst": "l-e-v-h",
         "notes": ""
     },
     {
@@ -83116,12 +83116,12 @@
     },
     {
         "text": "lightning",
-        "gst": "l-i-t-n/h",
+        "gst": "l-i-t-n-h",
         "notes": ""
     },
     {
         "text": "lightship",
-        "gst": "l-i-t-sh-e-p",
+        "gst": "l-i-t/sh",
         "notes": ""
     },
     {
@@ -84036,7 +84036,7 @@
     },
     {
         "text": "living",
-        "gst": "l-e-v/h",
+        "gst": "l-e-v-h",
         "notes": ""
     },
     {
@@ -84736,7 +84736,7 @@
     },
     {
         "text": "lordship",
-        "gst": "l-o-rd-sh-e-p",
+        "gst": "l-o-rd/sh",
         "notes": ""
     },
     {
@@ -85356,7 +85356,7 @@
     },
     {
         "text": "lurching",
-        "gst": "l-e-r-ch/h",
+        "gst": "l-e-r-ch-h",
         "notes": ""
     },
     {
@@ -86571,7 +86571,7 @@
     },
     {
         "text": "managership",
-        "gst": "m-a-n-g-h-r-e-k",
+        "gst": "m-a-n-g-e-r/sh",
         "notes": ""
     },
     {
@@ -87326,7 +87326,7 @@
     },
     {
         "text": "marksmanship",
-        "gst": "m-a-r-k-s-mn-sh-e-p",
+        "gst": "m-a-r-k-s-mn/sh",
         "notes": ""
     },
     {
@@ -87731,7 +87731,7 @@
     },
     {
         "text": "mastership",
-        "gst": "m-a-s-t-r-sh-e-p",
+        "gst": "m-a-s-t-r/sh",
         "notes": ""
     },
     {
@@ -88946,7 +88946,7 @@
     },
     {
         "text": "membership",
-        "gst": "m-e-m-b-r-sh-e-p",
+        "gst": "m-e-m-b-r/sh",
         "notes": ""
     },
     {
@@ -89386,7 +89386,7 @@
     },
     {
         "text": "merrymaking",
-        "gst": "m-e-r-e-m-a-k/h",
+        "gst": "m-e-r-e-m-a-k-h",
         "notes": ""
     },
     {
@@ -89956,12 +89956,12 @@
     },
     {
         "text": "midshipman",
-        "gst": "m-e-d-sh-e-p-mn",
+        "gst": "m-e-d/sh-m-a-n",
         "notes": ""
     },
     {
         "text": "midships",
-        "gst": "m-e-d-sh-e-p-s",
+        "gst": "m-e-d/sh-s",
         "notes": ""
     },
     {
@@ -92631,7 +92631,7 @@
     },
     {
         "text": "moonlighting",
-        "gst": "m-u-n-l-i-t/h",
+        "gst": "m-u-n-l-i-t-h",
         "notes": ""
     },
     {
@@ -92846,7 +92846,7 @@
     },
     {
         "text": "morning",
-        "gst": "mn/h",
+        "gst": "mn-h",
         "notes": ""
     },
     {
@@ -93376,7 +93376,7 @@
     },
     {
         "text": "moving",
-        "gst": "m-u-v/h",
+        "gst": "m-u-v-h",
         "notes": ""
     },
     {
@@ -93561,7 +93561,7 @@
     },
     {
         "text": "mugging",
-        "gst": "m-u-g/h",
+        "gst": "m-u-g-h",
         "notes": ""
     },
     {
@@ -96736,7 +96736,7 @@
     },
     {
         "text": "nonparticipating",
-        "gst": "n-o-n-p-t-e-s-p-a-t/h",
+        "gst": "n-o-n-p-t-e-s-p-a-t-h",
         "notes": ""
     },
     {
@@ -97156,7 +97156,7 @@
     },
     {
         "text": "nothing",
-        "gst": "n-u-th/h",
+        "gst": "n-u-th-h",
         "notes": ""
     },
     {
@@ -97216,7 +97216,7 @@
     },
     {
         "text": "notwithstanding",
-        "gst": "n-a-th-s-tn-d/h",
+        "gst": "n-a-th-s-tn-d-h",
         "notes": ""
     },
     {
@@ -99426,7 +99426,7 @@
     },
     {
         "text": "one thing",
-        "gst": "u-n-th/h",
+        "gst": "u-n-th-h",
         "notes": ""
     },
     {
@@ -99776,7 +99776,7 @@
     },
     {
         "text": "Opposing",
-        "gst": "o-p-o-s/h",
+        "gst": "o-p-o-s-h",
         "notes": ""
     },
     {
@@ -100541,7 +100541,7 @@
     },
     {
         "text": "Ossining",
-        "gst": "o-s-n/h",
+        "gst": "o-s-n-h",
         "notes": ""
     },
     {
@@ -100901,7 +100901,7 @@
     },
     {
         "text": "outlying",
-        "gst": "a-u-l-i/h",
+        "gst": "a-u-l-i-h",
         "notes": ""
     },
     {
@@ -101721,7 +101721,7 @@
     },
     {
         "text": "ownership",
-        "gst": "o-n-r-sh-e-p",
+        "gst": "o-n-r/sh",
         "notes": ""
     },
     {
@@ -103546,7 +103546,7 @@
     },
     {
         "text": "partisanship",
-        "gst": "p-a-r-t-s-n-sh-e-p",
+        "gst": "p-a-r-t-s-n/sh",
         "notes": ""
     },
     {
@@ -103571,7 +103571,7 @@
     },
     {
         "text": "partnership",
-        "gst": "p-a-r-tn-r-sh-e-p",
+        "gst": "p-a-r-tn-r/sh",
         "notes": ""
     },
     {
@@ -104911,7 +104911,7 @@
     },
     {
         "text": "pending",
-        "gst": "p-e-nt/h",
+        "gst": "p-e-nt-h",
         "notes": ""
     },
     {
@@ -105036,7 +105036,7 @@
     },
     {
         "text": "penmanship",
-        "gst": "p-e-n-mn-sh-e-p",
+        "gst": "p-e-n-mn/sh",
         "notes": ""
     },
     {
@@ -108641,7 +108641,7 @@
     },
     {
         "text": "plaything",
-        "gst": "p-l-a-th/h",
+        "gst": "p-l-a-th-h",
         "notes": ""
     },
     {
@@ -110376,7 +110376,7 @@
     },
     {
         "text": "possessorship",
-        "gst": "p-s-e-s-p-r-sh-e-p",
+        "gst": "p-s-e-s-p-r/sh",
         "notes": ""
     },
     {
@@ -112076,7 +112076,7 @@
     },
     {
         "text": "prepossessing",
-        "gst": "n-p-r-e-p-o-s-s/h",
+        "gst": "n-p-r-e-p-o-s-s-h",
         "notes": ""
     },
     {
@@ -112756,7 +112756,7 @@
     },
     {
         "text": "princeling",
-        "gst": "p-r-e-n-s-l/h",
+        "gst": "p-r-e-n-s-l-h",
         "notes": ""
     },
     {
@@ -113296,7 +113296,7 @@
     },
     {
         "text": "professorship",
-        "gst": "p-r-f-e-s-r-sh-e-p",
+        "gst": "p-r-f-e-s-r/sh",
         "notes": ""
     },
     {
@@ -114031,7 +114031,7 @@
     },
     {
         "text": "proprietorship",
-        "gst": "p-r-p-r-i-t-r-sh-e-p",
+        "gst": "p-r-p-r-i-t-r/sh",
         "notes": ""
     },
     {
@@ -115131,7 +115131,7 @@
     },
     {
         "text": "puling",
-        "gst": "p-u-l/h",
+        "gst": "p-u-l-h",
         "notes": ""
     },
     {
@@ -118816,7 +118816,7 @@
     },
     {
         "text": "receivership",
-        "gst": "r-s-e-v-r-sh-e-p",
+        "gst": "r-s-e-v-r/sh",
         "notes": ""
     },
     {
@@ -120831,7 +120831,7 @@
     },
     {
         "text": "relationship",
-        "gst": "r-e-l-a-sh-n-sh-e-p",
+        "gst": "r-e-l-a-sh-n/sh",
         "notes": ""
     },
     {
@@ -122391,7 +122391,7 @@
     },
     {
         "text": "reship",
-        "gst": "r-sh-e-p",
+        "gst": "r/sh",
         "notes": ""
     },
     {
@@ -126966,7 +126966,7 @@
     },
     {
         "text": "salesmanship",
-        "gst": "s-a-l-s-mn-sh-e-p",
+        "gst": "s-a-l-s-mn/sh",
         "notes": ""
     },
     {
@@ -128696,7 +128696,7 @@
     },
     {
         "text": "scholarship",
-        "gst": "s-k-a-l-r-sh-e-p",
+        "gst": "s-k-a-l-r/sh",
         "notes": ""
     },
     {
@@ -131406,7 +131406,7 @@
     },
     {
         "text": "senatorship",
-        "gst": "s-e-nt-r-sh-e-p",
+        "gst": "s-e-nt-r/sh",
         "notes": ""
     },
     {
@@ -134216,7 +134216,7 @@
     },
     {
         "text": "showmanship",
-        "gst": "sh-o-mn-sh-e-p",
+        "gst": "sh-o-mn/sh",
         "notes": ""
     },
     {
@@ -141451,7 +141451,7 @@
     },
     {
         "text": "sponsorship",
-        "gst": "s-p-a-n-s-r-sh-e-p",
+        "gst": "s-p-a-n-s-r/sh",
         "notes": ""
     },
     {
@@ -141581,7 +141581,7 @@
     },
     {
         "text": "sportsmanship",
-        "gst": "s-p-o-r-t-s-mn-sh-e-p",
+        "gst": "s-p-o-r-t-s-mn/sh",
         "notes": ""
     },
     {
@@ -143266,7 +143266,7 @@
     },
     {
         "text": "steamship",
-        "gst": "s-t-e-m-sh-e-p",
+        "gst": "s-t-e-m/sh",
         "notes": ""
     },
     {
@@ -148321,7 +148321,7 @@
     },
     {
         "text": "suretyship",
-        "gst": "s-r-t-sh-e-p",
+        "gst": "s-r-t/sh",
         "notes": ""
     },
     {
@@ -148611,7 +148611,7 @@
     },
     {
         "text": "survivorship",
-        "gst": "s-r-v-i-v-r-s-e-p",
+        "gst": "s-r-v-i-v-r/sh",
         "notes": ""
     },
     {
@@ -156481,7 +156481,7 @@
     },
     {
         "text": "to ship",
-        "gst": "t-u-sh-e-p",
+        "gst": "t-sh-e-p",
         "notes": ""
     },
     {
@@ -157956,7 +157956,7 @@
     },
     {
         "text": "township",
-        "gst": "t-a-u-n-sh-e-p",
+        "gst": "t-a-u-n/sh",
         "notes": ""
     },
     {
@@ -159026,7 +159026,7 @@
     },
     {
         "text": "transship",
-        "gst": "t/sh-e-p",
+        "gst": "t/sh",
         "notes": ""
     },
     {
@@ -160211,7 +160211,7 @@
     },
     {
         "text": "troopship",
-        "gst": "t-r-u-p-sh-e-p",
+        "gst": "t-r-u-p/sh",
         "notes": ""
     },
     {
@@ -160666,7 +160666,7 @@
     },
     {
         "text": "trusteeship",
-        "gst": "t-r-u-s-t-e-sh-e-p",
+        "gst": "t-r-u-s-t-e/sh",
         "notes": ""
     },
     {
@@ -172671,7 +172671,7 @@
     },
     {
         "text": "warship",
-        "gst": "u-o-r-sh-e-p",
+        "gst": "u-o-r/sh",
         "notes": ""
     },
     {
@@ -177276,7 +177276,7 @@
     },
     {
         "text": "workmanship",
-        "gst": "u-e-r-k-mn-sh-e-p",
+        "gst": "u-e-r-k-mn/sh",
         "notes": ""
     },
     {
@@ -177451,27 +177451,27 @@
     },
     {
         "text": "worship",
-        "gst": "u-e-r-sh-p",
+        "gst": "u-e-r/sh",
         "notes": ""
     },
     {
         "text": "worshiped",
-        "gst": "u-e-r-sh-e-p-t",
+        "gst": "u-e-r/sh-t",
         "notes": ""
     },
     {
         "text": "worshiper",
-        "gst": "u-e-r-sh-p-r",
+        "gst": "u-e-r/sh-a-r",
         "notes": ""
     },
     {
         "text": "worshipful",
-        "gst": "u-e-r-sh-p-f",
+        "gst": "u-e-r/sh-f",
         "notes": ""
     },
     {
         "text": "worshipfully",
-        "gst": "u-e-r-sh-p-f-e",
+        "gst": "u-e-r/sh-f-e",
         "notes": ""
     },
     {
