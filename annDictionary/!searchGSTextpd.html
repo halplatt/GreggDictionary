@@ -171,23 +171,24 @@
     }   
     .button-row {
         display: flex;
-        flex-wrap: nowrap; /* keep all controls on one line */
+        flex-wrap: wrap; /* allow controls to flow to next line */
         justify-content: flex-start;
         align-items: flex-end; /* align bottoms with radio buttons */
         gap: 8px;
         width: 100%;
-        min-width: 0;           /* allow children to shrink */
-        overflow-x: auto;       /* scroll horizontally if too many */
-        -webkit-overflow-scrolling: touch;
+        min-width: 0;
     }
     .button-row .search-type-group { margin-top: 0 !important; }
     .input-row {
         display: flex;
         align-items: center;
-        flex-wrap: nowrap; /* keep controls on one line */
+        flex-wrap: wrap;
         gap: 10px;
         width: 100%;
-        min-width: 0; /* allow flex children to shrink properly */
+        min-width: 0;
+    }
+    .search-type-group label {
+        white-space: nowrap;
     }
     .button-row button {
         margin-right: 5px;
@@ -321,7 +322,6 @@
                 <th>Text</th>
                 <th>Outline</th>
                 <th>GST</th>
-                <th>Notes</th>
             </tr>
         </thead>
         <tbody>
@@ -377,24 +377,21 @@
             toDisplay.forEach(entry => {
                 const row = document.createElement('tr');
                 const textCell = document.createElement('td');
+                const pageCell = document.createElement('td'); // Outline column
                 const gstCell = document.createElement('td');
-                const notesCell = document.createElement('td');
-                const pageCell = document.createElement('td'); // New column for page.page
 
                 textCell.textContent = entry.text || ''; // Handle missing text
                 gstCell.textContent = entry.gst || ''; // Handle missing gst
-                notesCell.textContent = entry.notes || ''; // Handle missing notes
 
                 // Call searchRefJson and get the page value
                 // Call imageContainer and append the resulting div to pageCell
                 const imageDiv = imageContainer(entry.text || '');
                 pageCell.appendChild(imageDiv);
 
-                // Column order: Text, Outline, GST, Notes
+                // Column order: Text, Outline, GST
                 row.appendChild(textCell);
-                row.appendChild(pageCell); // Outline column
+                row.appendChild(pageCell);
                 row.appendChild(gstCell);
-                row.appendChild(notesCell);
                 //add click event to row
                 row.addEventListener('click', function() {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
@@ -586,6 +583,20 @@
             }
             return null; // Return null if no match is found
         }
+
+        function getVerticalAlign(pngFile) {
+            const txtFile = pngFile.replace('.png', '.txt');
+            return fetch(txtFile)
+                .then(response => {
+                    if (!response.ok) {
+                        return '0px';
+                    }
+                    return response.text();
+                })
+                .then(px => (-1 * parseFloat(px.trim())) + 'px')
+                .catch(() => '0px');
+        }
+
         function imageContainer(searchTerm) {
             const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
             const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
@@ -601,8 +612,10 @@
                 const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
                 const img_ann = document.createElement("img");
                 img_ann.src = `${imagePathann}${searchTerm}.png`;
-                img_ann.style.width = 'auto';  // Set the width to 1/4 of the original size
-                img_ann.style.height = '50px'; // Set the height to 1/4 of the original size
+
+                getVerticalAlign(img_ann.src).then(verticalAlign => {
+                    img_ann.style.verticalAlign = verticalAlign;
+                });
 
                 img_ann.onerror = function() {
                     this.style.display = "none";  // Hide the image
