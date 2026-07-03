@@ -5441,12 +5441,12 @@
     },
     {
         "text": "amphibious",
-        "gst": "a-m-f-e-b-e-s",
+        "gst": "a-m-f-e-b-u-s",
         "notes": ""
     },
     {
         "text": "amphibiously",
-        "gst": "a-m-f-e-b-s-e",
+        "gst": "a-m-f-e-b-u-s-e",
         "notes": ""
     },
     {
@@ -11001,12 +11001,12 @@
     },
     {
         "text": "autobiographical",
-        "gst": "o-t-b-i-g-r-a-f/k",
+        "gst": "o-t-b-g-r-a-f/k",
         "notes": ""
     },
     {
         "text": "autobiography",
-        "gst": "o-t-b-i-a-g-r-f-e",
+        "gst": "o-t-b-g-r-f-e",
         "notes": ""
     },
     {
@@ -14866,7 +14866,7 @@
     },
     {
         "text": "biopsy",
-        "gst": "b-i-e-p-s-e",
+        "gst": "b-ie-p-s-e",
         "notes": ""
     },
     {
@@ -43566,7 +43566,7 @@
     },
     {
         "text": "dubious",
-        "gst": "d-u-b-e-s",
+        "gst": "d-u-b-u-s",
         "notes": ""
     },
     {
@@ -100580,7 +100580,7 @@
         "notes": ""
     },
     {
-        "text": "postmistressp",
+        "text": "ostmistressp",
         "gst": "p/m-s-t-r-e-s",
         "notes": ""
     },
