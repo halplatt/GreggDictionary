@@ -104,20 +104,21 @@
   <div class="grp">
     <input type="text" id="textFilter" placeholder="text regex…" disabled title="filter by text (regular expression)">
     <input type="text" id="gstFilter" placeholder="gst regex…" disabled title="filter by gst (regular expression)">
-    <button id="applyFilter" disabled>Apply</button>
-    <button id="clearFilter" disabled>Clear</button>
+    <button id="applyFilter" disabled>Apply Filter</button>
+    <button id="clearFilter" disabled>Clear Filter</button>
   </div>
   <div class="grp">
     <input type="text" id="replaceFind" placeholder="find regex…" disabled title="find pattern (regular expression)">
     <input type="text" id="replaceWith" placeholder="replace with…" disabled title="replacement text">
     <button id="selectFiltered" disabled>Select filtered</button>
+    <button id="clearSelected" disabled>Clear selected</button>
     <button id="replaceBtn" disabled>Replace selected</button>
   </div>
   <div class="grp">
     <button id="prev" disabled>‹ Prev</button>
     <button id="next" disabled>Next ›</button>
     <select id="pageSize" title="rows per page">
-      <option>12</option><option selected>24</option><option>48</option><option>96</option>
+      <option>12</option><option>24</option><option>48</option><option selected>96</option>
     </select>
   </div>
   <span class="pos" id="pos">no file loaded</span>
@@ -155,9 +156,27 @@ let start = 0;                 // page offset INTO view
 let dirty = false, urls = [], currentName = '';
 let gstRe = null, textRe = null;   // active compiled regex filters (or null)
 let selected = new Set();      // selected object indices in data
+let imageUrlBase = null;       // default sibling image folder URL (when no directory handle)
+let imageUrlFallbackBase = null;
 
 const $ = id => document.getElementById(id);
 const pageSize = () => parseInt($('pageSize').value, 10);
+
+function currentFolderName(){
+  const parts = decodeURIComponent(location.pathname).replace(/\\/g,'/').split('/').filter(Boolean);
+  return parts.length >= 2 ? parts[parts.length - 2] : '';
+}
+function deriveImageFolderNames(){
+  const folder = currentFolderName();
+  const prefix = (folder.slice(0,3) || folder).trim();
+  if(!prefix) return ['djsWord','djsWords'];
+  return [prefix + 'Word', prefix + 'Words'];
+}
+function defaultImageFolderUrls(){
+  const here = new URL('.', location.href);
+  const [first, second] = deriveImageFolderNames();
+  return [new URL('../' + first + '/', here).href, new URL('../' + second + '/', here).href];
+}
 
 /* ---------- tiny IndexedDB key/value ---------- */
 function db(){ return new Promise((res,rej)=>{ const r=indexedDB.open('gstEditor',1);
@@ -171,7 +190,13 @@ async function kvGet(k){ const d=await db(); return new Promise((res,rej)=>{ con
 $('openJson').onclick = async () => {
   try{
     if (HAS_FS){
-      [fileHandle] = await window.showOpenFilePicker({types:[{description:'JSON',accept:{'application/json':['.json']}}]});
+      const savedJsonHandle = fileHandle || await kvGet('jsonHandle');
+      const opts = {
+        id: 'gst-json-open',
+        startIn: savedJsonHandle || 'documents',
+        types:[{description:'JSON',accept:{'application/json':['.json']}}]
+      };
+      [fileHandle] = await window.showOpenFilePicker(opts);
       await kvSet('jsonHandle', fileHandle);
       const f = await fileHandle.getFile();
       await loadData(JSON.parse(await f.text()), f.name);
@@ -186,10 +211,11 @@ async function loadData(arr, name){
   data = arr.map(o => ({text:o.text??'', gst:o.gst??'', notes:o.notes??'', _orig:o.gst??''}));
   currentName = name;
   reviewed = new Set(await kvGet('reviewed:'+name) || []);
+  [imageUrlBase, imageUrlFallbackBase] = defaultImageFolderUrls();
   selected = new Set();
   start = 0; setDirty(false);
   $('loadedName').textContent = name + ' — ' + data.length.toLocaleString() + ' entries';
-  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter','replaceFind','replaceWith','selectFiltered','replaceBtn'].forEach(id => $(id).disabled = false);
+  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter','replaceFind','replaceWith','selectFiltered','clearSelected','replaceBtn'].forEach(id => $(id).disabled = false);
   buildView(); render();
 }
 
@@ -197,7 +223,13 @@ async function loadData(arr, name){
 $('openDir').onclick = async () => {
   try{
     if (HAS_FS){
-      dirHandle = await window.showDirectoryPicker();
+      const savedDirHandle = dirHandle || await kvGet('dirHandle');
+      const savedJsonHandle = fileHandle || await kvGet('jsonHandle');
+      const opts = {
+        id: 'gst-image-open',
+        startIn: savedDirHandle || savedJsonHandle || 'documents'
+      };
+      dirHandle = await window.showDirectoryPicker(opts);
       await kvSet('dirHandle', dirHandle);
       render();
     } else {
@@ -310,6 +342,14 @@ $('selectFiltered').onclick = () => {
   render();
   $('pos').textContent = 'selected '+selected.size.toLocaleString()+' filtered object'+(selected.size===1?'':'s');
 };
+$('clearSelected').onclick = () => {
+  const n = selected.size;
+  selected.clear();
+  render();
+  $('pos').textContent = n
+    ? 'cleared '+n.toLocaleString()+' selected object'+(n===1?'':'s')
+    : 'no selected objects to clear';
+};
 $('replaceBtn').onclick = replaceSelectedGst;
 $('replaceWith').addEventListener('keydown', e=>{ if(e.key==='Enter') replaceSelectedGst(); });
 $('replaceFind').addEventListener('keydown', e=>{ if(e.key==='Enter') replaceSelectedGst(); });
@@ -384,7 +424,28 @@ async function loadImage(iw,text){
     if(dirHandle){ const fh=await dirHandle.getFileHandle(name); file=await fh.getFile(); }
     else if(imageMap){ file=imageMap.get(name)||null; }
   }catch(_){ file=null; }
-  if(!file){ iw.innerHTML='<span class="miss">no image</span>'; return; }
+  if(!file){
+    if(imageUrlBase){
+      iw.innerHTML='';
+      const img = new Image();
+      img.alt = text;
+      img.onload = ()=> iw.replaceChildren(img);
+      img.onerror = ()=>{
+        if(imageUrlFallbackBase && imageUrlFallbackBase !== imageUrlBase){
+          const img2 = new Image();
+          img2.alt = text;
+          img2.onload = ()=> iw.replaceChildren(img2);
+          img2.onerror = ()=>{ iw.innerHTML='<span class="miss">no image</span>'; };
+          img2.src = imageUrlFallbackBase + encodeURIComponent(name);
+          return;
+        }
+        iw.innerHTML='<span class="miss">no image</span>';
+      };
+      img.src = imageUrlBase + encodeURIComponent(name);
+      return;
+    }
+    iw.innerHTML='<span class="miss">no image</span>'; return;
+  }
   const url=URL.createObjectURL(file); urls.push(url);
   iw.innerHTML=''; const img=new Image(); img.src=url; img.alt=text; iw.appendChild(img);
 }
