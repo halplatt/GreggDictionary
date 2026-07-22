@@ -88,18 +88,15 @@
     <button id="openJson" class="primary">Open JSON…</button>
     <button id="openDir">Image folder…</button>
     <button id="save" disabled>Save<span class="dot"></span></button>
-    <label class="chk"><input type="checkbox" id="autosave"> autosave</label>
+    <label class="chk"><input type="checkbox" id="autosave" checked> autosave</label>
   </div>
   <div class="grp">
-    <input type="search" id="search" placeholder="Jump to word…" disabled>
-    <button id="go" disabled>Go</button>
     <select id="filter" disabled title="filter">
       <option value="all">All</option>
       <option value="unreviewed">Unreviewed</option>
       <option value="reviewed">Reviewed</option>
       <option value="changed">Edited</option>
     </select>
-    <button id="nextUn" disabled title="jump to first unreviewed">Next unreviewed ›</button>
   </div>
   <div class="grp">
     <input type="text" id="textFilter" placeholder="text regex…" disabled title="filter by text (regular expression)">
@@ -131,7 +128,7 @@
     <b>2.</b> Click <b>Image folder…</b> and choose the <b>djsWords</b> folder.</p>
     <p>Edit a <b>gst</b> field, press <b>Enter</b> to mark it reviewed and move on. The bar
     above tracks how many of the entries you've reviewed; use the filter or
-    <b>Next unreviewed</b> to pick up where you left off.</p>
+    filters to pick up where you left off.</p>
     <p style="font-size:13px">Best in Chrome or Edge — they save straight back to the file and
     remember it next time. Other browsers download an updated copy instead.</p>
     <div class="resume" id="resumeWrap" hidden></div>
@@ -177,6 +174,13 @@ function defaultImageFolderUrls(){
   const [first, second] = deriveImageFolderNames();
   return [new URL('../' + first + '/', here).href, new URL('../' + second + '/', here).href];
 }
+function displayPathFromUrl(u){
+  let p = decodeURIComponent(u.pathname).replace(/\\/g,'/');
+  if(/^\/[A-Za-z]:\//.test(p)) p = p.slice(1);
+  return p.replace(/\/$/, '');
+}
+function currentHtmlDirPath(){ return displayPathFromUrl(new URL('.', location.href)); }
+function currentHtmlParentDirPath(){ return displayPathFromUrl(new URL('../', location.href)); }
 
 /* ---------- tiny IndexedDB key/value ---------- */
 function db(){ return new Promise((res,rej)=>{ const r=indexedDB.open('gstEditor',1);
@@ -215,7 +219,7 @@ async function loadData(arr, name){
   selected = new Set();
   start = 0; setDirty(false);
   $('loadedName').textContent = name + ' — ' + data.length.toLocaleString() + ' entries';
-  ['save','prev','next','search','go','filter','nextUn','textFilter','gstFilter','applyFilter','clearFilter','replaceFind','replaceWith','selectFiltered','clearSelected','replaceBtn'].forEach(id => $(id).disabled = false);
+  ['save','prev','next','filter','textFilter','gstFilter','applyFilter','clearFilter','replaceFind','replaceWith','selectFiltered','clearSelected','replaceBtn'].forEach(id => $(id).disabled = false);
   buildView(); render();
 }
 
@@ -260,7 +264,12 @@ async function tryResume(){
   } else {
     const w = $('resumeWrap'); w.hidden=false;
     const b = document.createElement('button'); b.className='primary';
-    b.textContent = 'Reopen last session (' + jh.name + ')';
+    const jsonPath = currentHtmlDirPath() + '/' + jh.name;
+    const [imgName] = deriveImageFolderNames();
+    const imagePath = currentHtmlParentDirPath() + '/' + (dh ? dh.name : imgName);
+    b.style.whiteSpace = 'pre-line';
+    b.style.textAlign = 'left';
+    b.textContent = 'Reopen last session\nJSON: ' + jsonPath + '\nImage: ' + imagePath;
     b.onclick = async () => {
       if((await jh.requestPermission({}))!=='granted'){ alert('Permission denied.'); return; }
       fileHandle = jh;
@@ -324,7 +333,7 @@ function replaceSelectedGst(){
     const d = data[i];
     if(!d) return;
     const next = String(d.gst).replace(re, repl);
-    if(next !== d.gst){ d.gst = next; changed++; }
+    if(next !== d.gst){ d.gst = next; mark(d.text, true); changed++; }
   });
 
   if(changed){
@@ -469,25 +478,6 @@ function focusP(p){ const el=document.querySelector('.gst[data-p="'+p+'"]'); if(
 $('prev').onclick=()=>{ start=Math.max(0,start-pageSize()); render(); };
 $('next').onclick=()=>{ if(start+pageSize()<view.length){ start+=pageSize(); render(); } };
 $('pageSize').onchange=render;
-
-$('nextUn').onclick=()=>{
-  const di=data.findIndex(d=>!reviewed.has(d.text) && passes(d));
-  if(di<0){ $('pos').textContent='all reviewed ✓'; return; }
-  if($('filter').value==='reviewed') $('filter').value='all'; buildView();
-  start=view.indexOf(di); render().then(()=>{ const c=document.querySelector('.card[data-p="'+start+'"]');
-    if(c){ c.classList.add('flash'); const g=c.querySelector('.gst'); if(g){g.focus();g.select();} } });
-};
-
-$('go').onclick=doSearch;
-$('search').addEventListener('keydown',e=>{ if(e.key==='Enter') doSearch(); });
-function doSearch(){
-  const q=$('search').value.trim().toLowerCase(); if(!q) return;
-  let p=view.findIndex(i=>data[i].text.toLowerCase().startsWith(q));
-  if(p<0) p=view.findIndex(i=>data[i].text.toLowerCase().includes(q));
-  if(p<0){ $('pos').textContent='no match for “'+q+'”'; return; }
-  start=p; render().then(()=>{ const c=document.querySelector('.card[data-p="'+p+'"]');
-    if(c){ c.classList.add('flash'); const g=c.querySelector('.gst'); if(g){g.focus();g.select();} } });
-}
 
 function updatePos(){
   const endP=Math.min(start+pageSize(),view.length);
