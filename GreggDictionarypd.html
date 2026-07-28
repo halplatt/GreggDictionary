@@ -435,14 +435,32 @@ V2025.0619.0245pm add show hide dictionaries button
 document.addEventListener('DOMContentLoaded', function() {
 	const dictClasses = ['ann', 'pre', 'sim', 'djs', 'cen', 's90', 'all'];
   const btn = document.getElementById('toggleDictBtn');
+  const sharedLinksHost = document.getElementById('shared-links');
   let showingAll = false;
 	initializeLastButton();
 
-	function setDisplayForClass(cls, visible) {
-		document.querySelectorAll('.' + cls).forEach(el => {
+	function setDisplayForClass(selector, cls, visible, elementDisplay, wrapperDisplay) {
+		document.querySelectorAll(selector + '.' + cls).forEach(el => {
 			// Toggle the element itself
-			el.style.setProperty('display', visible ? 'block' : 'none', 'important');
+			el.style.setProperty('display', visible ? elementDisplay : 'none', 'important');
 			// Also toggle its nearest wrapper to avoid empty shells
+			const parentInner = el.closest('.inner');
+			if (parentInner) {
+				parentInner.style.setProperty('display', visible ? wrapperDisplay : 'none', 'important');
+			}
+		});
+	}
+
+	function setButtonDisplayForClass(cls, visible) {
+		setDisplayForClass('button', cls, visible, 'inline-block', 'inline-block');
+	}
+
+	function setSharedLinkDisplayForClass(cls, visible) {
+		if (!sharedLinksHost) {
+			return;
+		}
+		sharedLinksHost.querySelectorAll('a.' + cls).forEach(el => {
+			el.style.setProperty('display', visible ? 'inline' : 'none', 'important');
 			const parentInner = el.closest('.inner');
 			if (parentInner) {
 				parentInner.style.setProperty('display', visible ? 'inline-block' : 'none', 'important');
@@ -450,11 +468,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
+	function applySharedLinkVisibility() {
+		dictClasses.forEach(cls => {
+			setSharedLinkDisplayForClass(cls, public_domain_only === 'pd' ? ['ann', 'pre'].includes(cls) : true);
+		});
+	}
+
  function showPdDictOnly() {
 		// Show only ann and pre items; hide others including 'all'
 		dictClasses.forEach(cls => {
-			setDisplayForClass(cls, ['ann', 'pre'].includes(cls));
+			setButtonDisplayForClass(cls, ['ann', 'pre'].includes(cls));
 		});
+		applySharedLinkVisibility();
     btn.style.setProperty('display', 'none', 'important'); //no button when showing public domain dictionaries
     showingAll = false;
   }
@@ -462,14 +487,14 @@ document.addEventListener('DOMContentLoaded', function() {
   function showCurrentDict(currentDictOverride) {
 		const currentDict = currentDictOverride || getCurrentClass() || initialDict; // e.g., "ann"
 		dictClasses.forEach(cls => {
-			setDisplayForClass(cls, cls === currentDict);
+			setButtonDisplayForClass(cls, cls === currentDict);
 		});
     btn.textContent = "show all dictionaries";
     showingAll = false;
   }
 
   function showAllDicts() {
-		dictClasses.forEach(cls => setDisplayForClass(cls, true));
+		dictClasses.forEach(cls => setButtonDisplayForClass(cls, true));
     btn.textContent = "show fewer dictionaries";
     showingAll = true;
   }
@@ -506,26 +531,22 @@ document.addEventListener('DOMContentLoaded', function() {
 	const currentDict = initialDict || getCurrentClass(); // e.g., "ann"
 	if (public_domain_only === 'pd') {
 		showPdDictOnly();
-	} else
+	} else {
+		applySharedLinkVisibility();
+	}
+	if (public_domain_only !== 'pd')
 	if (currentDict) {
 		showCurrentDict(currentDict);
 	} else {
 		showAllDicts();			
 	}
 
-	// If shared links or other content is injected later (e.g., data-include), reapply current view
-	const shared = document.getElementById('shared-links');
-	if (shared) {
+	// If shared links are injected later, only reapply the shared-links visibility rules.
+	if (sharedLinksHost) {
 		const mo = new MutationObserver(() => {
-			if (public_domain_only === 'pd') {
-				showPdDictOnly();
-			} else if (showingAll) {
-				showAllDicts();
-			} else {
-				showFewerDicts();
-			}
+			applySharedLinkVisibility();
 		});
-		mo.observe(shared, { childList: true, subtree: true });
+		mo.observe(sharedLinksHost, { childList: true, subtree: true });
 	}
 });
 
