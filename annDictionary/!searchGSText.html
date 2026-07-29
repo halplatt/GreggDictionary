@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2026.0729@12:27am added notDictionary. Smart logic to display showNotes sheckbox only if any notes exist in the json
     //V2025.0923@2:00pm performSeach when searchtype changes
     //V2025.0904@11:00am Ignore digits unless input contains digits    
     //V2025.0903@01:00pm add \w button
@@ -20,7 +21,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0923@2:00pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0729@12:27am'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -66,6 +67,15 @@
             cursor: pointer;
         }
         .reference-btn:hover { background-color: #5a6268; border-color:#545b62; }
+        .show-notes-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #333;
+            margin-left: 6px;
+            user-select: none;
+        }
         .reference-tooltip {
             position: absolute;
             display: none;
@@ -311,6 +321,10 @@
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
              <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
              <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+                 <label class="show-notes-toggle" id="showNotesToggle" for="showNotes">
+                     <input type="checkbox" id="showNotes">
+                     show notes
+                 </label>
              <div id="referenceTooltip" class="reference-tooltip" role="dialog" aria-label="G-S-T Quick Reference" aria-hidden="true" data-include="../annDictionary/!searchGSText(tooltip).html">
                 <div style="font-size:12px;color:#666;">Loading reference…</div>
              </div>
@@ -322,6 +336,7 @@
                 <th>Text</th>
                 <th>Outline</th>
                 <th>GST</th>
+                <th class="notes-column">Notes</th>
             </tr>
         </thead>
         <tbody>
@@ -338,8 +353,12 @@
             .then(response => response.json())
             .then(jsonData => {
                 dataGST = jsonData;
+                initializeNotesToggleFromData();
             })
-            .catch(error => console.error('Error loading JSON:', error));
+            .catch(error => {
+                console.error('Error loading JSON:', error);
+                initializeNotesToggleFromData();
+            });
 
      
         let dataRef = [];
@@ -365,6 +384,29 @@
             }
   
         // Function to display results in the table
+        function updateNotesVisibility() {
+            const showNotesEl = document.getElementById('showNotes');
+            const shouldShow = !!(showNotesEl && showNotesEl.checked);
+            document.querySelectorAll('.notes-column').forEach(el => {
+                el.style.display = shouldShow ? 'table-cell' : 'none';
+            });
+        }
+
+        function initializeNotesToggleFromData() {
+            const showNotesEl = document.getElementById('showNotes');
+            const showNotesToggleEl = document.getElementById('showNotesToggle');
+            if (!showNotesEl || !showNotesToggleEl) return;
+
+            const hasNotesValues = Array.isArray(dataGST) && dataGST.some(entry => {
+                if (!entry || entry.notes === undefined || entry.notes === null) return false;
+                return String(entry.notes).trim().length > 0;
+            });
+
+            showNotesToggleEl.style.display = hasNotesValues ? 'inline-flex' : 'none';
+            showNotesEl.checked = hasNotesValues;
+            updateNotesVisibility();
+        }
+
         function displayResults(results, searchTerm = '', searchType = '') {
             const tableBody = document.querySelector('#resultsTable tbody');
             tableBody.innerHTML = ''; // Clear previous results
@@ -379,9 +421,12 @@
                 const textCell = document.createElement('td');
                 const pageCell = document.createElement('td'); // Outline column
                 const gstCell = document.createElement('td');
+                const notesCell = document.createElement('td');
+                notesCell.className = 'notes-column';
 
                 textCell.textContent = entry.text || ''; // Handle missing text
                 gstCell.textContent = entry.gst || ''; // Handle missing gst
+                notesCell.textContent = entry.notes || ''; // Handle missing notes
 
                 // Call searchRefJson and get the page value
                 // Call imageContainer and append the resulting div to pageCell
@@ -392,6 +437,7 @@
                 row.appendChild(textCell);
                 row.appendChild(pageCell);
                 row.appendChild(gstCell);
+                row.appendChild(notesCell);
                 //add click event to row
                 row.addEventListener('click', function() {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
@@ -400,6 +446,8 @@
             });
                 tableBody.appendChild(row);
             });
+
+            updateNotesVisibility();
             
             // Single consolidated summary message
             const summaryDiv = document.getElementById('searchSummary');
@@ -866,6 +914,15 @@
                 updateSearchTypeRadiosFromInput();
             } catch(e) { /* ignore */ }
         })();
+
+        (function initShowNotesToggle(){
+            try {
+                const showNotesEl = document.getElementById('showNotes');
+                if (!showNotesEl) return;
+                showNotesEl.addEventListener('change', updateNotesVisibility);
+                initializeNotesToggleFromData();
+            } catch (e) { /* ignore */ }
+        })();
         // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
         (function attachMaxResultsEnter(){
             try {
@@ -944,7 +1001,7 @@
                 } else if (globalGsd === 'pre') {
                     aboutText.innerHTML = "<p><i><b>Images from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>";
                 } else {
-                    aboutText.innerHTML = "<p><b>Images Source:</b> Gregg Shorthand reference materials.</p>";
+                    aboutText.innerHTML = "<p><b>Images from</b> <i>Dictionary DJS,Gregg Shorthand </i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>";
                 }
                 footer.appendChild(aboutText);
                 footer.dataset.populated = '1';
