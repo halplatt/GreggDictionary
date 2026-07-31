@@ -7,7 +7,7 @@
     {
         "text": "abdomen",
         "gst": "a-b-d-o-mn",
-        "notes": "(#245, 156)"
+        "notes": "(#245, 156) "
     },
     {
         "text": "abdominal",
@@ -42,7 +42,7 @@
     {
         "text": "about",
         "gst": "a-b",
-        "notes": "(#66, 54)"
+        "notes": "(#66, 54) ../notManual/!searchPages.html?p068&tab=man2&disp=manual"
     },
     {
         "text": "about it",
@@ -811,7 +811,7 @@
     },
     {
         "text": "A.M.",
-        "gst": "a[intersectd]m",
+        "gst": "a-/-m",
         "notes": "(#164, 122)"
     },
     {
@@ -851,12 +851,12 @@
     },
     {
         "text": "amplifier",
-        "gst": "a-m-p-l-f-ia-r",
+        "gst": "a-m-p-l-f-ie-r",
         "notes": "(Essentials Electronics Terms)"
     },
     {
         "text": "amplifiers",
-        "gst": "a-m-p-l-f-ia-r-s2",
+        "gst": "a-m-p-l-f-ie-r-s2",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -891,12 +891,12 @@
     },
     {
         "text": "and",
-        "gst": "nd",
+        "gst": "nt",
         "notes": "(#100, 76)"
     },
     {
         "text": "and are",
-        "gst": "nd-/r",
+        "gst": "nt/r",
         "notes": "(#182, 126, 3)"
     },
     {
@@ -1091,7 +1091,7 @@
     },
     {
         "text": "appendix",
-        "gst": "a-p-e-nd-e-k-s",
+        "gst": "a-p-e-nt-e-k-s",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
@@ -1111,12 +1111,12 @@
     },
     {
         "text": "appliance",
-        "gst": "a-p-l-ia-n-s2",
+        "gst": "a-p-l-ie-n-s2",
         "notes": "(#151, 109)"
     },
     {
         "text": "appliances",
-        "gst": "a-p-l-ia-n-s2-s",
+        "gst": "a-p-l-ie-n-s2-s",
         "notes": "(#165, 6)"
     },
     {
@@ -1301,7 +1301,7 @@
     },
     {
         "text": "around",
-        "gst": "a-r-a-u-nd",
+        "gst": "a-r-a-u-nt",
         "notes": "(#130, 97, Hearing)"
     },
     {
@@ -1351,7 +1351,7 @@
     },
     {
         "text": "arteriosclerosis",
-        "gst": "a-r-t-e-r[intersectd]s",
+        "gst": "a-r-t-e-r-/-s",
         "notes": "(Essentials Medical Terms)"
     },
     {
@@ -1426,12 +1426,12 @@
     },
     {
         "text": "as you might",
-        "gst": "a-s-u-m-i/-t",
+        "gst": "a-s-u-m-i/t",
         "notes": "(#131, 99, Tooth)"
     },
     {
         "text": "ascend",
-        "gst": "a-s-e-nd",
+        "gst": "a-s-e-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -1501,7 +1501,7 @@
     },
     {
         "text": "Associated Press",
-        "gst": "a[intersectd]p",
+        "gst": "a-/-p",
         "notes": "(#164, 122)"
     },
     {
@@ -1766,7 +1766,7 @@
     },
     {
         "text": "awakened",
-        "gst": "h-u-a-k-nd",
+        "gst": "h-u-a-k-nt",
         "notes": "(#165, 9)"
     },
     {
@@ -1906,7 +1906,7 @@
     },
     {
         "text": "band",
-        "gst": "b-a-nd",
+        "gst": "b-a-nt",
         "notes": "(#96, 73)"
     },
     {
@@ -2191,7 +2191,7 @@
     },
     {
         "text": "behind",
-        "gst": "b-h-i-nd",
+        "gst": "b-h-i-nt",
         "notes": "(#194, 134, Yesterday & Tomorrow)"
     },
     {
@@ -2301,7 +2301,7 @@
     },
     {
         "text": "beyond",
-        "gst": "b-o-nd",
+        "gst": "b-o-nt",
         "notes": "(#186, 129, 4)"
     },
     {
@@ -2366,27 +2366,27 @@
     },
     {
         "text": "bind",
-        "gst": "b-i-nd",
+        "gst": "b-i-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "binder",
-        "gst": "b-i-nd-r",
+        "gst": "b-i-nt-r",
         "notes": "(Essentials Insurance Terms)"
     },
     {
         "text": "bindery",
-        "gst": "b-i-nd-r-e",
+        "gst": "b-i-nt-r-e",
         "notes": "(#108, 83, 5)"
     },
     {
         "text": "binds",
-        "gst": "b-i-nd-s2",
+        "gst": "b-i-nt-s2",
         "notes": "(#108, 83, 5)"
     },
     {
         "text": "biopsy",
-        "gst": "b-ia-p-s2-e",
+        "gst": "b-ie-p-s2-e",
         "notes": "(Essentials Medical Terms)"
     },
     {
@@ -2466,7 +2466,7 @@
     },
     {
         "text": "blinded",
-        "gst": "b-l-i-nd-td",
+        "gst": "b-l-i-nt-td",
         "notes": "(#135, 102, Smoking concl.)"
     },
     {
@@ -2481,7 +2481,7 @@
     },
     {
         "text": "blood count",
-        "gst": "b[intersectd]k-a-u-nt",
+        "gst": "b-/-k-a-u-nt",
         "notes": "(Essentials Medical Terms)"
     },
     {
@@ -2501,7 +2501,7 @@
     },
     {
         "text": "blunders",
-        "gst": "b-l-nd-r-s2",
+        "gst": "b-l-nt-r-s2",
         "notes": "(#193, 134, Yesterday & Tomorrow)"
     },
     {
@@ -2516,7 +2516,7 @@
     },
     {
         "text": "board of directors",
-        "gst": "b[intersectd]d-r",
+        "gst": "b-/-d-r",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -2591,7 +2591,7 @@
     },
     {
         "text": "bonds",
-        "gst": "b-o-nd-s2",
+        "gst": "b-o-nt-s2",
         "notes": "(#146)"
     },
     {
@@ -2676,7 +2676,7 @@
     },
     {
         "text": "bound",
-        "gst": "b-a-u-nd",
+        "gst": "b-a-u-nt",
         "notes": "(#183, 127, 2)"
     },
     {
@@ -2731,12 +2731,12 @@
     },
     {
         "text": "brand",
-        "gst": "b-r-a-nd",
+        "gst": "b-r-a-nt",
         "notes": "(#186, 129, 4)"
     },
     {
         "text": "brand-new",
-        "gst": "b-r-a-nd=n-u",
+        "gst": "b-r-a-nt=n-u",
         "notes": "(#188, 130, The store)"
     },
     {
@@ -2991,7 +2991,7 @@
     },
     {
         "text": "burned",
-        "gst": "b-r-nd",
+        "gst": "b-r-nt",
         "notes": "(#196, 136, Dissertation)"
     },
     {
@@ -3196,7 +3196,7 @@
     },
     {
         "text": "canned music",
-        "gst": "k-a-nd/m-u-s-e-k",
+        "gst": "k-a-nt/m-u-s-e-k",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "text": "Chamber of Commerce",
-        "gst": "ch[intersectd]k",
+        "gst": "ch-/-k",
         "notes": "(#164, 122)"
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "text": "chandelier",
-        "gst": "sh-a-nd-l-e-r",
+        "gst": "sh-a-nt-l-e-r",
         "notes": "(#186, 129, 4)"
     },
     {
@@ -3636,7 +3636,7 @@
     },
     {
         "text": "chattel mortgage",
-        "gst": "ch[intersectd]m-o-r-g-j",
+        "gst": "ch-/-m-o-r-g-j",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -3891,7 +3891,7 @@
     },
     {
         "text": "cleaned",
-        "gst": "k-l-e-nd",
+        "gst": "k-l-e-nt",
         "notes": "(#98, 75)"
     },
     {
@@ -3956,12 +3956,12 @@
     },
     {
         "text": "client",
-        "gst": "k-l-ia-nt",
+        "gst": "k-l-ie-nt",
         "notes": "(Essentials Legal Terms)"
     },
     {
         "text": "clientele",
-        "gst": "k-l-ia-nt-e-l",
+        "gst": "k-l-ie-nt-e-l",
         "notes": "(Essentials General Business Terms)"
     },
     {
@@ -4211,7 +4211,7 @@
     },
     {
         "text": "combined",
-        "gst": "k-b-i-nd",
+        "gst": "k-b-i-nt",
         "notes": "(#129, 97, Hearing)"
     },
     {
@@ -4376,7 +4376,7 @@
     },
     {
         "text": "complained",
-        "gst": "k-p-l-a-nd",
+        "gst": "k-p-l-a-nt",
         "notes": "(#129, 97, Hearing)"
     },
     {
@@ -4436,12 +4436,12 @@
     },
     {
         "text": "compound",
-        "gst": "k-p-a-u-nd",
+        "gst": "k-p-a-u-nt",
         "notes": "(#146)"
     },
     {
         "text": "compounded",
-        "gst": "k-p-a-u-nd-td",
+        "gst": "k-p-a-u-nt-td",
         "notes": "(#146)"
     },
     {
@@ -4516,7 +4516,7 @@
     },
     {
         "text": "concerned",
-        "gst": "k-s2-e-r-nd",
+        "gst": "k-s2-e-r-nt",
         "notes": "(#128, 96, Alert)"
     },
     {
@@ -4816,7 +4816,7 @@
     },
     {
         "text": "control tower",
-        "gst": "k-t-r-o-l[intersectd]t",
+        "gst": "k-t-r-o-l-/-t",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -5206,7 +5206,7 @@
     },
     {
         "text": "crescendo",
-        "gst": "k-r-e-sh-nd-o",
+        "gst": "k-r-e-sh-nt-o",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -5576,7 +5576,7 @@
     },
     {
         "text": "debentures",
-        "gst": "d-b-e-nd-r-s2",
+        "gst": "d-b-e-nt-r-s2",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -5701,7 +5701,7 @@
     },
     {
         "text": "defendant",
-        "gst": "d-f-e-nd-nt",
+        "gst": "d-f-e-nt-nt",
         "notes": "(Essentials Legal Terms)"
     },
     {
@@ -5781,22 +5781,22 @@
     },
     {
         "text": "depend",
-        "gst": "d-p-e-nd",
+        "gst": "d-p-e-nt",
         "notes": "(#136, 103, 5)"
     },
     {
         "text": "dependable",
-        "gst": "d-p-e-nd-b",
+        "gst": "d-p-e-nt-b",
         "notes": "(#165, 14)"
     },
     {
         "text": "dependent",
-        "gst": "d-p-e-nd-nt",
+        "gst": "d-p-e-nt-nt",
         "notes": "(Essentials Insurance Terms)"
     },
     {
         "text": "depends",
-        "gst": "d-p-e-nd-s2",
+        "gst": "d-p-e-nt-s2",
         "notes": "(#165, 14)"
     },
     {
@@ -5826,7 +5826,7 @@
     },
     {
         "text": "descend",
-        "gst": "d-s-e-nd",
+        "gst": "d-s-e-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -6006,32 +6006,32 @@
     },
     {
         "text": "diabetes",
-        "gst": "d-ia-b-t-e-s2",
+        "gst": "d-ie-b-t-e-s2",
         "notes": "(Essentials Medical Terms)"
     },
     {
         "text": "diagnosis",
-        "gst": "d-ia-g-n-o-s2-s",
+        "gst": "d-ie-g-n-o-s2-s",
         "notes": "(#151, 109)"
     },
     {
         "text": "dial",
-        "gst": "d-ia-l",
+        "gst": "d-ie-l",
         "notes": "(#151, 109)"
     },
     {
         "text": "dialogue",
-        "gst": "d-ia-l-o-g",
+        "gst": "d-ie-l-o-g",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
         "text": "diaphragm",
-        "gst": "d-ia-f-r-a-m",
+        "gst": "d-ie-f-r-a-m",
         "notes": "(Essentials Electronic Terms)"
     },
     {
         "text": "diary",
-        "gst": "d-ia-r-e",
+        "gst": "d-ie-r-e",
         "notes": "(#151, 109)"
     },
     {
@@ -6071,17 +6071,17 @@
     },
     {
         "text": "diet",
-        "gst": "d-ia-t",
+        "gst": "d-ie-t",
         "notes": "(#151, 109)"
     },
     {
         "text": "dieted",
-        "gst": "d-ia-td",
+        "gst": "d-ie-td",
         "notes": "(#165, 5)"
     },
     {
         "text": "diets",
-        "gst": "d-ia-t-s2",
+        "gst": "d-ie-t-s2",
         "notes": "(#165, 5)"
     },
     {
@@ -6146,7 +6146,7 @@
     },
     {
         "text": "diode",
-        "gst": "d-ia-d",
+        "gst": "d-ie-d",
         "notes": "(Essentials appendix)"
     },
     {
@@ -6796,7 +6796,7 @@
     },
     {
         "text": "Dyer",
-        "gst": "d-ia-r",
+        "gst": "d-ie-r",
         "notes": "(#180, 126, 1)"
     },
     {
@@ -6836,7 +6836,7 @@
     },
     {
         "text": "editor-in-chief",
-        "gst": "e-d[intersectd]ch",
+        "gst": "e-d-/-ch",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
@@ -6876,7 +6876,7 @@
     },
     {
         "text": "earned",
-        "gst": "e-r-nd",
+        "gst": "e-r-nt",
         "notes": "(#154, 112, Traits)"
     },
     {
@@ -6936,7 +6936,7 @@
     },
     {
         "text": "eastbound",
-        "gst": "e-s-t-b-a-u-nd",
+        "gst": "e-s-t-b-a-u-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -7256,27 +7256,27 @@
     },
     {
         "text": "end",
-        "gst": "e-nd",
+        "gst": "e-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "endless",
-        "gst": "e-nd-l-e-s2",
+        "gst": "e-nt-l-e-s2",
         "notes": "(#190, 132, Only a teacher)"
     },
     {
         "text": "endorsement",
-        "gst": "e-nd-o-r-s2-m",
+        "gst": "e-nt-o-r-s2-m",
         "notes": "(Essentials Insurance Terms)"
     },
     {
         "text": "endorser",
-        "gst": "e-nd-o-r-s2-e-r",
+        "gst": "e-nt-o-r-s2-e-r",
         "notes": "(Essentials Banking Terms)"
     },
     {
         "text": "endowment",
-        "gst": "e-nd-a-u-m",
+        "gst": "e-nt-a-u-m",
         "notes": "(Essentials Insurance Terms)"
     },
     {
@@ -7461,27 +7461,27 @@
     },
     {
         "text": "equip",
-        "gst": "e-k-e_p",
+        "gst": "e-k-w-ep",
         "notes": "(#78, 65, 7)"
     },
     {
         "text": "equipped",
-        "gst": "e-k-e_p-t",
+        "gst": "e-k-w-ep-t",
         "notes": "(#78, 65, 7)"
     },
     {
         "text": "equipment",
-        "gst": "e-k-e_p-m",
+        "gst": "e-k-w-ep-m",
         "notes": "(#136, 103, 10)"
     },
     {
         "text": "equips",
-        "gst": "e-k-e_p-s2",
+        "gst": "e-k-w-ep-s2",
         "notes": "(#78, 65, 7)"
     },
     {
         "text": "equitable",
-        "gst": "e-k-e_t-b",
+        "gst": "e-k-w-et-b",
         "notes": "(Essentials General Business Terms)"
     },
     {
@@ -7876,17 +7876,17 @@
     },
     {
         "text": "expend",
-        "gst": "e-s2-p-e-nd",
+        "gst": "e-s2-p-e-nt",
         "notes": "(#136, 103, 5)"
     },
     {
         "text": "expenditure",
-        "gst": "e-s2-p-e-nd-e-t-r",
+        "gst": "e-s2-p-e-nt-e-t-r",
         "notes": "(#223, 146, The other 98)"
     },
     {
         "text": "expenditures",
-        "gst": "e-s2-p-e-nd-e-t-r-s2",
+        "gst": "e-s2-p-e-nt-e-t-r-s2",
         "notes": "(Essentials General Business Terms)"
     },
     {
@@ -7951,7 +7951,7 @@
     },
     {
         "text": "explained",
-        "gst": "e-s2-p-l-a-nd",
+        "gst": "e-s2-p-l-a-nt",
         "notes": "(#134, 102, Smoking concl.)"
     },
     {
@@ -8291,7 +8291,7 @@
     },
     {
         "text": "fastened",
-        "gst": "f-a-s-nd",
+        "gst": "f-a-s-nt",
         "notes": "(#133, 100, Shock)"
     },
     {
@@ -8371,7 +8371,7 @@
     },
     {
         "text": "Federal Reserve Bank",
-        "gst": "f-r[intersectd]b",
+        "gst": "f-r-/-b",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -8541,17 +8541,17 @@
     },
     {
         "text": "find",
-        "gst": "f-i-nd",
+        "gst": "f-i-nt",
         "notes": "(#96, 73, Lark)"
     },
     {
         "text": "finding",
-        "gst": "f-i-nd-h",
+        "gst": "f-i-nt-h",
         "notes": "(#97, 73, Lark)"
     },
     {
         "text": "finds",
-        "gst": "f-i-nd-s2",
+        "gst": "f-i-nt-s2",
         "notes": "(#223, 146, The other 98)"
     },
     {
@@ -8746,7 +8746,7 @@
     },
     {
         "text": "fond",
-        "gst": "f-o-nd",
+        "gst": "f-o-nt",
         "notes": "(#196, 136, Dissertation)"
     },
     {
@@ -8956,17 +8956,17 @@
     },
     {
         "text": "found",
-        "gst": "f-a-u-nd",
+        "gst": "f-a-u-nt",
         "notes": "(#124, 92, Hard)"
     },
     {
         "text": "foundation",
-        "gst": "f-nd-sh",
+        "gst": "f-nt-sh",
         "notes": "(#154, 112)"
     },
     {
         "text": "foundry",
-        "gst": "f-a-u-nd-r-e",
+        "gst": "f-a-u-nt-r-e",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
@@ -9041,7 +9041,7 @@
     },
     {
         "text": "frequency modulation",
-        "gst": "f[intersectd]m",
+        "gst": "f-/-m",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -9061,22 +9061,22 @@
     },
     {
         "text": "friend",
-        "gst": "f-r-e-nd",
+        "gst": "f-r-e-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "friendly",
-        "gst": "f-r-e-nd-e",
+        "gst": "f-r-e-nt-e",
         "notes": "(#108, 83, 3)"
     },
     {
         "text": "friends",
-        "gst": "f-r-e-nd-s2",
+        "gst": "f-r-e-nt-s2",
         "notes": "(#97, 73, Lark)"
     },
     {
         "text": "friendships",
-        "gst": "f-r-e-nd-sh-e-p-s2",
+        "gst": "f-r-e-nt-sh-e-p-s2",
         "notes": "(#119, 87, Ten)"
     },
     {
@@ -9121,7 +9121,7 @@
     },
     {
         "text": "frowned",
-        "gst": "f-r-a-u-nd",
+        "gst": "f-r-a-u-nt",
         "notes": "(#101, 76, Fast)"
     },
     {
@@ -9181,12 +9181,12 @@
     },
     {
         "text": "fundamental",
-        "gst": "f-nd-a-m-l",
+        "gst": "f-nt-a-m-l",
         "notes": "(#123, #91)"
     },
     {
         "text": "funds",
-        "gst": "f-nd-s2",
+        "gst": "f-nt-s2",
         "notes": "(#254)"
     },
     {
@@ -9251,7 +9251,7 @@
     },
     {
         "text": "gallbladder",
-        "gst": "g-a-l/[interceptd]/b",
+        "gst": "g-a-l-/-b",
         "notes": "(Essentials Medical Terms)"
     },
     {
@@ -9521,7 +9521,7 @@
     },
     {
         "text": "governed",
-        "gst": "g-o-v-r-nd",
+        "gst": "g-o-v-r-nt",
         "notes": "(#277, 172)"
     },
     {
@@ -9606,12 +9606,12 @@
     },
     {
         "text": "grandfather",
-        "gst": "g-r-a-nd-f-a-th2-r",
+        "gst": "g-r-a-nt-f-a-th2-r",
         "notes": "(#219, 144)"
     },
     {
         "text": "grandson",
-        "gst": "g-r-a-nd-s-n",
+        "gst": "g-r-a-nt-s-n",
         "notes": "(#220, 144)"
     },
     {
@@ -9706,7 +9706,7 @@
     },
     {
         "text": "grind",
-        "gst": "g-r-i-nd",
+        "gst": "g-r-i-nt",
         "notes": "(#221,144, The enterpriser)"
     },
     {
@@ -9736,12 +9736,12 @@
     },
     {
         "text": "ground",
-        "gst": "g-r-a-u-nd",
+        "gst": "g-r-a-u-nt",
         "notes": "(#146)"
     },
     {
         "text": "grounds",
-        "gst": "g-r-a-u-nd-s2",
+        "gst": "g-r-a-u-nt-s2",
         "notes": "(#237, 150, In the afternoon)"
     },
     {
@@ -9901,37 +9901,37 @@
     },
     {
         "text": "hand",
-        "gst": "h-a-nd",
+        "gst": "h-a-nt",
         "notes": "(#97, 73, Lark)"
     },
     {
         "text": "handed",
-        "gst": "h-a-nd-d",
+        "gst": "h-a-nt-d",
         "notes": "(#127, 95, Wasted)"
     },
     {
         "text": "handfuls",
-        "gst": "h-a-nd-f-s",
+        "gst": "h-a-nt-f-s",
         "notes": "(#196, 136, Some of the)"
     },
     {
         "text": "handle",
-        "gst": "h-a-nd-l",
+        "gst": "h-a-nt-l",
         "notes": "(#108, 83, 6)"
     },
     {
         "text": "handled",
-        "gst": "h-a-nd-ld",
+        "gst": "h-a-nt-ld",
         "notes": "(#197, 136, At length)"
     },
     {
         "text": "handling",
-        "gst": "h-a-nd-l-h",
+        "gst": "h-a-nt-l-h",
         "notes": "(#155, 113, Art)"
     },
     {
         "text": "hands",
-        "gst": "h-a-nd-s2",
+        "gst": "h-a-nt-s2",
         "notes": "(#108, 83, 6)"
     },
     {
@@ -9946,7 +9946,7 @@
     },
     {
         "text": "happened",
-        "gst": "h-a-p-e-nd",
+        "gst": "h-a-p-e-nt",
         "notes": "(#109, 84, Green)"
     },
     {
@@ -10136,7 +10136,7 @@
     },
     {
         "text": "he finds",
-        "gst": "h-e-f-i-nd-s2",
+        "gst": "h-e-f-i-nt-s2",
         "notes": "(#191, 132, It is amazing)"
     },
     {
@@ -10341,7 +10341,7 @@
     },
     {
         "text": "headband",
-        "gst": "h-e-d-b-a-nd",
+        "gst": "h-e-d-b-a-nt",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
@@ -10356,7 +10356,7 @@
     },
     {
         "text": "head wind",
-        "gst": "h-e-d/u-nd",
+        "gst": "h-e-d/u-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -10896,12 +10896,12 @@
     },
     {
         "text": "hundred",
-        "gst": "h-u-nd-r-e-d",
+        "gst": "h-u-nt-r-e-d",
         "notes": "(#153, 111, Value concl.)"
     },
     {
         "text": "hundreds",
-        "gst": "h-u-nd-r-e-d-s2",
+        "gst": "h-u-nt-r-e-d-s2",
         "notes": "(#153, 111, Value concl.)"
     },
     {
@@ -10951,7 +10951,7 @@
     },
     {
         "text": "husband",
-        "gst": "h-u-s2-b-a-nd",
+        "gst": "h-u-s2-b-a-nt",
         "notes": "(#243, 154, Few good days)"
     },
     {
@@ -11526,7 +11526,7 @@
     },
     {
         "text": "inclined",
-        "gst": "n-k-l-i-nd",
+        "gst": "n-k-l-i-nt",
         "notes": "(#189, 131, 5)"
     },
     {
@@ -11601,52 +11601,52 @@
     },
     {
         "text": "index",
-        "gst": "e-nd-e-k-s",
+        "gst": "e-nt-e-k-s",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
         "text": "Indian",
-        "gst": "e-nd-ea-n",
+        "gst": "e-nt-ea-n",
         "notes": "(#202)"
     },
     {
         "text": "indicated",
-        "gst": "e-nd-e-k-a-td",
+        "gst": "e-nt-e-k-a-td",
         "notes": "(#104, 79, Loyalty)"
     },
     {
         "text": "indictment",
-        "gst": "e-nd-i-t-m",
+        "gst": "e-nt-i-t-m",
         "notes": "(Essentials Legal Terms)"
     },
     {
         "text": "indiscriminately",
-        "gst": "e-nd-s2-k-r-e-mn-a-t-e",
+        "gst": "e-nt-s2-k-r-e-mn-a-t-e",
         "notes": "(#236, 150, I cannot)"
     },
     {
         "text": "induce",
-        "gst": "e-nd-u-s",
+        "gst": "e-nt-u-s",
         "notes": "(#161, 119)"
     },
     {
         "text": "inductance",
-        "gst": "e-nd-u-k-tn-s2",
+        "gst": "e-nt-u-k-tn-s2",
         "notes": "(Essentials Electronic Terms)"
     },
     {
         "text": "inductive",
-        "gst": "e-nd-u-k-t-v",
+        "gst": "e-nt-u-k-t-v",
         "notes": "(Essentials Electronic Terms)"
     },
     {
         "text": "industrious",
-        "gst": "e-nd-u-s-t-r-u-s",
+        "gst": "e-nt-u-s-t-r-u-s",
         "notes": "(#160, 118)"
     },
     {
         "text": "industry",
-        "gst": "e-nd-u-s-t-r-e",
+        "gst": "e-nt-u-s-t-r-e",
         "notes": "(#111, 84, Green)"
     },
     {
@@ -11831,7 +11831,7 @@
     },
     {
         "text": "instrument landing",
-        "gst": "n-s-t-r-u-m/l-a-nd-h",
+        "gst": "n-s-t-r-u-m/l-a-nt-h",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -12206,7 +12206,7 @@
     },
     {
         "text": "joined",
-        "gst": "j-o-e-nd",
+        "gst": "j-o-e-nt",
         "notes": "(#96, 73)"
     },
     {
@@ -12216,7 +12216,7 @@
     },
     {
         "text": "joint account",
-        "gst": "j[intersectd]a-k",
+        "gst": "j-/-a-k",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -12376,17 +12376,17 @@
     },
     {
         "text": "kind",
-        "gst": "k-i-nd",
+        "gst": "k-i-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "kindest",
-        "gst": "k-i-nd-e-s2-t",
+        "gst": "k-i-nt-e-s2-t",
         "notes": "(#192, 133, 5)"
     },
     {
         "text": "kindly",
-        "gst": "k-i-nd-e",
+        "gst": "k-i-nt-e",
         "notes": "(#160, 118, Dominoes)"
     },
     {
@@ -12536,17 +12536,17 @@
     },
     {
         "text": "land",
-        "gst": "l-a-nd",
+        "gst": "l-a-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "landed",
-        "gst": "l-a-nd-td",
+        "gst": "l-a-nt-td",
         "notes": "(#248, 158)"
     },
     {
         "text": "landing",
-        "gst": "l-a-nd-h",
+        "gst": "l-a-nt-h",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -12706,7 +12706,7 @@
     },
     {
         "text": "learned",
-        "gst": "l-e-r-nd",
+        "gst": "l-e-r-nt",
         "notes": "(#96, 73, Lark)"
     },
     {
@@ -12836,7 +12836,7 @@
     },
     {
         "text": "lend",
-        "gst": "l-e-nd",
+        "gst": "l-e-nt",
         "notes": "(#97, 73, Lark)"
     },
     {
@@ -12916,7 +12916,7 @@
     },
     {
         "text": "liason",
-        "gst": "l-ia-s2-o-n",
+        "gst": "l-ie-s2-o-n",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -13066,7 +13066,7 @@
     },
     {
         "text": "liquid",
-        "gst": "l-e-k-e_d",
+        "gst": "l-e-k-w-ed",
         "notes": "(#75, 63)"
     },
     {
@@ -13076,7 +13076,7 @@
     },
     {
         "text": "liquids",
-        "gst": "l-e-k-e_d-s2",
+        "gst": "l-e-k-w-ed-s2",
         "notes": "(#139, 104, Medicine)"
     },
     {
@@ -13091,7 +13091,7 @@
     },
     {
         "text": "listened",
-        "gst": "l-e-s2-nd",
+        "gst": "l-e-s2-nt",
         "notes": "(#190, 132, He may)"
     },
     {
@@ -13671,7 +13671,7 @@
     },
     {
         "text": "mankind",
-        "gst": "m-a-n-k-i-nd",
+        "gst": "m-a-n-k-i-nt",
         "notes": "(#195, 136, Dissertation)"
     },
     {
@@ -13756,7 +13756,7 @@
     },
     {
         "text": "market value",
-        "gst": "m-a-r-k-e-t[intersectd]v",
+        "gst": "m-a-r-k-e-t-/-v",
         "notes": "(Essentials Banking Terms)"
     },
     {
@@ -14231,7 +14231,7 @@
     },
     {
         "text": "mind",
-        "gst": "m-i-nd",
+        "gst": "m-i-nt",
         "notes": "(#96, 73)"
     },
     {
@@ -15151,7 +15151,7 @@
     },
     {
         "text": "northbound",
-        "gst": "n-o-r-th2-b-a-u-nd",
+        "gst": "n-o-r-th2-b-a-u-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -15941,7 +15941,7 @@
     },
     {
         "text": "owned",
-        "gst": "o-nd",
+        "gst": "o-nt",
         "notes": "(#96, 73, Lark)"
     },
     {
@@ -15956,7 +15956,7 @@
     },
     {
         "text": "P.M.",
-        "gst": "p[intersectd]m",
+        "gst": "p-/-m",
         "notes": "(#164, 122)"
     },
     {
@@ -16116,7 +16116,7 @@
     },
     {
         "text": "pardoned",
-        "gst": "p-a-rd-nd",
+        "gst": "p-a-rd-nt",
         "notes": "(#202)"
     },
     {
@@ -16481,7 +16481,7 @@
     },
     {
         "text": "persuasion",
-        "gst": "p-r-s-a_sh",
+        "gst": "p-r-s-w-a-sh",
         "notes": "(Essentials Advertising & Selling Terms)"
     },
     {
@@ -17041,7 +17041,7 @@
     },
     {
         "text": "postponed",
-        "gst": "p-o-s2-t-p-o-nd",
+        "gst": "p-o-s2-t-p-o-nt",
         "notes": "(#274, 169, 2)"
     },
     {
@@ -17081,12 +17081,12 @@
     },
     {
         "text": "pound",
-        "gst": "p-a-u-nd",
+        "gst": "p-a-u-nt",
         "notes": "(#183, 127, 2)"
     },
     {
         "text": "pounds",
-        "gst": "p-a-u-nd-s2",
+        "gst": "p-a-u-nt-s2",
         "notes": "(#245, 156)"
     },
     {
@@ -17206,7 +17206,7 @@
     },
     {
         "text": "preponderance",
-        "gst": "p-r-e-p-o-nd",
+        "gst": "p-r-e-p-o-nt",
         "notes": "(Essentials Legal Terms)"
     },
     {
@@ -17351,7 +17351,7 @@
     },
     {
         "text": "prior",
-        "gst": "p-r-ia-r",
+        "gst": "p-r-ie-r",
         "notes": "(#151, 109)"
     },
     {
@@ -17551,12 +17551,12 @@
     },
     {
         "text": "promissory note",
-        "gst": "p[intersectd]n-o-t",
+        "gst": "p-/-n-o-t",
         "notes": "(Essentials Banking Terms)"
     },
     {
         "text": "promissory notes",
-        "gst": "p[intersectd]n-o-t-s2",
+        "gst": "p-/-n-o-t-s2",
         "notes": "(Essentials Legal Terms)"
     },
     {
@@ -17906,7 +17906,7 @@
     },
     {
         "text": "quiet",
-        "gst": "k-ia_-t",
+        "gst": "k-w-ie-t",
         "notes": "(#151, 109)"
     },
     {
@@ -18006,7 +18006,7 @@
     },
     {
         "text": "rained",
-        "gst": "r-a-nd",
+        "gst": "r-a-nt",
         "notes": "(#243, 154, As he said it)"
     },
     {
@@ -18351,7 +18351,7 @@
     },
     {
         "text": "rectifier",
-        "gst": "r-e-k-t-f-ia-r",
+        "gst": "r-e-k-t-f-ie-r",
         "notes": "(Essentials Electronics Terms)"
     },
     {
@@ -18416,7 +18416,7 @@
     },
     {
         "text": "refund",
-        "gst": "r-f-nd",
+        "gst": "r-f-nt",
         "notes": "(#236, 150, Would any)"
     },
     {
@@ -18541,12 +18541,12 @@
     },
     {
         "text": "reliance",
-        "gst": "r-e-l-ia-n-s2",
+        "gst": "r-e-l-ie-n-s2",
         "notes": "(#151, 109)"
     },
     {
         "text": "reliant",
-        "gst": "r-e-l-ia-nt",
+        "gst": "r-e-l-ie-nt",
         "notes": "(#154, 112, Traits)"
     },
     {
@@ -18581,7 +18581,7 @@
     },
     {
         "text": "remained",
-        "gst": "r-e-m-a-nd",
+        "gst": "r-e-m-a-nt",
         "notes": "(#224, 146, You can see)"
     },
     {
@@ -18621,7 +18621,7 @@
     },
     {
         "text": "remote control",
-        "gst": "r-e-m-o-t[intersectd]k",
+        "gst": "r-e-m-o-t-/-k",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -18766,7 +18766,7 @@
     },
     {
         "text": "required",
-        "gst": "r-e-k-i_rd",
+        "gst": "r-e-k-w-i-rd",
         "notes": "(#124, 92, Hard)"
     },
     {
@@ -18801,7 +18801,7 @@
     },
     {
         "text": "resigned",
-        "gst": "r-s-i-nd",
+        "gst": "r-s-i-nt",
         "notes": "(#242, 154)"
     },
     {
@@ -18836,12 +18836,12 @@
     },
     {
         "text": "respond",
-        "gst": "r-s2-p-o-nd",
+        "gst": "r-s2-p-o-nt",
         "notes": "(#236, 150)"
     },
     {
         "text": "respondent",
-        "gst": "r-s2-p-o-nd-nt",
+        "gst": "r-s2-p-o-nt-nt",
         "notes": "(Essentials Legal Terms)"
     },
     {
@@ -18931,7 +18931,7 @@
     },
     {
         "text": "returned",
-        "gst": "r-e-t-e-r-nd",
+        "gst": "r-e-t-e-r-nt",
         "notes": "(#97, 73, Lark)"
     },
     {
@@ -19021,7 +19021,7 @@
     },
     {
         "text": "ripened",
-        "gst": "r-i-p-e-nd",
+        "gst": "r-i-p-e-nt",
         "notes": "(#96, 73, Lark)"
     },
     {
@@ -19161,12 +19161,12 @@
     },
     {
         "text": "round",
-        "gst": "r-a-u-nd",
+        "gst": "r-a-u-nt",
         "notes": "(#183, 127, 2)"
     },
     {
         "text": "rounding",
-        "gst": "r-a-u-nd-h",
+        "gst": "r-a-u-nt-h",
         "notes": "(#215, 140, Oh, I think)"
     },
     {
@@ -19216,7 +19216,7 @@
     },
     {
         "text": "run around",
-        "gst": "r-n/a-r-a-u-nd",
+        "gst": "r-n/a-r-a-u-nt",
         "notes": "(Essentials Printing & Publishing Terms)"
     },
     {
@@ -19351,7 +19351,7 @@
     },
     {
         "text": "Sanders",
-        "gst": "s-a-nd-r-s2",
+        "gst": "s-a-nt-r-s2",
         "notes": "(#104, 79, Loyalty)"
     },
     {
@@ -19456,7 +19456,7 @@
     },
     {
         "text": "scandals",
-        "gst": "s-k-a-nd-l-s2",
+        "gst": "s-k-a-nt-l-s2",
         "notes": "(#202)"
     },
     {
@@ -19501,7 +19501,7 @@
     },
     {
         "text": "school board",
-        "gst": "s-k-u-l[intersectd]b",
+        "gst": "s-k-u-l-/-b",
         "notes": "(#164, 122)"
     },
     {
@@ -19531,17 +19531,17 @@
     },
     {
         "text": "science",
-        "gst": "s-ia-n-s2",
+        "gst": "s-ie-n-s2",
         "notes": "(#151, 109)"
     },
     {
         "text": "sciences",
-        "gst": "s-ia-n-s2-s",
+        "gst": "s-ie-n-s2-s",
         "notes": "(#218, 142, The critical shortage)"
     },
     {
         "text": "scientific",
-        "gst": "s-ia-nt-f-k",
+        "gst": "s-ie-nt-f-k",
         "notes": "(#151, 109, Value cont.)"
     },
     {
@@ -19621,7 +19621,7 @@
     },
     {
         "text": "second",
-        "gst": "s-e-k-nd",
+        "gst": "s-e-k-nt",
         "notes": "(#97, 73, Lark)"
     },
     {
@@ -20121,7 +20121,7 @@
     },
     {
         "text": "shorthand",
-        "gst": "sh-t-h-a-nd",
+        "gst": "sh-t-h-a-nt",
         "notes": "(#150, 108, Value)"
     },
     {
@@ -20271,7 +20271,7 @@
     },
     {
         "text": "signed",
-        "gst": "s-i-nd",
+        "gst": "s-i-nt",
         "notes": "(#96, 73)"
     },
     {
@@ -20286,7 +20286,7 @@
     },
     {
         "text": "silhouette",
-        "gst": "s2-e-l-e_t",
+        "gst": "s2-e-l-w-et",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -20666,7 +20666,7 @@
     },
     {
         "text": "society",
-        "gst": "s-o-s-ia-t-e",
+        "gst": "s-o-s-ie-t-e",
         "notes": "(#151, 109, Value cont.)"
     },
     {
@@ -20796,12 +20796,12 @@
     },
     {
         "text": "sound",
-        "gst": "s-a-u-nd",
+        "gst": "s-a-u-nt",
         "notes": "(#183, 127, 2)"
     },
     {
         "text": "sounds",
-        "gst": "s-a-u-nd-s2",
+        "gst": "s-a-u-nt-s2",
         "notes": "(#227,148, Office Hours)"
     },
     {
@@ -20816,7 +20816,7 @@
     },
     {
         "text": "southbound",
-        "gst": "s-a-u-th1-b-a-u-nd",
+        "gst": "s-a-u-th1-b-a-u-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -20941,12 +20941,12 @@
     },
     {
         "text": "spend",
-        "gst": "s2-p-e-nd",
+        "gst": "s2-p-e-nt",
         "notes": "(#96, 73)"
     },
     {
         "text": "spends",
-        "gst": "s2-p-e-nd-s2",
+        "gst": "s2-p-e-nt-s2",
         "notes": "(#133, 101, Smoking)"
     },
     {
@@ -20991,7 +20991,7 @@
     },
     {
         "text": "splendor",
-        "gst": "s-p-l-e-nd-r",
+        "gst": "s-p-l-e-nt-r",
         "notes": "(#194, 134, Yesterday & Tomorrow)"
     },
     {
@@ -21906,17 +21906,17 @@
     },
     {
         "text": "surrender",
-        "gst": "s2-e-r-e-nd-r",
+        "gst": "s2-e-r-e-nt-r",
         "notes": "(#246, 156, I’ve forgotten)"
     },
     {
         "text": "surrender value",
-        "gst": "s2-e-r-e-nd-r[intersectd]v",
+        "gst": "s2-e-r-e-nt-r-/-v",
         "notes": "(Essentials Insurance Terms)"
     },
     {
         "text": "suspend",
-        "gst": "s-s2-p-e-nd",
+        "gst": "s-s2-p-e-nt",
         "notes": "(#130, 98, Little)"
     },
     {
@@ -22086,7 +22086,7 @@
     },
     {
         "text": "tail wind",
-        "gst": "t-a-l/u-e-nd",
+        "gst": "t-a-l/u-e-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -22731,7 +22731,7 @@
     },
     {
         "text": "thousands",
-        "gst": "th1-a-u-s-nd-s2",
+        "gst": "th1-a-u-s-nt-s2",
         "notes": "(#131, 99, Tooth)"
     },
     {
@@ -23241,7 +23241,7 @@
     },
     {
         "text": "trained",
-        "gst": "t-r-a-nd",
+        "gst": "t-r-a-nt",
         "notes": "(#96, 73)"
     },
     {
@@ -23451,12 +23451,12 @@
     },
     {
         "text": "trial",
-        "gst": "t-r-ia-l",
+        "gst": "t-r-ie-l",
         "notes": "(#151, 109)"
     },
     {
         "text": "trial-and-error",
-        "gst": "t-r-ia-l=nd=e-r-r",
+        "gst": "t-r-ie-l=nt=e-r-r",
         "notes": "(#153, 111, Value concl.)"
     },
     {
@@ -23526,7 +23526,7 @@
     },
     {
         "text": "trundling",
-        "gst": "t-r-nd-l-h",
+        "gst": "t-r-nt-l-h",
         "notes": "(#270, 166, So Mr. Smith)"
     },
     {
@@ -23561,7 +23561,7 @@
     },
     {
         "text": "tuberculosis",
-        "gst": "t[intersectd]b",
+        "gst": "t-/-b",
         "notes": "(Essentials Medical Terms)"
     },
     {
@@ -23591,7 +23591,7 @@
     },
     {
         "text": "turned",
-        "gst": "t-e-r-nd",
+        "gst": "t-e-r-nt",
         "notes": "(#102, 78, Surprise)"
     },
     {
@@ -23621,7 +23621,7 @@
     },
     {
         "text": "TV",
-        "gst": "t[intersectd]v",
+        "gst": "t-/-v",
         "notes": "(Essentials Radio & Television Terms)"
     },
     {
@@ -23731,7 +23731,7 @@
     },
     {
         "text": "underground",
-        "gst": "u/g-r-a-u-nd",
+        "gst": "u/g-r-a-u-nt",
         "notes": "(#250, 159, 2)"
     },
     {
@@ -24086,7 +24086,7 @@
     },
     {
         "text": "variety",
-        "gst": "v-a-r-ia-t-e",
+        "gst": "v-a-r-ie-t-e",
         "notes": "(#254)"
     },
     {
@@ -24171,7 +24171,7 @@
     },
     {
         "text": "vice versa",
-        "gst": "v[intersectd]v",
+        "gst": "v-/-v",
         "notes": "(#164, 122)"
     },
     {
@@ -24211,7 +24211,7 @@
     },
     {
         "text": "violently",
-        "gst": "v-ia-l-e-nt-e",
+        "gst": "v-ie-l-e-nt-e",
         "notes": "(#245, 156, Much to the)"
     },
     {
@@ -24451,7 +24451,7 @@
     },
     {
         "text": "warned",
-        "gst": "u-o-r-/nd",
+        "gst": "u-o-r-/nt",
         "notes": "(#96, 73, Lark)"
     },
     {
@@ -24756,7 +24756,7 @@
     },
     {
         "text": "westbound",
-        "gst": "u-e-s-t-b-a-u-nd",
+        "gst": "u-e-s-t-b-a-u-nt",
         "notes": "(Essentials Aviation Terms)"
     },
     {
@@ -25056,22 +25056,22 @@
     },
     {
         "text": "wind",
-        "gst": "u-e-nd",
+        "gst": "u-e-nt",
         "notes": "(#166, 124, Never)"
     },
     {
         "text": "wind",
-        "gst": "u-i-nd",
+        "gst": "u-i-nt",
         "notes": "(#189, 131, 5)"
     },
     {
         "text": "window",
-        "gst": "u-e-nd-o",
+        "gst": "u-e-nt-o",
         "notes": "(#227,148, Solution)"
     },
     {
         "text": "window-shopping",
-        "gst": "u-e-nd-o=sh-o-p-h",
+        "gst": "u-e-nt-o=sh-o-p-h",
         "notes": "(#269, 166)"
     },
     {
@@ -25241,27 +25241,27 @@
     },
     {
         "text": "wonder",
-        "gst": "u-u-nd-r",
+        "gst": "u-u-nt-r",
         "notes": "(#96, 73)"
     },
     {
         "text": "wondered",
-        "gst": "u-u-nd-rd",
+        "gst": "u-u-nt-rd",
         "notes": "(#126, 94, Boiling)"
     },
     {
         "text": "wonderful",
-        "gst": "u-u-nd-r-f",
+        "gst": "u-u-nt-r-f",
         "notes": "(#127, 95, Wasted)"
     },
     {
         "text": "wondering",
-        "gst": "u-u-nd-r-h",
+        "gst": "u-u-nt-r-h",
         "notes": "(#266, 164, And they returned)"
     },
     {
         "text": "wonders",
-        "gst": "u-u-nd-r-s2",
+        "gst": "u-u-nt-r-s2",
         "notes": "(#236, 150, Would any)"
     },
     {

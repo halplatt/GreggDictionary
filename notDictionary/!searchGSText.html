@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GST Search</title>
     <script>
+    //V2026.0730@6:42pm links
     //V2026.0729@12:27am added notDictionary. Smart logic to display showNotes sheckbox only if any notes exist in the json
     //V2025.0923@2:00pm performSeach when searchtype changes
     //V2025.0904@11:00am Ignore digits unless input contains digits    
@@ -21,7 +22,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0729@12:27am'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0730@10:42pm linksparm'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -407,6 +408,108 @@
             updateNotesVisibility();
         }
 
+        function buildSimpleDisplayLabel(parsedUrl) {
+            const pathParts = (parsedUrl.pathname || '').split('/').filter(Boolean);
+            const fileName = pathParts.length ? pathParts[pathParts.length - 1] : (parsedUrl.hostname || 'link');
+            const noExt = fileName.replace(/\.[^.]+$/, '');
+            const query = parsedUrl.search || '';
+            return query ? `${noExt}${query}` : noExt;
+        }
+
+        function normalizeDispDelimiter(rawUrl) {
+            // Allow user-friendly disp=(page 100) without requiring %20.
+            return rawUrl.replace(/([?&]disp=)\(([^\r\n)]*)\)/gi, function(_, prefix, inner) {
+                return prefix + encodeURIComponent(inner);
+            });
+        }
+
+        function setNotesCellContent(notesCell, notesValue) {
+            const text = (notesValue === undefined || notesValue === null) ? '' : String(notesValue);
+            const urlPattern = '(https?:\\/\\/[^\\s<>"\')\\]]+|(?:\\.\\.?\\/|\\/)[^\\s<>"\')\\]]*\\.html(?:\\?[^\\s<>"\')\\]]*)?(?:#[^\\s<>"\')\\]]*)?)';
+            const notesLinkRegex = new RegExp('\\[([^\\]\\r\\n]+)\\]\\(([^)\\r\\n]+)\\)|' + urlPattern, 'gi');
+            let lastIndex = 0;
+            let match;
+
+            notesCell.textContent = '';
+
+            while ((match = notesLinkRegex.exec(text)) !== null) {
+                const start = match.index;
+                const end = notesLinkRegex.lastIndex;
+                const label = match[1] ? match[1] : match[3];
+                const url = match[2] ? match[2] : match[3];
+                const normalizedUrl = normalizeDispDelimiter(url);
+
+                if (start > lastIndex) {
+                    notesCell.appendChild(document.createTextNode(text.slice(lastIndex, start)));
+                }
+
+                const link = document.createElement('a');
+                let resolvedHref = normalizedUrl;
+                let linkText = label;
+                let targetName = '_blank';
+                let leadingBareQueryToken = '';
+                const rawQuery = normalizedUrl.split('#')[0].split('?')[1] || '';
+                if (rawQuery) {
+                    const firstPart = rawQuery.split('&')[0] || '';
+                    if (firstPart && firstPart.indexOf('=') === -1) {
+                        const decodedFirstPart = decodeURIComponent(firstPart.replace(/\+/g, ' '));
+                        const low = decodedFirstPart.toLowerCase();
+                        if (low !== 'tab' && low !== 'target' && low !== 'disp') {
+                            leadingBareQueryToken = decodedFirstPart;
+                        }
+                    }
+                }
+                try {
+                    const parsedUrl = new URL(normalizedUrl, window.location.href);
+                    const requestedTarget = parsedUrl.searchParams.get('tab') || parsedUrl.searchParams.get('target');
+                    const requestedDisplay = parsedUrl.searchParams.get('disp');
+
+                    if (requestedDisplay) {
+                        if (requestedDisplay.toLowerCase() === 'simple') {
+                            linkText = buildSimpleDisplayLabel(parsedUrl);
+                        } else {
+                            linkText = requestedDisplay;
+                        }
+                    }
+
+                    if (requestedTarget) {
+                        targetName = requestedTarget;
+                        parsedUrl.searchParams.delete('tab');
+                        parsedUrl.searchParams.delete('target');
+                    }
+                    parsedUrl.searchParams.delete('disp');
+                    resolvedHref = parsedUrl.toString();
+
+                    // Preserve a leading bare token form like "?p245" instead of "?p245=".
+                    if (leadingBareQueryToken) {
+                        const finalUrl = new URL(resolvedHref);
+                        const keys = Array.from(finalUrl.searchParams.keys());
+                        if (keys.length === 1 && keys[0] === leadingBareQueryToken && finalUrl.searchParams.get(leadingBareQueryToken) === '') {
+                            finalUrl.search = '?' + encodeURIComponent(leadingBareQueryToken);
+                            resolvedHref = finalUrl.toString();
+                        }
+                    }
+                } catch (e) {
+                    // Keep original URL/target on parse failure.
+                }
+
+                link.href = resolvedHref;
+                link.textContent = linkText;
+                link.target = targetName;
+                link.rel = 'noopener noreferrer';
+                link.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+                notesCell.appendChild(link);
+
+                lastIndex = end;
+            }
+
+            if (lastIndex < text.length) {
+                notesCell.appendChild(document.createTextNode(text.slice(lastIndex)));
+            }
+        }
+
         function displayResults(results, searchTerm = '', searchType = '') {
             const tableBody = document.querySelector('#resultsTable tbody');
             tableBody.innerHTML = ''; // Clear previous results
@@ -426,7 +529,7 @@
 
                 textCell.textContent = entry.text || ''; // Handle missing text
                 gstCell.textContent = entry.gst || ''; // Handle missing gst
-                notesCell.textContent = entry.notes || ''; // Handle missing notes
+                setNotesCellContent(notesCell, entry.notes); // Handle missing notes and autolink URLs
 
                 // Call searchRefJson and get the page value
                 // Call imageContainer and append the resulting div to pageCell
@@ -1001,7 +1104,7 @@
                 } else if (globalGsd === 'pre') {
                     aboutText.innerHTML = "<p><i><b>Images from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>";
                 } else if (globalGsd === 'not') {
-                    aboutText.innerHTML = "<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary.</p>";
+                    aboutText.innerHTML = "<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 2nd Ed (1968)</p>";
                 } else {
                     aboutText.innerHTML = "<p><b>Images from</b> <i>Dictionary DJS,Gregg Shorthand </i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>";
                 }
