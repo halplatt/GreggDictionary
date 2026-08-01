@@ -4,13 +4,7 @@
 This is the main HTML file for the Gregg Shorthand Dictionary Search application. 
 It includes a search interface with various buttons that trigger different search functions. 
 
-V2025.0831@5:37pm bring data.djs.js and data.ann.js into this main HTML file
-v2025.0828@3:45pm use generated links from !shared-links.html
-v2025.0819@1:56pm modify links where gst merged with in page
-v2025.0805@10:54pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
-v2025.0706.0430pm split ann arrays in to two external files  ann_dict and ann_dict_reverse
-v2025.0624.0112am for public domain only, savedbuttons limited to pre or ann 
-V2025.0619.0245pm add show hide dictionaries button
+
 -->
 <html>
 	<head>
@@ -33,17 +27,42 @@ V2025.0619.0245pm add show hide dictionaries button
 			window.public_domain_only = usp.get('public_domain_only') || derived;
 		})();
 		</script>
-
-		</script>
 		<!-- JavaScripts with cachebusting querystring-->
 		<!-- Data arrays of words -->
-		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script>
-        <script type="text/javascript" src="dataset.ann.js?v=2026.0621.11:11am"></script>
+		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script> 
+		<!-- 
+			dataset.djs.js contents (dictionary word-list arrays):
+
+			DJS (Diamond Jubilee):
+			djsWord, djsName, djsPhrase
+
+			Series 90:
+			s90Word, s90Phrase, s90Women, s90Men, s90Sur, s90USName, s90GeoName
+
+			Centennial:
+			cenWord, cenBrief, cenPhrase, cenWomen, cenMen, cenSur, cenUSName, cenGeoName
+
+			Simplified:
+			simWord, simName
+
+			Anniversary:
+			annPhrase
+
+			Pre-Anniversary:
+			preWord
+
+			Notehand:
+			notWord
+		-->
+		<!-- dataset.ann.js contains ann_dict -->
+		<script type="text/javascript" src="dataset.ann.js?v=2026.0621.11:11am"></script>
+		<!-- dataset.ann.reverse.js contains ann_dict_reverse -->
 		<script type="text/javascript" src="dataset.ann.reverse.js?v=2025.0706.11:11am"></script>
+		<!-- !words.array.js contains djsword const dict -->
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2025.0828@3:45pm";
+    			document.getElementById('version').innerHTML = "v2026.0731@954pm NH";
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 				}		
@@ -169,9 +188,10 @@ V2025.0619.0245pm add show hide dictionaries button
 			button.cen {background-color: #017699;}
 			button.sim {background-color: #1000f5b0;}
 			button.s90 {background-color: #6b5fc7;}
+			button.not {background-color: #4f8a4c;}
 			button.all {background-color: #00c42e;}
 			/* the following class hides buttons and links */
-			.ann, .pre, .sim, .djs, .cen, .s90 {
+			.ann, .pre, .sim, .djs, .cen, .s90, .not {
 				display: none !important;
 			}
 			#txt1 {
@@ -279,7 +299,8 @@ V2025.0619.0245pm add show hide dictionaries button
 				.djs,
 				.cen,
 				.all,
-				.s90 {
+				.s90,
+				.not {
 					display: none !important;
 				}`;
 				document.head.appendChild(style);
@@ -357,6 +378,9 @@ V2025.0619.0245pm add show hide dictionaries button
 						case 's90':
 							setLastButton('refreshS90Word');
 							break;
+						case 'not':
+							setLastButton('refreshNotWord');
+							break;
 						default:
 							if (public_domain_only === 'pd') {
 								setLastButton('refreshAnnWord');
@@ -433,7 +457,7 @@ V2025.0619.0245pm add show hide dictionaries button
 			//begin show hide dictionaries -------
 			
 document.addEventListener('DOMContentLoaded', function() {
-	const dictClasses = ['ann', 'pre', 'sim', 'djs', 'cen', 's90', 'all'];
+	const dictClasses = ['ann', 'pre', 'sim', 'djs', 'cen', 's90', 'not', 'all'];
   const btn = document.getElementById('toggleDictBtn');
   const sharedLinksHost = document.getElementById('shared-links');
   let showingAll = false;
@@ -500,7 +524,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 	const params = getQueryParams();
-	const allowedDicts = ['ann', 'pre', 'sim', 'djs', 'cen', 's90'];
+	const allowedDicts = ['ann', 'pre', 'sim', 'djs', 'cen', 's90', 'not'];
 	const initialGsd = (params.gsd || '').toLowerCase();
 	const initialDict = allowedDicts.includes(initialGsd) ? initialGsd : null;
 	let lockToInitialDict = !!initialDict;
@@ -514,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	document.addEventListener('click', function(event) {
-		const dictButton = event.target.closest('button.ann, button.pre, button.sim, button.djs, button.cen, button.s90');
+		const dictButton = event.target.closest('button.ann, button.pre, button.sim, button.djs, button.cen, button.s90, button.not');
 		if (dictButton) {
 			lockToInitialDict = false;
 		}
@@ -759,7 +783,7 @@ function refreshS90GeoName(cntAdj) {
 	setLastButton('refreshS90GeoName');
 	pageCntAdj(cntAdj, s90GeoName);
 	hideSuggestion()
-	loadAboutCen()
+	loadAboutS90()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Series 90 Shorthand (Geographical Names)";
 	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,s90GeoName);
@@ -866,6 +890,18 @@ function refreshCenGeoName(cntAdj) {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
+function refreshNotWord(cntAdj) {
+	setLastButton('refreshNotWord');
+	pageCntAdj(cntAdj, notWord);
+	hideSuggestion()
+	loadAboutNot()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Notehand Dictionary";
+	var word = getTrimmedTxt1();
+	var wordId = findIdx(word,notWord);
+	var path = '<img src="notDictionary/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
 function refreshSimWord(cntAdj) {
 	setLastButton('refreshSimWord');
 	pageCntAdj(cntAdj, simWord);
@@ -954,7 +990,7 @@ function refreshPreWord(cntAdj) {
 	setLastButton('refreshPreWord');
 	pageCntAdj(cntAdj, preWord);
 	hideSuggestion()
-	loadAboutAnn()
+	loadAboutPre()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Pre-Anniversary Shorthand (1916)";
 	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,preWord);
@@ -1087,6 +1123,11 @@ function loadAboutAnn() {
 	}
 	document.getElementById('about').innerHTML = aboutText;
 }
+function loadAboutNot() {
+	var aboutText = "";
+	aboutText = aboutText.concat("<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 2nd Ed (1968)</p>");
+	document.getElementById('about').innerHTML = aboutText;
+}
 //end inline data.djs.js
 
 //beg inline data.ann.js
@@ -1203,7 +1244,7 @@ async function getPageByNumber(pageNumber) { //returns the page object for a giv
 					<div class="middle">
 							<div class="input-container">
 								<button onclick="window[lastButton](-1);" style="color: black; background-color: #f0f0f0;">&lt;</button>
-								<input id="txt1" type="text" value="" onkeydown="if(event.keyCode==13){lookupCurrentDictionary()}" autofocus />
+								<input id="txt1" type="text" value="" onkeydown="if(event.key === 'Enter'){lookupCurrentDictionary()}" autofocus />
 								<button onclick="window[lastButton](1);" style="color: black; background-color: #f0f0f0;">&gt;</button>
 							</div>
                             <div class="inner">
@@ -1274,8 +1315,11 @@ async function getPageByNumber(pageNumber) { //returns the page object for a giv
                                 <button id="btn22" class="ann" onclick="refreshAnnPhrase()">AnnPhrase</button>
 							</div>
 							<div class="inner">
-                                <button id="btn14" class="pre" onclick="refreshPreWord()" accesskey="p" title="Alt+p"><b>P</b>re-anniversary</button>
+								<button id="btn24" class="pre" onclick="refreshPreWord()" accesskey="p" title="Alt+p"><b>P</b>re-anniversary</button>
                             </div>
+							<div class="inner">
+                                <button id="btn23" class="not" onclick="refreshNotWord()">Notehand</button>
+							</div>
 
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
 <div id="shared-links"></div>
