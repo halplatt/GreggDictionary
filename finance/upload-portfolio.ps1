@@ -215,9 +215,9 @@ if ($success) {
         $shouldDelete = $true
         Write-Host "Auto-deleting source file as requested..." -ForegroundColor Yellow
     } else {
-        Write-Host "`nDo you want to delete the source file? (Y/N): " -ForegroundColor Yellow -NoNewline
+        Write-Host "`nDelete source file? (Press N to keep, anything else deletes): " -ForegroundColor Yellow -NoNewline
         $deleteChoice = Read-Host
-        $shouldDelete = ($deleteChoice -eq 'Y' -or $deleteChoice -eq 'y' -or $deleteChoice -eq 'yes' -or $deleteChoice -eq 'Yes')
+        $shouldDelete = ($deleteChoice.Trim().ToLower() -ne 'n')
     }
     
     if ($shouldDelete) {

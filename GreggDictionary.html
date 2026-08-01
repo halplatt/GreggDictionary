@@ -29,9 +29,9 @@ It includes a search interface with various buttons that trigger different searc
 		</script>
 		<!-- JavaScripts with cachebusting querystring-->
 		<!-- Data arrays of words -->
-		<script type="text/javascript" src="dataset.djs.js?v=2025.0528.0323pm"></script> 
+		<script type="text/javascript" src="dataseet.non-ann.js?v=2025.0528.0323pm"></script> 
 		<!-- 
-			dataset.djs.js contents (dictionary word-list arrays):
+			dataseet.non-ann.js contents (dictionary word-list arrays):
 
 			DJS (Diamond Jubilee):
 			djsWord, djsName, djsPhrase
@@ -62,7 +62,8 @@ It includes a search interface with various buttons that trigger different searc
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2026.0731@954pm NH";
+    			document.getElementById('version').innerHTML = "v2026.0801@446pm array";
+				// array = renamed dataset.djs.js to dataseet.non-ann.js
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 				}		
