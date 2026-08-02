@@ -1121,7 +1121,7 @@
     },
     {
         "text": "acclaimed",
-        "gst": "a-k-l-a-m-t",
+        "gst": "a-k-l-a-mt",
         "notes": ""
     },
     {
@@ -3051,7 +3051,7 @@
     },
     {
         "text": "affirmed",
-        "gst": "a-f-r-m-t",
+        "gst": "a-f-r-mt",
         "notes": ""
     },
     {
@@ -3901,7 +3901,7 @@
     },
     {
         "text": "alarmed",
-        "gst": "a-l-a-r-m-t",
+        "gst": "a-l-a-r-mt",
         "notes": ""
     },
     {
@@ -8356,7 +8356,7 @@
     },
     {
         "text": "armed",
-        "gst": "a-r-m-t",
+        "gst": "a-r-mt",
         "notes": ""
     },
     {
@@ -9876,7 +9876,7 @@
     },
     {
         "text": "assumed",
-        "gst": "a-s-m-t",
+        "gst": "a-s-mt",
         "notes": ""
     },
     {
@@ -13081,7 +13081,7 @@
     },
     {
         "text": "beamed",
-        "gst": "b-m-t",
+        "gst": "b-mt",
         "notes": ""
     },
     {
@@ -13221,7 +13221,7 @@
     },
     {
         "text": "becalmed",
-        "gst": "b-k-a-m-t",
+        "gst": "b-k-a-mt",
         "notes": ""
     },
     {
@@ -15196,7 +15196,7 @@
     },
     {
         "text": "blamed",
-        "gst": "b-l-a-m-t",
+        "gst": "b-l-a-mt",
         "notes": ""
     },
     {
@@ -15686,7 +15686,7 @@
     },
     {
         "text": "bloomed",
-        "gst": "b-l-u-m-t",
+        "gst": "b-l-u-mt",
         "notes": ""
     },
     {
@@ -16531,7 +16531,7 @@
     },
     {
         "text": "boomed",
-        "gst": "b-u-m-t",
+        "gst": "b-u-mt",
         "notes": ""
     },
     {
@@ -18191,7 +18191,7 @@
     },
     {
         "text": "brimmed",
-        "gst": "b-r-e-m-t",
+        "gst": "b-r-e-mt",
         "notes": ""
     },
     {
@@ -21931,7 +21931,7 @@
     },
     {
         "text": "caromed",
-        "gst": "k-e-r-m-t",
+        "gst": "k-e-r-mt",
         "notes": ""
     },
     {
@@ -23841,7 +23841,7 @@
     },
     {
         "text": "charmed",
-        "gst": "ch-a-r-m-t",
+        "gst": "ch-a-r-mt",
         "notes": ""
     },
     {
@@ -24486,7 +24486,7 @@
     },
     {
         "text": "chimed",
-        "gst": "ch-i-m-t",
+        "gst": "ch-i-mt",
         "notes": ""
     },
     {
@@ -25516,7 +25516,7 @@
     },
     {
         "text": "claimed",
-        "gst": "k-l-a-m-t",
+        "gst": "k-l-a-mt",
         "notes": ""
     },
     {
@@ -29251,7 +29251,7 @@
     },
     {
         "text": "confirmed",
-        "gst": "k-f-r-m-t",
+        "gst": "k-f-r-mt",
         "notes": ""
     },
     {
@@ -29321,7 +29321,7 @@
     },
     {
         "text": "conformed",
-        "gst": "k-f-m-t",
+        "gst": "k-f-mt",
         "notes": ""
     },
     {
@@ -30256,7 +30256,7 @@
     },
     {
         "text": "consumed",
-        "gst": "k-s-m-t",
+        "gst": "k-s-mt",
         "notes": ""
     },
     {
@@ -32741,7 +32741,7 @@
     },
     {
         "text": "crammed",
-        "gst": "k-r-a-m-t",
+        "gst": "k-r-a-mt",
         "notes": ""
     },
     {
@@ -35106,7 +35106,7 @@
     },
     {
         "text": "dammed",
-        "gst": "d-a-m-t",
+        "gst": "d-a-mt",
         "notes": ""
     },
     {
@@ -36116,7 +36116,7 @@
     },
     {
         "text": "declaimed",
-        "gst": "d-e-k-l-a-m-t",
+        "gst": "d-e-k-l-a-mt",
         "notes": ""
     },
     {
@@ -36401,7 +36401,7 @@
     },
     {
         "text": "deemed",
-        "gst": "d-e-m-t",
+        "gst": "d-e-mt",
         "notes": ""
     },
     {
@@ -36511,7 +36511,7 @@
     },
     {
         "text": "defamed",
-        "gst": "df-a-m-t",
+        "gst": "df-a-mt",
         "notes": ""
     },
     {
@@ -36811,7 +36811,7 @@
     },
     {
         "text": "deformed",
-        "gst": "df-m-t",
+        "gst": "df-mt",
         "notes": ""
     },
     {
@@ -39726,7 +39726,7 @@
     },
     {
         "text": "dimmed",
-        "gst": "d-e-m-t",
+        "gst": "d-e-mt",
         "notes": ""
     },
     {
@@ -40061,7 +40061,7 @@
     },
     {
         "text": "disarmed",
-        "gst": "d-s-a-r-m-t",
+        "gst": "d-s-a-r-mt",
         "notes": ""
     },
     {
@@ -40256,7 +40256,7 @@
     },
     {
         "text": "disclaimed",
-        "gst": "d-s-k-l-a-m-t",
+        "gst": "d-s-k-l-a-mt",
         "notes": ""
     },
     {
@@ -42261,7 +42261,7 @@
     },
     {
         "text": "domed",
-        "gst": "d-o-m-t",
+        "gst": "d-o-mt",
         "notes": ""
     },
     {
@@ -43066,7 +43066,7 @@
     },
     {
         "text": "dreamed",
-        "gst": "d-r-e-m-t",
+        "gst": "d-r-e-mt",
         "notes": ""
     },
     {
@@ -43491,7 +43491,7 @@
     },
     {
         "text": "drummed",
-        "gst": "d-r-u-m-t",
+        "gst": "d-r-u-mt",
         "notes": ""
     },
     {
@@ -45806,7 +45806,7 @@
     },
     {
         "text": "embalmed",
-        "gst": "m-b-a-m-t",
+        "gst": "m-b-a-mt",
         "notes": ""
     },
     {
@@ -48486,7 +48486,7 @@
     },
     {
         "text": "esteemed",
-        "gst": "e-s-t-e-m-t",
+        "gst": "e-s-t-e-mt",
         "notes": ""
     },
     {
@@ -49866,7 +49866,7 @@
     },
     {
         "text": "exhumed",
-        "gst": "e-s-h-e-u-m-t",
+        "gst": "e-s-h-e-u-mt",
         "notes": ""
     },
     {
@@ -51636,7 +51636,7 @@
     },
     {
         "text": "farmed",
-        "gst": "f-a-r-m-t",
+        "gst": "f-a-r-mt",
         "notes": ""
     },
     {
@@ -51881,7 +51881,7 @@
     },
     {
         "text": "fathomed",
-        "gst": "f-a-th-m-t",
+        "gst": "f-a-th-mt",
         "notes": ""
     },
     {
@@ -53071,7 +53071,7 @@
     },
     {
         "text": "filmed",
-        "gst": "f-e-l-m-t",
+        "gst": "f-e-l-mt",
         "notes": ""
     },
     {
@@ -53741,7 +53741,7 @@
     },
     {
         "text": "flamed",
-        "gst": "f-l-a-m-t",
+        "gst": "f-l-a-mt",
         "notes": ""
     },
     {
@@ -54881,7 +54881,7 @@
     },
     {
         "text": "foamed",
-        "gst": "f-o-m-t",
+        "gst": "f-o-mt",
         "notes": ""
     },
     {
@@ -55531,7 +55531,7 @@
     },
     {
         "text": "for your information",
-        "gst": "f-u-o-r-e-n-f-r-m-sh",
+        "gst": "f-u-n-f-m-sh",
         "notes": ""
     },
     {
@@ -55691,7 +55691,7 @@
     },
     {
         "text": "foredoomed",
-        "gst": "f-o-rd-u-m-t",
+        "gst": "f-o-rd-u-mt",
         "notes": ""
     },
     {
@@ -56106,7 +56106,7 @@
     },
     {
         "text": "formed",
-        "gst": "f-m-t",
+        "gst": "f-mt",
         "notes": ""
     },
     {
@@ -56651,7 +56651,7 @@
     },
     {
         "text": "framed",
-        "gst": "f-r-a-m-t",
+        "gst": "f-r-a-mt",
         "notes": ""
     },
     {
@@ -57746,7 +57746,7 @@
     },
     {
         "text": "fumed",
-        "gst": "f-e-u-m-t",
+        "gst": "f-e-u-mt",
         "notes": ""
     },
     {
@@ -59936,7 +59936,7 @@
     },
     {
         "text": "gleamed",
-        "gst": "g-l-e-m-t",
+        "gst": "g-l-e-mt",
         "notes": ""
     },
     {
@@ -61921,7 +61921,7 @@
     },
     {
         "text": "groomed",
-        "gst": "g-r-u-m-t",
+        "gst": "g-r-u-mt",
         "notes": ""
     },
     {
@@ -62461,7 +62461,7 @@
     },
     {
         "text": "gummed",
-        "gst": "g-u-m-t",
+        "gst": "g-u-mt",
         "notes": ""
     },
     {
@@ -63631,7 +63631,7 @@
     },
     {
         "text": "harmed",
-        "gst": "h-a-r-m-t",
+        "gst": "h-a-r-mt",
         "notes": ""
     },
     {
@@ -64651,7 +64651,7 @@
     },
     {
         "text": "he seemed",
-        "gst": "h-e-s-e-m-t",
+        "gst": "h-e-s-e-mt",
         "notes": ""
     },
     {
@@ -65566,7 +65566,7 @@
     },
     {
         "text": "hemmed",
-        "gst": "h-e-m-t",
+        "gst": "h-e-mt",
         "notes": ""
     },
     {
@@ -67931,7 +67931,7 @@
     },
     {
         "text": "hummed",
-        "gst": "h-u-m-t",
+        "gst": "h-u-mt",
         "notes": ""
     },
     {
@@ -73861,7 +73861,7 @@
     },
     {
         "text": "inflamed",
-        "gst": "n-f-l-a-m-t",
+        "gst": "n-f-l-a-mt",
         "notes": ""
     },
     {
@@ -74011,7 +74011,7 @@
     },
     {
         "text": "information",
-        "gst": "n-f-r-m-sh",
+        "gst": "n-f-m-sh",
         "notes": ""
     },
     {
@@ -74021,7 +74021,7 @@
     },
     {
         "text": "informed",
-        "gst": "n-f-m-t",
+        "gst": "n-f-mt",
         "notes": ""
     },
     {
@@ -74376,7 +74376,7 @@
     },
     {
         "text": "inhumed",
-        "gst": "n-h-e-u-m-t",
+        "gst": "n-h-e-u-mt",
         "notes": ""
     },
     {
@@ -78351,7 +78351,7 @@
     },
     {
         "text": "jammed",
-        "gst": "j-a-m-t",
+        "gst": "j-a-mt",
         "notes": ""
     },
     {
@@ -80806,7 +80806,7 @@
     },
     {
         "text": "lamed",
-        "gst": "l-a-m-t",
+        "gst": "l-a-mt",
         "notes": ""
     },
     {
@@ -84611,7 +84611,7 @@
     },
     {
         "text": "loomed",
-        "gst": "l-u-m-t",
+        "gst": "l-u-mt",
         "notes": ""
     },
     {
@@ -86071,7 +86071,7 @@
     },
     {
         "text": "maimed",
-        "gst": "m-a-m-t",
+        "gst": "m-a-mt",
         "notes": ""
     },
     {
@@ -86321,7 +86321,7 @@
     },
     {
         "text": "malformed",
-        "gst": "m-a-lf-m-t",
+        "gst": "m-a-lf-mt",
         "notes": ""
     },
     {
@@ -91061,7 +91061,7 @@
     },
     {
         "text": "misinformed",
-        "gst": "m-s-e-n-f-m-t",
+        "gst": "m-s-e-n-f-mt",
         "notes": ""
     },
     {
@@ -91151,7 +91151,7 @@
     },
     {
         "text": "misnamed",
-        "gst": "m-s-n-a-m-t",
+        "gst": "m-s-n-a-mt",
         "notes": ""
     },
     {
@@ -91396,7 +91396,7 @@
     },
     {
         "text": "mistormed",
-        "gst": "m-s-t-o-r-m-t",
+        "gst": "m-s-t-o-r-mt",
         "notes": ""
     },
     {
@@ -94021,7 +94021,7 @@
     },
     {
         "text": "mushroomed",
-        "gst": "m-u-sh-r-u-m-t",
+        "gst": "m-u-sh-r-u-mt",
         "notes": ""
     },
     {
@@ -94566,7 +94566,7 @@
     },
     {
         "text": "named",
-        "gst": "n-a-m-t",
+        "gst": "n-a-mt",
         "notes": ""
     },
     {
@@ -102331,7 +102331,7 @@
     },
     {
         "text": "palmed",
-        "gst": "p-a-m-t",
+        "gst": "p-a-mt",
         "notes": ""
     },
     {
@@ -105556,7 +105556,7 @@
     },
     {
         "text": "performed",
-        "gst": "p-r-f-m-t",
+        "gst": "p-r-f-mt",
         "notes": ""
     },
     {
@@ -105571,7 +105571,7 @@
     },
     {
         "text": "perfumed",
-        "gst": "p-r-f-e-u-m-t",
+        "gst": "p-r-f-e-u-mt",
         "notes": ""
     },
     {
@@ -109061,7 +109061,7 @@
     },
     {
         "text": "plumed",
-        "gst": "p-l-u-m-t",
+        "gst": "p-l-u-mt",
         "notes": ""
     },
     {
@@ -111771,7 +111771,7 @@
     },
     {
         "text": "preformed",
-        "gst": "p-r-f-m-t",
+        "gst": "p-r-f-mt",
         "notes": ""
     },
     {
@@ -112326,7 +112326,7 @@
     },
     {
         "text": "presumed",
-        "gst": "p-r-s-m-t",
+        "gst": "p-r-s-mt",
         "notes": ""
     },
     {
@@ -112691,7 +112691,7 @@
     },
     {
         "text": "primed",
-        "gst": "p-r-i-m-t",
+        "gst": "p-r-i-mt",
         "notes": ""
     },
     {
@@ -113051,7 +113051,7 @@
     },
     {
         "text": "proclaimed",
-        "gst": "p-r-o-k-l-a-m-t",
+        "gst": "p-r-o-k-l-a-mt",
         "notes": ""
     },
     {
@@ -117396,7 +117396,7 @@
     },
     {
         "text": "rammed",
-        "gst": "r-a-m-t",
+        "gst": "r-a-mt",
         "notes": ""
     },
     {
@@ -117556,7 +117556,7 @@
     },
     {
         "text": "ransomed",
-        "gst": "r-a-n-s-m-t",
+        "gst": "r-a-n-s-mt",
         "notes": ""
     },
     {
@@ -118331,7 +118331,7 @@
     },
     {
         "text": "reaffirmed",
-        "gst": "r-e-f-r-m-t",
+        "gst": "r-e-f-r-mt",
         "notes": ""
     },
     {
@@ -118426,7 +118426,7 @@
     },
     {
         "text": "reamed",
-        "gst": "r-e-m-t",
+        "gst": "r-e-mt",
         "notes": ""
     },
     {
@@ -119056,7 +119056,7 @@
     },
     {
         "text": "reclaimed",
-        "gst": "r-e-k-l-a-m-t",
+        "gst": "r-e-k-l-a-mt",
         "notes": ""
     },
     {
@@ -120026,7 +120026,7 @@
     },
     {
         "text": "reformed",
-        "gst": "r-f-m-t",
+        "gst": "r-f-mt",
         "notes": ""
     },
     {
@@ -122951,7 +122951,7 @@
     },
     {
         "text": "resumed",
-        "gst": "r-s-m-t",
+        "gst": "r-s-mt",
         "notes": ""
     },
     {
@@ -124116,7 +124116,7 @@
     },
     {
         "text": "rhymed",
-        "gst": "r-i-m-t",
+        "gst": "r-i-mt",
         "notes": ""
     },
     {
@@ -124871,7 +124871,7 @@
     },
     {
         "text": "roamed",
-        "gst": "r-o-m-t",
+        "gst": "r-o-mt",
         "notes": ""
     },
     {
@@ -125241,7 +125241,7 @@
     },
     {
         "text": "roomed",
-        "gst": "r-u-m-t",
+        "gst": "r-u-mt",
         "notes": ""
     },
     {
@@ -128606,7 +128606,7 @@
     },
     {
         "text": "schemed",
-        "gst": "s-k-e-m-t",
+        "gst": "s-k-e-mt",
         "notes": ""
     },
     {
@@ -129321,7 +129321,7 @@
     },
     {
         "text": "screamed",
-        "gst": "s-k-r-e-m-t",
+        "gst": "s-k-r-e-mt",
         "notes": ""
     },
     {
@@ -129901,7 +129901,7 @@
     },
     {
         "text": "seamed",
-        "gst": "s-e-m-t",
+        "gst": "s-e-mt",
         "notes": ""
     },
     {
@@ -132816,7 +132816,7 @@
     },
     {
         "text": "shamed",
-        "gst": "sh-a-m-t",
+        "gst": "sh-a-mt",
         "notes": ""
     },
     {
@@ -132856,7 +132856,7 @@
     },
     {
         "text": "shammed",
-        "gst": "sh-a-m-t",
+        "gst": "sh-a-mt",
         "notes": ""
     },
     {
@@ -133531,7 +133531,7 @@
     },
     {
         "text": "shimmed",
-        "gst": "sh-e-m-t",
+        "gst": "sh-e-mt",
         "notes": ""
     },
     {
@@ -135986,7 +135986,7 @@
     },
     {
         "text": "skimmed",
-        "gst": "s-k-e-m-t",
+        "gst": "s-k-e-mt",
         "notes": ""
     },
     {
@@ -136326,7 +136326,7 @@
     },
     {
         "text": "slammed",
-        "gst": "s-l-a-m-t",
+        "gst": "s-l-a-mt",
         "notes": ""
     },
     {
@@ -141921,7 +141921,7 @@
     },
     {
         "text": "spumed",
-        "gst": "s-p-u-m-t",
+        "gst": "s-p-u-mt",
         "notes": ""
     },
     {
@@ -143246,7 +143246,7 @@
     },
     {
         "text": "steamed",
-        "gst": "s-t-e-m-t",
+        "gst": "s-t-e-mt",
         "notes": ""
     },
     {
@@ -143371,7 +143371,7 @@
     },
     {
         "text": "stemmed",
-        "gst": "s-t-e-m-t",
+        "gst": "s-t-e-mt",
         "notes": ""
     },
     {
@@ -144481,7 +144481,7 @@
     },
     {
         "text": "stormed",
-        "gst": "s-t-o-r-m-t",
+        "gst": "s-t-o-r-mt",
         "notes": ""
     },
     {
@@ -144956,7 +144956,7 @@
     },
     {
         "text": "streamed",
-        "gst": "s-t-r-e-m-t",
+        "gst": "s-t-r-e-mt",
         "notes": ""
     },
     {
@@ -145421,7 +145421,7 @@
     },
     {
         "text": "strummed",
-        "gst": "s-t-r-u-m-t",
+        "gst": "s-t-r-u-mt",
         "notes": ""
     },
     {
@@ -146266,7 +146266,7 @@
     },
     {
         "text": "sublimed",
-        "gst": "s-l-i-m-t",
+        "gst": "s-l-i-mt",
         "notes": ""
     },
     {
@@ -147391,7 +147391,7 @@
     },
     {
         "text": "summed",
-        "gst": "s-m-t",
+        "gst": "s-mt",
         "notes": ""
     },
     {
@@ -148426,7 +148426,7 @@
     },
     {
         "text": "surnamed",
-        "gst": "s-e-r-n-m-t",
+        "gst": "s-e-r-n-mt",
         "notes": ""
     },
     {
@@ -148956,7 +148956,7 @@
     },
     {
         "text": "swarmed",
-        "gst": "s-u-o-r-m-t",
+        "gst": "s-u-o-r-mt",
         "notes": ""
     },
     {
@@ -150661,7 +150661,7 @@
     },
     {
         "text": "tamed",
-        "gst": "t-a-m-t",
+        "gst": "t-a-mt",
         "notes": ""
     },
     {
@@ -151631,7 +151631,7 @@
     },
     {
         "text": "teamed",
-        "gst": "t-e-m-t",
+        "gst": "t-e-mt",
         "notes": ""
     },
     {
@@ -151831,7 +151831,7 @@
     },
     {
         "text": "teemed",
-        "gst": "t-e-m-t",
+        "gst": "t-e-mt",
         "notes": ""
     },
     {
@@ -152526,7 +152526,7 @@
     },
     {
         "text": "termed",
-        "gst": "t-r-m-t",
+        "gst": "t-r-mt",
         "notes": ""
     },
     {
@@ -154231,7 +154231,7 @@
     },
     {
         "text": "this information",
-        "gst": "th-s-e-n-f-r-m-sh",
+        "gst": "th-s-n-f-m-sh",
         "notes": ""
     },
     {
@@ -154906,7 +154906,7 @@
     },
     {
         "text": "thrummed",
-        "gst": "th-r-u-m-t",
+        "gst": "th-r-u-mt",
         "notes": ""
     },
     {
@@ -158686,7 +158686,7 @@
     },
     {
         "text": "transformed",
-        "gst": "t/f-m-t",
+        "gst": "t/f-mt",
         "notes": ""
     },
     {
@@ -159871,7 +159871,7 @@
     },
     {
         "text": "trimmed",
-        "gst": "t-r-e-m-t",
+        "gst": "t-r-e-mt",
         "notes": ""
     },
     {
@@ -162201,7 +162201,7 @@
     },
     {
         "text": "unashamed",
-        "gst": "u-n-sh-a-m-t",
+        "gst": "u-n-sh-a-mt",
         "notes": ""
     },
     {
@@ -162416,7 +162416,7 @@
     },
     {
         "text": "unbosomed",
-        "gst": "n-b-o-s-m-t",
+        "gst": "n-b-o-s-mt",
         "notes": ""
     },
     {
@@ -162601,7 +162601,7 @@
     },
     {
         "text": "unclaimed",
-        "gst": "n-k-l-a-m-t",
+        "gst": "n-k-l-a-mt",
         "notes": ""
     },
     {
@@ -162701,7 +162701,7 @@
     },
     {
         "text": "unconfirmed",
-        "gst": "n-k-n-f-r-m-t",
+        "gst": "n-k-n-f-r-mt",
         "notes": ""
     },
     {
@@ -164196,7 +164196,7 @@
     },
     {
         "text": "unfarmed",
-        "gst": "n-f-a-r-m-t",
+        "gst": "n-f-a-r-mt",
         "notes": ""
     },
     {
@@ -164471,7 +164471,7 @@
     },
     {
         "text": "unformed",
-        "gst": "n-f-m-t",
+        "gst": "n-f-mt",
         "notes": ""
     },
     {
@@ -164726,7 +164726,7 @@
     },
     {
         "text": "ungummed",
-        "gst": "u-n-g-u-m-t",
+        "gst": "u-n-g-u-mt",
         "notes": ""
     },
     {
@@ -164796,7 +164796,7 @@
     },
     {
         "text": "unharmed",
-        "gst": "u-n-h-a-r-m-t",
+        "gst": "u-n-h-a-r-mt",
         "notes": ""
     },
     {
@@ -165126,7 +165126,7 @@
     },
     {
         "text": "uninformed",
-        "gst": "n-e-n-f-m-t",
+        "gst": "n-e-n-f-mt",
         "notes": ""
     },
     {
@@ -165391,7 +165391,7 @@
     },
     {
         "text": "unittormed",
-        "gst": "e-u-n-m-t",
+        "gst": "e-u-n-mt",
         "notes": ""
     },
     {
@@ -165881,7 +165881,7 @@
     },
     {
         "text": "unnamed",
-        "gst": "u-n-a-m-t",
+        "gst": "u-n-a-mt",
         "notes": ""
     },
     {
@@ -166096,7 +166096,7 @@
     },
     {
         "text": "unperformed",
-        "gst": "n-p-r-f-m-t",
+        "gst": "n-p-r-f-mt",
         "notes": ""
     },
     {
@@ -166421,7 +166421,7 @@
     },
     {
         "text": "unransomed",
-        "gst": "n-r-a-n-s-m-t",
+        "gst": "n-r-a-n-s-mt",
         "notes": ""
     },
     {
@@ -167126,7 +167126,7 @@
     },
     {
         "text": "unskimmed",
-        "gst": "n-s-k-i-m-t",
+        "gst": "n-s-k-i-mt",
         "notes": ""
     },
     {
@@ -167631,7 +167631,7 @@
     },
     {
         "text": "untrimmed",
-        "gst": "u/e-m-t",
+        "gst": "u/e-mt",
         "notes": ""
     },
     {
@@ -170046,7 +170046,7 @@
     },
     {
         "text": "vermiform",
-        "gst": "v-r-m-e-f-r-m",
+        "gst": "v-e-r-m-e-f-m",
         "notes": ""
     },
     {
@@ -172541,7 +172541,7 @@
     },
     {
         "text": "warmed",
-        "gst": "u-o-r-m-t",
+        "gst": "u-o-r-mt",
         "notes": ""
     },
     {
@@ -177356,7 +177356,7 @@
     },
     {
         "text": "wormed",
-        "gst": "u-e-r-m-t",
+        "gst": "u-e-r-mt",
         "notes": ""
     },
     {
@@ -179186,7 +179186,7 @@
     },
     {
         "text": "zoomed",
-        "gst": "s-u-m-t",
+        "gst": "s-u-mt",
         "notes": ""
     },
     {
