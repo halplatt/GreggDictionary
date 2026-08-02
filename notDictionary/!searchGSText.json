@@ -1,6 +1,6 @@
 [
     {
-        "text": "a/an",
+        "text": "a",
         "gst": "h",
         "notes": "(#21, 20)"
     },
@@ -863,6 +863,11 @@
         "text": "Amy",
         "gst": "a-m-e",
         "notes": "(#17, 13)"
+    },
+    {
+        "text": "an",
+        "gst": "h",
+        "notes": "(#21, 20)"
     },
     {
         "text": "anaesthesia",
@@ -3457,7 +3462,7 @@
     {
         "text": "center",
         "gst": "s-e-nt-r",
-        "notes": "(#97, 74)"
+        "notes": "(#97, 74) p108"
     },
     {
         "text": "center spread",
@@ -4902,7 +4907,7 @@
     {
         "text": "copy",
         "gst": "k-o-p-e",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "copied",
@@ -9512,7 +9517,7 @@
     {
         "text": "got",
         "gst": "g-o-t",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "gotten",
@@ -10822,7 +10827,7 @@
     {
         "text": "hot",
         "gst": "h-o-t",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "hotel",
@@ -15162,7 +15167,7 @@
     {
         "text": "not",
         "gst": "n-o-t",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "notation",
@@ -15452,7 +15457,7 @@
     {
         "text": "office",
         "gst": "o-f-e-s",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "officer",
@@ -20777,7 +20782,7 @@
     {
         "text": "sorry",
         "gst": "s-o-r-e",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "sort",
@@ -21022,7 +21027,7 @@
     {
         "text": "spot",
         "gst": "s2-p-o-t",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "spots",
@@ -21397,7 +21402,7 @@
     {
         "text": "stopped",
         "gst": "s-t-o-p-t",
-        "notes": "(#63, 51)"
+        "notes": "(#63, 51) ../notManual/!searchPages.html?p054&tab=man2&disp=example"
     },
     {
         "text": "stopping",

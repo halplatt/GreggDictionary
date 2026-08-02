@@ -1,0 +1,6 @@
+Copied PNG files: 2151
+Skipped existing targets: 6
+Missing source copies: 1
+
+Missing source examples:
+k-tn-d: missing source contend.png
