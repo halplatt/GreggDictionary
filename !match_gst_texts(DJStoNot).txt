@@ -1,3 +1,3 @@
-Copied PNG files from d:\HostGatorFiles\public_html\notes\djsWords: 469
-Skipped existing targets already in d:\HostGatorFiles\public_html\notes\notWords: 2177
+Copied PNG files from d:\HostGatorFiles\public_html\notes\djsWords: 1
+Skipped existing targets already in d:\HostGatorFiles\public_html\notes\notWords: 2646
 Missing source copies from d:\HostGatorFiles\public_html\notes\djsWords: 0
