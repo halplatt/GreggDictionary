@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from shutil import copy2
 from pathlib import Path
@@ -19,11 +20,15 @@ def load_entries(path: Path) -> list[dict[str, str]]:
         return json.load(handle)
 
 
+def normalize_gst_for_match(gst: str) -> str:
+    return re.sub(r"\d+", "", gst)
+
+
 def collect_texts_by_gst(entries: list[dict[str, str]]) -> dict[str, list[str]]:
     texts_by_gst: dict[str, list[str]] = defaultdict(list)
 
     for entry in entries:
-        gst = (entry.get("gst") or "").strip()
+        gst = normalize_gst_for_match((entry.get("gst") or "").strip())
         text = (entry.get("text") or "").strip()
 
         if not gst or not text:
