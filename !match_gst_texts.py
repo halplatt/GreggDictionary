@@ -9,7 +9,7 @@ from pathlib import Path
 BASE_DIR = Path(r"d:\HostGatorFiles\public_html\notes")
 NOT_PATH = BASE_DIR / "notDictionary" / "!searchGSText.json"
 DJS_PATH = BASE_DIR / "djsDictionary" / "!searchGSText.json"
-OUTPUT_PATH = BASE_DIR / "shared_gst_texts.txt"
+OUTPUT_PATH = BASE_DIR / "!match_gst_texts(DJStoNot).txt"
 DJS_WORDS_DIR = BASE_DIR / "djsWords"
 NOT_WORDS_DIR = BASE_DIR / "notWords"
 
@@ -96,9 +96,9 @@ def main() -> None:
     copied, skipped_existing, missing_source, missing_examples = copy_matching_pngs()
 
     lines = [
-        f"Copied PNG files: {copied}",
-        f"Skipped existing targets: {skipped_existing}",
-        f"Missing source copies: {missing_source}",
+        f"Copied PNG files from {DJS_WORDS_DIR}: {copied}",
+        f"Skipped existing targets already in {NOT_WORDS_DIR}: {skipped_existing}",
+        f"Missing source copies from {DJS_WORDS_DIR}: {missing_source}",
     ]
 
     if missing_examples:

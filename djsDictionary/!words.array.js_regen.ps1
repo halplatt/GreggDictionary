@@ -1,4 +1,4 @@
-﻿#Change the name of the dictionary here
+﻿#Change the name of the dictionary here this version uses ut8
 $dict = "dict"
 # Get all .png files in the /djsWords folder that do not contain ".tag.png" in the name
 $files = Get-ChildItem $PSScriptRoot -Filter "*.png" | Where-Object { $_.Name -notlike "*.tag.png" }
@@ -19,4 +19,4 @@ $commaDelimitedFileNames = $fileNames -join ','
 $commaDelimitedFileNames = "const $dict = [" + $commaDelimitedFileNames + "];"
 
 # Save the comma-delimited string to a file named words.json
-Set-Content -Path "$PSScriptRoot\!words.array.js" -Value $commaDelimitedFileNames
+Set-Content -Path "$PSScriptRoot\!words.array.js" -Value $commaDelimitedFileNames -Encoding utf8

@@ -22,7 +22,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0730@10:42pm linksparm'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0802@10:58pm reuseTab'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -496,7 +496,9 @@
                 link.href = resolvedHref;
                 link.textContent = linkText;
                 link.target = targetName;
-                link.rel = 'noopener noreferrer';
+                if ((targetName || '').toLowerCase() === '_blank') {
+                    link.rel = 'noopener noreferrer';
+                }
                 link.addEventListener('click', function(event) {
                     event.stopPropagation();
                 });

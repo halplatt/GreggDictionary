@@ -1,3 +1,0 @@
-Copied PNG files: 18
-Skipped existing targets: 2157
-Missing source copies: 0
