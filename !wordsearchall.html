@@ -161,6 +161,76 @@ version 02/06/2025 at 9:18pm First version
     #add0or1 {
         margin-right: 10px;
     }
+    .version-filter-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin: 8px 0 0;
+    }
+    .version-filter-row label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+    .search-separator {
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .word-group {
+        border-top: 1px solid #cfd6df;
+        padding-top: 12px;
+        margin-top: 12px;
+    }
+    .word-group:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .word-group-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+    .result-entry {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 8px;
+        padding-top: 0;
+    }
+    .result-entry > img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 60%;
+        align-self: flex-start;
+    }
+    .result-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        line-height: 1.4;
+    }
+    .result-word {
+        font-weight: 700;
+        color: #1f1f1f;
+    }
+    .version-badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: #eef2f6;
+        color: #4b5563;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
     .djs-item {
         margin-top: 10px;
         border-top: 1px solid #ccc; /* Add this line to create a line between list items */
@@ -175,7 +245,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2025.1003@10:47am</p>
+    <p id="version">V2026.0804@01:45pm chkbx_fmt</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -224,6 +294,14 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             <label for="maxResults">Maximum Words:</label>
             <input type="number" id="maxResults" value="25" min="1" style="width: 50px;">
             <a href="../djsWords/!wordsearch_help.html" target="_blank">Help</a>
+        </div>
+        <div class="version-filter-row">
+            <span style="font-weight:600;">versions to compare</span>
+            <label><input type="checkbox" id="filterNot" checked><span class="version-badge">not</span></label>
+            <label><input type="checkbox" id="filterDjs" checked><span class="version-badge">djs</span></label>
+            <label><input type="checkbox" id="filterSim" checked><span class="version-badge">sim</span></label>
+            <label><input type="checkbox" id="filterAnn" checked><span class="version-badge">ann</span></label>
+            <label><input type="checkbox" id="filterPre" checked><span class="version-badge">pre</span></label>
         </div>
     </div>
     <div id="results"></div>
@@ -346,29 +424,56 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         }
                         resultCount++;
 
+                        const groupContainer = document.createElement('div');
+                        groupContainer.className = 'word-group';
+                        groupContainer.innerHTML = '<div class="word-group-title">' + escapeHtml(candidate) + '</div>';
+                        let hasVisibleRows = false;
+
+                        // Create Notehand image first
+                        if (isVersionChecked('not')) {
+                            listItem = document.createElement("li");
+                            listItem.className = 'result-entry';
+                            listItem.innerHTML = '<div class="result-header">' + createResultHeader('not') + '</div>';
+                            listItem.addEventListener("click", (e) => copyToClipboard(candidate, 'not', e));
+                            const imagePathnot = 'notWords/'; // path to word.png images
+                            const img_not = document.createElement("img");
+                            img_not.src = `${imagePathnot}${candidate}.png`;
+
+                            img_not.onerror = function() {
+                                this.style.display = "none";  // Hide the image if it fails to load
+                            };
+
+                            listItem.appendChild(img_not);
+                            // Add the list item to the result list
+                            groupContainer.appendChild(listItem);
+                            hasVisibleRows = true;
+                        }
 
                         // Create DJS image
-                        listItem = document.createElement("li");
-                        listItem.className = 'djs-item';
-                        listItem.textContent = 'djs: '+candidate;
-                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'djs', e));
-                        const imagePathdjs = 'djsWords/'; //path to word.png images
-                        const img_djs = document.createElement("img");
-                        img_djs.src = `${imagePathdjs}${candidate}.png`;
-                        
+                        if (isVersionChecked('djs')) {
+                            listItem = document.createElement("li");
+                            listItem.className = 'result-entry';
+                            listItem.innerHTML = '<div class="result-header">' + createResultHeader('djs') + '</div>';
+                            listItem.addEventListener("click", (e) => copyToClipboard(candidate,'djs', e));
+                            const imagePathdjs = 'djsWords/'; //path to word.png images
+                            const img_djs = document.createElement("img");
+                            img_djs.src = `${imagePathdjs}${candidate}.png`;
+                            
 
-                        img_djs.onerror = function() {
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
+                            img_djs.onerror = function() {
+                                this.style.display = "none";  // Hide the image if it fails to load
+                            };
 
-                        // Add vertical align to the image based on the content of a corresponding text file
-                        getVerticalAlign(img_djs.src).then(verticalAlign => {
-                            img_djs.style.verticalAlign = verticalAlign;
-                        });
+                            // Add vertical align to the image based on the content of a corresponding text file
+                            getVerticalAlign(img_djs.src).then(verticalAlign => {
+                                img_djs.style.verticalAlign = verticalAlign;
+                            });
 
-                        listItem.appendChild(img_djs);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
+                            listItem.appendChild(img_djs);
+                            // Add the list item to the result list
+                            groupContainer.appendChild(listItem);
+                            hasVisibleRows = true;
+                        }
 
 
 
@@ -380,8 +485,8 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                         const objSim = findPageByWord(candidate);
                         
                         const resultItem = document.createElement('li');
-                        //resultItem.className = 'result-item';
-                        resultItem.innerHTML = `Simplified: ${candidate}`; // , X: ${word.x}, Y: ${word.y}`;
+                        resultItem.className = 'result-entry';
+                        resultItem.innerHTML = '<div class="result-header">' + createResultHeader('sim') + '</div>'; // , X: ${word.x}, Y: ${word.y}`;
                         resultItem.addEventListener("click", () => copyToClipboard(candidate,'sim'));
                         if (objSim) {
                             
@@ -447,36 +552,45 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                             resultItem.appendChild(outerContainer);
                             
                         }
-                        resultsContainer.appendChild(resultItem); 
+                        if (isVersionChecked('sim')) {
+                            groupContainer.appendChild(resultItem);
+                            hasVisibleRows = true;
+                        }
                          // Create Anniversary image
-                         listItem = document.createElement("li");
-                        listItem.textContent = 'anniversary: '+candidate;
-                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'ann', e));
-                        const imagePathann = 'annWords/'; //path to word.png images
-                        const img_ann = document.createElement("img");
-                        img_ann.src = `${imagePathann}${candidate}.png`;
-                        img_ann.onerror = function() {
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
+                        if (isVersionChecked('ann')) {
+                            listItem = document.createElement("li");
+                            listItem.className = 'result-entry';
+                            listItem.innerHTML = '<div class="result-header">' + createResultHeader('ann') + '</div>';
+                            listItem.addEventListener("click", (e) => copyToClipboard(candidate,'ann', e));
+                            const imagePathann = 'annWords/'; //path to word.png images
+                            const img_ann = document.createElement("img");
+                            img_ann.src = `${imagePathann}${candidate}.png`;
+                            img_ann.onerror = function() {
+                                this.style.display = "none";  // Hide the image if it fails to load
+                            };
 
-                        listItem.appendChild(img_ann);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
+                            listItem.appendChild(img_ann);
+                            // Add the list item to the result list
+                            groupContainer.appendChild(listItem);
+                            hasVisibleRows = true;
+                        }
 
 
 
 
                         // Create pre-Anniversary image
-                         listItem = document.createElement("li");
-                        listItem.textContent = 'pre-anniversary: '+candidate;
-                        listItem.addEventListener("click", (e) => copyToClipboard(candidate,'pre', e));
-                        const imagePathpre = 'preWords/'; //path to word.png images
-                        const img_pre = document.createElement("img");
-                        // For pre-anniversary we use the candidate directly (no page lookup performed)
-                        img_pre.src = `${imagePathpre}${candidate}.png`;
-                        
+                        if (isVersionChecked('pre')) {
+                            listItem = document.createElement("li");
+                            listItem.className = 'result-entry';
+                            listItem.innerHTML = '<div class="result-header">' + createResultHeader('pre') + '</div>';
+                            listItem.addEventListener("click", (e) => copyToClipboard(candidate,'pre', e));
+                            const imagePathpre = 'preWords/'; //path to word.png images
+                            const img_pre = document.createElement("img");
+                            // For pre-anniversary we use the candidate directly (no page lookup performed)
+                            img_pre.src = `${imagePathpre}${candidate}.png`;
+                            
 
-                        img_pre.onerror = function() {
+                            img_pre.onerror = function() {
             if (debugShortPattern && resultCount === 0) {
                 // Detailed debug report for unexpected misses
                 console.warn('DEBUG: No matches for short pattern. Char codes:', {
@@ -485,14 +599,20 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                     sampleFirst5: data.slice(0,5).map(w => ({ word: w, codes: Array.from(String(w).normalize('NFC'), c => c.charCodeAt(0)) }))
                 });
             }
-                            this.style.display = "none";  // Hide the image if it fails to load
-                        };
+                                this.style.display = "none";  // Hide the image if it fails to load
+                            };
 
-                        // Add vertical align to the image based on the content of a corresponding text file
+                            // Add vertical align to the image based on the content of a corresponding text file
 
-                        listItem.appendChild(img_pre);
-                        // Add the list item to the result list
-                        resultsContainer.appendChild(listItem);
+                            listItem.appendChild(img_pre);
+                            // Add the list item to the result list
+                            groupContainer.appendChild(listItem);
+                            hasVisibleRows = true;
+                        }
+
+                        if (hasVisibleRows) {
+                            resultsContainer.appendChild(groupContainer);
+                        }
                     }
                 
             }
@@ -501,6 +621,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             aboutText = aboutText.concat("<p><b>Simplified images extracted from</b> <i>Gregg Shorthand Dictionary Simplified,</i> a book published by The Gregg Publishing Company in 1945, written by Charles Rader. </p>");
             aboutText = aboutText.concat("<p><i><b>Anniversary images extracted from</b> Gregg Shorthand Dictionary,</i> a book published by The Gregg Publishing Company in 1930, including 18667 shorthand forms written by Winifred Kenna Richmond.</p>");
             aboutText = aboutText.concat("<p><i><b>Pre-anniversary images extracted from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar.</p>");
+            aboutText = aboutText.concat("<p><i><b>Notehand outlines adapted from</b> Professionally written Gregg Shorthand materials.</i></p>");
             const endMessage = document.createElement('div');
             const divAboutText = document.createElement('div');
             divAboutText.id = 'divAboutText';
@@ -585,6 +706,21 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                     })
                     .then(px => (-1 * parseFloat(px.trim())) + 'px')  // Prepend a '-' to the number
                     .catch(() => '0px');
+        }
+        function isVersionChecked(versionId) {
+            var el = document.getElementById('filter' + versionId.charAt(0).toUpperCase() + versionId.slice(1));
+            return !el || el.checked;
+        }
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+        function createResultHeader(version) {
+            return '<span class="version-badge">' + escapeHtml(version) + '</span>';
         }
         // Function to copy text to clipboard
         function copyToClipboard(text, globalGsd, ev) {
@@ -674,6 +810,18 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 });
                 // Initial sync based on current input value
                 updateSearchTypeRadiosFromInput();
+            } catch(e) { /* ignore */ }
+        })();
+        (function attachVersionFilters(){
+            try {
+                var ids = ['filterNot', 'filterDjs', 'filterSim', 'filterAnn', 'filterPre'];
+                ids.forEach(function(id){
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    el.addEventListener('change', function(){
+                        searchWords();
+                    });
+                });
             } catch(e) { /* ignore */ }
         })();
         // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
