@@ -137,7 +137,7 @@ def save_wordsearch(path: str, entries: List[dict], backup: bool):
 
 def main():
     ap = argparse.ArgumentParser(description="Merge page.word.t entries from reference into !wordsearchall.json")
-    ap.add_argument('--ref-file', default='simDictionary/!reference.json', help='Path to reference JSON file')
+    ap.add_argument('--ref-file', default='simDictionary/!reference.json', help='Path to reference JSON file') #change this to the correct !reference or !searchGSText.json file path
     ap.add_argument('--json-file', default='!wordsearchall.json', help='Path to wordsearch JSON list file')
     ap.add_argument('--no-backup', action='store_true', help='Do not create .bak backup before writing')
     ap.add_argument('--dry-run', action='store_true', help='Report additions without writing changes')

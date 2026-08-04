@@ -177,16 +177,19 @@ def save_json(path: str, data: List[dict], backup: bool):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Update !wordsearchall.json with words from !words.array.js")
-    parser.add_argument('--words-file', default='djsWords/!words.array.js', help='Path to JS file containing array of words')
+    parser = argparse.ArgumentParser(description="Update !wordsearchall.json with words from a JS array file")
+    parser.add_argument('--words-dir', default='djsWords', help='Folder containing the words array file (default: notWords)')  # default words folder
+    parser.add_argument('--words-file', default=None, help='Explicit path to the JS file containing the array of words; overrides --words-dir')
     parser.add_argument('--json-file', default='!wordsearchall.json', help='Path to JSON file to update')
     parser.add_argument('--no-backup', action='store_true', help='Do not create .bak backup of JSON before writing')
     parser.add_argument('--dry-run', action='store_true', help='Parse and report but do not modify JSON file')
     args = parser.parse_args()
 
+    words_path = args.words_file or str(Path(args.words_dir) / '!words.array.js')
+
     # Load JS words
     try:
-        js_content = read_text_with_fallback(args.words_file, preferred=None)
+        js_content = read_text_with_fallback(words_path, preferred=None)
     except OSError as e:
         print(f"Failed to read words file: {e}", file=sys.stderr)
         return 1
