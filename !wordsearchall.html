@@ -202,12 +202,30 @@ version 02/06/2025 at 9:18pm First version
         margin-top: 8px;
         padding-top: 0;
     }
-    .result-entry > img {
+    .result-media {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        width: 100%;
+    }
+    .result-media > img {
         display: block;
         width: auto;
         height: auto;
         max-width: 60%;
         align-self: flex-start;
+    }
+    .gst-cell {
+        width: 220px;
+        max-width: 220px;
+        font-family: Consolas, 'Courier New', monospace;
+        font-size: 0.9rem;
+        color: #334155;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 2px;
     }
     .result-header {
         display: flex;
@@ -245,7 +263,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2026.0804@01:45pm chkbx_fmt</p>
+    <p id="version">V2026.0805@05:58pm gst</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -302,6 +320,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             <label><input type="checkbox" id="filterSim" checked><span class="version-badge">sim</span></label>
             <label><input type="checkbox" id="filterAnn" checked><span class="version-badge">ann</span></label>
             <label><input type="checkbox" id="filterPre" checked><span class="version-badge">pre</span></label>
+            <label style="margin-left:8px; font-weight:600;"><span style="margin-right:6px;">show GST</span><input type="checkbox" id="showGst" checked></label>
         </div>
     </div>
     <div id="results"></div>
@@ -323,6 +342,16 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             }
         document.getElementById('regexInput').focus();
         document.getElementById('regexInput').select();
+
+        const showGstCheckbox = document.getElementById('showGst');
+        if (showGstCheckbox) {
+            showGstCheckbox.addEventListener('change', function() {
+                const regexInput = document.getElementById('regexInput');
+                if (regexInput && regexInput.value.trim()) {
+                    searchWords();
+                }
+            });
+        }
 
         document.getElementById('regexInput').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
@@ -347,6 +376,48 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 console.error('websearchall.json load error:', err);
                 allData = [];
             });
+
+        const gstLookupByVersion = {};
+        const gstDataSources = {
+            not: './notDictionary/!searchGSText.json',
+            djs: './djsDictionary/!searchGSText.json',
+            sim: './simDictionary/!searchGSText.json',
+            ann: './annDictionary/!searchGSText.json',
+            pre: './preDictionary/!searchGSText.json'
+        };
+
+        async function loadSearchGstData(versionId, url) {
+            try {
+                const response = await fetch(url, { cache: 'default' });
+                if (!response.ok) throw new Error(`Failed to load ${url}`);
+                const entries = await response.json();
+                const lookup = new Map();
+                for (const entry of Array.isArray(entries) ? entries : []) {
+                    if (!entry || typeof entry.text !== 'string') continue;
+                    const normalizedText = String(entry.text).trim().normalize('NFC');
+                    if (!normalizedText) continue;
+                    lookup.set(normalizedText.toLowerCase(), entry);
+                }
+                gstLookupByVersion[versionId] = lookup;
+            } catch (err) {
+                console.error(`Error loading GST data for ${versionId}:`, err);
+                gstLookupByVersion[versionId] = new Map();
+            }
+        }
+
+        const gstDataReady = Promise.all(
+            Object.entries(gstDataSources).map(([versionId, url]) => loadSearchGstData(versionId, url))
+        );
+
+        async function getGstValue(versionId, candidate) {
+            await gstDataReady;
+            const lookup = gstLookupByVersion[versionId];
+            if (!lookup) return '';
+            const normalizedCandidate = String(candidate || '').trim().normalize('NFC').toLowerCase();
+            const entry = lookup.get(normalizedCandidate);
+            if (!entry || typeof entry.gst !== 'string') return '';
+            return String(entry.gst).trim();
+        }
         // Preload and cache reference data once at page load
         //beg functions needed for sim dictionary
         let simReferencejson = [];
@@ -412,12 +483,14 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
             // Use preloaded data; wait for it if still loading
             const data = allData || (await allDataReady) || [];
+            await gstDataReady;
+            const showGst = showGstCheckbox ? showGstCheckbox.checked : true;
             let resultCount = 0;
             let totalMatches = 0;
 
             for (const item of data) {
-                const candidate = item.text
-                    if (regex.test(candidate)) {-
+                const candidate = item.text;
+                if (regex.test(candidate)) {
                         totalMatches++;
                         if (resultCount >= maxResults) {
                             continue;
@@ -443,7 +516,20 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 this.style.display = "none";  // Hide the image if it fails to load
                             };
 
-                            listItem.appendChild(img_not);
+                            const mediaContainer = document.createElement('div');
+                            mediaContainer.className = 'result-media';
+                            mediaContainer.appendChild(img_not);
+                            if (showGst) {
+                                const gstValue = await getGstValue('not', candidate);
+                                if (gstValue) {
+                                    const gstCell = document.createElement('div');
+                                    gstCell.className = 'gst-cell';
+                                    gstCell.textContent = gstValue;
+                                    mediaContainer.appendChild(gstCell);
+                                }
+                            }
+
+                            listItem.appendChild(mediaContainer);
                             // Add the list item to the result list
                             groupContainer.appendChild(listItem);
                             hasVisibleRows = true;
@@ -469,7 +555,20 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 img_djs.style.verticalAlign = verticalAlign;
                             });
 
-                            listItem.appendChild(img_djs);
+                            const mediaContainer = document.createElement('div');
+                            mediaContainer.className = 'result-media';
+                            mediaContainer.appendChild(img_djs);
+                            if (showGst) {
+                                const gstValue = await getGstValue('djs', candidate);
+                                if (gstValue) {
+                                    const gstCell = document.createElement('div');
+                                    gstCell.className = 'gst-cell';
+                                    gstCell.textContent = gstValue;
+                                    mediaContainer.appendChild(gstCell);
+                                }
+                            }
+
+                            listItem.appendChild(mediaContainer);
                             // Add the list item to the result list
                             groupContainer.appendChild(listItem);
                             hasVisibleRows = true;
@@ -549,7 +648,19 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                             imageContainer.appendChild(img);
                             outerContainer.appendChild(imageContainer);
                             // outerContainer.appendChild(expandButton);
-                            resultItem.appendChild(outerContainer);
+                            const mediaContainer = document.createElement('div');
+                            mediaContainer.className = 'result-media';
+                            mediaContainer.appendChild(outerContainer);
+                            if (showGst) {
+                                const gstValue = await getGstValue('sim', candidate);
+                                if (gstValue) {
+                                    const gstCell = document.createElement('div');
+                                    gstCell.className = 'gst-cell';
+                                    gstCell.textContent = gstValue;
+                                    mediaContainer.appendChild(gstCell);
+                                }
+                            }
+                            resultItem.appendChild(mediaContainer);
                             
                         }
                         if (isVersionChecked('sim')) {
@@ -569,7 +680,20 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 this.style.display = "none";  // Hide the image if it fails to load
                             };
 
-                            listItem.appendChild(img_ann);
+                            const mediaContainer = document.createElement('div');
+                            mediaContainer.className = 'result-media';
+                            mediaContainer.appendChild(img_ann);
+                            if (showGst) {
+                                const gstValue = await getGstValue('ann', candidate);
+                                if (gstValue) {
+                                    const gstCell = document.createElement('div');
+                                    gstCell.className = 'gst-cell';
+                                    gstCell.textContent = gstValue;
+                                    mediaContainer.appendChild(gstCell);
+                                }
+                            }
+
+                            listItem.appendChild(mediaContainer);
                             // Add the list item to the result list
                             groupContainer.appendChild(listItem);
                             hasVisibleRows = true;
@@ -602,9 +726,20 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                                 this.style.display = "none";  // Hide the image if it fails to load
                             };
 
-                            // Add vertical align to the image based on the content of a corresponding text file
+                            const mediaContainer = document.createElement('div');
+                            mediaContainer.className = 'result-media';
+                            mediaContainer.appendChild(img_pre);
+                            if (showGst) {
+                                const gstValue = await getGstValue('pre', candidate);
+                                if (gstValue) {
+                                    const gstCell = document.createElement('div');
+                                    gstCell.className = 'gst-cell';
+                                    gstCell.textContent = gstValue;
+                                    mediaContainer.appendChild(gstCell);
+                                }
+                            }
 
-                            listItem.appendChild(img_pre);
+                            listItem.appendChild(mediaContainer);
                             // Add the list item to the result list
                             groupContainer.appendChild(listItem);
                             hasVisibleRows = true;

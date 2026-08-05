@@ -119,6 +119,32 @@ function Upload-FileToFTP {
     }
 }
 
+function Prompt-DeleteSourceFile {
+    param(
+        [switch]$DeleteAfterUpload
+    )
+
+    if ($DeleteAfterUpload) {
+        Write-Host "Auto-deleting source file as requested..." -ForegroundColor Yellow
+        return $true
+    }
+
+    try {
+        Write-Host "`nDelete the source file? [Y/N] (default: Y): " -ForegroundColor Yellow -NoNewline
+        $response = Read-Host
+        if ([string]::IsNullOrWhiteSpace($response)) {
+            return $true
+        }
+
+        $normalized = $response.Trim().ToLowerInvariant()
+        return ($normalized -notin @('n','no'))
+    }
+    catch {
+        Write-Host "Unable to read your choice. Keeping the source file." -ForegroundColor Cyan
+        return $false
+    }
+}
+
 # Main script execution
 Write-Host "=== Portfolio CSV Uploader ===" -ForegroundColor Magenta
 Write-Host "Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Gray
@@ -207,30 +233,21 @@ if ($success) {
         Write-Host "⚠️ Warning: Failed to create local copy: $($_.Exception.Message)" -ForegroundColor Yellow
         Write-Host "Upload was successful, but local copy creation failed." -ForegroundColor Yellow
     }
-    
-    # Handle file deletion
-    $shouldDelete = $false
-    
-    if ($DeleteAfterUpload) {
-        $shouldDelete = $true
-        Write-Host "Auto-deleting source file as requested..." -ForegroundColor Yellow
-    } else {
-        Write-Host "`nDelete source file? (Press N to keep, anything else deletes): " -ForegroundColor Yellow -NoNewline
-        $deleteChoice = Read-Host
-        $shouldDelete = ($deleteChoice.Trim().ToLower() -ne 'n')
-    }
-    
-    if ($shouldDelete) {
-        try {
-            Remove-Item $filePath -Force
-            Write-Host "✅ Source file deleted successfully!" -ForegroundColor Green
-        }
-        catch {
-            Write-Host "❌ Failed to delete source file: $($_.Exception.Message)" -ForegroundColor Red
-        }
-    } else {
-        Write-Host "Source file kept as requested." -ForegroundColor Cyan
-    }
 } else {
     Write-Host "`n❌ Upload failed!" -ForegroundColor Red
+}
+
+# Handle file deletion after the upload attempt
+$shouldDelete = Prompt-DeleteSourceFile -DeleteAfterUpload:$DeleteAfterUpload
+
+if ($shouldDelete) {
+    try {
+        Remove-Item $filePath -Force
+        Write-Host "✅ Source file deleted successfully!" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "❌ Failed to delete source file: $($_.Exception.Message)" -ForegroundColor Red
+    }
+} else {
+    Write-Host "Source file kept as requested." -ForegroundColor Cyan
 }
