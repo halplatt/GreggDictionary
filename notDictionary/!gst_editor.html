@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DJS GST Editor</title>
+<title>GST Editor</title>
 <style>
   :root{
     --paper:#f4efe3; --card:#fffdf7; --ink:#23211c; --faint:#7a7363;
@@ -83,7 +83,7 @@
 </head>
 <body>
 <header>
-  <h1>DJS GST Editor</h1>
+  <h1 id="appTitle">GST Editor</h1>
   <div class="grp">
     <button id="openJson" class="primary">Open JSON…</button>
     <button id="openDir">Image folder…</button>
@@ -124,8 +124,8 @@
 
 <main id="main">
   <div class="empty" id="empty">
-    <p><b>1.</b> Click <b>Open JSON…</b> and choose <b>!searchGSText.json</b>.<br>
-    <b>2.</b> Click <b>Image folder…</b> and choose the <b>djsWords</b> folder.</p>
+    <p><b>1.</b> Click <b>Open JSON…</b> and choose <b id="defaultJsonName">!searchGSText.json</b>.<br>
+    <b>2.</b> Click <b>Image folder…</b> and choose the <b id="defaultImageFolderName">djsWords</b> folder.</p>
     <p>Edit a <b>gst</b> field, press <b>Enter</b> to mark it reviewed and move on. The bar
     above tracks how many of the entries you've reviewed; use the filter or
     filters to pick up where you left off.</p>
@@ -140,11 +140,13 @@
   <span><kbd>Enter</kbd> reviewed + next</span>
   <span><kbd>Ctrl</kbd>+<kbd>S</kbd> save</span>
   <span><kbd>PgUp</kbd>/<kbd>PgDn</kbd> pages</span>
+  <span id="imageStatus"></span>
   <span id="loadedName"></span>
 </footer>
 
 <script>
 const HAS_FS = 'showOpenFilePicker' in window;
+const DEFAULT_JSON_NAME = '!searchGSText.json';
 let data = [];                 // [{text, gst, notes, _orig}]
 let view = [];                 // indices into data, after filter
 let reviewed = new Set();      // texts marked reviewed
@@ -154,7 +156,11 @@ let dirty = false, urls = [], currentName = '';
 let gstRe = null, textRe = null;   // active compiled regex filters (or null)
 let selected = new Set();      // selected object indices in data
 let imageUrlBase = null;       // default sibling image folder URL (when no directory handle)
-let imageUrlFallbackBase = null;
+let jsonFolderName = '';
+let shorthandVersion = '';
+let cachedJsonHandle = null, cachedDefaultJsonHandle = null;
+let cachedDirHandle = null, cachedDefaultDirHandle = null;
+let cachedLegacyJsonHandle = null, cachedLegacyDirHandle = null;
 
 const $ = id => document.getElementById(id);
 const pageSize = () => parseInt($('pageSize').value, 10);
@@ -163,16 +169,45 @@ function currentFolderName(){
   const parts = decodeURIComponent(location.pathname).replace(/\\/g,'/').split('/').filter(Boolean);
   return parts.length >= 2 ? parts[parts.length - 2] : '';
 }
-function deriveImageFolderNames(){
-  const folder = currentFolderName();
-  const prefix = (folder.slice(0,3) || folder).trim();
-  if(!prefix) return ['djsWord','djsWords'];
-  return [prefix + 'Word', prefix + 'Words'];
+function normalizeVersionCode(v){
+  const s = String(v || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  return s.slice(0, 3);
 }
-function defaultImageFolderUrls(){
+function deriveVersionFromFolderName(folder){
+  let name = String(folder || '').trim();
+  if(!name) return '';
+  name = name.replace(/\s+folder$/i, '');
+  name = name.replace(/\s*dictionary$/i, '');
+  name = name.replace(/[_\-\s]+$/g, '').trim();
+  if(!name) return '';
+  return name.slice(0, 3).toLowerCase();
+}
+function updateAppTitle(){
+  const t = shorthandVersion ? 'GST Editor (' + shorthandVersion + ')' : 'GST Editor';
+  document.title = t;
+  $('appTitle').textContent = t;
+}
+function updateDefaultFolderHints(){
+  const imgFolder = deriveImageFolderName();
+  $('defaultJsonName').textContent = DEFAULT_JSON_NAME;
+  $('defaultImageFolderName').textContent = imgFolder;
+}
+function setJsonFolderContext(folder){
+  jsonFolderName = String(folder || '').trim();
+  shorthandVersion = deriveVersionFromFolderName(jsonFolderName);
+  updateAppTitle();
+  imageUrlBase = defaultImageFolderUrl();
+  updateDefaultFolderHints();
+  updateImageStatus();
+}
+function deriveImageFolderName(){
+  const prefix = (shorthandVersion || deriveVersionFromFolderName(currentFolderName())).trim();
+  if(!prefix) return 'djsWords';
+  return prefix + 'Words';
+}
+function defaultImageFolderUrl(){
   const here = new URL('.', location.href);
-  const [first, second] = deriveImageFolderNames();
-  return [new URL('../' + first + '/', here).href, new URL('../' + second + '/', here).href];
+  return new URL('../' + deriveImageFolderName() + '/', here).href;
 }
 function displayPathFromUrl(u){
   let p = decodeURIComponent(u.pathname).replace(/\\/g,'/');
@@ -181,6 +216,36 @@ function displayPathFromUrl(u){
 }
 function currentHtmlDirPath(){ return displayPathFromUrl(new URL('.', location.href)); }
 function currentHtmlParentDirPath(){ return displayPathFromUrl(new URL('../', location.href)); }
+function updateImageStatus(){
+  const el = $('imageStatus');
+  if(!el) return;
+  if(dirHandle){
+    el.textContent = 'Image: ' + dirHandle.name + ' (manual)';
+    return;
+  }
+  if(imageMap){
+    el.textContent = 'Image: selected folder (manual)';
+    return;
+  }
+  el.textContent = 'Image: ' + deriveImageFolderName() + ' (default)';
+}
+function scopeName(){
+  return String(jsonFolderName || currentFolderName() || 'default').toLowerCase();
+}
+function scopeToken(){
+  const raw = String(scopeName() || 'def').replace(/[^a-z0-9]/g, '');
+  return (raw || 'def').slice(0, 8);
+}
+function pickerId(base){
+  const b = String(base || 'p').replace(/[^a-z0-9\-]/gi, '').slice(0, 20);
+  return (b + '-' + scopeToken()).slice(0, 32);
+}
+function handleKey(base){
+  return base + ':' + scopeName();
+}
+function reviewedKey(name){
+  return 'reviewed:' + scopeName() + ':' + name;
+}
 
 /* ---------- tiny IndexedDB key/value ---------- */
 function db(){ return new Promise((res,rej)=>{ const r=indexedDB.open('gstEditor',1);
@@ -189,33 +254,128 @@ async function kvSet(k,v){ const d=await db(); return new Promise((res,rej)=>{ c
   t.objectStore('kv').put(v,k); t.oncomplete=()=>res(); t.onerror=()=>rej(t.error); }); }
 async function kvGet(k){ const d=await db(); return new Promise((res,rej)=>{ const t=d.transaction('kv','readonly');
   const q=t.objectStore('kv').get(k); q.onsuccess=()=>res(q.result); q.onerror=()=>rej(q.error); }); }
+async function refreshScopedHandles(){
+  if(!HAS_FS) return;
+  cachedJsonHandle = await kvGet(handleKey('jsonHandle'));
+  cachedDefaultJsonHandle = await kvGet(handleKey('defaultJsonHandle'));
+  cachedDirHandle = await kvGet(handleKey('dirHandle'));
+  cachedDefaultDirHandle = await kvGet(handleKey('defaultDirHandle'));
+  cachedLegacyJsonHandle = await kvGet('jsonHandle');
+  cachedLegacyDirHandle = await kvGet('dirHandle');
+
+  if(!cachedDefaultJsonHandle && cachedLegacyJsonHandle){
+    try{
+      const f = await cachedLegacyJsonHandle.getFile();
+      if(f.name === DEFAULT_JSON_NAME){
+        cachedDefaultJsonHandle = cachedLegacyJsonHandle;
+        await kvSet(handleKey('defaultJsonHandle'), cachedLegacyJsonHandle);
+      }
+    }catch(_){ }
+  }
+
+  if(!cachedDefaultDirHandle && cachedDirHandle && cachedDirHandle.name === deriveImageFolderName()){
+    cachedDefaultDirHandle = cachedDirHandle;
+    await kvSet(handleKey('defaultDirHandle'), cachedDirHandle);
+  }
+  if(!cachedDefaultDirHandle && cachedLegacyDirHandle && cachedLegacyDirHandle.name === deriveImageFolderName()){
+    cachedDefaultDirHandle = cachedLegacyDirHandle;
+    await kvSet(handleKey('defaultDirHandle'), cachedLegacyDirHandle);
+  }
+}
 
 /* ---------- open JSON ---------- */
 $('openJson').onclick = async () => {
   try{
-    if (HAS_FS){
-      const savedJsonHandle = fileHandle || await kvGet('jsonHandle');
-      const opts = {
-        id: 'gst-json-open',
-        startIn: savedJsonHandle || 'documents',
-        types:[{description:'JSON',accept:{'application/json':['.json']}}]
-      };
-      [fileHandle] = await window.showOpenFilePicker(opts);
-      await kvSet('jsonHandle', fileHandle);
-      const f = await fileHandle.getFile();
-      await loadData(JSON.parse(await f.text()), f.name);
-    } else {
-      pickFile('.json', async f => loadData(JSON.parse(await f.text()), f.name));
-    }
+    const savedJsonHandle = HAS_FS
+      ? (fileHandle || cachedDefaultJsonHandle || cachedJsonHandle || cachedLegacyJsonHandle)
+      : null;
+    const ok = await promptOpenJson(savedJsonHandle, pickerId('gst-json-open'));
+    if(!ok) $('pos').textContent = 'json open cancelled';
   }catch(e){ if(e.name!=='AbortError') alert('Could not open file: '+e.message); }
 };
 
+async function promptOpenJson(startInHandle, pickerId){
+  if(HAS_FS){
+    let picked;
+    try{
+      const opts = {
+        id: pickerId || 'gst-json-open',
+        startIn: startInHandle || 'documents',
+        types:[{description:'JSON',accept:{'application/json':['.json']}}]
+      };
+      [picked] = await window.showOpenFilePicker(opts);
+    }catch(e){
+      if(e && e.name === 'AbortError') throw e;
+      const retryOpts = {
+        id: pickerId('gjo-r'),
+        types:[{description:'JSON',accept:{'application/json':['.json']}}]
+      };
+      [picked] = await window.showOpenFilePicker(retryOpts);
+    }
+    fileHandle = picked;
+    const f = await picked.getFile();
+    await maybeSwitchContextForPickedJson(picked, f.name);
+    await kvSet(handleKey('jsonHandle'), picked);
+    cachedJsonHandle = picked;
+    if(f.name === DEFAULT_JSON_NAME) await kvSet(handleKey('defaultJsonHandle'), picked);
+    if(f.name === DEFAULT_JSON_NAME) cachedDefaultJsonHandle = picked;
+    await loadData(JSON.parse(await f.text()), f.name);
+    return true;
+  }
+  return new Promise(resolve => {
+    pickFile('.json', async f => {
+      if(!f){ resolve(false); return; }
+      try{
+        await loadData(JSON.parse(await f.text()), f.name);
+        resolve(true);
+      }catch(e){
+        alert('Could not open file: ' + e.message);
+        resolve(false);
+      }
+    });
+  });
+}
+
+async function isSameHandle(a, b){
+  if(!a || !b || typeof a.isSameEntry !== 'function') return false;
+  try{ return await a.isSameEntry(b); }catch(_){ return false; }
+}
+
+async function maybeSwitchContextForPickedJson(picked, fileName){
+  if(!HAS_FS || fileName !== DEFAULT_JSON_NAME) return;
+
+  const sameAsCurrentDefault = await isSameHandle(picked, cachedDefaultJsonHandle);
+  const sameAsCurrentJson = await isSameHandle(picked, cachedJsonHandle);
+  const sameAsLegacy = await isSameHandle(picked, cachedLegacyJsonHandle);
+  if(sameAsCurrentDefault || sameAsCurrentJson || sameAsLegacy) return;
+
+  const suggested = shorthandVersion || normalizeVersionCode(currentFolderName()) || 'ann';
+  const entered = window.prompt('Selected JSON appears to be from a different dictionary folder. Enter 3-letter version (e.g., ann, djs, pre):', suggested);
+  if(entered === null) return;
+
+  const code = normalizeVersionCode(entered);
+  if(!code){
+    alert('Invalid version code. Keeping current context.');
+    return;
+  }
+  if(code === shorthandVersion) return;
+
+  setJsonFolderContext(code + 'Dictionary');
+  await refreshScopedHandles();
+}
+
 async function loadData(arr, name){
   if(!Array.isArray(arr)){ alert('That file is not a JSON array.'); return; }
+  const resume = $('resumeWrap');
+  if(resume){
+    resume.hidden = true;
+    resume.replaceChildren();
+  }
   data = arr.map(o => ({text:o.text??'', gst:o.gst??'', notes:o.notes??'', _orig:o.gst??''}));
   currentName = name;
-  reviewed = new Set(await kvGet('reviewed:'+name) || []);
-  [imageUrlBase, imageUrlFallbackBase] = defaultImageFolderUrls();
+  reviewed = new Set(await kvGet(reviewedKey(name)) || []);
+  imageUrlBase = defaultImageFolderUrl();
+  updateImageStatus();
   selected = new Set();
   start = 0; setDirty(false);
   $('loadedName').textContent = name + ' — ' + data.length.toLocaleString() + ' entries';
@@ -227,17 +387,22 @@ async function loadData(arr, name){
 $('openDir').onclick = async () => {
   try{
     if (HAS_FS){
-      const savedDirHandle = dirHandle || await kvGet('dirHandle');
-      const savedJsonHandle = fileHandle || await kvGet('jsonHandle');
+      const savedDirHandle = dirHandle || cachedDefaultDirHandle || cachedDirHandle || cachedLegacyDirHandle;
       const opts = {
-        id: 'gst-image-open',
-        startIn: savedDirHandle || savedJsonHandle || 'documents'
+        id: pickerId('gst-image-open'),
+        startIn: savedDirHandle || 'documents'
       };
       dirHandle = await window.showDirectoryPicker(opts);
-      await kvSet('dirHandle', dirHandle);
+      await kvSet(handleKey('dirHandle'), dirHandle);
+      cachedDirHandle = dirHandle;
+      if(dirHandle.name === deriveImageFolderName()){
+        await kvSet(handleKey('defaultDirHandle'), dirHandle);
+        cachedDefaultDirHandle = dirHandle;
+      }
+      updateImageStatus();
       render();
     } else {
-      pickFile('dir', files => { imageMap = new Map(); for(const f of files) imageMap.set(f.name,f); render(); });
+      pickFile('dir', files => { imageMap = new Map(); for(const f of files) imageMap.set(f.name,f); updateImageStatus(); render(); });
     }
   }catch(e){ if(e.name!=='AbortError') alert('Could not open folder: '+e.message); }
 };
@@ -251,32 +416,75 @@ function pickFile(kind, cb){
 
 /* ---------- resume last session ---------- */
 window.addEventListener('DOMContentLoaded', tryResume);
+function showSessionButton(jsonPath, imagePath, onClick){
+  const w = $('resumeWrap');
+  w.hidden = false;
+  w.replaceChildren();
+  const b = document.createElement('button');
+  b.className = 'primary';
+  b.style.whiteSpace = 'pre-line';
+  b.style.textAlign = 'left';
+  b.textContent = 'click to open session\nJSON: ' + jsonPath + '\nImage: ' + imagePath;
+  b.onclick = onClick;
+  w.appendChild(b);
+}
 async function tryResume(){
-  if(!HAS_FS) return;
-  let jh, dh;
-  try{ jh = await kvGet('jsonHandle'); dh = await kvGet('dirHandle'); }catch(_){ return; }
-  if(!jh) return;
-  const granted = (await jh.queryPermission({})) === 'granted';
-  if(granted){
-    fileHandle = jh;
-    if(dh && (await dh.queryPermission({}))==='granted') dirHandle = dh;
-    const f = await jh.getFile(); await loadData(JSON.parse(await f.text()), f.name);
-  } else {
-    const w = $('resumeWrap'); w.hidden=false;
-    const b = document.createElement('button'); b.className='primary';
-    const jsonPath = currentHtmlDirPath() + '/' + jh.name;
-    const [imgName] = deriveImageFolderNames();
-    const imagePath = currentHtmlParentDirPath() + '/' + (dh ? dh.name : imgName);
-    b.style.whiteSpace = 'pre-line';
-    b.style.textAlign = 'left';
-    b.textContent = 'Reopen last session\nJSON: ' + jsonPath + '\nImage: ' + imagePath;
-    b.onclick = async () => {
-      if((await jh.requestPermission({}))!=='granted'){ alert('Permission denied.'); return; }
-      fileHandle = jh;
-      if(dh){ try{ await dh.requestPermission({}); dirHandle = dh; }catch(_){} }
-      const f = await jh.getFile(); await loadData(JSON.parse(await f.text()), f.name);
-    };
-    w.appendChild(b);
+  setJsonFolderContext(currentFolderName());
+  await refreshScopedHandles();
+  const imgName = deriveImageFolderName();
+  const defaultJsonPath = currentHtmlDirPath() + '/' + DEFAULT_JSON_NAME;
+  const defaultImagePath = currentHtmlParentDirPath() + '/' + imgName;
+  showSessionButton(defaultJsonPath, defaultImagePath, async ()=>{
+    const ok = await openDefaultSession(true);
+    if(!ok) $('pos').textContent = 'session open cancelled';
+  });
+  await openDefaultSession(false);
+}
+
+async function tryLoadDefaultJsonFromCurrentFolder(){
+  if(data.length) return true;
+  try{
+    const r = await fetch(DEFAULT_JSON_NAME, {cache:'no-store'});
+    if(!r.ok) return false;
+    const arr = await r.json();
+    await loadData(arr, DEFAULT_JSON_NAME);
+    return true;
+  }catch(_){
+    return false;
+  }
+}
+
+async function openDefaultSession(userInitiated){
+  const openedByHandle = await tryLoadDefaultJsonFromStoredHandle(userInitiated);
+  if(openedByHandle) return true;
+
+  const openedByFetch = await tryLoadDefaultJsonFromCurrentFolder();
+  if(openedByFetch) return true;
+
+  if(!userInitiated) return false;
+  if(!HAS_FS) return await promptOpenJson(null, pickerId('gst-open-default'));
+  try{
+    return await promptOpenJson(fileHandle || cachedDefaultJsonHandle || cachedJsonHandle, pickerId('gst-open-default'));
+  }catch(_){
+    return false;
+  }
+}
+
+async function tryLoadDefaultJsonFromStoredHandle(userInitiated){
+  if(!HAS_FS || data.length) return false;
+  const h = cachedDefaultJsonHandle || cachedJsonHandle;
+  if(!h) return false;
+  try{
+    let perm = await h.queryPermission({});
+    if(perm!=='granted' && userInitiated) perm = await h.requestPermission({});
+    if(perm!=='granted') return false;
+    const f = await h.getFile();
+    if(f.name !== DEFAULT_JSON_NAME) return false;
+    fileHandle = h;
+    await loadData(JSON.parse(await f.text()), f.name);
+    return true;
+  }catch(_){
+    return false;
   }
 }
 
@@ -439,17 +647,7 @@ async function loadImage(iw,text){
       const img = new Image();
       img.alt = text;
       img.onload = ()=> iw.replaceChildren(img);
-      img.onerror = ()=>{
-        if(imageUrlFallbackBase && imageUrlFallbackBase !== imageUrlBase){
-          const img2 = new Image();
-          img2.alt = text;
-          img2.onload = ()=> iw.replaceChildren(img2);
-          img2.onerror = ()=>{ iw.innerHTML='<span class="miss">no image</span>'; };
-          img2.src = imageUrlFallbackBase + encodeURIComponent(name);
-          return;
-        }
-        iw.innerHTML='<span class="miss">no image</span>';
-      };
+      img.onerror = ()=>{ iw.innerHTML='<span class="miss">no image</span>'; };
       img.src = imageUrlBase + encodeURIComponent(name);
       return;
     }
@@ -465,7 +663,7 @@ function mark(text, val, card){
   if(val) reviewed.add(text); else reviewed.delete(text);
   if(card) card.classList.toggle('reviewed', val);
   updateProgress();
-  clearTimeout(revTimer); revTimer=setTimeout(()=>kvSet('reviewed:'+currentName,[...reviewed]),600);
+  clearTimeout(revTimer); revTimer=setTimeout(()=>kvSet(reviewedKey(currentName),[...reviewed]),600);
 }
 
 /* ---------- navigation ---------- */
