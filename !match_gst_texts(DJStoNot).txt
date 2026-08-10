@@ -1,3 +1,25 @@
-Copied PNG files from d:\HostGatorFiles\public_html\notes\djsWords: 1
-Skipped existing targets already in d:\HostGatorFiles\public_html\notes\notWords: 2646
-Missing source copies from d:\HostGatorFiles\public_html\notes\djsWords: 0
+Copied PNG/TXT files from d:\HostGatorFiles\public_html\notes\djsWords: 1881
+Skipped existing targets already in d:\HostGatorFiles\public_html\notes\notWords: 2650
+Missing source copies from d:\HostGatorFiles\public_html\notes\djsWords: 797
+
+Missing source examples:
+a: missing source I.txt
+a-b-u: missing source about your.txt
+a-b/l: missing source ability.txt
+a-d-o-p-t: missing source adopt.txt
+a-d-o-p-td: missing source adopted.txt
+a-d-sh: missing source addition.txt
+a-d-sh-l: missing source additional.txt
+a-f-e-l: missing source I feel.txt
+a-g-n-s-t: missing source against.txt
+a-j-nt: missing source agent.txt
+a-l-o-n: missing source alone.txt
+a-n-l-i-s: missing source analyze.txt
+a-n-o-e-n-s: missing source annoyance.txt
+a-p-e-l: missing source appeal.txt
+a-p-e-r: missing source appear.txt
+a-p-e-r-a-n-s: missing source appearance.txt
+a-p-e-rd: missing source appeared.txt
+a-p-l: missing source apple.txt
+a-p-l-i-d: missing source applied.txt
+a-p-o-e-nt-m: missing source appointment.txt

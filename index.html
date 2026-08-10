@@ -212,6 +212,17 @@ h3 {color:white}
 		.then(html => {
 			// Replace all "~/" paths with "./" since this page is in the same directory
 			hostEl.innerHTML = html.replace(/~\//g, './');
+
+      const linksContent = hostEl.querySelector('#linksContent');
+      const toggleButton = hostEl.querySelector('#toggleLinksBtn');
+
+      if (linksContent) {
+        linksContent.classList.remove('hidden');
+      }
+
+      if (toggleButton) {
+        toggleButton.textContent = 'Hide Links to other Gregg Tools';
+      }
 		})
 		.catch(err => {
 			console.error('Failed to load shared links:', err);
