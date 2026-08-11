@@ -22,7 +22,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0802@10:58pm format'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0802@10:58pm reuseTab'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -119,47 +119,18 @@
             padding: 5px 10px;
             margin-right: 10px;
         }
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 16px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
         }
-        .result-card {
+        th, td {
             border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #fff;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            cursor: pointer;
+            padding: 8px;
+            text-align: left;
         }
-        .result-word {
-            font-size: 1.1rem;
-            font-weight: 700;
-            word-break: break-word;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
-        }
-        .result-image {
-            min-height: 70px;
-        }
-        .result-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        .result-gst {
-            font-family: "Courier New", monospace;
-            word-break: break-word;
-            border-top: 1px solid #eee;
-            padding-top: 8px;
-        }
-        .result-notes {
-            border-top: 1px solid #eee;
-            padding-top: 8px;
-            color: #333;
-            word-break: break-word;
+        th {
+            background-color: #f4f4f4;
         }
         .version {
             position: absolute;
@@ -360,9 +331,19 @@
              </div>
         </div>
     </div>
-    <div id="resultsGrid" class="results-grid">
-        <!-- Results will be displayed here -->
-    </div>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Outline</th>
+                <th>GST</th>
+                <th class="notes-column">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be displayed here -->
+        </tbody>
+    </table>
     <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
     <div id="resultsFooter" class="results-footer"></div>
 
@@ -408,7 +389,7 @@
             const showNotesEl = document.getElementById('showNotes');
             const shouldShow = !!(showNotesEl && showNotesEl.checked);
             document.querySelectorAll('.notes-column').forEach(el => {
-                el.style.display = shouldShow ? '' : 'none';
+                el.style.display = shouldShow ? 'table-cell' : 'none';
             });
         }
 
@@ -532,8 +513,8 @@
         }
 
         function displayResults(results, searchTerm = '', searchType = '') {
-            const resultsGrid = document.getElementById('resultsGrid');
-            resultsGrid.innerHTML = ''; // Clear previous results
+            const tableBody = document.querySelector('#resultsTable tbody');
+            tableBody.innerHTML = ''; // Clear previous results
             // Determine limits
             const maxResultsEl = document.getElementById('maxResults');
             const maxResults = parseInt(maxResultsEl && maxResultsEl.value, 10) || 100;
@@ -541,45 +522,34 @@
             const toDisplay = results.slice(0, Math.max(0, Math.min(totalMatches, maxResults)));
 
             toDisplay.forEach(entry => {
-                const card = document.createElement('div');
-                card.className = 'result-card';
+                const row = document.createElement('tr');
+                const textCell = document.createElement('td');
+                const pageCell = document.createElement('td'); // Outline column
+                const gstCell = document.createElement('td');
+                const notesCell = document.createElement('td');
+                notesCell.className = 'notes-column';
 
-                const textBlock = document.createElement('div');
-                textBlock.className = 'result-word';
-                textBlock.textContent = entry.text || ''; // Handle missing text
-
-                const imageBlock = document.createElement('div');
-                imageBlock.className = 'result-image';
-
-                const gstBlock = document.createElement('div');
-                gstBlock.className = 'result-gst';
-                gstBlock.textContent = entry.gst || '';
-
-                const notesBlock = document.createElement('div');
-                notesBlock.className = 'result-notes notes-column';
-                const notesValue = document.createElement('span');
-                const notesText = (entry.notes === undefined || entry.notes === null) ? '' : String(entry.notes).trim();
-                if (notesText.length > 0) {
-                    setNotesCellContent(notesValue, entry.notes); // Handle missing notes and autolink URLs
-                }
-                notesBlock.appendChild(notesValue);
+                textCell.textContent = entry.text || ''; // Handle missing text
+                gstCell.textContent = entry.gst || ''; // Handle missing gst
+                setNotesCellContent(notesCell, entry.notes); // Handle missing notes and autolink URLs
 
                 // Call searchRefJson and get the page value
-                // Call imageContainer and append the resulting div to imageBlock
+                // Call imageContainer and append the resulting div to pageCell
                 const imageDiv = imageContainer(entry.text || '');
-                imageBlock.appendChild(imageDiv);
+                pageCell.appendChild(imageDiv);
 
-                card.appendChild(textBlock);
-                card.appendChild(imageBlock);
-                card.appendChild(gstBlock);
-                card.appendChild(notesBlock);
-                // Open dictionary when clicking a card
-                card.addEventListener('click', function(event) {
+                // Column order: Text, Outline, GST
+                row.appendChild(textCell);
+                row.appendChild(pageCell);
+                row.appendChild(gstCell);
+                row.appendChild(notesCell);
+                //add click event to row
+                row.addEventListener('click', function() {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
                     const url = `../GreggDictionary${public_domain_only}.html?x=${entry.text}&gsd=${globalGsd}`;
                     window.open(url, 'GreggDictionary');
             });
-                resultsGrid.appendChild(card);
+                tableBody.appendChild(row);
             });
 
             updateNotesVisibility();
@@ -788,7 +758,6 @@
 
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
-            resultItem.textContent = '';
 
              // If searchRefJson returns null, return an empty resultItem
             if (!objRef) {//There is no match in the reference file use png image
@@ -814,6 +783,8 @@
 
                 return resultItem;
             }
+            resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
+
             
             const outerContainer = document.createElement('div');
             outerContainer.className = 'max-w-screen overflow-x-auto';
@@ -841,7 +812,7 @@
             const expandButton = document.createElement('button');
             expandButton.className = 'expand-button';
             expandButton.innerHTML = 'Expand';
-            expandButton.onclick = function(event) {
+            expandButton.onclick = function() {
                 event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
                 if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
                     imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;

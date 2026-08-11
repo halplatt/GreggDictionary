@@ -22,7 +22,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0802@10:58pm reuseTab'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0810@08:01pm format'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -119,18 +119,61 @@
             padding: 5px 10px;
             margin-right: 10px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
             margin-top: 20px;
         }
-        th, td {
+        .result-card {
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            border-radius: 8px;
+            background: #fff;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            cursor: pointer;
         }
-        th {
-            background-color: #f4f4f4;
+        .result-word {
+            font-size: 1.1rem;
+            font-weight: 700;
+            word-break: break-word;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+        .result-image {
+            min-height: 70px;
+        }
+        .result-image-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+        .result-image-crop {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+        .result-image img.result-inline-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .result-gst {
+            font-family: "Courier New", monospace;
+            word-break: break-word;
+            border-top: 1px solid #eee;
+            padding-top: 8px;
+            color: #111;
+            display: block;
+            min-height: 1.2em;
+        }
+        .result-notes {
+            border-top: 1px solid #eee;
+            padding-top: 8px;
+            color: #333;
+            word-break: break-word;
+            display: block;
+            min-height: 1.2em;
         }
         .version {
             position: absolute;
@@ -331,19 +374,9 @@
              </div>
         </div>
     </div>
-    <table id="resultsTable">
-        <thead>
-            <tr>
-                <th>Text</th>
-                <th>Outline</th>
-                <th>GST</th>
-                <th class="notes-column">Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Results will be displayed here -->
-        </tbody>
-    </table>
+    <div id="resultsGrid" class="results-grid">
+        <!-- Results will be displayed here -->
+    </div>
     <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
     <div id="resultsFooter" class="results-footer"></div>
 
@@ -389,7 +422,7 @@
             const showNotesEl = document.getElementById('showNotes');
             const shouldShow = !!(showNotesEl && showNotesEl.checked);
             document.querySelectorAll('.notes-column').forEach(el => {
-                el.style.display = shouldShow ? 'table-cell' : 'none';
+                el.style.display = shouldShow ? '' : 'none';
             });
         }
 
@@ -513,8 +546,8 @@
         }
 
         function displayResults(results, searchTerm = '', searchType = '') {
-            const tableBody = document.querySelector('#resultsTable tbody');
-            tableBody.innerHTML = ''; // Clear previous results
+            const resultsGrid = document.getElementById('resultsGrid');
+            resultsGrid.innerHTML = ''; // Clear previous results
             // Determine limits
             const maxResultsEl = document.getElementById('maxResults');
             const maxResults = parseInt(maxResultsEl && maxResultsEl.value, 10) || 100;
@@ -522,34 +555,50 @@
             const toDisplay = results.slice(0, Math.max(0, Math.min(totalMatches, maxResults)));
 
             toDisplay.forEach(entry => {
-                const row = document.createElement('tr');
-                const textCell = document.createElement('td');
-                const pageCell = document.createElement('td'); // Outline column
-                const gstCell = document.createElement('td');
-                const notesCell = document.createElement('td');
-                notesCell.className = 'notes-column';
+                const card = document.createElement('div');
+                card.className = 'result-card';
 
-                textCell.textContent = entry.text || ''; // Handle missing text
-                gstCell.textContent = entry.gst || ''; // Handle missing gst
-                setNotesCellContent(notesCell, entry.notes); // Handle missing notes and autolink URLs
+                const textBlock = document.createElement('div');
+                textBlock.className = 'result-word';
+                textBlock.textContent = entry.text || ''; // Handle missing text
+
+                const imageBlock = document.createElement('div');
+                imageBlock.className = 'result-image';
+
+                const gstBlock = document.createElement('div');
+                gstBlock.className = 'result-gst';
+                gstBlock.textContent = entry.gst || '';
+                gstBlock.style.display = 'block';
+                gstBlock.style.color = '#111';
+                gstBlock.style.minHeight = '1.2em';
+
+                const notesBlock = document.createElement('div');
+                notesBlock.className = 'result-notes notes-column';
+                notesBlock.style.display = 'block';
+                notesBlock.style.minHeight = '1.2em';
+                const notesValue = document.createElement('span');
+                const notesText = (entry.notes === undefined || entry.notes === null) ? '' : String(entry.notes).trim();
+                if (notesText.length > 0) {
+                    setNotesCellContent(notesValue, entry.notes); // Handle missing notes and autolink URLs
+                }
+                notesBlock.appendChild(notesValue);
 
                 // Call searchRefJson and get the page value
-                // Call imageContainer and append the resulting div to pageCell
+                // Call imageContainer and append the resulting div to imageBlock
                 const imageDiv = imageContainer(entry.text || '');
-                pageCell.appendChild(imageDiv);
+                imageBlock.appendChild(imageDiv);
 
-                // Column order: Text, Outline, GST
-                row.appendChild(textCell);
-                row.appendChild(pageCell);
-                row.appendChild(gstCell);
-                row.appendChild(notesCell);
-                //add click event to row
-                row.addEventListener('click', function() {
+                card.appendChild(textBlock);
+                card.appendChild(imageBlock);
+                card.appendChild(gstBlock);
+                card.appendChild(notesBlock);
+                // Open dictionary when clicking a card
+                card.addEventListener('click', function(event) {
                     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
                     const url = `../GreggDictionary${public_domain_only}.html?x=${entry.text}&gsd=${globalGsd}`;
                     window.open(url, 'GreggDictionary');
             });
-                tableBody.appendChild(row);
+                resultsGrid.appendChild(card);
             });
 
             updateNotesVisibility();
@@ -758,12 +807,14 @@
 
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
+            resultItem.textContent = '';
 
              // If searchRefJson returns null, return an empty resultItem
             if (!objRef) {//There is no match in the reference file use png image
 
                 const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
                 const img_ann = document.createElement("img");
+                img_ann.className = 'result-inline-image';
                 img_ann.src = `${imagePathann}${searchTerm}.png`;
 
                 getVerticalAlign(img_ann.src).then(verticalAlign => {
@@ -783,14 +834,17 @@
 
                 return resultItem;
             }
-            resultItem.innerHTML = `Page: ${objRef.page}, Word: ${objRef.word}`; // , X: ${word.x}, Y: ${word.y}`;
-
             
             const outerContainer = document.createElement('div');
-            outerContainer.className = 'max-w-screen overflow-x-auto';
+            outerContainer.className = 'result-image-wrap';
+            outerContainer.style.width = '100%';
+            outerContainer.style.overflowX = 'auto';
 
             const imageContainer = document.createElement('div');
-            imageContainer.className = 'relative overflow-hidden border';
+            imageContainer.className = 'result-image-crop';
+            imageContainer.style.position = 'relative';
+            imageContainer.style.overflow = 'hidden';
+            imageContainer.style.border = '1px solid #000';
             imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
             imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
 
@@ -798,6 +852,7 @@
             img.className = 'absolute max-w-none';
             img.src = `${objRef.page}.png`;
             img.alt = `Gregg shorthand for word: ${objRef.word}`;
+            img.style.position = 'absolute';
             img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
             img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
             img.style.width = '1281px'; // Assuming the image width is fixed
@@ -812,7 +867,7 @@
             const expandButton = document.createElement('button');
             expandButton.className = 'expand-button';
             expandButton.innerHTML = 'Expand';
-            expandButton.onclick = function() {
+            expandButton.onclick = function(event) {
                 event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
                 if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
                     imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
@@ -1106,7 +1161,7 @@
                 } else if (globalGsd === 'pre') {
                     aboutText.innerHTML = "<p><i><b>Images from</b> Gregg Shorthand Dictionary (1916),</i> a book published by The Gregg Publishing Company in 1916, including 17,000 shorthand forms written by Alice Rinne Hagar</p>";
                 } else if (globalGsd === 'not') {
-                    aboutText.innerHTML = "<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 1st Ed (1960)</p>";
+                    aboutText.innerHTML = "<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 2nd Ed (1968)</p>";
                 } else {
                     aboutText.innerHTML = "<p><b>Images from</b> <i>Dictionary DJS,Gregg Shorthand </i> a book published by The McGraw-Hill Publishing Company in 1963, written by Charles Rader. </p>";
                 }
