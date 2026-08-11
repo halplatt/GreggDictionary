@@ -13766,7 +13766,7 @@
     },
     {
         "text": "belief",
-        "gst": "b-e",
+        "gst": "b-l-f",
         "notes": ""
     },
     {
@@ -13776,7 +13776,7 @@
     },
     {
         "text": "believe",
-        "gst": "b-e",
+        "gst": "b-l-e-v",
         "notes": ""
     },
     {
@@ -24351,7 +24351,7 @@
     },
     {
         "text": "chicory",
-        "gst": "ch-e-k-r-e",
+        "gst": "ch-e-k-o-r-e",
         "notes": ""
     },
     {
@@ -31546,7 +31546,7 @@
     },
     {
         "text": "corona",
-        "gst": "k-r-o-n-a",
+        "gst": "k-o-r-o-n-a",
         "notes": ""
     },
     {
@@ -31641,22 +31641,22 @@
     },
     {
         "text": "corral",
-        "gst": "k-r-a-l",
+        "gst": "k-o-r-a-l",
         "notes": ""
     },
     {
         "text": "correct",
-        "gst": "k-r-e-k-t",
+        "gst": "k-o-r-e-k-t",
         "notes": ""
     },
     {
         "text": "corrected",
-        "gst": "k-r-e-k-td",
+        "gst": "k-o-r-e-k-td",
         "notes": ""
     },
     {
         "text": "correction",
-        "gst": "k-r-e-k-sh",
+        "gst": "k-o-r-e-k-sh",
         "notes": ""
     },
     {
@@ -31676,7 +31676,7 @@
     },
     {
         "text": "correctness",
-        "gst": "k-r-e-k-t-n-e-s",
+        "gst": "k-o-r-e-k-t-n-e-s",
         "notes": ""
     },
     {
@@ -31701,7 +31701,7 @@
     },
     {
         "text": "correlative",
-        "gst": "k-r-r-a-l-t-v",
+        "gst": "k-o-r-e-l-a-t-v",
         "notes": ""
     },
     {
@@ -31741,47 +31741,47 @@
     },
     {
         "text": "corroborate",
-        "gst": "k-r-a-b-r-a-t",
+        "gst": "k-o-r-a-b-r-a-t",
         "notes": ""
     },
     {
         "text": "corroboration",
-        "gst": "k-r-o-b-r-a-sh",
+        "gst": "k-o-r-o-b-r-a-sh",
         "notes": ""
     },
     {
         "text": "corroborative",
-        "gst": "k-r-a-b-r-t-v",
+        "gst": "k-o-r-o-b-r-a-t-v",
         "notes": ""
     },
     {
         "text": "corroboratory",
-        "gst": "k-r-a-b-t-o-r-e",
+        "gst": "k-o-r-o-b-r-a-t-r-e",
         "notes": ""
     },
     {
         "text": "corrode",
-        "gst": "k-r-o-d",
+        "gst": "k-o-r-o-d",
         "notes": ""
     },
     {
         "text": "corroded",
-        "gst": "k-r-o-td",
+        "gst": "k-o-r-o-td",
         "notes": ""
     },
     {
         "text": "corrosible",
-        "gst": "k-r-a-s-b",
+        "gst": "k-o-r-o-s-b",
         "notes": ""
     },
     {
         "text": "corrosion",
-        "gst": "k-r-o-sh",
+        "gst": "k-o-r-o-sh",
         "notes": ""
     },
     {
         "text": "corrosive",
-        "gst": "k-r-o-s-e-v",
+        "gst": "k-o-r-o-s-e-v",
         "notes": ""
     },
     {
@@ -31806,27 +31806,27 @@
     },
     {
         "text": "corrupted",
-        "gst": "k-r-u-p-td",
+        "gst": "k-o-r-u-p-td",
         "notes": ""
     },
     {
         "text": "corruptibility",
-        "gst": "k-r-p-t-b/l",
+        "gst": "k-o-r-p-t-b/l",
         "notes": ""
     },
     {
         "text": "corruptible",
-        "gst": "k-r-u-p-t-e-b",
+        "gst": "k-o-r-p-t-b",
         "notes": ""
     },
     {
         "text": "corruption",
-        "gst": "k-r-u-p-sh",
+        "gst": "k-o-r-p-sh",
         "notes": ""
     },
     {
         "text": "corruptly",
-        "gst": "k-r-u-p-t-e",
+        "gst": "k-o-r-p-t-e",
         "notes": ""
     },
     {
@@ -31871,7 +31871,7 @@
     },
     {
         "text": "corundum",
-        "gst": "k-r-u-nt-m",
+        "gst": "k-o-r-n-tm",
         "notes": ""
     },
     {
@@ -40161,7 +40161,7 @@
     },
     {
         "text": "disbelievingly",
-        "gst": "d-s-b-l-v-e-v/e",
+        "gst": "d-s-b-l-e-v/e",
         "notes": ""
     },
     {
@@ -49536,7 +49536,7 @@
     },
     {
         "text": "excorration",
-        "gst": "e-s-k-r-a-sh",
+        "gst": "e-s-k-o-r-ea-sh",
         "notes": ""
     },
     {
@@ -72371,7 +72371,7 @@
     },
     {
         "text": "incorrect",
-        "gst": "n-k-r-t",
+        "gst": "n-k-o-r-t",
         "notes": ""
     },
     {
@@ -77691,17 +77691,17 @@
     },
     {
         "text": "irresponsibility",
-        "gst": "e-r-s-p-a-n-s-b/l",
+        "gst": "e-r-s-p/l",
         "notes": ""
     },
     {
         "text": "irresponsible",
-        "gst": "e-r-s-p-a-n-s-b",
+        "gst": "e-r-s-p",
         "notes": ""
     },
     {
         "text": "irresponsibly",
-        "gst": "e-r-s-p-a-n-s-b-e",
+        "gst": "e-r-s-p-e",
         "notes": ""
     },
     {
@@ -86171,7 +86171,7 @@
     },
     {
         "text": "makebelieve",
-        "gst": "m-a-k-e-b-e-v-e",
+        "gst": "m-a-k-b-e-v",
         "notes": ""
     },
     {
@@ -90801,7 +90801,7 @@
     },
     {
         "text": "misbeliever",
-        "gst": "m-s-b-e-l-e-v-r",
+        "gst": "m-s-b-l-e-v-r",
         "notes": ""
     },
     {
@@ -101186,7 +101186,7 @@
     },
     {
         "text": "overcorrect",
-        "gst": "o/k-r-e-k-t",
+        "gst": "o/k-o-r-e-k-t",
         "notes": ""
     },
     {
@@ -119271,7 +119271,7 @@
     },
     {
         "text": "record",
-        "gst": "r-e-k-rd",
+        "gst": "r-e-k-o-rd",
         "notes": ""
     },
     {
@@ -122751,17 +122751,17 @@
     },
     {
         "text": "responsibilities",
-        "gst": "r-s-p-a-n-s-b-e-l-t-e-s",
+        "gst": "r-s-p/l",
         "notes": ""
     },
     {
         "text": "responsibility",
-        "gst": "r-s-p-a-n-s-b/l",
+        "gst": "r-s-p/l",
         "notes": ""
     },
     {
         "text": "responsible",
-        "gst": "r-s-p-a-n-s-b",
+        "gst": "r-s-p",
         "notes": ""
     },
     {
@@ -156186,7 +156186,7 @@
     },
     {
         "text": "to believe",
-        "gst": "t-u-b-l-e-v",
+        "gst": "t-b-l-e-v",
         "notes": ""
     },
     {
@@ -162336,7 +162336,7 @@
     },
     {
         "text": "unbelievable",
-        "gst": "n-b-l-e-v-b",
+        "gst": "n-b-l-e-v/b",
         "notes": ""
     },
     {
@@ -162351,7 +162351,7 @@
     },
     {
         "text": "unbelievingness",
-        "gst": "n-b-e-l-f-e-s-n-e-s",
+        "gst": "n-b-l-e-v-h-n-e-s",
         "notes": ""
     },
     {
@@ -162846,7 +162846,7 @@
     },
     {
         "text": "uncorrected",
-        "gst": "n-k-r-e-k-td",
+        "gst": "n-k-o-r-e-k-td",
         "notes": ""
     },
     {
@@ -175026,7 +175026,7 @@
     },
     {
         "text": "whipcord",
-        "gst": "u-e-p-k-rd",
+        "gst": "h-u-e-p-k-o-rd",
         "notes": ""
     },
     {
