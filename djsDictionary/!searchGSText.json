@@ -291,7 +291,7 @@
     },
     {
         "text": "abjurement",
-        "gst": "a-b-j-u-r-m",
+        "gst": "a-b-j-r-m",
         "notes": ""
     },
     {
@@ -2271,12 +2271,12 @@
     },
     {
         "text": "adjudge",
-        "gst": "a-j-u-j",
+        "gst": "a-j-j",
         "notes": ""
     },
     {
         "text": "adjudged",
-        "gst": "a-j-u-j-d",
+        "gst": "a-j-j-d",
         "notes": ""
     },
     {
@@ -21696,7 +21696,7 @@
     },
     {
         "text": "cardinalate",
-        "gst": "k-a-r-tn-a-l-t",
+        "gst": "k-a-rd-e-n-l-a-t",
         "notes": ""
     },
     {
@@ -29596,7 +29596,7 @@
     },
     {
         "text": "conjunction",
-        "gst": "k-j-u-nk-sh",
+        "gst": "k-j-nk-sh",
         "notes": ""
     },
     {
@@ -40801,7 +40801,7 @@
     },
     {
         "text": "disjunction",
-        "gst": "d-s-j-u-nk-sh",
+        "gst": "d-s-j-nk-sh",
         "notes": ""
     },
     {
@@ -53141,7 +53141,7 @@
     },
     {
         "text": "finality",
-        "gst": "f-i-n-a-l-t-e",
+        "gst": "f-i-n/l",
         "notes": ""
     },
     {
@@ -56071,7 +56071,7 @@
     },
     {
         "text": "formality",
-        "gst": "f-m-a-l-t-e",
+        "gst": "f-m/l",
         "notes": ""
     },
     {
@@ -71751,7 +71751,7 @@
     },
     {
         "text": "inaudrbility",
-        "gst": "e-n-o-d-r-k-l-t-e",
+        "gst": "e-n-o-d-b/l",
         "notes": ""
     },
     {
@@ -71821,7 +71821,7 @@
     },
     {
         "text": "incapability",
-        "gst": "n-k-p-a-b-l-t-e",
+        "gst": "n-k-p-b/l",
         "notes": ""
     },
     {
@@ -72386,7 +72386,7 @@
     },
     {
         "text": "incorruptibility",
-        "gst": "n-k-o-r-k-p-r-a-t-e-t-e",
+        "gst": "n-k-o-r-p-t-b/l",
         "notes": ""
     },
     {
@@ -72631,7 +72631,7 @@
     },
     {
         "text": "indefatigability",
-        "gst": "nt-f-t-s-e-j-t-e",
+        "gst": "n-df-e-t-e-g-b/l",
         "notes": ""
     },
     {
@@ -73001,7 +73001,7 @@
     },
     {
         "text": "indispensability",
-        "gst": "nt-s-p-ea-n-s-t-e-b-n-i-ld",
+        "gst": "nt-s-p-s-b/l",
         "notes": ""
     },
     {
@@ -74486,12 +74486,12 @@
     },
     {
         "text": "injunction",
-        "gst": "n-j-u-nk-sh",
+        "gst": "n-j-nk-sh",
         "notes": ""
     },
     {
         "text": "injunctive",
-        "gst": "n-j-u-nk-t-v",
+        "gst": "n-j-nk-t-v",
         "notes": ""
     },
     {
@@ -75746,7 +75746,7 @@
     },
     {
         "text": "intelligibility",
-        "gst": "nt-e-l-j-e-b-l-i-t-e",
+        "gst": "nt-e-l-j-b/l",
         "notes": ""
     },
     {
@@ -79091,7 +79091,7 @@
     },
     {
         "text": "joviality",
-        "gst": "j-o-v-ea-l-t-e",
+        "gst": "j-o-v/l",
         "notes": ""
     },
     {
@@ -79171,17 +79171,17 @@
     },
     {
         "text": "judged",
-        "gst": "j-u-j-d",
+        "gst": "j-j-d",
         "notes": ""
     },
     {
         "text": "judgeship",
-        "gst": "j-u-j/sh",
+        "gst": "j-j/sh",
         "notes": ""
     },
     {
         "text": "judgment",
-        "gst": "j-u-j-m",
+        "gst": "j-j-m",
         "notes": ""
     },
     {
@@ -79291,27 +79291,27 @@
     },
     {
         "text": "jumbled",
-        "gst": "j-u-m-b-ld",
+        "gst": "j-m-b-ld",
         "notes": ""
     },
     {
         "text": "jumbo",
-        "gst": "j-u-m-b-o",
+        "gst": "j-m-b-o",
         "notes": ""
     },
     {
         "text": "jump",
-        "gst": "j-u-m-p",
+        "gst": "j-m-p",
         "notes": ""
     },
     {
         "text": "jumped",
-        "gst": "j-u-m-p-t",
+        "gst": "j-m-p-t",
         "notes": ""
     },
     {
         "text": "jumper",
-        "gst": "j-u-m-p-r",
+        "gst": "j-m-p-r",
         "notes": ""
     },
     {
@@ -79346,12 +79346,12 @@
     },
     {
         "text": "junk",
-        "gst": "j-u-nk",
+        "gst": "j-nk",
         "notes": ""
     },
     {
         "text": "junket",
-        "gst": "j-u-nk-e-t",
+        "gst": "j-nk-e-t",
         "notes": ""
     },
     {
@@ -79481,7 +79481,7 @@
     },
     {
         "text": "juxtaposition",
-        "gst": "j-u-x2-t-p-o-sh",
+        "gst": "j-u-x2-t-p-o-s-esh",
         "notes": ""
     },
     {
@@ -81491,7 +81491,7 @@
     },
     {
         "text": "laudability",
-        "gst": "l-a-d-t-e-b-l-t-e",
+        "gst": "l-o-d-b/l",
         "notes": ""
     },
     {
@@ -82826,7 +82826,7 @@
     },
     {
         "text": "liberality",
-        "gst": "l-e-b-r-a-l-t-e",
+        "gst": "l-e-b-r/l",
         "notes": ""
     },
     {
@@ -83786,7 +83786,7 @@
     },
     {
         "text": "literality",
-        "gst": "l-i-t-r-a-l-t-e",
+        "gst": "l-i-t-r/l",
         "notes": ""
     },
     {
@@ -91666,7 +91666,7 @@
     },
     {
         "text": "modality",
-        "gst": "m-d-a-l-t-e",
+        "gst": "m-d/l",
         "notes": ""
     },
     {
@@ -92741,7 +92741,7 @@
     },
     {
         "text": "morality",
-        "gst": "m-r-a-l-t-e",
+        "gst": "m-r/l",
         "notes": ""
     },
     {
@@ -92916,7 +92916,7 @@
     },
     {
         "text": "mortality",
-        "gst": "m-o-t-a-l-t-e",
+        "gst": "m-o-t/l",
         "notes": ""
     },
     {
@@ -93826,7 +93826,7 @@
     },
     {
         "text": "municipality",
-        "gst": "m-e-u-n-e-s-p-a-l-t-e",
+        "gst": "m-e-u-n-e-s-p/l",
         "notes": ""
     },
     {
@@ -94751,7 +94751,7 @@
     },
     {
         "text": "nasality",
-        "gst": "n-s-a-l-t-e",
+        "gst": "n-s/l",
         "notes": ""
     },
     {
@@ -95481,7 +95481,7 @@
     },
     {
         "text": "negotiability",
-        "gst": "n-g-o-t-e-sh-b-e",
+        "gst": "n-e-g-o-sh-b/l",
         "notes": ""
     },
     {
@@ -95801,7 +95801,7 @@
     },
     {
         "text": "neutrality",
-        "gst": "n-u-t-r-a-l-t-e",
+        "gst": "n-u-t-r/l",
         "notes": ""
     },
     {
@@ -96871,7 +96871,7 @@
     },
     {
         "text": "normality",
-        "gst": "n-o-r-m-a-l-t-e",
+        "gst": "n-o-r-m/l",
         "notes": ""
     },
     {
@@ -103451,7 +103451,7 @@
     },
     {
         "text": "partiality",
-        "gst": "p-a-r-sh-ea-l-t-e",
+        "gst": "p-a-r-sh/l",
         "notes": ""
     },
     {
@@ -104926,7 +104926,7 @@
     },
     {
         "text": "penetrability",
-        "gst": "p-e-nt-r-a-b-t-e",
+        "gst": "p-n-e-t-r-b/l",
         "notes": ""
     },
     {
@@ -105466,7 +105466,7 @@
     },
     {
         "text": "perfectibility",
-        "gst": "p-r-f-k-t-r-b-t-e",
+        "gst": "p-r-f-k-t-b/l",
         "notes": ""
     },
     {
@@ -110921,7 +110921,7 @@
     },
     {
         "text": "practicality",
-        "gst": "p-r-a-k-t-e-k-a-l-t-e",
+        "gst": "p-r-a-k-t-e-k/l",
         "notes": ""
     },
     {
@@ -111836,12 +111836,12 @@
     },
     {
         "text": "prejudge",
-        "gst": "p-r-e-j-u-j",
+        "gst": "p-r-e-j-j",
         "notes": ""
     },
     {
         "text": "prejudged",
-        "gst": "p-r-e-j-u-j-d",
+        "gst": "p-r-e-j-j-d",
         "notes": ""
     },
     {
@@ -113156,7 +113156,7 @@
     },
     {
         "text": "prodigality",
-        "gst": "p-r-o-d-g-a-l-t-e",
+        "gst": "p-r-o-d-g/l",
         "notes": ""
     },
     {
@@ -113610,7 +113610,7 @@
         "notes": ""
     },
     {
-        "text": "promisculity",
+        "text": "promiscuity",
         "gst": "p-r-o-m-e-s-k-e-u-t-e",
         "notes": ""
     },
@@ -114586,7 +114586,7 @@
     },
     {
         "text": "provinciality",
-        "gst": "p-r-o-v-e-n-s-e-v-a-l-t-e",
+        "gst": "p-r-o-v-e-n-s-e-v/l",
         "notes": ""
     },
     {
@@ -116201,7 +116201,7 @@
     },
     {
         "text": "quality",
-        "gst": "k-w-a-l-t-e",
+        "gst": "k-w/l",
         "notes": ""
     },
     {
@@ -118291,7 +118291,7 @@
     },
     {
         "text": "readjustable",
-        "gst": "r-j-u-s-t-b",
+        "gst": "r-a-j-u-s-t-b",
         "notes": ""
     },
     {
@@ -120231,7 +120231,7 @@
     },
     {
         "text": "regality",
-        "gst": "r-e-g-a-l-t-e",
+        "gst": "r-e-g/l",
         "notes": ""
     },
     {
@@ -120776,12 +120776,12 @@
     },
     {
         "text": "rejuvenescence",
-        "gst": "r-j-u-v-n-s-n-s",
+        "gst": "r-j-u-v-n-e-s-n-s",
         "notes": ""
     },
     {
         "text": "rejuvenescent",
-        "gst": "r-j-u-v-n-s-t-n-e-s",
+        "gst": "r-j-u-v-n-e-s-nt",
         "notes": ""
     },
     {
@@ -126911,7 +126911,7 @@
     },
     {
         "text": "salability",
-        "gst": "s-l-a-b-t-e",
+        "gst": "s-a-l-b/l",
         "notes": ""
     },
     {
@@ -131631,7 +131631,7 @@
     },
     {
         "text": "sensuality",
-        "gst": "s-e-n-ch-w-a-l-t-e",
+        "gst": "s-e-n-ch-w/l",
         "notes": ""
     },
     {
@@ -131751,7 +131751,7 @@
     },
     {
         "text": "separability",
-        "gst": "s-e-p-r-a-s-t-e",
+        "gst": "s-e-p-r-b/l",
         "notes": ""
     },
     {
@@ -132196,7 +132196,7 @@
     },
     {
         "text": "serviceability",
-        "gst": "s-r-v-e-s-t-a-b-e",
+        "gst": "s-e-r-v-e-s-b/l",
         "notes": ""
     },
     {
@@ -138841,7 +138841,7 @@
     },
     {
         "text": "sodality",
-        "gst": "s-d-a-l-t-e",
+        "gst": "s-d/l",
         "notes": ""
     },
     {
@@ -141086,7 +141086,7 @@
     },
     {
         "text": "spirituality",
-        "gst": "s-p-e-r-e-ch-w-a-l-t-e",
+        "gst": "s-p-e-r-e-ch-w/l",
         "notes": ""
     },
     {
@@ -146391,7 +146391,7 @@
     },
     {
         "text": "subnormality",
-        "gst": "s-n-o-r-m-l-i-t",
+        "gst": "s-n-o-r-m/l",
         "notes": ""
     },
     {
@@ -147776,7 +147776,7 @@
     },
     {
         "text": "superficiality",
-        "gst": "s1/f-e-sh-f-e",
+        "gst": "s1/f-e-sh/l",
         "notes": ""
     },
     {
@@ -152686,7 +152686,7 @@
     },
     {
         "text": "territoriality",
-        "gst": "t-e-r-e-t-r-ea-t-e",
+        "gst": "t-e-r-e-t-r/l",
         "notes": ""
     },
     {
@@ -153326,7 +153326,7 @@
     },
     {
         "text": "theatricality",
-        "gst": "th-ea-t-r-k-a-l-t-e",
+        "gst": "th-ea-t-r-k/l",
         "notes": ""
     },
     {
@@ -156996,7 +156996,7 @@
     },
     {
         "text": "tonality",
-        "gst": "t-o-n-a-l-t-e",
+        "gst": "t-o-n/l",
         "notes": ""
     },
     {
@@ -157636,7 +157636,7 @@
     },
     {
         "text": "totality",
-        "gst": "t-o-t-a-l-t-e",
+        "gst": "t-o-t/l",
         "notes": ""
     },
     {
@@ -160156,7 +160156,7 @@
     },
     {
         "text": "triviality",
-        "gst": "t-r-e-v-ea-l-t-e",
+        "gst": "t-r-e-v/l",
         "notes": ""
     },
     {
@@ -161976,7 +161976,7 @@
     },
     {
         "text": "ultralegality",
-        "gst": "u-t-r-l-a-t-e-j-e",
+        "gst": "u-t-r-a-l-e-g/l",
         "notes": ""
     },
     {
@@ -162161,7 +162161,7 @@
     },
     {
         "text": "unamuable",
-        "gst": "u-n-m-u-b",
+        "gst": "u-n-a-m-u-b",
         "notes": ""
     },
     {
@@ -162176,22 +162176,22 @@
     },
     {
         "text": "unappeasable",
-        "gst": "u-n-p-a-s-b",
+        "gst": "u-n-a-p-a-s-b",
         "notes": ""
     },
     {
         "text": "unapproachable",
-        "gst": "u-n-p-a-r-k-b",
+        "gst": "u-n-a-p-a-r-k-b",
         "notes": ""
     },
     {
         "text": "unappropriated",
-        "gst": "u-n-p-a-r-p-t-r-ea-d",
+        "gst": "u-n-a-p-a-r-p-t-r-ea-d",
         "notes": ""
     },
     {
         "text": "unapprovingly",
-        "gst": "u-n-p-r-o-v/e",
+        "gst": "u-n-a-p-r-o-v/e",
         "notes": ""
     },
     {
@@ -162261,7 +162261,7 @@
     },
     {
         "text": "unavailable",
-        "gst": "u-n-v-a-l-b",
+        "gst": "u-n-a-v-a-l-b",
         "notes": ""
     },
     {
@@ -162271,7 +162271,7 @@
     },
     {
         "text": "unavoidable",
-        "gst": "u-n-v-o-e-d-b",
+        "gst": "u-n-a-v-o-e-d-b",
         "notes": ""
     },
     {
@@ -163986,7 +163986,7 @@
     },
     {
         "text": "unerring",
-        "gst": "u-n-r-e-r-h",
+        "gst": "u-n-e-r-h",
         "notes": ""
     },
     {
@@ -164571,17 +164571,17 @@
     },
     {
         "text": "ungainliness",
-        "gst": "u-n-g-a-n-l-n-e-s",
+        "gst": "n-g-a-n-l-n-e-s",
         "notes": ""
     },
     {
         "text": "ungainly",
-        "gst": "u-n-g-a-n-e",
+        "gst": "n-g-a-n-e",
         "notes": ""
     },
     {
         "text": "ungallant",
-        "gst": "u-n-g-a-la-nt",
+        "gst": "n-g-a-la-nt",
         "notes": ""
     },
     {
@@ -164591,92 +164591,92 @@
     },
     {
         "text": "ungarnished",
-        "gst": "u-n-g-a-r-n-e-sh-e-n",
+        "gst": "n-g-a-r-n-e-sh-e-n",
         "notes": ""
     },
     {
         "text": "ungenerous",
-        "gst": "u-n-j-n-r-u-s",
+        "gst": "n-j-n-r-u-s",
         "notes": ""
     },
     {
         "text": "ungentle",
-        "gst": "u-n-j-e-nt-l",
+        "gst": "n-j-e-nt-l",
         "notes": ""
     },
     {
         "text": "ungentlemanly",
-        "gst": "u-n-j-nt-e-l-nt-e",
+        "gst": "n-j-nt-e-l-nt-e",
         "notes": ""
     },
     {
         "text": "ungerminated",
-        "gst": "u-n-j-r-mn-a-td",
+        "gst": "n-j-r-mn-a-td",
         "notes": ""
     },
     {
         "text": "ungifted",
-        "gst": "u-n-j-e-f-td",
+        "gst": "n-j-e-f-td",
         "notes": ""
     },
     {
         "text": "ungirt",
-        "gst": "u-n-j-r-t",
+        "gst": "n-j-r-t",
         "notes": ""
     },
     {
         "text": "unglazed",
-        "gst": "u-n-g-l-a-s-d",
+        "gst": "n-g-l-a-s-d",
         "notes": ""
     },
     {
         "text": "unglorious",
-        "gst": "u-n-g-l-o-r-u-s",
+        "gst": "n-g-l-o-r-u-s",
         "notes": ""
     },
     {
         "text": "ungloved",
-        "gst": "u-n-g-l-u-v-d",
+        "gst": "n-g-l-u-v-d",
         "notes": ""
     },
     {
         "text": "ungodliness",
-        "gst": "u-n-g-a-d-l-e-n-e-s-e-n-e-s",
+        "gst": "n-g-a-d-l-e-n-e-s-e-n-e-s",
         "notes": ""
     },
     {
         "text": "ungodly",
-        "gst": "u-n-g-o-d-e",
+        "gst": "n-g-o-d-e",
         "notes": ""
     },
     {
         "text": "ungovernable",
-        "gst": "u-n-g-u-v-r-n-b",
+        "gst": "n-g-u-v-r-n-b",
         "notes": ""
     },
     {
         "text": "ungovernably",
-        "gst": "u-n-g-u-v-r-n-b-e",
+        "gst": "n-g-u-v-r-n-b-e",
         "notes": ""
     },
     {
         "text": "ungracious",
-        "gst": "u-n-g-r-a-sh-u-s",
+        "gst": "n-g-r-a-sh-u-s",
         "notes": ""
     },
     {
         "text": "ungraciously",
-        "gst": "u-n-g-r-a-sh-s-e",
+        "gst": "n-g-r-a-sh-s-e",
         "notes": ""
     },
     {
         "text": "ungraded",
-        "gst": "u-n-g-r-a-td",
+        "gst": "n-g-r-a-td",
         "notes": ""
     },
     {
         "text": "ungrammatical",
-        "gst": "u-n-g-r-a-m-a-t/k",
+        "gst": "n-g-r-a-m-a-t/k",
         "notes": ""
     },
     {
@@ -164686,12 +164686,12 @@
     },
     {
         "text": "ungratefully",
-        "gst": "u-n-g-r-a-t-f-e",
+        "gst": "n-g-r-a-t-f-e",
         "notes": ""
     },
     {
         "text": "ungratefulness",
-        "gst": "u-n-g-r-a-t-f-l-n-e-s",
+        "gst": "n-g-r-a-t-f-l-n-e-s",
         "notes": ""
     },
     {
@@ -164721,12 +164721,12 @@
     },
     {
         "text": "unguided",
-        "gst": "u-n-g-i-td",
+        "gst": "n-g-i-td",
         "notes": ""
     },
     {
         "text": "ungummed",
-        "gst": "u-n-g-u-mt",
+        "gst": "n-g-u-mt",
         "notes": ""
     },
     {
@@ -164746,7 +164746,7 @@
     },
     {
         "text": "unhandiness",
-        "gst": "u-n-h-a-t-n-e-s",
+        "gst": "n-h-nt-e-n-e-s",
         "notes": ""
     },
     {
@@ -164756,7 +164756,7 @@
     },
     {
         "text": "unhandy",
-        "gst": "u-n-h-a-nt-e",
+        "gst": "u-n-h-nt-e",
         "notes": ""
     },
     {
@@ -164935,8 +164935,8 @@
         "notes": ""
     },
     {
-        "text": "unhooded",
-        "gst": "u-n-h-u-td",
+        "text": "unflooded",
+        "gst": "u-n-f-l-u-td",
         "notes": ""
     },
     {
@@ -164976,7 +164976,7 @@
     },
     {
         "text": "unhygienic",
-        "gst": "u-n-j-e-g-e-f-e-n-e-k",
+        "gst": "u-n-h-i-j-e-k",
         "notes": ""
     },
     {
@@ -165051,17 +165051,17 @@
     },
     {
         "text": "unimpaired",
-        "gst": "u-n-e-m-p-e-rd",
+        "gst": "n-m-p-e-rd",
         "notes": ""
     },
     {
         "text": "unimpeachable",
-        "gst": "u-n-e-m-p-e-ch-b",
+        "gst": "n-m-p-e-ch-b",
         "notes": ""
     },
     {
         "text": "unimpeded",
-        "gst": "u-n-e-m-p-e-td",
+        "gst": "n-m-p-e-td",
         "notes": ""
     },
     {
@@ -165076,37 +165076,37 @@
     },
     {
         "text": "unimposing",
-        "gst": "u-n-e-m-p-o-s-h",
+        "gst": "n-m-p-o-s-h",
         "notes": ""
     },
     {
         "text": "unimpressed",
-        "gst": "u-n-e-m-p-r-e-s-t",
+        "gst": "n-m-p-r-e-s-t",
         "notes": ""
     },
     {
         "text": "unimpressionable",
-        "gst": "u-n-e-m-p-r-e-e-s-n-k-n",
+        "gst": "n-m-p-r-e-e-s-n-k-n",
         "notes": ""
     },
     {
         "text": "unimpressive",
-        "gst": "u-n-e-m-p-r-e-s-e-v",
+        "gst": "n-m-p-r-e-s-e-v",
         "notes": ""
     },
     {
         "text": "unimproved",
-        "gst": "u-n-e-m-p-r-u-v-d",
+        "gst": "n-m-p-r-u-v-d",
         "notes": ""
     },
     {
         "text": "unincorporated",
-        "gst": "u-n-e-n-k-o-r-p-r-a-td",
+        "gst": "n-n-k-o-r-p-r-a-td",
         "notes": ""
     },
     {
         "text": "unindemnified",
-        "gst": "u-n-e-nt-e-mn-d-i-d",
+        "gst": "n-nt-e-mn-d-i-d",
         "notes": ""
     },
     {
@@ -165116,12 +165116,12 @@
     },
     {
         "text": "unindicted",
-        "gst": "u-n-nt-i-td",
+        "gst": "n-nt-i-td",
         "notes": ""
     },
     {
         "text": "uninfluenced",
-        "gst": "u-n-ye-f-l-u-nt-s",
+        "gst": "n-f-l-u-n-s-t",
         "notes": ""
     },
     {
@@ -165146,7 +165146,7 @@
     },
     {
         "text": "uninjured",
-        "gst": "u-n-e-n-j-rd",
+        "gst": "n-n-j-rd",
         "notes": ""
     },
     {
@@ -165156,22 +165156,22 @@
     },
     {
         "text": "uninscribed",
-        "gst": "u-n-e-n-s-e-r-b-d",
+        "gst": "n-n-s-e-r-b-d",
         "notes": ""
     },
     {
         "text": "uninspired",
-        "gst": "u-n-e-n-s-p-i-rd",
+        "gst": "n-n-s-p-i-rd",
         "notes": ""
     },
     {
         "text": "uninspiringly",
-        "gst": "u-n-s-p-i-r/e",
+        "gst": "n-n-s-p-i-r/e",
         "notes": ""
     },
     {
         "text": "uninstructed",
-        "gst": "u-n-e-n-s-t-r-u-k-td",
+        "gst": "n-e-n-s-t-r-u-k-td",
         "notes": ""
     },
     {
@@ -165411,7 +165411,7 @@
     },
     {
         "text": "universality",
-        "gst": "e-u-n-v-r-s-a-l-t-e",
+        "gst": "e-u-n-v-r-s/l",
         "notes": ""
     },
     {
@@ -165431,32 +165431,32 @@
     },
     {
         "text": "unjokingly",
-        "gst": "u-n-j-a-k/e",
+        "gst": "n-j-a-k/e",
         "notes": ""
     },
     {
         "text": "unjust",
-        "gst": "u-n-j-u-s-t",
+        "gst": "n-j-u-s-t",
         "notes": ""
     },
     {
         "text": "unjustifiable",
-        "gst": "n-j-u-s-t-e-f-i-b",
+        "gst": "n-j-u-s-t-f-i-b",
         "notes": ""
     },
     {
         "text": "unjustifiably",
-        "gst": "n-j-u-s-t-e-f-i-b-e",
+        "gst": "n-j-u-s-t-f-i-b-e",
         "notes": ""
     },
     {
         "text": "unjustified",
-        "gst": "u-n-j-u-s-t-f-i-d",
+        "gst": "n-j-u-s-t-f-i-d",
         "notes": ""
     },
     {
         "text": "unjustly",
-        "gst": "u-n-j-u-s-t-e",
+        "gst": "n-j-u-s-t-e",
         "notes": ""
     },
     {
@@ -165501,12 +165501,12 @@
     },
     {
         "text": "unlace",
-        "gst": "u-n-l-a-s",
+        "gst": "n-l-a-s",
         "notes": ""
     },
     {
         "text": "unlaced",
-        "gst": "u-n-l-a-s-t",
+        "gst": "n-l-a-s-t",
         "notes": ""
     },
     {
@@ -165521,82 +165521,82 @@
     },
     {
         "text": "unlashed",
-        "gst": "u-n-l-a-sh-t",
+        "gst": "n-l-a-sh-t",
         "notes": ""
     },
     {
         "text": "unlatch",
-        "gst": "u-n-l-th",
+        "gst": "n-l-th",
         "notes": ""
     },
     {
         "text": "unlawful",
-        "gst": "u-n-l-o-f",
+        "gst": "n-l-o-f",
         "notes": ""
     },
     {
         "text": "unlawfully",
-        "gst": "u-n-l-o-f-e",
+        "gst": "n-l-o-f-e",
         "notes": ""
     },
     {
         "text": "unlawfulness",
-        "gst": "u-n-l-o-f-n-e-s-n-e-s",
+        "gst": "n-l-o-f-n-e-s-n-e-s",
         "notes": ""
     },
     {
         "text": "unleaded",
-        "gst": "u-n-l-e-td",
+        "gst": "n-l-e-td",
         "notes": ""
     },
     {
         "text": "unlearn",
-        "gst": "u-n-l-r-n",
+        "gst": "n-l-r-n",
         "notes": ""
     },
     {
         "text": "unleash",
-        "gst": "u-n-l-e-sh",
+        "gst": "n-l-e-sh",
         "notes": ""
     },
     {
         "text": "unleashed",
-        "gst": "u-n-l-e-sh-t",
+        "gst": "n-l-e-sh-t",
         "notes": ""
     },
     {
         "text": "unleavened",
-        "gst": "u-n-l-e-v-nt",
+        "gst": "n-l-e-v-nt",
         "notes": ""
     },
     {
         "text": "unless",
-        "gst": "u-n-l-e-s",
+        "gst": "n-l-e-s",
         "notes": ""
     },
     {
         "text": "unlettered",
-        "gst": "u-n-l-e-t-rd",
+        "gst": "n-l-e-t-rd",
         "notes": ""
     },
     {
         "text": "unliberated",
-        "gst": "u-n-l-e-b-r-a-td",
+        "gst": "n-l-e-b-r-a-td",
         "notes": ""
     },
     {
         "text": "unlicensed",
-        "gst": "u-n-l-i-s-n-s-t",
+        "gst": "n-l-i-s-n-s-t",
         "notes": ""
     },
     {
         "text": "unlighted",
-        "gst": "u-n-l-i-td",
+        "gst": "n-l-i-td",
         "notes": ""
     },
     {
         "text": "unlikable",
-        "gst": "u-n-l-e-k-b",
+        "gst": "n-l-e-k-b",
         "notes": ""
     },
     {
@@ -165606,177 +165606,177 @@
     },
     {
         "text": "unlikelihood",
-        "gst": "u-n-l-i-k-l-i-k-e/d",
+        "gst": "n-l-i-k-l-i-k-e/d",
         "notes": ""
     },
     {
         "text": "unlikely",
-        "gst": "u-n-l-i-k-e",
+        "gst": "n-l-i-k-e",
         "notes": ""
     },
     {
         "text": "unlimber",
-        "gst": "u-n-l-i-m-b-r",
+        "gst": "n-l-i-m-b-r",
         "notes": ""
     },
     {
         "text": "unlimbered",
-        "gst": "u-n-l-e-m-b-rd",
+        "gst": "n-l-e-m-b-rd",
         "notes": ""
     },
     {
         "text": "unlimited",
-        "gst": "u-n-l-e-m-td",
+        "gst": "n-l-e-m-td",
         "notes": ""
     },
     {
         "text": "unlined",
-        "gst": "u-n-l-i-nt",
+        "gst": "n-l-i-nt",
         "notes": ""
     },
     {
         "text": "unlisted",
-        "gst": "u-n-l-e-s-td",
+        "gst": "n-l-e-s-td",
         "notes": ""
     },
     {
         "text": "unload",
-        "gst": "u-n-l-o-d",
+        "gst": "n-l-o-d",
         "notes": ""
     },
     {
         "text": "unloaded",
-        "gst": "u-n-l-o-td",
+        "gst": "n-l-o-td",
         "notes": ""
     },
     {
         "text": "unlocalized",
-        "gst": "u-n-l-a-k-l-i-s-d",
+        "gst": "n-l-a-k-l-i-s-d",
         "notes": ""
     },
     {
         "text": "unlock",
-        "gst": "u-n-l-o-k",
+        "gst": "n-l-o-k",
         "notes": ""
     },
     {
         "text": "unlocked",
-        "gst": "u-n-l-o-k-t",
+        "gst": "n-l-o-k-t",
         "notes": ""
     },
     {
         "text": "unlooked",
-        "gst": "u-n-l-u-k-t",
+        "gst": "n-l-u-k-t",
         "notes": ""
     },
     {
         "text": "unloosen",
-        "gst": "u-n-l-o-s-n",
+        "gst": "n-l-o-s-n",
         "notes": ""
     },
     {
         "text": "unloved",
-        "gst": "u-n-l-u-v-d",
+        "gst": "n-l-u-v-d",
         "notes": ""
     },
     {
         "text": "unlovingly",
-        "gst": "u-n-l-a-v/e",
+        "gst": "n-l-a-v/e",
         "notes": ""
     },
     {
         "text": "unluckily",
-        "gst": "u-n-l-u-k-l-e-k-ye",
+        "gst": "n-l-u-k-l-e-k-ye",
         "notes": ""
     },
     {
         "text": "unlucky",
-        "gst": "u-n-l-u-k-e",
+        "gst": "n-l-u-k-e",
         "notes": ""
     },
     {
         "text": "unmade",
-        "gst": "u-n-m-a-d",
+        "gst": "n-m-a-d",
         "notes": ""
     },
     {
         "text": "unmagnified",
-        "gst": "u-n-m-a-n-j-f-i-nt",
+        "gst": "n-m-a-n-j-f-i-nt",
         "notes": ""
     },
     {
         "text": "unmaidenly",
-        "gst": "u-n-m-a-d-e-nt-e",
+        "gst": "n-m-a-d-e-nt-e",
         "notes": ""
     },
     {
         "text": "unmake",
-        "gst": "u-n-m-a-k",
+        "gst": "n-m-a-k",
         "notes": ""
     },
     {
         "text": "unmallable",
-        "gst": "u-n-m-a-l-b",
+        "gst": "n-m-a-l-b",
         "notes": ""
     },
     {
         "text": "unman",
-        "gst": "u-n-m-a-n",
+        "gst": "n-m-a-n",
         "notes": ""
     },
     {
         "text": "unmanageable",
-        "gst": "u-n-m-a-n-e-j-b",
+        "gst": "n-m-a-n-e-j-b",
         "notes": ""
     },
     {
         "text": "unmanliness",
-        "gst": "u-n-m-a-n-l-e-n-e-s",
+        "gst": "n-m-a-n-l-e-n-e-s",
         "notes": ""
     },
     {
         "text": "unmanly",
-        "gst": "u-n-m-a-n-e",
+        "gst": "n-m-a-n-e",
         "notes": ""
     },
     {
         "text": "unmanned",
-        "gst": "u-n-m-a-nt",
+        "gst": "n-m-a-nt",
         "notes": ""
     },
     {
         "text": "unmannerliness",
-        "gst": "u-n-m-a-n-r-l-i-n-e-s",
+        "gst": "n-m-a-n-r-l-i-n-e-s",
         "notes": ""
     },
     {
         "text": "unmannerly",
-        "gst": "u-n-m-a-n-r-e",
+        "gst": "n-m-a-n-r-e",
         "notes": ""
     },
     {
         "text": "unmarked",
-        "gst": "u-n-m-a-r-k-t",
+        "gst": "n-m-a-r-k-t",
         "notes": ""
     },
     {
         "text": "unmarriageable",
-        "gst": "u-n-m-a-r-e-j-b",
+        "gst": "n-m-a-r-e-j-b",
         "notes": ""
     },
     {
         "text": "unmarried",
-        "gst": "u-n-m-e-r-d",
+        "gst": "n-m-e-r-d",
         "notes": ""
     },
     {
         "text": "unmask",
-        "gst": "u-n-m-a-s-k",
+        "gst": "n-m-a-s-k",
         "notes": ""
     },
     {
         "text": "unmasked",
-        "gst": "u-n-m-a-s-k-t",
+        "gst": "n-m-a-s-k-t",
         "notes": ""
     },
     {
@@ -165786,12 +165786,12 @@
     },
     {
         "text": "unmeasurable",
-        "gst": "u-n-m-e-s-r-b",
+        "gst": "n-m-e-s-r-b",
         "notes": ""
     },
     {
         "text": "unmeasured",
-        "gst": "u-n-m-e-s-rd",
+        "gst": "n-m-e-s-rd",
         "notes": ""
     },
     {
@@ -165801,12 +165801,12 @@
     },
     {
         "text": "unmentioned",
-        "gst": "u-n-m-e-n-ch-nt",
+        "gst": "n-m-e-n-ch-nt",
         "notes": ""
     },
     {
         "text": "unmerciful",
-        "gst": "u-n-m-e-r-s-e-k-l",
+        "gst": "n-m-e-r-s-e-k-l",
         "notes": ""
     },
     {
@@ -165816,27 +165816,27 @@
     },
     {
         "text": "unmerited",
-        "gst": "u-n-m-e-r-td",
+        "gst": "n-m-e-r-td",
         "notes": ""
     },
     {
         "text": "unmetered",
-        "gst": "u-n-m-e-t-r-d",
+        "gst": "n-m-e-t-r-d",
         "notes": ""
     },
     {
         "text": "unmindful",
-        "gst": "u-n-m-e-n-f-d-l",
+        "gst": "n-m-e-n-f-d-l",
         "notes": ""
     },
     {
         "text": "unmistakable",
-        "gst": "u-n-m-s-t-a-k-b",
+        "gst": "n-m-s-t-a-k-b",
         "notes": ""
     },
     {
         "text": "unmitigated",
-        "gst": "u-n-m-e-t-g-a-td",
+        "gst": "n-m-e-t-g-a-td",
         "notes": ""
     },
     {
@@ -165846,22 +165846,22 @@
     },
     {
         "text": "unmolested",
-        "gst": "u-n-m-l-e-s-td",
+        "gst": "n-m-l-e-s-td",
         "notes": ""
     },
     {
         "text": "unmoored",
-        "gst": "u-n-m-a-u-rd",
+        "gst": "n-m-a-u-rd",
         "notes": ""
     },
     {
         "text": "unmortgaged",
-        "gst": "u-n-m-o-r-g-t-e-j-d",
+        "gst": "n-m-o-r-g-t-e-j-d",
         "notes": ""
     },
     {
         "text": "unmotivated",
-        "gst": "u-n-m-a-t-v-a-td",
+        "gst": "n-m-a-t-v-a-td",
         "notes": ""
     },
     {
@@ -165871,12 +165871,12 @@
     },
     {
         "text": "unmoved",
-        "gst": "u-n-m-u-v-d",
+        "gst": "n-m-u-v-d",
         "notes": ""
     },
     {
         "text": "unmovingly",
-        "gst": "u-n-m-a-v/e",
+        "gst": "n-m-a-v/e",
         "notes": ""
     },
     {
@@ -165896,7 +165896,7 @@
     },
     {
         "text": "unnavigable",
-        "gst": "u-n-p-a-j-g-l",
+        "gst": "u-n-a-v-g-b",
         "notes": ""
     },
     {
@@ -165916,17 +165916,17 @@
     },
     {
         "text": "unneighborly",
-        "gst": "u-n-g-e-b-r-e",
+        "gst": "u-n-a-b-r-e",
         "notes": ""
     },
     {
         "text": "unnerve",
-        "gst": "u-n-r-v",
+        "gst": "u-n-e-r-v",
         "notes": ""
     },
     {
         "text": "unnoticeable",
-        "gst": "u-n-p-a-t-b",
+        "gst": "u-n-o-t-e-s-b",
         "notes": ""
     },
     {
@@ -165936,7 +165936,7 @@
     },
     {
         "text": "unnumbered",
-        "gst": "u-n-u-m-b-rd",
+        "gst": "n-u-m-b-rd",
         "notes": ""
     },
     {
@@ -165976,7 +165976,7 @@
     },
     {
         "text": "unopposed",
-        "gst": "u-n-p-o-s-d",
+        "gst": "u-n-o-p-o-s-d",
         "notes": ""
     },
     {
@@ -166001,22 +166001,22 @@
     },
     {
         "text": "unpacified",
-        "gst": "u-n-p-a-s-f-i-d",
+        "gst": "n-p-a-s-f-i-d",
         "notes": ""
     },
     {
         "text": "unpack",
-        "gst": "u-n-p-a-k",
+        "gst": "n-p-a-k",
         "notes": ""
     },
     {
         "text": "unpaged",
-        "gst": "u-n-p-a-j-d",
+        "gst": "n-p-a-j-d",
         "notes": ""
     },
     {
         "text": "unpaid",
-        "gst": "u-n-p-a-d",
+        "gst": "n-p-a-d",
         "notes": ""
     },
     {
@@ -166026,47 +166026,47 @@
     },
     {
         "text": "unpalatable",
-        "gst": "u-n-p-a-l-t-b",
+        "gst": "n-p-a-l-t-b",
         "notes": ""
     },
     {
         "text": "unparalleled",
-        "gst": "u-n-p-e-r-l-e-ld",
+        "gst": "n-p-e-r-l-e-ld",
         "notes": ""
     },
     {
         "text": "unpardonable",
-        "gst": "u-n-p-a-rd-b-n-l",
+        "gst": "n-p-a-rd-b-n-l",
         "notes": ""
     },
     {
         "text": "unpardoned",
-        "gst": "u-n-p-a-r-tn-d",
+        "gst": "n-p-a-r-tn-d",
         "notes": ""
     },
     {
         "text": "unparliamentary",
-        "gst": "u-n-p-r-k-l-ea-n-r-tn",
+        "gst": "n-p-r-k-l-ea-n-r-tn",
         "notes": ""
     },
     {
         "text": "unpasteurized",
-        "gst": "u-n-p-a-s-t-r-i-s-d",
+        "gst": "n-p-a-s-t-r-i-s-d",
         "notes": ""
     },
     {
         "text": "unpatentable",
-        "gst": "u-n-p-tnt-b",
+        "gst": "n-p-tnt-b",
         "notes": ""
     },
     {
         "text": "unpatented",
-        "gst": "u-n-p-a-tn-td",
+        "gst": "n-p-a-tn-td",
         "notes": ""
     },
     {
         "text": "unpatriotic",
-        "gst": "u-n-p-a-t-r-ea-t-e-k",
+        "gst": "n-p-a-t-r-ea-t-e-k",
         "notes": ""
     },
     {
@@ -166076,22 +166076,22 @@
     },
     {
         "text": "unpatrolled",
-        "gst": "u-n-p-t-r-a-ld",
+        "gst": "n-p-t-r-a-ld",
         "notes": ""
     },
     {
         "text": "unpaved",
-        "gst": "u-n-p-a-v-d",
+        "gst": "n-p-a-v-d",
         "notes": ""
     },
     {
         "text": "unperceived",
-        "gst": "u-n-p-r-s-e-v-d",
+        "gst": "n-p-r-s-e-v-d",
         "notes": ""
     },
     {
         "text": "unperforated",
-        "gst": "u-n-p-r-f-o-r-t-t",
+        "gst": "n-p-r-f-o-r-t-t",
         "notes": ""
     },
     {
@@ -166101,52 +166101,52 @@
     },
     {
         "text": "unperturbed",
-        "gst": "u-n-p-r-t-r-b-d",
+        "gst": "n-p-r-t-r-b-d",
         "notes": ""
     },
     {
         "text": "unpitying",
-        "gst": "u-n-p-e-t-i-h",
+        "gst": "n-p-e-t-i-h",
         "notes": ""
     },
     {
         "text": "unpityingly",
-        "gst": "u-n-p-e-t/e",
+        "gst": "n-p-e-t/e",
         "notes": ""
     },
     {
         "text": "unplanned",
-        "gst": "u-n-p-l-a-nt",
+        "gst": "n-p-l-a-nt",
         "notes": ""
     },
     {
         "text": "unplastered",
-        "gst": "u-n-p-l-a-s-t-rd",
+        "gst": "n-p-l-a-s-t-rd",
         "notes": ""
     },
     {
         "text": "unplayable",
-        "gst": "u-n-p-l-a-b",
+        "gst": "n-p-l-a-b",
         "notes": ""
     },
     {
         "text": "unpleasable",
-        "gst": "u-n-p-l-e-s-b",
+        "gst": "n-p-l-e-s-b",
         "notes": ""
     },
     {
         "text": "unpleasant",
-        "gst": "u-n-p-l-e-s-nt",
+        "gst": "n-p-l-e-s-nt",
         "notes": ""
     },
     {
         "text": "unpleasantly",
-        "gst": "u-n-p-l-e-s-nt-e",
+        "gst": "n-p-l-e-s-nt-e",
         "notes": ""
     },
     {
         "text": "unpleasantness",
-        "gst": "u-n-p-l-e-s-nt-n-e-s",
+        "gst": "n-p-l-e-s-nt-n-e-s",
         "notes": ""
     },
     {
@@ -166156,17 +166156,17 @@
     },
     {
         "text": "unpledged",
-        "gst": "u-n-p-l-e-j-d",
+        "gst": "n-p-l-e-j-d",
         "notes": ""
     },
     {
         "text": "unplowed",
-        "gst": "u-n-p-l-a-u-d",
+        "gst": "n-p-l-a-u-d",
         "notes": ""
     },
     {
         "text": "unplugged",
-        "gst": "u-n-p-l-u-g-d",
+        "gst": "n-p-l-u-g-d",
         "notes": ""
     },
     {
@@ -166176,92 +166176,92 @@
     },
     {
         "text": "unpoetic",
-        "gst": "u-n-p-o-t-e-t-e-k",
+        "gst": "n-p-o-t-e-t-e-k",
         "notes": ""
     },
     {
         "text": "unpoliced",
-        "gst": "u-n-p-a-l-s-t",
+        "gst": "n-p-a-l-s-t",
         "notes": ""
     },
     {
         "text": "unpolished",
-        "gst": "u-n-p-a-l-e-sh-t",
+        "gst": "n-p-a-l-e-sh-t",
         "notes": ""
     },
     {
         "text": "unpolluted",
-        "gst": "u-n-p-a-l-td",
+        "gst": "n-p-a-l-td",
         "notes": ""
     },
     {
         "text": "unpopular",
-        "gst": "u-n-p-a-p-l-r",
+        "gst": "n-p-a-p-l-r",
         "notes": ""
     },
     {
         "text": "unpopulated",
-        "gst": "u-n-p-a-p/ud",
+        "gst": "n-p-a-p/ud",
         "notes": ""
     },
     {
         "text": "unpopulous",
-        "gst": "u-n-p-a-p-l-u-s",
+        "gst": "n-p-a-p-l-u-s",
         "notes": ""
     },
     {
         "text": "unpracticed",
-        "gst": "u-n-p-r-a-k-t-s-t",
+        "gst": "n-p-r-a-k-t-s-t",
         "notes": ""
     },
     {
         "text": "unprecedented",
-        "gst": "u-n-p-r-e-s-tn-td",
+        "gst": "n-p-r-e-s-tn-td",
         "notes": ""
     },
     {
         "text": "unprecedentedly",
-        "gst": "u-n-p-r-e-s-d-e-nt-e-d-e",
+        "gst": "n-p-r-e-s-d-e-nt-e-d-e",
         "notes": ""
     },
     {
         "text": "unpredictable",
-        "gst": "u-n-p-r-e-d-e-k-t-b",
+        "gst": "n-p-r-e-d-e-k-t-b",
         "notes": ""
     },
     {
         "text": "unprejudiced",
-        "gst": "u-n-p-r-j-u-d-s-t",
+        "gst": "n-p-r-e-j-d-e-s-t",
         "notes": ""
     },
     {
         "text": "unpremeditate",
-        "gst": "u-n-p-r-e-m-td-a-t",
+        "gst": "n-p-r-e-m-td-a-t",
         "notes": ""
     },
     {
         "text": "unprepared",
-        "gst": "u-n-p-r-e-p-e-rd",
+        "gst": "n-p-r-e-p-e-rd",
         "notes": ""
     },
     {
         "text": "unpreparedness",
-        "gst": "u-n-p-r-e-p-rd-e-n-e-s",
+        "gst": "n-p-r-e-p-rd-e-n-e-s",
         "notes": ""
     },
     {
         "text": "unpresentable",
-        "gst": "u-n-p-r-b",
+        "gst": "n-p-r-b",
         "notes": ""
     },
     {
         "text": "unpretending",
-        "gst": "u-n-p-r-e-tn-d-h",
+        "gst": "n-p-r-e-tn-d-h",
         "notes": ""
     },
     {
         "text": "unpretentious",
-        "gst": "u-n-p-r-e-tn-sh-u-s",
+        "gst": "n-p-r-e-tn-sh-u-s",
         "notes": ""
     },
     {
@@ -166276,12 +166276,12 @@
     },
     {
         "text": "unprincipled",
-        "gst": "u-n-p-r-e-n-s-p-ld",
+        "gst": "n-p-r-e-n-s-p-ld",
         "notes": ""
     },
     {
         "text": "unprintable",
-        "gst": "u-n-p-r-e-nt-b",
+        "gst": "n-p-r-e-nt-b",
         "notes": ""
     },
     {
@@ -166291,22 +166291,22 @@
     },
     {
         "text": "unproduced",
-        "gst": "u-n-p-rd-u-s-t",
+        "gst": "n-p-rd-u-s-t",
         "notes": ""
     },
     {
         "text": "unproductive",
-        "gst": "u-n-p-rd-u-k-t-v",
+        "gst": "n-p-rd-u-k-t-v",
         "notes": ""
     },
     {
         "text": "unprofessional",
-        "gst": "u-n-p-r-f-e-sh-l",
+        "gst": "n-p-r-f-e-sh-l",
         "notes": ""
     },
     {
         "text": "unprofitable",
-        "gst": "u-n-p-r-a-f-e-t-b",
+        "gst": "n-p-r-a-f-e-t-b",
         "notes": ""
     },
     {
@@ -166316,32 +166316,32 @@
     },
     {
         "text": "unpromising",
-        "gst": "u-n-p-r-o-m-e-s-h",
+        "gst": "n-p-r-o-m-e-s-h",
         "notes": ""
     },
     {
         "text": "unprompted",
-        "gst": "u-n-p-r-a-m-p-td",
+        "gst": "n-p-r-a-m-p-td",
         "notes": ""
     },
     {
         "text": "unpronounceable",
-        "gst": "u-n-p-r-o-n-s-n-b",
+        "gst": "n-p-r-o-n-s-n-b",
         "notes": ""
     },
     {
         "text": "unpropitious",
-        "gst": "u-n-p-r-p-e-t-u-s",
+        "gst": "n-p-r-p-e-t-u-s",
         "notes": ""
     },
     {
         "text": "unprotected",
-        "gst": "u-n-p-r-t-e-k-td",
+        "gst": "n-p-r-t-e-k-td",
         "notes": ""
     },
     {
         "text": "unprovable",
-        "gst": "u-n-p-r-a-v-b",
+        "gst": "n-p-r-a-v-b",
         "notes": ""
     },
     {
@@ -166351,22 +166351,22 @@
     },
     {
         "text": "unprovided",
-        "gst": "u-n-p-r-u-v-d-i-d",
+        "gst": "n-p-r-u-v-d-i-d",
         "notes": ""
     },
     {
         "text": "unprovoked",
-        "gst": "u-n-p-r-v-o-k-t",
+        "gst": "n-p-r-v-o-k-t",
         "notes": ""
     },
     {
         "text": "unpublished",
-        "gst": "u-n-p-u-b-l-e-sh-t",
+        "gst": "n-p-u-b-l-e-sh-t",
         "notes": ""
     },
     {
         "text": "unpunctual",
-        "gst": "u-n-p-u-nk-ch-u-l",
+        "gst": "n-p-nk-ch-u-l",
         "notes": ""
     },
     {
@@ -166376,12 +166376,12 @@
     },
     {
         "text": "unpunctually",
-        "gst": "u-n-p-u-nk-t-u-n-e",
+        "gst": "n-p-nk-t-n-e",
         "notes": ""
     },
     {
         "text": "unpunished",
-        "gst": "u-n-p-u-n-e-sh-t",
+        "gst": "n-p-n-e-sh-t",
         "notes": ""
     },
     {
@@ -166426,97 +166426,97 @@
     },
     {
         "text": "unravel",
-        "gst": "u-n-r-a-v-l",
+        "gst": "n-r-a-v-l",
         "notes": ""
     },
     {
         "text": "unraveled",
-        "gst": "u-n-r-a-v-ld",
+        "gst": "n-r-a-v-ld",
         "notes": ""
     },
     {
         "text": "unreachable",
-        "gst": "u-n-r-e-ch-b",
+        "gst": "n-r-e-ch-b",
         "notes": ""
     },
     {
         "text": "unread",
-        "gst": "u-n-r-d",
+        "gst": "n-r-d",
         "notes": ""
     },
     {
         "text": "unreadable",
-        "gst": "u-n-r-e-d-b",
+        "gst": "n-r-e-d-b",
         "notes": ""
     },
     {
         "text": "unreal",
-        "gst": "u-n-r-e-l",
+        "gst": "n-r-e-l",
         "notes": ""
     },
     {
         "text": "unrealistic",
-        "gst": "u-n-r-e-l-e-s-t-e-k",
+        "gst": "n-r-e-l-e-s-t-e-k",
         "notes": ""
     },
     {
         "text": "unreality",
-        "gst": "u-n-r-ea-l-t-e",
+        "gst": "n-r-e/l",
         "notes": ""
     },
     {
         "text": "unrealized",
-        "gst": "u-n-r-e-l-i-s-d",
+        "gst": "n-r-e-l-i-s-d",
         "notes": ""
     },
     {
         "text": "unreasonable",
-        "gst": "u-n-r-e-s-n-b",
+        "gst": "n-r-e-s-n-b",
         "notes": ""
     },
     {
         "text": "unreasonably",
-        "gst": "u-n-r-e-s-n-b-e",
+        "gst": "n-r-e-s-n-b-e",
         "notes": ""
     },
     {
         "text": "unreasoned",
-        "gst": "u-n-r-e-s-nt",
+        "gst": "n-r-e-s-nt",
         "notes": ""
     },
     {
         "text": "unreasoningly",
-        "gst": "u-n-r-e-s-n/e",
+        "gst": "n-r-s-n/e",
         "notes": ""
     },
     {
         "text": "unrebuked",
-        "gst": "u-n-r-e-b-e-u-d-e-nk",
+        "gst": "n-r-e-b-e-u-d-e-nk",
         "notes": ""
     },
     {
         "text": "unreceipted",
-        "gst": "u-n-r-e-s-e-t-e-td",
+        "gst": "n-r-e-s-e-t-e-td",
         "notes": ""
     },
     {
         "text": "unreceptive",
-        "gst": "u-n-r-e-s-e-p-t-v",
+        "gst": "n-r-e-s-e-p-t-v",
         "notes": ""
     },
     {
         "text": "unreclaimable",
-        "gst": "u-n-r-e-k-l-i-m-b",
+        "gst": "n-r-e-k-l-i-m-b",
         "notes": ""
     },
     {
         "text": "unrecognizable",
-        "gst": "u-n-r-e-k-g-n-i-s-b",
+        "gst": "n-r-e-k-g-n-i-s-b",
         "notes": ""
     },
     {
         "text": "unrecognized",
-        "gst": "u-n-r-e-k-g-n-i-s-d",
+        "gst": "n-r-e-k-g-n-i-s-d",
         "notes": ""
     },
     {
@@ -166526,17 +166526,17 @@
     },
     {
         "text": "unreconcilable",
-        "gst": "u-n-r-e-k-n-s-a-l-b",
+        "gst": "n-r-e-k-n-s-a-l-b",
         "notes": ""
     },
     {
         "text": "unrecorded",
-        "gst": "u-n-r-e-k-o-rd-d",
+        "gst": "n-r-e-k-o-rd-d",
         "notes": ""
     },
     {
         "text": "unredeemable",
-        "gst": "u-n-r-e-d-ye-m-b",
+        "gst": "n-r-e-d-ye-m-b",
         "notes": ""
     },
     {
@@ -166546,77 +166546,77 @@
     },
     {
         "text": "unrefillable",
-        "gst": "u-n-r-e-f-e-l-b",
+        "gst": "n-r-e-f-e-l-b",
         "notes": ""
     },
     {
         "text": "unrefined",
-        "gst": "u-n-r-e-f-i-nt",
+        "gst": "n-r-e-f-i-nt",
         "notes": ""
     },
     {
         "text": "unrefrigerated",
-        "gst": "u-n-r-e-f-r-e-j-r-a-td",
+        "gst": "n-r-e-f-r-e-j-r-a-td",
         "notes": ""
     },
     {
         "text": "unrefuted",
-        "gst": "u-n-r-e-f-e-u-td",
+        "gst": "n-r-e-f-e-u-td",
         "notes": ""
     },
     {
         "text": "unregenerate",
-        "gst": "u-n-r-e-j-n-e-r-a-t",
+        "gst": "n-r-e-j-n-e-r-a-t",
         "notes": ""
     },
     {
         "text": "unregulated",
-        "gst": "u-n-r-e-g/ud",
+        "gst": "n-r-e-g/ud",
         "notes": ""
     },
     {
         "text": "unrehearsed",
-        "gst": "u-n-r-e-h-r-s-t",
+        "gst": "n-r-e-h-r-s-t",
         "notes": ""
     },
     {
         "text": "unrelated",
-        "gst": "u-n-r-e-l-a-td",
+        "gst": "n-r-e-l-a-td",
         "notes": ""
     },
     {
         "text": "unrelentingly",
-        "gst": "u-n-r-e-l-e-nt/e",
+        "gst": "n-r-e-l-e-nt/e",
         "notes": ""
     },
     {
         "text": "unreliability",
-        "gst": "u-n-r-e-l-i-b/l",
+        "gst": "n-r-e-l-i-b/l",
         "notes": ""
     },
     {
         "text": "unreliable",
-        "gst": "u-n-r-e-l-i-b",
+        "gst": "n-r-e-l-i-b",
         "notes": ""
     },
     {
         "text": "unremitting",
-        "gst": "u-n-r-e-m-e-t-h",
+        "gst": "n-r-e-m-e-t-h",
         "notes": ""
     },
     {
         "text": "unremunerative",
-        "gst": "u-n-r-e-m-e-u-n-r-t-a-v",
+        "gst": "n-r-e-m-e-n-r-t-a-v",
         "notes": ""
     },
     {
         "text": "unremuneratively",
-        "gst": "u-n-r-e-m-e-u-n-r-t-v-e",
+        "gst": "n-r-e-m-e-n-r-t-v-e",
         "notes": ""
     },
     {
         "text": "unrentable",
-        "gst": "u-n-r-e-nt-a-b-b",
+        "gst": "n-r-e-nt-a-b-b",
         "notes": ""
     },
     {
@@ -166651,87 +166651,87 @@
     },
     {
         "text": "unreproved",
-        "gst": "u-n-r-e-p-r-u-v-d",
+        "gst": "n-r-e-p-r-u-v-d",
         "notes": ""
     },
     {
         "text": "unrequited",
-        "gst": "u-n-r-e-k-w-i-td",
+        "gst": "n-r-e-k-w-i-td",
         "notes": ""
     },
     {
         "text": "unreserved",
-        "gst": "u-n-r-e-s-r-v-d",
+        "gst": "n-r-e-s-r-v-d",
         "notes": ""
     },
     {
         "text": "unreservedly",
-        "gst": "u-n-r-e-s-r-v-e-d-e",
+        "gst": "n-r-e-s-r-v-e-d-e",
         "notes": ""
     },
     {
         "text": "unresolved",
-        "gst": "u-n-r-e-s-a-l-v-d",
+        "gst": "n-r-e-s-a-l-v-d",
         "notes": ""
     },
     {
         "text": "unresourceful",
-        "gst": "u-n-r-e-s-r-s-f-k",
+        "gst": "n-r-e-s-r-s-f-k",
         "notes": ""
     },
     {
         "text": "unresponsive",
-        "gst": "u-n-r-e-s-p-a-n-s-e-v",
+        "gst": "n-r-e-s-p-a-n-s-e-v",
         "notes": ""
     },
     {
         "text": "unrest",
-        "gst": "u-n-r-e-s-t",
+        "gst": "n-r-e-s-t",
         "notes": ""
     },
     {
         "text": "unrested",
-        "gst": "u-n-r-e-s-td",
+        "gst": "n-r-e-s-td",
         "notes": ""
     },
     {
         "text": "unrestrained",
-        "gst": "u-n-r-e-s-t-r-a-nt",
+        "gst": "n-r-e-s-t-r-a-nt",
         "notes": ""
     },
     {
         "text": "unrestricted",
-        "gst": "u-n-r-e-s-t-r-e-k-td",
+        "gst": "n-r-e-s-t-r-e-k-td",
         "notes": ""
     },
     {
         "text": "unrevealingly",
-        "gst": "u-n-r-e-v-e-l/e",
+        "gst": "n-r-e-v-e-l/e",
         "notes": ""
     },
     {
         "text": "unrewarded",
-        "gst": "u-n-r-u-f-r-d",
+        "gst": "n-r-u-f-r-d",
         "notes": ""
     },
     {
         "text": "unrhymed",
-        "gst": "u-n-r-u-h-i-tm",
+        "gst": "n-r-u-h-i-tm",
         "notes": ""
     },
     {
         "text": "unrighteous",
-        "gst": "u-n-r-i-ch-u-s",
+        "gst": "n-r-i-ch-u-s",
         "notes": ""
     },
     {
         "text": "unrighteously",
-        "gst": "u-n-r-i-sh-s-e",
+        "gst": "n-r-i-sh-s-e",
         "notes": ""
     },
     {
         "text": "unrightfully",
-        "gst": "u-n-r-i-t-f-e",
+        "gst": "n-r-i-t-f-e",
         "notes": ""
     },
     {
@@ -166741,32 +166741,32 @@
     },
     {
         "text": "unripened",
-        "gst": "u-n-r-e-p-nt",
+        "gst": "n-r-e-p-nt",
         "notes": ""
     },
     {
         "text": "unrivaled",
-        "gst": "u-n-r-i-v-ld",
+        "gst": "n-r-i-v-ld",
         "notes": ""
     },
     {
         "text": "unroll",
-        "gst": "u-n-r-o-l",
+        "gst": "n-r-o-l",
         "notes": ""
     },
     {
         "text": "unrolled",
-        "gst": "u-n-r-o-ld",
+        "gst": "n-r-o-ld",
         "notes": ""
     },
     {
         "text": "unruffle",
-        "gst": "u-n-r-u-f",
+        "gst": "n-r-u-f",
         "notes": ""
     },
     {
         "text": "unruffled",
-        "gst": "u-n-r-u-f-ld",
+        "gst": "n-r-u-f-ld",
         "notes": ""
     },
     {
@@ -166776,7 +166776,7 @@
     },
     {
         "text": "unruly",
-        "gst": "u-n-r-u-e",
+        "gst": "n-r-u-e",
         "notes": ""
     },
     {
@@ -167706,12 +167706,12 @@
     },
     {
         "text": "ununderstandable",
-        "gst": "u-n-j-nt-r-u-s-tn",
+        "gst": "n-u/s-tn",
         "notes": ""
     },
     {
         "text": "unupbraidingly",
-        "gst": "u-n-u-p-b-r-a-d/e",
+        "gst": "n-p-b-r-a-d/e",
         "notes": ""
     },
     {
@@ -167721,7 +167721,7 @@
     },
     {
         "text": "unused",
-        "gst": "u-n-e-u-s-t",
+        "gst": "u-n-e-u-d",
         "notes": ""
     },
     {
@@ -167731,17 +167731,17 @@
     },
     {
         "text": "unusually",
-        "gst": "u-n-e-u-sh-w-e",
+        "gst": "u-n-e-u-sh-u-l-e",
         "notes": ""
     },
     {
         "text": "unutterable",
-        "gst": "u-n-e-t-u-r-b",
+        "gst": "n-u-t-r-b",
         "notes": ""
     },
     {
         "text": "unutterably",
-        "gst": "u-n-e-t-u-r-b-e",
+        "gst": "n-u-t-r-b-e",
         "notes": ""
     },
     {
@@ -167751,92 +167751,92 @@
     },
     {
         "text": "unvalidated",
-        "gst": "u-n-v-a-l-e-d-a-td",
+        "gst": "n-v-a-l-e-d-a-td",
         "notes": ""
     },
     {
         "text": "unvalued",
-        "gst": "u-n-v-a-l-e-u-d",
+        "gst": "n-v-a-l-e-u-d",
         "notes": ""
     },
     {
         "text": "unvanquished",
-        "gst": "u-n-v-a-nk-sh-t",
+        "gst": "n-v-a-nk-sh-t",
         "notes": ""
     },
     {
         "text": "unvaried",
-        "gst": "u-n-v-e-r-d",
+        "gst": "n-v-e-r-d",
         "notes": ""
     },
     {
         "text": "unvarnished",
-        "gst": "u-n-v-a-r-n-e-sh-t",
+        "gst": "n-v-a-r-n-e-sh-t",
         "notes": ""
     },
     {
         "text": "unvaryingly",
-        "gst": "u-n-v-a-r-e/e",
+        "gst": "n-v-a-r-e/e",
         "notes": ""
     },
     {
         "text": "unvauntingly",
-        "gst": "u-n-v-o-nt/e",
+        "gst": "n-v-o-nt/e",
         "notes": ""
     },
     {
         "text": "unveil",
-        "gst": "u-n-v-a-l",
+        "gst": "n-v-a-l",
         "notes": ""
     },
     {
         "text": "unveiled",
-        "gst": "u-n-v-a-ld",
+        "gst": "n-v-a-ld",
         "notes": ""
     },
     {
         "text": "unverbalized",
-        "gst": "u-n-v-r-l-i-s-d",
+        "gst": "n-v-r-l-i-s-d",
         "notes": ""
     },
     {
         "text": "unverified",
-        "gst": "u-n-v-e-r-e-f-i-d",
+        "gst": "n-v-e-r-e-f-i-d",
         "notes": ""
     },
     {
         "text": "unversed",
-        "gst": "u-n-v-r-s-t",
+        "gst": "n-v-r-s-t",
         "notes": ""
     },
     {
         "text": "unvisited",
-        "gst": "u-n-v-e-s-td",
+        "gst": "n-v-e-s-td",
         "notes": ""
     },
     {
         "text": "unvoiced",
-        "gst": "u-n-v-o-e-s-t",
+        "gst": "n-v-o-e-s-t",
         "notes": ""
     },
     {
         "text": "unwalled",
-        "gst": "u-n-w-o-ld",
+        "gst": "n-w-o-ld",
         "notes": ""
     },
     {
         "text": "unwarily",
-        "gst": "u-n-w-o-r-ye",
+        "gst": "n-w-o-r-ye",
         "notes": ""
     },
     {
         "text": "unwarned",
-        "gst": "u-n-w-o-r-nt",
+        "gst": "n-w-o-r-nt",
         "notes": ""
     },
     {
         "text": "unwarrantable",
-        "gst": "u-n-w-o-r-nt-b",
+        "gst": "n-w-o-r-nt-b",
         "notes": ""
     },
     {
@@ -167846,27 +167846,27 @@
     },
     {
         "text": "unwary",
-        "gst": "u-n-w-e-r-e",
+        "gst": "n-w-e-r-e",
         "notes": ""
     },
     {
         "text": "unwashed",
-        "gst": "u-n-w-a-sh-t",
+        "gst": "n-w-a-sh-t",
         "notes": ""
     },
     {
         "text": "unwatered",
-        "gst": "u-n-w-o-td",
+        "gst": "n-w-o-td",
         "notes": ""
     },
     {
         "text": "unwaveringly",
-        "gst": "u-n-w-o-r-v/e",
+        "gst": "n-w-o-r-v/e",
         "notes": ""
     },
     {
         "text": "unwearied",
-        "gst": "u-n-w-e-r-d",
+        "gst": "n-w-e-r-d",
         "notes": ""
     },
     {
@@ -167876,17 +167876,17 @@
     },
     {
         "text": "unwed",
-        "gst": "u-n-w-e-d",
+        "gst": "n-w-e-d",
         "notes": ""
     },
     {
         "text": "unwedded",
-        "gst": "u-n-w-e-td",
+        "gst": "n-w-e-td",
         "notes": ""
     },
     {
         "text": "unwelcome",
-        "gst": "u-n-l-k-m",
+        "gst": "n-l-k-m",
         "notes": ""
     },
     {
@@ -167896,32 +167896,32 @@
     },
     {
         "text": "unwept",
-        "gst": "u-n-w-e-p-t",
+        "gst": "n-w-e-p-t",
         "notes": ""
     },
     {
         "text": "unwholesome",
-        "gst": "u-n-h-w-o-l-s-m-e-s",
+        "gst": "u-n-h-o-l-s-m",
         "notes": ""
     },
     {
         "text": "unwholesomely",
-        "gst": "u-n-w-a-l-s-e-m-e-l",
+        "gst": "u-n-h-o-l-s-m-e",
         "notes": ""
     },
     {
         "text": "unwieldiness",
-        "gst": "u-n-ld-e-n-e-s",
+        "gst": "n-u-e-ld-e-n-e-s",
         "notes": ""
     },
     {
         "text": "unwieldy",
-        "gst": "u-n-ld-e",
+        "gst": "n-ld-e",
         "notes": ""
     },
     {
         "text": "unwilling",
-        "gst": "u-n-l-h",
+        "gst": "n-l-h",
         "notes": ""
     },
     {
@@ -167931,12 +167931,12 @@
     },
     {
         "text": "unwillingness",
-        "gst": "u-n-l-e-h-n-e-s",
+        "gst": "n-l-e-h-n-e-s",
         "notes": ""
     },
     {
         "text": "unwincingly",
-        "gst": "u-n-u-e-n-s/e",
+        "gst": "n-u-e-n-s/e",
         "notes": ""
     },
     {
@@ -167946,22 +167946,22 @@
     },
     {
         "text": "unwindingly",
-        "gst": "u-n-w-e-nt/e",
+        "gst": "n-u-i-nt/e",
         "notes": ""
     },
     {
         "text": "unwinkingly",
-        "gst": "u-n-w-e-nk/e",
+        "gst": "n-u-e-nk/e",
         "notes": ""
     },
     {
         "text": "unwise",
-        "gst": "u-n-w-i-s",
+        "gst": "n-u-i-s",
         "notes": ""
     },
     {
         "text": "unwitnessed",
-        "gst": "u-n-w-e-t-s-tn-d-s",
+        "gst": "n-u-e-t-n-e-s-t",
         "notes": ""
     },
     {
@@ -167971,7 +167971,7 @@
     },
     {
         "text": "unwomanly",
-        "gst": "u-n-w-a-mn-e",
+        "gst": "n-u-u-mn-e",
         "notes": ""
     },
     {
@@ -167981,7 +167981,7 @@
     },
     {
         "text": "unworkable",
-        "gst": "u-n-u-k-b",
+        "gst": "n-u-k-b",
         "notes": ""
     },
     {
@@ -168001,7 +168001,7 @@
     },
     {
         "text": "unworn",
-        "gst": "u-n-w-o-r-n",
+        "gst": "n-u-o-r-n",
         "notes": ""
     },
     {
@@ -168026,7 +168026,7 @@
     },
     {
         "text": "unwound",
-        "gst": "u-n-w-a-u-nt",
+        "gst": "n-u-a-u-nt",
         "notes": ""
     },
     {
@@ -168041,22 +168041,22 @@
     },
     {
         "text": "unwrapped",
-        "gst": "u-n-r-a-p-t",
+        "gst": "n-r-a-p-t",
         "notes": ""
     },
     {
         "text": "unwreathe",
-        "gst": "u-n-r-e-th",
+        "gst": "n-r-e-th",
         "notes": ""
     },
     {
         "text": "unwrinkled",
-        "gst": "u-n-r-e-ng-td",
+        "gst": "n-r-e-nk-td",
         "notes": ""
     },
     {
         "text": "unwritten",
-        "gst": "u-n-r-e-tn",
+        "gst": "n-r-e-tn",
         "notes": ""
     },
     {
@@ -171611,7 +171611,7 @@
     },
     {
         "text": "volubility",
-        "gst": "v-a-l-b-e-t-e-j-e",
+        "gst": "v-o-l-b/l",
         "notes": ""
     },
     {
@@ -174416,7 +174416,7 @@
     },
     {
         "text": "wettability",
-        "gst": "u-e-t-b-a-l-t-e",
+        "gst": "u-e-t-b/l",
         "notes": ""
     },
     {
@@ -177196,7 +177196,7 @@
     },
     {
         "text": "workability",
-        "gst": "u-k-b-a-l-t-e",
+        "gst": "u-k-b/l",
         "notes": ""
     },
     {

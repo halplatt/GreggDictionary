@@ -22,7 +22,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0810@08:01pm format'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0811@11:26pm format'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -121,7 +121,7 @@
         }
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(392px, 1fr));
             gap: 16px;
             margin-top: 20px;
         }
@@ -147,7 +147,7 @@
         }
         .result-image-wrap {
             width: 100%;
-            overflow-x: auto;
+            overflow-x: hidden;
         }
         .result-image-crop {
             position: relative;
@@ -838,77 +838,39 @@
             const outerContainer = document.createElement('div');
             outerContainer.className = 'result-image-wrap';
             outerContainer.style.width = '100%';
-            outerContainer.style.overflowX = 'auto';
+            outerContainer.style.overflowX = 'hidden';
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'result-image-crop';
             imageContainer.style.position = 'relative';
             imageContainer.style.overflow = 'hidden';
             imageContainer.style.border = '1px solid #000';
-            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+            imageContainer.dataset.expanded = 'false';
+
+            function applyViewportSize(size) {
+                const maxAvailable = outerContainer.clientWidth || size.x;
+                const clampedWidth = Math.min(size.x, maxAvailable);
+                imageContainer.style.width = `${clampedWidth}px`;
+                outerContainer.style.overflowX = 'hidden';
+                imageContainer.style.height = `${size.y}px`;
+            }
+
+            applyViewportSize(DISPLAY_SIZE_SMALL);
 
             const img = document.createElement('img');
             img.className = 'absolute max-w-none';
             img.src = `${objRef.page}.png`;
             img.alt = `Gregg shorthand for word: ${objRef.word}`;
             img.style.position = 'absolute';
-            img.style.top = `-${objRef.y - DISPLAY_SIZE_SMALL.y / 2}px`; // Initial center before image load
-            img.style.left = `-${objRef.x - DISPLAY_SIZE_SMALL.offset}px`; // Initial position before image load
+            img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
+            img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
             img.style.width = '1281px'; // Assuming the image width is fixed
 
-            function clamp(value, min, max) {
-                return Math.min(Math.max(value, min), max);
-            }
-
-            function positionImage(viewW, viewH, viewOffsetX) {
-                if (!img.naturalWidth || !img.naturalHeight) return;
-                const refX = Number(objRef.x) || 0;
-                const refY = Number(objRef.y) || 0;
-                const scale = IMG_WIDTH / img.naturalWidth;
-                const scaledW = IMG_WIDTH;
-                const scaledH = img.naturalHeight * scale;
-
-                // Match legacy row view horizontal alignment while preserving bounds clamping.
-                const centeredLeft = refX * scale - viewOffsetX;
-                const centeredTop = refY * scale - (viewH / 2);
-
-                const maxLeft = Math.max(0, scaledW - viewW);
-                const maxTop = Math.max(0, scaledH - viewH);
-
-                const clampedLeft = clamp(centeredLeft, 0, maxLeft);
-                const clampedTop = clamp(centeredTop, 0, maxTop);
-
-                img.style.left = `-${clampedLeft}px`;
-                img.style.top = `-${clampedTop}px`;
-                img.style.width = `${IMG_WIDTH}px`;
-            }
-
             img.onload = function() {
-                positionImage(DISPLAY_SIZE_SMALL.x, DISPLAY_SIZE_SMALL.y, DISPLAY_SIZE_SMALL.offset);
-            };
-
-            img.onerror = function() {
-                // If the reference page image is unavailable, fall back to the per-word image.
-                const imagePathann = `../${globalGsd}Words/`;
-                this.onerror = function() {
-                    this.style.display = 'none';
-                    const errorText = document.createElement('span');
-                    errorText.textContent = 'image not available';
-                    errorText.style.color = '#888';
-                    errorText.style.fontStyle = 'italic';
-                    if (!resultItem.querySelector('span')) {
-                        resultItem.appendChild(errorText);
-                    }
-                };
-                this.src = `${imagePathann}${searchTerm}.png`;
-                this.style.left = '0px';
-                this.style.top = '0px';
-                this.style.width = 'auto';
-                this.style.maxWidth = '100%';
-                this.style.height = 'auto';
-                this.style.position = 'static';
-                imageContainer.style.height = 'auto';
+                const scale = IMG_WIDTH / img.naturalWidth;
+                img.style.top = `-${objRef.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                img.style.left = `-${objRef.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                img.style.width = `${IMG_WIDTH}px`;
             };
 
             const expandButton = document.createElement('button');
@@ -916,20 +878,28 @@
             expandButton.innerHTML = 'Expand';
             expandButton.onclick = function(event) {
                 event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
-                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
-                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
-                    positionImage(DISPLAY_SIZE_LARGE.x, DISPLAY_SIZE_LARGE.y, DISPLAY_SIZE_LARGE.offset);
+                const isExpanded = imageContainer.dataset.expanded === 'true';
+                if (!isExpanded) {
+                    applyViewportSize(DISPLAY_SIZE_LARGE);
+                    imageContainer.dataset.expanded = 'true';
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
                     expandButton.innerHTML = 'Shrink';
                 } else {
-                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-                    positionImage(DISPLAY_SIZE_SMALL.x, DISPLAY_SIZE_SMALL.y, DISPLAY_SIZE_SMALL.offset);
+                    applyViewportSize(DISPLAY_SIZE_SMALL);
+                    imageContainer.dataset.expanded = 'false';
+                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
+                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
                     expandButton.innerHTML = 'Expand';
                 }
                 // Focus and select regex input after expand/shrink action
                 setTimeout(focusRegexInput, 10);
             };
+
+            window.addEventListener('resize', function() {
+                const size = imageContainer.dataset.expanded === 'true' ? DISPLAY_SIZE_LARGE : DISPLAY_SIZE_SMALL;
+                applyViewportSize(size);
+            });
 
             imageContainer.appendChild(img);
             outerContainer.appendChild(imageContainer);
