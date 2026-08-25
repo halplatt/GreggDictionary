@@ -66,9 +66,42 @@
 		})();
 
         var globalGsd; //global variable to store the gsd value;   
+        function getDict2Array() {
+            if (typeof dict2 !== 'undefined' && Array.isArray(dict2)) {
+                return dict2;
+            }
+            if (Array.isArray(window.dict2)) {
+                return window.dict2;
+            }
+            return null;
+        }
+        function updateDict2OptionUI() {
+            const checkbox = document.getElementById('checkboxUseDict2');
+            const label = document.querySelector('label[for="checkboxUseDict2"]');
+            if (!checkbox) {
+                return;
+            }
+
+            const dict2Array = getDict2Array();
+            const hasDict2 = isDict2Available && !!dict2Array && dict2Array.length > 0;
+            if (hasDict2) {
+                checkbox.style.display = '';
+                checkbox.disabled = false;
+                if (label) {
+                    label.style.display = '';
+                }
+                return;
+            }
+
+            checkbox.checked = false;
+            checkbox.style.display = 'none';
+            if (label) {
+                label.style.display = 'none';
+            }
+        }
         // Set the version number
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('version').textContent = 'V2026.0204@3:30pm';
+            document.getElementById('version').textContent = 'V2026.0824@6:03pm cust';
             if (public_domain_only === 'pd') {
 				document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}	
@@ -80,11 +113,7 @@
             document.title = `Regex Search of ${folderName}`;
             document.querySelector('h1').textContent = `Convert Text to Gregg shorthand using outlines from ${folderName}`;
             document.querySelector('title').textContent = `Text to Gregg ${folderName}`;
-            // Hide checkboxUseDict2 and its label if folderName is not djsWords
-            if (folderName !== 'djsWords') {
-            document.getElementById('checkboxUseDict2').style.display = 'none';
-            document.querySelector('label[for="checkboxUseDict2"]').style.display = 'none';
-            }
+            updateDict2OptionUI();
         });
         if (public_domain_only === 'pd') {
             const style = document.createElement('style');
@@ -105,8 +134,21 @@
         document.head.appendChild(script);
         // create a script tag to load the dict2 array
         const imagePath2 = './!PNGCustom/'; //path to enhanced word.png images
+        let isDict2Available = false;
         let script2 = document.createElement('script');
         script2.src = imagePath2 + '!words.array2.js';
+        script2.onload = function () {
+            isDict2Available = true;
+            updateDict2OptionUI();
+        };
+        script2.onerror = function () {
+            isDict2Available = false;
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', updateDict2OptionUI, { once: true });
+            } else {
+                updateDict2OptionUI();
+            }
+        };
         document.head.appendChild(script2);
         //Functions to link to GreggDictionary.html
            // Function to copy text to clipboard
@@ -366,8 +408,16 @@ function processInput() {
     // dict array is defined in djsWords/!words.array.js
     resultContainer.innerHTML = ''; // Clear previous results
     let dict_lc = dict.map(word => word.toLowerCase());  //create a copy of dict array in lower case
-    let dict2_lc = dict2.map(word => word.toLowerCase());  //create a copy of dict2 array in lower case
     let isUseDict2Checked = document.getElementById('checkboxUseDict2').checked;
+    let dict2_lc = [];
+    const dict2Array = getDict2Array();
+    if (isUseDict2Checked && isDict2Available && !!dict2Array && dict2Array.length > 0) {
+        dict2_lc = dict2Array.map(word => word.toLowerCase());  //create a copy of dict2 array in lower case
+    } else if (isUseDict2Checked && (!isDict2Available || !dict2Array || dict2Array.length === 0)) {
+        document.getElementById('checkboxUseDict2').checked = false;
+        isUseDict2Checked = false;
+        updateDict2OptionUI();
+    }
     //Beg Logic to process input split by non-word characters
     let inputText = document.getElementById('inputText').value;
     let inputWords = inputText.split(/([^a-zA-Z']+)/);
@@ -423,7 +473,7 @@ function processInput() {
                     pattern = lastSuccess;
                     i=last_i;
                     let idxWord = dict2_lc.findIndex(word => word === pattern); //wordcs is word from array in its original case
-                    writeImage2(dict2[idxWord]);
+                    writeImage2(dict2Array[idxWord]);
                 }
             } //end check dict2 array for match
                
