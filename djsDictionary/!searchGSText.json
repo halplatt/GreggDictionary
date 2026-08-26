@@ -1131,7 +1131,7 @@
     },
     {
         "text": "acclamatory",
-        "gst": "a-k-m-a-l-t-o-r-e",
+        "gst": "a-k-m-a-l-t-r-e",
         "notes": ""
     },
     {
@@ -1351,7 +1351,7 @@
     },
     {
         "text": "accumulated",
-        "gst": "a-k-e-u-m/ud",
+        "gst": "a-k-e-u-m/u-d",
         "notes": ""
     },
     {
@@ -1401,7 +1401,7 @@
     },
     {
         "text": "accusatory",
-        "gst": "a-k-e-u-s-t-o-r-e",
+        "gst": "a-k-e-u-s-t-r-e",
         "notes": ""
     },
     {
@@ -1651,12 +1651,12 @@
     },
     {
         "text": "acquiesce",
-        "gst": "a-k-w-e-e-s",
+        "gst": "a-k-w-e-s",
         "notes": ""
     },
     {
         "text": "acquiesced",
-        "gst": "a-k-w-e-e-s-t",
+        "gst": "a-k-w-e-s-t",
         "notes": ""
     },
     {
@@ -1671,12 +1671,12 @@
     },
     {
         "text": "acquire",
-        "gst": "a-k-w-i-r",
+        "gst": "a-k-i-r",
         "notes": ""
     },
     {
         "text": "acquired",
-        "gst": "a-k-w-i-rd",
+        "gst": "a-k-i-rd",
         "notes": ""
     },
     {
@@ -1686,7 +1686,7 @@
     },
     {
         "text": "acquires",
-        "gst": "a-k-w-i-r-s",
+        "gst": "a-k-i-r-s",
         "notes": ""
     },
     {
@@ -1891,7 +1891,7 @@
     },
     {
         "text": "actualities",
-        "gst": "a-k-ch-w-a-l-t-e-s",
+        "gst": "a-k-t/l-s",
         "notes": ""
     },
     {
@@ -1906,17 +1906,17 @@
     },
     {
         "text": "actuarial",
-        "gst": "a-k-ch-w-e-r-l",
+        "gst": "a-k-t-r-l",
         "notes": ""
     },
     {
         "text": "actuary",
-        "gst": "a-k-ch-w-r-e",
+        "gst": "a-k-t-r-e",
         "notes": ""
     },
     {
         "text": "actuate",
-        "gst": "a-k-ch-u-w-a-t",
+        "gst": "a-k-t-e-u-t",
         "notes": ""
     },
     {
@@ -2161,7 +2161,7 @@
     },
     {
         "text": "adequate",
-        "gst": "a-d-k-w-a-t",
+        "gst": "a-d-e-k-w-a-t",
         "notes": ""
     },
     {
@@ -2316,7 +2316,7 @@
     },
     {
         "text": "adjuratory",
-        "gst": "a-j-u-r-t-o-r-e",
+        "gst": "a-j-u-r-t-r-e",
         "notes": ""
     },
     {
@@ -2776,7 +2776,7 @@
     },
     {
         "text": "adversity",
-        "gst": "a-d-v-e-r-s-e-t-e",
+        "gst": "a-d-v-e-r-s-t-e",
         "notes": ""
     },
     {
@@ -2986,7 +2986,7 @@
     },
     {
         "text": "affectivity",
-        "gst": "a-f-k-t-v-e-t-e",
+        "gst": "a-f-k-t-v-t-e",
         "notes": ""
     },
     {
@@ -3046,7 +3046,7 @@
     },
     {
         "text": "affirmatory",
-        "gst": "a-f-r-m-t-r-e",
+        "gst": "a-f-r-m-a-t-r-e",
         "notes": ""
     },
     {
@@ -3101,7 +3101,7 @@
     },
     {
         "text": "afford",
-        "gst": "a-fd",
+        "gst": "a-f-d",
         "notes": ""
     },
     {
@@ -4026,7 +4026,7 @@
     },
     {
         "text": "aleatory",
-        "gst": "a-l-e-t-o-r-e",
+        "gst": "a-l-ea-t-r-e",
         "notes": ""
     },
     {
@@ -4481,7 +4481,7 @@
     },
     {
         "text": "allspice",
-        "gst": "o-%-s2-p-i-s2",
+        "gst": "o-s2-p-i-s2",
         "notes": ""
     },
     {
@@ -4986,7 +4986,7 @@
     },
     {
         "text": "amatory",
-        "gst": "a-m-t-o-r-e",
+        "gst": "a-m-a-t-r-e",
         "notes": ""
     },
     {
@@ -5306,7 +5306,7 @@
     },
     {
         "text": "Amityville",
-        "gst": "a-m-e-t-v-e-l",
+        "gst": "a-m-e-t-e-v",
         "notes": ""
     },
     {
@@ -6646,7 +6646,7 @@
     },
     {
         "text": "anticipatory",
-        "gst": "nt-e-s-p-t-o-r-e",
+        "gst": "nt-e-s-p-a-t-r-e",
         "notes": ""
     },
     {
@@ -6886,7 +6886,7 @@
     },
     {
         "text": "anyhow",
-        "gst": "e-n-e-h-a-u",
+        "gst": "e-n-a-u",
         "notes": ""
     },
     {
@@ -7251,7 +7251,7 @@
     },
     {
         "text": "appellee",
-        "gst": "a-p-e-e",
+        "gst": "a-p-e-l-e",
         "notes": ""
     },
     {
@@ -7631,7 +7631,7 @@
     },
     {
         "text": "appropriately",
-        "gst": "a-p-r-o-p-r-e-e-t-e",
+        "gst": "a-p-r-o-p-r-ea-t-e",
         "notes": ""
     },
     {
@@ -7841,7 +7841,7 @@
     },
     {
         "text": "aragonite",
-        "gst": "a-r-a-g-n-o-e-t",
+        "gst": "a-r-a-g-n-i-t",
         "notes": ""
     },
     {
@@ -7871,7 +7871,7 @@
     },
     {
         "text": "arbitrage",
-        "gst": "a-r-b-e-t-r-a-sh",
+        "gst": "a-r-b-t-r-j",
         "notes": ""
     },
     {
@@ -8721,7 +8721,7 @@
     },
     {
         "text": "articulated",
-        "gst": "a-r-t-e-k/ud",
+        "gst": "a-r-t-e-k/u-d",
         "notes": ""
     },
     {
@@ -10146,7 +10146,7 @@
     },
     {
         "text": "at a loss",
-        "gst": "a-t-a-l-o-s",
+        "gst": "t-l-o-s",
         "notes": ""
     },
     {
@@ -10161,22 +10161,22 @@
     },
     {
         "text": "at least",
-        "gst": "a-t-l-e-s-t",
+        "gst": "t-l-e-s-t",
         "notes": ""
     },
     {
         "text": "at length",
-        "gst": "a-t-l-e-nk-th",
+        "gst": "t-l-e-nk-th",
         "notes": ""
     },
     {
         "text": "at such a time",
-        "gst": "a-t-s-u-ch-a-tm",
+        "gst": "t-s-h-tm",
         "notes": ""
     },
     {
         "text": "at that time",
-        "gst": "a-t-th-a-tm",
+        "gst": "t-th-a-tm",
         "notes": ""
     },
     {
@@ -10186,7 +10186,7 @@
     },
     {
         "text": "at the time",
-        "gst": "a-t-th-tm",
+        "gst": "t-th-tm",
         "notes": ""
     },
     {
@@ -10201,17 +10201,17 @@
     },
     {
         "text": "at this time",
-        "gst": "a-t-th-s-tm",
+        "gst": "t-th-s-tm",
         "notes": ""
     },
     {
         "text": "at this",
-        "gst": "a-t-th-s",
+        "gst": "t-th-s",
         "notes": ""
     },
     {
         "text": "at which time",
-        "gst": "t-w-ch-tm",
+        "gst": "t-ch-tm",
         "notes": ""
     },
     {
@@ -10246,17 +10246,17 @@
     },
     {
         "text": "atheist",
-        "gst": "a-th1-e/s1-t",
+        "gst": "a-th1-e-s1-t",
         "notes": ""
     },
     {
         "text": "atheistic",
-        "gst": "a-th-e-e-s-t-e-k",
+        "gst": "a-th-e-s-t-e-k",
         "notes": ""
     },
     {
         "text": "athenaeum",
-        "gst": "a-th-n-e-m",
+        "gst": "a-th-e-n-e-m",
         "notes": ""
     },
     {
@@ -10301,12 +10301,12 @@
     },
     {
         "text": "atmosphere",
-        "gst": "a-tm-s-f-e-r",
+        "gst": "a-t-m-o-s",
         "notes": ""
     },
     {
         "text": "atmospheric",
-        "gst": "a-tm-s-f-e-r-e-k",
+        "gst": "a-t-m-o-s-k",
         "notes": ""
     },
     {
@@ -10736,7 +10736,7 @@
     },
     {
         "text": "auditor",
-        "gst": "o-d-e-t-r",
+        "gst": "o-td-r",
         "notes": ""
     },
     {
@@ -10746,7 +10746,7 @@
     },
     {
         "text": "auditory",
-        "gst": "o-d-e-t-o-r-e",
+        "gst": "o-td-rv-e",
         "notes": ""
     },
     {
@@ -11641,17 +11641,17 @@
     },
     {
         "text": "backwash",
-        "gst": "b-a-k-w-o-sh",
+        "gst": "b-a-k-u-o-sh",
         "notes": ""
     },
     {
         "text": "backwater",
-        "gst": "b-a-k-w-o-t-r",
+        "gst": "b-a-k-u-o-t-r",
         "notes": ""
     },
     {
         "text": "backwoods",
-        "gst": "b-a-k-w-u-d-s",
+        "gst": "b-a-k-u-u-d-s",
         "notes": ""
     },
     {
@@ -13321,7 +13321,7 @@
     },
     {
         "text": "Bedford",
-        "gst": "b-e-d-f-rd",
+        "gst": "b-d-f-t",
         "notes": ""
     },
     {
@@ -13561,7 +13561,7 @@
     },
     {
         "text": "begone",
-        "gst": "b-g-o-n",
+        "gst": "b-g-n",
         "notes": ""
     },
     {
@@ -14331,17 +14331,17 @@
     },
     {
         "text": "between them",
-        "gst": "b-t-w-e-n-th-e-m",
+        "gst": "b-tn-th-e-m",
         "notes": ""
     },
     {
         "text": "between these",
-        "gst": "b-t-w-e-n-th-e-s",
+        "gst": "b-tn-th-e-s",
         "notes": ""
     },
     {
         "text": "between us",
-        "gst": "b-t-w-e-n-u-s",
+        "gst": "b-tn-u-s",
         "notes": ""
     },
     {
@@ -14791,7 +14791,7 @@
     },
     {
         "text": "bindweed",
-        "gst": "b-e-nt-w-a-d",
+        "gst": "b-i-nt-w-a-d",
         "notes": ""
     },
     {
@@ -14856,7 +14856,7 @@
     },
     {
         "text": "biologist",
-        "gst": "b-%-o-l/s1-t",
+        "gst": "b-o-l-e-s1-t",
         "notes": ""
     },
     {
@@ -16011,7 +16011,7 @@
     },
     {
         "text": "boatswain",
-        "gst": "b-o-t-s-w-a-n",
+        "gst": "b-o-s-n",
         "notes": ""
     },
     {
@@ -17216,7 +17216,7 @@
     },
     {
         "text": "boyish",
-        "gst": "b-o-e-e-sh",
+        "gst": "b-o-e-sh",
         "notes": ""
     },
     {
@@ -17421,7 +17421,7 @@
     },
     {
         "text": "brand-new",
-        "gst": "b-r-a-nt-n-w-e",
+        "gst": "b-r-a-nt-n-u",
         "notes": ""
     },
     {
@@ -17746,7 +17746,7 @@
     },
     {
         "text": "breakwater",
-        "gst": "b-r-a-k-w-o-t-r",
+        "gst": "b-r-a-k-u-o-t-r",
         "notes": ""
     },
     {
@@ -19016,7 +19016,7 @@
     },
     {
         "text": "Buenos Aires",
-        "gst": "b-w-a-n-o-s-e-r-e-s",
+        "gst": "b-i-n-e-s",
         "notes": ""
     },
     {
@@ -19101,7 +19101,7 @@
     },
     {
         "text": "bugweed",
-        "gst": "b-u-g-w-e-d",
+        "gst": "b-u-g-u-e-d",
         "notes": ""
     },
     {
@@ -19806,7 +19806,7 @@
     },
     {
         "text": "buttonwood",
-        "gst": "b-u-t-w-a-nt",
+        "gst": "b-u-tn-u-u-d",
         "notes": ""
     },
     {
@@ -19861,22 +19861,22 @@
     },
     {
         "text": "by mail",
-        "gst": "b-i-m-a-l",
+        "gst": "b-m-a-l",
         "notes": ""
     },
     {
         "text": "by means",
-        "gst": "b-i-m-e-n-s",
+        "gst": "b-m-e-n-s",
         "notes": ""
     },
     {
         "text": "by Mr. ",
-        "gst": "b-i-m-e-s-t-r",
+        "gst": "b-m-e-s-t-r",
         "notes": ""
     },
     {
         "text": "by myself",
-        "gst": "b-i-m-i-s-e-l-f",
+        "gst": "b-m-i-s",
         "notes": ""
     },
     {
@@ -19886,12 +19886,12 @@
     },
     {
         "text": "by that",
-        "gst": "b-i-th-a",
+        "gst": "b-th-a",
         "notes": ""
     },
     {
         "text": "by the time",
-        "gst": "b-i-th-tm",
+        "gst": "b-th-tm",
         "notes": ""
     },
     {
@@ -19901,62 +19901,62 @@
     },
     {
         "text": "by the",
-        "gst": "b-i-th",
+        "gst": "b-th",
         "notes": ""
     },
     {
         "text": "by them",
-        "gst": "b-i-th-e-m",
+        "gst": "b-th-e-m",
         "notes": ""
     },
     {
         "text": "by themselves",
-        "gst": "b-i-th-e-m-s-e-l-v-s",
+        "gst": "b-th-e-m-s-e-l-v-s",
         "notes": ""
     },
     {
         "text": "by these",
-        "gst": "b-i-th-e-s",
+        "gst": "b-th-e-s",
         "notes": ""
     },
     {
         "text": "by this time",
-        "gst": "b-i-th-s-tm",
+        "gst": "b-th-s-tm",
         "notes": ""
     },
     {
         "text": "by this",
-        "gst": "b-i-th-s",
+        "gst": "b-th-s",
         "notes": ""
     },
     {
         "text": "by those",
-        "gst": "b-i-th-s",
+        "gst": "b-th-s",
         "notes": ""
     },
     {
         "text": "by us",
-        "gst": "b-i-u-s",
+        "gst": "b-u-s",
         "notes": ""
     },
     {
         "text": "by which it is",
-        "gst": "b-i-w-e-ch-t-s",
+        "gst": "b-ch-t-s",
         "notes": ""
     },
     {
         "text": "by which time",
-        "gst": "b-i-w-e-ch-tm",
+        "gst": "b-ch-tm",
         "notes": ""
     },
     {
         "text": "by which you can",
-        "gst": "b-i-w-e-ch-u-k",
+        "gst": "b-ch-u-k",
         "notes": ""
     },
     {
         "text": "by which you may",
-        "gst": "b-i-w-e-ch-u-m-a",
+        "gst": "b-ch-u-m-a",
         "notes": ""
     },
     {
@@ -19971,17 +19971,17 @@
     },
     {
         "text": "by-product",
-        "gst": "b-i-p-rd-u-k-t",
+        "gst": "b-p-rd-u-k-t",
         "notes": ""
     },
     {
         "text": "by",
-        "gst": "b-i",
+        "gst": "b",
         "notes": ""
     },
     {
         "text": "bygone",
-        "gst": "b-i-g-o-n",
+        "gst": "b-g-n",
         "notes": ""
     },
     {
@@ -19991,12 +19991,12 @@
     },
     {
         "text": "bypath",
-        "gst": "b-i-p-a-th",
+        "gst": "b-p-a-th",
         "notes": ""
     },
     {
         "text": "byplay",
-        "gst": "b-i-p-l-a",
+        "gst": "b-p-l-a",
         "notes": ""
     },
     {
@@ -20011,12 +20011,12 @@
     },
     {
         "text": "bystander",
-        "gst": "b-i-s-t-a-nt-r",
+        "gst": "b-s-t-a-nt-r",
         "notes": ""
     },
     {
         "text": "byway",
-        "gst": "b-i-w-a",
+        "gst": "b-u-a",
         "notes": ""
     },
     {
@@ -20281,7 +20281,7 @@
     },
     {
         "text": "cakewalk",
-        "gst": "k-a-k-w-o-k",
+        "gst": "k-a-k-u-o-k",
         "notes": ""
     },
     {
@@ -20351,7 +20351,7 @@
     },
     {
         "text": "calculated",
-        "gst": "k-a-l-k/ud",
+        "gst": "k-a-l-k/u-d",
         "notes": ""
     },
     {
@@ -20531,7 +20531,7 @@
     },
     {
         "text": "callowly",
-        "gst": "k-a-l-w-e",
+        "gst": "k-a-l-o-e",
         "notes": ""
     },
     {
@@ -20736,7 +20736,7 @@
     },
     {
         "text": "campanile",
-        "gst": "k-a-m-p-a-n-e-e",
+        "gst": "k-a-m-p-n-e-l-e",
         "notes": ""
     },
     {
@@ -20776,7 +20776,7 @@
     },
     {
         "text": "can be done",
-        "gst": "k-b-d-u-n",
+        "gst": "k-b-d-n",
         "notes": ""
     },
     {
@@ -21356,7 +21356,7 @@
     },
     {
         "text": "capitalization",
-        "gst": "k-a-p-e-t-l-e-s-a-sh",
+        "gst": "k-a-p-t-l-e-s-a-sh",
         "notes": ""
     },
     {
@@ -21366,17 +21366,17 @@
     },
     {
         "text": "capitalized",
-        "gst": "k-a-p-e-t-l-i-s-d",
+        "gst": "k-a-p-t-l-i-s-d",
         "notes": ""
     },
     {
         "text": "capitol",
-        "gst": "k-a-p-e-t-l",
+        "gst": "k-a-p-t-l",
         "notes": ""
     },
     {
         "text": "capitulate",
-        "gst": "k-p-e-t/u",
+        "gst": "k-a-p-t/u",
         "notes": ""
     },
     {
@@ -22311,7 +22311,7 @@
     },
     {
         "text": "casually",
-        "gst": "k-a-sh-w-e",
+        "gst": "k-a-sh-u-l-e",
         "notes": ""
     },
     {
@@ -22721,7 +22721,7 @@
     },
     {
         "text": "causeway",
-        "gst": "k-a-s-w-a",
+        "gst": "k-o-s-u-a",
         "notes": ""
     },
     {
@@ -23471,7 +23471,7 @@
     },
     {
         "text": "chalcedony",
-        "gst": "ch-a-l-s-d-o-n-e",
+        "gst": "ch-a-l-s-e-tn-e",
         "notes": ""
     },
     {
@@ -24476,7 +24476,7 @@
     },
     {
         "text": "chilly",
-        "gst": "ch-e-e",
+        "gst": "ch-e-l-e",
         "notes": ""
     },
     {
@@ -24571,7 +24571,7 @@
     },
     {
         "text": "Chippewa Falls",
-        "gst": "ch-e-p-w-a-f-o-l-s",
+        "gst": "ch-e-p-a/f-o-l-s",
         "notes": ""
     },
     {
@@ -25186,7 +25186,7 @@
     },
     {
         "text": "cinquefoil",
-        "gst": "s-e-nk-w-e-f-o-l",
+        "gst": "s-e-nk-f-o-e-l",
         "notes": ""
     },
     {
@@ -25226,7 +25226,7 @@
     },
     {
         "text": "circuitously",
-        "gst": "s-e-r-k-t-s-w-e-e",
+        "gst": "s-e-r-k-e-u-t-u-s-e",
         "notes": ""
     },
     {
@@ -25256,7 +25256,7 @@
     },
     {
         "text": "circulated",
-        "gst": "s-e-r-k/ud",
+        "gst": "s-e-r-k/u-d",
         "notes": ""
     },
     {
@@ -25496,7 +25496,7 @@
     },
     {
         "text": "civilly",
-        "gst": "s-e-v-e-e",
+        "gst": "s-e-v-l-e",
         "notes": ""
     },
     {
@@ -26086,7 +26086,7 @@
     },
     {
         "text": "Clifford",
-        "gst": "k-l-e-f-rd",
+        "gst": "k-l-e-f-d",
         "notes": ""
     },
     {
@@ -28241,7 +28241,7 @@
     },
     {
         "text": "compensatory",
-        "gst": "k-p-e-n-s-t-o-r-e",
+        "gst": "k-p-e-n-s-t-r-e",
         "notes": ""
     },
     {
@@ -28821,7 +28821,7 @@
     },
     {
         "text": "conciliatory",
-        "gst": "k-s-e-l-e-t-o-r-e",
+        "gst": "k-s-e-l-e-t-r-e",
         "notes": ""
     },
     {
@@ -29091,7 +29091,7 @@
     },
     {
         "text": "conduit",
-        "gst": "k-d-u-e-t",
+        "gst": "k-d-w-e-t",
         "notes": ""
     },
     {
@@ -29271,7 +29271,7 @@
     },
     {
         "text": "confiscatory",
-        "gst": "k-f-e-s-k-t-o-r-e",
+        "gst": "k-f-e-s-k-t-r-e",
         "notes": ""
     },
     {
@@ -29761,12 +29761,12 @@
     },
     {
         "text": "conscientious",
-        "gst": "k-sh-e-e-n-sh-u-s",
+        "gst": "k-sh-n-sh-u-s",
         "notes": ""
     },
     {
         "text": "conscientiously",
-        "gst": "k-ch-e-e-n-ch-s-e",
+        "gst": "k-ch-n-sh-u-s-e",
         "notes": ""
     },
     {
@@ -29871,7 +29871,7 @@
     },
     {
         "text": "conservatory",
-        "gst": "k-s-e-r-v-t-o-r-e",
+        "gst": "k-s-e-r-v-t-r-e",
         "notes": ""
     },
     {
@@ -30706,7 +30706,7 @@
     },
     {
         "text": "contritely",
-        "gst": "k-nt-r-e-t-e",
+        "gst": "k-t-r-i-t-e",
         "notes": ""
     },
     {
@@ -31726,12 +31726,12 @@
     },
     {
         "text": "correspondingly",
-        "gst": "k-o-r-s-p-a-nt/e",
+        "gst": "k-r-e-s/e",
         "notes": ""
     },
     {
         "text": "corresponds",
-        "gst": "k-o-r-s-p-a-nt-s",
+        "gst": "k-r-e-s-s",
         "notes": ""
     },
     {
@@ -31901,7 +31901,7 @@
     },
     {
         "text": "Corwin",
-        "gst": "k-o-r-w-e-n",
+        "gst": "k-o-r-e-n",
         "notes": ""
     },
     {
@@ -32086,22 +32086,22 @@
     },
     {
         "text": "could be done",
-        "gst": "k-u-d-b-d-u-n",
+        "gst": "k-d-b-d-n",
         "notes": ""
     },
     {
         "text": "could be sure",
-        "gst": "k-u-d-b-sh-u-r",
+        "gst": "k-d-b-sh-u-r",
         "notes": ""
     },
     {
         "text": "could be",
-        "gst": "k-u-d-b",
+        "gst": "k-d-b",
         "notes": ""
     },
     {
         "text": "could have been",
-        "gst": "k-u-d-v-b-n",
+        "gst": "k-d-v-b-n",
         "notes": ""
     },
     {
@@ -32136,12 +32136,12 @@
     },
     {
         "text": "could say",
-        "gst": "k-u-d-s-a",
+        "gst": "k-d-s-a",
         "notes": ""
     },
     {
         "text": "could see",
-        "gst": "k-u-d-s-e",
+        "gst": "k-d-s-e",
         "notes": ""
     },
     {
@@ -32776,7 +32776,7 @@
     },
     {
         "text": "Cranford",
-        "gst": "k-r-a-n-f-rd",
+        "gst": "k-r-a-n-f-d",
         "notes": ""
     },
     {
@@ -32921,7 +32921,7 @@
     },
     {
         "text": "Crawford",
-        "gst": "k-r-o-f-rd",
+        "gst": "k-r-o-f-d",
         "notes": ""
     },
     {
@@ -33191,7 +33191,7 @@
     },
     {
         "text": "crematory",
-        "gst": "k-r-e-m-t-o-r-e",
+        "gst": "k-r-e-m-t-r-e",
         "notes": ""
     },
     {
@@ -33216,7 +33216,7 @@
     },
     {
         "text": "crepitant",
-        "gst": "k-r-e-p-e-tn-t",
+        "gst": "k-r-e-p-tn-t",
         "notes": ""
     },
     {
@@ -33641,12 +33641,12 @@
     },
     {
         "text": "crosswalk",
-        "gst": "k-r-a-s-w-a-k",
+        "gst": "k-r-o-s-u-o-k",
         "notes": ""
     },
     {
         "text": "crosswise",
-        "gst": "k-r-o-s-w-i-s",
+        "gst": "k-r-o-s-u-i-s",
         "notes": ""
     },
     {
@@ -34145,7 +34145,7 @@
         "notes": ""
     },
     {
-        "text": "culpabilrty",
+        "text": "culpability",
         "gst": "k-l-p-b/l",
         "notes": ""
     },
@@ -34316,7 +34316,7 @@
     },
     {
         "text": "cupidity",
-        "gst": "k-e-u-p-e-d-e-t-e",
+        "gst": "k-e-u-p-td-e",
         "notes": ""
     },
     {
@@ -34466,7 +34466,7 @@
     },
     {
         "text": "curlew",
-        "gst": "k-r-l-w-e",
+        "gst": "k-r-l-u",
         "notes": ""
     },
     {
@@ -34946,7 +34946,7 @@
     },
     {
         "text": "dacoit",
-        "gst": "d-k-o-e-t",
+        "gst": "d-a-k-o-e-t",
         "notes": ""
     },
     {
@@ -35426,7 +35426,7 @@
     },
     {
         "text": "davit",
-        "gst": "d-a-v-e-t",
+        "gst": "d-a-v-t",
         "notes": ""
     },
     {
@@ -35511,7 +35511,7 @@
     },
     {
         "text": "DC",
-        "gst": "d-e-e-f",
+        "gst": "d-s-e",
         "notes": ""
     },
     {
@@ -35896,7 +35896,7 @@
     },
     {
         "text": "decapitation",
-        "gst": "d-e-k-a-p-e-t-sh",
+        "gst": "d-e-k-a-p-t-sh",
         "notes": ""
     },
     {
@@ -36321,7 +36321,7 @@
     },
     {
         "text": "Dedham",
-        "gst": "dt-a-m",
+        "gst": "td-a-m",
         "notes": ""
     },
     {
@@ -36341,7 +36341,7 @@
     },
     {
         "text": "dedicatory",
-        "gst": "td-k-t-o-r-e",
+        "gst": "td-k-t-r-e",
         "notes": ""
     },
     {
@@ -36501,7 +36501,7 @@
     },
     {
         "text": "defamatory",
-        "gst": "df-a-m-t-o-r-e",
+        "gst": "df-a-m-t-r-e",
         "notes": ""
     },
     {
@@ -36951,7 +36951,7 @@
     },
     {
         "text": "deist",
-        "gst": "d-e-e-s-t",
+        "gst": "d-e-s-t",
         "notes": ""
     },
     {
@@ -36976,7 +36976,7 @@
     },
     {
         "text": "Delaware",
-        "gst": "d-e-l-w-e-r",
+        "gst": "d-e-l",
         "notes": ""
     },
     {
@@ -37876,7 +37876,7 @@
     },
     {
         "text": "depopulated",
-        "gst": "d-e-p-a-p/ud",
+        "gst": "d-e-p-a-p/u-d",
         "notes": ""
     },
     {
@@ -37911,17 +37911,17 @@
     },
     {
         "text": "deposit",
-        "gst": "d-p-a-s-e-t",
+        "gst": "d-p-o-s-t",
         "notes": ""
     },
     {
         "text": "depositary",
-        "gst": "d-p-a-s-e-t-r-e",
+        "gst": "d-p-o-s-t-r-e",
         "notes": ""
     },
     {
         "text": "deposited",
-        "gst": "d-p-a-s-e-td",
+        "gst": "d-p-o-s-td",
         "notes": ""
     },
     {
@@ -37931,12 +37931,12 @@
     },
     {
         "text": "depositor",
-        "gst": "d-p-a-s-e-t-r",
+        "gst": "d-p-o-s-t-r",
         "notes": ""
     },
     {
         "text": "depository",
-        "gst": "d-e-p-a-s-t-o-r-e",
+        "gst": "d-e-p-a-s-t-r-e",
         "notes": ""
     },
     {
@@ -37981,7 +37981,7 @@
     },
     {
         "text": "deprecatory",
-        "gst": "d-p-r-e-k-t-o-r-e",
+        "gst": "d-p-r-e-k-t-r-e",
         "notes": ""
     },
     {
@@ -38176,7 +38176,7 @@
     },
     {
         "text": "dermatitis",
-        "gst": "d-r-m-a-t-e-t-s",
+        "gst": "d-e-m-a-t-i",
         "notes": ""
     },
     {
@@ -38206,7 +38206,7 @@
     },
     {
         "text": "derogatory",
-        "gst": "d-r-a-g-t-o-r-e",
+        "gst": "d-r-a-g-t-r-e",
         "notes": ""
     },
     {
@@ -38636,7 +38636,7 @@
     },
     {
         "text": "desultory",
-        "gst": "d-s-l-t-o-r-e",
+        "gst": "d-s-l-t-r-e",
         "notes": ""
     },
     {
@@ -38876,12 +38876,12 @@
     },
     {
         "text": "detritus",
-        "gst": "d-e-t-r-i-t-u-s",
+        "gst": "td-r-i-t-u-s",
         "notes": ""
     },
     {
         "text": "Detroit",
-        "gst": "d-e-t-r-o-e-t",
+        "gst": "td-r-o-e-t",
         "notes": ""
     },
     {
@@ -39121,7 +39121,7 @@
     },
     {
         "text": "diacritical",
-        "gst": "d-i-k-r-e-t/k",
+        "gst": "d-ie-k-r-e-t/k",
         "notes": ""
     },
     {
@@ -39621,7 +39621,7 @@
     },
     {
         "text": "dilatory",
-        "gst": "d-e-l-t-o-r-e",
+        "gst": "d-e-l-t-r-e",
         "notes": ""
     },
     {
@@ -39636,7 +39636,7 @@
     },
     {
         "text": "Dili",
-        "gst": "d-e-e",
+        "gst": "d-el-e",
         "notes": ""
     },
     {
@@ -40116,7 +40116,7 @@
     },
     {
         "text": "disavowal",
-        "gst": "d-s-a-v-w-a-l",
+        "gst": "d-s-a-v-a-u-l",
         "notes": ""
     },
     {
@@ -40291,7 +40291,7 @@
     },
     {
         "text": "discomfiture",
-        "gst": "d-s-k-m-f-e-t-r",
+        "gst": "d-s-k-f-e-t-r",
         "notes": ""
     },
     {
@@ -40456,7 +40456,7 @@
     },
     {
         "text": "discredited",
-        "gst": "d-s-k-r-e-d-e-td",
+        "gst": "d-s-k-r-e-td",
         "notes": ""
     },
     {
@@ -40956,22 +40956,22 @@
     },
     {
         "text": "disordered",
-        "gst": "d-s-o-rd-rd",
+        "gst": "d-s-o-d-d",
         "notes": ""
     },
     {
         "text": "disorderly",
-        "gst": "d-s-o-rd-r-e",
+        "gst": "d-s-o-d-e",
         "notes": ""
     },
     {
         "text": "disorganize",
-        "gst": "d-s-o-r-g-n-i-s",
+        "gst": "d-s-o-g",
         "notes": ""
     },
     {
         "text": "disorganized",
-        "gst": "d-s-o-r-g-n-i-s-d",
+        "gst": "d-s-o-g-d",
         "notes": ""
     },
     {
@@ -41376,7 +41376,7 @@
     },
     {
         "text": "dissimulated",
-        "gst": "d-s-m/ud",
+        "gst": "d-s-m/u-d",
         "notes": ""
     },
     {
@@ -41566,7 +41566,7 @@
     },
     {
         "text": "distinguished",
-        "gst": "d-s-t-e-ng-w-sh-t",
+        "gst": "d-s-t-e-ng-sh-t",
         "notes": ""
     },
     {
@@ -41706,7 +41706,7 @@
     },
     {
         "text": "dithyrambic",
-        "gst": "d-e-th-r-e-m-b-a-k",
+        "gst": "d-e-th-r-a-m-b-k",
         "notes": ""
     },
     {
@@ -41716,7 +41716,7 @@
     },
     {
         "text": "ditty",
-        "gst": "d-e-t-e",
+        "gst": "td-e",
         "notes": ""
     },
     {
@@ -42280,8 +42280,8 @@
         "notes": ""
     },
     {
-        "text": "domesticrty",
-        "gst": "tm-e-s-t-k-t-r-e-t-e",
+        "text": "domesticity",
+        "gst": "tm-e-s-t-e-s-t-e",
         "notes": ""
     },
     {
@@ -42386,7 +42386,7 @@
     },
     {
         "text": "done",
-        "gst": "d-u-n",
+        "gst": "d-n",
         "notes": ""
     },
     {
@@ -42481,7 +42481,7 @@
     },
     {
         "text": "dormitory",
-        "gst": "d-o-r-m-t-o-r-e",
+        "gst": "d-o-r-m-t-r-e",
         "notes": ""
     },
     {
@@ -42856,7 +42856,7 @@
     },
     {
         "text": "dragooned",
-        "gst": "d-r-a-g-w-nt",
+        "gst": "d-r-a-g-u-nt",
         "notes": ""
     },
     {
@@ -43296,7 +43296,7 @@
     },
     {
         "text": "driveway",
-        "gst": "d-r-i-v-w-a",
+        "gst": "d-r-i-v-u-a",
         "notes": ""
     },
     {
@@ -43545,8 +43545,8 @@
         "notes": ""
     },
     {
-        "text": "dualrty",
-        "gst": "d-w-o-l-r-t-e",
+        "text": "duality",
+        "gst": "d-u/l",
         "notes": ""
     },
     {
@@ -43861,7 +43861,7 @@
     },
     {
         "text": "duplicity",
-        "gst": "d-u-p-l-e-s-e-t-e",
+        "gst": "d-u-p-l-e-s-t-e",
         "notes": ""
     },
     {
@@ -43876,7 +43876,7 @@
     },
     {
         "text": "durable",
-        "gst": "d-u-r-b",
+        "gst": "d-r-b",
         "notes": ""
     },
     {
@@ -43911,17 +43911,17 @@
     },
     {
         "text": "during the past",
-        "gst": "d-u-r-e-ng-th-p-a-s-t",
+        "gst": "d-r-p-a-s-t",
         "notes": ""
     },
     {
         "text": "during the year",
-        "gst": "d-u-r-e-ng-th-ye-r",
+        "gst": "d-r-e-r",
         "notes": ""
     },
     {
         "text": "during which time",
-        "gst": "d-u-r-e-ng-w-e-ch-tm",
+        "gst": "d-r-ch-tm",
         "notes": ""
     },
     {
@@ -44711,7 +44711,7 @@
     },
     {
         "text": "editorially",
-        "gst": "e-d-t-o-r-e-e",
+        "gst": "e-d-t-o-r-l-e",
         "notes": ""
     },
     {
@@ -45416,7 +45416,7 @@
     },
     {
         "text": "elementally",
-        "gst": "e-l-e-m-e-e",
+        "gst": "e-l-e-m-l-e",
         "notes": ""
     },
     {
@@ -45471,12 +45471,12 @@
     },
     {
         "text": "elicit",
-        "gst": "e-l-e-s-e-t",
+        "gst": "e-l-e-s-t",
         "notes": ""
     },
     {
         "text": "elicited",
-        "gst": "e-l-e-s-e-td",
+        "gst": "e-l-e-s-td",
         "notes": ""
     },
     {
@@ -45526,7 +45526,7 @@
     },
     {
         "text": "elite",
-        "gst": "e-l-e-t",
+        "gst": "a-l-e-t",
         "notes": ""
     },
     {
@@ -45596,7 +45596,7 @@
     },
     {
         "text": "Ellsworth",
-        "gst": "e-l-s-w-r-th",
+        "gst": "e-l-s-u-u-th",
         "notes": ""
     },
     {
@@ -45651,7 +45651,7 @@
     },
     {
         "text": "eloquence",
-        "gst": "e-l-k-w-n-s",
+        "gst": "e-l-o-k",
         "notes": ""
     },
     {
@@ -45676,7 +45676,7 @@
     },
     {
         "text": "elsewise",
-        "gst": "e-l-s-w-i-s",
+        "gst": "e-l-s-u-i-s",
         "notes": ""
     },
     {
@@ -46346,7 +46346,7 @@
     },
     {
         "text": "emulated",
-        "gst": "e-m/ud",
+        "gst": "e-m/u-d",
         "notes": ""
     },
     {
@@ -47576,12 +47576,12 @@
     },
     {
         "text": "envelop",
-        "gst": "n-v-e-l-p",
+        "gst": "n-v-l",
         "notes": ""
     },
     {
         "text": "envelope",
-        "gst": "n-v-l-o-p",
+        "gst": "n-v-l",
         "notes": ""
     },
     {
@@ -47861,27 +47861,27 @@
     },
     {
         "text": "equable",
-        "gst": "e-k-w-b",
+        "gst": "e-k-b",
         "notes": ""
     },
     {
         "text": "equably",
-        "gst": "e-k-w-b-e",
+        "gst": "e-k-b-e",
         "notes": ""
     },
     {
         "text": "equal",
-        "gst": "e-k-w-l",
+        "gst": "e-k-l",
         "notes": ""
     },
     {
         "text": "equaled",
-        "gst": "e-k-w-ld",
+        "gst": "e-k-ld",
         "notes": ""
     },
     {
         "text": "equalitarlan",
-        "gst": "e-k-w-a-l-e-r-a-sh",
+        "gst": "e-k-l-e-t-r-ea-n",
         "notes": ""
     },
     {
@@ -47896,22 +47896,22 @@
     },
     {
         "text": "equalize",
-        "gst": "e-k-w-l-i-s",
+        "gst": "e-k-l-i-s",
         "notes": ""
     },
     {
         "text": "equalized",
-        "gst": "e-k-w-l-i-s-d",
+        "gst": "e-k-l-i-s-d",
         "notes": ""
     },
     {
         "text": "equalizer",
-        "gst": "e-k-w-l-i-s-e-r",
+        "gst": "e-k-l-i-s-e-r",
         "notes": ""
     },
     {
         "text": "equally",
-        "gst": "e-k-w-e",
+        "gst": "e-k-l-e",
         "notes": ""
     },
     {
@@ -48231,7 +48231,7 @@
     },
     {
         "text": "erstwhile",
-        "gst": "r-s-t-w-i-l",
+        "gst": "e-r-s-t-w-i-l",
         "notes": ""
     },
     {
@@ -48341,7 +48341,7 @@
     },
     {
         "text": "escritoire",
-        "gst": "e-s-k-r-e-t-o-r",
+        "gst": "e-s-k-r-e-t-w-a-r",
         "notes": ""
     },
     {
@@ -48351,7 +48351,7 @@
     },
     {
         "text": "escutcheon",
-        "gst": "e-s-k-u-ch-w-n",
+        "gst": "e-s-k-ch-n",
         "notes": ""
     },
     {
@@ -48421,7 +48421,7 @@
     },
     {
         "text": "esquire",
-        "gst": "e-s-k-w-i-r",
+        "gst": "e-s-k-i",
         "notes": ""
     },
     {
@@ -48591,7 +48591,7 @@
     },
     {
         "text": "eternity",
-        "gst": "e-t-e-nt-e",
+        "gst": "e-t-e-n-e-t-e",
         "notes": ""
     },
     {
@@ -48701,7 +48701,7 @@
     },
     {
         "text": "Euclidean",
-        "gst": "e-u-k-l-i-tn",
+        "gst": "e-u-k-l-i-d-ea-n",
         "notes": ""
     },
     {
@@ -48786,12 +48786,12 @@
     },
     {
         "text": "evacuated",
-        "gst": "e-v-a-k-u-w-a-td",
+        "gst": "e-v-a-k-e-u-td",
         "notes": ""
     },
     {
         "text": "evacuation",
-        "gst": "e-v-a-k-u-w-a-sh",
+        "gst": "e-v-a-k-e-u-sh",
         "notes": ""
     },
     {
@@ -48946,12 +48946,12 @@
     },
     {
         "text": "eventually",
-        "gst": "e-v-e-n-ch-w-e",
+        "gst": "e-v-nt-l-e",
         "notes": ""
     },
     {
         "text": "eventuate",
-        "gst": "e-v-e-n-ch-w-a-t",
+        "gst": "e-v-nt-a-e-u-t",
         "notes": ""
     },
     {
@@ -49001,32 +49001,32 @@
     },
     {
         "text": "every month",
-        "gst": "e-v-e-m-u-n-th",
+        "gst": "e-v-e-mn-th",
         "notes": ""
     },
     {
         "text": "every one of the",
-        "gst": "e-v-e-w-u-n-u-v-th",
+        "gst": "e-v-u-n-th",
         "notes": ""
     },
     {
         "text": "every one of them",
-        "gst": "e-v-e-w-u-n-u-v-th-e-m",
+        "gst": "e-v-u-n-th-m",
         "notes": ""
     },
     {
         "text": "every one of these",
-        "gst": "e-v-e-w-u-n-u-v-th-e-s",
+        "gst": "e-v-u-n-th-e-s",
         "notes": ""
     },
     {
         "text": "every one of those",
-        "gst": "e-v-e-w-u-n-u-v-th-s",
+        "gst": "e-v-u-n-th-s",
         "notes": ""
     },
     {
         "text": "every one",
-        "gst": "e-v-e-w-u-n",
+        "gst": "e-v-u-n",
         "notes": ""
     },
     {
@@ -49036,22 +49036,22 @@
     },
     {
         "text": "every",
-        "gst": "e-v-e",
+        "gst": "e-v",
         "notes": ""
     },
     {
         "text": "everybody",
-        "gst": "e-v-e-b-o-d-e",
+        "gst": "e-v-b-o-d-e",
         "notes": ""
     },
     {
         "text": "everyday",
-        "gst": "e-v-e-d-a",
+        "gst": "e-v-d-a",
         "notes": ""
     },
     {
         "text": "everyone",
-        "gst": "e-v-e-w-u-n",
+        "gst": "e-v-u-n",
         "notes": ""
     },
     {
@@ -49061,7 +49061,7 @@
     },
     {
         "text": "everywhere",
-        "gst": "e-v-e-w-e-r",
+        "gst": "e-v-a-r",
         "notes": ""
     },
     {
@@ -49435,7 +49435,7 @@
         "notes": ""
     },
     {
-        "text": "excitabilrty",
+        "text": "excitability",
         "gst": "e-s-t-b/l",
         "notes": ""
     },
@@ -49561,7 +49561,7 @@
     },
     {
         "text": "excretory",
-        "gst": "e-s-k-r-t-o-r-e",
+        "gst": "e-s-k-r-t-r-e",
         "notes": ""
     },
     {
@@ -50086,7 +50086,7 @@
     },
     {
         "text": "expedition",
-        "gst": "e-s-p-d-e-sh",
+        "gst": "e-s-p-d-sh",
         "notes": ""
     },
     {
@@ -50251,7 +50251,7 @@
     },
     {
         "text": "explanatory",
-        "gst": "e-s-p-l-a-nt-o-r-e",
+        "gst": "e-s-p-l-a-nt-r-e",
         "notes": ""
     },
     {
@@ -50311,7 +50311,7 @@
     },
     {
         "text": "exploratory",
-        "gst": "e-s-p-l-o-r-t-o-r-e",
+        "gst": "e-s-p-l-o-r-t-r-e",
         "notes": ""
     },
     {
@@ -50381,7 +50381,7 @@
     },
     {
         "text": "expository",
-        "gst": "e-s-p-s-e-t-r-e",
+        "gst": "e-s-p-s-t-r-e",
         "notes": ""
     },
     {
@@ -50501,7 +50501,7 @@
     },
     {
         "text": "extemporary",
-        "gst": "e-s-t-e-m-p-r-e-e-r",
+        "gst": "e-s-t-e-m-p-r-r-e",
         "notes": ""
     },
     {
@@ -50616,12 +50616,12 @@
     },
     {
         "text": "extinguish",
-        "gst": "e-s-tng-w-sh",
+        "gst": "e-s-t-e-ng-sh",
         "notes": ""
     },
     {
         "text": "extinguished",
-        "gst": "e-s-tng-w-sh-t",
+        "gst": "e-s-t-e-ng-sh-t",
         "notes": ""
     },
     {
@@ -50846,7 +50846,7 @@
     },
     {
         "text": "exudation",
-        "gst": "e-s-w-a-sh",
+        "gst": "e-s-e-u-d-sh",
         "notes": ""
     },
     {
@@ -50951,7 +50951,7 @@
     },
     {
         "text": "eyetooth",
-        "gst": "i-t-w-a-th",
+        "gst": "i-t-u-th",
         "notes": ""
     },
     {
@@ -51986,7 +51986,7 @@
     },
     {
         "text": "favorite",
-        "gst": "f-a-v-o-r-e-t",
+        "gst": "f-a-v-r-e-t",
         "notes": ""
     },
     {
@@ -52121,7 +52121,7 @@
     },
     {
         "text": "fecundity",
-        "gst": "f-k-u-nt-e-t-e",
+        "gst": "f-e-k-nt-e-t-e",
         "notes": ""
     },
     {
@@ -52281,7 +52281,7 @@
     },
     {
         "text": "felicitate",
-        "gst": "f-l-e-s-e-t-a-t",
+        "gst": "f-l-e-s-t-a-t",
         "notes": ""
     },
     {
@@ -52696,7 +52696,7 @@
     },
     {
         "text": "feudatory",
-        "gst": "f-e-u-d-t-o-r-e",
+        "gst": "f-e-u-d-t-r-e",
         "notes": ""
     },
     {
@@ -53446,7 +53446,7 @@
     },
     {
         "text": "fishwife",
-        "gst": "f-e-sh-w-i-f",
+        "gst": "f-e-sh-u-i-f",
         "notes": ""
     },
     {
@@ -53506,7 +53506,7 @@
     },
     {
         "text": "fitness",
-        "gst": "f-e-t-n-e-x1",
+        "gst": "f-e-t-n-e-s",
         "notes": ""
     },
     {
@@ -54616,7 +54616,7 @@
     },
     {
         "text": "fluctuate",
-        "gst": "f-l-u-k-ch-w-a-t",
+        "gst": "f-l-u-k-ch-e-u-t",
         "notes": ""
     },
     {
@@ -55046,7 +55046,7 @@
     },
     {
         "text": "folkway",
-        "gst": "f-o-k-w-a",
+        "gst": "f-o-k-u-a",
         "notes": ""
     },
     {
@@ -55396,12 +55396,12 @@
     },
     {
         "text": "for Mr. ",
-        "gst": "f-m-e-s-t-r",
+        "gst": "f-m-r",
         "notes": ""
     },
     {
         "text": "for Mrs. ",
-        "gst": "f-m-e-s-e-s",
+        "gst": "f-m-r-s",
         "notes": ""
     },
     {
@@ -55411,17 +55411,17 @@
     },
     {
         "text": "for myself",
-        "gst": "f-m-i-s-e-l-f",
+        "gst": "f-m-i-s",
         "notes": ""
     },
     {
         "text": "for next month",
-        "gst": "f-n-e-s-t-m-u-n-th",
+        "gst": "f-n-e-s-mn-th",
         "notes": ""
     },
     {
         "text": "for next year",
-        "gst": "f-n-e-s-t-ye-r",
+        "gst": "f-n-e-s-ye-r",
         "notes": ""
     },
     {
@@ -55431,7 +55431,7 @@
     },
     {
         "text": "for one",
-        "gst": "f-w-u-n",
+        "gst": "f-u-n",
         "notes": ""
     },
     {
@@ -55506,7 +55506,7 @@
     },
     {
         "text": "for which",
-        "gst": "f-w-e-ch",
+        "gst": "f-ch",
         "notes": ""
     },
     {
@@ -55711,7 +55711,7 @@
     },
     {
         "text": "foregone",
-        "gst": "f-g-o-n",
+        "gst": "f-g-n",
         "notes": ""
     },
     {
@@ -55746,7 +55746,7 @@
     },
     {
         "text": "foreknowledge",
-        "gst": "f-k-n-w-a-ld",
+        "gst": "f-n-o-l-e-j",
         "notes": ""
     },
     {
@@ -55911,17 +55911,17 @@
     },
     {
         "text": "forewarn",
-        "gst": "f-w-o-r-n",
+        "gst": "f/u-o-r-n",
         "notes": ""
     },
     {
         "text": "forewarned",
-        "gst": "f-w-o-r-nt",
+        "gst": "f/u-o-r-nt",
         "notes": ""
     },
     {
         "text": "forewoman",
-        "gst": "f-w-u-mn",
+        "gst": "f/u-u-mn",
         "notes": ""
     },
     {
@@ -56151,7 +56151,7 @@
     },
     {
         "text": "formulated",
-        "gst": "f-m/ud",
+        "gst": "f-m/u-d",
         "notes": ""
     },
     {
@@ -56176,12 +56176,12 @@
     },
     {
         "text": "forsooth",
-        "gst": "f-s-w-a-th",
+        "gst": "f-s-u-th",
         "notes": ""
     },
     {
         "text": "forswear",
-        "gst": "f-s-w-e-r",
+        "gst": "f-s-u-a-r",
         "notes": ""
     },
     {
@@ -56831,7 +56831,7 @@
     },
     {
         "text": "Fredonia",
-        "gst": "f-rd-o-n-ea",
+        "gst": "f-r-e-tn-ea",
         "notes": ""
     },
     {
@@ -56841,7 +56841,7 @@
     },
     {
         "text": "freeboard",
-        "gst": "f-r-e-b-w-a-rd",
+        "gst": "f-r-e-b-o-rd",
         "notes": ""
     },
     {
@@ -56901,7 +56901,7 @@
     },
     {
         "text": "freest",
-        "gst": "f-r-e-e-s-t",
+        "gst": "f-r-e-s-t",
         "notes": ""
     },
     {
@@ -57191,7 +57191,7 @@
     },
     {
         "text": "frilly",
-        "gst": "f-r-e-e",
+        "gst": "f-r-e-l-e",
         "notes": ""
     },
     {
@@ -57341,7 +57341,7 @@
     },
     {
         "text": "from which",
-        "gst": "f-r-u-m-w-e-ch",
+        "gst": "f-m-ch",
         "notes": ""
     },
     {
@@ -57846,7 +57846,7 @@
     },
     {
         "text": "fungoid",
-        "gst": "f-u-ng-w-a-d",
+        "gst": "f-u-ng-o-e-d",
         "notes": ""
     },
     {
@@ -58461,7 +58461,7 @@
     },
     {
         "text": "ganelia",
-        "gst": "g-n-e-ea",
+        "gst": "g-ng-l-ea",
         "notes": ""
     },
     {
@@ -58966,7 +58966,7 @@
     },
     {
         "text": "general",
-        "gst": "j-e-n-r-l",
+        "gst": "j-e-n",
         "notes": ""
     },
     {
@@ -58981,17 +58981,17 @@
     },
     {
         "text": "generalization",
-        "gst": "j-e-n-r-l-e-s-a-sh",
+        "gst": "j-e-n-e-s-a-sh",
         "notes": ""
     },
     {
         "text": "generalize",
-        "gst": "j-e-n-r-l-i-s",
+        "gst": "j-e-n-i-s",
         "notes": ""
     },
     {
         "text": "generalized",
-        "gst": "j-e-n-r-l-i-s-d",
+        "gst": "j-e-n-i-s-d",
         "notes": ""
     },
     {
@@ -59000,13 +59000,13 @@
         "notes": ""
     },
     {
-        "text": "generalrty",
-        "gst": "j-e-n-r-l-t-e-r",
+        "text": "generality",
+        "gst": "j-e-n/l",
         "notes": ""
     },
     {
         "text": "generalship",
-        "gst": "j-e-n-r-l/sh",
+        "gst": "j-e-n/sh",
         "notes": ""
     },
     {
@@ -59111,7 +59111,7 @@
     },
     {
         "text": "genteelly",
-        "gst": "j-e-nt-e-e",
+        "gst": "j-e-nt-e-l-e",
         "notes": ""
     },
     {
@@ -59511,7 +59511,7 @@
     },
     {
         "text": "Gifford",
-        "gst": "g-e-f-rd",
+        "gst": "g-e-f-d",
         "notes": ""
     },
     {
@@ -59736,17 +59736,17 @@
     },
     {
         "text": "glad to have",
-        "gst": "g-l-a-d-t-u-v",
+        "gst": "g-l-v",
         "notes": ""
     },
     {
         "text": "glad to hear",
-        "gst": "g-l-a-d-t-u-h-e-r",
+        "gst": "g-l-h-e-r",
         "notes": ""
     },
     {
         "text": "glad to know",
-        "gst": "g-l-a-d-t-u-n-o",
+        "gst": "g-l-n-o",
         "notes": ""
     },
     {
@@ -59756,12 +59756,12 @@
     },
     {
         "text": "glad to see",
-        "gst": "g-l-a-d-t-u-s-e",
+        "gst": "g-l-s-e",
         "notes": ""
     },
     {
         "text": "glad to send",
-        "gst": "g-l-a-d-t-u-s-e-nt",
+        "gst": "g-l-s-e-n",
         "notes": ""
     },
     {
@@ -59801,7 +59801,7 @@
     },
     {
         "text": "gladly",
-        "gst": "g-l-a-d-e",
+        "gst": "g-l-e",
         "notes": ""
     },
     {
@@ -59896,7 +59896,7 @@
     },
     {
         "text": "glassware",
-        "gst": "g-l-a-s-w-e-r",
+        "gst": "g-l-a-s-u-a-r",
         "notes": ""
     },
     {
@@ -60591,7 +60591,7 @@
     },
     {
         "text": "good deal",
-        "gst": "g-u-td-e-l",
+        "gst": "g-d-e-l",
         "notes": ""
     },
     {
@@ -60656,7 +60656,7 @@
     },
     {
         "text": "Goodwin",
-        "gst": "g-w-e-n",
+        "gst": "g-u-d-e-n",
         "notes": ""
     },
     {
@@ -60816,22 +60816,22 @@
     },
     {
         "text": "govern",
-        "gst": "g-u-v-r-n",
+        "gst": "g-v",
         "notes": ""
     },
     {
         "text": "governance",
-        "gst": "g-u-v-r-n-n-s",
+        "gst": "g-v-n-s",
         "notes": ""
     },
     {
         "text": "governed",
-        "gst": "g-u-v-r-nt",
+        "gst": "g-v-d",
         "notes": ""
     },
     {
         "text": "governess",
-        "gst": "g-u-v-r-n-e-s",
+        "gst": "g-v-e-s",
         "notes": ""
     },
     {
@@ -60846,7 +60846,7 @@
     },
     {
         "text": "governor",
-        "gst": "g-u-v-r-n-r",
+        "gst": "g-v-r",
         "notes": ""
     },
     {
@@ -61491,7 +61491,7 @@
     },
     {
         "text": "greediest",
-        "gst": "g-r-e-d-e-e-s-t",
+        "gst": "g-r-e-d-e-s-t",
         "notes": ""
     },
     {
@@ -62246,7 +62246,7 @@
     },
     {
         "text": "Guatemala",
-        "gst": "g-w-a-tm-a-l-a",
+        "gst": "g-a-tm-l-a",
         "notes": ""
     },
     {
@@ -62316,7 +62316,7 @@
     },
     {
         "text": "guidon",
-        "gst": "g-e-d-o-n",
+        "gst": "g-i-tn",
         "notes": ""
     },
     {
@@ -62566,7 +62566,7 @@
     },
     {
         "text": "gunwale",
-        "gst": "g-u-n-w-a-l",
+        "gst": "g-n-l",
         "notes": ""
     },
     {
@@ -62606,7 +62606,7 @@
     },
     {
         "text": "gustatory",
-        "gst": "g-u-s-t-t-o-r-e",
+        "gst": "g-u-s-t-t-r-e",
         "notes": ""
     },
     {
@@ -62731,7 +62731,7 @@
     },
     {
         "text": "gyratory",
-        "gst": "j-i-r-t-o-r-e",
+        "gst": "j-i-r-t-r-e",
         "notes": ""
     },
     {
@@ -63031,12 +63031,12 @@
     },
     {
         "text": "halfway",
-        "gst": "h-a-f-w-a",
+        "gst": "h-a-f-u-a",
         "notes": ""
     },
     {
         "text": "halfwitted",
-        "gst": "h-a-f-w-e-td",
+        "gst": "h-a-f-u-e-td",
         "notes": ""
     },
     {
@@ -63061,7 +63061,7 @@
     },
     {
         "text": "halitosis",
-        "gst": "h-l-e-t-s-s",
+        "gst": "h-l-e-t-o-s-s",
         "notes": ""
     },
     {
@@ -63086,7 +63086,7 @@
     },
     {
         "text": "Halloween",
-        "gst": "h-a-l-w-e-n",
+        "gst": "h-a-l-o-e-n",
         "notes": ""
     },
     {
@@ -63096,7 +63096,7 @@
     },
     {
         "text": "hallucinatory",
-        "gst": "h-l-u-s-nt-o-r-e",
+        "gst": "h-l-u-s-nt-r-e",
         "notes": ""
     },
     {
@@ -63346,7 +63346,7 @@
     },
     {
         "text": "Hanford",
-        "gst": "h-a-n-f-rd",
+        "gst": "h-a-n-f-d",
         "notes": ""
     },
     {
@@ -63821,7 +63821,7 @@
     },
     {
         "text": "Hartford",
-        "gst": "h-a-r-t-f-rd",
+        "gst": "h-a-r-t-f-d",
         "notes": ""
     },
     {
@@ -63851,7 +63851,7 @@
     },
     {
         "text": "has been done",
-        "gst": "h-a-s-b-n-d-u-n",
+        "gst": "h-a-s-b-n-d-n",
         "notes": ""
     },
     {
@@ -63866,7 +63866,7 @@
     },
     {
         "text": "has done",
-        "gst": "h-a-s-d-u-n",
+        "gst": "h-a-s-d-n",
         "notes": ""
     },
     {
@@ -64041,7 +64041,7 @@
     },
     {
         "text": "hatchway",
-        "gst": "h-a-ch-w-a",
+        "gst": "h-a-f-u-a",
         "notes": ""
     },
     {
@@ -64161,12 +64161,12 @@
     },
     {
         "text": "have done",
-        "gst": "v-d-u-n",
+        "gst": "v-d-n",
         "notes": ""
     },
     {
         "text": "have gone",
-        "gst": "v-g-o-n",
+        "gst": "v-g-n",
         "notes": ""
     },
     {
@@ -64231,7 +64231,7 @@
     },
     {
         "text": "Haverford",
-        "gst": "h-a-v-r-f-rd",
+        "gst": "h-a-v-r-f-d",
         "notes": ""
     },
     {
@@ -64251,7 +64251,7 @@
     },
     {
         "text": "Hawaiian",
-        "gst": "h-w-i-n",
+        "gst": "h-u-i-n",
         "notes": ""
     },
     {
@@ -64266,7 +64266,7 @@
     },
     {
         "text": "hawkweed",
-        "gst": "h-o-k-w-e-d",
+        "gst": "h-o-k-u-e-d",
         "notes": ""
     },
     {
@@ -64456,7 +64456,7 @@
     },
     {
         "text": "he could",
-        "gst": "h-e-k-u-d",
+        "gst": "h-e-k-d",
         "notes": ""
     },
     {
@@ -64691,17 +64691,17 @@
     },
     {
         "text": "he wants",
-        "gst": "h-e-w-a-nt-s",
+        "gst": "h-e-nt-s",
         "notes": ""
     },
     {
         "text": "he was",
-        "gst": "h-e-w-a-s",
+        "gst": "h-e-o-s",
         "notes": ""
     },
     {
         "text": "he will be able",
-        "gst": "h-e-w-b-a",
+        "gst": "h-e-l-b-a",
         "notes": ""
     },
     {
@@ -64756,17 +64756,17 @@
     },
     {
         "text": "he would be glad",
-        "gst": "h-e-w-u-d-b-g-l-a-d",
+        "gst": "h-e-d-b-g-l",
         "notes": ""
     },
     {
         "text": "he would be",
-        "gst": "h-e-w-u-d-b",
+        "gst": "h-e-d-b",
         "notes": ""
     },
     {
         "text": "he would have",
-        "gst": "h-e-w-u-d-v",
+        "gst": "h-e-d-h",
         "notes": ""
     },
     {
@@ -64981,7 +64981,7 @@
     },
     {
         "text": "healthiest",
-        "gst": "h-e-l-th-e-e-s-t",
+        "gst": "h-e-l-th-e-s-t",
         "notes": ""
     },
     {
@@ -64996,7 +64996,7 @@
     },
     {
         "text": "Healy",
-        "gst": "h-e-e",
+        "gst": "h-e-l-e",
         "notes": ""
     },
     {
@@ -65221,7 +65221,7 @@
     },
     {
         "text": "heavenward",
-        "gst": "h-e-v-n-w-o-rd",
+        "gst": "h-e-v-n/d",
         "notes": ""
     },
     {
@@ -65591,7 +65591,7 @@
     },
     {
         "text": "hemstitched",
-        "gst": "h-e-m-s-t-e-t-u-d",
+        "gst": "h-e-m-s-t-e-sh-t",
         "notes": ""
     },
     {
@@ -65631,7 +65631,7 @@
     },
     {
         "text": "Henrietta",
-        "gst": "h-e-n-r-e-e-t-a",
+        "gst": "h-e-n-r-e-t-a",
         "notes": ""
     },
     {
@@ -65771,7 +65771,7 @@
     },
     {
         "text": "hereby",
-        "gst": "h-e-r-b-i",
+        "gst": "h-e-r-b",
         "notes": ""
     },
     {
@@ -65781,7 +65781,7 @@
     },
     {
         "text": "hereditable",
-        "gst": "h-e-rd-e-t-b",
+        "gst": "h-e-td-b",
         "notes": ""
     },
     {
@@ -65971,17 +65971,17 @@
     },
     {
         "text": "herself",
-        "gst": "h-r-s-e-l-f",
+        "gst": "h-e-r-s",
         "notes": ""
     },
     {
         "text": "hesitance",
-        "gst": "h-e-s-e-t-n-e-s",
+        "gst": "h-e-s-tn-s",
         "notes": ""
     },
     {
         "text": "hesitancy",
-        "gst": "h-e-s-e-tn-s-e",
+        "gst": "h-e-s-tn-s-e",
         "notes": ""
     },
     {
@@ -65996,12 +65996,12 @@
     },
     {
         "text": "hesitated",
-        "gst": "h-e-s-e-t-a-td",
+        "gst": "h-e-s-t-a-td",
         "notes": ""
     },
     {
         "text": "hesitatingly",
-        "gst": "h-e-t-a-t/e",
+        "gst": "h-e-s-t-a-t/e",
         "notes": ""
     },
     {
@@ -66011,7 +66011,7 @@
     },
     {
         "text": "hesitatively",
-        "gst": "h-e-s-e-t-t-v-e",
+        "gst": "h-e-s-t-t-v-e",
         "notes": ""
     },
     {
@@ -66021,7 +66021,7 @@
     },
     {
         "text": "heterogeneity",
-        "gst": "h-e-t-r-j-e-n-e-t-e",
+        "gst": "h-e-t-r-o-j-e-n-e-t-e",
         "notes": ""
     },
     {
@@ -66466,7 +66466,7 @@
     },
     {
         "text": "hitherto",
-        "gst": "h-e-th-r-t-u",
+        "gst": "h-e-th-t-u",
         "notes": ""
     },
     {
@@ -66856,7 +66856,7 @@
     },
     {
         "text": "homogeneity",
-        "gst": "h-a-m-j-n-e-t-e",
+        "gst": "h-o-m-j-n-e-t-e",
         "notes": ""
     },
     {
@@ -67281,17 +67281,17 @@
     },
     {
         "text": "horseweed",
-        "gst": "h-o-r-s-w-a-d",
+        "gst": "h-o-r-s-u-e-d",
         "notes": ""
     },
     {
         "text": "horsewhip",
-        "gst": "h-o-r-s-w-e-p",
+        "gst": "h-o-r-s-u-e-p",
         "notes": ""
     },
     {
         "text": "horsewoman",
-        "gst": "h-o-r-s-w-u-mn",
+        "gst": "h-o-r-s-u-u-mn",
         "notes": ""
     },
     {
@@ -67336,12 +67336,12 @@
     },
     {
         "text": "hospitable",
-        "gst": "h-a-s-p-e-t-b",
+        "gst": "h-a-s-p-t-b",
         "notes": ""
     },
     {
         "text": "hospital",
-        "gst": "h-a-s-p-e-t-l",
+        "gst": "h-a-s-p-t-l",
         "notes": ""
     },
     {
@@ -67351,12 +67351,12 @@
     },
     {
         "text": "hospitalization",
-        "gst": "h-a-s-p-e-t-l-e-s-a-sh",
+        "gst": "h-a-s-p-t-l-e-s-a-sh",
         "notes": ""
     },
     {
         "text": "hospitalize",
-        "gst": "h-o-s-p-e-t-l-i-s",
+        "gst": "h-o-s-p-t-l-i-s",
         "notes": ""
     },
     {
@@ -67386,7 +67386,7 @@
     },
     {
         "text": "hostilely",
-        "gst": "h-a-s-t-e-e",
+        "gst": "h-a-s-t-l-e",
         "notes": ""
     },
     {
@@ -67456,7 +67456,7 @@
     },
     {
         "text": "hour",
-        "gst": "a-u-r",
+        "gst": "r",
         "notes": ""
     },
     {
@@ -67526,7 +67526,7 @@
     },
     {
         "text": "housewares",
-        "gst": "h-a-u-s-w-e-r-s",
+        "gst": "h-a-u-s-u-e-r-s",
         "notes": ""
     },
     {
@@ -67576,22 +67576,22 @@
     },
     {
         "text": "how many of them",
-        "gst": "h-a-u-m-e-n-e-u-v-th-e-m",
+        "gst": "a-u-mn-e-th-m",
         "notes": ""
     },
     {
         "text": "how many of these",
-        "gst": "h-a-u-m-e-n-e-u-v-th-e-s",
+        "gst": "q-u-mn-e-th-e-s",
         "notes": ""
     },
     {
         "text": "how many times",
-        "gst": "h-a-u-m-e-n-e-tm-s",
+        "gst": "a-u-mn-e-tm-s",
         "notes": ""
     },
     {
         "text": "how many",
-        "gst": "h-a-u-m-e-n-e",
+        "gst": "a-u-mn-e",
         "notes": ""
     },
     {
@@ -67631,7 +67631,7 @@
     },
     {
         "text": "howsoever",
-        "gst": "h-a-u-s-o-v-r",
+        "gst": "a-u-s-o-e-v",
         "notes": ""
     },
     {
@@ -68411,7 +68411,7 @@
     },
     {
         "text": "hypersensitive",
-        "gst": "h-i-p-r-s-e-n-s-e-t-v",
+        "gst": "h-i-p-r-s-e-n-s-t-v",
         "notes": ""
     },
     {
@@ -68641,7 +68641,7 @@
     },
     {
         "text": "I could be",
-        "gst": "i-k-u-d-b",
+        "gst": "i-k-d-b",
         "notes": ""
     },
     {
@@ -68651,7 +68651,7 @@
     },
     {
         "text": "I could not",
-        "gst": "a-k-u-d-n",
+        "gst": "a-k-d-n",
         "notes": ""
     },
     {
@@ -68766,7 +68766,7 @@
     },
     {
         "text": "I have done",
-        "gst": "i-v-d-u-n",
+        "gst": "i-v-d-n",
         "notes": ""
     },
     {
@@ -68796,7 +68796,7 @@
     },
     {
         "text": "I have not yet",
-        "gst": "i-v-n-ye-t",
+        "gst": "a-v-n-e-t",
         "notes": ""
     },
     {
@@ -68956,12 +68956,12 @@
     },
     {
         "text": "I shall be able",
-        "gst": "i-sh-a-l-ba-b",
+        "gst": "i-sh-b-a",
         "notes": ""
     },
     {
         "text": "I shall be glad",
-        "gst": "i-sh-a-l-b-g-l-a-d",
+        "gst": "i-sh-b-g-l",
         "notes": ""
     },
     {
@@ -68981,12 +68981,12 @@
     },
     {
         "text": "I shall not be able",
-        "gst": "i-sh-a-l-n-ba-b",
+        "gst": "i-sh-n-b-a",
         "notes": ""
     },
     {
         "text": "I shall not be",
-        "gst": "i-sh-a-l-n-b",
+        "gst": "i-sh-n-b",
         "notes": ""
     },
     {
@@ -68996,7 +68996,7 @@
     },
     {
         "text": "I shall",
-        "gst": "i-sh-a-l",
+        "gst": "i-sh",
         "notes": ""
     },
     {
@@ -69056,12 +69056,12 @@
     },
     {
         "text": "I want to see",
-        "gst": "i-w-a-nt-t-u-s-e",
+        "gst": "a-nt-s-e",
         "notes": ""
     },
     {
         "text": "I want",
-        "gst": "i-w-a-nt",
+        "gst": "a-nt",
         "notes": ""
     },
     {
@@ -69071,7 +69071,7 @@
     },
     {
         "text": "I was",
-        "gst": "i-w-a-s",
+        "gst": "a-w-a-s",
         "notes": ""
     },
     {
@@ -69121,7 +69121,7 @@
     },
     {
         "text": "I would be",
-        "gst": "i-w-u-d-b",
+        "gst": "a-d-b",
         "notes": ""
     },
     {
@@ -69501,7 +69501,7 @@
     },
     {
         "text": "if it was",
-        "gst": "e-f-t-w-a-s",
+        "gst": "e-f-t-o-s",
         "notes": ""
     },
     {
@@ -69606,7 +69606,7 @@
     },
     {
         "text": "if we can be",
-        "gst": "e-f-w-e-k-b",
+        "gst": "e-f-u-e-k-b",
         "notes": ""
     },
     {
@@ -69621,22 +69621,22 @@
     },
     {
         "text": "if we could",
-        "gst": "e-f-w-e-k-u-d",
+        "gst": "e-f-u-e-k-d",
         "notes": ""
     },
     {
         "text": "if we do",
-        "gst": "e-f-w-e-d-u",
+        "gst": "e-f-u-e-d-u",
         "notes": ""
     },
     {
         "text": "if we have",
-        "gst": "e-f-w-e-v",
+        "gst": "e-f-u-e-v",
         "notes": ""
     },
     {
         "text": "if we",
-        "gst": "e-f-w-e",
+        "gst": "e-f-u-e",
         "notes": ""
     },
     {
@@ -69666,7 +69666,7 @@
     },
     {
         "text": "if you could",
-        "gst": "e-f-u-k-u-d",
+        "gst": "e-f-u-k-d",
         "notes": ""
     },
     {
@@ -69721,7 +69721,7 @@
     },
     {
         "text": "if you want",
-        "gst": "e-f-u-wa-nt",
+        "gst": "e-f-u-nt",
         "notes": ""
     },
     {
@@ -69751,12 +69751,12 @@
     },
     {
         "text": "if you would have",
-        "gst": "e-f-u-wu-d-v",
+        "gst": "e-f-u-d-v",
         "notes": ""
     },
     {
         "text": "if you would",
-        "gst": "e-f-u-wu-d",
+        "gst": "e-f-u-d",
         "notes": ""
     },
     {
@@ -70181,12 +70181,12 @@
     },
     {
         "text": "immediate",
-        "gst": "e-m-e-t",
+        "gst": "e-m-e",
         "notes": ""
     },
     {
         "text": "immediately",
-        "gst": "e-m-e-d-e-t-e",
+        "gst": "e-m-e-e",
         "notes": ""
     },
     {
@@ -70756,7 +70756,7 @@
     },
     {
         "text": "impetuosity",
-        "gst": "m-p-e-ch-u-w-a-sh-t-e",
+        "gst": "m-p-t-o-s-t-e",
         "notes": ""
     },
     {
@@ -70946,7 +70946,7 @@
     },
     {
         "text": "importance",
-        "gst": "m-p-o-t-n-e-s",
+        "gst": "m-p",
         "notes": ""
     },
     {
@@ -70971,7 +70971,7 @@
     },
     {
         "text": "importunate",
-        "gst": "m-p-o-tn-t",
+        "gst": "m-p-o-tn-a-t",
         "notes": ""
     },
     {
@@ -71391,7 +71391,7 @@
     },
     {
         "text": "in his",
-        "gst": "n-h-e-s",
+        "gst": "n-s",
         "notes": ""
     },
     {
@@ -71401,27 +71401,27 @@
     },
     {
         "text": "in order that",
-        "gst": "n-o-rd-r-th-a",
+        "gst": "n-o-d-th-a",
         "notes": ""
     },
     {
         "text": "in order to be able",
-        "gst": "n-o-rd-r-t-u-ba-b",
+        "gst": "n-o-td-b-a",
         "notes": ""
     },
     {
         "text": "in order to be",
-        "gst": "n-o-rd-r-t-u-b",
+        "gst": "n-o-td-b",
         "notes": ""
     },
     {
         "text": "in order to obtain",
-        "gst": "n-o-rd-r-t-u-o-b-tn",
+        "gst": "n-o-td-o-b-tn",
         "notes": ""
     },
     {
         "text": "in order to see",
-        "gst": "n-o-rd-r-t-u-s-e",
+        "gst": "n-o-td-s-e",
         "notes": ""
     },
     {
@@ -71451,7 +71451,7 @@
     },
     {
         "text": "in question",
-        "gst": "n-k-w-e-s-ch-n",
+        "gst": "n-k-sh",
         "notes": ""
     },
     {
@@ -71471,7 +71471,7 @@
     },
     {
         "text": "in such a way",
-        "gst": "n-s-u-ch-a-w-a",
+        "gst": "n-s-u-ch-u-a",
         "notes": ""
     },
     {
@@ -71521,7 +71521,7 @@
     },
     {
         "text": "in this way",
-        "gst": "n-th-s-w-a",
+        "gst": "n-th-s-u-a",
         "notes": ""
     },
     {
@@ -71536,12 +71536,12 @@
     },
     {
         "text": "in which case",
-        "gst": "n-w-e-ch-k-a-s",
+        "gst": "n-ch-k-a-s",
         "notes": ""
     },
     {
         "text": "in which it is",
-        "gst": "n-w-e-ch-t-s",
+        "gst": "n-ch-t-s",
         "notes": ""
     },
     {
@@ -71556,12 +71556,12 @@
     },
     {
         "text": "in which you",
-        "gst": "n-w-e-ch-u",
+        "gst": "n-ch-u",
         "notes": ""
     },
     {
         "text": "in which",
-        "gst": "n-w-e-ch",
+        "gst": "n-ch",
         "notes": ""
     },
     {
@@ -71621,7 +71621,7 @@
     },
     {
         "text": "inadequate",
-        "gst": "e-n-a-d-k-w-a-t",
+        "gst": "e-n-a-d-e-k-w-a-t",
         "notes": ""
     },
     {
@@ -71696,7 +71696,7 @@
     },
     {
         "text": "inappropriate",
-        "gst": "e-n-p-r-o-p-r-e-e-t",
+        "gst": "e-n-p-r-o-p-r-ea-t",
         "notes": ""
     },
     {
@@ -71931,7 +71931,7 @@
     },
     {
         "text": "inchoate",
-        "gst": "n-ch-w-a-t",
+        "gst": "n-k-o-a-t",
         "notes": ""
     },
     {
@@ -72666,7 +72666,7 @@
     },
     {
         "text": "indelibility",
-        "gst": "nt-l-e-b-t-e-e-l",
+        "gst": "nt-l-b/l",
         "notes": ""
     },
     {
@@ -72846,7 +72846,7 @@
     },
     {
         "text": "indicatory",
-        "gst": "nt-e-k-t-o-r-e",
+        "gst": "nt-e-k-t-r-e",
         "notes": ""
     },
     {
@@ -73881,7 +73881,7 @@
     },
     {
         "text": "inflammatory",
-        "gst": "n-f-l-a-m-t-o-r-e",
+        "gst": "n-f-l-a-m-t-r-e",
         "notes": ""
     },
     {
@@ -74326,7 +74326,7 @@
     },
     {
         "text": "inhibitory",
-        "gst": "n-h-e-b-t-o-r-e",
+        "gst": "n-h-e-b-t-r-e",
         "notes": ""
     },
     {
@@ -74446,7 +74446,7 @@
     },
     {
         "text": "initiatory",
-        "gst": "e-n-e-sh-t-o-r-e",
+        "gst": "e-n-e-sh-t-r-e",
         "notes": ""
     },
     {
@@ -74476,7 +74476,7 @@
     },
     {
         "text": "injudiciously",
-        "gst": "n-j-u-d-s-e-e",
+        "gst": "n-j-u-d-e-sh-u-s-e",
         "notes": ""
     },
     {
@@ -74696,7 +74696,7 @@
     },
     {
         "text": "inoculated",
-        "gst": "e-n-a-k/ud",
+        "gst": "e-n-a-k/u-d",
         "notes": ""
     },
     {
@@ -74756,37 +74756,37 @@
     },
     {
         "text": "inquire",
-        "gst": "n-k-w-i-r",
+        "gst": "n-k-i",
         "notes": ""
     },
     {
         "text": "inquired",
-        "gst": "n-k-w-i-rd",
+        "gst": "n-k-i-rd",
         "notes": ""
     },
     {
         "text": "inquirer",
-        "gst": "n-k-w-i-r-r",
+        "gst": "n-k-i-r",
         "notes": ""
     },
     {
         "text": "inquires",
-        "gst": "n-k-w-i-r-s",
+        "gst": "n-k-i-s",
         "notes": ""
     },
     {
         "text": "inquiries",
-        "gst": "n-k-w-i-r-e-s",
+        "gst": "n-k-ie-s",
         "notes": ""
     },
     {
         "text": "inquiringly",
-        "gst": "n-k-w-e-r/e",
+        "gst": "n-k-i/e",
         "notes": ""
     },
     {
         "text": "inquiry",
-        "gst": "n-k-w-i-r-e",
+        "gst": "n-k-ie",
         "notes": ""
     },
     {
@@ -75236,7 +75236,7 @@
     },
     {
         "text": "inspiratory",
-        "gst": "n-s-p-e-r-t-o-r-e",
+        "gst": "n-s-p-e-r-t-r-e",
         "notes": ""
     },
     {
@@ -76106,7 +76106,7 @@
     },
     {
         "text": "interlocutory",
-        "gst": "n/l-a-k-e-u-t-o-r-e",
+        "gst": "n/l-a-k-e-u-t-r-e",
         "notes": ""
     },
     {
@@ -76136,7 +76136,7 @@
     },
     {
         "text": "intermediate",
-        "gst": "n/m-e-d-e-e-t",
+        "gst": "n/m-e-d-ea-t",
         "notes": ""
     },
     {
@@ -76346,7 +76346,7 @@
     },
     {
         "text": "interrogatory",
-        "gst": "nt-e-r-a-g-t-o-r-e",
+        "gst": "nt-e-r-a-g-t-r-e",
         "notes": ""
     },
     {
@@ -77016,7 +77016,7 @@
     },
     {
         "text": "inventory",
-        "gst": "n-v-nt-o-r-e",
+        "gst": "n-v-nt-r-e",
         "notes": ""
     },
     {
@@ -77711,17 +77711,17 @@
     },
     {
         "text": "irreverence",
-        "gst": "e-r-e-v-r-n-s",
+        "gst": "e-r-v-e-r-e-n-s",
         "notes": ""
     },
     {
         "text": "irreverent",
-        "gst": "e-r-e-v-r-nt",
+        "gst": "e-r-v-e-r-e-nt",
         "notes": ""
     },
     {
         "text": "irreversible",
-        "gst": "e-r-e-v-r-s-b",
+        "gst": "e-r-v-e-r-s-b",
         "notes": ""
     },
     {
@@ -77811,7 +77811,7 @@
     },
     {
         "text": "is not yet",
-        "gst": "e-s-n-ye-t",
+        "gst": "s-n-e-t",
         "notes": ""
     },
     {
@@ -78011,22 +78011,22 @@
     },
     {
         "text": "it is the",
-        "gst": "e-t-s-th",
+        "gst": "t-s-th",
         "notes": ""
     },
     {
         "text": "it is",
-        "gst": "e-t-s",
+        "gst": "t-s",
         "notes": ""
     },
     {
         "text": "it isn't",
-        "gst": "e-t-s-nt",
+        "gst": "t-s-nt",
         "notes": ""
     },
     {
         "text": "it was'nt",
-        "gst": "e-t-w-o-s-tn",
+        "gst": "t-o-s-nt",
         "notes": ""
     },
     {
@@ -78036,7 +78036,7 @@
     },
     {
         "text": "it will be",
-        "gst": "e-t-l-b",
+        "gst": "t-l-b",
         "notes": ""
     },
     {
@@ -78061,7 +78061,7 @@
     },
     {
         "text": "it's",
-        "gst": "e-t-s",
+        "gst": "t-s",
         "notes": ""
     },
     {
@@ -78071,7 +78071,7 @@
     },
     {
         "text": "italian",
-        "gst": "e-t-a-l-ea-n",
+        "gst": "t-a-l-ea-n",
         "notes": ""
     },
     {
@@ -78081,12 +78081,12 @@
     },
     {
         "text": "italic",
-        "gst": "e-t-l-k",
+        "gst": "t-l-k",
         "notes": ""
     },
     {
         "text": "italicize",
-        "gst": "e-t-a-s-l-i-s",
+        "gst": "t-a-s-l-i-s",
         "notes": ""
     },
     {
@@ -78141,7 +78141,7 @@
     },
     {
         "text": "iterative",
-        "gst": "e-t-r-a-t-v",
+        "gst": "t-r-a-t-v",
         "notes": ""
     },
     {
@@ -78171,7 +78171,7 @@
     },
     {
         "text": "its",
-        "gst": "e-t-s",
+        "gst": "t-s",
         "notes": ""
     },
     {
@@ -78656,7 +78656,7 @@
     },
     {
         "text": "jeswit",
-        "gst": "j-e-s-w-e-t",
+        "gst": "j-e-s-u-t",
         "notes": ""
     },
     {
@@ -78811,12 +78811,12 @@
     },
     {
         "text": "jocosely",
-        "gst": "j-o-k-s-e-e",
+        "gst": "j-o-k-o-s-e",
         "notes": ""
     },
     {
         "text": "jocosity",
-        "gst": "u-o-k-s-e-t-e",
+        "gst": "u-o-k-s-t-e",
         "notes": ""
     },
     {
@@ -79091,7 +79091,7 @@
     },
     {
         "text": "jovially",
-        "gst": "j-u-v-e-e",
+        "gst": "j-u-v-e-l-e",
         "notes": ""
     },
     {
@@ -79766,7 +79766,7 @@
     },
     {
         "text": "kibitzer",
-        "gst": "k-e-b-e-t-r-s",
+        "gst": "k-e-b-t-s-e-r",
         "notes": ""
     },
     {
@@ -80016,7 +80016,7 @@
     },
     {
         "text": "Kingsford",
-        "gst": "k-e-ng-s-f-rd",
+        "gst": "k-e-ng-s-f-d",
         "notes": ""
     },
     {
@@ -80476,7 +80476,7 @@
     },
     {
         "text": "laboratory",
-        "gst": "l-a-b-r-t-o-r-e",
+        "gst": "l-a-b-r-t-r-e",
         "notes": ""
     },
     {
@@ -80546,7 +80546,7 @@
     },
     {
         "text": "lacewing",
-        "gst": "l-a-s-w-h",
+        "gst": "l-a-s-u-e-nk",
         "notes": ""
     },
     {
@@ -80706,7 +80706,7 @@
     },
     {
         "text": "Lafayette",
-        "gst": "l-a-f-e-e-t",
+        "gst": "l-a-f-e-t",
         "notes": ""
     },
     {
@@ -81056,7 +81056,7 @@
     },
     {
         "text": "Lansford",
-        "gst": "l-a-n-s-f-rd",
+        "gst": "l-a-n-s-f-d",
         "notes": ""
     },
     {
@@ -81286,7 +81286,7 @@
     },
     {
         "text": "lassitude",
-        "gst": "l-a-s-e-t-u-d",
+        "gst": "l-a-s-t-u-d",
         "notes": ""
     },
     {
@@ -81506,7 +81506,7 @@
     },
     {
         "text": "laudatory",
-        "gst": "l-o-d-t-o-r-e",
+        "gst": "l-o-d-t-r-e",
         "notes": ""
     },
     {
@@ -81616,7 +81616,7 @@
     },
     {
         "text": "lavatory",
-        "gst": "l-a-v-t-o-r-e",
+        "gst": "l-a-v-t-r-e",
         "notes": ""
     },
     {
@@ -81971,7 +81971,7 @@
     },
     {
         "text": "Leavenworth",
-        "gst": "l-e-v-n-w-u-u-th",
+        "gst": "l-e-v-n-u-u-th",
         "notes": ""
     },
     {
@@ -82110,8 +82110,8 @@
         "notes": ""
     },
     {
-        "text": "legalrty",
-        "gst": "l-e-g-t-r-e-l-r",
+        "text": "legality",
+        "gst": "l-e-g/l",
         "notes": ""
     },
     {
@@ -82396,7 +82396,7 @@
     },
     {
         "text": "Lenoir",
-        "gst": "l-e-n-w-e-r",
+        "gst": "l-e-n-o-r",
         "notes": ""
     },
     {
@@ -85011,7 +85011,7 @@
     },
     {
         "text": "loyally",
-        "gst": "l-o-e-e",
+        "gst": "l-o-e-l-e",
         "notes": ""
     },
     {
@@ -85201,7 +85201,7 @@
     },
     {
         "text": "lullaby",
-        "gst": "l-u-l-b-i",
+        "gst": "l-u-l-a-b",
         "notes": ""
     },
     {
@@ -86556,7 +86556,7 @@
     },
     {
         "text": "managerially",
-        "gst": "m-a-n-j-e-r-e-e",
+        "gst": "m-a-n-j-e-r-l-e",
         "notes": ""
     },
     {
@@ -86596,7 +86596,7 @@
     },
     {
         "text": "mandatory",
-        "gst": "m-a-nt-t-o-r-e",
+        "gst": "m-a-nt-t-r-e",
         "notes": ""
     },
     {
@@ -86781,7 +86781,7 @@
     },
     {
         "text": "manipulated",
-        "gst": "mn-e-p/ud",
+        "gst": "mn-e-p/u-d",
         "notes": ""
     },
     {
@@ -87421,7 +87421,7 @@
     },
     {
         "text": "marrowy",
-        "gst": "m-a-r-o-w-a",
+        "gst": "m-a-r-o-e",
         "notes": ""
     },
     {
@@ -87776,7 +87776,7 @@
     },
     {
         "text": "mastodon",
-        "gst": "m-a-s-td-o-n",
+        "gst": "m-a-s-t-o-tn",
         "notes": ""
     },
     {
@@ -87876,7 +87876,7 @@
     },
     {
         "text": "materially",
-        "gst": "m-t-e-r-e-e",
+        "gst": "m-t-e-r-l-e",
         "notes": ""
     },
     {
@@ -87956,7 +87956,7 @@
     },
     {
         "text": "matriculated",
-        "gst": "m-t-r-e-k/ud",
+        "gst": "m-t-r-e-k/u-d",
         "notes": ""
     },
     {
@@ -88181,7 +88181,7 @@
     },
     {
         "text": "may be done",
-        "gst": "m-a-b-d-u-n",
+        "gst": "m-a-b-d-n",
         "notes": ""
     },
     {
@@ -88351,12 +88351,12 @@
     },
     {
         "text": "mealy",
-        "gst": "m-e-e",
+        "gst": "m-l-e",
         "notes": ""
     },
     {
         "text": "mealymouthed",
-        "gst": "m-e-l-e-mn-w-a-t",
+        "gst": "m-e-l-e-m-a-u-th-d",
         "notes": ""
     },
     {
@@ -88486,7 +88486,7 @@
     },
     {
         "text": "mechanician",
-        "gst": "m-k-a-n-e-e-sh",
+        "gst": "m-e-k-a-n-sh",
         "notes": ""
     },
     {
@@ -88546,7 +88546,7 @@
     },
     {
         "text": "Medford",
-        "gst": "m-e-d-f-rd",
+        "gst": "m-e-d-f-d",
         "notes": ""
     },
     {
@@ -89211,12 +89211,12 @@
     },
     {
         "text": "merchandise",
-        "gst": "m-r-ch-nt-i-s",
+        "gst": "m-e-ch-d-i-s",
         "notes": ""
     },
     {
         "text": "merchandiser",
-        "gst": "m-r-ch-nt-i-s-e-r",
+        "gst": "m-e-ch-d-i-s-e-r",
         "notes": ""
     },
     {
@@ -89226,7 +89226,7 @@
     },
     {
         "text": "merchantman",
-        "gst": "m-r-ch-nt-m-a-n",
+        "gst": "m-e-ch-t-m-a-n",
         "notes": ""
     },
     {
@@ -89401,7 +89401,7 @@
     },
     {
         "text": "meshwork",
-        "gst": "m-e-sh-w-u-r-k",
+        "gst": "m-e-sh-u-k",
         "notes": ""
     },
     {
@@ -90081,7 +90081,7 @@
     },
     {
         "text": "migratory",
-        "gst": "m-i-g-r-t-o-r-e",
+        "gst": "m-i-g-r-t-r-e",
         "notes": ""
     },
     {
@@ -90156,7 +90156,7 @@
     },
     {
         "text": "Milford",
-        "gst": "m-e-l-f-rd",
+        "gst": "m-e-l-f-d",
         "notes": ""
     },
     {
@@ -90336,7 +90336,7 @@
     },
     {
         "text": "millwork",
-        "gst": "m-e-l-w-o-r-k",
+        "gst": "m-e-l-u-k",
         "notes": ""
     },
     {
@@ -90356,7 +90356,7 @@
     },
     {
         "text": "Milwaukee",
-        "gst": "m-e-l-w-o-k-e",
+        "gst": "m-e-l",
         "notes": ""
     },
     {
@@ -90811,7 +90811,7 @@
     },
     {
         "text": "miscalculated",
-        "gst": "m-s-k-a-l-k/ud",
+        "gst": "m-s-k-a-l-k/u-d",
         "notes": ""
     },
     {
@@ -91021,7 +91021,7 @@
     },
     {
         "text": "misgovern",
-        "gst": "m-s-g-u-v-r-n",
+        "gst": "m-s-g-v",
         "notes": ""
     },
     {
@@ -91506,7 +91506,7 @@
     },
     {
         "text": "mitigatory",
-        "gst": "m-e-t-e-g-t-o-r-e",
+        "gst": "m-e-t-e-g-t-r-e",
         "notes": ""
     },
     {
@@ -91841,7 +91841,7 @@
     },
     {
         "text": "modulator",
-        "gst": "m-o-d/u/r",
+        "gst": "m-o-d/u-r",
         "notes": ""
     },
     {
@@ -92166,7 +92166,7 @@
     },
     {
         "text": "monasterially",
-        "gst": "m-a-n-s-t-e-r-e-e",
+        "gst": "m-a-n-s-t-e-r-l-e",
         "notes": ""
     },
     {
@@ -92261,7 +92261,7 @@
     },
     {
         "text": "monitory",
-        "gst": "m-a-nt-o-r-e",
+        "gst": "m-a-nt-r-e",
         "notes": ""
     },
     {
@@ -93431,12 +93431,12 @@
     },
     {
         "text": "muckweed",
-        "gst": "m-u-k-w-e-d",
+        "gst": "m-u-k-u-e-d",
         "notes": ""
     },
     {
         "text": "muckworm",
-        "gst": "m-u-k-w-e-r-m",
+        "gst": "m-u-k-u-e-r-m",
         "notes": ""
     },
     {
@@ -93511,7 +93511,7 @@
     },
     {
         "text": "mudweed",
-        "gst": "m-d-w-i-d",
+        "gst": "m-u-d-w-i-d",
         "notes": ""
     },
     {
@@ -93561,7 +93561,7 @@
     },
     {
         "text": "mugwump",
-        "gst": "m-u-g-w-u-m-p",
+        "gst": "m-u-g-u-u-m-p",
         "notes": ""
     },
     {
@@ -93636,7 +93636,7 @@
     },
     {
         "text": "multiethnic",
-        "gst": "m-u-t-e-e-th-n-e-k",
+        "gst": "m-u-t-e-th-n-e-k",
         "notes": ""
     },
     {
@@ -94141,7 +94141,7 @@
     },
     {
         "text": "must be done",
-        "gst": "m-s-b-d-u-n",
+        "gst": "m-s-b-d-n",
         "notes": ""
     },
     {
@@ -94311,7 +94311,7 @@
     },
     {
         "text": "mutuality",
-        "gst": "m-e-u-ch-w/l",
+        "gst": "m-u-t/l",
         "notes": ""
     },
     {
@@ -94401,7 +94401,7 @@
     },
     {
         "text": "myself",
-        "gst": "m-i-s-e-l-f",
+        "gst": "m-i-s",
         "notes": ""
     },
     {
@@ -94821,7 +94821,7 @@
     },
     {
         "text": "natatory",
-        "gst": "n-a-t-t-o-r-e",
+        "gst": "n-a-t-t-r-e",
         "notes": ""
     },
     {
@@ -95101,7 +95101,7 @@
     },
     {
         "text": "nearby",
-        "gst": "n-e-r-b-i",
+        "gst": "n-e-r-b",
         "notes": ""
     },
     {
@@ -95206,7 +95206,7 @@
     },
     {
         "text": "necessitarian",
-        "gst": "n-e-s-s-e-t-e-r-e-n",
+        "gst": "n-e-s-s-t-e-r-e-n",
         "notes": ""
     },
     {
@@ -95261,7 +95261,7 @@
     },
     {
         "text": "neckwear",
-        "gst": "n-e-k-w-e-r",
+        "gst": "n-e-k-u-e-r",
         "notes": ""
     },
     {
@@ -95856,7 +95856,7 @@
     },
     {
         "text": "New Brunswick",
-        "gst": "n-u-b-r-u-n-s-w-e-k",
+        "gst": "n-b-r-u-n-s-w-k",
         "notes": ""
     },
     {
@@ -96001,17 +96001,17 @@
     },
     {
         "text": "next day or two",
-        "gst": "n-e-s-td-a-o-r-t-u",
+        "gst": "n-e-s-d-a-o-r-t-u",
         "notes": ""
     },
     {
         "text": "next day",
-        "gst": "n-e-s-td-a",
+        "gst": "n-e-s-d-a",
         "notes": ""
     },
     {
         "text": "next month",
-        "gst": "n-e-s-t-m-u-n-th",
+        "gst": "n-e-s-mn-th",
         "notes": ""
     },
     {
@@ -96021,17 +96021,17 @@
     },
     {
         "text": "next year's",
-        "gst": "n-e-s-t-ye-r-s",
+        "gst": "n-e-s-e-r-s",
         "notes": ""
     },
     {
         "text": "next year",
-        "gst": "n-e-s-t-ye-r",
+        "gst": "n-e-s-e-r",
         "notes": ""
     },
     {
         "text": "next",
-        "gst": "n-e-s-t",
+        "gst": "n-e-s",
         "notes": ""
     },
     {
@@ -96670,8 +96670,8 @@
         "notes": ""
     },
     {
-        "text": "nonentrty",
-        "gst": "n-a-n-e-nt-r-e",
+        "text": "nonentity",
+        "gst": "n-o-n-nt-e-t-e",
         "notes": ""
     },
     {
@@ -97091,7 +97091,7 @@
     },
     {
         "text": "notarially",
-        "gst": "n-o-t-a-r-e-e",
+        "gst": "n-o-t-a-r-l-e",
         "notes": ""
     },
     {
@@ -97116,7 +97116,7 @@
     },
     {
         "text": "notchweed",
-        "gst": "n-o-ch-w-e-d",
+        "gst": "n-o-ch-u-e-d",
         "notes": ""
     },
     {
@@ -97421,7 +97421,7 @@
     },
     {
         "text": "nugatory",
-        "gst": "n-u-g-t-o-r-e",
+        "gst": "n-u-g-t-r-e",
         "notes": ""
     },
     {
@@ -98091,7 +98091,7 @@
     },
     {
         "text": "observatory",
-        "gst": "o-b-s-e-r-v-t-o-r-e",
+        "gst": "o-b-s-e-r-v-t-r-e",
         "notes": ""
     },
     {
@@ -98696,12 +98696,12 @@
     },
     {
         "text": "of my",
-        "gst": "o-%-m-i",
+        "gst": "o-m-i",
         "notes": ""
     },
     {
         "text": "of our",
-        "gst": "o-%-r",
+        "gst": "o-r",
         "notes": ""
     },
     {
@@ -98816,7 +98816,7 @@
     },
     {
         "text": "offertory",
-        "gst": "o-f-r-t-o-r-e",
+        "gst": "o-f-r-t-r-e",
         "notes": ""
     },
     {
@@ -99261,7 +99261,7 @@
     },
     {
         "text": "on his",
-        "gst": "o-n-h-e-s",
+        "gst": "o-n-s",
         "notes": ""
     },
     {
@@ -99281,7 +99281,7 @@
     },
     {
         "text": "on request",
-        "gst": "o-n-r-e-k-w-e-s-t",
+        "gst": "o-n-r-k-e-s-t",
         "notes": ""
     },
     {
@@ -99311,7 +99311,7 @@
     },
     {
         "text": "on the question",
-        "gst": "o-n-th-k-w-e-s-ch-n",
+        "gst": "o-n-k-sh",
         "notes": ""
     },
     {
@@ -99346,7 +99346,7 @@
     },
     {
         "text": "on which",
-        "gst": "o-n-w-e-ch",
+        "gst": "o-n-ch",
         "notes": ""
     },
     {
@@ -99366,7 +99366,7 @@
     },
     {
         "text": "once a month",
-        "gst": "w-u-n-s-a-m-u-n-th",
+        "gst": "u-n-s-mn-th",
         "notes": ""
     },
     {
@@ -99381,12 +99381,12 @@
     },
     {
         "text": "one of our",
-        "gst": "w-u-n-u-v-a-u-r",
+        "gst": "u-n-u-r",
         "notes": ""
     },
     {
         "text": "one of the most",
-        "gst": "w-u-n-u-v-th-m-o-s-t",
+        "gst": "u-mn-o-s-t",
         "notes": ""
     },
     {
@@ -99396,22 +99396,22 @@
     },
     {
         "text": "one of them",
-        "gst": "w-u-n-u-v-th-e-m",
+        "gst": "u-n-th-m",
         "notes": ""
     },
     {
         "text": "one of these",
-        "gst": "w-u-n-u-v-th-e-s",
+        "gst": "u-n-th-e-s",
         "notes": ""
     },
     {
         "text": "one or two",
-        "gst": "w-u-n-o-r-t-u",
+        "gst": "u-n-t-u",
         "notes": ""
     },
     {
         "text": "one ot the best",
-        "gst": "w-u-n-o-t-th-b-s-t",
+        "gst": "u-n-b-e-s-t",
         "notes": ""
     },
     {
@@ -99421,12 +99421,12 @@
     },
     {
         "text": "one time",
-        "gst": "w-u-n-tm",
+        "gst": "u-n-tm",
         "notes": ""
     },
     {
         "text": "one way",
-        "gst": "w-u-n-w-a",
+        "gst": "u-n-w-a",
         "notes": ""
     },
     {
@@ -99441,7 +99441,7 @@
     },
     {
         "text": "oneness",
-        "gst": "w-u-n-n-e-s",
+        "gst": "u-n-n-e-s",
         "notes": ""
     },
     {
@@ -99456,7 +99456,7 @@
     },
     {
         "text": "onetime",
-        "gst": "w-u-ntm",
+        "gst": "u-n-tm",
         "notes": ""
     },
     {
@@ -99476,12 +99476,12 @@
     },
     {
         "text": "only one of these",
-        "gst": "o-n-l-e-w-u-n-u-v-th-e-s",
+        "gst": "o-n-e-u-n-th-e-s",
         "notes": ""
     },
     {
         "text": "only one",
-        "gst": "o-n-l-e-w-u-n",
+        "gst": "o-n-e-u-n",
         "notes": ""
     },
     {
@@ -99996,7 +99996,7 @@
     },
     {
         "text": "oratory",
-        "gst": "o-r-t-o-r-e",
+        "gst": "o-r-t-r-e",
         "notes": ""
     },
     {
@@ -100076,22 +100076,22 @@
     },
     {
         "text": "order",
-        "gst": "o-rd-r",
+        "gst": "o-d",
         "notes": ""
     },
     {
         "text": "ordered",
-        "gst": "o-rd-rd",
+        "gst": "o-dd",
         "notes": ""
     },
     {
         "text": "orderliness",
-        "gst": "o-rd-r-l-e-n-e-s",
+        "gst": "o-d-e-n-e-s",
         "notes": ""
     },
     {
         "text": "orderly",
-        "gst": "o-rd-r-e",
+        "gst": "o-d-e",
         "notes": ""
     },
     {
@@ -100171,12 +100171,12 @@
     },
     {
         "text": "organize",
-        "gst": "o-r-g-n-i-s",
+        "gst": "o-g",
         "notes": ""
     },
     {
         "text": "organized",
-        "gst": "o-r-g-n-i-s-d",
+        "gst": "o-g-d",
         "notes": ""
     },
     {
@@ -100196,22 +100196,22 @@
     },
     {
         "text": "oriental",
-        "gst": "o-r-e-e-nt-l",
+        "gst": "o-r-e-nt-l",
         "notes": ""
     },
     {
         "text": "orientalism",
-        "gst": "o-r-e-e-nt-l-m-s-t",
+        "gst": "o-r-e-nt-l-m-s-t",
         "notes": ""
     },
     {
         "text": "orientalist",
-        "gst": "o-r-e-e-nt-t-l-s",
+        "gst": "o-r-e-nt-t-l-s",
         "notes": ""
     },
     {
         "text": "orientally",
-        "gst": "o-r-e-e-nt-e",
+        "gst": "o-r-e-nt-l-e",
         "notes": ""
     },
     {
@@ -100221,7 +100221,7 @@
     },
     {
         "text": "orientation",
-        "gst": "o-r-e-e-nt-sh",
+        "gst": "o-r-e-nt-sh",
         "notes": ""
     },
     {
@@ -100451,7 +100451,7 @@
     },
     {
         "text": "oscillatory",
-        "gst": "o-s-l-t-o-r-e",
+        "gst": "o-s-l-t-r-e",
         "notes": ""
     },
     {
@@ -100651,7 +100651,7 @@
     },
     {
         "text": "ought to be done",
-        "gst": "o-t-t-u-b-d-u-n",
+        "gst": "o-t-t-u-b-d-n",
         "notes": ""
     },
     {
@@ -101036,7 +101036,7 @@
     },
     {
         "text": "outwit",
-        "gst": "a-u-w-e-t",
+        "gst": "a-u-u-e-t",
         "notes": ""
     },
     {
@@ -101086,17 +101086,17 @@
     },
     {
         "text": "overalls",
-        "gst": "o/o-%-s2",
+        "gst": "o/o-l-s2",
         "notes": ""
     },
     {
         "text": "overawe",
-        "gst": "o/w-a",
+        "gst": "o/u",
         "notes": ""
     },
     {
         "text": "overawed",
-        "gst": "o/w-a-d",
+        "gst": "o/o-d",
         "notes": ""
     },
     {
@@ -101201,7 +101201,7 @@
     },
     {
         "text": "overdone",
-        "gst": "o/d-u-n",
+        "gst": "o/d-n",
         "notes": ""
     },
     {
@@ -101381,7 +101381,7 @@
     },
     {
         "text": "overpoweringly",
-        "gst": "o/p-o-r-f-e-e",
+        "gst": "o/p-a-u-r/e",
         "notes": ""
     },
     {
@@ -101586,7 +101586,7 @@
     },
     {
         "text": "overvalue",
-        "gst": "o/v-a-l-e-u",
+        "gst": "o/v-l",
         "notes": ""
     },
     {
@@ -101596,7 +101596,7 @@
     },
     {
         "text": "overweight",
-        "gst": "o/w-a-t",
+        "gst": "o/u-a-t",
         "notes": ""
     },
     {
@@ -101616,7 +101616,7 @@
     },
     {
         "text": "overwind",
-        "gst": "o/w-e-nt",
+        "gst": "o/u-i-nt",
         "notes": ""
     },
     {
@@ -101846,7 +101846,7 @@
     },
     {
         "text": "pacificatory",
-        "gst": "p-s-e-f-e-k-t-o-r-e",
+        "gst": "p-s-e-f-e-k-t-r-e",
         "notes": ""
     },
     {
@@ -102381,7 +102381,7 @@
     },
     {
         "text": "palpitant",
-        "gst": "p-a-l-p-e-tn-t",
+        "gst": "p-a-l-p-tn-t",
         "notes": ""
     },
     {
@@ -103196,7 +103196,7 @@
     },
     {
         "text": "parkway",
-        "gst": "p-a-r-k-w-a",
+        "gst": "p-a-r-k-u-a",
         "notes": ""
     },
     {
@@ -103451,7 +103451,7 @@
     },
     {
         "text": "partially",
-        "gst": "p-a-r-sh-ye",
+        "gst": "p-a-r-sh-e",
         "notes": ""
     },
     {
@@ -103476,12 +103476,12 @@
     },
     {
         "text": "participator",
-        "gst": "p-a-r-t-e-s-t-a-p",
+        "gst": "p-t-e-s-p-a-t-r",
         "notes": ""
     },
     {
         "text": "participial",
-        "gst": "p-a-r-t-e-s-p-l",
+        "gst": "p-t-s-e-p-l",
         "notes": ""
     },
     {
@@ -103611,7 +103611,7 @@
     },
     {
         "text": "passageway",
-        "gst": "p-a-s-j-w-a",
+        "gst": "p-a-s-j-u-a",
         "notes": ""
     },
     {
@@ -104446,7 +104446,7 @@
     },
     {
         "text": "pebbleware",
-        "gst": "p-e-b-l-w-e-r",
+        "gst": "p-e-b-u-a-r",
         "notes": ""
     },
     {
@@ -104506,7 +104506,7 @@
     },
     {
         "text": "peculated",
-        "gst": "p-e-k/ud",
+        "gst": "p-e-k/u-d",
         "notes": ""
     },
     {
@@ -105061,7 +105061,7 @@
     },
     {
         "text": "pennyweight",
-        "gst": "p-e-n-e-w-e-t",
+        "gst": "p-e-n-e-w-a-t",
         "notes": ""
     },
     {
@@ -105446,7 +105446,7 @@
     },
     {
         "text": "perennially",
-        "gst": "p-r-e-n-e-e",
+        "gst": "p-r-e-n-l-e",
         "notes": ""
     },
     {
@@ -105951,22 +105951,22 @@
     },
     {
         "text": "perpetuate",
-        "gst": "p-r-p-e-ch-w-a-t",
+        "gst": "p-r-p-t-e-u-t",
         "notes": ""
     },
     {
         "text": "perpetuated",
-        "gst": "p-r-p-e-ch-w-a-td",
+        "gst": "p-r-p-t-e-u-td",
         "notes": ""
     },
     {
         "text": "perpetuation",
-        "gst": "p-r-p-e-ch-w-a-sh",
+        "gst": "p-r-p-t-e-u-sh",
         "notes": ""
     },
     {
         "text": "perpetuator",
-        "gst": "p-r-p-e-ch-w-a-t-r",
+        "gst": "p-r-p-t-e-u-t-r",
         "notes": ""
     },
     {
@@ -106031,12 +106031,12 @@
     },
     {
         "text": "perseverance",
-        "gst": "p-r-s-v-e-r-n-s",
+        "gst": "p-r-s-e-v-e-r-a-n-s",
         "notes": ""
     },
     {
         "text": "perseveration",
-        "gst": "p-r-s-v-e-r-a-sh",
+        "gst": "p-r-s-e-v-e-r-a-sh",
         "notes": ""
     },
     {
@@ -106046,7 +106046,7 @@
     },
     {
         "text": "persevered",
-        "gst": "p-r-s-v-e-rd",
+        "gst": "p-r-s-e-v-e-rd",
         "notes": ""
     },
     {
@@ -106171,7 +106171,7 @@
     },
     {
         "text": "perspiratory",
-        "gst": "p-r-s-p-r-t-o-r-e",
+        "gst": "p-r-s-p-r-t-r-e",
         "notes": ""
     },
     {
@@ -107106,7 +107106,7 @@
     },
     {
         "text": "phthisis",
-        "gst": "f-th-i-s-s",
+        "gst": "th-i-s-s",
         "notes": ""
     },
     {
@@ -107841,7 +107841,7 @@
     },
     {
         "text": "pipit",
-        "gst": "p-e-p-e-t",
+        "gst": "p-e-p-t",
         "notes": ""
     },
     {
@@ -108011,32 +108011,32 @@
     },
     {
         "text": "pitiable",
-        "gst": "p-e-t-e-b",
+        "gst": "p-t-e-b",
         "notes": ""
     },
     {
         "text": "pitiful",
-        "gst": "p-e-t-f",
+        "gst": "p-t-f",
         "notes": ""
     },
     {
         "text": "pitiless",
-        "gst": "p-e-t-e-l-e-s",
+        "gst": "p-t-e-l-e-s",
         "notes": ""
     },
     {
         "text": "pitilessly",
-        "gst": "p-e-t-l-e-s-e",
+        "gst": "p-t-l-e-s-e",
         "notes": ""
     },
     {
         "text": "pitilessness",
-        "gst": "p-e-t-l-e-s-n-e-s",
+        "gst": "p-t-l-e-s-n-e-s",
         "notes": ""
     },
     {
         "text": "pittance",
-        "gst": "p-e-t-n-e-s",
+        "gst": "p-t-n-e-s",
         "notes": ""
     },
     {
@@ -108066,7 +108066,7 @@
     },
     {
         "text": "pityingly",
-        "gst": "p-e-t-e/e",
+        "gst": "p-t-e/e",
         "notes": ""
     },
     {
@@ -108121,7 +108121,7 @@
     },
     {
         "text": "placatory",
-        "gst": "p-l-a-k-t-o-r-e",
+        "gst": "p-l-a-k-t-r-e",
         "notes": ""
     },
     {
@@ -109811,7 +109811,7 @@
     },
     {
         "text": "pomposity",
-        "gst": "p-a-m-p-a-s-e-t-e",
+        "gst": "p-a-m-p-a-s-t-e",
         "notes": ""
     },
     {
@@ -110056,7 +110056,7 @@
     },
     {
         "text": "populated",
-        "gst": "p-a-p/ud",
+        "gst": "p-a-p/u-d",
         "notes": ""
     },
     {
@@ -110891,7 +110891,7 @@
     },
     {
         "text": "powwow",
-        "gst": "p-a-u-w-a-u",
+        "gst": "p-a-u-u-a-u",
         "notes": ""
     },
     {
@@ -111076,12 +111076,12 @@
     },
     {
         "text": "prayerfully",
-        "gst": "p-r-a-r-f-e-e",
+        "gst": "p-r-a-r-f-e",
         "notes": ""
     },
     {
         "text": "pre-eminence",
-        "gst": "p-r-e-m-i-n-n-s",
+        "gst": "p-r-e-m-n-e-n-s",
         "notes": ""
     },
     {
@@ -111091,22 +111091,22 @@
     },
     {
         "text": "pre-empt",
-        "gst": "p-r-e-m-p-t",
+        "gst": "p-r-e-mt",
         "notes": ""
     },
     {
         "text": "pre-empted",
-        "gst": "p-r-e-m-t-p-d",
+        "gst": "p-r-e-mt-p-d",
         "notes": ""
     },
     {
         "text": "pre-emption",
-        "gst": "p-r-e-e-m-p-sh",
+        "gst": "p-r-e-m-sh",
         "notes": ""
     },
     {
         "text": "pre-estimate",
-        "gst": "p-r-e-s-tm-a-t",
+        "gst": "p-r-e-s-s-tm-a-t",
         "notes": ""
     },
     {
@@ -111256,37 +111256,37 @@
     },
     {
         "text": "precipitancy",
-        "gst": "p-r-e-s-e-p-e-tn-s-e",
+        "gst": "p-r-e-s-e-p-tn-s-e",
         "notes": ""
     },
     {
         "text": "precipitant",
-        "gst": "p-r-e-s-e-p-e-tn-t",
+        "gst": "p-r-e-s-e-p-tn-t",
         "notes": ""
     },
     {
         "text": "precipitate",
-        "gst": "p-r-e-s-e-p-e-t-a-t",
+        "gst": "p-r-e-s-e-p-t-a-t",
         "notes": ""
     },
     {
         "text": "precipitated",
-        "gst": "p-r-e-s-e-p-e-t-a-td",
+        "gst": "p-r-e-s-e-p-t-a-td",
         "notes": ""
     },
     {
         "text": "precipitately",
-        "gst": "p-r-e-s-e-p-e-t-t-e",
+        "gst": "p-r-e-s-e-p-t-a-t-e",
         "notes": ""
     },
     {
         "text": "precipitation",
-        "gst": "p-r-e-s-e-p-e-t-sh",
+        "gst": "p-r-e-s-e-p-t-sh",
         "notes": ""
     },
     {
         "text": "precipitous",
-        "gst": "p-r-e-s-e-p-e-t-u-s",
+        "gst": "p-r-e-s-e-p-t-u-s",
         "notes": ""
     },
     {
@@ -111681,7 +111681,7 @@
     },
     {
         "text": "prefatory",
-        "gst": "p-r-e-f-t-o-r-e",
+        "gst": "p-r-e-f-t-r-e",
         "notes": ""
     },
     {
@@ -111801,7 +111801,7 @@
     },
     {
         "text": "prehistoric",
-        "gst": "p-r-e-h-e-s-t-o-r-e-k",
+        "gst": "p-r-h-e-s-t-r-k",
         "notes": ""
     },
     {
@@ -111996,7 +111996,7 @@
     },
     {
         "text": "preparatory",
-        "gst": "p-r-e-p-a-r-t-o-r-e",
+        "gst": "p-r-e-p-a-r-t-r-e",
         "notes": ""
     },
     {
@@ -113486,7 +113486,7 @@
     },
     {
         "text": "prohibitory",
-        "gst": "p-r-o-h-e-b-t-o-r-e",
+        "gst": "p-r-o-h-e-b-t-r-e",
         "notes": ""
     },
     {
@@ -113841,7 +113841,7 @@
     },
     {
         "text": "propensity",
-        "gst": "p-r-o-p-e-n-s-e-t-e",
+        "gst": "p-r-o-p-e-n-s-t-e",
         "notes": ""
     },
     {
@@ -114016,7 +114016,7 @@
     },
     {
         "text": "proprietorially",
-        "gst": "p-r-o-p-r-e-t-o-r-e-e",
+        "gst": "p-r-o-p-r-e-t-o-r-l-e",
         "notes": ""
     },
     {
@@ -114026,7 +114026,7 @@
     },
     {
         "text": "proprietory",
-        "gst": "p-r-o-p-r-i-t-o-r-e",
+        "gst": "p-r-o-p-r-i-t-r-e",
         "notes": ""
     },
     {
@@ -114366,7 +114366,7 @@
     },
     {
         "text": "prothonotary",
-        "gst": "p-r-o-th-nt-a-w-e-t-r-e",
+        "gst": "p-r-o-th-o-n-o-t-r-e",
         "notes": ""
     },
     {
@@ -115046,7 +115046,7 @@
     },
     {
         "text": "Puerto Rico",
-        "gst": "p-w-e-r-t-o-r-e-k-o",
+        "gst": "p-/-r",
         "notes": ""
     },
     {
@@ -115101,7 +115101,7 @@
     },
     {
         "text": "puissance",
-        "gst": "p-w-i-s-n-s",
+        "gst": "p-e-u-s-n-s",
         "notes": ""
     },
     {
@@ -115226,7 +115226,7 @@
     },
     {
         "text": "pulsatory",
-        "gst": "p-l-s-t-o-r-e",
+        "gst": "p-l-s-t-r-e",
         "notes": ""
     },
     {
@@ -115506,7 +115506,7 @@
     },
     {
         "text": "purgatory",
-        "gst": "p-r-g-t-o-r-e",
+        "gst": "p-r-g-t-r-e",
         "notes": ""
     },
     {
@@ -116181,12 +116181,12 @@
     },
     {
         "text": "qualifier",
-        "gst": "k-w-a-l-f-i-r",
+        "gst": "k-w-o-l-f-ie-r",
         "notes": ""
     },
     {
         "text": "qualitative",
-        "gst": "k-w-a-l-t-a-t-v",
+        "gst": "k-w-a-l-e-t-a-t-v",
         "notes": ""
     },
     {
@@ -116196,7 +116196,7 @@
     },
     {
         "text": "quality",
-        "gst": "k-w/l",
+        "gst": "k/l",
         "notes": ""
     },
     {
@@ -116356,7 +116356,7 @@
     },
     {
         "text": "quatrefoil",
-        "gst": "k-w-o-t-r-f-o-e-l",
+        "gst": "k-a-t-r-f-o-e-l",
         "notes": ""
     },
     {
@@ -116381,7 +116381,7 @@
     },
     {
         "text": "quayage",
-        "gst": "k-w-a-j-e",
+        "gst": "k-e-j",
         "notes": ""
     },
     {
@@ -116486,7 +116486,7 @@
     },
     {
         "text": "questioner",
-        "gst": "k-w-e-s-ch-n-r",
+        "gst": "k-sh-e-r",
         "notes": ""
     },
     {
@@ -116496,7 +116496,7 @@
     },
     {
         "text": "questionnaire",
-        "gst": "k-w-e-s-ch-n-e-r",
+        "gst": "k-sh-a-r",
         "notes": ""
     },
     {
@@ -116681,7 +116681,7 @@
     },
     {
         "text": "quipu",
-        "gst": "k-w-e-p-u",
+        "gst": "k-e-p-u",
         "notes": ""
     },
     {
@@ -116766,7 +116766,7 @@
     },
     {
         "text": "quoin",
-        "gst": "k-w-o-n",
+        "gst": "k-o-e-n",
         "notes": ""
     },
     {
@@ -116966,7 +116966,7 @@
     },
     {
         "text": "radially",
-        "gst": "r-a-d-e-e",
+        "gst": "r-a-d-l-e",
         "notes": ""
     },
     {
@@ -118116,12 +118116,12 @@
     },
     {
         "text": "re-echoed",
-        "gst": "r-e-ch-d",
+        "gst": "r-e-k-o-d",
         "notes": ""
     },
     {
         "text": "re-edit",
-        "gst": "r-e-d-e-t",
+        "gst": "r-e-td",
         "notes": ""
     },
     {
@@ -118731,12 +118731,12 @@
     },
     {
         "text": "recapitalize",
-        "gst": "r-e-k-a-p-e-t-l-i-s",
+        "gst": "r-e-k-a-p-t-l-i-s",
         "notes": ""
     },
     {
         "text": "recapitulate",
-        "gst": "r-e-k-p-e-t/u",
+        "gst": "r-e-k-p-t/u",
         "notes": ""
     },
     {
@@ -118746,7 +118746,7 @@
     },
     {
         "text": "recapitulation",
-        "gst": "r-e-k--p-e-t/u-sh",
+        "gst": "r-e-k-p-t/u-sh",
         "notes": ""
     },
     {
@@ -119786,7 +119786,7 @@
     },
     {
         "text": "Redwood City",
-        "gst": "r-e-d-w-u-d-s-e-t-e",
+        "gst": "r-e-d-u-u-d-s-e-t-e",
         "notes": ""
     },
     {
@@ -120016,7 +120016,7 @@
     },
     {
         "text": "reformatory",
-        "gst": "r-f-m-t-o-r-e",
+        "gst": "r-f-m-t-r-e",
         "notes": ""
     },
     {
@@ -120236,12 +120236,12 @@
     },
     {
         "text": "regard",
-        "gst": "r-g-a-rd",
+        "gst": "r-e-g-a-rd",
         "notes": ""
     },
     {
         "text": "regarded",
-        "gst": "r-g-a-rd-d",
+        "gst": "r-e-g-a-rd-d",
         "notes": ""
     },
     {
@@ -120251,7 +120251,7 @@
     },
     {
         "text": "regardless",
-        "gst": "r-g-a-rd-l-e-s",
+        "gst": "r-e-g-a-rd-l-e-s",
         "notes": ""
     },
     {
@@ -120481,7 +120481,7 @@
     },
     {
         "text": "regulated",
-        "gst": "r-e-g/ud",
+        "gst": "r-e-g/u-d",
         "notes": ""
     },
     {
@@ -120576,12 +120576,12 @@
     },
     {
         "text": "reimport",
-        "gst": "r-i-m-p-o-t",
+        "gst": "r-e-m-p-o-t",
         "notes": ""
     },
     {
         "text": "reimportation",
-        "gst": "r-e-e-m-o-t-r-sh",
+        "gst": "r-e-m-o-p-o-t-sh",
         "notes": ""
     },
     {
@@ -121011,12 +121011,12 @@
     },
     {
         "text": "relinquishment",
-        "gst": "r-e-l-e-nk-w-e-n-sh-m",
+        "gst": "r-e-l-e-nk-sh-m",
         "notes": ""
     },
     {
         "text": "reliquary",
-        "gst": "r-e-l-e-k-w-a-r-e",
+        "gst": "r-e-l-e-k-r-e",
         "notes": ""
     },
     {
@@ -121576,7 +121576,7 @@
     },
     {
         "text": "reorder",
-        "gst": "r-e-o-rd-r",
+        "gst": "r-e-o-d",
         "notes": ""
     },
     {
@@ -121586,12 +121586,12 @@
     },
     {
         "text": "reorganize",
-        "gst": "r-e-o-r-g-n-i-s",
+        "gst": "r-e-o-g",
         "notes": ""
     },
     {
         "text": "reorient",
-        "gst": "r-e-o-r-e-e-nt",
+        "gst": "r-e-o-r-e-nt",
         "notes": ""
     },
     {
@@ -121751,7 +121751,7 @@
     },
     {
         "text": "repertory",
-        "gst": "r-p-r-t-o-r-e",
+        "gst": "r-p-r-t-r-e",
         "notes": ""
     },
     {
@@ -121891,7 +121891,7 @@
     },
     {
         "text": "repository",
-        "gst": "r-p-a-s-t-o-r-e",
+        "gst": "r-p-a-s-t-r-e",
         "notes": ""
     },
     {
@@ -122166,12 +122166,12 @@
     },
     {
         "text": "reputable",
-        "gst": "r-p-u-t-b",
+        "gst": "r-p-e-u-t-b",
         "notes": ""
     },
     {
         "text": "reputation",
-        "gst": "r-p-u-t-sh",
+        "gst": "r-p-e-u-t-sh",
         "notes": ""
     },
     {
@@ -122706,7 +122706,7 @@
     },
     {
         "text": "respite",
-        "gst": "r-s-p-e-t",
+        "gst": "r-s-p-t",
         "notes": ""
     },
     {
@@ -123061,7 +123061,7 @@
     },
     {
         "text": "retaliatory",
-        "gst": "r-e-t-a-l-ea-t-o-r-e",
+        "gst": "r-e-t-a-l-ea-t-r-e",
         "notes": ""
     },
     {
@@ -123156,7 +123156,7 @@
     },
     {
         "text": "reticulated",
-        "gst": "r-e-t-e-k/ud",
+        "gst": "r-e-t-e-k/u-d",
         "notes": ""
     },
     {
@@ -123481,7 +123481,7 @@
     },
     {
         "text": "revalue",
-        "gst": "r-v-a-l-e-u",
+        "gst": "r-v-l",
         "notes": ""
     },
     {
@@ -123526,7 +123526,7 @@
     },
     {
         "text": "revelatory",
-        "gst": "r-v-e-l-t-o-r-e",
+        "gst": "r-v-e-l-t-r-e",
         "notes": ""
     },
     {
@@ -123566,17 +123566,17 @@
     },
     {
         "text": "reverberant",
-        "gst": "r-v-r-b-ra-nt",
+        "gst": "r-v-e-r-b-r-a-nt",
         "notes": ""
     },
     {
         "text": "reverberate",
-        "gst": "r-v-r-b-r-t",
+        "gst": "r-v-e-r-b-r-a-t",
         "notes": ""
     },
     {
         "text": "reverberated",
-        "gst": "r-v-r-b-r-a-td",
+        "gst": "r-v-e-r-b-r-a-td",
         "notes": ""
     },
     {
@@ -123586,17 +123586,17 @@
     },
     {
         "text": "reverberative",
-        "gst": "r-v-r-t-r-b-e-t",
+        "gst": "r-v-e-r-b-e-t-v",
         "notes": ""
     },
     {
         "text": "reverberator",
-        "gst": "r-v-r-t-r-b-r",
+        "gst": "r-v-e-r-b-r-a-t-r",
         "notes": ""
     },
     {
         "text": "reverberatory",
-        "gst": "r-v-r-b-r-a-t-r",
+        "gst": "r-v-e-r-b-r-a-t-r-e",
         "notes": ""
     },
     {
@@ -123611,17 +123611,17 @@
     },
     {
         "text": "reverence",
-        "gst": "r-v-r-n-s",
+        "gst": "r-v-r-e-n-s",
         "notes": ""
     },
     {
         "text": "reverend",
-        "gst": "r-v-r-nt",
+        "gst": "r-v-e-r-e-nt",
         "notes": ""
     },
     {
         "text": "reverent",
-        "gst": "r-v-r-nt",
+        "gst": "r-v-e-r-e-nt",
         "notes": ""
     },
     {
@@ -123631,32 +123631,32 @@
     },
     {
         "text": "reverie",
-        "gst": "r-v-r-e",
+        "gst": "r-v-e-r-e",
         "notes": ""
     },
     {
         "text": "reversal",
-        "gst": "r-v-r-s-l",
+        "gst": "r-v-e-r-s-a-l",
         "notes": ""
     },
     {
         "text": "reverse",
-        "gst": "r-v-r-s",
+        "gst": "r-v-e-r-s",
         "notes": ""
     },
     {
         "text": "reversed",
-        "gst": "r-v-r-s-t",
+        "gst": "r-v-e-r-s-t",
         "notes": ""
     },
     {
         "text": "reversibility",
-        "gst": "r-v-r-s-b/l",
+        "gst": "r-v-e-r-s-b/l",
         "notes": ""
     },
     {
         "text": "reversible",
-        "gst": "r-v-r-s-b",
+        "gst": "r-v-e-r-s-b",
         "notes": ""
     },
     {
@@ -123666,7 +123666,7 @@
     },
     {
         "text": "reversionary",
-        "gst": "r-v-r-s-e-v-r-n-e",
+        "gst": "r-v-e-r-s-e-v-r-n-e",
         "notes": ""
     },
     {
@@ -123676,12 +123676,12 @@
     },
     {
         "text": "reverted",
-        "gst": "r-v-r-td",
+        "gst": "r-v-e-r-td",
         "notes": ""
     },
     {
         "text": "revertible",
-        "gst": "r-v-r-t-b",
+        "gst": "r-v-e-r-t-b",
         "notes": ""
     },
     {
@@ -123906,27 +123906,27 @@
     },
     {
         "text": "reward",
-        "gst": "r-e-w-o-rd",
+        "gst": "r-e/d",
         "notes": ""
     },
     {
         "text": "rewarded",
-        "gst": "r-e-w-o-rd-d",
+        "gst": "r-e/td",
         "notes": ""
     },
     {
         "text": "rewardingly",
-        "gst": "r-e-w-o-rd/e",
+        "gst": "r-e/d/e",
         "notes": ""
     },
     {
         "text": "rewind",
-        "gst": "r-e-w-i-nt",
+        "gst": "r-e/u-i-nt",
         "notes": ""
     },
     {
         "text": "rewire",
-        "gst": "r-e-w-i-r",
+        "gst": "r-e/u-i-r",
         "notes": ""
     },
     {
@@ -124216,7 +124216,7 @@
     },
     {
         "text": "richweed",
-        "gst": "r-e-ch-w-e-d",
+        "gst": "r-e-ch-u-e-d",
         "notes": ""
     },
     {
@@ -124276,7 +124276,7 @@
     },
     {
         "text": "Ridgeway",
-        "gst": "r-e-j-w-a",
+        "gst": "r-e-j-u-a",
         "notes": ""
     },
     {
@@ -124586,7 +124586,7 @@
     },
     {
         "text": "riotously",
-        "gst": "r-i-s-t-e-e",
+        "gst": "r-ie-t-u-s-e",
         "notes": ""
     },
     {
@@ -124741,7 +124741,7 @@
     },
     {
         "text": "ritually",
-        "gst": "r-e-ch-w-e",
+        "gst": "r-e-t-l-e",
         "notes": ""
     },
     {
@@ -125011,7 +125011,7 @@
     },
     {
         "text": "Rockford",
-        "gst": "r-o-k-f-rd",
+        "gst": "r-o-k-f-d",
         "notes": ""
     },
     {
@@ -125026,7 +125026,7 @@
     },
     {
         "text": "rockweed",
-        "gst": "r-o-k-w-e-d",
+        "gst": "r-o-k-u-e-d",
         "notes": ""
     },
     {
@@ -125101,7 +125101,7 @@
     },
     {
         "text": "roguishly",
-        "gst": "r-a-g-sh-w-e-e",
+        "gst": "r-o-g-sh-e",
         "notes": ""
     },
     {
@@ -125471,7 +125471,7 @@
     },
     {
         "text": "rotatory",
-        "gst": "r-o-t-t-o-r-e",
+        "gst": "r-o-t-t-r-e",
         "notes": ""
     },
     {
@@ -125596,7 +125596,7 @@
     },
     {
         "text": "roughish",
-        "gst": "r-o-g-sh",
+        "gst": "r-o-t-r-ea-n",
         "notes": ""
     },
     {
@@ -125836,7 +125836,7 @@
     },
     {
         "text": "royally",
-        "gst": "r-o-e-e",
+        "gst": "r-o-l-e",
         "notes": ""
     },
     {
@@ -126096,7 +126096,7 @@
     },
     {
         "text": "rugosity",
-        "gst": "r-u-g-s-e-t-e",
+        "gst": "r-u-g-s-t-e",
         "notes": ""
     },
     {
@@ -126481,7 +126481,7 @@
     },
     {
         "text": "Rutherford",
-        "gst": "r-u-th-r-f-rd",
+        "gst": "r-u-th-r-f-d",
         "notes": ""
     },
     {
@@ -126736,7 +126736,7 @@
     },
     {
         "text": "safe deposit",
-        "gst": "s-a-f-d-p-a-s-e-t",
+        "gst": "s-a-f-d-p-a-s-t",
         "notes": ""
     },
     {
@@ -127086,7 +127086,7 @@
     },
     {
         "text": "saltatory",
-        "gst": "s-a-l-t-t-o-r-e",
+        "gst": "s-a-l-t-t-r-e",
         "notes": ""
     },
     {
@@ -127146,7 +127146,7 @@
     },
     {
         "text": "salutatory",
-        "gst": "s-a-l-t-t-o-r-e",
+        "gst": "s-a-l-t-t-r-e",
         "notes": ""
     },
     {
@@ -127316,7 +127316,7 @@
     },
     {
         "text": "sanatory",
-        "gst": "s-a-nt-o-r-e",
+        "gst": "s-a-nt-r-e",
         "notes": ""
     },
     {
@@ -127516,7 +127516,7 @@
     },
     {
         "text": "Sanford",
-        "gst": "s-a-n-f-rd",
+        "gst": "s-a-n-f-d",
         "notes": ""
     },
     {
@@ -127555,8 +127555,8 @@
         "notes": ""
     },
     {
-        "text": "sanrty",
-        "gst": "s-a-nt-r-e",
+        "text": "sanity",
+        "gst": "s-a-n-e-t-e",
         "notes": ""
     },
     {
@@ -128636,12 +128636,12 @@
     },
     {
         "text": "schismatic",
-        "gst": "s-k-e-s-m-a-t-e-k",
+        "gst": "s-s-m-a-t-e-k",
         "notes": ""
     },
     {
         "text": "schismatical",
-        "gst": "s-k-e-s-m-a-t/k",
+        "gst": "s-s-m-a-t/k",
         "notes": ""
     },
     {
@@ -129511,7 +129511,7 @@
     },
     {
         "text": "scrofulous",
-        "gst": "s-k-r-a-f-l-w-u-s",
+        "gst": "s-k-r-o-f-l-u-s",
         "notes": ""
     },
     {
@@ -130181,7 +130181,7 @@
     },
     {
         "text": "secretory",
-        "gst": "s-e-k-r-t-o-r-e",
+        "gst": "s-e-k-r-t-r-e",
         "notes": ""
     },
     {
@@ -130556,7 +130556,7 @@
     },
     {
         "text": "seepweed",
-        "gst": "s-e-p-w-a-d",
+        "gst": "s-e-p-u-a-d",
         "notes": ""
     },
     {
@@ -130871,12 +130871,12 @@
     },
     {
         "text": "self-governed",
-        "gst": "s2/g-u-v-r-nt",
+        "gst": "s2/g-v-d",
         "notes": ""
     },
     {
         "text": "self-government",
-        "gst": "s2/g-u-v-r-n-m",
+        "gst": "s2/g-v-m",
         "notes": ""
     },
     {
@@ -130886,7 +130886,7 @@
     },
     {
         "text": "self-importance",
-        "gst": "s2/m-p-o-t-n-e-s",
+        "gst": "s2/m-p",
         "notes": ""
     },
     {
@@ -130916,7 +130916,7 @@
     },
     {
         "text": "self-knowledge",
-        "gst": "s-e-f-l-n-k-w-a-d",
+        "gst": "s/n-o-l-e-j",
         "notes": ""
     },
     {
@@ -131191,7 +131191,7 @@
     },
     {
         "text": "selfwinding",
-        "gst": "s2/w-e-nt-h",
+        "gst": "s2/u-i-nt-h",
         "notes": ""
     },
     {
@@ -131371,7 +131371,7 @@
     },
     {
         "text": "semiweekly",
-        "gst": "s-e-m-u-w-e-k",
+        "gst": "s-e-m-e-u-e-k-e",
         "notes": ""
     },
     {
@@ -131401,7 +131401,7 @@
     },
     {
         "text": "senatorially",
-        "gst": "s-e-nt-o-r-e-e",
+        "gst": "s-e-nt-o-r-l-e",
         "notes": ""
     },
     {
@@ -131421,7 +131421,7 @@
     },
     {
         "text": "send this",
-        "gst": "s-e-nt-th-s",
+        "gst": "s-e-n-th-s",
         "notes": ""
     },
     {
@@ -131556,7 +131556,7 @@
     },
     {
         "text": "sensitively",
-        "gst": "s-e-n-s-e-t-v-e",
+        "gst": "s-e-n-s-t-v-e",
         "notes": ""
     },
     {
@@ -131566,7 +131566,7 @@
     },
     {
         "text": "sensitivlty",
-        "gst": "s-e-n-s-e-t-v-e",
+        "gst": "s-e-n-s-t-v-e",
         "notes": ""
     },
     {
@@ -131626,7 +131626,7 @@
     },
     {
         "text": "sensuality",
-        "gst": "s-e-n-ch-w/l",
+        "gst": "s-e-n-sh/l",
         "notes": ""
     },
     {
@@ -131801,7 +131801,7 @@
     },
     {
         "text": "separatory",
-        "gst": "s-e-p-r-t-o-r-e",
+        "gst": "s-e-p-r-t-r-e",
         "notes": ""
     },
     {
@@ -131846,7 +131846,7 @@
     },
     {
         "text": "Septuagint",
-        "gst": "s-e-p-t-w-a-j-nt",
+        "gst": "s-e-p-t-j-nt",
         "notes": ""
     },
     {
@@ -132006,7 +132006,7 @@
     },
     {
         "text": "serendipity",
-        "gst": "s-e-r-nt-e-p-e-t-e",
+        "gst": "s-e-r-nt-e-p-t-e",
         "notes": ""
     },
     {
@@ -132066,7 +132066,7 @@
     },
     {
         "text": "serially",
-        "gst": "s-e-r-e-e",
+        "gst": "s-e-r-l-e",
         "notes": ""
     },
     {
@@ -132351,7 +132351,7 @@
     },
     {
         "text": "several days ago",
-        "gst": "s-e-v-r-ld-a-s-a-g-o",
+        "gst": "s-e-v-d-a-s-g",
         "notes": ""
     },
     {
@@ -132361,37 +132361,37 @@
     },
     {
         "text": "several months ago",
-        "gst": "s-e-v-r-l-m-u-n-th-s-a-g-o",
+        "gst": "s-e-v-mn-th-s-g",
         "notes": ""
     },
     {
         "text": "several months",
-        "gst": "s-e-v-r-l-m-u-n-th-s",
+        "gst": "s-e-v-mn-th",
         "notes": ""
     },
     {
         "text": "several other",
-        "gst": "s-e-v-r-l-u-th",
+        "gst": "s-e-v-u-th",
         "notes": ""
     },
     {
         "text": "several times",
-        "gst": "s-e-v-r-l-tm-s",
+        "gst": "s-e-v-tm-s",
         "notes": ""
     },
     {
         "text": "several",
-        "gst": "s-e-v-r-l",
+        "gst": "s-e-v",
         "notes": ""
     },
     {
         "text": "severally",
-        "gst": "s-e-v-r-e",
+        "gst": "s-e-v-e",
         "notes": ""
     },
     {
         "text": "severalty",
-        "gst": "s-e-v-r-l-t-e",
+        "gst": "s-e-v-t-e",
         "notes": ""
     },
     {
@@ -132676,7 +132676,7 @@
     },
     {
         "text": "shakiest",
-        "gst": "sh-a-k-e-e-s-t",
+        "gst": "sh-a-k-e-s-t",
         "notes": ""
     },
     {
@@ -132711,22 +132711,22 @@
     },
     {
         "text": "shall be glad",
-        "gst": "sh-a-l-b-g-l-a-d",
+        "gst": "sh-b-g-l",
         "notes": ""
     },
     {
         "text": "shall have",
-        "gst": "sh-a-l-v",
+        "gst": "sh-v",
         "notes": ""
     },
     {
         "text": "shall not be",
-        "gst": "sh-a-l-n-b",
+        "gst": "sh-n-b",
         "notes": ""
     },
     {
         "text": "shall not have",
-        "gst": "sh-a-l-n-v",
+        "gst": "sh-n-v",
         "notes": ""
     },
     {
@@ -132736,7 +132736,7 @@
     },
     {
         "text": "shall",
-        "gst": "sh-a-l",
+        "gst": "sh",
         "notes": ""
     },
     {
@@ -132971,7 +132971,7 @@
     },
     {
         "text": "sharp-witted",
-        "gst": "sh-a-r-p-w-e-td",
+        "gst": "sh-a-r-p-u-e-td",
         "notes": ""
     },
     {
@@ -133096,17 +133096,17 @@
     },
     {
         "text": "she could not be",
-        "gst": "sh-e-k-u-d-n-b",
+        "gst": "sh-e-k-d-n-b",
         "notes": ""
     },
     {
         "text": "she could not",
-        "gst": "sh-e-k-u-d-n",
+        "gst": "sh-e-k-d-n",
         "notes": ""
     },
     {
         "text": "she could",
-        "gst": "sh-e-k-u-d",
+        "gst": "sh-e-k-d",
         "notes": ""
     },
     {
@@ -133916,7 +133916,7 @@
     },
     {
         "text": "shopworn",
-        "gst": "sh-a-p-w-o-r-n",
+        "gst": "sh-a-p-u-o-r-n",
         "notes": ""
     },
     {
@@ -133976,7 +133976,7 @@
     },
     {
         "text": "shorten",
-        "gst": "sh/n",
+        "gst": "sh-tn",
         "notes": ""
     },
     {
@@ -133986,7 +133986,7 @@
     },
     {
         "text": "shortening",
-        "gst": "shn-h",
+        "gst": "sh-tn-h",
         "notes": ""
     },
     {
@@ -134071,7 +134071,7 @@
     },
     {
         "text": "should be done",
-        "gst": "sh-d-b-d-u-n",
+        "gst": "sh-d-b-d-n",
         "notes": ""
     },
     {
@@ -134351,7 +134351,7 @@
     },
     {
         "text": "shrilly",
-        "gst": "sh-r-e-e",
+        "gst": "sh-r-l-e",
         "notes": ""
     },
     {
@@ -134896,7 +134896,7 @@
     },
     {
         "text": "signatory",
-        "gst": "s-e-g-nt-o-r-e",
+        "gst": "s-e-g-nt-r-e",
         "notes": ""
     },
     {
@@ -134936,7 +134936,7 @@
     },
     {
         "text": "significantly",
-        "gst": "s-e-g-n-e-e",
+        "gst": "s-e-g-n-e-f-e",
         "notes": ""
     },
     {
@@ -135061,7 +135061,7 @@
     },
     {
         "text": "silkweed",
-        "gst": "s-e-l-k-w-e-d",
+        "gst": "s-e-l-k-u-e-d",
         "notes": ""
     },
     {
@@ -136741,7 +136741,7 @@
     },
     {
         "text": "sliest",
-        "gst": "s-l-e-e-s-t",
+        "gst": "s-l-ie-s-t",
         "notes": ""
     },
     {
@@ -137166,7 +137166,7 @@
     },
     {
         "text": "sluggardly",
-        "gst": "s-l-u-g-rd-e-e",
+        "gst": "s-l-u-g-rd-e",
         "notes": ""
     },
     {
@@ -137206,7 +137206,7 @@
     },
     {
         "text": "sluiceway",
-        "gst": "s-l-u-s-e-w-a",
+        "gst": "s-l-u-s-u-a",
         "notes": ""
     },
     {
@@ -137856,7 +137856,7 @@
     },
     {
         "text": "snakeweed",
-        "gst": "s-n-a-k-w-e-d",
+        "gst": "s-n-a-k-u-e-d",
         "notes": ""
     },
     {
@@ -137936,7 +137936,7 @@
     },
     {
         "text": "snapweed",
-        "gst": "s-n-a-p-w-e-d",
+        "gst": "s-n-a-p-u-e-d",
         "notes": ""
     },
     {
@@ -139291,7 +139291,7 @@
     },
     {
         "text": "some ot this",
-        "gst": "s-u-m-o-t-th-s",
+        "gst": "s-m-th-s",
         "notes": ""
     },
     {
@@ -139331,12 +139331,12 @@
     },
     {
         "text": "somehow",
-        "gst": "s-u-m-h-a-u",
+        "gst": "s-u-m-a-u",
         "notes": ""
     },
     {
         "text": "someone",
-        "gst": "s-u-m-w-u-n",
+        "gst": "s-u-m-u-n",
         "notes": ""
     },
     {
@@ -139366,7 +139366,7 @@
     },
     {
         "text": "somewhat",
-        "gst": "s-u-m-w-u-t",
+        "gst": "s-u-m-u-t",
         "notes": ""
     },
     {
@@ -139391,7 +139391,7 @@
     },
     {
         "text": "son-in-law",
-        "gst": "s-u-n-e-n-w-o-l",
+        "gst": "s-u-l-o",
         "notes": ""
     },
     {
@@ -139551,27 +139551,27 @@
     },
     {
         "text": "sophistic",
-        "gst": "s-f-e-s-t-e-k",
+        "gst": "s-o-f-e-s-t-e-k",
         "notes": ""
     },
     {
         "text": "sophistical",
-        "gst": "s-f-e-s-t/k",
+        "gst": "s-o-f-e-s-t/k",
         "notes": ""
     },
     {
         "text": "sophisticate",
-        "gst": "s-f-e-s-t-k-a-t",
+        "gst": "s-o-f-e-s-t-e-k-a-t",
         "notes": ""
     },
     {
         "text": "sophisticated",
-        "gst": "s-f-e-s-t-k-a-td",
+        "gst": "s-o-f-e-s-t-k-a-td",
         "notes": ""
     },
     {
         "text": "sophistication",
-        "gst": "s-f-e-s-t-k-a-sh",
+        "gst": "s-o-f-e-s-t-k-a-sh",
         "notes": ""
     },
     {
@@ -139996,12 +139996,12 @@
     },
     {
         "text": "southwest",
-        "gst": "s-a-u-th-w-e-s-t",
+        "gst": "s-a-u-th/u-e-s-t",
         "notes": ""
     },
     {
         "text": "southwester",
-        "gst": "s-a-u-th-w-e-s-t-r",
+        "gst": "s-a-u-th/u-e-s-t-r",
         "notes": ""
     },
     {
@@ -140296,7 +140296,7 @@
     },
     {
         "text": "sparsity",
-        "gst": "s-p-a-r-s-e-t-e",
+        "gst": "s-p-a-r-s-t-e",
         "notes": ""
     },
     {
@@ -140611,7 +140611,7 @@
     },
     {
         "text": "speculated",
-        "gst": "s-p-e-k/ud",
+        "gst": "s-p-e-k/u-d",
         "notes": ""
     },
     {
@@ -141081,12 +141081,12 @@
     },
     {
         "text": "spirituality",
-        "gst": "s-p-e-r-e-ch-w/l",
+        "gst": "s-p-e-r-e-t/l",
         "notes": ""
     },
     {
         "text": "spiritualize",
-        "gst": "s-p-e-r-e-ch-w-a-l-s-e",
+        "gst": "s-p-e-r-e-t-l-i-s",
         "notes": ""
     },
     {
@@ -141096,7 +141096,7 @@
     },
     {
         "text": "spiritually",
-        "gst": "s-p-e-r-e-ch-w-e",
+        "gst": "s-p-e-r-e-t-l-e",
         "notes": ""
     },
     {
@@ -141126,7 +141126,7 @@
     },
     {
         "text": "spitefully",
-        "gst": "s-p-e-t-f-e-u-e",
+        "gst": "s-p-i-t-f-e-u-e",
         "notes": ""
     },
     {
@@ -141566,7 +141566,7 @@
     },
     {
         "text": "sportively",
-        "gst": "s-p-o-t-v-e-e",
+        "gst": "s-p-o-t-v-e",
         "notes": ""
     },
     {
@@ -141586,7 +141586,7 @@
     },
     {
         "text": "sportswear",
-        "gst": "s-p-o-t-s-w-e-r",
+        "gst": "s-p-o-t-s-u-a-r",
         "notes": ""
     },
     {
@@ -141991,7 +141991,7 @@
     },
     {
         "text": "sputnik",
-        "gst": "s-p-u-tn-e-k",
+        "gst": "s-p-u-t-n-e-k",
         "notes": ""
     },
     {
@@ -142016,7 +142016,7 @@
     },
     {
         "text": "sputum",
-        "gst": "s-p-u-tm",
+        "gst": "s-p-e-u-tm",
         "notes": ""
     },
     {
@@ -142096,7 +142096,7 @@
     },
     {
         "text": "squalidly",
-        "gst": "s-k-w-a-ld-e",
+        "gst": "s-k-w-o-ld-e",
         "notes": ""
     },
     {
@@ -142106,7 +142106,7 @@
     },
     {
         "text": "squalled",
-        "gst": "s-k-w-a-ld",
+        "gst": "s-k-w-o-ld",
         "notes": ""
     },
     {
@@ -142116,7 +142116,7 @@
     },
     {
         "text": "squally",
-        "gst": "s-k-w-o-e",
+        "gst": "s-k-w-o-l-e",
         "notes": ""
     },
     {
@@ -142441,7 +142441,7 @@
     },
     {
         "text": "Stafford",
-        "gst": "s-t-a-f-rd",
+        "gst": "s-t-a-f-d",
         "notes": ""
     },
     {
@@ -142656,7 +142656,7 @@
     },
     {
         "text": "Stamford",
-        "gst": "s-t-a-m-f-rd",
+        "gst": "s-t-a-m-f-d",
         "notes": ""
     },
     {
@@ -142781,7 +142781,7 @@
     },
     {
         "text": "Stanford",
-        "gst": "s-t-a-n-f-rd",
+        "gst": "s-t-a-n-f-d",
         "notes": ""
     },
     {
@@ -143136,7 +143136,7 @@
     },
     {
         "text": "statutory",
-        "gst": "s-t-a-ch-t-o-r-e",
+        "gst": "s-t-a-ch-t-r-e",
         "notes": ""
     },
     {
@@ -143796,7 +143796,7 @@
     },
     {
         "text": "stilly",
-        "gst": "s-t-e-e",
+        "gst": "s-t-l-e",
         "notes": ""
     },
     {
@@ -143821,7 +143821,7 @@
     },
     {
         "text": "stimulated",
-        "gst": "s-t-e-m/ud",
+        "gst": "s-t-e-m/u-d",
         "notes": ""
     },
     {
@@ -143966,7 +143966,7 @@
     },
     {
         "text": "stipulated",
-        "gst": "s-t-e-p/ud",
+        "gst": "s-t-e-p/u-d",
         "notes": ""
     },
     {
@@ -144486,7 +144486,7 @@
     },
     {
         "text": "stormiest",
-        "gst": "s-t-o-r-m-e-e-s-t",
+        "gst": "s-t-o-r-m-e-s-t",
         "notes": ""
     },
     {
@@ -144501,17 +144501,17 @@
     },
     {
         "text": "story",
-        "gst": "s1-t-o-r-e",
+        "gst": "s1-t-r-e",
         "notes": ""
     },
     {
         "text": "Storylioosp",
-        "gst": "s-t-o-r-e-l-u-sh-p",
+        "gst": "s-t-r-e-l-u-sh-p",
         "notes": ""
     },
     {
         "text": "storyteller",
-        "gst": "s-t-o-r-e-t-e-l-r",
+        "gst": "s-t-r-e-t-e-l-r",
         "notes": ""
     },
     {
@@ -144796,7 +144796,7 @@
     },
     {
         "text": "strangulated",
-        "gst": "s-t-r-a-ng/ud",
+        "gst": "s-t-r-a-ng/u-d",
         "notes": ""
     },
     {
@@ -144861,7 +144861,7 @@
     },
     {
         "text": "Stratford",
-        "gst": "s-t-r-a-t-f-rd",
+        "gst": "s-t-r-a-t-f-d",
         "notes": ""
     },
     {
@@ -145921,12 +145921,12 @@
     },
     {
         "text": "suable",
-        "gst": "s-w-a-b",
+        "gst": "s-u-a-b",
         "notes": ""
     },
     {
         "text": "suasion",
-        "gst": "s-w-a-sh",
+        "gst": "s-u-a-sh",
         "notes": ""
     },
     {
@@ -145936,12 +145936,12 @@
     },
     {
         "text": "suavely",
-        "gst": "s-w-a-v-e",
+        "gst": "s-u-a-v-e",
         "notes": ""
     },
     {
         "text": "suaveness",
-        "gst": "s-w-a-v-n-e-s",
+        "gst": "s-u-a-v-n-e-s",
         "notes": ""
     },
     {
@@ -146176,7 +146176,7 @@
     },
     {
         "text": "subjoin",
-        "gst": "s-j-w-a-n",
+        "gst": "s-j-o-e-n",
         "notes": ""
     },
     {
@@ -146396,7 +146396,7 @@
     },
     {
         "text": "suborder",
-        "gst": "s-o-rd-r",
+        "gst": "s-o-d",
         "notes": ""
     },
     {
@@ -146791,7 +146791,7 @@
     },
     {
         "text": "subway",
-        "gst": "s-w-a",
+        "gst": "s-u-a",
         "notes": ""
     },
     {
@@ -147791,7 +147791,7 @@
     },
     {
         "text": "superfluous",
-        "gst": "s1/f-l-w-u-s",
+        "gst": "s1/f-l-u-u-s",
         "notes": ""
     },
     {
@@ -148151,7 +148151,7 @@
     },
     {
         "text": "supplicatory",
-        "gst": "s-p-l-e-k-t-o-r-e",
+        "gst": "s-p-l-e-k-t-r-e",
         "notes": ""
     },
     {
@@ -148206,7 +148206,7 @@
     },
     {
         "text": "supposititious",
-        "gst": "s-p-s-e-t-s-u-s",
+        "gst": "s-p-s-t-sh-u-s",
         "notes": ""
     },
     {
@@ -148876,7 +148876,7 @@
     },
     {
         "text": "swallowtailed",
-        "gst": "s-u-a-l-t-w-o-d-r",
+        "gst": "s-u-o-l-o-t-a-ld",
         "notes": ""
     },
     {
@@ -149076,7 +149076,7 @@
     },
     {
         "text": "Swedish",
-        "gst": "s-w-e-d-sh",
+        "gst": "s-u-e-d-sh",
         "notes": ""
     },
     {
@@ -150136,7 +150136,7 @@
     },
     {
         "text": "tableware",
-        "gst": "t-a-b-l-w-e-r",
+        "gst": "t-a-b-l-u-e-r",
         "notes": ""
     },
     {
@@ -150176,7 +150176,7 @@
     },
     {
         "text": "tabulated",
-        "gst": "t-a-b/ud",
+        "gst": "t-a-b/u-d",
         "notes": ""
     },
     {
@@ -150191,7 +150191,7 @@
     },
     {
         "text": "tachistoscope",
-        "gst": "t-a-ch-e-s-k-o-p-ch",
+        "gst": "t-a-ch-e-s-t-o-s-k-p",
         "notes": ""
     },
     {
@@ -150586,7 +150586,7 @@
     },
     {
         "text": "tallowwood",
-        "gst": "t-a-l-w-o-d",
+        "gst": "t-a-l-u-u-d",
         "notes": ""
     },
     {
@@ -151986,7 +151986,7 @@
     },
     {
         "text": "telford",
-        "gst": "t-e-l-f-rd",
+        "gst": "t-e-l-f-d",
         "notes": ""
     },
     {
@@ -153031,7 +153031,7 @@
     },
     {
         "text": "thank",
-        "gst": "th1-%-h",
+        "gst": "th1-h",
         "notes": ""
     },
     {
@@ -153211,7 +153211,7 @@
     },
     {
         "text": "that this",
-        "gst": "th-a-th-s-s",
+        "gst": "th-a-th-s",
         "notes": ""
     },
     {
@@ -153246,7 +153246,7 @@
     },
     {
         "text": "that would have",
-        "gst": "th-a-w-u-d-v",
+        "gst": "th-a-d-v",
         "notes": ""
     },
     {
@@ -153516,7 +153516,7 @@
     },
     {
         "text": "theosophist",
-        "gst": "th-e-s-f-i-s-t",
+        "gst": "th-e-s-f-e-s-t",
         "notes": ""
     },
     {
@@ -153836,7 +153836,7 @@
     },
     {
         "text": "they could",
-        "gst": "th-e-k-u-d",
+        "gst": "th-e-k-d",
         "notes": ""
     },
     {
@@ -153921,7 +153921,7 @@
     },
     {
         "text": "they want",
-        "gst": "th-e-w-a-nt",
+        "gst": "th-e-nt",
         "notes": ""
     },
     {
@@ -153956,17 +153956,17 @@
     },
     {
         "text": "they would be glad",
-        "gst": "th-e-w-u-d-b-g-l-a-d",
+        "gst": "th-e-d-b-g-l",
         "notes": ""
     },
     {
         "text": "they would be",
-        "gst": "th-e-w-u-d-b",
+        "gst": "th-e-d-b",
         "notes": ""
     },
     {
         "text": "they would have",
-        "gst": "th-e-w-u-d-v",
+        "gst": "th-e-d-v",
         "notes": ""
     },
     {
@@ -154051,7 +154051,7 @@
     },
     {
         "text": "thickwitted",
-        "gst": "th-e-k-w-e-t-s-t",
+        "gst": "th-e-k-u-e-td",
         "notes": ""
     },
     {
@@ -154266,22 +154266,22 @@
     },
     {
         "text": "this month",
-        "gst": "th-s-m-u-n-th",
+        "gst": "th-s-mn-th",
         "notes": ""
     },
     {
         "text": "this morning",
-        "gst": "th-s-m-o-r-n-h",
+        "gst": "th-s-mn-h",
         "notes": ""
     },
     {
         "text": "this must be done",
-        "gst": "th-s-m-s-b-d-u-n",
+        "gst": "th-s-m-s-b-d-n",
         "notes": ""
     },
     {
         "text": "this one",
-        "gst": "th-s-w-u-n",
+        "gst": "th-s-u-n",
         "notes": ""
     },
     {
@@ -154291,12 +154291,12 @@
     },
     {
         "text": "this was",
-        "gst": "th-s-w-a-s",
+        "gst": "th-s-o-s",
         "notes": ""
     },
     {
         "text": "this way",
-        "gst": "th-s-w-a",
+        "gst": "th-s-u-a",
         "notes": ""
     },
     {
@@ -154311,7 +154311,7 @@
     },
     {
         "text": "this would be",
-        "gst": "th-s-w-u-d-b",
+        "gst": "th-s-d-b",
         "notes": ""
     },
     {
@@ -154856,12 +154856,12 @@
     },
     {
         "text": "throughout the",
-        "gst": "th-r-u-a-u-t-th",
+        "gst": "th-r-u-t-th",
         "notes": ""
     },
     {
         "text": "throughout this",
-        "gst": "th-r-u-a-u-t-th-s",
+        "gst": "th-r-u-t-th-s",
         "notes": ""
     },
     {
@@ -154891,7 +154891,7 @@
     },
     {
         "text": "throwoff",
-        "gst": "th-r-a-w-o-f",
+        "gst": "th-r-o-o-f",
         "notes": ""
     },
     {
@@ -155131,7 +155131,7 @@
     },
     {
         "text": "thyself",
-        "gst": "t-i-s-e-l-f",
+        "gst": "th1-i-s",
         "notes": ""
     },
     {
@@ -156156,7 +156156,7 @@
     },
     {
         "text": "to be done",
-        "gst": "t-u-b-d-u-n",
+        "gst": "t-u-b-d-n",
         "notes": ""
     },
     {
@@ -156341,7 +156341,7 @@
     },
     {
         "text": "to his",
-        "gst": "t-u-%-s1",
+        "gst": "t-u-s1",
         "notes": ""
     },
     {
@@ -156371,7 +156371,7 @@
     },
     {
         "text": "to participate",
-        "gst": "t-p-t-e-p-a-t",
+        "gst": "t-p-t-e-s-p-a-t",
         "notes": ""
     },
     {
@@ -156591,7 +156591,7 @@
     },
     {
         "text": "to which the",
-        "gst": "t-u-w-e-ch-th",
+        "gst": "t-ch-th",
         "notes": ""
     },
     {
@@ -157376,7 +157376,7 @@
     },
     {
         "text": "torchweed",
-        "gst": "t-o-r-ch-w-e-d",
+        "gst": "t-o-r-ch-u-e-d",
         "notes": ""
     },
     {
@@ -157886,12 +157886,12 @@
     },
     {
         "text": "toward",
-        "gst": "t-w-o-rd",
+        "gst": "t-o-rd",
         "notes": ""
     },
     {
         "text": "towards",
-        "gst": "t-w-o-rd-s",
+        "gst": "t-o-rd-s",
         "notes": ""
     },
     {
@@ -158486,12 +158486,12 @@
     },
     {
         "text": "tranquillity",
-        "gst": "t-r-a-nk-w/l",
+        "gst": "t-r-a-nk/l",
         "notes": ""
     },
     {
         "text": "tranquilly",
-        "gst": "t-r-a-nk-w-e-e",
+        "gst": "t-r-a-nk-l-e",
         "notes": ""
     },
     {
@@ -158791,7 +158791,7 @@
     },
     {
         "text": "transitory",
-        "gst": "t/t-o-r-e",
+        "gst": "t/t-r-e",
         "notes": ""
     },
     {
@@ -158956,7 +158956,7 @@
     },
     {
         "text": "transpiratory",
-        "gst": "t/p-e-r-t-o-r-e",
+        "gst": "t/p-e-r-t-r-e",
         "notes": ""
     },
     {
@@ -159071,7 +159071,7 @@
     },
     {
         "text": "trapezoid",
-        "gst": "t-r-a-p-s-w-a-d",
+        "gst": "t-r-a-p-e-s-o-e-d",
         "notes": ""
     },
     {
@@ -159236,7 +159236,7 @@
     },
     {
         "text": "treacherousness",
-        "gst": "t-r-e-k-r-s-w-a-n-e-u-s",
+        "gst": "t-r-e-ch-e-r-u-s-n-e-s",
         "notes": ""
     },
     {
@@ -160086,7 +160086,7 @@
     },
     {
         "text": "trituration",
-        "gst": "t-r-e-ch-w-o-r-sh",
+        "gst": "t-r-e-t-r-a-sh",
         "notes": ""
     },
     {
@@ -160156,7 +160156,7 @@
     },
     {
         "text": "trivially",
-        "gst": "t-r-e-v-e-e",
+        "gst": "t-r-e-v-l-e",
         "notes": ""
     },
     {
@@ -160371,7 +160371,7 @@
     },
     {
         "text": "trousseau",
-        "gst": "t-r-s-w-o",
+        "gst": "t-r-u-s-o",
         "notes": ""
     },
     {
@@ -161336,12 +161336,12 @@
     },
     {
         "text": "turpitude",
-        "gst": "t-r-p-e-t-u-d",
+        "gst": "t-e-r-p-t-u-d",
         "notes": ""
     },
     {
         "text": "turquoise",
-        "gst": "t-r-k-w-o-e-s",
+        "gst": "t-e-r-k-o-e-s",
         "notes": ""
     },
     {
@@ -163476,12 +163476,12 @@
     },
     {
         "text": "undervalue",
-        "gst": "u/v-a-l-e-u",
+        "gst": "u/v-l",
         "notes": ""
     },
     {
         "text": "underwater",
-        "gst": "u/w-o-t-r",
+        "gst": "u/u-o-t-r",
         "notes": ""
     },
     {
@@ -163491,7 +163491,7 @@
     },
     {
         "text": "underweight",
-        "gst": "u/w-a-t",
+        "gst": "u/u-a-t",
         "notes": ""
     },
     {
@@ -163926,17 +163926,17 @@
     },
     {
         "text": "unequal",
-        "gst": "u-n-e-l",
+        "gst": "u-n-e-k-l",
         "notes": ""
     },
     {
         "text": "unequalable",
-        "gst": "u-n-e-l-b",
+        "gst": "u-n-e-k-l-b",
         "notes": ""
     },
     {
         "text": "unequaled",
-        "gst": "u-n-e-ld",
+        "gst": "u-n-e-k-ld",
         "notes": ""
     },
     {
@@ -163946,7 +163946,7 @@
     },
     {
         "text": "unequalized",
-        "gst": "u-n-e-k-w-a-l-i-s-d",
+        "gst": "u-n-e-k-l-i-s-d",
         "notes": ""
     },
     {
@@ -163956,7 +163956,7 @@
     },
     {
         "text": "unequipped",
-        "gst": "u-n-e-w-e-p-d",
+        "gst": "u-n-e-k-w-e-p-d",
         "notes": ""
     },
     {
@@ -164126,12 +164126,12 @@
     },
     {
         "text": "unextinguished",
-        "gst": "u-n-e-s-tnk-sh-t",
+        "gst": "u-n-e-s-t-e-nk-sh-t",
         "notes": ""
     },
     {
         "text": "unextricated",
-        "gst": "u-n-e-s-t-r-e-k-t-e-td",
+        "gst": "u-n-e-s-t-r-k-a-td",
         "notes": ""
     },
     {
@@ -164646,12 +164646,12 @@
     },
     {
         "text": "ungovernable",
-        "gst": "n-g-u-v-r-n-b",
+        "gst": "n-g-v/b",
         "notes": ""
     },
     {
         "text": "ungovernably",
-        "gst": "n-g-u-v-r-n-b-e",
+        "gst": "n-g-v/b-e",
         "notes": ""
     },
     {
@@ -165136,7 +165136,7 @@
     },
     {
         "text": "uninhibited",
-        "gst": "u-n-e-n-h-e-b-e-td",
+        "gst": "u-n-e-n-h-e-b-td",
         "notes": ""
     },
     {
@@ -165981,7 +165981,7 @@
     },
     {
         "text": "unorganized",
-        "gst": "u-n-o-r-g-n-i-s-d",
+        "gst": "u-n-o-g-d",
         "notes": ""
     },
     {
@@ -166101,12 +166101,12 @@
     },
     {
         "text": "unpitying",
-        "gst": "n-p-e-t-i-h",
+        "gst": "n-p-t-i-h",
         "notes": ""
     },
     {
         "text": "unpityingly",
-        "gst": "n-p-e-t/e",
+        "gst": "n-p-t/e",
         "notes": ""
     },
     {
@@ -166196,7 +166196,7 @@
     },
     {
         "text": "unpopulated",
-        "gst": "n-p-a-p/ud",
+        "gst": "n-p-a-p/u-d",
         "notes": ""
     },
     {
@@ -166301,7 +166301,7 @@
     },
     {
         "text": "unprofitable",
-        "gst": "n-p-r-a-f-e-t-b",
+        "gst": "n-p-r-a-f-t-b",
         "notes": ""
     },
     {
@@ -166326,7 +166326,7 @@
     },
     {
         "text": "unpropitious",
-        "gst": "n-p-r-p-e-t-u-s",
+        "gst": "n-p-r-p-e-sh-u-s",
         "notes": ""
     },
     {
@@ -166381,7 +166381,7 @@
     },
     {
         "text": "unqualified",
-        "gst": "n-k-w-a-l-e-f-i-d",
+        "gst": "n-k-w-a-l-f-i-d",
         "notes": ""
     },
     {
@@ -166396,17 +166396,17 @@
     },
     {
         "text": "unquestionable",
-        "gst": "n-k-w-e-s-ch-n-b",
+        "gst": "n-k-sh-b",
         "notes": ""
     },
     {
         "text": "unquestionably",
-        "gst": "n-k-w-e-s-ch-n-b-e",
+        "gst": "n-k-sh-b-e",
         "notes": ""
     },
     {
         "text": "unquestioned",
-        "gst": "n-k-w-e-s-ch-nt",
+        "gst": "n-k-sh-d",
         "notes": ""
     },
     {
@@ -166566,7 +166566,7 @@
     },
     {
         "text": "unregulated",
-        "gst": "n-r-e-g/ud",
+        "gst": "n-r-e-g/u-d",
         "notes": ""
     },
     {
@@ -167121,7 +167121,7 @@
     },
     {
         "text": "unskimmed",
-        "gst": "n-s-k-i-mt",
+        "gst": "n-s-k-e-mt",
         "notes": ""
     },
     {
@@ -167186,7 +167186,7 @@
     },
     {
         "text": "unsophisticated",
-        "gst": "n-s-f-e-s-t-e-k-a-td",
+        "gst": "n-s-o-f-e-s-t-e-k-a-td",
         "notes": ""
     },
     {
@@ -167376,12 +167376,12 @@
     },
     {
         "text": "unswayed",
-        "gst": "n-s-w-a-d",
+        "gst": "n-s-u-a-d",
         "notes": ""
     },
     {
         "text": "unsweetened",
-        "gst": "n-s-w-e-tn-t",
+        "gst": "n-s-u-e-tn-d",
         "notes": ""
     },
     {
@@ -167626,7 +167626,7 @@
     },
     {
         "text": "untrimmed",
-        "gst": "u/e-mt",
+        "gst": "n-t-r-e-mt",
         "notes": ""
     },
     {
@@ -167751,7 +167751,7 @@
     },
     {
         "text": "unvalued",
-        "gst": "n-v-a-l-e-u-d",
+        "gst": "n-v-l-d",
         "notes": ""
     },
     {
@@ -167816,22 +167816,22 @@
     },
     {
         "text": "unwalled",
-        "gst": "n-w-o-ld",
+        "gst": "n-u-o-ld",
         "notes": ""
     },
     {
         "text": "unwarily",
-        "gst": "n-w-o-r-ye",
+        "gst": "n-u-a-r-ye",
         "notes": ""
     },
     {
         "text": "unwarned",
-        "gst": "n-w-o-r-nt",
+        "gst": "n-u-o-r-nt",
         "notes": ""
     },
     {
         "text": "unwarrantable",
-        "gst": "n-w-o-r-nt-b",
+        "gst": "n-u-o-r-a-nt-b",
         "notes": ""
     },
     {
@@ -167841,27 +167841,27 @@
     },
     {
         "text": "unwary",
-        "gst": "n-w-a-r-e",
+        "gst": "n-u-a-r-e",
         "notes": ""
     },
     {
         "text": "unwashed",
-        "gst": "n-w-a-sh-t",
+        "gst": "n-u-a-sh-t",
         "notes": ""
     },
     {
         "text": "unwatered",
-        "gst": "n-w-o-td",
+        "gst": "u-n-u-o-t-rd",
         "notes": ""
     },
     {
         "text": "unwaveringly",
-        "gst": "n-w-o-r-v/e",
+        "gst": "n-u-a-v-r/e",
         "notes": ""
     },
     {
         "text": "unwearied",
-        "gst": "n-w-e-r-d",
+        "gst": "n-u-e-r-e-d",
         "notes": ""
     },
     {
@@ -167871,12 +167871,12 @@
     },
     {
         "text": "unwed",
-        "gst": "n-w-e-d",
+        "gst": "n-u-e-d",
         "notes": ""
     },
     {
         "text": "unwedded",
-        "gst": "n-w-e-td",
+        "gst": "n-u-e-td",
         "notes": ""
     },
     {
@@ -167891,7 +167891,7 @@
     },
     {
         "text": "unwept",
-        "gst": "n-w-e-p-t",
+        "gst": "n-u-e-p-t",
         "notes": ""
     },
     {
@@ -168421,7 +168421,7 @@
     },
     {
         "text": "upwind",
-        "gst": "u-p-w-u-tn",
+        "gst": "u-p-u-e-nd",
         "notes": ""
     },
     {
@@ -168836,7 +168836,7 @@
     },
     {
         "text": "vacillatory",
-        "gst": "v-s-e-l-t-o-r-e",
+        "gst": "v-s-e-l-t-r-e",
         "notes": ""
     },
     {
@@ -169081,7 +169081,7 @@
     },
     {
         "text": "valued",
-        "gst": "v-a-l-e-u-d",
+        "gst": "v-l-d",
         "notes": ""
     },
     {
@@ -169186,7 +169186,7 @@
     },
     {
         "text": "vanquished",
-        "gst": "v-a-nk-w-e-sh-t",
+        "gst": "v-a-nk-sh-t",
         "notes": ""
     },
     {
@@ -170206,12 +170206,12 @@
     },
     {
         "text": "very glad to hear",
-        "gst": "v-e-r-e-g-l-a-d-t-u-h-e-r",
+        "gst": "v-e-g-l-h-e-r",
         "notes": ""
     },
     {
         "text": "very glad",
-        "gst": "v-e-r-e-g-l-a-d",
+        "gst": "v-e-g-l",
         "notes": ""
     },
     {
@@ -170226,12 +170226,12 @@
     },
     {
         "text": "very many",
-        "gst": "v-e-r-e-m-e-n-e",
+        "gst": "v-e-mn-e",
         "notes": ""
     },
     {
         "text": "very much",
-        "gst": "v-e-r-e-m-u-ch",
+        "gst": "v-e-m-ch",
         "notes": ""
     },
     {
@@ -170241,12 +170241,12 @@
     },
     {
         "text": "very small",
-        "gst": "v-e-r-e-s-m-o-l",
+        "gst": "v-e-s-m-o-l",
         "notes": ""
     },
     {
         "text": "very soon",
-        "gst": "v-e-r-e-s-u-n",
+        "gst": "v-e-s-n",
         "notes": ""
     },
     {
@@ -170456,7 +170456,7 @@
     },
     {
         "text": "vibratory",
-        "gst": "v-i-b-r-t-o-r-e",
+        "gst": "v-i-b-r-t-r-e",
         "notes": ""
     },
     {
@@ -170541,7 +170541,7 @@
     },
     {
         "text": "vicissitude",
-        "gst": "v-e-s-e-s-e-t-u-d",
+        "gst": "v-e-s-s-t-u-d",
         "notes": ""
     },
     {
@@ -171016,7 +171016,7 @@
     },
     {
         "text": "virtuously",
-        "gst": "v-r-ch-s-w-e-e",
+        "gst": "v-e-r-t-u-s-e",
         "notes": ""
     },
     {
@@ -171181,7 +171181,7 @@
     },
     {
         "text": "visually",
-        "gst": "v-e-sh-w-e",
+        "gst": "v-e-sh-u-l-e",
         "notes": ""
     },
     {
@@ -171946,7 +171946,7 @@
     },
     {
         "text": "Waddington",
-        "gst": "w-a-d-e-ng-tn",
+        "gst": "u-a-d/tn",
         "notes": ""
     },
     {
@@ -171976,7 +171976,7 @@
     },
     {
         "text": "Wadsworth",
-        "gst": "w-o-d-s-w-u-u-th",
+        "gst": "u-o-d-s-u-u-th",
         "notes": ""
     },
     {
@@ -172161,7 +172161,7 @@
     },
     {
         "text": "Wakefield",
-        "gst": "w-a-k-f-e-ld",
+        "gst": "u-a-k-f-e-ld",
         "notes": ""
     },
     {
@@ -172236,7 +172236,7 @@
     },
     {
         "text": "walkway",
-        "gst": "u-o-k-w-a",
+        "gst": "u-o-k-u-a",
         "notes": ""
     },
     {
@@ -172246,7 +172246,7 @@
     },
     {
         "text": "Wallace",
-        "gst": "w-o-l-s",
+        "gst": "u-o-l-a-s",
         "notes": ""
     },
     {
@@ -172271,12 +172271,12 @@
     },
     {
         "text": "Wallington",
-        "gst": "w-o-l-e-ng-tn",
+        "gst": "u-o-l/tn",
         "notes": ""
     },
     {
         "text": "Walloon",
-        "gst": "w-o-l-n",
+        "gst": "u-o-l-u-n",
         "notes": ""
     },
     {
@@ -172306,7 +172306,7 @@
     },
     {
         "text": "Walpole",
-        "gst": "w-o-l-p-o-l",
+        "gst": "u-o-l-p-o-l",
         "notes": ""
     },
     {
@@ -172316,7 +172316,7 @@
     },
     {
         "text": "Walsh",
-        "gst": "w-o-l-sh",
+        "gst": "u-o-l-sh",
         "notes": ""
     },
     {
@@ -172326,7 +172326,7 @@
     },
     {
         "text": "Waltham",
-        "gst": "w-o-l-th-m",
+        "gst": "u-o-l-th-m",
         "notes": ""
     },
     {
@@ -172401,7 +172401,7 @@
     },
     {
         "text": "want to see",
-        "gst": "u-o-nt-t-u-s-e",
+        "gst": "u-o-nt-s-e",
         "notes": ""
     },
     {
@@ -172656,12 +172656,12 @@
     },
     {
         "text": "Warrensburg",
-        "gst": "w-o-r-n-s-b-r-g",
+        "gst": "u-o-r-n-s-b-r-g",
         "notes": ""
     },
     {
         "text": "Warsaw",
-        "gst": "w-o-r-s-o",
+        "gst": "u-o-r-s-o",
         "notes": ""
     },
     {
@@ -172691,7 +172691,7 @@
     },
     {
         "text": "was done",
-        "gst": "u-o-s-d-u-n",
+        "gst": "u-o-s-d-n",
         "notes": ""
     },
     {
@@ -172716,7 +172716,7 @@
     },
     {
         "text": "was this",
-        "gst": "u-o-s-th-s",
+        "gst": "o-s-th-s",
         "notes": ""
     },
     {
@@ -172776,7 +172776,7 @@
     },
     {
         "text": "Washington",
-        "gst": "w-a-sh-e-ng-tn",
+        "gst": "u-a-sh-e-ng-tn",
         "notes": ""
     },
     {
@@ -172961,7 +172961,7 @@
     },
     {
         "text": "Waterbury",
-        "gst": "w-o-t-r-b-e-r-e",
+        "gst": "u-o-t-r-b-e-r-e",
         "notes": ""
     },
     {
@@ -173011,7 +173011,7 @@
     },
     {
         "text": "Waterloo",
-        "gst": "w-o-t-r-l-u",
+        "gst": "u-o-t-r-l-u",
         "notes": ""
     },
     {
@@ -173051,12 +173051,12 @@
     },
     {
         "text": "waterspout",
-        "gst": "u-o-t-r-s-t-w-u-p-t",
+        "gst": "u-o-t-r-s-p-a-u-t",
         "notes": ""
     },
     {
         "text": "Waterville",
-        "gst": "w-o-t-r-v-e-l",
+        "gst": "u-o-t-r-v-e-l",
         "notes": ""
     },
     {
@@ -173081,7 +173081,7 @@
     },
     {
         "text": "Watsonville",
-        "gst": "w-a-t-s-n-v-e-l",
+        "gst": "u-a-t-s-n-v-e-l",
         "notes": ""
     },
     {
@@ -173111,7 +173111,7 @@
     },
     {
         "text": "Wave",
-        "gst": "w-a-v",
+        "gst": "u-a-v",
         "notes": ""
     },
     {
@@ -173146,7 +173146,7 @@
     },
     {
         "text": "Waverly",
-        "gst": "w-a-v-r-e",
+        "gst": "u-a-v-r-e",
         "notes": ""
     },
     {
@@ -173186,7 +173186,7 @@
     },
     {
         "text": "waxwing",
-        "gst": "u-a-x-w-e-ng",
+        "gst": "u-a-x-u-e-ng",
         "notes": ""
     },
     {
@@ -173231,7 +173231,7 @@
     },
     {
         "text": "Waynesboro",
-        "gst": "w-a-n-s-b-r-o",
+        "gst": "u-a-n-s-b-r-o",
         "notes": ""
     },
     {
@@ -173316,17 +173316,17 @@
     },
     {
         "text": "we could be",
-        "gst": "u-e-k-u-d-b",
+        "gst": "u-e-k-d-b",
         "notes": ""
     },
     {
         "text": "we could have",
-        "gst": "u-e-k-u-d-v",
+        "gst": "u-e-k-d-v",
         "notes": ""
     },
     {
         "text": "we could not",
-        "gst": "u-e-k-u-d-n",
+        "gst": "u-e-k-d-n",
         "notes": ""
     },
     {
@@ -173376,7 +173376,7 @@
     },
     {
         "text": "we enclose",
-        "gst": "u-e-e-n-k-l-o-s",
+        "gst": "u-e-n-k",
         "notes": ""
     },
     {
@@ -173421,7 +173421,7 @@
     },
     {
         "text": "we have done",
-        "gst": "u-e-v-d-u-n",
+        "gst": "u-e-v-d-n",
         "notes": ""
     },
     {
@@ -173591,32 +173591,32 @@
     },
     {
         "text": "we shall be able",
-        "gst": "u-e-sh-a-l-ba-b",
+        "gst": "u-e-sh-ba-b",
         "notes": ""
     },
     {
         "text": "we shall be glad",
-        "gst": "u-e-sh-a-l-b-g-l-a-d",
+        "gst": "u-e-sh-b-g-l",
         "notes": ""
     },
     {
         "text": "we shall be",
-        "gst": "u-e-sh-a-l-b",
+        "gst": "u-e-sh-b",
         "notes": ""
     },
     {
         "text": "we shall have",
-        "gst": "u-e-sh-a-l-v",
+        "gst": "u-e-sh-v",
         "notes": ""
     },
     {
         "text": "we shall not be able",
-        "gst": "u-e-sh-a-l-n-ba-b",
+        "gst": "u-e-sh-n-b-a",
         "notes": ""
     },
     {
         "text": "we shall not",
-        "gst": "u-e-sh-a-l-n",
+        "gst": "u-e-sh-n",
         "notes": ""
     },
     {
@@ -173626,7 +173626,7 @@
     },
     {
         "text": "we should be glad",
-        "gst": "u-e-sh-d-b-g-l-a-d",
+        "gst": "u-e-sh-d-b-g-l",
         "notes": ""
     },
     {
@@ -173681,7 +173681,7 @@
     },
     {
         "text": "we want",
-        "gst": "u-e-w-a-nt",
+        "gst": "u-a-nt",
         "notes": ""
     },
     {
@@ -173731,12 +173731,12 @@
     },
     {
         "text": "we would be glad",
-        "gst": "u-e-w-u-d-b-g-l-a-d",
+        "gst": "u-e-d-b-g-l",
         "notes": ""
     },
     {
         "text": "we would be",
-        "gst": "u-e-w-u-d-b",
+        "gst": "u-e-d-b",
         "notes": ""
     },
     {
@@ -173746,17 +173746,17 @@
     },
     {
         "text": "we would not be able",
-        "gst": "u-e-w-u-d-n-ba-b",
+        "gst": "u-e-d-n-b-a",
         "notes": ""
     },
     {
         "text": "we would not be",
-        "gst": "u-e-w-u-d-n-b",
+        "gst": "u-e-d-n-b",
         "notes": ""
     },
     {
         "text": "we would not",
-        "gst": "u-e-w-u-d-n",
+        "gst": "u-e-d-n",
         "notes": ""
     },
     {
@@ -173961,7 +173961,7 @@
     },
     {
         "text": "Weatherford",
-        "gst": "w-e-th-r-f-rd",
+        "gst": "u-e-th-r-f-d",
         "notes": ""
     },
     {
@@ -174001,7 +174001,7 @@
     },
     {
         "text": "wed",
-        "gst": "w-e-d",
+        "gst": "u-e-d",
         "notes": ""
     },
     {
@@ -174036,7 +174036,7 @@
     },
     {
         "text": "weed",
-        "gst": "we-d",
+        "gst": "u-e-d",
         "notes": ""
     },
     {
@@ -174341,17 +174341,17 @@
     },
     {
         "text": "werewolf",
-        "gst": "u-e-r-w-u-l-f",
+        "gst": "u-e-r-u-u-l-f",
         "notes": ""
     },
     {
         "text": "West Chester",
-        "gst": "w-e-s-t-ch-e-s-t-r",
+        "gst": "u-e-s-t-ch-e-s-t-r",
         "notes": ""
     },
     {
         "text": "West Virginia",
-        "gst": "w-e-s-t-v-r-j-e-n-y-a",
+        "gst": "u-v-a",
         "notes": ""
     },
     {
@@ -174361,7 +174361,7 @@
     },
     {
         "text": "Westbrook",
-        "gst": "w-e-s-t-b-r-u-k",
+        "gst": "u-e-s-t-b-r-u-k",
         "notes": ""
     },
     {
@@ -174381,7 +174381,7 @@
     },
     {
         "text": "Westfield",
-        "gst": "w-e-s-t-f-e-ld",
+        "gst": "u-e-s-t-f-e-ld",
         "notes": ""
     },
     {
@@ -174396,7 +174396,7 @@
     },
     {
         "text": "Westwood",
-        "gst": "w-e-s-t-u-u-d",
+        "gst": "u-e-s-t-u-u-d",
         "notes": ""
     },
     {
@@ -174441,7 +174441,7 @@
     },
     {
         "text": "Weymouth",
-        "gst": "w-a-m-th",
+        "gst": "u-a-m-th",
         "notes": ""
     },
     {
@@ -174556,7 +174556,7 @@
     },
     {
         "text": "Wheaton",
-        "gst": "w-e-tn",
+        "gst": "h-u-e-tn",
         "notes": ""
     },
     {
@@ -174676,7 +174676,7 @@
     },
     {
         "text": "when this",
-        "gst": "u-e-n-th-s",
+        "gst": "e-n-th-s",
         "notes": ""
     },
     {
@@ -174881,7 +174881,7 @@
     },
     {
         "text": "which way",
-        "gst": "u-e-ch-w-a",
+        "gst": "ch-u-a",
         "notes": ""
     },
     {
@@ -174931,7 +174931,7 @@
     },
     {
         "text": "Whig",
-        "gst": "w-e-g",
+        "gst": "h-u-e-g",
         "notes": ""
     },
     {
@@ -175181,12 +175181,12 @@
     },
     {
         "text": "whistlingly",
-        "gst": "h-u-e-s-t-l/e",
+        "gst": "h-u-e-s-l/e",
         "notes": ""
     },
     {
         "text": "whistlings",
-        "gst": "u-e-s-l-e-n-j-e-s",
+        "gst": "u-e-s-l/s",
         "notes": ""
     },
     {
@@ -175276,7 +175276,7 @@
     },
     {
         "text": "Whittier",
-        "gst": "w-e-t-e-r",
+        "gst": "u-e-t-e-r",
         "notes": ""
     },
     {
@@ -175321,17 +175321,17 @@
     },
     {
         "text": "who could be",
-        "gst": "h-u-k-u-d-b",
+        "gst": "h-u-k-d-b",
         "notes": ""
     },
     {
         "text": "who could not",
-        "gst": "h-u-k-u-d-n",
+        "gst": "h-u-k-d-n",
         "notes": ""
     },
     {
         "text": "who could",
-        "gst": "h-u-k-u-d",
+        "gst": "h-u-k-d",
         "notes": ""
     },
     {
@@ -175346,7 +175346,7 @@
     },
     {
         "text": "who have done",
-        "gst": "h-u-v-d-u-n",
+        "gst": "h-u-v-d-n",
         "notes": ""
     },
     {
@@ -175436,7 +175436,7 @@
     },
     {
         "text": "who want",
-        "gst": "h-u-w-a-nt",
+        "gst": "h-u-nt",
         "notes": ""
     },
     {
@@ -175471,22 +175471,22 @@
     },
     {
         "text": "who would be",
-        "gst": "h-u-w-u-d-b",
+        "gst": "h-u-d-b",
         "notes": ""
     },
     {
         "text": "who would have been",
-        "gst": "h-u-w-u-d-v-b-n",
+        "gst": "h-u-d-v-b",
         "notes": ""
     },
     {
         "text": "who would have",
-        "gst": "h-u-w-u-d-v",
+        "gst": "h-u-d-v",
         "notes": ""
     },
     {
         "text": "who would not",
-        "gst": "h-u-w-u-d-n",
+        "gst": "h-u-d-n",
         "notes": ""
     },
     {
@@ -175596,7 +175596,7 @@
     },
     {
         "text": "Wichita",
-        "gst": "w-e-ch-o",
+        "gst": "u-e-ch-o",
         "notes": ""
     },
     {
@@ -175686,7 +175686,7 @@
     },
     {
         "text": "Widower",
-        "gst": "w-e-d-o-r",
+        "gst": "u-e-d-o-r",
         "notes": ""
     },
     {
@@ -175766,12 +175766,12 @@
     },
     {
         "text": "wigwag",
-        "gst": "u-e-g-w-a-g",
+        "gst": "u-e-g-u-a-g",
         "notes": ""
     },
     {
         "text": "wigwam",
-        "gst": "u-e-g-w-a-m",
+        "gst": "u-e-g-u-a-m",
         "notes": ""
     },
     {
@@ -175851,7 +175851,7 @@
     },
     {
         "text": "will be done",
-        "gst": "u-e-l-b-d-u-n",
+        "gst": "u-e-l-b-d-n",
         "notes": ""
     },
     {
@@ -176161,7 +176161,7 @@
     },
     {
         "text": "Winfield",
-        "gst": "w-e-n-f-e-ld",
+        "gst": "u-e-n-f-e-ld",
         "notes": ""
     },
     {
@@ -176191,7 +176191,7 @@
     },
     {
         "text": "Winifred",
-        "gst": "w-e-n-e-f-r-d",
+        "gst": "u-e-n-e-f-r-d",
         "notes": ""
     },
     {
@@ -176231,7 +176231,7 @@
     },
     {
         "text": "Winnipeg",
-        "gst": "w-e-n-e-p-g",
+        "gst": "u-e-n-e-p-g",
         "notes": ""
     },
     {
@@ -176261,7 +176261,7 @@
     },
     {
         "text": "Winston-Salem",
-        "gst": "w-e-n-s-tn-s-m-l",
+        "gst": "u-e-n-s-tn/s-a-l-e-m",
         "notes": ""
     },
     {
@@ -176506,7 +176506,7 @@
     },
     {
         "text": "witchweed",
-        "gst": "u-e-ch-w-e-d",
+        "gst": "u-e-ch-u-e-d",
         "notes": ""
     },
     {
@@ -176516,7 +176516,7 @@
     },
     {
         "text": "with his",
-        "gst": "e-th-h-e-s",
+        "gst": "e-th-s",
         "notes": ""
     },
     {
@@ -176561,7 +176561,7 @@
     },
     {
         "text": "with which",
-        "gst": "e-th-w-e-ch",
+        "gst": "e-th-ch",
         "notes": ""
     },
     {
@@ -176771,7 +176771,7 @@
     },
     {
         "text": "Woburn",
-        "gst": "w-u-b-r-n",
+        "gst": "u-u-b-r-n",
         "notes": ""
     },
     {
@@ -176781,7 +176781,7 @@
     },
     {
         "text": "woebegone",
-        "gst": "u-o-b-e-g-o-n",
+        "gst": "u-o-b-e-g-n",
         "notes": ""
     },
     {
@@ -177026,7 +177026,7 @@
     },
     {
         "text": "Woodward",
-        "gst": "w-u-d-w-o-rd",
+        "gst": "u-u-d/d",
         "notes": ""
     },
     {
@@ -177101,7 +177101,7 @@
     },
     {
         "text": "Wooster",
-        "gst": "w-u-s-t-r",
+        "gst": "u-u-s-t-r",
         "notes": ""
     },
     {
@@ -177321,12 +177321,12 @@
     },
     {
         "text": "workwoman",
-        "gst": "u-k-w-u-mn",
+        "gst": "u-k-u-u-mn",
         "notes": ""
     },
     {
         "text": "workwomen",
-        "gst": "u-k-w-e-mn",
+        "gst": "u-k-u-e-mn",
         "notes": ""
     },
     {
@@ -177526,7 +177526,7 @@
     },
     {
         "text": "would be done",
-        "gst": "u-u-d-b-d-u-n",
+        "gst": "u-u-d-b-d-n",
         "notes": ""
     },
     {
@@ -177976,7 +177976,7 @@
     },
     {
         "text": "Wyoming",
-        "gst": "w-i-m-h",
+        "gst": "u-i-m-h",
         "notes": ""
     },
     {
@@ -178476,12 +178476,12 @@
     },
     {
         "text": "you could be",
-        "gst": "u-k-u-d-b",
+        "gst": "u-k-d-b",
         "notes": ""
     },
     {
         "text": "you could have been",
-        "gst": "u-k-u-d-v-b-n",
+        "gst": "u-k-d-v-b-n",
         "notes": ""
     },
     {
@@ -178491,7 +178491,7 @@
     },
     {
         "text": "you could not have",
-        "gst": "u-k-u-d-n-v",
+        "gst": "u-k-d-n-v",
         "notes": ""
     },
     {
@@ -178666,7 +178666,7 @@
     },
     {
         "text": "you order",
-        "gst": "u-o-rd-r",
+        "gst": "u-o-d",
         "notes": ""
     },
     {
@@ -178676,7 +178676,7 @@
     },
     {
         "text": "you shall have",
-        "gst": "u-sh-a-l-v",
+        "gst": "u-sh-v",
         "notes": ""
     },
     {
@@ -178711,7 +178711,7 @@
     },
     {
         "text": "you want",
-        "gst": "u-wa-nt",
+        "gst": "u-nt",
         "notes": ""
     },
     {
@@ -178726,7 +178726,7 @@
     },
     {
         "text": "you will be glad",
-        "gst": "u-l-b-g-l-a-d",
+        "gst": "u-l-b-g-l",
         "notes": ""
     },
     {
@@ -178781,12 +178781,12 @@
     },
     {
         "text": "you would be able",
-        "gst": "u-wu-d-ba-b",
+        "gst": "u-d-b-a",
         "notes": ""
     },
     {
         "text": "you would be glad",
-        "gst": "u-wu-d-b-g-l-a-d",
+        "gst": "u-d-b-g-l",
         "notes": ""
     },
     {
@@ -178801,7 +178801,7 @@
     },
     {
         "text": "you would have been",
-        "gst": "u-wu-d-v-b-n",
+        "gst": "u-d-v-b",
         "notes": ""
     },
     {
@@ -178816,22 +178816,22 @@
     },
     {
         "text": "you would not be",
-        "gst": "u-wu-d-n-b",
+        "gst": "u-d-n-b",
         "notes": ""
     },
     {
         "text": "you would not have",
-        "gst": "u-wu-d-n-v",
+        "gst": "u-d-n-h",
         "notes": ""
     },
     {
         "text": "you would not",
-        "gst": "u-wu-d-n",
+        "gst": "u-d-n",
         "notes": ""
     },
     {
         "text": "you would",
-        "gst": "u-wu-d",
+        "gst": "u-d",
         "notes": ""
     },
     {
@@ -178911,12 +178911,12 @@
     },
     {
         "text": "Yours very sincerely",
-        "gst": "e-u-r-s-v-e-r-e-s-e-n-s-e-r-e",
+        "gst": "u-v-s-e-n",
         "notes": ""
     },
     {
         "text": "Yours very truly",
-        "gst": "e-u-r-s-v-e-r-e-t-r-u-e",
+        "gst": "u-v-t",
         "notes": ""
     },
     {
