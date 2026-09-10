@@ -30,7 +30,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0811@11:26pm format'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.0831@12:12pm expand'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -900,8 +900,6 @@
                     img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
                     expandButton.innerHTML = 'Expand';
                 }
-                // Focus and select regex input after expand/shrink action
-                setTimeout(focusRegexInput, 10);
             };
 
             window.addEventListener('resize', function() {

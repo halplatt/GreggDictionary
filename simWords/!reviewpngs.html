@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review Shorthand Outlines</title>
+  <style>
+    :root { --ink: #17222b; --paper: #f6f4ee; --line: #c9c5b8; --accent: #075e54; --danger: #9e2b2b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px Georgia, serif; }
+    header { padding: 18px max(20px, calc((100% - 1180px) / 2)); background: #e9e5d9; border-bottom: 2px solid var(--ink); }
+    h1 { margin: 0; font-size: 27px; font-weight: normal; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 13px; font-family: Verdana, sans-serif; font-size: 13px; }
+    button { min-height: 34px; padding: 6px 12px; border: 1px solid var(--ink); background: #fffdf8; color: var(--ink); cursor: pointer; font: inherit; }
+    button:hover { background: #d9eee9; }
+    button:disabled { cursor: not-allowed; opacity: .5; }
+    #applyChanges { border-color: var(--accent); color: var(--accent); }
+    .range-input { width: 145px; min-height: 34px; border: 1px solid var(--ink); background: #fffdf8; padding: 6px 8px; font: inherit; }
+    #status { margin-left: 4px; }
+    main { max-width: 1180px; margin: auto; padding: 16px 20px 40px; }
+    #pagination { display: flex; justify-content: space-between; align-items: center; min-height: 38px; font-family: Verdana, sans-serif; font-size: 13px; }
+    #outlineList { border-top: 1px solid var(--line); }
+    .row { display: grid; grid-template-columns: 40px 38px minmax(180px, 290px) 70px 1fr; align-items: center; gap: 8px; min-height: 74px; border-bottom: 1px solid var(--line); padding: 7px 2px; }
+    .row.grouped { border-left: 5px solid #8ca8a1; padding-left: 7px; }
+    .row.grouped.group-even { background: #e4eeeb; }
+    .row.grouped.group-odd { background: #e9e6f1; }
+    .row input { width: 17px; height: 17px; justify-self: center; }
+    .row .descent { width: 64px; min-height: 31px; height: auto; justify-self: start; border: 1px solid var(--ink); background: #fffdf8; padding: 4px; font: 14px Verdana, sans-serif; }
+    .name { font-family: Verdana, sans-serif; font-size: 14px; overflow-wrap: anywhere; }
+    .outline { display: block; max-width: min(100%, 600px); max-height: 150px; object-fit: contain; object-position: left center; background: repeating-conic-gradient(#fff 0 25%, #eef0eb 0 50%) 50% / 16px 16px; }
+    button.outline { position: relative; width: 100%; max-width: 600px; max-height: 150px; min-height: 0; padding: 0; border: 0; cursor: zoom-in; text-align: left; }
+    .descent-line { position: absolute; right: 0; left: 0; height: 1px; background: #c32626; pointer-events: none; }
+    .empty { padding: 28px 0; font-family: Verdana, sans-serif; }
+    dialog { width: min(420px, calc(100% - 40px)); border: 1px solid var(--ink); background: #fffdf8; color: var(--ink); padding: 18px; font: 15px Georgia, serif; }
+    dialog::backdrop { background: rgb(23 34 43 / 35%); }
+    dialog button { margin: 12px 8px 0 0; }
+    .danger { color: var(--danger); }
+    @media (max-width: 650px) { .row { grid-template-columns: 32px 32px minmax(105px, 1fr) 60px; } .outline { grid-column: 3 / 5; max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Review Shorthand Outlines</h1>
+    <div class="controls">
+      <button id="chooseFolder">Choose simWords folder</button>
+      <label>Start <input id="rangeStart" class="range-input" type="text" value="a" disabled></label>
+      <label>End <input id="rangeEnd" class="range-input" type="text" value="z" disabled></label>
+      <button id="loadRange" title="Load the selected range (Ctrl+Alt+L)" disabled>Load range</button>
+      <button id="applyChanges" title="Apply staged file changes (Ctrl+Alt+Enter)" disabled>Apply changes</button>
+      <span id="status">Choose the folder containing the PNG files.</span>
+    </div>
+  </header>
+  <main>
+    <div id="pagination"></div>
+    <section id="outlineList" aria-live="polite"></section>
+  </main>
+  <script>
+    const pageSize = 100;
+    let directoryHandle;
+    let pngFiles = [];
+    let page = 0;
+    let operationInProgress = false;
+    const pendingSuffixes = new Map();
+    const pendingVersions = new Map();
+    const pendingMeasurements = new Map();
+    const objectUrls = [];
+
+    const chooseFolder = document.querySelector('#chooseFolder');
+    const rangeStart = document.querySelector('#rangeStart');
+    const rangeEnd = document.querySelector('#rangeEnd');
+    const loadRange = document.querySelector('#loadRange');
+    const applyChanges = document.querySelector('#applyChanges');
+    const status = document.querySelector('#status');
+    const list = document.querySelector('#outlineList');
+    const pagination = document.querySelector('#pagination');
+
+    document.addEventListener('keydown', event => {
+      if (!event.ctrlKey || !event.altKey || event.shiftKey || event.metaKey) return;
+      if (event.key.toLowerCase() === 'l' && !loadRange.disabled) {
+        event.preventDefault();
+        loadRange.click();
+      }
+      if (event.key === 'Enter' && !applyChanges.disabled) {
+        event.preventDefault();
+        applyChanges.click();
+      }
+    });
+
+    function baseName(name) {
+      return name.replace(/\(x\)(?=\.png$)/i, '').replace(/\(\d+\)\.png$/i, '.png');
+    }
+
+    function hasExcludedSuffix(name) {
+      return /\(x\)\.png$/i.test(name);
+    }
+
+    function wordName(name) {
+      return baseName(name).replace(/\.png$/i, '').toLocaleLowerCase();
+    }
+
+    function isInSelectedRange(name) {
+      const word = wordName(name);
+      const start = rangeStart.value.trim().toLocaleLowerCase();
+      const end = rangeEnd.value.trim().toLocaleLowerCase();
+      return (!start || word.localeCompare(start) >= 0) && (!end || word.localeCompare(end) <= 0);
+    }
+
+    function sortNames(left, right) {
+      return left.localeCompare(right, undefined, { numeric: true, sensitivity: 'base' });
+    }
+
+    async function refreshFiles() {
+      pngFiles = [];
+      for await (const [name, handle] of directoryHandle.entries()) {
+        if (handle.kind === 'file' && /\.png$/i.test(name) && isInSelectedRange(name)) pngFiles.push({ name, handle });
+      }
+      pngFiles.sort((left, right) => sortNames(left.name, right.name));
+      pendingSuffixes.clear();
+      pendingVersions.clear();
+      pendingMeasurements.clear();
+      page = Math.min(page, Math.max(0, Math.ceil(pngFiles.length / pageSize) - 1));
+      render();
+    }
+
+    function clearUrls() {
+      while (objectUrls.length) URL.revokeObjectURL(objectUrls.pop());
+    }
+
+    function setBusy(busy, message) {
+      operationInProgress = busy;
+      document.querySelectorAll('button, input').forEach(control => { control.disabled = busy; });
+      if (!busy && directoryHandle) {
+        rangeStart.disabled = false;
+        rangeEnd.disabled = false;
+        loadRange.disabled = false;
+      }
+      if (message) status.textContent = message;
+    }
+
+    async function runFileOperation(message, operation) {
+      setBusy(true, message);
+      try {
+        const filesChanged = await operation();
+        if (filesChanged) await refreshLoadedFiles();
+        else render();
+      } catch (error) {
+        status.textContent = `File operation failed: ${error.message}`;
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    async function refreshLoadedFiles() {
+      const refreshed = [];
+      for (const entry of pngFiles) {
+        try {
+          refreshed.push({ name: entry.name, handle: await directoryHandle.getFileHandle(entry.name) });
+        } catch (error) {
+          if (error.name !== 'NotFoundError') throw error;
+        }
+      }
+      pngFiles = refreshed;
+      pendingSuffixes.clear();
+      pendingVersions.clear();
+      pendingMeasurements.clear();
+      page = Math.min(page, Math.max(0, Math.ceil(pngFiles.length / pageSize) - 1));
+      render();
+    }
+
+    async function readMeasurement(name) {
+      try {
+        const text = await (await directoryHandle.getFileHandle(name.replace(/\.png$/i, '.txt'))).getFile().then(file => file.text());
+        return Number.isFinite(Number(text.trim())) ? String(Number(text.trim())) : '0';
+      } catch { return '0'; }
+    }
+
+    async function render() {
+      clearUrls();
+      list.replaceChildren();
+      pagination.replaceChildren();
+      if (!directoryHandle) return;
+      const start = page * pageSize;
+      const entries = pngFiles.slice(start, start + pageSize);
+      const groups = new Map();
+      pngFiles.forEach(file => groups.set(baseName(file.name), (groups.get(baseName(file.name)) || 0) + 1));
+      const groupShades = new Map();
+      let shadeIndex = 0;
+      for (const entry of entries) {
+        const groupName = baseName(entry.name);
+        if (groups.get(groupName) > 1 && !groupShades.has(groupName)) groupShades.set(groupName, shadeIndex++);
+      }
+      const rangeStartLabel = rangeStart.value.trim() || 'first';
+      const rangeEndLabel = rangeEnd.value.trim() || 'last';
+      status.textContent = `${pngFiles.length} PNG files in ${directoryHandle.name}: ${rangeStartLabel} through ${rangeEndLabel}`;
+      updateApplyButton();
+
+      const previous = document.createElement('button');
+      previous.textContent = 'Previous';
+      previous.disabled = page === 0;
+      previous.onclick = () => { page--; render(); };
+      const label = document.createElement('span');
+      label.textContent = pngFiles.length ? `Page ${page + 1} of ${Math.ceil(pngFiles.length / pageSize)} (${start + 1}-${start + entries.length})` : 'No PNG files';
+      const next = document.createElement('button');
+      next.textContent = 'Next';
+      next.disabled = start + pageSize >= pngFiles.length;
+      next.onclick = () => { page++; render(); };
+      pagination.append(previous, label, next);
+
+      if (!entries.length) { list.innerHTML = '<p class="empty">No outline PNG files found.</p>'; return; }
+      for (const entry of entries) {
+        const row = document.createElement('article');
+        row.className = 'row';
+        const groupName = baseName(entry.name);
+        if (groupShades.has(groupName)) {
+          row.classList.add('grouped', groupShades.get(groupName) % 2 ? 'group-odd' : 'group-even');
+        }
+        const radioCell = document.createElement('div');
+        if (groups.get(groupName) > 1) {
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = `choice-${groupName}`;
+          radio.title = 'Keep this outline and remove the other versions';
+          radio.checked = pendingVersions.get(groupName) === entry.name;
+          radio.onchange = () => {
+            pendingVersions.set(groupName, entry.name);
+            updateApplyButton();
+          };
+          radioCell.append(radio);
+        }
+        const check = document.createElement('input');
+        check.type = 'checkbox';
+        check.dataset.name = entry.name;
+        check.checked = pendingSuffixes.get(entry.name) ?? hasExcludedSuffix(entry.name);
+        check.title = 'Add or remove the (x) suffix';
+        check.onchange = () => {
+          pendingSuffixes.set(entry.name, check.checked);
+          updateApplyButton();
+        };
+        const name = document.createElement('span');
+        name.className = 'name';
+        name.textContent = entry.name;
+        const descent = document.createElement('input');
+        descent.className = 'descent';
+        descent.type = 'number';
+        descent.step = '1';
+        descent.value = pendingMeasurements.get(entry.name) ?? await readMeasurement(entry.name);
+        descent.title = 'Pixels the outline descends below the printed word';
+        descent.onchange = () => {
+          descent.value = String(Math.max(0, Math.round(Number(descent.value) || 0)));
+          pendingMeasurements.set(entry.name, descent.value);
+          updateApplyButton();
+        };
+        const image = document.createElement('img');
+        image.className = 'outline';
+        image.alt = entry.name;
+        const url = URL.createObjectURL(await entry.handle.getFile());
+        objectUrls.push(url);
+        image.src = url;
+        const imageButton = document.createElement('button');
+        imageButton.className = 'outline';
+        imageButton.type = 'button';
+        imageButton.title = 'Open this PNG in the default Windows image application';
+        imageButton.onclick = async () => {
+          try {
+            const response = await fetch(`http://localhost:8081/open/${encodeURIComponent(entry.name)}`);
+            if (!response.ok) throw new Error('Start the review server with the selected folder.');
+          } catch (error) {
+            status.textContent = `Could not open ${entry.name}: ${error.message}`;
+          }
+        };
+        imageButton.append(image);
+        const descentLine = document.createElement('span');
+        descentLine.className = 'descent-line';
+        const positionDescentLine = () => {
+          const pixels = Math.max(0, Number(descent.value) || 0);
+          descentLine.style.bottom = `${Math.min(pixels, image.clientHeight)}px`;
+        };
+        image.onload = positionDescentLine;
+        descent.oninput = positionDescentLine;
+        imageButton.append(descentLine);
+        row.append(radioCell, check, name, descent, imageButton);
+        list.append(row);
+      }
+    }
+
+    function updateApplyButton() {
+      applyChanges.disabled = operationInProgress || (!pendingSuffixes.size && !pendingVersions.size && !pendingMeasurements.size);
+    }
+
+    applyChanges.onclick = () => runFileOperation('Applying changes and refreshing the list...', async () => {
+      const response = await fetch('http://localhost:8081/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          versions: Object.fromEntries(pendingVersions),
+          suffixes: Object.fromEntries(pendingSuffixes),
+          measurements: Object.fromEntries(pendingMeasurements),
+        }),
+      });
+      if (!response.ok) throw new Error(await response.text() || 'The Python review server rejected the changes.');
+      return true;
+    });
+
+    loadRange.onclick = async () => {
+      if (!directoryHandle) return;
+      if (
+        rangeStart.value.trim() && rangeEnd.value.trim()
+        && rangeStart.value.trim().localeCompare(rangeEnd.value.trim(), undefined, { sensitivity: 'base' }) > 0
+      ) {
+        status.textContent = 'The start word must come before the end word.';
+        return;
+      }
+      setBusy(true, 'Loading selected word range...');
+      try {
+        await refreshFiles();
+      } catch (error) {
+        status.textContent = `Could not load range: ${error.message}`;
+      } finally {
+        setBusy(false);
+      }
+    };
+
+    chooseFolder.onclick = async () => {
+      if (!window.showDirectoryPicker) { status.textContent = 'Use Chrome or Microsoft Edge to open this review page.'; return; }
+      try {
+        directoryHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+        rangeStart.disabled = false;
+        rangeEnd.disabled = false;
+        loadRange.disabled = false;
+        status.textContent = `Folder ${directoryHandle.name} selected. Enter a range, then choose Load range.`;
+      } catch (error) {
+        if (error.name !== 'AbortError') status.textContent = `Could not open folder: ${error.message}`;
+      }
+    };
+  </script>
+</body>
+</html>

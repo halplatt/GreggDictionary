@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+To use png instead of viewport change  USE_SIM_WORDS_FOLDER = true;
 V2025.1003@10:47am remove simplified expand button
 V2025.0923@2:00pm launch a search on change of search type and add tooltips to radio buttons
 V2025.0911@11:37pm the driver is now !whordsearchall.json
@@ -271,7 +272,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2026.0805@05:58pm gst</p>
+    <p id="version">V2026.09/04@10:33pm simpng</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -335,6 +336,11 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
     <textarea id="clipboardInput" style="position: absolute; left: -9999px;"></textarea>
 
     <script>
+        // Indicator to switch Simplified images:
+        // false: use page scan viewport clipping logic from simDictionary/
+        // true:  use individual standalone .png files from simWords/ folder
+        const USE_SIM_WORDS_FOLDER = false;
+
         const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
         const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
         const IMG_WIDTH = 1281;
@@ -431,6 +437,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
         let simReferencejson = [];
         // Function to load JSON and assign to global variable
         function loadsimReferencejson() {
+            if (USE_SIM_WORDS_FOLDER) return;
             fetch('./simDictionary/!reference.json')
                 .then(response => response.json())
                 .then(data => {
@@ -589,91 +596,98 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
 
 
                         // Create Simplified image
-                        const objSim = findPageByWord(candidate);
-                        
-                        const resultItem = document.createElement('li');
-                        resultItem.className = 'result-entry';
-                        resultItem.innerHTML = '<div class="result-header">' + createResultHeader('sim') + '</div>'; // , X: ${word.x}, Y: ${word.y}`;
-                        resultItem.addEventListener("click", () => copyToClipboard(candidate,'sim'));
-                        if (objSim) {
-                            
-
-                            const outerContainer = document.createElement('div');
-                            outerContainer.className = 'max-w-screen overflow-x-auto';
-
-                            const imageContainer = document.createElement('div');
-                            imageContainer.className = 'relative overflow-hidden border';
-                            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-
-                            const img = document.createElement('img');
-                            img.className = 'absolute max-w-none';
-                            img.src = `simDictionary/${objSim.page}.png`;
-                            img.alt = `Gregg shorthand for word: ${objSim.word}`;
-                            img.style.top = `-${objSim.y - 50}px`; // Adjust to center the word vertically
-                            img.style.left = `-${objSim.x - 182.5}px`; // Adjust to center the word horizontally
-                            img.style.width = '1281px'; // Assuming the image width is fixed
-
-                            img.onload = function() {
-                                const scale = IMG_WIDTH / img.naturalWidth;
-                                img.style.top = `-${objSim.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
-                                img.style.left = `-${objSim.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
-                                img.style.width = `${IMG_WIDTH}px`;
-                            };
-
-                            img.onclick = function() {
-
-                                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                                const clipboardInput = document.getElementById("clipboardInput");
-                                clipboardInput.value = objSim.word;
-                                clipboardInput.select();
-                                document.execCommand("copy");
-                                clipboardInput.value = "";                            
-                                var url = `GreggDictionary.html?x=${objSim.word}&gsd=sim`;
-                                var newTab=window.open(url, 'GreggDictionary');
-                                newTab.focus();
-                            };
-
-                            // const expandButton = document.createElement('button');
-                            // expandButton.className = 'expand-button';
-                            // expandButton.innerHTML = 'Expand';
-                            // expandButton.onclick = function() {
-                            //     event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                            //     if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
-                            //         imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
-                            //         imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
-                            //         img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
-                            //         img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
-                            //         expandButton.innerHTML = 'Shrink';
-                            //     } else {
-                            //         imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                            //         imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-                            //         img.style.top = `-${objSim.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
-                            //         img.style.left = `-${objSim.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
-                            //         expandButton.innerHTML = 'Expand';
-                            //     }
-                            // };
-                            imageContainer.appendChild(img);
-                            outerContainer.appendChild(imageContainer);
-                            // outerContainer.appendChild(expandButton);
-                            const mediaContainer = document.createElement('div');
-                            mediaContainer.className = 'result-media';
-                            mediaContainer.appendChild(outerContainer);
-                            if (showGst) {
-                                const gstValue = await getGstValue('sim', candidate);
-                                if (gstValue) {
-                                    const gstCell = document.createElement('div');
-                                    gstCell.className = 'gst-cell';
-                                    gstCell.textContent = gstValue;
-                                    mediaContainer.appendChild(gstCell);
-                                }
-                            }
-                            resultItem.appendChild(mediaContainer);
-                            
-                        }
                         if (isVersionChecked('sim')) {
-                            groupContainer.appendChild(resultItem);
-                            hasVisibleRows = true;
+                            if (USE_SIM_WORDS_FOLDER) {
+                                listItem = document.createElement("li");
+                                listItem.className = 'result-entry';
+                                listItem.innerHTML = '<div class="result-header">' + createResultHeader('sim') + '</div>';
+                                listItem.addEventListener("click", (e) => copyToClipboard(candidate, 'sim', e));
+                                const imagePathsim = 'simWords/'; // path to word.png images
+                                const img_sim = document.createElement("img");
+                                img_sim.src = `${imagePathsim}${candidate}.png`;
+
+                                img_sim.onerror = function() {
+                                    this.style.display = "none";  // Hide the image if it fails to load
+                                };
+
+                                const mediaContainer = document.createElement('div');
+                                mediaContainer.className = 'result-media';
+                                mediaContainer.appendChild(img_sim);
+                                if (showGst) {
+                                    const gstValue = await getGstValue('sim', candidate);
+                                    if (gstValue) {
+                                        const gstCell = document.createElement('div');
+                                        gstCell.className = 'gst-cell';
+                                        gstCell.textContent = gstValue;
+                                        mediaContainer.appendChild(gstCell);
+                                    }
+                                }
+
+                                listItem.appendChild(mediaContainer);
+                                groupContainer.appendChild(listItem);
+                                hasVisibleRows = true;
+                            } else {
+                                const objSim = findPageByWord(candidate);
+                                
+                                const resultItem = document.createElement('li');
+                                resultItem.className = 'result-entry';
+                                resultItem.innerHTML = '<div class="result-header">' + createResultHeader('sim') + '</div>';
+                                resultItem.addEventListener("click", () => copyToClipboard(candidate, 'sim'));
+                                if (objSim) {
+                                    const outerContainer = document.createElement('div');
+                                    outerContainer.className = 'max-w-screen overflow-x-auto';
+
+                                    const imageContainer = document.createElement('div');
+                                    imageContainer.className = 'relative overflow-hidden border';
+                                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
+                                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+
+                                    const img = document.createElement('img');
+                                    img.className = 'absolute max-w-none';
+                                    img.src = `simDictionary/${objSim.page}.png`;
+                                    img.alt = `Gregg shorthand for word: ${objSim.word}`;
+                                    img.style.top = `-${objSim.y - 50}px`; // Adjust to center the word vertically
+                                    img.style.left = `-${objSim.x - 182.5}px`; // Adjust to center the word horizontally
+                                    img.style.width = '1281px'; // Assuming the image width is fixed
+
+                                    img.onload = function() {
+                                        const scale = IMG_WIDTH / img.naturalWidth;
+                                        img.style.top = `-${objSim.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
+                                        img.style.left = `-${objSim.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
+                                        img.style.width = `${IMG_WIDTH}px`;
+                                    };
+
+                                    img.onclick = function() {
+                                        event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
+                                        const clipboardInput = document.getElementById("clipboardInput");
+                                        clipboardInput.value = objSim.word;
+                                        clipboardInput.select();
+                                        document.execCommand("copy");
+                                        clipboardInput.value = "";                            
+                                        var url = `GreggDictionary.html?x=${objSim.word}&gsd=sim`;
+                                        var newTab=window.open(url, 'GreggDictionary');
+                                        newTab.focus();
+                                    };
+
+                                    imageContainer.appendChild(img);
+                                    outerContainer.appendChild(imageContainer);
+                                    const mediaContainer = document.createElement('div');
+                                    mediaContainer.className = 'result-media';
+                                    mediaContainer.appendChild(outerContainer);
+                                    if (showGst) {
+                                        const gstValue = await getGstValue('sim', candidate);
+                                        if (gstValue) {
+                                            const gstCell = document.createElement('div');
+                                            gstCell.className = 'gst-cell';
+                                            gstCell.textContent = gstValue;
+                                            mediaContainer.appendChild(gstCell);
+                                        }
+                                    }
+                                    resultItem.appendChild(mediaContainer);
+                                }
+                                groupContainer.appendChild(resultItem);
+                                hasVisibleRows = true;
+                            }
                         }
                          // Create Anniversary image
                         if (isVersionChecked('ann')) {
