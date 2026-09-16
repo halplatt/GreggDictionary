@@ -55446,7 +55446,7 @@
     },
     {
         "text": "for some years",
-        "gst": "f-s-u-m-ye-r-s",
+        "gst": "f-s-m-ye-r-s",
         "notes": ""
     },
     {
@@ -87016,7 +87016,7 @@
     },
     {
         "text": "many of those",
-        "gst": "mn-e-u-v-th-s",
+        "gst": "mn-e-th-s",
         "notes": ""
     },
     {
@@ -96656,7 +96656,7 @@
     },
     {
         "text": "none of them",
-        "gst": "n-u-n-u-v-th-e-m",
+        "gst": "n-u-n-th-m",
         "notes": ""
     },
     {
@@ -97151,7 +97151,7 @@
     },
     {
         "text": "nothingness",
-        "gst": "n-u-th-e-ng-n-e-s",
+        "gst": "n-o-th-h-n-e-s",
         "notes": ""
     },
     {
@@ -139266,12 +139266,12 @@
     },
     {
         "text": "some of our",
-        "gst": "s-u-m-u-v-a-u-r",
+        "gst": "s-m-r",
         "notes": ""
     },
     {
         "text": "some of that",
-        "gst": "s-m-u-v-th-a",
+        "gst": "s-m-th-a",
         "notes": ""
     },
     {
@@ -139281,12 +139281,12 @@
     },
     {
         "text": "some of them",
-        "gst": "s-u-m-u-v-th-e-m",
+        "gst": "s-m-th-m",
         "notes": ""
     },
     {
         "text": "some of these",
-        "gst": "s-u-m-u-v-th-e-s",
+        "gst": "s-m-th-e-s",
         "notes": ""
     },
     {
@@ -139296,27 +139296,27 @@
     },
     {
         "text": "some ot those",
-        "gst": "s-u-m-o-t-th-s",
+        "gst": "s-m-th-s",
         "notes": ""
     },
     {
         "text": "some time ago",
-        "gst": "s-u-m-tm-a-g-o",
+        "gst": "s-m-tm-g",
         "notes": ""
     },
     {
         "text": "some time",
-        "gst": "s-u-m-tm",
+        "gst": "s-m-tm",
         "notes": ""
     },
     {
         "text": "some years ago",
-        "gst": "s-u-m-ye-r-s-a-g-o",
+        "gst": "s-m-e-r-s-g",
         "notes": ""
     },
     {
         "text": "some years",
-        "gst": "s-u-m-ye-r-s",
+        "gst": "s-m-e-r-s",
         "notes": ""
     },
     {
@@ -139331,17 +139331,17 @@
     },
     {
         "text": "somehow",
-        "gst": "s-u-m-a-u",
+        "gst": "s-m-a-u",
         "notes": ""
     },
     {
         "text": "someone",
-        "gst": "s-u-m-u-n",
+        "gst": "s-m-u-n",
         "notes": ""
     },
     {
         "text": "somersault",
-        "gst": "s-u-m-r-s-o-l-t",
+        "gst": "s-m-r-s-o-l-t",
         "notes": ""
     },
     {
@@ -139356,7 +139356,7 @@
     },
     {
         "text": "something",
-        "gst": "s-u-m-th-h",
+        "gst": "s-m-th-h",
         "notes": ""
     },
     {
@@ -139366,7 +139366,7 @@
     },
     {
         "text": "somewhat",
-        "gst": "s-u-m-u-t",
+        "gst": "s-m-u-t",
         "notes": ""
     },
     {
@@ -139986,7 +139986,7 @@
     },
     {
         "text": "Southington",
-        "gst": "s-a-u-th-e-ng-tn",
+        "gst": "s-u-th/tn",
         "notes": ""
     },
     {
@@ -153226,7 +153226,7 @@
     },
     {
         "text": "the only thing",
-        "gst": "th-o-n-l-e-th-h",
+        "gst": "th-o-n-e-th-h",
         "notes": ""
     },
     {
@@ -154041,12 +154041,12 @@
     },
     {
         "text": "think",
-        "gst": "th-e-nk",
+        "gst": "th-h",
         "notes": ""
     },
     {
         "text": "thinkable",
-        "gst": "th-e-nk-b",
+        "gst": "th-h-b",
         "notes": ""
     },
     {
@@ -154056,12 +154056,12 @@
     },
     {
         "text": "thinkingly",
-        "gst": "th-e-nk/e",
+        "gst": "th-h/e",
         "notes": ""
     },
     {
         "text": "thinks",
-        "gst": "th-e-nk-s",
+        "gst": "th/s",
         "notes": ""
     },
     {
@@ -156421,7 +156421,7 @@
     },
     {
         "text": "to thank you",
-        "gst": "t-u-th-h-u",
+        "gst": "t-u-th-u",
         "notes": ""
     },
     {
@@ -167346,17 +167346,17 @@
     },
     {
         "text": "unthinkable",
-        "gst": "u-n-th-h-b",
+        "gst": "n-th-h-b",
         "notes": ""
     },
     {
         "text": "unthinking",
-        "gst": "u-n-th-h-h",
+        "gst": "n-th-h-h",
         "notes": ""
     },
     {
         "text": "unthinkingly",
-        "gst": "u-n-th-h/e",
+        "gst": "n-th-h/e",
         "notes": ""
     },
     {
@@ -178046,7 +178046,7 @@
     },
     {
         "text": "years of age",
-        "gst": "e-r-s-u-v-a-j",
+        "gst": "e-r-s-a-j",
         "notes": ""
     },
     {
