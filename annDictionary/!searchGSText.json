@@ -40,19 +40,9 @@
         "notes": ""
     },
     {
-        "text": "-itis",
-        "gst": "/ts",
-        "notes": "<1916>"
-    },
-    {
         "text": "-ulate",
         "gst": "/u",
         "notes": ""
-    },
-    {
-        "text": "-vity",
-        "gst": "/v",
-        "notes": "<1916>"
     },
     {
         "text": "-tical",
@@ -63,11 +53,6 @@
         "text": "-egraphy",
         "gst": "/ye",
         "notes": "over last character"
-    },
-    {
-        "text": "one hundred years ago",
-        "gst": "1/n-e-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "ah",
@@ -188,11 +173,6 @@
         "text": "about",
         "gst": "a-b",
         "notes": ""
-    },
-    {
-        "text": "abstr-",
-        "gst": "a-b/",
-        "notes": "<1916>"
     },
     {
         "text": "habeas corpus",
@@ -383,11 +363,6 @@
         "text": "about the",
         "gst": "a-b-th",
         "notes": ""
-    },
-    {
-        "text": "above",
-        "gst": "a-b-v",
-        "notes": "<1916>"
     },
     {
         "text": "above",
@@ -620,16 +595,6 @@
         "notes": ""
     },
     {
-        "text": "adult",
-        "gst": "a-d-u-l",
-        "notes": "<Simp.>"
-    },
-    {
-        "text": "after",
-        "gst": "a-f",
-        "notes": "<1916>"
-    },
-    {
         "text": "affair",
         "gst": "a-f-a-r",
         "notes": ""
@@ -738,11 +703,6 @@
         "text": "after-dinner",
         "gst": "a-f-tn-r",
         "notes": ""
-    },
-    {
-        "text": "against",
-        "gst": "a-g-n-s",
-        "notes": "<Expert>"
     },
     {
         "text": "ago",
@@ -880,11 +840,6 @@
         "notes": ""
     },
     {
-        "text": "wages",
-        "gst": "u-a-j-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "agency",
         "gst": "a-j-s-e",
         "notes": ""
@@ -935,11 +890,6 @@
         "notes": ""
     },
     {
-        "text": "Alaska",
-        "gst": "a-l-a-s2-k",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "I can",
         "gst": "a-k",
         "notes": ""
@@ -953,11 +903,6 @@
         "text": "acoustic",
         "gst": "a-k/s2-t",
         "notes": ""
-    },
-    {
-        "text": "accumulate",
-        "gst": "a-k/u",
-        "notes": "<Expert>"
     },
     {
         "text": "acquaint",
@@ -1033,11 +978,6 @@
         "text": "accordion",
         "gst": "a-k-o-tn",
         "notes": ""
-    },
-    {
-        "text": "accompany",
-        "gst": "a-k-p",
-        "notes": "<Simp.>"
     },
     {
         "text": "accomplish",
@@ -1303,11 +1243,6 @@
         "text": "ail",
         "gst": "a-l",
         "notes": ""
-    },
-    {
-        "text": "Alabama",
-        "gst": "a-l-a",
-        "notes": "<Cen.>"
     },
     {
         "text": "ale",
@@ -1660,11 +1595,6 @@
         "notes": ""
     },
     {
-        "text": "amendment",
-        "gst": "a-mn",
-        "notes": "<Expert>"
-    },
-    {
         "text": "American",
         "gst": "a-m-n",
         "notes": ""
@@ -1683,11 +1613,6 @@
         "text": "almond",
         "gst": "a-mn-d",
         "notes": ""
-    },
-    {
-        "text": "amount of money",
-        "gst": "a-mn-e",
-        "notes": "<Expert>"
     },
     {
         "text": "Armenian",
@@ -1715,16 +1640,6 @@
         "notes": ""
     },
     {
-        "text": "administrator",
-        "gst": "a-mn-r",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "amount",
-        "gst": "a-mn-t",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "amanuensis",
         "gst": "a-mn-u-n-s-s",
         "notes": ""
@@ -1743,11 +1658,6 @@
         "text": "ample",
         "gst": "a-m-p",
         "notes": ""
-    },
-    {
-        "text": "American people",
-        "gst": "a-m-p-e-p",
-        "notes": "<Expert>"
     },
     {
         "text": "amplifier",
@@ -1788,11 +1698,6 @@
         "text": "I am sure",
         "gst": "a-m-sh",
         "notes": ""
-    },
-    {
-        "text": "amounts of money",
-        "gst": "a-m-s2-mn-e",
-        "notes": "<Expert>"
     },
     {
         "text": "I am sorry",
@@ -1930,11 +1835,6 @@
         "notes": ""
     },
     {
-        "text": "analyst",
-        "gst": "a-n-l-e-s",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "annalist",
         "gst": "a-n-l-e-s",
         "notes": ""
@@ -1948,11 +1848,6 @@
         "text": "annuals",
         "gst": "a-n-l-s",
         "notes": ""
-    },
-    {
-        "text": "analysis",
-        "gst": "a-n-a-l-s-s",
-        "notes": "<Simp.>"
     },
     {
         "text": "admonish",
@@ -1998,11 +1893,6 @@
         "text": "anonymity",
         "gst": "a-n-o-n/mt",
         "notes": ""
-    },
-    {
-        "text": "announce",
-        "gst": "a-n-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "answer",
@@ -2200,16 +2090,6 @@
         "notes": ""
     },
     {
-        "text": "appropriate",
-        "gst": "a-p-r-a",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "appropriation bill",
-        "gst": "a-p-r-a-b-l",
-        "notes": "<Expert>"
-    },
-    {
         "text": "approach",
         "gst": "a-p-r-ch",
         "notes": ""
@@ -2258,11 +2138,6 @@
         "text": "apparent",
         "gst": "a-p-r-nt",
         "notes": ""
-    },
-    {
-        "text": "appropriate",
-        "gst": "a-p-r-o-p",
-        "notes": "<Cen.>"
     },
     {
         "text": "appropriate",
@@ -2323,11 +2198,6 @@
         "text": "apartment",
         "gst": "a-p-t-m",
         "notes": ""
-    },
-    {
-        "text": "Arkansas",
-        "gst": "a-r-k",
-        "notes": "<Cen.>"
     },
     {
         "text": "aware",
@@ -2418,11 +2288,6 @@
         "text": "arbutus",
         "gst": "a-r-b-t-u-s",
         "notes": ""
-    },
-    {
-        "text": "yard",
-        "gst": "a-r-d",
-        "notes": "<S90>"
     },
     {
         "text": "Arizona",
@@ -2518,11 +2383,6 @@
         "text": "arthritis",
         "gst": "a-r-th-r-i",
         "notes": ""
-    },
-    {
-        "text": "Arizona",
-        "gst": "a-s",
-        "notes": "<Cen.>"
     },
     {
         "text": "as",
@@ -2790,11 +2650,6 @@
         "notes": ""
     },
     {
-        "text": "as a result",
-        "gst": "a-s-r",
-        "notes": "s1 <Expert>"
-    },
-    {
         "text": "as a rule",
         "gst": "a-s-r-l",
         "notes": "s1"
@@ -2921,7 +2776,7 @@
     },
     {
         "text": "artificial",
-        "gst": "a2-df-e-sh",
+        "gst": "a2-t-f-e-sh",
         "notes": "a2"
     },
     {
@@ -3058,11 +2913,6 @@
         "text": "attorney",
         "gst": "a-tn-e",
         "notes": ""
-    },
-    {
-        "text": "attorney-at-law",
-        "gst": "a-tn-e-l-o",
-        "notes": "e1 <DJS Expert>"
     },
     {
         "text": "attorneys",
@@ -3320,11 +3170,6 @@
         "notes": ""
     },
     {
-        "text": "available",
-        "gst": "a-v-a-l-b",
-        "notes": "<Expert>"
-    },
-    {
         "text": "adventitious",
         "gst": "a-v-nt-e-sh",
         "notes": ""
@@ -3338,11 +3183,6 @@
         "text": "avenue",
         "gst": "a-v-n-u",
         "notes": ""
-    },
-    {
-        "text": "average",
-        "gst": "a-v-r",
-        "notes": "<Expert>"
     },
     {
         "text": "Havre",
@@ -3363,11 +3203,6 @@
         "text": "advertising agent",
         "gst": "a-v-t/a",
         "notes": ""
-    },
-    {
-        "text": "advertise",
-        "gst": "a-v-t",
-        "notes": "<DJS>"
     },
     {
         "text": "advertisement",
@@ -3393,11 +3228,6 @@
         "text": "by",
         "gst": "b",
         "notes": ""
-    },
-    {
-        "text": "board of directors",
-        "gst": "b-/-d-r-s",
-        "notes": "intersected <DJS Expert>"
     },
     {
         "text": "biology",
@@ -3478,11 +3308,6 @@
         "text": "back and forth",
         "gst": "b-a-k-f-th",
         "notes": ""
-    },
-    {
-        "text": "background",
-        "gst": "b-a-k-g-r",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "background",
@@ -3568,11 +3393,6 @@
         "text": "bailiwick",
         "gst": "b-a-l-w-e-k",
         "notes": ""
-    },
-    {
-        "text": "bear in mind",
-        "gst": "b-a2-m-i",
-        "notes": "a2 <Expert>"
     },
     {
         "text": "bear in mind",
@@ -3985,11 +3805,6 @@
         "notes": "e1, e2"
     },
     {
-        "text": "birthday",
-        "gst": "b-e-r-th-d-a",
-        "notes": "<1916>"
-    },
-    {
         "text": "beaten",
         "gst": "b-e-tn",
         "notes": ""
@@ -4015,19 +3830,9 @@
         "notes": ""
     },
     {
-        "text": "behalf",
-        "gst": "b-f",
-        "notes": "<1916>"
-    },
-    {
         "text": "before and after",
         "gst": "b-f-a-f-t",
         "notes": ""
-    },
-    {
-        "text": "beneficiary",
-        "gst": "b-f-e-sh",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "befall",
@@ -4098,11 +3903,6 @@
         "text": "bigamy",
         "gst": "b-g-m-e",
         "notes": ""
-    },
-    {
-        "text": "bargain",
-        "gst": "b-g-n",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "begun",
@@ -4183,11 +3983,6 @@
         "text": "budget",
         "gst": "b-j-e-t",
         "notes": ""
-    },
-    {
-        "text": "budget",
-        "gst": "b-j-e-t",
-        "notes": "<Simp.>"
     },
     {
         "text": "become",
@@ -4320,11 +4115,6 @@
         "notes": "s2"
     },
     {
-        "text": "believe",
-        "gst": "b-e",
-        "notes": "<1902>b-l-e"
-    },
-    {
         "text": "bilingual",
         "gst": "b-l-e-ng-l",
         "notes": ""
@@ -4358,11 +4148,6 @@
         "text": "belittle",
         "gst": "b-l-e-t",
         "notes": ""
-    },
-    {
-        "text": "bulletin",
-        "gst": "b-l-e-tn",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "Belfast",
@@ -4720,11 +4505,6 @@
         "notes": "a2"
     },
     {
-        "text": "borne in mind",
-        "gst": "b-o-m-i",
-        "notes": "<Expert>"
-    },
-    {
         "text": "beyond",
         "gst": "b-o-n",
         "notes": ""
@@ -4748,11 +4528,6 @@
         "text": "bonus",
         "gst": "b-o-n-u-s",
         "notes": ""
-    },
-    {
-        "text": "board",
-        "gst": "b-o-r",
-        "notes": "<1916>"
     },
     {
         "text": "bore",
@@ -4838,11 +4613,6 @@
         "text": "box",
         "gst": "b-o-x",
         "notes": ""
-    },
-    {
-        "text": "bankrupt",
-        "gst": "b-a-nk-p",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "biplane",
@@ -5060,11 +4830,6 @@
         "notes": ""
     },
     {
-        "text": "brought up",
-        "gst": "b-r-o-t-p",
-        "notes": "<Expert>"
-    },
-    {
         "text": "Barcelona",
         "gst": "b-r-s-e-l-o-n-a",
         "notes": ""
@@ -5075,29 +4840,9 @@
         "notes": ""
     },
     {
-        "text": "by reason of my",
-        "gst": "b-r-s2-m-a",
-        "notes": "s1 <Expert>"
-    },
-    {
         "text": "burst",
         "gst": "b-r-s2-t",
         "notes": ""
-    },
-    {
-        "text": "by reaon of the",
-        "gst": "b-r-s2-th",
-        "notes": "s1-th1 <Expert>"
-    },
-    {
-        "text": "by reason of their",
-        "gst": "b-r-s2-th2",
-        "notes": "s1-th2 <Expert>"
-    },
-    {
-        "text": "by reason of that",
-        "gst": "b-r-s2-th-a",
-        "notes": "s1-th1 <Expert>"
     },
     {
         "text": "brother",
@@ -5113,11 +4858,6 @@
         "text": "business",
         "gst": "b-s",
         "notes": ""
-    },
-    {
-        "text": "bankruptcy",
-        "gst": "b-s-e",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "British Columbia",
@@ -5165,11 +4905,6 @@
         "notes": "s1"
     },
     {
-        "text": "but",
-        "gst": "b-t",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "battalion",
         "gst": "b-t-a-l-n",
         "notes": ""
@@ -5183,11 +4918,6 @@
         "text": "better",
         "gst": "b-t-e2",
         "notes": "e2"
-    },
-    {
-        "text": "bitter",
-        "gst": "b-e-t-e2",
-        "notes": "e2 <1916>"
     },
     {
         "text": "battery",
@@ -5243,21 +4973,6 @@
         "text": "beauteous",
         "gst": "b-t-u-s",
         "notes": ""
-    },
-    {
-        "text": "bureau",
-        "gst": "b-u",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "bureaucratic",
-        "gst": "b-u/a",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "bureaucrat",
-        "gst": "b-u-r-o-k",
-        "notes": "<Expert>"
     },
     {
         "text": "by the way",
@@ -5536,7 +5251,7 @@
     },
     {
         "text": "cheerless",
-        "gst": "ch-e-r-l",
+        "gst": "ch-e2-l",
         "notes": "l above e"
     },
     {
@@ -5553,11 +5268,6 @@
         "text": "cheaper",
         "gst": "ch-e-p-r",
         "notes": ""
-    },
-    {
-        "text": "cheerless",
-        "gst": "ch-e-r-l",
-        "notes": "<Simp.>"
     },
     {
         "text": "churl",
@@ -5590,11 +5300,6 @@
         "notes": ""
     },
     {
-        "text": "check",
-        "gst": "ch-e-k",
-        "notes": "<1916>"
-    },
-    {
         "text": "chocolate",
         "gst": "ch-k-l-a",
         "notes": ""
@@ -5618,16 +5323,6 @@
         "text": "changeless",
         "gst": "ch-l",
         "notes": ""
-    },
-    {
-        "text": "chairman",
-        "gst": "ch-m-a-n",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "chairman",
-        "gst": "ch-a2-m-a2-n",
-        "notes": "<Expert>"
     },
     {
         "text": "chief engineer",
@@ -5880,11 +5575,6 @@
         "notes": ""
     },
     {
-        "text": "debate",
-        "gst": "d-b-a",
-        "notes": "<Expert>"
-    },
-    {
         "text": "would be able",
         "gst": "d-b-a",
         "notes": ""
@@ -5923,11 +5613,6 @@
         "text": "duchess",
         "gst": "d-ch-e-s",
         "notes": ""
-    },
-    {
-        "text": "Delaware",
-        "gst": "d-e",
-        "notes": "<Cen.>"
     },
     {
         "text": "deal",
@@ -6055,11 +5740,6 @@
         "notes": ""
     },
     {
-        "text": "deka-",
-        "gst": "d-e-k",
-        "notes": "<S90>"
-    },
-    {
         "text": "decalcomania",
         "gst": "d-e-k-a-l-k",
         "notes": ""
@@ -6133,11 +5813,6 @@
         "text": "dictum",
         "gst": "d-e-k-tm",
         "notes": ""
-    },
-    {
-        "text": "deal",
-        "gst": "d-e2",
-        "notes": "<Simp.>"
     },
     {
         "text": "Delaware",
@@ -6285,11 +5960,6 @@
         "notes": ""
     },
     {
-        "text": "deci-",
-        "gst": "d-e-s",
-        "notes": "<S90>"
-    },
-    {
         "text": "dizzy",
         "gst": "d-e-s-e",
         "notes": ""
@@ -6338,11 +6008,6 @@
         "text": "dexterity",
         "gst": "d-e-x/r",
         "notes": ""
-    },
-    {
-        "text": "Denver",
-        "gst": "tn-v",
-        "notes": "<Cen.>"
     },
     {
         "text": "differ",
@@ -6540,11 +6205,6 @@
         "notes": ""
     },
     {
-        "text": "defect",
-        "gst": "df-e-k",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "difficult",
         "gst": "df-k",
         "notes": ""
@@ -6553,11 +6213,6 @@
         "text": "difficulty",
         "gst": "df-k-e",
         "notes": ""
-    },
-    {
-        "text": "difficulty",
-        "gst": "df-k-e",
-        "notes": "<Simp.>"
     },
     {
         "text": "develop",
@@ -6591,12 +6246,7 @@
     },
     {
         "text": "deform",
-        "gst": "df-m",
-        "notes": "<Simp.>"
-    },
-    {
-        "text": "deform",
-        "gst": "df-m",
+        "gst": "d-f-m",
         "notes": ""
     },
     {
@@ -6655,11 +6305,6 @@
         "notes": ""
     },
     {
-        "text": "devote",
-        "gst": "df-o-t",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "defer",
         "gst": "df-r",
         "notes": ""
@@ -6713,11 +6358,6 @@
         "text": "diurnal",
         "gst": "d-ie-n-l",
         "notes": ""
-    },
-    {
-        "text": "diocese",
-        "gst": "d-ie-s-s",
-        "notes": "<Simp.>"
     },
     {
         "text": "diabetes",
@@ -6905,11 +6545,6 @@
         "notes": ""
     },
     {
-        "text": "dilution",
-        "gst": "d-e-l-sh",
-        "notes": "<Simp.> <cf. d-e-l-sh>"
-    },
-    {
         "text": "d-l-e-sh",
         "gst": "d-e-l-sh",
         "notes": ""
@@ -7090,11 +6725,6 @@
         "notes": ""
     },
     {
-        "text": "don't",
-        "gst": "d-o-n",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "dauntless",
         "gst": "d-o-nt-l",
         "notes": ""
@@ -7223,11 +6853,6 @@
         "text": "depute",
         "gst": "d-p-u",
         "notes": ""
-    },
-    {
-        "text": "director",
-        "gst": "d-r",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "doctor",
@@ -7780,11 +7405,6 @@
         "notes": ""
     },
     {
-        "text": "District of Columbia",
-        "gst": "d-s2-k-o-l",
-        "notes": "s2 <Expert>"
-    },
-    {
         "text": "discordant",
         "gst": "d-s2-k-o-tn",
         "notes": ""
@@ -8220,11 +7840,6 @@
         "notes": ""
     },
     {
-        "text": "Department of Agriculture",
-        "gst": "d-ya",
-        "notes": "<Expert>"
-    },
-    {
         "text": "disagree",
         "gst": "d-ya",
         "notes": "connected at top of loop"
@@ -8505,11 +8120,6 @@
         "notes": ""
     },
     {
-        "text": "expenditures",
-        "gst": "e-jnt-r-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "eek",
         "gst": "e-k",
         "notes": ""
@@ -8540,11 +8150,6 @@
         "notes": ""
     },
     {
-        "text": "economical",
-        "gst": "e-k/k",
-        "notes": "<Expert>"
-    },
-    {
         "text": "equable",
         "gst": "e-k-b",
         "notes": ""
@@ -8553,16 +8158,6 @@
         "text": "Ecuador",
         "gst": "e-k-d-o-r",
         "notes": ""
-    },
-    {
-        "text": "economy",
-        "gst": "e-k-e",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "economic",
-        "gst": "e-k-e-k",
-        "notes": "<Expert>"
     },
     {
         "text": "equal",
@@ -8613,11 +8208,6 @@
         "text": "weekend",
         "gst": "e-k-nt",
         "notes": ""
-    },
-    {
-        "text": "equip",
-        "gst": "e-k-p",
-        "notes": "<Cen.>"
     },
     {
         "text": "weeks",
@@ -8725,11 +8315,6 @@
         "notes": ""
     },
     {
-        "text": "electric",
-        "gst": "e-l",
-        "notes": "raised <Cen.>"
-    },
-    {
         "text": "electr-",
         "gst": "e-l/",
         "notes": ""
@@ -8808,11 +8393,6 @@
         "text": "elbow",
         "gst": "e-l-b-o",
         "notes": ""
-    },
-    {
-        "text": "yield",
-        "gst": "e-ld",
-        "notes": "<S90>"
     },
     {
         "text": "illiberal",
@@ -8950,11 +8530,6 @@
         "notes": ""
     },
     {
-        "text": "yellow",
-        "gst": "e-l-o",
-        "notes": "<S90>"
-    },
-    {
         "text": "eloquence",
         "gst": "e-l-o-k",
         "notes": ""
@@ -8978,11 +8553,6 @@
         "text": "he always",
         "gst": "e-l-s",
         "notes": ""
-    },
-    {
-        "text": "election",
-        "gst": "e-l-sh",
-        "notes": "<Expert>"
     },
     {
         "text": "elusion",
@@ -9118,11 +8688,6 @@
         "text": "emergence",
         "gst": "e-m-e-j",
         "notes": ""
-    },
-    {
-        "text": "emergency",
-        "gst": "e-m-e-j",
-        "notes": "<Expert>"
     },
     {
         "text": "emergency",
@@ -9313,11 +8878,6 @@
         "text": "immure",
         "gst": "e-m-u-r",
         "notes": ""
-    },
-    {
-        "text": "Indiana",
-        "gst": "e-n",
-        "notes": "<Cen.>"
     },
     {
         "text": "inn",
@@ -9515,16 +9075,6 @@
         "notes": "e1, e2"
     },
     {
-        "text": "incorporate",
-        "gst": "nk-r-p",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "increase",
-        "gst": "nk-r-e-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "ink",
         "gst": "e-nk",
         "notes": ""
@@ -9690,11 +9240,6 @@
         "notes": ""
     },
     {
-        "text": "explain",
-        "gst": "e-p-l",
-        "notes": "<Expert>"
-    },
-    {
         "text": "epoch",
         "gst": "e-p-o-k",
         "notes": "<cf. e-p-k>"
@@ -9745,11 +9290,6 @@
         "notes": ""
     },
     {
-        "text": "year",
-        "gst": "e-r",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "erratic",
         "gst": "e-r/a",
         "notes": ""
@@ -9798,11 +9338,6 @@
         "text": "Erie",
         "gst": "e-r-e",
         "notes": ""
-    },
-    {
-        "text": "yearly",
-        "gst": "e-r-e",
-        "notes": "<Simp.>"
     },
     {
         "text": "irreclaimable",
@@ -9895,16 +9430,6 @@
         "notes": ""
     },
     {
-        "text": "year ago",
-        "gst": "e-r-g",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "years ago",
-        "gst": "ye-r-s2-g",
-        "notes": "<Expert>"
-    },
-    {
         "text": "irk",
         "gst": "e-r-k",
         "notes": ""
@@ -9955,11 +9480,6 @@
         "notes": ""
     },
     {
-        "text": "years",
-        "gst": "e-r-s",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "irresponsible",
         "gst": "e-r-s-p",
         "notes": ""
@@ -10000,11 +9520,6 @@
         "notes": ""
     },
     {
-        "text": "yes",
-        "gst": "e-s",
-        "notes": "<S90>"
-    },
-    {
         "text": "he is",
         "gst": "e-s",
         "notes": ""
@@ -10013,16 +9528,6 @@
         "text": "extra",
         "gst": "e-s/",
         "notes": "raised"
-    },
-    {
-        "text": "he was",
-        "gst": "e-o-s",
-        "notes": "s2 <Expert>"
-    },
-    {
-        "text": "expense",
-        "gst": "e-s",
-        "notes": "s2, raised <Expert>"
     },
     {
         "text": "exotic",
@@ -10118,11 +9623,6 @@
         "text": "extravagant",
         "gst": "e-s/v",
         "notes": "s1"
-    },
-    {
-        "text": "expensive",
-        "gst": "e-s2/v",
-        "notes": "s2 <Expert>"
     },
     {
         "text": "extravagance",
@@ -10245,11 +9745,6 @@
         "notes": ""
     },
     {
-        "text": "executive",
-        "gst": "e-s2-e-k-v",
-        "notes": "<S90>"
-    },
-    {
         "text": "exequatur",
         "gst": "e-s2-e-k-w-a-t-e2",
         "notes": "<e1,e1,e2>"
@@ -10308,11 +9803,6 @@
         "text": "excess",
         "gst": "e-s-e-s",
         "notes": ""
-    },
-    {
-        "text": "exist",
-        "gst": "e-s-e-s",
-        "notes": "<Simp.>"
     },
     {
         "text": "excision",
@@ -10620,11 +10110,6 @@
         "notes": ""
     },
     {
-        "text": "experience",
-        "gst": "e-s-p",
-        "notes": "<S90>"
-    },
-    {
         "text": "ex post facto",
         "gst": "e-s-p/f",
         "notes": ""
@@ -10653,11 +10138,6 @@
         "text": "especially",
         "gst": "e-s-p-e",
         "notes": ""
-    },
-    {
-        "text": "experience",
-        "gst": "e-s-p-e-r",
-        "notes": "<DJS>"
     },
     {
         "text": "expert",
@@ -10890,11 +10370,6 @@
         "notes": ""
     },
     {
-        "text": "establish",
-        "gst": "e-s2-t-b",
-        "notes": "<Expert>"
-    },
-    {
         "text": "estate",
         "gst": "e-s2-t",
         "notes": ""
@@ -11025,11 +10500,6 @@
         "notes": ""
     },
     {
-        "text": "extant",
-        "gst": "e-s2-tn-t",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "extent",
         "gst": "e-s2-tn-t",
         "notes": ""
@@ -11073,11 +10543,6 @@
         "text": "eat",
         "gst": "e-t",
         "notes": ""
-    },
-    {
-        "text": "yet",
-        "gst": "e-t",
-        "notes": "<Simp.>"
     },
     {
         "text": "irritate",
@@ -11163,11 +10628,6 @@
         "text": "with reference to the matter",
         "gst": "e-th-r-f-m-a-t",
         "notes": ""
-    },
-    {
-        "text": "either side",
-        "gst": "e-th2-s",
-        "notes": "th2 <Expert>"
     },
     {
         "text": "without",
@@ -11330,19 +10790,9 @@
         "notes": ""
     },
     {
-        "text": "usual",
-        "gst": "e-u-sh",
-        "notes": "<S90>"
-    },
-    {
         "text": "U.S.S.R.",
         "gst": "e-u-s-s-r",
         "notes": ""
-    },
-    {
-        "text": "Utah",
-        "gst": "e-u-t",
-        "notes": "<Cen.>"
     },
     {
         "text": "Utah",
@@ -11358,11 +10808,6 @@
         "text": "utilize",
         "gst": "e-u-t-l-i-s",
         "notes": ""
-    },
-    {
-        "text": "every",
-        "gst": "e-v",
-        "notes": "<1916><djs>"
     },
     {
         "text": "ever",
@@ -11460,11 +10905,6 @@
         "notes": ""
     },
     {
-        "text": "even though",
-        "gst": "e-v-n-o",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "event",
         "gst": "e-v-nt",
         "notes": ""
@@ -11508,11 +10948,6 @@
         "text": "for",
         "gst": "f",
         "notes": ""
-    },
-    {
-        "text": "photo-",
-        "gst": "f-",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "freight agent",
@@ -11775,11 +11210,6 @@
         "notes": ""
     },
     {
-        "text": "facial",
-        "gst": "f-a-sh",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "fashion",
         "gst": "f-a-sh",
         "notes": ""
@@ -11833,11 +11263,6 @@
         "text": "faith",
         "gst": "f-a-th",
         "notes": "th1"
-    },
-    {
-        "text": "father",
-        "gst": "f-a-th",
-        "notes": "th1 <DJS>"
     },
     {
         "text": "farther",
@@ -11963,11 +11388,6 @@
         "text": "fed",
         "gst": "f-e-d",
         "notes": ""
-    },
-    {
-        "text": "federal",
-        "gst": "f-e-d",
-        "notes": "<Expert>"
     },
     {
         "text": "feed",
@@ -12251,11 +11671,6 @@
     },
     {
         "text": "for example",
-        "gst": "f-e-s2-a-m",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "for example",
         "gst": "f-e-s-a-m-p",
         "notes": ""
     },
@@ -12483,11 +11898,6 @@
         "text": "forgot",
         "gst": "f-g-t",
         "notes": ""
-    },
-    {
-        "text": "Federal Government",
-        "gst": "f-g-v",
-        "notes": "<Expert>"
     },
     {
         "text": "find",
@@ -12815,16 +12225,6 @@
         "notes": ""
     },
     {
-        "text": "few moments",
-        "gst": "f-mn-s",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "few moments ago",
-        "gst": "f-mn-s2-g",
-        "notes": "<Expert>"
-    },
-    {
         "text": "few months",
         "gst": "f-mn-th-s",
         "notes": ""
@@ -12833,11 +12233,6 @@
         "text": "foremost",
         "gst": "f-m-o",
         "notes": ""
-    },
-    {
-        "text": "Federal employee",
-        "gst": "f-m-p-e",
-        "notes": "<Expert>"
     },
     {
         "text": "forms",
@@ -13115,11 +12510,6 @@
         "notes": ""
     },
     {
-        "text": "Federal Reserve Board",
-        "gst": "f-r-/-b",
-        "notes": "intersected <Expert>"
-    },
-    {
         "text": "frailty",
         "gst": "f-r/l",
         "notes": ""
@@ -13190,11 +12580,6 @@
         "notes": ""
     },
     {
-        "text": "Federal Reserve Bank",
-        "gst": "f-r-b",
-        "notes": "<Expert>"
-    },
-    {
         "text": "free",
         "gst": "f-r-e",
         "notes": ""
@@ -13263,11 +12648,6 @@
         "text": "frivolous",
         "gst": "f-r-e-v",
         "notes": ""
-    },
-    {
-        "text": "few years ago",
-        "gst": "f-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "Friday",
@@ -13455,11 +12835,6 @@
         "notes": "th2"
     },
     {
-        "text": "for the purpose",
-        "gst": "f-th-p",
-        "notes": "th1 <Expert>"
-    },
-    {
         "text": "for the time being",
         "gst": "f-tm-b",
         "notes": ""
@@ -13490,11 +12865,6 @@
         "notes": ""
     },
     {
-        "text": "future",
-        "gst": "f-t",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "Ft. Worth",
         "gst": "f-t-u-th",
         "notes": ""
@@ -13508,11 +12878,6 @@
         "text": "full",
         "gst": "f-u",
         "notes": ""
-    },
-    {
-        "text": "fully",
-        "gst": "f-u",
-        "notes": "<1916>"
     },
     {
         "text": "food",
@@ -13588,11 +12953,6 @@
         "text": "go",
         "gst": "g",
         "notes": ""
-    },
-    {
-        "text": "God",
-        "gst": "g-o-d",
-        "notes": "<1902>"
     },
     {
         "text": "good",
@@ -13678,11 +13038,6 @@
         "text": "gave",
         "gst": "g-a",
         "notes": ""
-    },
-    {
-        "text": "Georgia",
-        "gst": "j-a",
-        "notes": "<Cen.>"
     },
     {
         "text": "gay",
@@ -13925,11 +13280,6 @@
         "notes": ""
     },
     {
-        "text": "give away",
-        "gst": "g-e/n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "gift",
         "gst": "g-e-f-t",
         "notes": ""
@@ -14010,11 +13360,6 @@
         "notes": "e2"
     },
     {
-        "text": "get up",
-        "gst": "g-e-t-p",
-        "notes": "<Expert>"
-    },
-    {
         "text": "gets",
         "gst": "g-e-t-s",
         "notes": ""
@@ -14053,11 +13398,6 @@
         "text": "girlhood",
         "gst": "g-l/d",
         "notes": ""
-    },
-    {
-        "text": "gladden",
-        "gst": "g-l/n",
-        "notes": "<1916>"
     },
     {
         "text": "gladiolus",
@@ -14143,11 +13483,6 @@
         "text": "gladden",
         "gst": "g-l/n",
         "notes": ""
-    },
-    {
-        "text": "gladness",
-        "gst": "g-l-n",
-        "notes": "<1916>"
     },
     {
         "text": "gladness",
@@ -14303,11 +13638,6 @@
         "text": "goad",
         "gst": "g-o-d",
         "notes": ""
-    },
-    {
-        "text": "God",
-        "gst": "g-o-d",
-        "notes": "<Simp.>"
     },
     {
         "text": "gourd",
@@ -14476,7 +13806,7 @@
     },
     {
         "text": "grateful",
-        "gst": "g-r-a-df",
+        "gst": "g-r-a-t-f",
         "notes": ""
     },
     {
@@ -14665,11 +13995,6 @@
         "notes": ""
     },
     {
-        "text": "guarantee",
-        "gst": "g-a2-nt-e",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "gotten",
         "gst": "g-tn",
         "notes": ""
@@ -14720,16 +14045,6 @@
         "notes": ""
     },
     {
-        "text": "Government of the United States",
-        "gst": "g-v-e-u-s",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "government",
-        "gst": "g-v",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "Guam",
         "gst": "g-w-a-m",
         "notes": ""
@@ -14748,11 +14063,6 @@
         "text": "an",
         "gst": "h",
         "notes": ""
-    },
-    {
-        "text": "a hundred years ago",
-        "gst": "h/n-e-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "hay",
@@ -14955,11 +14265,6 @@
         "notes": ""
     },
     {
-        "text": "aware",
-        "gst": "a-r",
-        "notes": "dot in front of a <1916>"
-    },
-    {
         "text": "harpsichord",
         "gst": "h-a-r-p-s2-k-o-d",
         "notes": ""
@@ -15038,11 +14343,6 @@
         "text": "Howard",
         "gst": "h-a-u-d",
         "notes": ""
-    },
-    {
-        "text": "Hawaii",
-        "gst": "h-i",
-        "notes": "<Simp.>"
     },
     {
         "text": "hound",
@@ -15138,11 +14438,6 @@
         "text": "hedgehog",
         "gst": "h-e-j-o-g",
         "notes": ""
-    },
-    {
-        "text": "hekto-",
-        "gst": "h-e-k",
-        "notes": "<S90>"
     },
     {
         "text": "hecatomb",
@@ -15355,11 +14650,6 @@
         "notes": ""
     },
     {
-        "text": "heron",
-        "gst": "h-e-r-n",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "hereof",
         "gst": "h-e-r-o",
         "notes": ""
@@ -15368,11 +14658,6 @@
         "text": "hero",
         "gst": "h-e-r-o",
         "notes": ""
-    },
-    {
-        "text": "heroine",
-        "gst": "h-e-r-o-e-n",
-        "notes": "<Simp.>"
     },
     {
         "text": "heroine",
@@ -15521,7 +14806,7 @@
     },
     {
         "text": "heretofore",
-        "gst": "h-e2-df",
+        "gst": "h-e2-t-f",
         "notes": "e2"
     },
     {
@@ -15633,11 +14918,6 @@
         "text": "ahead",
         "gst": "h-h-e-d",
         "notes": ""
-    },
-    {
-        "text": "Hawaii",
-        "gst": "h-i",
-        "notes": "<Cen.>"
     },
     {
         "text": "high",
@@ -16325,11 +15605,6 @@
         "notes": ""
     },
     {
-        "text": "eye",
-        "gst": "i",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "Iowa",
         "gst": "i",
         "notes": ""
@@ -16338,16 +15613,6 @@
         "text": "why",
         "gst": "i",
         "notes": ""
-    },
-    {
-        "text": "hydr-",
-        "gst": "i/",
-        "notes": "<1916>"
-    },
-    {
-        "text": "Iowa",
-        "gst": "i",
-        "notes": "<Cen.>"
     },
     {
         "text": "iodate",
@@ -16383,11 +15648,6 @@
         "text": "I had",
         "gst": "i-d",
         "notes": ""
-    },
-    {
-        "text": "Idaho",
-        "gst": "i-d",
-        "notes": "<Cen.>"
     },
     {
         "text": "Idaho",
@@ -16448,11 +15708,6 @@
         "text": "ion",
         "gst": "i-n",
         "notes": "i1"
-    },
-    {
-        "text": "highway",
-        "gst": "i2-n",
-        "notes": "i2 <Expert>"
     },
     {
         "text": "why not",
@@ -16535,19 +15790,9 @@
         "notes": ""
     },
     {
-        "text": "he has",
-        "gst": "i-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "ice",
         "gst": "i-s",
         "notes": ""
-    },
-    {
-        "text": "wise",
-        "gst": "u-i-s",
-        "notes": "<Expert>"
     },
     {
         "text": "ice house",
@@ -16598,11 +15843,6 @@
         "text": "geography",
         "gst": "j/o-e",
         "notes": ""
-    },
-    {
-        "text": "joint resolution",
-        "gst": "j-/-r-s-o-sh",
-        "notes": "j and r intersected <Expert>"
     },
     {
         "text": "Georgia",
@@ -16935,19 +16175,9 @@
         "notes": ""
     },
     {
-        "text": "just a moment",
-        "gst": "j-mn",
-        "notes": "<Expert>"
-    },
-    {
         "text": "jump",
         "gst": "j-m-p",
         "notes": ""
-    },
-    {
-        "text": "general",
-        "gst": "j-e-n",
-        "notes": "<Expert>"
     },
     {
         "text": "June",
@@ -16985,18 +16215,13 @@
         "notes": ""
     },
     {
-        "text": "pending bill",
-        "gst": "jnt-b",
-        "notes": "<Expert>"
-    },
-    {
         "text": "gently",
         "gst": "jnt-e",
         "notes": ""
     },
     {
         "text": "pending",
-        "gst": "jn-th",
+        "gst": "jnt-h",
         "notes": ""
     },
     {
@@ -17005,19 +16230,9 @@
         "notes": ""
     },
     {
-        "text": "pending legislation",
-        "gst": "jnt-l-j",
-        "notes": "<Expert>"
-    },
-    {
         "text": "gentleman",
         "gst": "jnt",
         "notes": ""
-    },
-    {
-        "text": "gentleman",
-        "gst": "jntmn",
-        "notes": "<1916>"
     },
     {
         "text": "gender",
@@ -17028,11 +16243,6 @@
         "text": "gentry",
         "gst": "jnt-r-e",
         "notes": ""
-    },
-    {
-        "text": "pending resolution",
-        "gst": "jnt-r-s2-o-sh",
-        "notes": "<Expert>"
     },
     {
         "text": "jaw",
@@ -17153,11 +16363,6 @@
         "text": "Jersey City",
         "gst": "j-s2-e-t-e",
         "notes": ""
-    },
-    {
-        "text": "junior Senator from X",
-        "gst": "j-s2-n/x",
-        "notes": "<Expert>"
     },
     {
         "text": "general ticket agent",
@@ -17290,11 +16495,6 @@
         "notes": ""
     },
     {
-        "text": "kilo-",
-        "gst": "k-",
-        "notes": "<S90>"
-    },
-    {
         "text": "counter",
         "gst": "k-nt-r",
         "notes": "raised"
@@ -17340,11 +16540,6 @@
         "notes": ""
     },
     {
-        "text": "quality",
-        "gst": "k-u",
-        "notes": "k on line <Simp.>"
-    },
-    {
         "text": "control",
         "gst": "k/l",
         "notes": "k raised"
@@ -17363,11 +16558,6 @@
         "text": "caveat emptor",
         "gst": "k-/-mt",
         "notes": "intersected"
-    },
-    {
-        "text": "community",
-        "gst": "k/nt",
-        "notes": "<Expert>"
     },
     {
         "text": "C.O.D.",
@@ -17420,11 +16610,6 @@
         "notes": "intersected"
     },
     {
-        "text": "congratulate",
-        "gst": "k/u",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "contrive",
         "gst": "k/v",
         "notes": ""
@@ -17440,19 +16625,9 @@
         "notes": ""
     },
     {
-        "text": "California",
-        "gst": "k-a",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "care",
         "gst": "k-a",
         "notes": ""
-    },
-    {
-        "text": "case",
-        "gst": "k-a",
-        "notes": "<Expert>"
     },
     {
         "text": "chaotic",
@@ -17518,11 +16693,6 @@
         "text": "carries",
         "gst": "k-a-e-s",
         "notes": ""
-    },
-    {
-        "text": "carry out",
-        "gst": "k-a-e-t",
-        "notes": "<Expert>"
     },
     {
         "text": "calf",
@@ -17896,7 +17066,7 @@
     },
     {
         "text": "catafalque",
-        "gst": "k-a-df-a-l-k",
+        "gst": "k-a-t-f-a-l-k",
         "notes": ""
     },
     {
@@ -18093,16 +17263,6 @@
         "text": "conducted",
         "gst": "k-d-u-k-d",
         "notes": ""
-    },
-    {
-        "text": "commit",
-        "gst": "k-e",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "committee",
-        "gst": "k-e-t-e",
-        "notes": "<Expert>"
     },
     {
         "text": "Kentucky",
@@ -18395,11 +17555,6 @@
         "notes": ""
     },
     {
-        "text": "conference",
-        "gst": "k-f-e-r",
-        "notes": "<Expert>"
-    },
-    {
         "text": "conferee",
         "gst": "k-f-e-r-e",
         "notes": ""
@@ -18408,11 +17563,6 @@
         "text": "conference",
         "gst": "k-f-e-r-e-n-s",
         "notes": ""
-    },
-    {
-        "text": "conference",
-        "gst": "k-f-e-r",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "confess",
@@ -18525,11 +17675,6 @@
         "notes": ""
     },
     {
-        "text": "Kentucky",
-        "gst": "k-e",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "kind",
         "gst": "k-i",
         "notes": ""
@@ -18540,19 +17685,9 @@
         "notes": ""
     },
     {
-        "text": "carry on",
-        "gst": "k-ie-n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "kindly let us know",
         "gst": "k-i-l-e-n-u",
         "notes": ""
-    },
-    {
-        "text": "kindness",
-        "gst": "k-i-n-e-s",
-        "notes": "<1916>"
     },
     {
         "text": "kine",
@@ -18618,11 +17753,6 @@
         "text": "cocaine",
         "gst": "k-k-a-n",
         "notes": ""
-    },
-    {
-        "text": "communicate",
-        "gst": "k-m-u",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "concatenate",
@@ -18712,16 +17842,6 @@
     {
         "text": "claim",
         "gst": "k-l-a",
-        "notes": "<1916>"
-    },
-    {
-        "text": "claimant",
-        "gst": "k-l-a/nt",
-        "notes": "<1916>"
-    },
-    {
-        "text": "claim",
-        "gst": "k-l-a",
         "notes": ""
     },
     {
@@ -18753,11 +17873,6 @@
         "text": "clarion",
         "gst": "k-l-a-r-n",
         "notes": ""
-    },
-    {
-        "text": "claims",
-        "gst": "k-l-a-m-s",
-        "notes": "<1916>"
     },
     {
         "text": "class",
@@ -18878,11 +17993,6 @@
         "text": "clever",
         "gst": "k-l-e-v",
         "notes": ""
-    },
-    {
-        "text": "client",
-        "gst": "k-l-i",
-        "notes": "<1902>"
     },
     {
         "text": "DJS Expert)",
@@ -19125,19 +18235,9 @@
         "notes": ""
     },
     {
-        "text": "come up",
-        "gst": "k-m-p",
-        "notes": "<Expert>"
-    },
-    {
         "text": "comes",
         "gst": "k-m-s",
         "notes": ""
-    },
-    {
-        "text": "comes up",
-        "gst": "k-m-s/p",
-        "notes": "<Expert>"
     },
     {
         "text": "commiserate",
@@ -19205,11 +18305,6 @@
         "notes": ""
     },
     {
-        "text": "connect",
-        "gst": "k-e-k",
-        "notes": "<Simp.><cf. k-e-k>"
-    },
-    {
         "text": "cognizant",
         "gst": "k-n-e-s2-nt",
         "notes": ""
@@ -19253,11 +18348,6 @@
         "text": "call",
         "gst": "k-o",
         "notes": ""
-    },
-    {
-        "text": "Colorado",
-        "gst": "k-o",
-        "notes": "<Cen.>"
     },
     {
         "text": "called",
@@ -19390,11 +18480,6 @@
         "notes": ""
     },
     {
-        "text": "call",
-        "gst": "k-o",
-        "notes": "<DJS>"
-    },
-    {
         "text": "coal",
         "gst": "k-o-l",
         "notes": ""
@@ -19448,11 +18533,6 @@
         "text": "collegiate",
         "gst": "k-o-l-e-j-ea-t",
         "notes": ""
-    },
-    {
-        "text": "colleagues",
-        "gst": "k-o-l-e-s",
-        "notes": "<Expert>"
     },
     {
         "text": "coalition",
@@ -19633,11 +18713,6 @@
         "text": "coordination",
         "gst": "k-o-o-tn-sh",
         "notes": ""
-    },
-    {
-        "text": "cooperate",
-        "gst": "k-o-o-p",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "kopeck",
@@ -19958,11 +19033,6 @@
         "text": "compulsion",
         "gst": "k-p-l-sh",
         "notes": ""
-    },
-    {
-        "text": "keep in mind",
-        "gst": "k-p-m-i",
-        "notes": "<Expert>"
     },
     {
         "text": "compound",
@@ -20346,13 +19416,8 @@
     },
     {
         "text": "crestfallen",
-        "gst": "k-r-e-s2-df-o-n",
+        "gst": "k-r-e-s2-t-f-o-n",
         "notes": ""
-    },
-    {
-        "text": "credit card",
-        "gst": "k-r-e-td/k",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "cretin",
@@ -20670,11 +19735,6 @@
         "notes": "s1"
     },
     {
-        "text": "Kansas",
-        "gst": "k-s",
-        "notes": "s1 <Cen.>"
-    },
-    {
         "text": "because",
         "gst": "k-s2",
         "notes": "s2"
@@ -20740,19 +19800,9 @@
         "notes": "s2"
     },
     {
-        "text": "compensate",
-        "gst": "k-p-n-s-a",
-        "notes": "s2 <Expert>"
-    },
-    {
         "text": "consanguinity",
         "gst": "k-s2-a-ng/nt",
         "notes": ""
-    },
-    {
-        "text": "compensatory",
-        "gst": "k-s2-a-r-e",
-        "notes": "s2 <Expert>"
     },
     {
         "text": "considerable",
@@ -20875,16 +19925,6 @@
         "notes": ""
     },
     {
-        "text": "because of the fact that",
-        "gst": "k-s2-f-th-a",
-        "notes": "s2, th1 <Expert>"
-    },
-    {
-        "text": "question of fact",
-        "gst": "k-sh/f",
-        "notes": "<Expert>"
-    },
-    {
         "text": "questionnaire",
         "gst": "k-sh-a2",
         "notes": "a2"
@@ -20963,11 +20003,6 @@
         "text": "consonance",
         "gst": "k-s2-n-a-n-s",
         "notes": ""
-    },
-    {
-        "text": "constituents",
-        "gst": "k-s-nt-s",
-        "notes": "<Expert>"
     },
     {
         "text": "consolation",
@@ -21055,11 +20090,6 @@
         "notes": ""
     },
     {
-        "text": "common stock",
-        "gst": "k-s2-t-o-k",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "constitution",
         "gst": "k-s2-t-sh",
         "notes": ""
@@ -21100,11 +20130,6 @@
         "notes": ""
     },
     {
-        "text": "court",
-        "gst": "k-o-t",
-        "notes": "<Expert>"
-    },
-    {
         "text": "contact",
         "gst": "k-t-a-k",
         "notes": ""
@@ -21117,22 +20142,12 @@
     {
         "text": "candidate",
         "gst": "k-td",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "candidate",
-        "gst": "k-td",
         "notes": ""
     },
     {
         "text": "candidacy",
         "gst": "k-td-s-e",
         "notes": ""
-    },
-    {
-        "text": "community",
-        "gst": "k/nt",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "county",
@@ -21325,11 +20340,6 @@
         "notes": ""
     },
     {
-        "text": "quarter",
-        "gst": "k-t-r",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "countries",
         "gst": "k-t-s",
         "notes": "<cf. k-t-x>"
@@ -21383,11 +20393,6 @@
         "text": "colander",
         "gst": "k-u-l-a-nt-r",
         "notes": ""
-    },
-    {
-        "text": "culmination",
-        "gst": "k-l-mn-sh",
-        "notes": "<Simp.>"
     },
     {
         "text": "cup",
@@ -21480,11 +20485,6 @@
         "notes": ""
     },
     {
-        "text": "culture",
-        "gst": "k-l-t-r",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "covetous",
         "gst": "k-u-v-e-t-u-s",
         "notes": ""
@@ -21568,11 +20568,6 @@
         "text": "converse",
         "gst": "k-v-e-s",
         "notes": ""
-    },
-    {
-        "text": "conversation",
-        "gst": "k-v-e-sh",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "conversation",
@@ -21708,11 +20703,6 @@
         "text": "lay",
         "gst": "l-a",
         "notes": ""
-    },
-    {
-        "text": "later-",
-        "gst": "l-a/",
-        "notes": "<1916>"
     },
     {
         "text": "liked",
@@ -22215,16 +21205,6 @@
         "notes": ""
     },
     {
-        "text": "letter-",
-        "gst": "l-e/",
-        "notes": "<1916>"
-    },
-    {
-        "text": "liter-",
-        "gst": "l-e/",
-        "notes": "<1916>"
-    },
-    {
         "text": "leeward",
         "gst": "l-e/d",
         "notes": ""
@@ -22428,11 +21408,6 @@
         "text": "limousine",
         "gst": "l-e-m-s2-e-n",
         "notes": ""
-    },
-    {
-        "text": "limitation",
-        "gst": "l-e-m-sh",
-        "notes": "<Expert>"
     },
     {
         "text": "lean",
@@ -22683,11 +21658,6 @@
         "text": "listen",
         "gst": "l-e-s2-n",
         "notes": ""
-    },
-    {
-        "text": "lessen",
-        "gst": "l-e-s2-n",
-        "notes": "s1 <1916>"
     },
     {
         "text": "listening",
@@ -23033,11 +22003,6 @@
         "text": "legislate",
         "gst": "l-j",
         "notes": ""
-    },
-    {
-        "text": "legislation",
-        "gst": "l-j",
-        "notes": "<Expert>"
     },
     {
         "text": "legislator",
@@ -23435,16 +22400,6 @@
         "notes": ""
     },
     {
-        "text": "lesson",
-        "gst": "l-e-s2-n",
-        "notes": "s1 <1916>"
-    },
-    {
-        "text": "listen",
-        "gst": "l-e-s2-n",
-        "notes": "s1 <1916>"
-    },
-    {
         "text": "lists",
         "gst": "l-s-s",
         "notes": ""
@@ -23640,11 +22595,6 @@
         "notes": ""
     },
     {
-        "text": "milli-",
-        "gst": "m-",
-        "notes": "<S90>"
-    },
-    {
         "text": "magnate",
         "gst": "m/a-t",
         "notes": ""
@@ -23745,11 +22695,6 @@
         "notes": ""
     },
     {
-        "text": "Massachusetts",
-        "gst": "m-a-s",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "may",
         "gst": "m-a",
         "notes": ""
@@ -23783,21 +22728,6 @@
         "text": "mare",
         "gst": "m-a",
         "notes": "a2"
-    },
-    {
-        "text": "macr-",
-        "gst": "m-a/",
-        "notes": "<Med.>"
-    },
-    {
-        "text": "mater-",
-        "gst": "m-a/",
-        "notes": "<1916>"
-    },
-    {
-        "text": "matr-",
-        "gst": "m-a/",
-        "notes": "<1916>"
     },
     {
         "text": "may be",
@@ -24565,19 +23495,9 @@
         "notes": ""
     },
     {
-        "text": "Mr. Chairman",
-        "gst": "m-ch-mn",
-        "notes": "<Expert>"
-    },
-    {
         "text": "Maryland",
         "gst": "mt",
         "notes": ""
-    },
-    {
-        "text": "Maine",
-        "gst": "m-e",
-        "notes": "<Cen.>"
     },
     {
         "text": "me",
@@ -24588,31 +23508,6 @@
         "text": "mere",
         "gst": "m-e2",
         "notes": "e2"
-    },
-    {
-        "text": "meter",
-        "gst": "m-e-t-e2",
-        "notes": "raised <1916>"
-    },
-    {
-        "text": "metr-",
-        "gst": "m-e",
-        "notes": "raised <1916>"
-    },
-    {
-        "text": "metric",
-        "gst": "m-e/k",
-        "notes": "<1916>"
-    },
-    {
-        "text": "metropolis",
-        "gst": "m-e/p",
-        "notes": "<1916>"
-    },
-    {
-        "text": "metropolitan",
-        "gst": "m-e/p-tn",
-        "notes": "<1916>"
     },
     {
         "text": "merchandise",
@@ -24668,11 +23563,6 @@
         "text": "muderous",
         "gst": "m-e-d-e-r-u-s",
         "notes": "e2"
-    },
-    {
-        "text": "medicinal",
-        "gst": "m-e-d-e-s",
-        "notes": "<1916>"
     },
     {
         "text": "medieval",
@@ -24733,11 +23623,6 @@
         "text": "mephitic",
         "gst": "m-e-f/a",
         "notes": ""
-    },
-    {
-        "text": "mere fact that",
-        "gst": "m-e-f-th-a",
-        "notes": "th1 <Expert>"
     },
     {
         "text": "merge",
@@ -24890,11 +23775,6 @@
         "notes": ""
     },
     {
-        "text": "merriment",
-        "gst": "m-e2-m",
-        "notes": "e2 <1916>"
-    },
-    {
         "text": "mermaid",
         "gst": "m-e2-m-a-d",
         "notes": "e2"
@@ -24938,11 +23818,6 @@
         "text": "mirage",
         "gst": "m-e-r-a-sh",
         "notes": ""
-    },
-    {
-        "text": "merely",
-        "gst": "m-e-r-e",
-        "notes": "<Simp.>"
     },
     {
         "text": "merry",
@@ -25275,16 +24150,6 @@
         "notes": ""
     },
     {
-        "text": "Michigan",
-        "gst": "m-i",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "mind",
-        "gst": "m-i-n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "admire",
         "gst": "m-i2",
         "notes": "i2"
@@ -25295,29 +24160,14 @@
         "notes": "i2"
     },
     {
-        "text": "micr-",
-        "gst": "m-i",
-        "notes": "<Med.>"
-    },
-    {
         "text": "myopia",
         "gst": "m-ie-p-ea",
         "notes": ""
     },
     {
-        "text": "my friend",
-        "gst": "m-i-f",
-        "notes": "i1 <Expert>"
-    },
-    {
         "text": "migrate",
         "gst": "m-i-g-r-a",
         "notes": ""
-    },
-    {
-        "text": "micro-",
-        "gst": "m-i-k",
-        "notes": "<S90>"
     },
     {
         "text": "microbe",
@@ -25370,11 +24220,6 @@
         "notes": ""
     },
     {
-        "text": "minds",
-        "gst": "m-i-s",
-        "notes": "i1 <Expert>"
-    },
-    {
         "text": "impend",
         "gst": "m-jnt",
         "notes": ""
@@ -25393,11 +24238,6 @@
         "text": "more and more",
         "gst": "m-m",
         "notes": ""
-    },
-    {
-        "text": "man",
-        "gst": "m-a-n",
-        "notes": "<1916>"
     },
     {
         "text": "men",
@@ -25423,11 +24263,6 @@
         "text": "manacle",
         "gst": "mn/k",
         "notes": ""
-    },
-    {
-        "text": "monocle",
-        "gst": "m-o-n/k",
-        "notes": "<1916>"
     },
     {
         "text": "Simp.)",
@@ -25525,11 +24360,6 @@
         "notes": ""
     },
     {
-        "text": "member",
-        "gst": "mn-b-r",
-        "notes": "<1916>"
-    },
-    {
         "text": "mumble",
         "gst": "mn-b",
         "notes": "<cf. m-u-m-b>"
@@ -25548,11 +24378,6 @@
         "text": "members",
         "gst": "mn-b-r-s",
         "notes": ""
-    },
-    {
-        "text": "membership",
-        "gst": "mn-b-r/sh",
-        "notes": "<1916>"
     },
     {
         "text": "Manchester",
@@ -25603,11 +24428,6 @@
         "text": "Montevideo",
         "gst": "mn-df",
         "notes": ""
-    },
-    {
-        "text": "manly",
-        "gst": "m-a-n-e",
-        "notes": "<1916>"
     },
     {
         "text": "many",
@@ -25688,11 +24508,6 @@
         "text": "mineralogy",
         "gst": "mn-e-r/o",
         "notes": "o sideways,o on side"
-    },
-    {
-        "text": "many years ago",
-        "gst": "mn-e-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "mannerless",
@@ -25800,11 +24615,6 @@
         "notes": ""
     },
     {
-        "text": "moment ago",
-        "gst": "mn-g",
-        "notes": "<Expert>"
-    },
-    {
         "text": "amongst",
         "gst": "mn-g-s",
         "notes": ""
@@ -25818,16 +24628,6 @@
         "text": "meanwhile",
         "gst": "mn-i2",
         "notes": "i2"
-    },
-    {
-        "text": "in my judgment",
-        "gst": "mn-i-j",
-        "notes": "i1 <Expert>"
-    },
-    {
-        "text": "in my opinion",
-        "gst": "mn-a-p-n",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "manage",
@@ -26168,11 +24968,6 @@
         "text": "manumission",
         "gst": "mn-u-m-sh",
         "notes": ""
-    },
-    {
-        "text": "member of the House",
-        "gst": "mn-u-s",
-        "notes": "angle between mn and u <Expert>"
     },
     {
         "text": "manuscript",
@@ -26525,11 +25320,6 @@
         "notes": ""
     },
     {
-        "text": "employ",
-        "gst": "m-p-l",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "importance",
         "gst": "m-p",
         "notes": ""
@@ -26563,11 +25353,6 @@
         "text": "impediment",
         "gst": "m-p-d-e-m",
         "notes": ""
-    },
-    {
-        "text": "employee",
-        "gst": "m-p-l-e",
-        "notes": "<Expert>"
     },
     {
         "text": "impede",
@@ -26750,11 +25535,6 @@
         "notes": ""
     },
     {
-        "text": "importune",
-        "gst": "m-p-o-r-tn",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "impotent",
         "gst": "m-p-tn-t",
         "notes": ""
@@ -26880,11 +25660,6 @@
         "notes": ""
     },
     {
-        "text": "mortgage",
-        "gst": "m-o-r",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "markets",
         "gst": "m-r-s",
         "notes": ""
@@ -26893,21 +25668,6 @@
         "text": "Mrs.",
         "gst": "m-r-s",
         "notes": ""
-    },
-    {
-        "text": "Mr. Speaker",
-        "gst": "m-r-s-p",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "Mississippi",
-        "gst": "m-s",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "Ms",
-        "gst": "m-s",
-        "notes": "<S90>"
     },
     {
         "text": "must",
@@ -27070,11 +25830,6 @@
         "notes": "s2"
     },
     {
-        "text": "Montana",
-        "gst": "m-o-nt",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "empty",
         "gst": "mt-e",
         "notes": ""
@@ -27150,11 +25905,6 @@
         "notes": ""
     },
     {
-        "text": "mule",
-        "gst": "m-u-l",
-        "notes": "<1916>"
-    },
-    {
         "text": "Simp.)",
         "gst": "m-u-l",
         "notes": ""
@@ -27173,16 +25923,6 @@
         "text": "movement",
         "gst": "m-u-m",
         "notes": ""
-    },
-    {
-        "text": "mumble",
-        "gst": "mn-b",
-        "notes": "<1916>"
-    },
-    {
-        "text": "mummy",
-        "gst": "mn-e",
-        "notes": "<1916>"
     },
     {
         "text": "Monday morning",
@@ -27353,11 +26093,6 @@
         "text": "enter",
         "gst": "n",
         "notes": "raised"
-    },
-    {
-        "text": "interest",
-        "gst": "n/s",
-        "notes": "raised <Expert>"
     },
     {
         "text": "enter-",
@@ -27543,11 +26278,6 @@
         "text": "internment",
         "gst": "n/mn",
         "notes": ""
-    },
-    {
-        "text": "interested in the matter",
-        "gst": "n/mn-a-t",
-        "notes": "<Expert>"
     },
     {
         "text": "interminable",
@@ -27750,11 +26480,6 @@
         "notes": ""
     },
     {
-        "text": "intra-",
-        "gst": "n-a",
-        "notes": "<Med.>"
-    },
-    {
         "text": "unanticipated",
         "gst": "n-a/s-e-p/t",
         "notes": ""
@@ -27855,11 +26580,6 @@
         "notes": ""
     },
     {
-        "text": "nano-",
-        "gst": "n-a-n-o",
-        "notes": "<S90>"
-    },
-    {
         "text": "unanswerable",
         "gst": "n-a-n-s-b",
         "notes": ""
@@ -27945,16 +26665,6 @@
         "notes": ""
     },
     {
-        "text": "national defense",
-        "gst": "n-a-sh-df",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "national government",
-        "gst": "n-a-sh-g-v",
-        "notes": "<Expert>"
-    },
-    {
         "text": "national",
         "gst": "n-a-sh-l",
         "notes": ""
@@ -27978,16 +26688,6 @@
         "text": "nasally",
         "gst": "n-a-s-ye",
         "notes": ""
-    },
-    {
-        "text": "nature",
-        "gst": "n-a-t",
-        "notes": "<1916>"
-    },
-    {
-        "text": "natural",
-        "gst": "n-a-t-l",
-        "notes": "<1916>"
     },
     {
         "text": "nature",
@@ -28096,11 +26796,6 @@
     },
     {
         "text": "North Dakota",
-        "gst": "n-d",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "North Dakota",
         "gst": "n-d-a-k",
         "notes": ""
     },
@@ -28168,11 +26863,6 @@
         "text": "knee",
         "gst": "n-e",
         "notes": ""
-    },
-    {
-        "text": "Nebraska",
-        "gst": "n-e",
-        "notes": "<Cen.>"
     },
     {
         "text": "near",
@@ -28381,13 +27071,8 @@
     },
     {
         "text": "nepenthe",
-        "gst": "n-e-jn-th-e",
+        "gst": "n-e-p-n-th-e",
         "notes": ""
-    },
-    {
-        "text": "in other words",
-        "gst": "n-e-r-d-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "nurse",
@@ -28418,11 +27103,6 @@
         "text": "northeast",
         "gst": "n-e-s",
         "notes": ""
-    },
-    {
-        "text": "notice",
-        "gst": "n-e-s",
-        "notes": "<Expert>"
     },
     {
         "text": "inextricable",
@@ -28510,11 +27190,6 @@
         "notes": ""
     },
     {
-        "text": "notices",
-        "gst": "n-e-s-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "necessarily",
         "gst": "n-e-s-s-e",
         "notes": ""
@@ -28523,11 +27198,6 @@
         "text": "necessity",
         "gst": "n-e-s1s2-t",
         "notes": ""
-    },
-    {
-        "text": "noticed",
-        "gst": "n-e-s-d",
-        "notes": "<Expert>"
     },
     {
         "text": "northeastern",
@@ -28633,16 +27303,6 @@
         "text": "influence",
         "gst": "n-f",
         "notes": ""
-    },
-    {
-        "text": "inform",
-        "gst": "n-f-m",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "information",
-        "gst": "n-f-m-sh",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "infinity",
@@ -28890,11 +27550,6 @@
         "notes": ""
     },
     {
-        "text": "New York",
-        "gst": "n-i",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "nigh",
         "gst": "n-i",
         "notes": ""
@@ -28903,11 +27558,6 @@
         "text": "night",
         "gst": "n-i",
         "notes": ""
-    },
-    {
-        "text": "nitr-",
-        "gst": "n-i",
-        "notes": "<1916>"
     },
     {
         "text": "knife",
@@ -29108,11 +27758,6 @@
         "text": "enclose",
         "gst": "n-k",
         "notes": ""
-    },
-    {
-        "text": "North Carolina",
-        "gst": "nk",
-        "notes": "<Cen.>"
     },
     {
         "text": "enclosure",
@@ -29360,11 +28005,6 @@
         "notes": ""
     },
     {
-        "text": "income tax",
-        "gst": "nk-t-a-x",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "incantation",
         "gst": "nk-t-sh",
         "notes": ""
@@ -29438,11 +28078,6 @@
         "text": "inmate",
         "gst": "n-m-a-t",
         "notes": ""
-    },
-    {
-        "text": "in the meantime",
-        "gst": "mn-tm",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "noun",
@@ -29587,11 +28222,6 @@
     {
         "text": "normal",
         "gst": "n-o-m",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "normal",
-        "gst": "n-o-m",
         "notes": ""
     },
     {
@@ -29695,19 +28325,9 @@
         "notes": ""
     },
     {
-        "text": "negotiation",
-        "gst": "n-o-sh",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "notion",
         "gst": "n-o-sh",
         "notes": ""
-    },
-    {
-        "text": "negotiate",
-        "gst": "n-e-g-o-sh",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "knot",
@@ -29872,11 +28492,6 @@
     {
         "text": "unreasonable",
         "gst": "n-r-s",
-        "notes": "s1 <Expert>"
-    },
-    {
-        "text": "unreasonable",
-        "gst": "n-r-s",
         "notes": ""
     },
     {
@@ -29988,11 +28603,6 @@
         "text": "insect",
         "gst": "n-s2-e-k",
         "notes": ""
-    },
-    {
-        "text": "in the second place",
-        "gst": "n-s2-e-k/p",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "insecurity",
@@ -30895,16 +29505,6 @@
         "notes": "angled join"
     },
     {
-        "text": "nutr-",
-        "gst": "n-u",
-        "notes": "<1916>"
-    },
-    {
-        "text": "in other words",
-        "gst": "n-u-d-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "newly",
         "gst": "n-u-e",
         "notes": ""
@@ -31045,11 +29645,6 @@
         "notes": ""
     },
     {
-        "text": "in the House",
-        "gst": "n-u-s",
-        "notes": "upright u <Expert>"
-    },
-    {
         "text": "unusual",
         "gst": "n-u-sh",
         "notes": "angle between n and u"
@@ -31128,11 +29723,6 @@
         "text": "unworthy",
         "gst": "n-u-u-th-e",
         "notes": ""
-    },
-    {
-        "text": "Nevada",
-        "gst": "n-e-v",
-        "notes": "<Cen.>"
     },
     {
         "text": "never",
@@ -31235,11 +29825,6 @@
         "notes": ""
     },
     {
-        "text": "in view of the fact that",
-        "gst": "n-v-f-th-a",
-        "notes": "th1 <Expert>"
-    },
-    {
         "text": "invite",
         "gst": "n-v-i",
         "notes": ""
@@ -31273,11 +29858,6 @@
         "text": "inventory",
         "gst": "n-v-nt-r-e",
         "notes": ""
-    },
-    {
-        "text": "involve",
-        "gst": "n-v-o",
-        "notes": "<Expert>"
     },
     {
         "text": "unavoidable",
@@ -31365,11 +29945,6 @@
         "notes": "sideways,o on side"
     },
     {
-        "text": "alter-",
-        "gst": "o",
-        "notes": "sideways, raised <1916>"
-    },
-    {
         "text": "overcharge",
         "gst": "o/ch-j",
         "notes": ""
@@ -31450,11 +30025,6 @@
         "notes": ""
     },
     {
-        "text": "obstr-",
-        "gst": "o-b",
-        "notes": "<1916>"
-    },
-    {
         "text": "obesity",
         "gst": "o-b/s",
         "notes": "s1"
@@ -31488,11 +30058,6 @@
         "text": "objurgate",
         "gst": "o-b-j-u-g",
         "notes": ""
-    },
-    {
-        "text": "object",
-        "gst": "o-b",
-        "notes": "<DJS>"
     },
     {
         "text": "oblige",
@@ -31790,16 +30355,6 @@
         "notes": ""
     },
     {
-        "text": "point out",
-        "gst": "o-e-t",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "pointed out",
-        "gst": "o-e-t/t",
-        "notes": "<Expert>"
-    },
-    {
         "text": "appointive",
         "gst": "o-e-v",
         "notes": ""
@@ -31823,11 +30378,6 @@
         "text": "offer",
         "gst": "o-f",
         "notes": ""
-    },
-    {
-        "text": "office",
-        "gst": "o-s",
-        "notes": "<Cen.>"
     },
     {
         "text": "offered",
@@ -31928,11 +30478,6 @@
         "text": "of course",
         "gst": "o-k",
         "notes": ""
-    },
-    {
-        "text": "Oklahoma",
-        "gst": "o-k",
-        "notes": "<Cen.>"
     },
     {
         "text": "awkward",
@@ -32200,11 +30745,6 @@
         "notes": ""
     },
     {
-        "text": "on both sides",
-        "gst": "o-n-b-o-th2-s",
-        "notes": "th2 <Expert>"
-    },
-    {
         "text": "only",
         "gst": "o-n-e",
         "notes": ""
@@ -32320,16 +30860,6 @@
         "notes": ""
     },
     {
-        "text": "on the floor",
-        "gst": "o-n-th/f",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "on the floor of the House of Representatives",
-        "gst": "o-n-th/f-u-s-r",
-        "notes": "<Expert>"
-    },
-    {
         "text": "on you",
         "gst": "o-n-u",
         "notes": ""
@@ -32343,11 +30873,6 @@
         "text": "on the other hand",
         "gst": "o-n-u-th-nt",
         "notes": "th1"
-    },
-    {
-        "text": "on the other side",
-        "gst": "o-n-u-th-s",
-        "notes": "th1 <Expert>"
     },
     {
         "text": "owners",
@@ -32550,11 +31075,6 @@
         "notes": ""
     },
     {
-        "text": "Oregon",
-        "gst": "o-r",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "orange",
         "gst": "o-r-a-n-j",
         "notes": ""
@@ -32655,26 +31175,6 @@
         "notes": "s1"
     },
     {
-        "text": "austr-",
-        "gst": "o-s",
-        "notes": "s2 <1916>"
-    },
-    {
-        "text": "ostr-",
-        "gst": "o-s",
-        "notes": "s2 <1916>"
-    },
-    {
-        "text": "Austria",
-        "gst": "o-s/a",
-        "notes": "<1916>"
-    },
-    {
-        "text": "Australia",
-        "gst": "o-s/l-ea",
-        "notes": "<1916>"
-    },
-    {
         "text": "officeholder",
         "gst": "o-s/o-ld-r",
         "notes": ""
@@ -32683,11 +31183,6 @@
         "text": "oxalic",
         "gst": "o-s-a-l-k",
         "notes": ""
-    },
-    {
-        "text": "observe",
-        "gst": "o-b-s-e",
-        "notes": "s2 <Expert>"
     },
     {
         "text": "oxygen",
@@ -32703,11 +31198,6 @@
         "text": "auxiliary",
         "gst": "o-s-e-l-r-e",
         "notes": ""
-    },
-    {
-        "text": "observation",
-        "gst": "o-b-s-e-sh",
-        "notes": "<Expert>"
     },
     {
         "text": "ossify",
@@ -33151,7 +31641,7 @@
     },
     {
         "text": "ought to have",
-        "gst": "o-df",
+        "gst": "o-t-v",
         "notes": ""
     },
     {
@@ -33270,21 +31760,6 @@
         "notes": ""
     },
     {
-        "text": "patr-",
-        "gst": "p-a",
-        "notes": "<1916>"
-    },
-    {
-        "text": "pattern",
-        "gst": "p-a-tn",
-        "notes": "<1916>"
-    },
-    {
-        "text": "patron",
-        "gst": "p-a/o-n",
-        "notes": "<1916>"
-    },
-    {
         "text": "payable",
         "gst": "p-a-b",
         "notes": ""
@@ -33303,11 +31778,6 @@
         "text": "page",
         "gst": "p-a-j",
         "notes": ""
-    },
-    {
-        "text": "passenger",
-        "gst": "p-a-j",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "pajama",
@@ -33600,11 +32070,6 @@
         "notes": ""
     },
     {
-        "text": "publish",
-        "gst": "p-b",
-        "notes": "<1902>"
-    },
-    {
         "text": "paid",
         "gst": "p-d",
         "notes": ""
@@ -33613,11 +32078,6 @@
         "text": "plaintiff",
         "gst": "p-df",
         "notes": ""
-    },
-    {
-        "text": "petr-",
-        "gst": "p-e",
-        "notes": "<1916>"
     },
     {
         "text": "piano",
@@ -33940,11 +32400,6 @@
         "notes": ""
     },
     {
-        "text": "upon",
-        "gst": "p-n",
-        "notes": "<1916>"
-    },
-    {
         "text": "Panama",
         "gst": "p-n-a-m-a",
         "notes": ""
@@ -33995,19 +32450,9 @@
         "notes": ""
     },
     {
-        "text": "pose",
-        "gst": "p-o",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "post office",
         "gst": "p/o-s",
         "notes": ""
-    },
-    {
-        "text": "Post Office Department",
-        "gst": "p-o-d",
-        "notes": "angle between p and o <Expert>"
     },
     {
         "text": "poem",
@@ -34220,16 +32665,6 @@
         "notes": ""
     },
     {
-        "text": "principal",
-        "gst": "p-r",
-        "notes": "<1916>"
-    },
-    {
-        "text": "principle",
-        "gst": "p-r-e-n",
-        "notes": "<1916>"
-    },
-    {
         "text": "probability",
         "gst": "p-r/b",
         "notes": ""
@@ -34295,11 +32730,6 @@
         "notes": ""
     },
     {
-        "text": "perch",
-        "gst": "p-e-r-ch",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "purchase",
         "gst": "p-r-ch",
         "notes": "<cf. p-e-r-ch>"
@@ -34315,11 +32745,6 @@
         "notes": ""
     },
     {
-        "text": "purchasing power",
-        "gst": "p-r-ch/p",
-        "notes": "<Expert>"
-    },
-    {
         "text": "purchaser",
         "gst": "p-r-ch/r",
         "notes": ""
@@ -34333,11 +32758,6 @@
         "text": "presently",
         "gst": "p-r-e",
         "notes": ""
-    },
-    {
-        "text": "pretty",
-        "gst": "p-r-e",
-        "notes": "<Expert>"
     },
     {
         "text": "preach",
@@ -34360,11 +32780,6 @@
         "notes": ""
     },
     {
-        "text": "preferred stock",
-        "gst": "p-r-e-f-s2-t-o-k",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "prejudice",
         "gst": "p-r-e-j",
         "notes": ""
@@ -34378,11 +32793,6 @@
         "text": "preliminary",
         "gst": "p-r-e-l-e-m",
         "notes": ""
-    },
-    {
-        "text": "pretty much",
-        "gst": "p-r-e-m-ch",
-        "notes": "<Expert>"
     },
     {
         "text": "premium",
@@ -34468,11 +32878,6 @@
         "text": "president",
         "gst": "p-r-e-s2-tn",
         "notes": ""
-    },
-    {
-        "text": "President of the United States",
-        "gst": "p-r-e-s2-tn-e-u-s",
-        "notes": "<Expert>"
     },
     {
         "text": "pretty",
@@ -34631,11 +33036,6 @@
     },
     {
         "text": "practical",
-        "gst": "p-r-k",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "practical",
         "gst": "p-r-k/k",
         "notes": ""
     },
@@ -34648,11 +33048,6 @@
         "text": "practice",
         "gst": "p-r-k-t",
         "notes": ""
-    },
-    {
-        "text": "practice",
-        "gst": "p-r-k-t-e-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "promise",
@@ -34706,16 +33101,6 @@
     },
     {
         "text": "product",
-        "gst": "p-r-o-k",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "product",
-        "gst": "p-r-o-d",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "product",
         "gst": "p-r-o-d-u-k",
         "notes": ""
     },
@@ -34743,16 +33128,6 @@
         "text": "procure",
         "gst": "p-r-o-k-r",
         "notes": ""
-    },
-    {
-        "text": "production",
-        "gst": "p-r-o-k-sh",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "productive",
-        "gst": "p-r-o-k-v",
-        "notes": "<Expert>"
     },
     {
         "text": "prominent",
@@ -34795,16 +33170,6 @@
         "notes": ""
     },
     {
-        "text": "prosperity",
-        "gst": "p-r-p/r",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "prospect",
-        "gst": "p-r-p-k",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "propel",
         "gst": "p-r-p-l",
         "notes": ""
@@ -34843,11 +33208,6 @@
         "text": "property",
         "gst": "p-r-p-t",
         "notes": ""
-    },
-    {
-        "text": "property",
-        "gst": "p-r-p-t-e",
-        "notes": "<Cen.>"
     },
     {
         "text": "perpetual",
@@ -34980,16 +33340,6 @@
         "notes": ""
     },
     {
-        "text": "produce",
-        "gst": "p-r-u-s",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "producer",
-        "gst": "p-r-u-s-r",
-        "notes": "<Expert>"
-    },
-    {
         "text": "prove",
         "gst": "p-r-v",
         "notes": ""
@@ -35085,11 +33435,6 @@
         "notes": "e2"
     },
     {
-        "text": "picture",
-        "gst": "p-k-t-r",
-        "notes": "<Expert>"
-    },
-    {
         "text": "Peterboro",
         "gst": "p-t-r-b-r-o",
         "notes": ""
@@ -35160,16 +33505,6 @@
         "notes": ""
     },
     {
-        "text": "provision",
-        "gst": "p-v",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "provide",
-        "gst": "p-v-a",
-        "notes": "<Expert>"
-    },
-    {
         "text": "are",
         "gst": "r",
         "notes": ""
@@ -35188,16 +33523,6 @@
         "text": "Rhode Island",
         "gst": "r-/-a",
         "notes": "intersected"
-    },
-    {
-        "text": "Rhode Island",
-        "gst": "r-/-i",
-        "notes": "intersected <Simp.>"
-    },
-    {
-        "text": "regulate",
-        "gst": "r-e-g/u",
-        "notes": "<Expert>"
     },
     {
         "text": "radiator",
@@ -35475,11 +33800,6 @@
         "notes": ""
     },
     {
-        "text": "regard",
-        "gst": "r-e-g-d",
-        "notes": "<DJS>"
-    },
-    {
         "text": "Regina",
         "gst": "r-e-j",
         "notes": ""
@@ -35505,11 +33825,6 @@
         "notes": "<cf. r-jnt>"
     },
     {
-        "text": "recommend",
-        "gst": "r-e-k",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "reek",
         "gst": "r-e-k",
         "notes": ""
@@ -35518,11 +33833,6 @@
         "text": "wreck",
         "gst": "r-e-k",
         "notes": ""
-    },
-    {
-        "text": "recommit",
-        "gst": "r-e-k-e",
-        "notes": "<Expert>"
     },
     {
         "text": "reckon",
@@ -35640,11 +33950,6 @@
         "notes": ""
     },
     {
-        "text": "reelection",
-        "gst": "r-e-l-sh",
-        "notes": "<Expert>"
-    },
-    {
         "text": "reluctance",
         "gst": "r-e-l-u-k",
         "notes": ""
@@ -35698,11 +34003,6 @@
         "text": "remembrance",
         "gst": "r-e-mn-n-s",
         "notes": ""
-    },
-    {
-        "text": "remainder",
-        "gst": "r-e2-mn-e2",
-        "notes": "<Simp.>"
     },
     {
         "text": "remains",
@@ -36005,11 +34305,6 @@
         "notes": ""
     },
     {
-        "text": "Rhode Island",
-        "gst": "r-/-a",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "right",
         "gst": "r-i",
         "notes": ""
@@ -36023,11 +34318,6 @@
         "text": "write",
         "gst": "r-i",
         "notes": ""
-    },
-    {
-        "text": "right of way",
-        "gst": "r-i/n",
-        "notes": "<Expert>"
     },
     {
         "text": "rightly",
@@ -36080,11 +34370,6 @@
         "notes": ""
     },
     {
-        "text": "register",
-        "gst": "r-j-t-r",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "work",
         "gst": "u-k",
         "notes": ""
@@ -36128,11 +34413,6 @@
         "text": "requisition",
         "gst": "r-k-e-s-sh",
         "notes": ""
-    },
-    {
-        "text": "request",
-        "gst": "r-k-e-s",
-        "notes": "<DJS>"
     },
     {
         "text": "require",
@@ -36365,16 +34645,6 @@
         "notes": ""
     },
     {
-        "text": "republic",
-        "gst": "r-p",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "responsibility",
-        "gst": "r-p/b",
-        "notes": "<Expert>"
-    },
-    {
         "text": "represented",
         "gst": "r-p-d",
         "notes": ""
@@ -36415,19 +34685,9 @@
         "notes": ""
     },
     {
-        "text": "Republican",
-        "gst": "r-p-b-n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "report",
         "gst": "r-p-r",
         "notes": ""
-    },
-    {
-        "text": "represent",
-        "gst": "r-p",
-        "notes": "<Simp.>"
     },
     {
         "text": "reported",
@@ -36465,16 +34725,6 @@
         "notes": ""
     },
     {
-        "text": "reason",
-        "gst": "r-s2-n",
-        "notes": "s1 <Expert>"
-    },
-    {
-        "text": "reasonable",
-        "gst": "r-s2-n-b",
-        "notes": "s1 <Expert>"
-    },
-    {
         "text": "recent",
         "gst": "r-s",
         "notes": "s1"
@@ -36488,16 +34738,6 @@
         "text": "ours",
         "gst": "r-s",
         "notes": "s2"
-    },
-    {
-        "text": "reservation",
-        "gst": "r-s2-e-v-sh",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "reasonably",
-        "gst": "r-s2-n-b-e",
-        "notes": "s1 <Expert>"
     },
     {
         "text": "receive",
@@ -36540,11 +34780,6 @@
         "notes": ""
     },
     {
-        "text": "receive",
-        "gst": "r-s2-e-v",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "reserve",
         "gst": "r-s2-e-v",
         "notes": ""
@@ -36563,11 +34798,6 @@
         "text": "Russia",
         "gst": "r-sh-a",
         "notes": ""
-    },
-    {
-        "text": "reason why",
-        "gst": "r-s-i",
-        "notes": "s1 <Expert>"
     },
     {
         "text": "resign",
@@ -36605,11 +34835,6 @@
         "notes": ""
     },
     {
-        "text": "resolution",
-        "gst": "r-s-o-sh",
-        "notes": "<Expert>"
-    },
-    {
         "text": "resources",
         "gst": "r-s2-o-s2s2",
         "notes": "s2"
@@ -36643,11 +34868,6 @@
         "text": "resist",
         "gst": "r-s-s",
         "notes": ""
-    },
-    {
-        "text": "reasons why",
-        "gst": "r-s-s-i",
-        "notes": "s1 <Expert>"
     },
     {
         "text": "resistance",
@@ -36710,11 +34930,6 @@
         "notes": ""
     },
     {
-        "text": "reduction",
-        "gst": "r-e-d-u-k-sh",
-        "notes": "<Expert>"
-    },
-    {
         "text": "rheumatism",
         "gst": "r-u-m-a-t-s2-m",
         "notes": "s2"
@@ -36733,11 +34948,6 @@
         "text": "ruined",
         "gst": "r-u-nt",
         "notes": ""
-    },
-    {
-        "text": "reduce",
-        "gst": "r-e-d-u-s",
-        "notes": "<Expert>"
     },
     {
         "text": "route",
@@ -36780,11 +34990,6 @@
         "notes": ""
     },
     {
-        "text": "really",
-        "gst": "r-ye",
-        "notes": "<1916>"
-    },
-    {
         "text": "his",
         "gst": "s",
         "notes": ""
@@ -36793,11 +34998,6 @@
         "text": "is",
         "gst": "s",
         "notes": ""
-    },
-    {
-        "text": "service",
-        "gst": "s",
-        "notes": "s2 raised <Expert>"
     },
     {
         "text": "sir",
@@ -36833,11 +35033,6 @@
         "text": "circumference",
         "gst": "s2/f",
         "notes": "s2"
-    },
-    {
-        "text": "Supreme Court",
-        "gst": "s/k-t",
-        "notes": "s1 <Expert>"
     },
     {
         "text": "circular",
@@ -36883,11 +35078,6 @@
         "text": "superior",
         "gst": "s/o-r",
         "notes": "s1"
-    },
-    {
-        "text": "superior",
-        "gst": "s/o-r",
-        "notes": "s1 <Simp.>"
     },
     {
         "text": "superiority",
@@ -37075,11 +35265,6 @@
         "notes": ""
     },
     {
-        "text": "same circumstances",
-        "gst": "s2-a-m-s-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "sane",
         "gst": "s2-a-n",
         "notes": ""
@@ -37123,11 +35308,6 @@
         "text": "San Rafael",
         "gst": "s2-a-n-r-a-f",
         "notes": ""
-    },
-    {
-        "text": "science",
-        "gst": "s2-a-n-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "sand",
@@ -37195,11 +35375,6 @@
         "notes": ""
     },
     {
-        "text": "satisfy",
-        "gst": "s2-a-t",
-        "notes": "<DJS>"
-    },
-    {
         "text": "Seattle",
         "gst": "s2-a-t-l",
         "notes": ""
@@ -37255,16 +35430,6 @@
         "notes": ""
     },
     {
-        "text": "such circumstances",
-        "gst": "s-ch/s-s",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "South Dakota",
-        "gst": "s2-d",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "South Dakota",
         "gst": "s2-d",
         "notes": ""
@@ -37278,11 +35443,6 @@
         "text": "see",
         "gst": "s-e",
         "notes": ""
-    },
-    {
-        "text": "seaway",
-        "gst": "s-e/n",
-        "notes": "<Expert>"
     },
     {
         "text": "search",
@@ -37340,16 +35500,6 @@
         "notes": ""
     },
     {
-        "text": "significance",
-        "gst": "s2-e-g-n-e-f",
-        "notes": "<Cen.>"
-    },
-    {
-        "text": "significant",
-        "gst": "s2-g",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "cigar",
         "gst": "s2-e-g-r",
         "notes": ""
@@ -37400,16 +35550,6 @@
         "notes": ""
     },
     {
-        "text": "Secretary of Commerce",
-        "gst": "s2-e-k-m-ye",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "Secretary of the Interior",
-        "gst": "s2-e-k-n/o-r",
-        "notes": "<Expert>"
-    },
-    {
         "text": "sickness",
         "gst": "s2-e-k-n-e-s",
         "notes": ""
@@ -37430,11 +35570,6 @@
         "notes": ""
     },
     {
-        "text": "secretary",
-        "gst": "s-e-k-r-e",
-        "notes": "<DJS Expert>"
-    },
-    {
         "text": "secret",
         "gst": "s2-e-k-r-e-t",
         "notes": ""
@@ -37445,19 +35580,9 @@
         "notes": ""
     },
     {
-        "text": "Secretary of State",
-        "gst": "s2-e-k-s2-t",
-        "notes": "<Expert>"
-    },
-    {
         "text": "cicatrix",
         "gst": "s2-e-k-t-r-e-x",
         "notes": ""
-    },
-    {
-        "text": "Secretary of Agriculture",
-        "gst": "s2-e-k-ya",
-        "notes": "<Expert>"
     },
     {
         "text": "seal",
@@ -37665,11 +35790,6 @@
         "notes": ""
     },
     {
-        "text": "Senate",
-        "gst": "s2-e-n-a-t",
-        "notes": "<Expert>"
-    },
-    {
         "text": "send",
         "gst": "s2-e-n",
         "notes": ""
@@ -37678,11 +35798,6 @@
         "text": "sin",
         "gst": "s-e-n",
         "notes": ""
-    },
-    {
-        "text": "centi-",
-        "gst": "s-e-n-",
-        "notes": "<S90>"
     },
     {
         "text": "sender",
@@ -37708,11 +35823,6 @@
         "text": "senator",
         "gst": "s2-e2-n-a-t-e2",
         "notes": "e2"
-    },
-    {
-        "text": "Senate bill",
-        "gst": "s2-e-n-b-l",
-        "notes": "<Expert>"
     },
     {
         "text": "cynic",
@@ -37770,19 +35880,9 @@
         "notes": ""
     },
     {
-        "text": "sender",
-        "gst": "s2-e-n/r",
-        "notes": "<DJS>"
-    },
-    {
         "text": "senior",
         "gst": "s-e-n-r",
         "notes": ""
-    },
-    {
-        "text": "sinner",
-        "gst": "s-e-n-r",
-        "notes": "<Simp.>"
     },
     {
         "text": "scenery",
@@ -38000,11 +36100,6 @@
         "notes": ""
     },
     {
-        "text": "circular",
-        "gst": "s2/l",
-        "notes": "<DJS>"
-    },
-    {
         "text": "Syracuse",
         "gst": "s-e-r-k-e-u",
         "notes": ""
@@ -38170,11 +36265,6 @@
         "notes": ""
     },
     {
-        "text": "set up",
-        "gst": "s2-e-t-p",
-        "notes": "<Expert>"
-    },
-    {
         "text": "citric",
         "gst": "s2-e-t-r-k",
         "notes": ""
@@ -38218,11 +36308,6 @@
         "text": "servant",
         "gst": "s2-e-v-nt",
         "notes": ""
-    },
-    {
-        "text": "several years ago",
-        "gst": "s2-e-v-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "significance",
@@ -38328,11 +36413,6 @@
         "text": "shake",
         "gst": "sh-a-k",
         "notes": ""
-    },
-    {
-        "text": "charlatan",
-        "gst": "sh-a2-l-a-tn",
-        "notes": "a2, a1 <1916>"
     },
     {
         "text": "shame",
@@ -38500,11 +36580,6 @@
         "notes": "angle between sh and s"
     },
     {
-        "text": "short",
-        "gst": "sh",
-        "notes": "<DJS>"
-    },
-    {
         "text": "shoe",
         "gst": "sh-u",
         "notes": ""
@@ -38513,11 +36588,6 @@
         "text": "sure",
         "gst": "sh-u",
         "notes": ""
-    },
-    {
-        "text": "surely",
-        "gst": "sh-u",
-        "notes": "<1916>"
     },
     {
         "text": "surely",
@@ -38650,11 +36720,6 @@
         "notes": ""
     },
     {
-        "text": "South Carolina",
-        "gst": "s2-k",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "square yard",
         "gst": "s2-k-a2-d",
         "notes": "a2"
@@ -38693,11 +36758,6 @@
         "text": "scout",
         "gst": "s2-k-a-u-t",
         "notes": ""
-    },
-    {
-        "text": "subcommittee",
-        "gst": "s2-k-e",
-        "notes": "<Expert>"
     },
     {
         "text": "sketch",
@@ -39013,11 +37073,6 @@
         "text": "center",
         "gst": "s2-n/",
         "notes": "raised"
-    },
-    {
-        "text": "senator",
-        "gst": "s2-e2-n-a-t-e2",
-        "notes": "raised <Expert>"
     },
     {
         "text": "Central America",
@@ -39475,19 +37530,9 @@
         "notes": "s2-s1"
     },
     {
-        "text": "stop",
-        "gst": "s2-t-p",
-        "notes": "s2-s1 <Expert>"
-    },
-    {
         "text": "system",
         "gst": "s2s1",
         "notes": "s2-s1"
-    },
-    {
-        "text": "services",
-        "gst": "s2-s2",
-        "notes": "s2-s2, raised <Expert>"
     },
     {
         "text": "suspect",
@@ -39535,16 +37580,6 @@
         "notes": ""
     },
     {
-        "text": "season",
-        "gst": "s-e-s2-n",
-        "notes": "<1916>"
-    },
-    {
-        "text": "senior Senator from X",
-        "gst": "s1s2-n/x",
-        "notes": "<Expert>"
-    },
-    {
         "text": "assist",
         "gst": "s1s2-t",
         "notes": ""
@@ -39553,11 +37588,6 @@
         "text": "cyst",
         "gst": "s1s2-t",
         "notes": ""
-    },
-    {
-        "text": "stopped",
-        "gst": "s2-t-p-d",
-        "notes": "<Expert>"
     },
     {
         "text": "substitute",
@@ -39675,11 +37705,6 @@
         "notes": ""
     },
     {
-        "text": "statistic",
-        "gst": "s2-t-a-t",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "start",
         "gst": "s2-t-a2-t",
         "notes": "a2"
@@ -39688,11 +37713,6 @@
         "text": "started",
         "gst": "s2-t-a2-td",
         "notes": "a2"
-    },
-    {
-        "text": "statistics",
-        "gst": "s-t-a-t-e-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "starts",
@@ -39758,16 +37778,6 @@
         "text": "is the",
         "gst": "s2-th",
         "notes": ""
-    },
-    {
-        "text": "style",
-        "gst": "s2-t-i2",
-        "notes": "i2 <1916>"
-    },
-    {
-        "text": "stylish",
-        "gst": "s2-t-i2/sh",
-        "notes": "i2 <1916>"
     },
     {
         "text": "style",
@@ -39838,11 +37848,6 @@
         "text": "stenographer",
         "gst": "s2-tn/o-r",
         "notes": ""
-    },
-    {
-        "text": "standard",
-        "gst": "s2-tn-a-d",
-        "notes": "<Expert>"
     },
     {
         "text": "standard",
@@ -40162,11 +38167,6 @@
     {
         "text": "suggest",
         "gst": "s2-u-j",
-        "notes": "<DJS>"
-    },
-    {
-        "text": "suggest",
-        "gst": "s2-u-j",
         "notes": ""
     },
     {
@@ -40355,16 +38355,6 @@
         "notes": ""
     },
     {
-        "text": "take",
-        "gst": "t-a",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "take away",
-        "gst": "t-a/n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "table",
         "gst": "t-a-b",
         "notes": ""
@@ -40373,11 +38363,6 @@
         "text": "take",
         "gst": "t-a-k",
         "notes": ""
-    },
-    {
-        "text": "take-care",
-        "gst": "t-a-k-a",
-        "notes": "<Expert>"
     },
     {
         "text": "Tacoma",
@@ -40410,11 +38395,6 @@
         "notes": ""
     },
     {
-        "text": "taken",
-        "gst": "t-a-k-n",
-        "notes": "<Expert>"
-    },
-    {
         "text": "tan",
         "gst": "t-a-n",
         "notes": ""
@@ -40435,11 +38415,6 @@
         "notes": ""
     },
     {
-        "text": "takes",
-        "gst": "t-a-k-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "task",
         "gst": "t-a-s2-k",
         "notes": ""
@@ -40455,19 +38430,9 @@
         "notes": ""
     },
     {
-        "text": "take advantage",
-        "gst": "t-a-v",
-        "notes": "<Expert>"
-    },
-    {
         "text": "tax",
         "gst": "t-a-x",
         "notes": ""
-    },
-    {
-        "text": "taxpayer",
-        "gst": "t-a-x-p-r",
-        "notes": "<Expert>"
     },
     {
         "text": "taxes",
@@ -40483,16 +38448,6 @@
         "text": "to be done",
         "gst": "t-b-tn",
         "notes": ""
-    },
-    {
-        "text": "in touch",
-        "gst": "t-ch",
-        "notes": "<DJS Expert phrases>"
-    },
-    {
-        "text": "teach",
-        "gst": "t-e-ch",
-        "notes": "<1916>"
     },
     {
         "text": "to which",
@@ -40538,11 +38493,6 @@
         "text": "today",
         "gst": "td-a",
         "notes": ""
-    },
-    {
-        "text": "detail",
-        "gst": "td-a2",
-        "notes": "a2 <1916>"
     },
     {
         "text": "didactic",
@@ -40812,11 +38762,6 @@
     {
         "text": "telephone",
         "gst": "t-e-l-f",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "telephone",
-        "gst": "t-e-l-f",
         "notes": ""
     },
     {
@@ -40855,11 +38800,6 @@
         "notes": ""
     },
     {
-        "text": "to increase",
-        "gst": "t-e-nk",
-        "notes": "<Expert>"
-    },
-    {
         "text": "tip",
         "gst": "t-e-p",
         "notes": ""
@@ -40873,11 +38813,6 @@
         "text": "terribly",
         "gst": "t-e-r-b-e",
         "notes": ""
-    },
-    {
-        "text": "territory",
-        "gst": "t-e-t",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "turkey",
@@ -40948,21 +38883,6 @@
         "text": "thankful",
         "gst": "th/f",
         "notes": ""
-    },
-    {
-        "text": "the fact",
-        "gst": "th/f",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "the floor",
-        "gst": "th/f",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "the floor of the House",
-        "gst": "th/f-u-s",
-        "notes": "<Expert>"
     },
     {
         "text": "thanks",
@@ -41110,11 +39030,6 @@
         "notes": "th1-e2"
     },
     {
-        "text": "thoroughness",
-        "gst": "th2-e-n",
-        "notes": "th2 <1916>"
-    },
-    {
         "text": "thence",
         "gst": "th-e-n-s",
         "notes": ""
@@ -41248,11 +39163,6 @@
         "text": "there are",
         "gst": "th-r",
         "notes": "th2"
-    },
-    {
-        "text": "throughout",
-        "gst": "th-r-a-u-t",
-        "notes": "<Cen.>"
     },
     {
         "text": "thread",
@@ -41590,11 +39500,6 @@
         "notes": ""
     },
     {
-        "text": "at the moment",
-        "gst": "tmn",
-        "notes": "<Expert>"
-    },
-    {
         "text": "tomorrow",
         "gst": "tm-o",
         "notes": ""
@@ -41720,16 +39625,6 @@
         "notes": ""
     },
     {
-        "text": "democrat",
-        "gst": "tm-r",
-        "notes": "<Expert>"
-    },
-    {
-        "text": "democratic",
-        "gst": "tm-k",
-        "notes": "<Expert>"
-    },
-    {
         "text": "timer",
         "gst": "tm-r",
         "notes": ""
@@ -41748,11 +39643,6 @@
         "text": "timorous",
         "gst": "tm-r-u-s",
         "notes": ""
-    },
-    {
-        "text": "dear Ms.",
-        "gst": "tm-s",
-        "notes": "<S90>"
     },
     {
         "text": "it must",
@@ -41793,11 +39683,6 @@
         "text": "tempted",
         "gst": "tm-td",
         "notes": ""
-    },
-    {
-        "text": "from time to time",
-        "gst": "tm-tm",
-        "notes": "<Expert>"
     },
     {
         "text": "temptation",
@@ -41938,11 +39823,6 @@
         "text": "tenement",
         "gst": "tn-e-m",
         "notes": ""
-    },
-    {
-        "text": "ten years ago",
-        "gst": "tn-e-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "tennis",
@@ -42100,11 +39980,6 @@
         "notes": ""
     },
     {
-        "text": "tenor",
-        "gst": "tn-o-r",
-        "notes": "<Simp.>"
-    },
-    {
         "text": "at any rate",
         "gst": "tn-r-a",
         "notes": ""
@@ -42163,11 +40038,6 @@
         "text": "dent",
         "gst": "tn-t",
         "notes": ""
-    },
-    {
-        "text": "dint",
-        "gst": "tn-t",
-        "notes": "<Simp.>"
     },
     {
         "text": "tent",
@@ -42248,11 +40118,6 @@
         "text": "toy",
         "gst": "t-o-e",
         "notes": ""
-    },
-    {
-        "text": "to point out",
-        "gst": "t-o-e-t",
-        "notes": "<Expert>"
     },
     {
         "text": "at all events",
@@ -42395,11 +40260,6 @@
         "notes": ""
     },
     {
-        "text": "at the present moment",
-        "gst": "t-p-mn",
-        "notes": "<Expert>"
-    },
-    {
         "text": "typewrite",
         "gst": "t-p-r-i",
         "notes": ""
@@ -42490,11 +40350,6 @@
         "notes": ""
     },
     {
-        "text": "treaty",
-        "gst": "t-r-e",
-        "notes": "<Expert>"
-    },
-    {
         "text": "tree",
         "gst": "t-r-e",
         "notes": ""
@@ -42503,16 +40358,6 @@
         "text": "trick",
         "gst": "t-r-e-k",
         "notes": ""
-    },
-    {
-        "text": "treatment",
-        "gst": "t-r-e-m",
-        "notes": "<DJS Expert>"
-    },
-    {
-        "text": "tremendous",
-        "gst": "t-r-e-mn-s",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "tremendous",
@@ -42545,11 +40390,6 @@
         "notes": ""
     },
     {
-        "text": "treasury",
-        "gst": "t-r-e-sh",
-        "notes": "<Expert>"
-    },
-    {
         "text": "treasure",
         "gst": "t-r-e-sh-u",
         "notes": ""
@@ -42578,11 +40418,6 @@
         "text": "treatment",
         "gst": "t-r-e-m",
         "notes": ""
-    },
-    {
-        "text": "two years ago",
-        "gst": "t-r-g",
-        "notes": "<Expert>"
     },
     {
         "text": "to write",
@@ -42655,11 +40490,6 @@
         "notes": ""
     },
     {
-        "text": "to reduce",
-        "gst": "t-r-u-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "at his",
         "gst": "t-s",
         "notes": ""
@@ -42695,11 +40525,6 @@
         "notes": ""
     },
     {
-        "text": "it seems to me",
-        "gst": "t-s2-e-tm-e",
-        "notes": "<Expert>"
-    },
-    {
         "text": "to ship",
         "gst": "t-sh",
         "notes": ""
@@ -42713,11 +40538,6 @@
         "text": "itself",
         "gst": "t-s-s",
         "notes": ""
-    },
-    {
-        "text": "to stop",
-        "gst": "t-s-s",
-        "notes": "<Expert>"
     },
     {
         "text": "at the",
@@ -42773,11 +40593,6 @@
         "text": "to get",
         "gst": "t-u-g-e-t",
         "notes": ""
-    },
-    {
-        "text": "together",
-        "gst": "t-u-g",
-        "notes": "<Simp.>"
     },
     {
         "text": "together with",
@@ -42915,11 +40730,6 @@
         "notes": "real estate"
     },
     {
-        "text": "ultra-",
-        "gst": "u",
-        "notes": "sideways, raised <1916>"
-    },
-    {
         "text": "undergraduate",
         "gst": "u/g-r-a-d-e-u-t",
         "notes": ""
@@ -42945,19 +40755,9 @@
         "notes": ""
     },
     {
-        "text": "under the circumstances",
-        "gst": "u/th/s-s",
-        "notes": "<Expert>"
-    },
-    {
         "text": "underwear",
         "gst": "u/u-a-r",
         "notes": ""
-    },
-    {
-        "text": "Washington",
-        "gst": "u-a",
-        "notes": "<Cen.>"
     },
     {
         "text": "weigh",
@@ -43075,11 +40875,6 @@
         "notes": ""
     },
     {
-        "text": "Wisconsin",
-        "gst": "u-e",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "you were",
         "gst": "u-e2",
         "notes": "e2"
@@ -43116,7 +40911,7 @@
     },
     {
         "text": "width",
-        "gst": "u-e-td-h",
+        "gst": "u-e-d-th",
         "notes": ""
     },
     {
@@ -43380,11 +41175,6 @@
         "notes": "e2"
     },
     {
-        "text": "Wyoming",
-        "gst": "u-i",
-        "notes": "<Cen.>"
-    },
-    {
         "text": "wide",
         "gst": "u-i-d",
         "notes": ""
@@ -43413,11 +41203,6 @@
         "text": "wise",
         "gst": "u-i-s",
         "notes": ""
-    },
-    {
-        "text": "work",
-        "gst": "r-k",
-        "notes": "<DJS>"
     },
     {
         "text": "you can",
@@ -43463,11 +41248,6 @@
         "text": "won",
         "gst": "u-n",
         "notes": ""
-    },
-    {
-        "text": "one way",
-        "gst": "u-n/n",
-        "notes": "<Expert>"
     },
     {
         "text": "ulna",
@@ -43568,11 +41348,6 @@
         "text": "oneself",
         "gst": "u-n-s-s",
         "notes": ""
-    },
-    {
-        "text": "wont",
-        "gst": "u-nt",
-        "notes": "<Simp.>"
     },
     {
         "text": "you want",
@@ -43780,11 +41555,6 @@
         "notes": ""
     },
     {
-        "text": "usually",
-        "gst": "u-sh-e",
-        "notes": "<1916>"
-    },
-    {
         "text": "wish",
         "gst": "u-sh",
         "notes": ""
@@ -43800,19 +41570,9 @@
         "notes": ""
     },
     {
-        "text": "House of Representatives",
-        "gst": "u-s-r",
-        "notes": "s1 <Expert>"
-    },
-    {
         "text": "yourselves",
         "gst": "u-s-s",
         "notes": ""
-    },
-    {
-        "text": "House and Senate",
-        "gst": "u-s1s2-e-n",
-        "notes": "<Expert>"
     },
     {
         "text": "ulster",
@@ -43991,11 +41751,6 @@
     },
     {
         "text": "West Virginia",
-        "gst": "u-v",
-        "notes": "angle between u and v <Cen.>"
-    },
-    {
-        "text": "West Virginia",
         "gst": "uv",
         "notes": "angle between u and v"
     },
@@ -44023,11 +41778,6 @@
         "text": "vanity",
         "gst": "v/nt",
         "notes": ""
-    },
-    {
-        "text": "vice president",
-        "gst": "v/p",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "Virginia",
@@ -44300,11 +42050,6 @@
         "notes": ""
     },
     {
-        "text": "vowel",
-        "gst": "v-l",
-        "notes": "angle between v and l <1916>"
-    },
-    {
         "text": "valuable",
         "gst": "v-l-b",
         "notes": ""
@@ -44343,11 +42088,6 @@
         "text": "voice",
         "gst": "v-o-e-s",
         "notes": ""
-    },
-    {
-        "text": "volume",
-        "gst": "v-o-l",
-        "notes": "<DJS Expert>"
     },
     {
         "text": "volume",
@@ -44392,22 +42132,12 @@
     {
         "text": "vulgar",
         "gst": "v-u-g-r",
-        "notes": "<Simp.>"
-    },
-    {
-        "text": "vulgar",
-        "gst": "v-u-g-r",
         "notes": ""
     },
     {
         "text": "vulnerable",
         "gst": "v-u-l-n-e-r-b",
         "notes": ""
-    },
-    {
-        "text": "vulnerable",
-        "gst": "v-u-l-n-e-r-b",
-        "notes": "<Simp.>"
     },
     {
         "text": "yea",
@@ -44418,11 +42148,6 @@
         "text": "agree",
         "gst": "ya",
         "notes": "raised"
-    },
-    {
-        "text": "agriculture",
-        "gst": "ya",
-        "notes": "raised <Expert>"
     },
     {
         "text": "aggr-",
@@ -89976,7 +87701,7 @@
     },
     {
         "text": "recipient",
-        "gst": "r-s-jnt",
+        "gst": "r-s-e-p-e-nt",
         "notes": ""
     },
     {
@@ -92106,7 +89831,7 @@
     },
     {
         "text": "respondent",
-        "gst": "r-s-jnt/nt",
+        "gst": "r-s-jnt-nt",
         "notes": ""
     },
     {
@@ -93661,7 +91386,7 @@
     },
     {
         "text": "sabbath",
-        "gst": "s-a-b-h",
+        "gst": "s-a-b-th",
         "notes": ""
     },
     {
@@ -119606,7 +117331,7 @@
     },
     {
         "text": "appending",
-        "gst": "a-jn-th",
+        "gst": "a-jnt-h",
         "notes": ""
     },
     {
@@ -123676,7 +121401,7 @@
     },
     {
         "text": "depending",
-        "gst": "d-jn-th",
+        "gst": "d-jnt-h",
         "notes": ""
     },
     {
@@ -144606,7 +142331,7 @@
     },
     {
         "text": "repenting",
-        "gst": "r-e-jn-th",
+        "gst": "r-e-jnt-h",
         "notes": ""
     },
     {
@@ -145081,7 +142806,7 @@
     },
     {
         "text": "responding",
-        "gst": "r-s-jn-th",
+        "gst": "r-s-jnt-h",
         "notes": ""
     },
     {
@@ -149261,7 +146986,7 @@
     },
     {
         "text": "spending",
-        "gst": "s-jn-th",
+        "gst": "s-jnt-h",
         "notes": ""
     },
     {
@@ -154838,5 +152563,190 @@
         "text": "procession",
         "gst": "p-r-s-e-sh",
         "notes": ""
+    },
+    {
+        "text": "accumulate",
+        "gst": "a-k-e-u-m/u",
+        "notes": ""
+    },
+    {
+        "text": "administrator",
+        "gst": "a-m-e-s/r",
+        "notes": ""
+    },
+    {
+        "text": "American people",
+        "gst": "a-m-p-e-p",
+        "notes": ""
+    },
+    {
+        "text": "analyst",
+        "gst": "a-n-a-l-e-s",
+        "notes": ""
+    },
+    {
+        "text": "as a result",
+        "gst": "a-s-l-s-u",
+        "notes": ""
+    },
+    {
+        "text": "beneficiary",
+        "gst": "b-n-f-e-sh-r-e",
+        "notes": ""
+    },
+    {
+        "text": "bureaucratic",
+        "gst": "b-u-r-o-k/a",
+        "notes": ""
+    },
+    {
+        "text": "equip",
+        "gst": "e-k-w-e-p",
+        "notes": ""
+    },
+    {
+        "text": "few moments",
+        "gst": "f-mn-s",
+        "notes": ""
+    },
+    {
+        "text": "few moments ago",
+        "gst": "f-mn-s2-g",
+        "notes": ""
+    },
+    {
+        "text": "for the purpose",
+        "gst": "f-th-p-r-p",
+        "notes": ""
+    },
+    {
+        "text": "highway",
+        "gst": "h-i/u-a",
+        "notes": ""
+    },
+    {
+        "text": "commit",
+        "gst": "k-m-e-t",
+        "notes": ""
+    },
+    {
+        "text": "compensatory",
+        "gst": "k-p-n-s-a/r-e",
+        "notes": ""
+    },
+    {
+        "text": "limitation",
+        "gst": "l-e-m-e-t-sh",
+        "notes": ""
+    },
+    {
+        "text": "Mr. Chairman",
+        "gst": "m-r-ch-mn",
+        "notes": ""
+    },
+    {
+        "text": "meter",
+        "gst": "m-e-t-e",
+        "notes": ""
+    },
+    {
+        "text": "many years ago",
+        "gst": "mn-e-r-s-g",
+        "notes": ""
+    },
+    {
+        "text": "Mr. Speaker",
+        "gst": "m-r-s-p",
+        "notes": ""
+    },
+    {
+        "text": "income tax",
+        "gst": "n-k-t-a-s",
+        "notes": ""
+    },
+    {
+        "text": "President of the United States",
+        "gst": "p-r-e-s-tn-e-u-s",
+        "notes": "<Expert>"
+    },
+    {
+        "text": "productive",
+        "gst": "p-r-o-d-k-v",
+        "notes": ""
+    },
+    {
+        "text": "regulate",
+        "gst": "r-e-g/u",
+        "notes": ""
+    },
+    {
+        "text": "recommit",
+        "gst": "r-k-m-e-t",
+        "notes": ""
+    },
+    {
+        "text": "reelection",
+        "gst": "r-e-l-e-k-sh",
+        "notes": ""
+    },
+    {
+        "text": "Secretary of the Interior",
+        "gst": "s-e-k-n/o-r",
+        "notes": ""
+    },
+    {
+        "text": "Secretary of State",
+        "gst": "s-e-k-s-t",
+        "notes": ""
+    },
+    {
+        "text": "Secretary of Agriculture",
+        "gst": "s-e-k-ya",
+        "notes": ""
+    },
+    {
+        "text": "sinner",
+        "gst": "s-e-n-e2",
+        "notes": ""
+    },
+    {
+        "text": "subcommittee",
+        "gst": "s-k-e-t-e",
+        "notes": ""
+    },
+    {
+        "text": "stylish",
+        "gst": "s-t-i-l-sh",
+        "notes": ""
+    },
+    {
+        "text": "thoroughness",
+        "gst": "th-e-n-e-s",
+        "notes": ""
+    },
+    {
+        "text": "at the present moment",
+        "gst": "t-p-mn",
+        "notes": "blend p-mn"
+    },
+    {
+        "text": "treaty",
+        "gst": "t-r-e-t-e",
+        "notes": ""
+    },
+    {
+        "text": "it seems to me",
+        "gst": "t-s-e-m-s-m-e",
+        "notes": ""
+    },
+    {
+        "text": "usually",
+        "gst": "u-sh-e",
+        "notes": ""
+    },
+    {
+        "text": "vowel",
+        "gst": "v-a-u-l",
+        "notes": "angle between v and l "
     }
 ]

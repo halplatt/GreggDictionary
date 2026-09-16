@@ -30,6 +30,8 @@
     .outline { display: block; max-width: min(100%, 600px); max-height: 150px; object-fit: contain; object-position: left center; background: repeating-conic-gradient(#fff 0 25%, #eef0eb 0 50%) 50% / 16px 16px; }
     button.outline { position: relative; width: 100%; max-width: 600px; max-height: 150px; min-height: 0; padding: 0; border: 0; cursor: zoom-in; text-align: left; }
     .descent-line { position: absolute; right: 0; left: 0; height: 1px; background: #c32626; pointer-events: none; }
+    .imageWrap { position: relative; max-width: 600px; }
+    .refreshImage { position: absolute; top: 4px; right: 4px; min-height: 0; padding: 3px 7px; font-size: 12px; z-index: 2; background: #fffdf8; }
     .empty { padding: 28px 0; font-family: Verdana, sans-serif; }
     dialog { width: min(420px, calc(100% - 40px)); border: 1px solid var(--ink); background: #fffdf8; color: var(--ink); padding: 18px; font: 15px Georgia, serif; }
     dialog::backdrop { background: rgb(23 34 43 / 35%); }
@@ -278,7 +280,29 @@
         image.onload = positionDescentLine;
         descent.oninput = positionDescentLine;
         imageButton.append(descentLine);
-        row.append(radioCell, check, name, descent, imageButton);
+        const refreshImage = document.createElement('button');
+        refreshImage.type = 'button';
+        refreshImage.className = 'refreshImage';
+        refreshImage.textContent = '\u27f3';
+        refreshImage.title = 'Reload this image from disk (keeps pending changes and scroll position)';
+        refreshImage.onclick = async () => {
+          try {
+            const oldUrl = image.src;
+            const file = await entry.handle.getFile();
+            const newUrl = URL.createObjectURL(file);
+            objectUrls.push(newUrl);
+            image.src = newUrl;
+            const index = objectUrls.indexOf(oldUrl);
+            if (index !== -1) objectUrls.splice(index, 1);
+            URL.revokeObjectURL(oldUrl);
+          } catch (error) {
+            status.textContent = `Could not refresh ${entry.name}: ${error.message}`;
+          }
+        };
+        const imageWrap = document.createElement('div');
+        imageWrap.className = 'imageWrap';
+        imageWrap.append(imageButton, refreshImage);
+        row.append(radioCell, check, name, descent, imageWrap);
         list.append(row);
       }
     }
