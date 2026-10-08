@@ -1,0 +1,199 @@
+<!--
+4/2/2023 This version adds linebreaks when necessary but respects exising ones
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2279BJEMY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G2279BJEMY');
+</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+<body>
+<h1>Memorize First Letter Technique</h1>
+<p>Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to use the keyboard shortcut for the "Convert" button.</p>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    kbd {
+        display: inline-block;
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 rgba(0,0,0,.2),0 0 0 2px #fff inset;
+        margin: 0 .1em;
+        text-shadow: 0 1px 0 #fff;
+    }
+
+    .column {
+        float: left;
+        overflow: auto; /* Enable scrolling if content overflows */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .row {
+        min-width: 800px; /* Adjust this value to the minimum width you want for both columns combined */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    input[type="button"] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    input[type="button"]:hover {
+        background-color: #45a049;
+    }
+
+    textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        resize: vertical;
+    }
+</style>
+<script language="javascript">
+    var setInnerHTML = function( id, str ){
+        if(!document.getElementById) return; // Not Supported
+        if(document.getElementById){
+            document.getElementById(id).innerHTML = str;
+        }
+    }
+
+    var firstLetter = function(str){
+        return str.replace(/([a-zA-Z])\w*/g,"$1");
+    }     
+
+function insertLineBreaks(textarea, charLimit) {
+    const lines = textarea.value.split('\n');
+    let result = '';
+
+    lines.forEach(line => {
+        const words = line.split(' ');
+        let currentLine = words[0];
+
+        for (let i = 1; i < words.length; i++) {
+            if (currentLine.length + words[i].length + 1 > charLimit) {
+                result += currentLine + '\n';
+                currentLine = words[i];
+            } else {
+                currentLine += ' ' + words[i];
+            }
+        }
+        
+        result += currentLine + '\n';
+    });
+
+    textarea.value = result.trim();
+}
+
+    function adjustColumnHeight() {
+        const titleHeight = document.querySelector('h1').offsetHeight;
+        const margin = 75; // Adjust this value for extra space around the columns
+        const availableHeight = window.innerHeight - titleHeight - margin;
+
+        const columns = document.querySelectorAll('.column');
+        columns.forEach(column => {
+            column.style.height = availableHeight + 'px';
+        });
+    }
+    
+    function adjustOutputColumnWidth() {
+        const outputTextarea = document.getElementById('oneletteroutput');
+        const lines = outputTextarea.value.split('\n');
+        const tempElement = document.createElement('span');
+        tempElement.style.visibility = 'hidden';
+        tempElement.style.font = window.getComputedStyle(outputTextarea, null).getPropertyValue('font');
+        document.body.appendChild(tempElement);
+
+        let maxWidth = 0;
+        lines.forEach(line => {
+            tempElement.innerText = line;
+            maxWidth = Math.max(maxWidth, tempElement.offsetWidth);
+        });
+
+        document.body.removeChild(tempElement);
+        outputTextarea.style.width = (maxWidth + 10) + 'px'; // Add a little extra width for better appearance
+    }
+    
+
+    // Adjust column height on page load
+    window.addEventListener('load', adjustColumnHeight);
+
+    // Adjust column height when the window is resized
+    window.addEventListener('resize', adjustColumnHeight);
+    
+        function triggerConvert() {
+        const convertButton = document.querySelector('input[value="Convert"]');
+        convertButton.click();
+    }
+
+    // Add a keydown event listener for the keyboard shortcut
+    document.addEventListener('keydown', function(event) {
+        // Check if the desired key combination is pressed (e.g., Ctrl+Enter)
+        if (event.ctrlKey && event.key === 'Enter') {
+            event.preventDefault();
+            triggerConvert();
+        }
+    });
+    
+  function processText() {
+  	const inputField = document.getElementsByName('inputField')[0];
+  	const charLimit = 50; // Set this to the desired character limit per line
+  	insertLineBreaks(inputField, charLimit);
+  	document.getElementById('oneletteroutput').value = firstLetter(inputField.value);
+  	adjustOutputColumnWidth();
+  }
+
+</script>
+<div id="buttons">
+<input type="button" value="Convert" onclick="processText();">
+</div>
+<div class="row">
+   <div class="column">
+        <textarea name="inputField" rows="50" cols="55" autofocus></textarea><br>
+    </div>
+    <div class="column">
+        <textarea id="oneletteroutput" rows="50" cols="55"></textarea>
+    </div>
+</div>
+
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f3ae1b6850f47ac95ad01240d8f680d"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
