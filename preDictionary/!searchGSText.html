@@ -30,7 +30,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0831@12:12pm expand'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.1015@2:35pm showBase'; // Version display element
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -165,6 +165,15 @@
         .result-image img.result-inline-image {
             max-width: 100%;
             height: auto;
+            display: block;
+        }
+        .result-baseline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: red;
+            pointer-events: none;
         }
         .result-gst {
             font-family: "Courier New", monospace;
@@ -373,6 +382,14 @@
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
              <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
              <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+                 <label for="preferPageImage">
+                     <input type="checkbox" id="preferPageImage">
+                     prefer page image
+                 </label>
+                 <label for="showBaseline">
+                     <input type="checkbox" id="showBaseline" checked>
+                     show Baseline
+                 </label>
                  <label class="show-notes-toggle" id="showNotesToggle" for="showNotes">
                      <input type="checkbox" id="showNotes">
                      show notes
@@ -794,30 +811,41 @@
             return null; // Return null if no match is found
         }
 
-        function getVerticalAlign(pngFile) {
+        function getBaselineOffset(pngFile) {
             const txtFile = pngFile.replace('.png', '.txt');
             return fetch(txtFile)
                 .then(response => {
                     if (!response.ok) {
-                        return '0px';
+                        return 0;
                     }
                     return response.text();
                 })
-                .then(px => (-1 * parseFloat(px.trim())) + 'px')
-                .catch(() => '0px');
+                .then(value => {
+                    const baseline = typeof value === 'number' ? value : parseFloat(value.trim());
+                    return Number.isFinite(baseline) ? baseline : 0;
+                })
+                .catch(() => 0);
+        }
+
+        function updateBaselineVisibility() {
+            const showBaseline = document.getElementById('showBaseline').checked;
+            document.querySelectorAll('.result-baseline').forEach(line => {
+                line.style.display = showBaseline ? 'block' : 'none';
+            });
         }
 
         function imageContainer(searchTerm) {
             const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
             const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
             const IMG_WIDTH = 1281;
-            const objRef = searchRefJson(searchTerm);
+            const preferPageImage = document.getElementById('preferPageImage').checked;
+            const objRef = preferPageImage ? searchRefJson(searchTerm) : null;
 
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
             resultItem.textContent = '';
 
-             // If searchRefJson returns null, return an empty resultItem
+             // Use the individual word image when page-image preference is off or no reference match exists.
             if (!objRef) {//There is no match in the reference file use png image
 
                 const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
@@ -825,8 +853,19 @@
                 img_ann.className = 'result-inline-image';
                 img_ann.src = `${imagePathann}${searchTerm}.png`;
 
-                getVerticalAlign(img_ann.src).then(verticalAlign => {
-                    img_ann.style.verticalAlign = verticalAlign;
+                const imageWrap = document.createElement('span');
+                imageWrap.style.position = 'relative';
+                imageWrap.style.display = 'inline-block';
+                imageWrap.style.maxWidth = '100%';
+
+                const baselineLine = document.createElement('span');
+                baselineLine.className = 'result-baseline';
+                baselineLine.style.display = document.getElementById('showBaseline').checked ? 'block' : 'none';
+                baselineLine.style.bottom = '0px';
+
+                getBaselineOffset(img_ann.src).then(baseline => {
+                    imageWrap.style.verticalAlign = `${-baseline}px`;
+                    baselineLine.style.bottom = `${baseline}px`;
                 });
 
                 img_ann.onerror = function() {
@@ -838,7 +877,9 @@
                     resultItem.appendChild(errorText);
                 };
 
-                resultItem.appendChild(img_ann);
+                imageWrap.appendChild(img_ann);
+                imageWrap.appendChild(baselineLine);
+                resultItem.appendChild(imageWrap);
 
                 return resultItem;
             }
@@ -1104,6 +1145,7 @@
                 initializeNotesToggleFromData();
             } catch (e) { /* ignore */ }
         })();
+        document.getElementById('showBaseline').addEventListener('change', updateBaselineVisibility);
         // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
         (function attachMaxResultsEnter(){
             try {

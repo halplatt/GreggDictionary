@@ -30,7 +30,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.0810@08:01pm format'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.1015@2:35pm showBase'; // Version display element
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -129,7 +129,7 @@
         }
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(392px, 1fr));
             gap: 16px;
             margin-top: 20px;
         }
@@ -155,7 +155,7 @@
         }
         .result-image-wrap {
             width: 100%;
-            overflow-x: auto;
+            overflow-x: hidden;
         }
         .result-image-crop {
             position: relative;
@@ -165,6 +165,15 @@
         .result-image img.result-inline-image {
             max-width: 100%;
             height: auto;
+            display: block;
+        }
+        .result-baseline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: red;
+            pointer-events: none;
         }
         .result-gst {
             font-family: "Courier New", monospace;
@@ -373,6 +382,14 @@
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
              <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
              <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+                 <label for="preferPageImage">
+                     <input type="checkbox" id="preferPageImage">
+                     prefer page image
+                 </label>
+                 <label for="showBaseline">
+                     <input type="checkbox" id="showBaseline" checked>
+                     show Baseline
+                 </label>
                  <label class="show-notes-toggle" id="showNotesToggle" for="showNotes">
                      <input type="checkbox" id="showNotes">
                      show notes
@@ -794,30 +811,41 @@
             return null; // Return null if no match is found
         }
 
-        function getVerticalAlign(pngFile) {
+        function getBaselineOffset(pngFile) {
             const txtFile = pngFile.replace('.png', '.txt');
             return fetch(txtFile)
                 .then(response => {
                     if (!response.ok) {
-                        return '0px';
+                        return 0;
                     }
                     return response.text();
                 })
-                .then(px => (-1 * parseFloat(px.trim())) + 'px')
-                .catch(() => '0px');
+                .then(value => {
+                    const baseline = typeof value === 'number' ? value : parseFloat(value.trim());
+                    return Number.isFinite(baseline) ? baseline : 0;
+                })
+                .catch(() => 0);
+        }
+
+        function updateBaselineVisibility() {
+            const showBaseline = document.getElementById('showBaseline').checked;
+            document.querySelectorAll('.result-baseline').forEach(line => {
+                line.style.display = showBaseline ? 'block' : 'none';
+            });
         }
 
         function imageContainer(searchTerm) {
             const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
             const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
             const IMG_WIDTH = 1281;
-            const objRef = searchRefJson(searchTerm);
+            const preferPageImage = document.getElementById('preferPageImage').checked;
+            const objRef = preferPageImage ? searchRefJson(searchTerm) : null;
 
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
             resultItem.textContent = '';
 
-             // If searchRefJson returns null, return an empty resultItem
+             // Use the individual word image when page-image preference is off or no reference match exists.
             if (!objRef) {//There is no match in the reference file use png image
 
                 const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
@@ -825,8 +853,19 @@
                 img_ann.className = 'result-inline-image';
                 img_ann.src = `${imagePathann}${searchTerm}.png`;
 
-                getVerticalAlign(img_ann.src).then(verticalAlign => {
-                    img_ann.style.verticalAlign = verticalAlign;
+                const imageWrap = document.createElement('span');
+                imageWrap.style.position = 'relative';
+                imageWrap.style.display = 'inline-block';
+                imageWrap.style.maxWidth = '100%';
+
+                const baselineLine = document.createElement('span');
+                baselineLine.className = 'result-baseline';
+                baselineLine.style.display = document.getElementById('showBaseline').checked ? 'block' : 'none';
+                baselineLine.style.bottom = '0px';
+
+                getBaselineOffset(img_ann.src).then(baseline => {
+                    imageWrap.style.verticalAlign = `${-baseline}px`;
+                    baselineLine.style.bottom = `${baseline}px`;
                 });
 
                 img_ann.onerror = function() {
@@ -838,7 +877,9 @@
                     resultItem.appendChild(errorText);
                 };
 
-                resultItem.appendChild(img_ann);
+                imageWrap.appendChild(img_ann);
+                imageWrap.appendChild(baselineLine);
+                resultItem.appendChild(imageWrap);
 
                 return resultItem;
             }
@@ -846,15 +887,24 @@
             const outerContainer = document.createElement('div');
             outerContainer.className = 'result-image-wrap';
             outerContainer.style.width = '100%';
-            outerContainer.style.overflowX = 'auto';
+            outerContainer.style.overflowX = 'hidden';
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'result-image-crop';
             imageContainer.style.position = 'relative';
             imageContainer.style.overflow = 'hidden';
             imageContainer.style.border = '1px solid #000';
-            imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-            imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+            imageContainer.dataset.expanded = 'false';
+
+            function applyViewportSize(size) {
+                const maxAvailable = outerContainer.clientWidth || size.x;
+                const clampedWidth = Math.min(size.x, maxAvailable);
+                imageContainer.style.width = `${clampedWidth}px`;
+                outerContainer.style.overflowX = 'hidden';
+                imageContainer.style.height = `${size.y}px`;
+            }
+
+            applyViewportSize(DISPLAY_SIZE_SMALL);
 
             const img = document.createElement('img');
             img.className = 'absolute max-w-none';
@@ -877,22 +927,26 @@
             expandButton.innerHTML = 'Expand';
             expandButton.onclick = function(event) {
                 event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                if (imageContainer.style.width === `${DISPLAY_SIZE_SMALL.x}px`) {
-                    imageContainer.style.width = `${DISPLAY_SIZE_LARGE.x}px`;
-                    imageContainer.style.height = `${DISPLAY_SIZE_LARGE.y}px`;
+                const isExpanded = imageContainer.dataset.expanded === 'true';
+                if (!isExpanded) {
+                    applyViewportSize(DISPLAY_SIZE_LARGE);
+                    imageContainer.dataset.expanded = 'true';
                     img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
                     img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
                     expandButton.innerHTML = 'Shrink';
                 } else {
-                    imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-                    imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
+                    applyViewportSize(DISPLAY_SIZE_SMALL);
+                    imageContainer.dataset.expanded = 'false';
                     img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
                     img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
                     expandButton.innerHTML = 'Expand';
                 }
-                // Focus and select regex input after expand/shrink action
-                setTimeout(focusRegexInput, 10);
             };
+
+            window.addEventListener('resize', function() {
+                const size = imageContainer.dataset.expanded === 'true' ? DISPLAY_SIZE_LARGE : DISPLAY_SIZE_SMALL;
+                applyViewportSize(size);
+            });
 
             imageContainer.appendChild(img);
             outerContainer.appendChild(imageContainer);
@@ -1091,6 +1145,7 @@
                 initializeNotesToggleFromData();
             } catch (e) { /* ignore */ }
         })();
+        document.getElementById('showBaseline').addEventListener('change', updateBaselineVisibility);
         // Allow pressing Enter in maxResults to trigger the same search routing as regexInput
         (function attachMaxResultsEnter(){
             try {
