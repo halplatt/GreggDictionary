@@ -30,7 +30,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1015@2:35pm showBase'; // Version display element
+            document.getElementById('version').textContent = 'V2026.1015@3:30pm image'; // Version display element
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -153,15 +153,6 @@
         .result-image {
             min-height: 70px;
         }
-        .result-image-wrap {
-            width: 100%;
-            overflow-x: hidden;
-        }
-        .result-image-crop {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #000;
-        }
         .result-image img.result-inline-image {
             max-width: 100%;
             height: auto;
@@ -220,15 +211,6 @@
         }
         .overflow-x-auto {
             overflow-x: auto;
-        }
-        .expand-button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
                 /* these styles are for button and input row */
     .input-container {
@@ -382,10 +364,6 @@
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
              <a href="../annDictionary/!searchGSText(help).html" target="_blank" class="help-link">Help</a>
              <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
-                 <label for="preferPageImage">
-                     <input type="checkbox" id="preferPageImage">
-                     prefer page image
-                 </label>
                  <label for="showBaseline">
                      <input type="checkbox" id="showBaseline" checked>
                      show Baseline
@@ -419,14 +397,6 @@
                 initializeNotesToggleFromData();
             });
 
-     
-        let dataRef = [];
-        fetch('!reference.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                dataRef = jsonData;
-            })
-            .catch(error => console.error('Error loading JSON:', error));
         // determine if the page is in the ann or sim directory
         var globalGsd
         try {
@@ -608,8 +578,7 @@
                 }
                 notesBlock.appendChild(notesValue);
 
-                // Call searchRefJson and get the page value
-                // Call imageContainer and append the resulting div to imageBlock
+                // Add the individual word image to the result.
                 const imageDiv = imageContainer(entry.text || '');
                 imageBlock.appendChild(imageDiv);
 
@@ -793,24 +762,6 @@
             }
         }
 
-        // Function to search for a specific text in the JSON data
-        function searchRefJson(searchTerm) {
-            const lowerCaseSearchTerm = searchTerm.toLowerCase();
-            for (const page of dataRef) {
-                for (const word of page.words) {
-                    if (word.t.toLowerCase() === lowerCaseSearchTerm) {
-                        return {
-                            page: page.page,
-                            word: word.t,
-                            x: word.x,
-                            y: word.y
-                        };
-                    }
-                }
-            }
-            return null; // Return null if no match is found
-        }
-
         function getBaselineOffset(pngFile) {
             const txtFile = pngFile.replace('.png', '.txt');
             return fetch(txtFile)
@@ -835,123 +786,41 @@
         }
 
         function imageContainer(searchTerm) {
-            const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
-            const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
-            const IMG_WIDTH = 1281;
-            const preferPageImage = document.getElementById('preferPageImage').checked;
-            const objRef = preferPageImage ? searchRefJson(searchTerm) : null;
-
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
-            resultItem.textContent = '';
+            const imagePath = `../${globalGsd}Words/`;
+            const image = document.createElement('img');
+            image.className = 'result-inline-image';
+            image.src = `${imagePath}${searchTerm}.png`;
+            image.alt = `Gregg shorthand for word: ${searchTerm}`;
 
-             // Use the individual word image when page-image preference is off or no reference match exists.
-            if (!objRef) {//There is no match in the reference file use png image
+            const imageWrap = document.createElement('span');
+            imageWrap.style.position = 'relative';
+            imageWrap.style.display = 'inline-block';
+            imageWrap.style.maxWidth = '100%';
 
-                const imagePathann = `../${globalGsd}Words/`; // path to word.png images, uses globalGsd (e.g., ann/sim/pre)
-                const img_ann = document.createElement("img");
-                img_ann.className = 'result-inline-image';
-                img_ann.src = `${imagePathann}${searchTerm}.png`;
+            const baselineLine = document.createElement('span');
+            baselineLine.className = 'result-baseline';
+            baselineLine.style.display = document.getElementById('showBaseline').checked ? 'block' : 'none';
+            baselineLine.style.bottom = '0px';
 
-                const imageWrap = document.createElement('span');
-                imageWrap.style.position = 'relative';
-                imageWrap.style.display = 'inline-block';
-                imageWrap.style.maxWidth = '100%';
-
-                const baselineLine = document.createElement('span');
-                baselineLine.className = 'result-baseline';
-                baselineLine.style.display = document.getElementById('showBaseline').checked ? 'block' : 'none';
-                baselineLine.style.bottom = '0px';
-
-                getBaselineOffset(img_ann.src).then(baseline => {
-                    imageWrap.style.verticalAlign = `${-baseline}px`;
-                    baselineLine.style.bottom = `${baseline}px`;
-                });
-
-                img_ann.onerror = function() {
-                    this.style.display = "none";  // Hide the image
-                    const errorText = document.createElement("span");
-                    errorText.textContent = "image not available";
-                    errorText.style.color = "#888";
-                    errorText.style.fontStyle = "italic";
-                    resultItem.appendChild(errorText);
-                };
-
-                imageWrap.appendChild(img_ann);
-                imageWrap.appendChild(baselineLine);
-                resultItem.appendChild(imageWrap);
-
-                return resultItem;
-            }
-            
-            const outerContainer = document.createElement('div');
-            outerContainer.className = 'result-image-wrap';
-            outerContainer.style.width = '100%';
-            outerContainer.style.overflowX = 'hidden';
-
-            const imageContainer = document.createElement('div');
-            imageContainer.className = 'result-image-crop';
-            imageContainer.style.position = 'relative';
-            imageContainer.style.overflow = 'hidden';
-            imageContainer.style.border = '1px solid #000';
-            imageContainer.dataset.expanded = 'false';
-
-            function applyViewportSize(size) {
-                const maxAvailable = outerContainer.clientWidth || size.x;
-                const clampedWidth = Math.min(size.x, maxAvailable);
-                imageContainer.style.width = `${clampedWidth}px`;
-                outerContainer.style.overflowX = 'hidden';
-                imageContainer.style.height = `${size.y}px`;
-            }
-
-            applyViewportSize(DISPLAY_SIZE_SMALL);
-
-            const img = document.createElement('img');
-            img.className = 'absolute max-w-none';
-            img.src = `${objRef.page}.png`;
-            img.alt = `Gregg shorthand for word: ${objRef.word}`;
-            img.style.position = 'absolute';
-            img.style.top = `-${objRef.y - 50}px`; // Adjust to center the word vertically
-            img.style.left = `-${objRef.x - 182.5}px`; // Adjust to center the word horizontally
-            img.style.width = '1281px'; // Assuming the image width is fixed
-
-            img.onload = function() {
-                const scale = IMG_WIDTH / img.naturalWidth;
-                img.style.top = `-${objRef.y * scale - DISPLAY_SIZE_SMALL.y / 2}px`;
-                img.style.left = `-${objRef.x * scale - DISPLAY_SIZE_SMALL.offset}px`;
-                img.style.width = `${IMG_WIDTH}px`;
-            };
-
-            const expandButton = document.createElement('button');
-            expandButton.className = 'expand-button';
-            expandButton.innerHTML = 'Expand';
-            expandButton.onclick = function(event) {
-                event.stopPropagation(); // Prevent the event from bubbling up to the resultItem
-                const isExpanded = imageContainer.dataset.expanded === 'true';
-                if (!isExpanded) {
-                    applyViewportSize(DISPLAY_SIZE_LARGE);
-                    imageContainer.dataset.expanded = 'true';
-                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.y / 2}px`;
-                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_LARGE.offset}px`;
-                    expandButton.innerHTML = 'Shrink';
-                } else {
-                    applyViewportSize(DISPLAY_SIZE_SMALL);
-                    imageContainer.dataset.expanded = 'false';
-                    img.style.top = `-${objRef.y * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.y / 2}px`;
-                    img.style.left = `-${objRef.x * (IMG_WIDTH / img.naturalWidth) - DISPLAY_SIZE_SMALL.offset}px`;
-                    expandButton.innerHTML = 'Expand';
-                }
-            };
-
-            window.addEventListener('resize', function() {
-                const size = imageContainer.dataset.expanded === 'true' ? DISPLAY_SIZE_LARGE : DISPLAY_SIZE_SMALL;
-                applyViewportSize(size);
+            getBaselineOffset(image.src).then(baseline => {
+                imageWrap.style.verticalAlign = `${-baseline}px`;
+                baselineLine.style.bottom = `${baseline}px`;
             });
 
-            imageContainer.appendChild(img);
-            outerContainer.appendChild(imageContainer);
-            outerContainer.appendChild(expandButton);
-            resultItem.appendChild(outerContainer);
+            image.onerror = function() {
+                this.style.display = 'none';
+                const errorText = document.createElement('span');
+                errorText.textContent = 'image not available';
+                errorText.style.color = '#888';
+                errorText.style.fontStyle = 'italic';
+                resultItem.appendChild(errorText);
+            };
+
+            imageWrap.appendChild(image);
+            imageWrap.appendChild(baselineLine);
+            resultItem.appendChild(imageWrap);
             return resultItem;
         }
         function updateCaretButton() {
@@ -1201,8 +1070,7 @@
                 clickedElement.tagName === 'IMG' ||
                 clickedElement.closest('button') ||
                 clickedElement.closest('a') ||
-                clickedElement.closest('.result-item') ||
-                clickedElement.closest('.expand-button')) {
+                clickedElement.closest('.result-item')) {
                 return; // Don't refocus if clicking on interactive elements
             }
             

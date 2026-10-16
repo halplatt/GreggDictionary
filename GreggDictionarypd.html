@@ -70,7 +70,7 @@ It includes a search interface with various buttons that trigger different searc
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2026.0801@446pm array";
+    			document.getElementById('version').innerHTML = "v2026.1015@117am usesimpng";
 				// array = renamed dataset.djs.js to dataseet.non-ann.js
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
@@ -907,7 +907,8 @@ function refreshNotWord(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Notehand Dictionary";
 	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,notWord);
-	var path = '<img src="notDictionary/';
+	var path = '<img src="notWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="notDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
@@ -918,33 +919,11 @@ function refreshSimWord(cntAdj) {
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand";
 	var word = getTrimmedTxt1();
-    // create a thumbnail image for the word
-	document.getElementById('record').innerHTML = ""
-	const result = findPageByWord(word);
-	if (result) {
-		const imageContainer = document.createElement('div');
-		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
-        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
-        const IMG_WIDTH = 1281;
-		imageContainer.className = 'relative overflow-hidden border';
-		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-		const img = document.createElement('img');
-		img.className = 'absolute max-w-none';
-		img.src = `./simDictionary/${result.page}.png`;
-		img.alt = `Gregg shorthand for word: ${result.t}`;
-		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
-		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
-		img.style.width = '1281px'; // Assuming the image width is fixed
-		imageContainer.appendChild(img);
-		document.getElementById('record').appendChild(imageContainer);
-	}
-
-
 	var wordId = findIdx(word,simWord);
-	var path = '<img src="simDictionary/';
+	var path = '<img src="simWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="simDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
-	document.getElementById('record').innerHTML += path;
+	document.getElementById('record').innerHTML = path;
 }
 function refreshSimName(cntAdj) {
 	setLastButton('refreshSimName');
@@ -953,35 +932,11 @@ function refreshSimName(cntAdj) {
 	loadAboutSim()
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Names)";
 	var word = getTrimmedTxt1();
-
-	// create a thumbnail image for the word
-	document.getElementById('record').innerHTML = ""
-	const result = findPageByWord(word);
-	if (result) {
-		const imageContainer = document.createElement('div');
-		const DISPLAY_SIZE_SMALL = { x: 365, y: 100, offset: 5 };
-        const DISPLAY_SIZE_LARGE = { x: 450, y: 180, offset: 10 };
-        const IMG_WIDTH = 1281;
-		imageContainer.className = 'relative overflow-hidden border';
-		imageContainer.style.width = `${DISPLAY_SIZE_SMALL.x}px`;
-		imageContainer.style.height = `${DISPLAY_SIZE_SMALL.y}px`;
-		const img = document.createElement('img');
-		img.className = 'absolute max-w-none';
-		img.src = `./simDictionary/${result.page}.png`;
-		img.alt = `Gregg shorthand for word: ${result.t}`;
-		img.style.top = `-${result.y-25}px`; // Adjust to center the word vertically
-		img.style.left = `-${result.x}px`; // Adjust to center the word horizontally
-		img.style.width = '1281px'; // Assuming the image width is fixed
-		imageContainer.appendChild(img);
-		document.getElementById('record').appendChild(imageContainer);
-	}
-
-
-
 	var wordId = findIdx(word,simName);
-	var path = '<img src="simDictionary/';
+	var path = '<img src="simWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="simDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
-	document.getElementById('record').innerHTML += path;
+	document.getElementById('record').innerHTML = path;
 }
 function refreshAnnPhrase(cntAdj) {
 	setLastButton('refreshAnnPhrase');
@@ -1134,7 +1089,7 @@ function loadAboutAnn() {
 }
 function loadAboutNot() {
 	var aboutText = "";
-	aboutText = aboutText.concat("<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 2nd Ed (1968)</p>");
+	aboutText = aboutText.concat("<p><i><b>Notehand G-S-T adapted from</b> Teri Anderson’s (washbear) Gregg Notehand dictionary. <b>Notes reference</b>  Gregg Notehand 1st Ed (1960)</p>");
 	document.getElementById('about').innerHTML = aboutText;
 }
 //end inline data.djs.js
@@ -1391,9 +1346,8 @@ async function getPageByNumber(pageNumber) { //returns the page object for a giv
 		<!-- End Suggestions -->
 				<div id="about"></div>
 
-		
-	
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f3ae1b6850f47ac95ad01240d8f680d"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+		<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f3ae1b6850f47ac95ad01240d8f680d"}'></script><!-- End Cloudflare Web Analytics -->
+
+	</body>
 
 </html>
