@@ -61,6 +61,7 @@
                 const nextUrl = new URL(window.location.href);
                 nextUrl.searchParams.set('gsd', versionSelect.value);
                 try {
+                    window.sessionStorage.setItem('searchGreggOutlinesPendingInput', document.getElementById('regexInput').value);
                     window.localStorage.setItem('searchGreggOutlinesVersion', versionSelect.value);
                 } catch (error) {
                     console.error('Could not save the shorthand version:', error);
@@ -445,11 +446,32 @@
             .then(jsonData => {
                 dataGST = jsonData;
                 initializeNotesToggleFromData();
+                restorePendingInput();
             })
             .catch(error => {
                 console.error('Error loading JSON:', error);
                 initializeNotesToggleFromData();
             });
+
+        // Restore the search text kept across a shorthand version change and re-run it
+        function restorePendingInput() {
+            let saved = null;
+            try {
+                saved = window.sessionStorage.getItem('searchGreggOutlinesPendingInput');
+                window.sessionStorage.removeItem('searchGreggOutlinesPendingInput');
+            } catch (error) {
+                console.error('Could not restore the search text:', error);
+            }
+            if (!saved) return;
+            const input = document.getElementById('regexInput');
+            input.value = saved;
+            input.dispatchEvent(new Event('input'));
+            if (saved.includes('-') || saved.includes('/')) {
+                searchGST();
+            } else {
+                searchText();
+            }
+        }
 
         document.title = `Gregg Shorthand Text (G-S-T) Search of ${selectedVersion.label}`;
         document.querySelector('h1').textContent = `Gregg Shorthand Text (G-S-T) Search of ${selectedVersion.label}`;
