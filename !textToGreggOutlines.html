@@ -271,29 +271,27 @@ img:not(:first-child) {
 
         .topbar {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
         }
         .topbar-right {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: flex-start;
             gap: 12px;
+        }
+        .topbar-right select {
+            font-size: 1em;
+            padding: 6px 8px;
         }
         .topbar h1 { margin: 0; }
         .topbar #version {
             position: static;
             font-size: 0.8em;
             color: #888;
-        }
-        @media (max-width: 768px) {
-            .topbar {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-            .topbar-right {
-                flex-wrap: wrap;
-            }
         }
 
 @media (prefers-color-scheme: dark) {

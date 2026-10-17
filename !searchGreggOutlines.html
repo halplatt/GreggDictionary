@@ -326,14 +326,21 @@
         /* Top bar for title + version + help */
         .topbar {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
         }
         .topbar-right {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: flex-start;
             gap: 12px;
+        }
+        .topbar-right select {
+            font-size: 1em;
+            padding: 6px 8px;
         }
     .topbar h1 { margin: 0; }
         /* Override absolute positioning for #version when used in the top bar */
