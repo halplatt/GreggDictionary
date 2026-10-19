@@ -28,6 +28,20 @@
     //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
 		// IIFE to set the global variable `public_domain_only` ;
 		// if page name ends in 'pd' only public domain dictionaries are shown.
+		(function () {
+			// Prefer explicit query param ?public_domain_only=...
+			var usp = new URLSearchParams(window.location.search || '');
+
+			// Derive from the current file name if no param: ends with "pd"
+			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
+			var baseName = fileName.replace(/\.[^.]+$/, '');
+			var derived = baseName.endsWith('pd') ? 'pd' : '';
+
+			window.public_domain_only = usp.get('public_domain_only') || derived;
+		})();
+        const programName = (window.location.pathname.split('/').pop() || '')
+            .replace(/\.[^.]+$/, '').toLowerCase();
+        const isPublicDomainProgram = public_domain_only === 'pd' && programName.endsWith('pd');
         const outlineVersions = [
             { code: 'pre', label: 'Pre-Anniversary' },
             { code: 'ann', label: 'Anniversary' },
@@ -35,7 +49,10 @@
             { code: 'djs', label: 'Diamond Jubilee' },
             { code: 'not', label: 'Notehand' }
         ];
-        const outlineVersionCodes = new Set(outlineVersions.map(version => version.code));
+        const availableOutlineVersions = isPublicDomainProgram
+            ? outlineVersions.filter(version => version.code === 'pre' || version.code === 'ann')
+            : outlineVersions;
+        const outlineVersionCodes = new Set(availableOutlineVersions.map(version => version.code));
         const outlineUrl = new URL(window.location.href);
         const requestedVersion = outlineUrl.searchParams.get('gsd');
         let storedVersion = '';
@@ -46,7 +63,8 @@
         }
         const selectedGsd = outlineVersionCodes.has(requestedVersion)
             ? requestedVersion
-            : outlineVersionCodes.has(storedVersion) ? storedVersion : 'djs';
+            : outlineVersionCodes.has(storedVersion) ? storedVersion
+            : isPublicDomainProgram ? 'pre' : 'djs';
         const selectedVersion = outlineVersions.find(version => version.code === selectedGsd);
         var globalGsd = selectedGsd;
         try {
@@ -56,6 +74,13 @@
         }
         document.addEventListener('DOMContentLoaded', () => {
             const versionSelect = document.getElementById('outlineVersion');
+            if (isPublicDomainProgram) {
+                versionSelect.querySelectorAll('option').forEach(option => {
+                    if (!outlineVersionCodes.has(option.value)) {
+                        option.remove();
+                    }
+                });
+            }
             versionSelect.value = selectedGsd;
             versionSelect.addEventListener('change', () => {
                 const nextUrl = new URL(window.location.href);
@@ -71,23 +96,11 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1017 shared outlines';
+            document.getElementById('version').textContent = 'V2026.1018 handle pd';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
         });
-		(function () {
-			// Prefer explicit query param ?public_domain_only=...
-			var usp = new URLSearchParams(window.location.search || '');
-
-			// Derive from the current file name if no param: ends with "pd"
-			var fileName = (window.location.pathname.split('/').pop() || '').toLowerCase();
-			var baseName = fileName.replace(/\.[^.]+$/, ''); // strip extension like .html/.htm
-			var derived = baseName.endsWith('pd') ? 'pd' : '';
-
-			// Expose globally for existing code to use
-			window.public_domain_only = usp.get('public_domain_only') || derived;
-		})();
         if (public_domain_only === 'pd') {
             const style = document.createElement('style');
             style.innerHTML = `

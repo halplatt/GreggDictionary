@@ -65,6 +65,9 @@
 			window.public_domain_only = usp.get('public_domain_only') || derived;
 		})();
 
+        const programName = (window.location.pathname.split('/').pop() || '')
+            .replace(/\.[^.]+$/, '').toLowerCase();
+        const isPublicDomainProgram = public_domain_only === 'pd' && programName.endsWith('pd');
         const translatorVersions = [
             { code: 'pre', label: 'Pre-Anniversary' },
             { code: 'ann', label: 'Anniversary' },
@@ -72,7 +75,10 @@
             { code: 'djs', label: 'Diamond Jubilee' },
             { code: 'not', label: 'Notehand' }
         ];
-        const translatorVersionCodes = new Set(translatorVersions.map(version => version.code));
+        const availableTranslatorVersions = isPublicDomainProgram
+            ? translatorVersions.filter(version => version.code === 'pre' || version.code === 'ann')
+            : translatorVersions;
+        const translatorVersionCodes = new Set(availableTranslatorVersions.map(version => version.code));
         const translatorUrl = new URL(window.location.href);
         const requestedVersion = translatorUrl.searchParams.get('gsd');
         let storedVersion = '';
@@ -83,7 +89,8 @@
         }
         const selectedGsd = translatorVersionCodes.has(requestedVersion)
             ? requestedVersion
-            : translatorVersionCodes.has(storedVersion) ? storedVersion : 'djs';
+            : translatorVersionCodes.has(storedVersion) ? storedVersion
+            : isPublicDomainProgram ? 'pre' : 'djs';
         const selectedVersion = translatorVersions.find(version => version.code === selectedGsd);
         var globalGsd = selectedGsd;
         const imagePath = `${selectedGsd}Words/`;
@@ -99,6 +106,13 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const versionSelect = document.getElementById('outlineVersion');
+            if (isPublicDomainProgram) {
+                versionSelect.querySelectorAll('option').forEach(option => {
+                    if (!translatorVersionCodes.has(option.value)) {
+                        option.remove();
+                    }
+                });
+            }
             versionSelect.value = selectedGsd;
             versionSelect.addEventListener('change', () => {
                 try {
@@ -111,7 +125,7 @@
                 nextUrl.searchParams.set('gsd', versionSelect.value);
                 window.location.assign(nextUrl);
             });
-            document.getElementById('version').textContent = 'V2026.1017 shared outlines';
+            document.getElementById('version').textContent = 'V2026.1018 handle pd';
             if (public_domain_only === 'pd') {
                 document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
             }

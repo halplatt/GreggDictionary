@@ -11561,7 +11561,7 @@
     },
     {
         "text": "backhand",
-        "gst": "b-a-k-h-a-nt",
+        "gst": "b-a-k-h-nt",
         "notes": ""
     },
     {
@@ -13516,7 +13516,7 @@
     },
     {
         "text": "beforehand",
-        "gst": "b-f-h-a-nt",
+        "gst": "b-f-h-nt",
         "notes": ""
     },
     {
@@ -56861,7 +56861,7 @@
     },
     {
         "text": "freehand",
-        "gst": "f-r-e-h-a-nt",
+        "gst": "f-r-e-h-nt",
         "notes": ""
     },
     {
@@ -63226,12 +63226,12 @@
     },
     {
         "text": "hand",
-        "gst": "h-a-nt",
+        "gst": "h-nt",
         "notes": ""
     },
     {
         "text": "handbag",
-        "gst": "h-a-nt-b-a-g",
+        "gst": "h-nt-b-a-g",
         "notes": ""
     },
     {
@@ -63241,12 +63241,12 @@
     },
     {
         "text": "handbill",
-        "gst": "h-a-nt-b-e-l",
+        "gst": "h-nt-b-e-l",
         "notes": ""
     },
     {
         "text": "handbook",
-        "gst": "h-a-nt-b-u-k",
+        "gst": "h-nt-b-u-k",
         "notes": ""
     },
     {
@@ -63256,7 +63256,7 @@
     },
     {
         "text": "handed",
-        "gst": "h-a-nt-d",
+        "gst": "h-nt-d",
         "notes": ""
     },
     {
@@ -63266,32 +63266,32 @@
     },
     {
         "text": "handicap",
-        "gst": "h-a-nt-e-k-a-p",
+        "gst": "h-nt-e-k-a-p",
         "notes": ""
     },
     {
         "text": "handicapped",
-        "gst": "h-a-nt-e-k-a-p-t",
+        "gst": "h-nt-e-k-a-p-t",
         "notes": ""
     },
     {
         "text": "handicraft",
-        "gst": "h-a-nt-e-k-r-a-f-t",
+        "gst": "h-nt-e-k-r-a-f-t",
         "notes": ""
     },
     {
         "text": "handier",
-        "gst": "h-a-nt-e-r",
+        "gst": "h-nt-e-r",
         "notes": ""
     },
     {
         "text": "handily",
-        "gst": "h-a-nt-ye",
+        "gst": "h-nt-ye",
         "notes": ""
     },
     {
         "text": "handiness",
-        "gst": "h-a-nt-e-n-e-s",
+        "gst": "h-nt-e-n-e-s",
         "notes": ""
     },
     {
@@ -63301,22 +63301,22 @@
     },
     {
         "text": "handle",
-        "gst": "h-a-nt-l",
+        "gst": "h-nt-l",
         "notes": ""
     },
     {
         "text": "handled",
-        "gst": "h-a-nt-ld",
+        "gst": "h-nt-ld",
         "notes": ""
     },
     {
         "text": "handrall",
-        "gst": "h-a-nt-r-l",
+        "gst": "h-nt-r-l",
         "notes": ""
     },
     {
         "text": "handrest",
-        "gst": "h-a-nt-r-e-s-t",
+        "gst": "h-nt-r-e-s-t",
         "notes": ""
     },
     {
@@ -63326,17 +63326,17 @@
     },
     {
         "text": "handspring",
-        "gst": "h-a-nt-s-p-r-h",
+        "gst": "h-nt-s-p-r-h",
         "notes": ""
     },
     {
         "text": "handwork",
-        "gst": "h-a-nt-u-k",
+        "gst": "h-nt-u-k",
         "notes": ""
     },
     {
         "text": "handwriting",
-        "gst": "h-a-nt-r-i-t-h",
+        "gst": "h-nt-r-i-t-h",
         "notes": ""
     },
     {
@@ -82056,7 +82056,7 @@
     },
     {
         "text": "left hand",
-        "gst": "l-e-f-t-h-a-nt",
+        "gst": "l-e-f-t-h-nt",
         "notes": ""
     },
     {
@@ -84566,7 +84566,7 @@
     },
     {
         "text": "longhand",
-        "gst": "l-o-ng-h-a-nt",
+        "gst": "l-o-ng-h-nt",
         "notes": ""
     },
     {
@@ -98821,7 +98821,7 @@
     },
     {
         "text": "offhand",
-        "gst": "o-f-h-a-nt",
+        "gst": "o-f-h-nt",
         "notes": ""
     },
     {
@@ -134006,7 +134006,7 @@
     },
     {
         "text": "shorthand",
-        "gst": "sh-t-h-a-nt",
+        "gst": "sh-t-h-nt",
         "notes": ""
     },
     {
@@ -142471,7 +142471,7 @@
     },
     {
         "text": "stagehand",
-        "gst": "s-t-a-j-h-a-nt",
+        "gst": "s-t-a-j-h-nt",
         "notes": ""
     },
     {
@@ -163046,17 +163046,17 @@
     },
     {
         "text": "underhanded",
-        "gst": "u/h-a-nt-d",
+        "gst": "u/h-nt-d",
         "notes": ""
     },
     {
         "text": "underhandedly",
-        "gst": "u/h-a-nt-d-e",
+        "gst": "u/h-nt-d-e",
         "notes": ""
     },
     {
         "text": "underhandedness",
-        "gst": "u/h-a-nt-i-n-e-s",
+        "gst": "u/h-nt-i-n-e-s",
         "notes": ""
     },
     {
