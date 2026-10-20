@@ -1,1 +1,8 @@
-finite,unite
+arttul,artful
+uneventtul,uneventful
+cheertul,cheerful
+loathtul,loathful
+sorrowtul,sorrowful
+sticktul,stickful
+uneventtul,uneventful
+billtish,billfish

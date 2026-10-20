@@ -2514,3 +2514,10 @@ hdget,fidget
 hduciary,fiduciary
 finite,unite
 indubrtable,indubitable
+arttul,artful
+uneventtul,uneventful
+cheertul,cheerful
+loathtul,loathful
+sorrowtul,sorrowful
+sticktul,stickful
+billtish,billfish

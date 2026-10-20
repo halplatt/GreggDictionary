@@ -178,10 +178,15 @@ def save_json(path: str, data: List[dict], backup: bool):
 
 def main():
     parser = argparse.ArgumentParser(description="Update !wordsearchall.json with words from a JS array file")
-    parser.add_argument('--words-dir', default='djsWords', help='Folder containing the words array file (default: notWords)')  # default words folder
+    # --words-dir selects the folder containing !words.array.js; ignored if --words-file is provided.
+    parser.add_argument('--words-dir', default='djsWords', help='Folder containing !words.array.js (default: djsWords)')
+    # --words-file selects a specific JavaScript source file and overrides --words-dir.
     parser.add_argument('--words-file', default=None, help='Explicit path to the JS file containing the array of words; overrides --words-dir')
+    # --json-file selects the JSON list to update.
     parser.add_argument('--json-file', default='!wordsearchall.json', help='Path to JSON file to update')
+    # --no-backup prevents the existing JSON file from being saved as a .bak file before writing.
     parser.add_argument('--no-backup', action='store_true', help='Do not create .bak backup of JSON before writing')
+    # --dry-run reports the number of words that would be added without changing the JSON file.
     parser.add_argument('--dry-run', action='store_true', help='Parse and report but do not modify JSON file')
     args = parser.parse_args()
 
