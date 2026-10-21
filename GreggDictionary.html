@@ -37,9 +37,9 @@ It includes a search interface with various buttons that trigger different searc
 		</script>
 		<!-- JavaScripts with cachebusting querystring-->
 		<!-- Data arrays of words -->
-		<script type="text/javascript" src="dataseet.non-ann.js?v=2025.0528.0323pm"></script> 
+		<script type="text/javascript" src="dataset.non-ann.js?v=2026.1021.0702pm"></script> 
 		<!-- 
-			dataseet.non-ann.js contents (dictionary word-list arrays):
+			dataset.non-ann.js contents (dictionary word-list arrays):
 
 			DJS (Diamond Jubilee):
 			djsWord, djsName, djsPhrase
@@ -51,7 +51,7 @@ It includes a search interface with various buttons that trigger different searc
 			cenWord, cenBrief, cenPhrase, cenWomen, cenMen, cenSur, cenUSName, cenGeoName
 
 			Simplified:
-			simWord, simName
+			simWord, simName, simPhrase
 
 			Anniversary:
 			annPhrase
@@ -70,7 +70,7 @@ It includes a search interface with various buttons that trigger different searc
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2026.1015@117am usesimpng";
+    			document.getElementById('version').innerHTML = "v2026.1021@07:06pm simPhrase";
 				// array = renamed dataset.djs.js to dataseet.non-ann.js
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
@@ -938,6 +938,18 @@ function refreshSimName(cntAdj) {
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
+function refreshSimPhrase(cntAdj) {
+	setLastButton('refreshSimPhrase');
+	pageCntAdj(cntAdj, simPhrase);
+	hideSuggestion()
+	loadAboutSim()
+	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Phrases)";
+	var word = getTrimmedTxt1();
+	var wordId = findIdx(word,simPhrase);
+	var path = '<img src="simDictionary/simPhrases/';
+	path = path.concat(wordId, '.png" style="width:60%">');
+	document.getElementById('record').innerHTML = path;
+}
 function refreshAnnPhrase(cntAdj) {
 	setLastButton('refreshAnnPhrase');
 	pageCntAdj(cntAdj, annPhrase);
@@ -1226,6 +1238,9 @@ async function getPageByNumber(pageNumber) { //returns the page object for a giv
 							<div class="inner">
                                 <button id="btn4" class="sim" onclick="refreshSimName()">SimName</button>
 							</div>
+                                							<div class="inner">
+                                                                <button id="btn25" class="sim" onclick="refreshSimPhrase()">SimPhrase</button>
+                                							</div>
 							<div class="inner">
                                 <button id="btn15" class="s90" onclick="refreshS90Word()" accesskey="9" title="Alt+9">S<b>9</b>0</button>
 							</div>
