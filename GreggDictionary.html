@@ -946,7 +946,8 @@ function refreshSimPhrase(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Simplified Shorthand (Phrases)";
 	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,simPhrase);
-	var path = '<img src="simDictionary/simPhrases/';
+	var path = '<img src="simWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="simDictionary/simPhrases/';
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
