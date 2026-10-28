@@ -11,7 +11,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GST Search</title>
+    <title>Gregg Search</title>
     <script>
     //V2026.0730@6:42pm links
     //V2026.0729@12:27am added notDictionary. Smart logic to display showNotes sheckbox only if any notes exist in the json
@@ -96,7 +96,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1018 handle pd';
+            document.getElementById('version').textContent = 'V2026.1027 interface';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -286,6 +286,43 @@
         min-width: 0;
     }
     .button-row .search-type-group { margin-top: 0 !important; }
+    .regex-shortcuts {
+        align-self: flex-end;
+    }
+    .regex-shortcuts summary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 8px;
+        border: 1px solid #888;
+        border-radius: 3px;
+        font-size: 12px;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+    }
+    .regex-shortcuts summary::-webkit-details-marker { display: none; }
+    .regex-shortcuts[open] { flex-basis: 100%; }
+    .regex-shortcuts[open] summary { width: fit-content; }
+    .regex-shortcuts-closed-label { color: #666; }
+    .regex-shortcuts-open-label { display: none; }
+    .regex-shortcuts[open] .regex-shortcuts-closed-label { display: none; }
+    .regex-shortcuts[open] .regex-shortcuts-open-label { display: inline; }
+    .regex-symbol-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .regex-symbol-buttons button {
+        margin: 0;
+        padding: 2px 8px;
+        font-size: 16px;
+        height: 30px;
+        line-height: 26px;
+        min-height: 0;
+        box-sizing: border-box;
+    }
     .input-row {
         display: flex;
         align-items: center;
@@ -370,7 +407,7 @@
 </head>
 <body>
     <div class="topbar">
-        <h1>Gregg Shorthand Text (G-S-T) Outline Search</h1>
+        <h1>Search Gregg Outlines</h1>
         <div class="topbar-right">
             <label for="outlineVersion">Shorthand version:</label>
             <select id="outlineVersion" aria-label="Shorthand version">
@@ -415,23 +452,31 @@
                     <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+E (Alt+Shift+E) selects Ends with"><input type="radio" name="searchType" value="endsWith"> <b>E</b>nds with</label>
                   
                 </div>
-                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
-                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
-                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
-                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
-                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <details class="regex-shortcuts">
+                    <summary>
+                        <span class="regex-shortcuts-closed-label">&gt; Optional search pattern shortcuts</span>
+                        <span class="regex-shortcuts-open-label">V Regex Symbols</span>
+                    </summary>
+                    <div class="regex-symbol-buttons">
+                        <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                        <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
+                        <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                        <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
+                        <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                        <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                        <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                        <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                    </div>
+                </details>
             </div>
         <div class="input-row">
-            <input type="text" id="regexInput" placeholder="Search text, G‑S‑T, or regex">
+            <input type="text" id="regexInput" placeholder="Enter text (e.g., cat) or strokes (e.g., k-a-t)">
             <button id="searchText">Search Text</button>
-            <button id="searchGST">Search G-S-T</button>
+            <button id="searchGST">Search Strokes</button>
             <label for="maxResults">Maximum Words:</label>
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
              <a href="!searchGreggOutlines(help).html" target="_blank" class="help-link">Help</a>
-             <button id="referenceBtn" class="reference-btn" accesskey="r" title="Character reference (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? G-S-T Reference</button>
+             <button id="referenceBtn" class="reference-btn" accesskey="r" title="Stroke name guide (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? Stroke Name Guide</button>
                  <label for="showBaseline">
                      <input type="checkbox" id="showBaseline" checked>
                      show Baseline
@@ -440,7 +485,7 @@
                      <input type="checkbox" id="showNotes">
                      show notes
                  </label>
-             <div id="referenceTooltip" class="reference-tooltip" role="dialog" aria-label="G-S-T Quick Reference" aria-hidden="true" data-include="!searchGreggOutlines(tooltip).html">
+             <div id="referenceTooltip" class="reference-tooltip" role="dialog" aria-label="Stroke Name Guide" aria-hidden="true" data-include="!searchGreggOutlines(tooltip).html">
                 <div style="font-size:12px;color:#666;">Loading reference…</div>
              </div>
         </div>
@@ -486,8 +531,7 @@
             }
         }
 
-        document.title = `Gregg Shorthand Text (G-S-T) Search of ${selectedVersion.label}`;
-        document.querySelector('h1').textContent = `Gregg Shorthand Text (G-S-T) Search of ${selectedVersion.label}`;
+        document.title = `Gregg Search — ${selectedVersion.label}`;
   
         // Function to display results in the table
         function updateNotesVisibility() {
