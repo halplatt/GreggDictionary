@@ -70,7 +70,7 @@ It includes a search interface with various buttons that trigger different searc
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2026.1027@05:08pm simPhrase";
+    			document.getElementById('version').innerHTML = "v2026.1028@05:16pm random";
 				// array = renamed dataset.djs.js to dataseet.non-ann.js
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
@@ -399,11 +399,38 @@ It includes a search interface with various buttons that trigger different searc
 							break;
 						}
 					}
+					if (!document.getElementById('txt1').value) {
+						document.getElementById('txt1').value = getRandomWord();
+						document.getElementById('txt1').select();
+					}
 					if (typeof window[lastButton] === 'function') {
 						window[lastButton]();
 					} else {
 						refreshDjsWord();
 					}
+			}
+
+			// Pick a random entry from the word list used by the currently selected dictionary
+			function getRandomWord() {
+				const lists = {
+					refreshDjsWord: () => djsWord, refreshDjsName: () => djsName, refreshDjsPhrase: () => djsPhrase,
+					refreshS90Word: () => s90Word, refreshS90Phrase: () => s90Phrase, refreshS90Women: () => s90Women,
+					refreshS90Men: () => s90Men, refreshS90Sur: () => s90Sur, refreshS90USName: () => s90USName,
+					refreshS90GeoName: () => s90GeoName,
+					refreshCenWord: () => cenWord, refreshCenBrief: () => cenBrief, refreshCenPhrase: () => cenPhrase,
+					refreshCenWomen: () => cenWomen, refreshCenMen: () => cenMen, refreshCenSur: () => cenSur,
+					refreshCenUSName: () => cenUSName, refreshCenGeoName: () => cenGeoName,
+					refreshNotWord: () => notWord,
+					refreshSimWord: () => simWord, refreshSimName: () => simName, refreshSimPhrase: () => simPhrase,
+					refreshAnnWord: () => ann_dict, refreshAnnPhrase: () => annPhrase,
+					refreshPreWord: () => preWord
+				};
+				let list;
+				try {
+					list = lists[lastButton] && lists[lastButton]();
+				} catch (e) { /* list not defined; fall back below */ }
+				if (!Array.isArray(list) || list.length === 0) list = ann_dict;
+				return list[Math.floor(Math.random() * list.length)];
 			}
 
 			function lookupCurrentDictionary() {
@@ -435,15 +462,8 @@ It includes a search interface with various buttons that trigger different searc
 				});
 				//handle parms
 				const params = getQueryParams();
-				let word;
-				if (params.x) {
-					word = params.x;
-				} else { // use a random word if no word is provided
-					const rndNbr = Math.floor(Math.random() * ann_dict.length);
-					word = ann_dict[rndNbr];
-				}
-				document.getElementById("txt1").value=word;
-				
+				// If no word is provided, handleGsdParam picks a random word from the selected dictionary
+				document.getElementById("txt1").value = params.x || "";
 				document.getElementById('txt1').select();
 				handleGsdParam();				
 			}
