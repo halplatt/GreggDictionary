@@ -70,7 +70,7 @@ It includes a search interface with various buttons that trigger different searc
 		<script type="text/javascript" src="djsWords/!words.array.js?v=2025.0507.11:11am"></script>
 		<script>
        		document.addEventListener('DOMContentLoaded', function() {
-    			document.getElementById('version').innerHTML = "v2026.1028@05:16pm random";
+    			document.getElementById('version').innerHTML = "v2026.1028@06:17pm random";
 				// array = renamed dataset.djs.js to dataseet.non-ann.js
 				if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
@@ -979,7 +979,8 @@ function refreshAnnPhrase(cntAdj) {
 	document.getElementById('gsdTitle').innerHTML = "Gregg Anniversary Shorthand (Phrases)";
 	var word = getTrimmedTxt1();
 	var wordId = findIdx(word,annPhrase);
-	var path = '<img src="annDictionary/';
+	var path = '<img src="annWords/' + word + '.png" title="' + word + '" alt="' + word + '" onerror="this.outerHTML=\'<span>Outline not available</span>\'"><br>';
+	path += '<img src="annDictionary/';
 	path = path.concat(wordId, '.png" style="width:60%">');
 	document.getElementById('record').innerHTML = path;
 }
