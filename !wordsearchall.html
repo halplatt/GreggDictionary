@@ -129,7 +129,38 @@ version 02/06/2025 at 9:18pm First version
         flex-wrap: wrap; /* Allow wrapping to the next line if needed */
         justify-content: flex-start;
         align-items: flex-end; /* align bottoms with radio buttons */
+        gap: 8px;
         width: 100%;
+        min-width: 0;
+    }
+    .button-row .search-type-group { margin-top: 0 !important; }
+    .regex-shortcuts {
+        align-self: flex-end;
+    }
+    .regex-shortcuts summary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 8px;
+        border: 1px solid #888;
+        border-radius: 3px;
+        font-size: 12px;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+    }
+    .regex-shortcuts summary::-webkit-details-marker { display: none; }
+    .regex-shortcuts[open] { flex-basis: 100%; }
+    .regex-shortcuts[open] summary { width: fit-content; }
+    .regex-shortcuts-closed-label { color: #666; }
+    .regex-shortcuts-open-label { display: none; }
+    .regex-shortcuts[open] .regex-shortcuts-closed-label { display: none; }
+    .regex-shortcuts[open] .regex-shortcuts-open-label { display: inline; }
+    .regex-symbol-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
     }
     .inner {
     margin-right: 10px; /* Add spacing between links */
@@ -272,7 +303,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2026.10/15@1:00am usesimpng</p>
+    <p id="version">V2026.10/28@12:43am wordshortcuts</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -306,14 +337,22 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                     <label style="margin-right:10px;" title="Shortcut: Ctrl+Alt+E (Alt+Shift+E) selects Ends with"><input type="radio" name="searchType" value="endsWith"> <b>E</b>nds with</label>
                     
                 </div>
-                <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
-                <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
-                <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
-                <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
-                <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
-                <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
-                <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>                
-                <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                <details class="regex-shortcuts">
+                    <summary>
+                        <span class="regex-shortcuts-closed-label">&gt; Optional search pattern shortcuts</span>
+                        <span class="regex-shortcuts-open-label">V Regex Symbols</span>
+                    </summary>
+                    <div class="regex-symbol-buttons">
+                        <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
+                        <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
+                        <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
+                        <button id="addAnyChar" onclick="addTextAtCursor('\\w')" title="Insert \w to match any word character (letters, digits, or underscore)">\w</button>
+                        <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
+                        <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
+                        <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                        <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                    </div>
+                </details>
             </div>
         <div class="input-row">
             <input type="text" id="regexInput" placeholder="Enter text or regex">
