@@ -13,19 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gregg Search</title>
     <script>
-    //V2026.0730@6:42pm links
-    //V2026.0729@12:27am added notDictionary. Smart logic to display showNotes sheckbox only if any notes exist in the json
-    //V2025.0923@2:00pm performSeach when searchtype changes
-    //V2025.0904@11:00am Ignore digits unless input contains digits    
-    //V2025.0903@01:00pm add \w button
-    //V2025.0902@11:45am fix URL paths for github
-    //V2025.0827@1:56pm use include !shared-links.html
-    //V2025.0825@12:00am changes to accomodate pre-anniversary
-    //V2025.0821@07:@12:45pm add max result limit
-    //V2025.0820@07:004pm added group correction function prior to GST search
-    //V2025.0819@02:14pm replace in-page search with GST Search 
-    //version 2025/08/06@01:31pm Add summary of search results at bottom of results table 
-    //version 2025/08/05@10:28pm Use consolodated GST Text file which also contains YAGATS    
 		// IIFE to set the global variable `public_domain_only` ;
 		// if page name ends in 'pd' only public domain dictionaries are shown.
 		(function () {
@@ -96,7 +83,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1027 interface';
+            document.getElementById('version').textContent = 'V2026.1029 size';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -183,11 +170,12 @@
         }
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(392px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
             margin-top: 20px;
         }
         .result-card {
+            box-sizing: border-box;
             border: 1px solid #ddd;
             border-radius: 8px;
             background: #fff;
@@ -196,6 +184,14 @@
             flex-direction: column;
             gap: 10px;
             cursor: pointer;
+        }
+        @media (max-width: 470px) {
+            .results-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .result-card {
+                width: auto;
+            }
         }
         .result-word {
             font-size: 1.1rem;
@@ -862,7 +858,7 @@
                     return regex.test(target);
                 });
                 //end Ignore digits unless input contains digits
-                displayResults(results, regexInput, 'GST');
+                displayResults(results, regexInput, 'strokes');
             } catch (error) {
                 alert('Invalid regular expression');
             }
