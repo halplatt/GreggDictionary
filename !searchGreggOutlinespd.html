@@ -398,7 +398,10 @@
             font-size: 0.8em;
             color: #888;
         }
-        a.help-link { margin-right: 16px; }
+        a.help-link {
+            margin-right: 4px;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -413,6 +416,7 @@
                 <option value="djs">Diamond Jubilee</option>
                 <option value="not">Notehand</option>
             </select>
+            <a href="!searchGreggOutlines(help).html" target="_blank" class="help-link">Help</a>
             <div class="version" id="version"></div>
         </div>
     </div>
@@ -471,7 +475,6 @@
             <button id="searchGST">Search Strokes</button>
             <label for="maxResults">Maximum Words:</label>
             <input type="number" id="maxResults" value="100" min="1" style="width: 50px;">
-             <a href="!searchGreggOutlines(help).html" target="_blank" class="help-link">Help</a>
              <button id="referenceBtn" class="reference-btn" accesskey="r" title="Stroke name guide (hover or Alt+R)" aria-haspopup="dialog" aria-expanded="false" aria-controls="referenceTooltip">? Stroke Name Guide</button>
                  <label for="showBaseline">
                      <input type="checkbox" id="showBaseline" checked>
