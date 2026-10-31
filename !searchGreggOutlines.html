@@ -83,7 +83,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1029 size';
+            document.getElementById('version').textContent = 'V2026.1031 json';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -498,7 +498,7 @@
     <script>
         // Load the JSON file
         let dataGST = [];
-        fetch(`${selectedGsd}Dictionary/!searchGSText.json`)
+        fetch(`${selectedGsd}Dictionary/!searchGreggOutlines.json`)
             .then(response => response.json())
             .then(jsonData => {
                 dataGST = jsonData;
