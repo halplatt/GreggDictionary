@@ -39,7 +39,7 @@
     <script>
 		document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2025.0923@2:00pm'; // Version display element 
+            document.getElementById('version').textContent = 'V2026.1102 redirect search'; // Version display element 
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}		
@@ -677,6 +677,29 @@ h1 {
     <div class="container">
         <p id="version"></p>
         <h1>Regex Search</h1>
+<!-- beg consolidated tool notice (generic: version and pd suffix derived from URL) -->
+<style>
+.consolidated-notice { margin: 8px 0 12px; padding: 8px 12px; background: #eef6ff; border: 1px solid #7fb2e5; border-left: 5px solid #1a73e8; border-radius: 4px; text-align: left; }
+.consolidated-notice p { margin: 4px 0 0; }
+.consolidated-notice a { font-weight: bold; }
+</style>
+<div class="consolidated-notice">
+  <strong>New! One tool for all Gregg versions</strong>
+  <p>
+    Switch versions without losing your text or search criteria.
+    This page is being replaced with the new tool, so please update your bookmarks and links.
+    <a id="consolidated-link" href="#">Try the consolidated tool &rarr;</a>
+  </p>
+</div>
+<script>
+(function () {
+	const m = location.pathname.match(/\/(ann|djs|not|pre|sim)Words\//i);
+	const ver = m ? m[1].toLowerCase() : 'ann';
+	const pd = /pd\.html?$/i.test(location.pathname) ? 'pd' : '';
+	document.getElementById('consolidated-link').href = '../!searchGreggOutlines' + pd + '.html?gsd=' + ver;
+})();
+</script>
+<!-- end consolidated tool notice -->
 <!-- beg place holder where common links begin if page one level above !shared-links.html -->
 <div id="shared-links"></div>
 

@@ -83,7 +83,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1031 json';
+            document.getElementById('version').textContent = 'V2026.1102 map';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -749,7 +749,7 @@
                 oe: 'o-e',
                 eu: 'e-u',
                 eo: 'e-o',
-                au: 'o-e',
+                au: 'a-u',
                 ae: 'ea',
                 ei: 'ie',
                 ia: 'ie',
@@ -760,12 +760,18 @@
                 dot: 'h',
                 ing: 'h',
                 dm: 'tm',
+                dem: 'tm',
                 dn: 'tn',
+                tin: 'tn',
                 tf: 'df',
                 dv: 'df',
+                div: 'df',
+                def: 'df',
                 tv: 'df',
+                tif: 'df',
                 md: 'mt',
                 nm: 'mn',
+                mm: 'mn',
                 tt: 'td',
                 dt: 'td',
                 dd: 'td',
@@ -773,6 +779,11 @@
                 pnd: 'jnt',
                 gnt: 'jnt',
                 gnd: 'jnt',
+                pent: 'jnt',
+                gent: 'jnt',
+                ses: 's-s',
+                ss: 's-s',
+                xes: 'x-s',
                 br: 'b-r',
                 kr: 'k-r',
                 gr: 'g-r',
@@ -792,7 +803,7 @@
                 kp: 'k-p',
                 gf: 'g-f',
                 gv: 'g-v',
-                rK: 'r-k'
+                rk: 'r-k'
             };
             // Expose correction function in closure scope
             window.__correctRegexInputGroups = function(raw){
@@ -815,6 +826,10 @@
                 for(let i=0;i<parts.length;i++){
                     const tok = parts[i];
                     if(tok === '-' || tok === '/') continue;
+                    if(tok.trim().toLowerCase() === 'left s'){
+                        parts[i] = 's2';
+                        continue;
+                    }
                     const key = tok.toLowerCase();
                     if(Object.prototype.hasOwnProperty.call(GROUP_MAP, key)){
                         parts[i] = GROUP_MAP[key];
