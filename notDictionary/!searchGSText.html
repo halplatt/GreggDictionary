@@ -30,7 +30,7 @@
 		// if page name ends in 'pd' only public domain dictionaries are shown.
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1015@3:30pm image'; // Version display element
+            document.getElementById('version').textContent = 'V2026.11.06 redirect'; // Version display element
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -314,6 +314,21 @@
             <div class="version" id="version"></div>
         </div>
     </div>
+<!-- beg consolidated tool notice -->
+<style>
+.consolidated-notice { margin: 8px 0 12px; padding: 8px 12px; background: #eef6ff; border: 1px solid #7fb2e5; border-left: 5px solid #1a73e8; border-radius: 4px; text-align: left; }
+.consolidated-notice p { margin: 4px 0 0; }
+.consolidated-notice a { font-weight: bold; }
+</style>
+<div class="consolidated-notice">
+  <strong>New! One tool for all Gregg versions</strong>
+  <p>
+    Switch versions without losing your text or search criteria.
+    This page is being replaced with the new tool, so please update your bookmarks and links.
+    <a id="consolidated-link" href="../!searchGreggOutlines.html?gsd=not">Try the consolidated tool &rarr;</a>
+  </p>
+</div>
+<!-- end consolidated tool notice -->
     <div class="input-container">
 <!-- beg place holder where common links begin if page one level above !shared-links.html -->
         <div id="shared-links"></div>
