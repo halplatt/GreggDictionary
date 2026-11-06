@@ -83,7 +83,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1102 map';
+            document.getElementById('version').textContent = 'V2026.1106 url';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -519,6 +519,10 @@
             } catch (error) {
                 console.error('Could not restore the search text:', error);
             }
+            if (!saved) {
+                // URLSearchParams decodes the percent-encoded x= value
+                saved = new URL(window.location.href).searchParams.get('x');
+            }
             if (!saved) return;
             const input = document.getElementById('regexInput');
             input.value = saved;
@@ -663,6 +667,13 @@
         function displayResults(results, searchTerm = '', searchType = '') {
             const resultsGrid = document.getElementById('resultsGrid');
             resultsGrid.innerHTML = ''; // Clear previous results
+            // Reflect the search in the URL as an encoded x= parameter so it can be saved and rerun
+            try {
+                const searchUrl = new URL(window.location.href);
+                searchUrl.searchParams.set('gsd', globalGsd);
+                searchUrl.searchParams.set('x', document.getElementById('regexInput').value);
+                window.history.replaceState(null, '', searchUrl);
+            } catch (e) { /* ignore (e.g. file:// restrictions) */ }
             // Determine limits
             const maxResultsEl = document.getElementById('maxResults');
             const maxResults = parseInt(maxResultsEl && maxResultsEl.value, 10) || 100;
