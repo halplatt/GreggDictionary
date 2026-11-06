@@ -492,7 +492,11 @@
     <div id="resultsGrid" class="results-grid">
         <!-- Results will be displayed here -->
     </div>
-    <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
+    <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">
+        <div id="searchSummary" style="margin-top: 10px; font-style: italic; color: #666;"></div>
+        <button type="button" id="saveSearch" hidden title="Copy a link to this search to your clipboard that you can paste or save for later." aria-label="Copy a link to this search to your clipboard that you can paste or save for later." style="font-size: 0.85em;">Save Search</button>
+        <span id="saveSearchError" role="alert" style="color: #b00; font-size: 0.85em;"></span>
+    </div>
     <div id="resultsFooter" class="results-footer"></div>
 
     <script>
@@ -741,11 +745,44 @@
                 summaryText = `${totalMatches} result${totalMatches !== 1 ? 's' : ''} for search${typeDisplay} ${searchTermDisplay}`;
             }
             summaryDiv.textContent = summaryText;
+            lastSearch = { type: searchType, term: searchTerm };
+            document.getElementById('saveSearch').hidden = !searchTerm;
             
             const regexInput = document.getElementById('regexInput');
             regexInput.focus();
             regexInput.select();
         }
+
+        // Save Search: copy a titled link to the current search (HTML + plain text)
+        let lastSearch = { type: '', term: '' };
+        document.getElementById('saveSearch').addEventListener('click', async () => {
+            const btn = document.getElementById('saveSearch');
+            const errEl = document.getElementById('saveSearchError');
+            const url = window.location.href;
+            const gsd = new URL(url).searchParams.get('gsd') || globalGsd;
+            const version = outlineVersions.find(v => v.code === gsd);
+            const type = lastSearch.type ? lastSearch.type.charAt(0).toUpperCase() + lastSearch.type.slice(1) : 'Search';
+            const title = `${version ? version.label : gsd} \u2014 ${type} "${lastSearch.term}"`;
+            const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            const html = `<a href="${esc(url)}">${esc(title)}</a>`;
+            const text = `${title}\n${url}`;
+            errEl.textContent = '';
+            try {
+                try {
+                    await navigator.clipboard.write([new ClipboardItem({
+                        'text/html': new Blob([html], { type: 'text/html' }),
+                        'text/plain': new Blob([text], { type: 'text/plain' })
+                    })]);
+                } catch (e) {
+                    await navigator.clipboard.writeText(text);
+                }
+                btn.textContent = 'Saved!';
+                setTimeout(() => { btn.textContent = 'Save Search'; }, 1500);
+            } catch (e) {
+                errEl.textContent = 'Could not copy to the clipboard.';
+                setTimeout(() => { errEl.textContent = ''; }, 3000);
+            }
+        });
 
         // Event listener for the "Search GST" button
         document.getElementById('searchGST').addEventListener('click', () => {
