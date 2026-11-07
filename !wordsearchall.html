@@ -303,7 +303,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2026.10/28@12:43am wordshortcuts</p>
+    <p id="version">V2026.11/6 savesearch</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
@@ -534,6 +534,12 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             const resultsContainer = document.getElementById('results');
             const maxResults = parseInt(document.getElementById('maxResults').value, 10) || 25;
             resultsContainer.innerHTML = '';
+            // Reflect the search in the URL as an encoded x= parameter so it can be saved and rerun
+            try {
+                const searchUrl = new URL(window.location.href);
+                searchUrl.searchParams.set('x', regexInput.value);
+                window.history.replaceState(null, '', searchUrl);
+            } catch (e) { /* ignore (e.g. file:// restrictions) */ }
 
             // Use preloaded data; wait for it if still loading
             const data = allData || (await allDataReady) || [];
@@ -822,13 +828,25 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
             const divAboutText = document.createElement('div');
             divAboutText.id = 'divAboutText';
             endMessage.className = 'result-item';
+            const searchTermDisplay = rawPattern ? ` for text "${rawPattern}"` : '';
             if (resultCount === 0) {
-                endMessage.textContent = 'No matches found';
+                endMessage.textContent = `No matches found${searchTermDisplay}`;
                 aboutText = ""
             } else if (resultCount < maxResults) {
-                endMessage.textContent = `End of ${resultCount} matches`;
+                endMessage.textContent = `End of ${resultCount} matches${searchTermDisplay}`;
             } else {
-                endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches`;
+                endMessage.textContent = `Max display limited to ${resultCount} of ${totalMatches} matches${searchTermDisplay}`;
+            }
+            if (rawPattern) {
+                const saveBtn = document.createElement('button');
+                saveBtn.type = 'button';
+                saveBtn.id = 'saveSearch';
+                saveBtn.textContent = 'Save Search';
+                saveBtn.title = 'Copy a link to this search to your clipboard that you can paste or save for later.';
+                saveBtn.setAttribute('aria-label', saveBtn.title);
+                saveBtn.style.cssText = 'font-size: 0.85em; margin-left: 10px;';
+                saveBtn.addEventListener('click', () => saveSearch(saveBtn, rawPattern));
+                endMessage.appendChild(saveBtn);
             }
             divAboutText.innerHTML = aboutText;
             resultsContainer.appendChild(endMessage);
@@ -914,6 +932,28 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 .replace(/>/g, '&gt;')
                 .replace(/"/g, '&quot;')
                 .replace(/'/g, '&#39;');
+        }
+        // Save Search: copy a titled link to the current search (HTML + plain text)
+        async function saveSearch(btn, term) {
+            const url = window.location.href;
+            const title = `all versions for text "${term}"`;
+            const html = `<a href="${escapeHtml(url)}">${escapeHtml(title)}</a>`;
+            const text = `${title}\n${url}`;
+            try {
+                try {
+                    await navigator.clipboard.write([new ClipboardItem({
+                        'text/html': new Blob([html], { type: 'text/html' }),
+                        'text/plain': new Blob([text], { type: 'text/plain' })
+                    })]);
+                } catch (e) {
+                    await navigator.clipboard.writeText(text);
+                }
+                btn.textContent = 'Saved!';
+                setTimeout(() => { btn.textContent = 'Save Search'; }, 1500);
+            } catch (e) {
+                btn.textContent = 'Could not copy';
+                setTimeout(() => { btn.textContent = 'Save Search'; }, 3000);
+            }
         }
         function createResultHeader(version) {
             return '<span class="version-badge">' + escapeHtml(version) + '</span>';
@@ -1053,6 +1093,13 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
                 regexInput.select();
                 // Initial sync of radio group with current input
                 updateSearchTypeRadiosFromInput();
+                // Populate from the optional x= URL parameter (decoded by URLSearchParams) and run it
+                const x = new URL(window.location.href).searchParams.get('x');
+                if (x) {
+                    regexInput.value = x;
+                    updateSearchTypeRadiosFromInput();
+                    searchWords();
+                }
             }
         });
         
