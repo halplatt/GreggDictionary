@@ -936,7 +936,7 @@ const public_domain_only = ''; // Declare this global variable to hide non-publi
         // Save Search: copy a titled link to the current search (HTML + plain text)
         async function saveSearch(btn, term) {
             const url = window.location.href;
-            const title = `all versions for text "${term}"`;
+            const title = `compare versions for text "${term}"`;
             const html = `<a href="${escapeHtml(url)}">${escapeHtml(title)}</a>`;
             const text = `${title}\n${url}`;
             try {
