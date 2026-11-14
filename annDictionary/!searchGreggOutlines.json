@@ -246,7 +246,7 @@
     },
     {
         "text": "abundant",
-        "gst": "a-b-nt-n",
+        "gst": "a-b-n-tn",
         "notes": ""
     },
     {
@@ -2466,7 +2466,7 @@
     },
     {
         "text": "ascendant",
-        "gst": "a-s2-e-nt-n",
+        "gst": "a-s2-e-n-tn",
         "notes": ""
     },
     {
@@ -4701,7 +4701,7 @@
     },
     {
         "text": "brigantine",
-        "gst": "b-r-e-g-a-nt-n",
+        "gst": "b-r-e-g-a-n-tn",
         "notes": ""
     },
     {
@@ -7246,7 +7246,7 @@
     },
     {
         "text": "descendant",
-        "gst": "d-s2-e-nt-n",
+        "gst": "d-s2-e-n-tn",
         "notes": ""
     },
     {
@@ -12341,7 +12341,7 @@
     },
     {
         "text": "fountain",
-        "gst": "f-nt-n",
+        "gst": "f-n-tn",
         "notes": ""
     },
     {
@@ -20961,7 +20961,7 @@
     },
     {
         "text": "lantern",
-        "gst": "l-a-nt-n",
+        "gst": "l-a-n-tn",
         "notes": ""
     },
     {
@@ -21561,7 +21561,7 @@
     },
     {
         "text": "linden",
-        "gst": "l-e-nt-n",
+        "gst": "l-e-n-tn",
         "notes": ""
     },
     {
@@ -29211,52 +29211,52 @@
     },
     {
         "text": "intend",
-        "gst": "nt-n",
+        "gst": "n-tn",
         "notes": ""
     },
     {
         "text": "intended",
-        "gst": "nt-nt",
+        "gst": "n-tnt",
         "notes": ""
     },
     {
         "text": "untenable",
-        "gst": "nt-n-b",
+        "gst": "n-tn-b",
         "notes": ""
     },
     {
         "text": "intangible",
-        "gst": "nt-n-j-b",
+        "gst": "n-tn-j-b",
         "notes": ""
     },
     {
         "text": "endanger",
-        "gst": "nt-n-j-e2",
+        "gst": "n-tn-j-e2",
         "notes": "e2"
     },
     {
         "text": "intense",
-        "gst": "nt-n-s",
+        "gst": "n-tn-s",
         "notes": ""
     },
     {
         "text": "indention",
-        "gst": "nt-n-sh",
+        "gst": "n-tn-sh",
         "notes": ""
     },
     {
         "text": "intention",
-        "gst": "nt-n-sh",
+        "gst": "n-tn-sh",
         "notes": ""
     },
     {
         "text": "indent",
-        "gst": "nt-nt",
+        "gst": "n-tnt",
         "notes": ""
     },
     {
         "text": "intendant",
-        "gst": "nt-nt-n",
+        "gst": "n-tn-tn",
         "notes": ""
     },
     {
@@ -35071,7 +35071,7 @@
     },
     {
         "text": "superintendent",
-        "gst": "s/nt-n",
+        "gst": "s/n-tn",
         "notes": "s1"
     },
     {
@@ -35991,7 +35991,7 @@
     },
     {
         "text": "sentence",
-        "gst": "s2-e-nt-n-s",
+        "gst": "s2-e-n-tn-s",
         "notes": ""
     },
     {
@@ -40166,7 +40166,7 @@
     },
     {
         "text": "tontine",
-        "gst": "t-o-nt-n",
+        "gst": "t-o-n-tn",
         "notes": ""
     },
     {
@@ -56981,7 +56981,7 @@
     },
     {
         "text": "endangered",
-        "gst": "nt-n-j-e2-d",
+        "gst": "n-tn-j-e2-d",
         "notes": "e2"
     },
     {
@@ -68731,12 +68731,12 @@
     },
     {
         "text": "indentation",
-        "gst": "nt-n-sh",
+        "gst": "n-tn-sh",
         "notes": ""
     },
     {
         "text": "indented",
-        "gst": "nt-nt-d",
+        "gst": "n-tnt-d",
         "notes": ""
     },
     {
@@ -70086,12 +70086,12 @@
     },
     {
         "text": "intent",
-        "gst": "nt-nt",
+        "gst": "n-tnt",
         "notes": ""
     },
     {
         "text": "intentional",
-        "gst": "nt-n-sh-l",
+        "gst": "n-tn-sh-l",
         "notes": ""
     },
     {
@@ -75686,7 +75686,7 @@
     },
     {
         "text": "mountainous",
-        "gst": "",
+        "gst": "mn-tn-u-s",
         "notes": ""
     },
     {
@@ -133056,7 +133056,7 @@
     },
     {
         "text": "indentations",
-        "gst": "nt-n-sh-s",
+        "gst": "n-tn-sh-s",
         "notes": ""
     },
     {
@@ -133861,7 +133861,7 @@
     },
     {
         "text": "untenably",
-        "gst": "nt-n-b-e",
+        "gst": "n-tn-b-e",
         "notes": ""
     },
     {
@@ -133876,12 +133876,12 @@
     },
     {
         "text": "intentionally",
-        "gst": "nt-n-sh-l-e",
+        "gst": "n-tn-sh-l-e",
         "notes": ""
     },
     {
         "text": "intentionals",
-        "gst": "nt-n-sh-l-s",
+        "gst": "n-tn-sh-l-s",
         "notes": ""
     },
     {
@@ -134086,12 +134086,12 @@
     },
     {
         "text": "indenting",
-        "gst": "nt-n-th",
+        "gst": "n-tn-t-h",
         "notes": ""
     },
     {
         "text": "indents",
-        "gst": "nt-nt-s",
+        "gst": "n-tn-t-s",
         "notes": ""
     },
     {
@@ -134241,7 +134241,7 @@
     },
     {
         "text": "intents",
-        "gst": "nt-nt-s",
+        "gst": "n-tn-t-s",
         "notes": ""
     },
     {
@@ -134666,12 +134666,12 @@
     },
     {
         "text": "endangering",
-        "gst": "nt-n-j-e2-h",
+        "gst": "n-tn-j-e2-h",
         "notes": "e2"
     },
     {
         "text": "endangers",
-        "gst": "nt-n-j-e2-s",
+        "gst": "n-tn-j-e2-s",
         "notes": "e2"
     },
     {
@@ -134736,12 +134736,12 @@
     },
     {
         "text": "intending",
-        "gst": "nt-n-h",
+        "gst": "n-tn-h",
         "notes": ""
     },
     {
         "text": "intends",
-        "gst": "nt-n-s",
+        "gst": "n-tn-s",
         "notes": ""
     },
     {
@@ -134791,17 +134791,17 @@
     },
     {
         "text": "intentioned",
-        "gst": "nt-n-sh-d",
+        "gst": "n-tn-sh-d",
         "notes": ""
     },
     {
         "text": "intentioning",
-        "gst": "nt-n-sh-h",
+        "gst": "n-tn-sh-h",
         "notes": ""
     },
     {
         "text": "intentions",
-        "gst": "nt-n-sh-s",
+        "gst": "n-tn-sh-s",
         "notes": ""
     },
     {
@@ -146436,17 +146436,17 @@
     },
     {
         "text": "sentenced",
-        "gst": "s2-e-nt-n-s-d",
+        "gst": "s2-e-n-tn-s-d",
         "notes": "s1"
     },
     {
         "text": "sentencing",
-        "gst": "s2-e-nt-n-s-h",
+        "gst": "s2-e-n-tn-s-h",
         "notes": "s1"
     },
     {
         "text": "sentences",
-        "gst": "s2-e-nt-n-s-s",
+        "gst": "s2-e-n-tn-s-s",
         "notes": "s1"
     },
     {

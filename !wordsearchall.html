@@ -223,6 +223,10 @@ version 02/06/2025 at 9:18pm First version
         border-top: 1px solid #cfd6df;
         padding-top: 12px;
         margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: flex-start;
     }
     .word-group:first-child {
         border-top: none;
@@ -234,13 +238,33 @@ version 02/06/2025 at 9:18pm First version
         font-weight: 700;
         color: #0f172a;
         margin-bottom: 8px;
+        flex-basis: 100%;
+        margin-bottom: 8px;
     }
     .result-entry {
         display: flex;
         flex-direction: column;
         gap: 6px;
-        margin-top: 8px;
+        margin-top: 0;
         padding-top: 0;
+        flex: 1 1 calc(20% - 12px);
+        min-width: 0;
+    }
+    
+    /* Mobile responsive: stack cards vertically on smaller screens */
+    @media (max-width: 768px) {
+        .word-group {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .word-group-title {
+            flex-basis: 100%;
+            margin-bottom: 8px;
+        }
+        .result-entry {
+            flex: 1 1 100%;
+            width: 100%;
+        }
     }
     .result-media {
         display: flex;
@@ -303,7 +327,7 @@ version 02/06/2025 at 9:18pm First version
 <body>
     <h1>Regex Search</h1>
     
-    <p id="version">V2026.11/6 savesearch</p>
+    <p id="version">V2026.11/14 horizontal</p>
 
     <div class="input-container">
 <!-- beg place holder where common links begin if page is in same directory as !shared-links.html -->
