@@ -1686,7 +1686,7 @@
     },
     {
         "text": "acquires",
-        "gst": "a-k-i-r-s",
+        "gst": "a-k-i-s",
         "notes": ""
     },
     {
@@ -8811,7 +8811,7 @@
     },
     {
         "text": "as a result",
-        "gst": "a-s-a-r-e-s-u-t",
+        "gst": "a-s-a-r-s-u-t",
         "notes": ""
     },
     {
@@ -13986,7 +13986,7 @@
     },
     {
         "text": "benefactress",
-        "gst": "b-n-f-a-k-t-r-s",
+        "gst": "b-n-f-a-k-t-r-e-s",
         "notes": ""
     },
     {
@@ -19816,7 +19816,7 @@
     },
     {
         "text": "buttressed",
-        "gst": "b-u-t-r-s-t",
+        "gst": "b-u-t-r-e-s-t",
         "notes": ""
     },
     {
@@ -31706,7 +31706,7 @@
     },
     {
         "text": "correspond",
-        "gst": "k-o-r-s-p-a-nt",
+        "gst": "k-r-e-s",
         "notes": ""
     },
     {
@@ -38521,7 +38521,7 @@
     },
     {
         "text": "despondency",
-        "gst": "d-s-p-a-nt-n-s-e",
+        "gst": "d-s-p-o-nt-n-s-e",
         "notes": ""
     },
     {
@@ -55656,7 +55656,7 @@
     },
     {
         "text": "forecastle",
-        "gst": "f-k-s-t-l",
+        "gst": "f-k-a-s-t-l",
         "notes": ""
     },
     {
@@ -63316,7 +63316,7 @@
     },
     {
         "text": "handrest",
-        "gst": "h-nt-r-e-s-t",
+        "gst": "h-nt-e-s-t",
         "notes": ""
     },
     {
@@ -65131,7 +65131,7 @@
     },
     {
         "text": "heartrest",
-        "gst": "h-a-r-t-r-e-s-t",
+        "gst": "h-a-r-t-e-s-t",
         "notes": ""
     },
     {
@@ -71111,7 +71111,7 @@
     },
     {
         "text": "imprescriptible",
-        "gst": "m-p-r-e-sk-r-e-p-t-b",
+        "gst": "m-p-r-e-s-k-r-e-p-t-b",
         "notes": ""
     },
     {
@@ -72296,12 +72296,12 @@
     },
     {
         "text": "incontinence",
-        "gst": "n-k-a-nt-n-n-s",
+        "gst": "n-k-tn-a-n-s",
         "notes": ""
     },
     {
         "text": "incontinent",
-        "gst": "n-k-a-nt-n-nt",
+        "gst": "n-k-tn-nt",
         "notes": ""
     },
     {
@@ -76596,7 +76596,7 @@
     },
     {
         "text": "intonation",
-        "gst": "nt-n-sh",
+        "gst": "nt-o-n-sh",
         "notes": ""
     },
     {
@@ -86121,7 +86121,7 @@
     },
     {
         "text": "maintenance",
-        "gst": "m-a-nt-n-n-s",
+        "gst": "m-a-n-tn-a-n-s",
         "notes": ""
     },
     {
@@ -93236,7 +93236,7 @@
     },
     {
         "text": "mountainous",
-        "gst": "m-a-u-nt-n-u-s",
+        "gst": "m-a-u-n-tn-u-s",
         "notes": ""
     },
     {
@@ -96766,7 +96766,7 @@
     },
     {
         "text": "nonresistant",
-        "gst": "n-o-n-r-e-s-e-tn-s-t",
+        "gst": "n-o-n-r-s-s-tn-t",
         "notes": ""
     },
     {
@@ -99806,7 +99806,7 @@
     },
     {
         "text": "oppressiveness",
-        "gst": "o-p-r-e-s-p-e-s-e-n-e-s",
+        "gst": "o-p-r-e-s-v-n-e-s",
         "notes": ""
     },
     {
@@ -100570,7 +100570,7 @@
         "notes": ""
     },
     {
-        "text": "ostmistressp",
+        "text": "postmistress",
         "gst": "p/m-s-t-r-e-s",
         "notes": ""
     },
@@ -104986,7 +104986,7 @@
     },
     {
         "text": "penitence",
-        "gst": "p-nt-n-s",
+        "gst": "p-n-e-tn-s",
         "notes": ""
     },
     {
@@ -119751,12 +119751,12 @@
     },
     {
         "text": "redundance",
-        "gst": "r-e-d-u-nt-n-s",
+        "gst": "r-e-tn-tn-s",
         "notes": ""
     },
     {
         "text": "redundancy",
-        "gst": "r-e-d-u-nt-n-s-e",
+        "gst": "r-e-tn-tn-se",
         "notes": ""
     },
     {
@@ -131666,12 +131666,12 @@
     },
     {
         "text": "sentence",
-        "gst": "s-e-nt-n-s",
+        "gst": "s-e-n-tn-s",
         "notes": ""
     },
     {
         "text": "sentenced",
-        "gst": "s-e-nt-n-s-t",
+        "gst": "s-e-n-tn-s-t",
         "notes": ""
     },
     {
@@ -131736,7 +131736,7 @@
     },
     {
         "text": "sentinel",
-        "gst": "s-e-nt-n-l",
+        "gst": "s-e-n-tn-l",
         "notes": ""
     },
     {
@@ -134996,7 +134996,7 @@
     },
     {
         "text": "silentness",
-        "gst": "s-e-l-nt-n-e-s",
+        "gst": "s-i-l-e-nt-n-e-s",
         "notes": ""
     },
     {
@@ -141456,7 +141456,7 @@
     },
     {
         "text": "spontaneitty",
-        "gst": "s-p-a-nt-n-a-t-e-e-t",
+        "gst": "s-p-o-n-tn-e-t-e",
         "notes": ""
     },
     {
@@ -141471,7 +141471,7 @@
     },
     {
         "text": "spontaneousness",
-        "gst": "s-p-o-n-tb-u-s-n-e-s",
+        "gst": "s-p-o-n-tn-u-s-n-e-s",
         "notes": ""
     },
     {
@@ -166516,7 +166516,7 @@
     },
     {
         "text": "unresponsive",
-        "gst": "n-r-e-s-p-a-n-s-e-v",
+        "gst": "n-r-s-p-n-s-v",
         "notes": ""
     },
     {
