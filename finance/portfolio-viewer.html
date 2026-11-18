@@ -579,20 +579,6 @@
                     <tbody>
             `;
             
-            data.forEach(item => {
-                const yahooFinanceUrl = getYahooFinanceUrl(item.symbol);
-                html += `
-                    <tr>
-                        <td><a href="${yahooFinanceUrl}" target="yahoo" class="symbol-link">${item.symbol}</a></td>
-                        <td class="number">$${formatNumber(item.value, 2)}</td>
-                        <td class="number">${formatNumber(item.shares, 3)}</td>
-                        <td class="number">$${formatNumber(item.last, 2)}</td>
-                        <td>${item.portfolio}</td>
-                        <td class="company-name">${item.companyName || 'Loading...'}</td>
-                    </tr>
-                `;
-            });
-            
             // Add totals row if more than one result
             if (data.length > 1) {
                 const totalShares = data.reduce((sum, item) => sum + item.shares, 0);
@@ -609,6 +595,20 @@
                     </tr>
                 `;
             }
+
+            data.forEach(item => {
+                const yahooFinanceUrl = getYahooFinanceUrl(item.symbol);
+                html += `
+                    <tr>
+                        <td><a href="${yahooFinanceUrl}" target="yahoo" class="symbol-link">${item.symbol}</a></td>
+                        <td class="number">$${formatNumber(item.value, 2)}</td>
+                        <td class="number">${formatNumber(item.shares, 3)}</td>
+                        <td class="number">$${formatNumber(item.last, 2)}</td>
+                        <td>${item.portfolio}</td>
+                        <td class="company-name">${item.companyName || 'Loading...'}</td>
+                    </tr>
+                `;
+            });
             
             html += `
                     </tbody>
