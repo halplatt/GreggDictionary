@@ -83,7 +83,7 @@
         });
         document.addEventListener('DOMContentLoaded', (event) => { 
             // Set the version number
-            document.getElementById('version').textContent = 'V2026.1106 url';
+            document.getElementById('version').textContent = 'V2026.1119 sym';
             if (public_domain_only === 'pd') {
 					document.getElementById('version').innerHTML += "<br><i>items in the public domain.</i>";
 			}
@@ -458,6 +458,7 @@
                         <span class="regex-shortcuts-open-label">V Regex Symbols</span>
                     </summary>
                     <div class="regex-symbol-buttons">
+                        <button id="addBegAnchor" onclick="addTextAtCursor('^')" title="Insert ^ to match the start of a word or phrase">^</button>
                         <button id="addBegSet" onclick="addTextAtCursor('[')" title="Insert [ to begin a list of valid characters">[</button>
                         <button id="addBegSetNot" onclick="addTextAtCursor('[^')" title="Insert [^ to begin a list of characters not valid in this position">[^</button>
                         <button id="addEndSet" onclick="addTextAtCursor(']')" title="Insert ] to end a list of characters">]</button>
@@ -465,7 +466,10 @@
                         <button id="add0orMore" onclick="addTextAtCursor('*')" title="Insert * to indicate the previous character repeats 0 or more times">*</button>
                         <button id="add1orMore" onclick="addTextAtCursor('+')" title="Insert + to indicate the previous character repeats 1 or more times">+</button>
                         <button id="add0or1" onclick="addTextAtCursor('?')" title="Insert ? to indicate the previous character appears 0 or 1 times">?</button>
+                        <button id="addSlash" onclick="addTextAtCursor('/')" title="Insert / to indicate disjoined stroke">/</button>
+                        <button id="addDash" onclick="addTextAtCursor('-')" title="Insert - to indicate connected stroke">-</button>
                         <button id="addPipe" onclick="addTextAtCursor('|')" title="Insert | to separate multiple patterns">|</button>
+                        <button id="addEndAnchor" onclick="addTextAtCursor('$')" title="Insert $ to match the end of a word or phrase">$</button>
                     </div>
                 </details>
             </div>
